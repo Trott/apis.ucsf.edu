@@ -1,6 +1,6 @@
 var express = require('express'),
     fs = require('fs'),
-    people = require('./routes/people');
+    person = require('./routes/person');
 
 var app = express();
 
@@ -32,7 +32,7 @@ app.use(function(req, res, next) {
     }
 });
 
-app.get('/people/search', people.search);
+app.get('/person/search', person.search);
 
 app.listen(80);
 console.log('Listening on port 80...');
