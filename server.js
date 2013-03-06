@@ -32,6 +32,15 @@ app.use(function(req, res, next) {
     }
 });
 
+//TODO: Move this to its own package
+app.get('/static/:file', function(req,res) {
+    if (fs.existsSync(__dirname + '/static/' + req.params.file)) {
+        res.sendfile( __dirname + '/static/' + req.params.file);
+        return;
+    }
+    res.send(404);
+});
+
 app.get('/person/search', person.search);
 
 app.listen(80);
