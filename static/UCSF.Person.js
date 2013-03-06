@@ -28,15 +28,13 @@ UCSF.makeCORSRequest = function (url, options, success, failure ) {
 
     // Response handlers.
     xhr.onload = function(e) {
-        success(JSON.parse(e.target.response));
+        success(JSON.parse(xhr.responseText));
     };
     xhr.onerror = function(e) {
-        failure(JSON.parse(e.target.response));
+        failure(JSON.parse(xhr.responseText));
     };
     xhr.send();
 };
-
-//TODO: Use code that works in IE too.
 
 UCSF.Person = {
     search: function (options, callback) {
