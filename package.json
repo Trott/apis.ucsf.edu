@@ -1,9 +1,16 @@
 {
-    "name": "api.ucsf.edu",
-    "description": "Data APIs for UCSF",
-    "version": "0.0.1",
-    "private": true,
-    "dependencies": {
-        "express": "3.x"
-    }
+  "name": "api.ucsf.edu",
+  "description": "Data APIs for UCSF",
+  "version": "0.0.1-1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x"
+  },
+  "scripts": {
+    "start": "server.js"
+  },
+  "engines": {
+    "node": "0.8.x"
+  },
+  "subdomain": "apis.ucsf.edu.trott"
 }

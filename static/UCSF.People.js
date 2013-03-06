@@ -4,6 +4,6 @@ var UCSF = UCSF || {};
 
 UCSF.People = {
     search: function (options, callback) {
-        $.getJSON('http://apis.ucsf.edu/people/search',options,callback);
+        $.getJSON('http://apis.ucsf.edu.trott.jit.su/people/search',options,callback);
     }
 };
