@@ -1,5 +1,17 @@
 var UCSF = {
 
+    serialize: function(obj, prefix) {
+        "use strict";
+        var str = [];
+        for(var p in obj) {
+            var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
+            str.push(typeof v === "object" ? 
+                this.serialize(v, k) :
+                encodeURIComponent(k) + "=" + encodeURIComponent(v));
+        }
+        return str.join("&");
+    },
+
     createCORSRequest: function (method, url) {
         "use strict";
         var xhr = new XMLHttpRequest();
@@ -19,9 +31,10 @@ var UCSF = {
 
     makeCORSRequest: function (url, options, success, failure) {
         "use strict";
-        //TODO: add options to url
+        var separator = url.indexOf('?')===-1 ? '?' : '&';
+        var urlWithOptions =  url + separator + this.serialize(options);
 
-        var xhr = UCSF.createCORSRequest('GET', url);
+        var xhr = UCSF.createCORSRequest('GET', urlWithOptions);
         if (!xhr) {
             window.console.log('Error: CORS not supported');
             return;
