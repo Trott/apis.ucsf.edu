@@ -3,6 +3,7 @@ var http = require('http'),
 
 exports.search = function(req, res) {
 
+    "use strict";
     var directoryOptions = {
       host: "directory.ucsf.edu",
       port: 80,
@@ -11,14 +12,71 @@ exports.search = function(req, res) {
 
     http.get(directoryOptions, function(resp){
         var xml = "";
+
+        function callback(result) {
+            function deGoober(name, data) {
+                var arrayInstance = [].constructor,
+                    value = data.hasOwnProperty(name) ? data[name] : "";
+                // Sometimes, the string is inexplicably buried in an array.
+                if (value instanceof arrayInstance) {
+                    return value[0];
+                }
+                return value;
+            }
+
+            function amassPhones(data) {
+                var rv = {},
+                    thisPhone,
+                    phones = [
+                        ['telephoneNumber', 'main'],
+                        ['telephoneNumber2', 'alternate'],
+                        ['privatePracticePhone', 'privatePractice'],
+                        ['mobile', 'mobile'],
+                        ['pager', 'pager']
+                    ];
+                for (var i=0; i < phones.length; i++) {
+                    thisPhone = deGoober(phones[i][0], data);
+                    if (thisPhone !== "") {
+                        rv[phones[i][1]] = thisPhone;
+                    }
+                }
+                return rv;
+            }
+
+            // <facepalm>
+            var results = result.results.result;
+            // </facepalm>
+
+            // *Sigh*. As much as I'd love to just send everything as is,
+            // too much crap XML means too much badly formatted stuff sent back. Let's
+            // declare a bunch of variables, loop through, and try to clean up some of it.
+
+            var rv = [];
+            for (var i = 0; i < results.length; i++) {
+                rv[i] = {};
+                rv[i].name = deGoober('displayName', results[i]);
+                rv[i].department = deGoober('department', results[i]);
+                rv[i].email = deGoober('mail', results[i]);
+                rv[i].title = deGoober('workingTitle', results[i]);
+                rv[i].campusBox = deGoober('campusBox', results[i]);
+                rv[i].address = deGoober('postalAddress', results[i]);
+                rv[i].id = deGoober('key', results[i]);
+
+                rv[i].phone = amassPhones(results[i]);
+
+                // Failing to capitalize the Chancellor's name correctly is embarrassing. Sad hack to fix it.
+                rv[i].name.replace('Desmond-hellman','Desmond-Hellman');
+            }
+
+            res.send({data: rv});
+        }
+
         resp.on('data', function(chunk){
             xml += chunk;
         });
         resp.on('end', function() {
             var parser = new xml2js.Parser();
-            parser.on('end', function(result) {
-                res.send(result.results);
-            });
+            parser.on('end', callback);
             parser.on('error', function(err) {
                 console.dir(err);
             });
