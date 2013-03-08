@@ -30,5 +30,4 @@ exports.search = function(req, res) {
     });
 };
 
-//TODO: Perhaps a small win would be to correctly capitalize the Chancellor's surname.
 //TODO: Uh, make it robust so it doesn't go down. supervisor and all that.
