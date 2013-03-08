@@ -19,6 +19,9 @@ exports.search = function(req, res) {
             parser.on('end', function(result) {
                 res.send(result.results);
             });
+            parser.on('error', function(err) {
+                console.dir(err);
+            });
             parser.parseString(xml);
         });
     }).on("error", function(e){
@@ -27,5 +30,5 @@ exports.search = function(req, res) {
     });
 };
 
-//TODO: OMG if you send it an empty query it sends you 20 results. Sheesh. Send an error or something instead.
 //TODO: Perhaps a small win would be to correctly capitalize the Chancellor's surname.
+//TODO: Uh, make it robust so it doesn't go down. supervisor and all that.
