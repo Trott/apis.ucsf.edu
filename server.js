@@ -6,6 +6,7 @@ var app = express();
 
 //TODO: this allows all hosts. We should specify based on API key.
 app.use(function(req, res, next) {
+    "use strict";
     var oneof = false;
     if(req.headers.origin) {
         res.header('Access-Control-Allow-Origin', req.headers.origin);
@@ -24,7 +25,7 @@ app.use(function(req, res, next) {
     }
 
     // intercept OPTIONS method
-    if (oneof && req.method == 'OPTIONS') {
+    if (oneof && req.method === 'OPTIONS') {
         res.send(200);
     }
     else {
@@ -33,6 +34,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/static/:file', function(req,res) {
+    "use strict";
     if (fs.existsSync(__dirname + '/static/' + req.params.file)) {
         res.sendfile( __dirname + '/static/' + req.params.file);
         return;
