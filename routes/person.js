@@ -10,12 +10,12 @@ exports.search = function(req, res) {
     };
 
     var detail;
-    var queryString = req.originalUrl.substr(req.path.length);
-    //TODO: Regexp please. /[?&]id=/
-    if ((queryString.indexOf('?id=') !== -1) || (queryString.indexOf('&id=') !== -1)) {
+
+    if ('id' in req.query) {
         directoryOptions.path = "/mobile_people_detail.jsp?FNO=" + req.query.id;
         detail = true;
     } else {
+        var queryString = req.originalUrl.substr(req.path.length);
         directoryOptions.path = "/mobile_people_result_set.jsp" + queryString;
         detail = false;
     }
@@ -77,6 +77,9 @@ exports.search = function(req, res) {
                 rv[i].title = deGoober('workingTitle', results[i], false);
                 rv[i].campusBox = deGoober('campusBox', results[i], false);
                 rv[i].address = deGoober('postalAddress', results[i], false);
+                for (var j=0; j < rv[i].address.length; j++) {
+                    rv[i].address[j] = rv[i].address[j].replace(/\$/g,"\n");
+                }
                 rv[i].id = deGoober('key', results[i], true);
 
                 rv[i].phones = amassPhones(results[i]);
