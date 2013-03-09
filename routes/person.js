@@ -24,11 +24,11 @@ exports.search = function(req, res) {
         var xml = "";
 
         function callback(result) {
-            function deGoober(name, data) {
+            function deGoober(name, data, stringify) {
                 var arrayInstance = [].constructor,
                     value = data.hasOwnProperty(name) ? data[name] : "";
                 // Sometimes, the string is inexplicably buried in an array.
-                if (value instanceof arrayInstance) {
+                if ((stringify) && (value instanceof arrayInstance)) {
                     return value[0];
                 }
                 return value;
@@ -45,7 +45,7 @@ exports.search = function(req, res) {
                         ['pager', 'pager']
                     ];
                 for (var i=0; i < phones.length; i++) {
-                    thisPhone = deGoober(phones[i][0], data);
+                    thisPhone = deGoober(phones[i][0], data, true);
                     // *sigh* Don't send back empty objects and strings inside the array
                     if ((typeof thisPhone === "object") || (thisPhone === "")) {
                         rv[phones[i][1]] = [];
@@ -68,16 +68,16 @@ exports.search = function(req, res) {
             var rv = [];
             for (var i = 0; i < results.length; i++) {
                 rv[i] = {};
-                rv[i].name = deGoober('displayName', results[i]);
+                rv[i].name = deGoober('displayName', results[i], true);
                 if ((results[i].hasOwnProperty('degrees')) && (results[i].degrees[0].hasOwnProperty('degree'))) {
                     rv[i].degrees = results[i].degrees[0].degree;
                 }
-                rv[i].department = deGoober('department', results[i]);
-                rv[i].email = deGoober('mail', results[i]);
-                rv[i].title = deGoober('workingTitle', results[i]);
-                rv[i].campusBox = deGoober('campusBox', results[i]);
-                rv[i].address = deGoober('postalAddress', results[i]);
-                rv[i].id = deGoober('key', results[i]);
+                rv[i].department = deGoober('department', results[i], false);
+                rv[i].email = deGoober('mail', results[i], false);
+                rv[i].title = deGoober('workingTitle', results[i], false);
+                rv[i].campusBox = deGoober('campusBox', results[i], false);
+                rv[i].address = deGoober('postalAddress', results[i], false);
+                rv[i].id = deGoober('key', results[i], true);
 
                 rv[i].phones = amassPhones(results[i]);
 
