@@ -6,9 +6,19 @@ exports.search = function(req, res) {
     "use strict";
     var directoryOptions = {
       host: "directory.ucsf.edu",
-      port: 80,
-      path: "/mobile_people_result_set.jsp" + req.originalUrl.substr(req.path.length)
+      port: 80
     };
+
+    var detail;
+    var queryString = req.originalUrl.substr(req.path.length);
+    //TODO: Regexp please. /[?&]id=/
+    if ((queryString.indexOf('?id=') !== -1) || (queryString.indexOf('&id=') !== -1)) {
+        directoryOptions.path = "/mobile_people_detail.jsp?FNO=" + req.query.id;
+        detail = true;
+    } else {
+        directoryOptions.path = "/mobile_people_result_set.jsp" + queryString;
+        detail = false;
+    }
 
     http.get(directoryOptions, function(resp){
         var xml = "";

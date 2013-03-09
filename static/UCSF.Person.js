@@ -5,7 +5,7 @@ var UCSF = {
         var str = [];
         for(var p in obj) {
             var k = prefix ? prefix + "[" + p + "]" : p, v = obj[p];
-            str.push(typeof v === "object" ? 
+            str.push(typeof v === "object" ?
                 this.serialize(v, k) :
                 encodeURIComponent(k) + "=" + encodeURIComponent(v));
         }
@@ -36,7 +36,7 @@ var UCSF = {
 
         var xhr = UCSF.createCORSRequest('GET', urlWithOptions);
         if (!xhr) {
-            window.console.log('Error: CORS not supported');
+            //TODO: CORS not supported. Probably IE7 (or maybe Opera Mini). Look at flXHR polyfill?
             return;
         }
 
@@ -44,16 +44,20 @@ var UCSF = {
         xhr.onload = function () {
             success(JSON.parse(xhr.responseText));
         };
-        xhr.onerror = function () {
-            failure(JSON.parse(xhr.responseText));
-        };
+        xhr.onerror = failure;
         xhr.send();
     },
 
     Person: {
-        search: function (options, callback) {
+        search: function (options, success, failure ) {
             "use strict";
-            UCSF.makeCORSRequest('http://apis.ucsf.edu.trott.jit.su/person/search', options, callback);
+            failure = failure || function () {};
+            UCSF.makeCORSRequest(
+                'http://apis.ucsf.edu.trott.jit.su/person/search',
+                options,
+                success,
+                failure
+            );
         }
     }
 };
