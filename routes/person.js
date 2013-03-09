@@ -46,11 +46,13 @@ exports.search = function(req, res) {
                     ];
                 for (var i=0; i < phones.length; i++) {
                     thisPhone = deGoober(phones[i][0], data);
-                    // *sigh* Replace empty object with empty string.
-                    if (typeof thisPhone === "object") {
-                        thisPhone = "";
+                    // *sigh* Don't send back empty objects and strings inside the array
+                    if ((typeof thisPhone === "object") || (thisPhone === "")) {
+                        rv[phones[i][1]] = [];
+                    } else {
+                        // *sigh* part 2: Arrays should be able to have multiple values. 
+                        rv[phones[i][1]] = [thisPhone];
                     }
-                    rv[phones[i][1]] = thisPhone;
                 }
                 return rv;
             }
@@ -67,6 +69,9 @@ exports.search = function(req, res) {
             for (var i = 0; i < results.length; i++) {
                 rv[i] = {};
                 rv[i].name = deGoober('displayName', results[i]);
+                if ((results[i].hasOwnProperty('degrees')) && (results[i].degrees[0].hasOwnProperty('degree'))) {
+                    rv[i].degrees = results[i].degrees[0].degree;
+                }
                 rv[i].department = deGoober('department', results[i]);
                 rv[i].email = deGoober('mail', results[i]);
                 rv[i].title = deGoober('workingTitle', results[i]);
@@ -74,7 +79,7 @@ exports.search = function(req, res) {
                 rv[i].address = deGoober('postalAddress', results[i]);
                 rv[i].id = deGoober('key', results[i]);
 
-                rv[i].phone = amassPhones(results[i]);
+                rv[i].phones = amassPhones(results[i]);
 
                 // Failing to capitalize the Chancellor's name correctly is embarrassing. Sad hack to fix it.
                 rv[i].name.replace('Desmond-hellman','Desmond-Hellman');
