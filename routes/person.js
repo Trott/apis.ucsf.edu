@@ -46,9 +46,11 @@ exports.search = function(req, res) {
                     ];
                 for (var i=0; i < phones.length; i++) {
                     thisPhone = deGoober(phones[i][0], data);
-                    if (thisPhone !== "") {
-                        rv[phones[i][1]] = thisPhone;
+                    // *sigh* Replace empty object with empty string.
+                    if (typeof thisPhone === "object") {
+                        thisPhone = "";
                     }
+                    rv[phones[i][1]] = thisPhone;
                 }
                 return rv;
             }
