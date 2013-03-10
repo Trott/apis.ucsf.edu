@@ -5,6 +5,7 @@ var express = require('express'),
 var app = express();
 
 //TODO: this allows all hosts. We should specify based on API key.
+//TODO: Make robust with supervisor and also domains to catch errors.
 app.use(function(req, res, next) {
     "use strict";
     var oneof = false;

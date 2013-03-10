@@ -2,7 +2,7 @@ var http = require('http'),
     xml2js = require('xml2js');
 
 exports.search = function(req, res) {
-
+//TODO: searching for an nonexistent id shouldn't result in a CORS error
     "use strict";
     var directoryOptions = {
       host: "directory.ucsf.edu",
@@ -81,6 +81,9 @@ exports.search = function(req, res) {
                     rv[i].address[j] = rv[i].address[j].replace(/\$/g,"\n");
                 }
                 rv[i].id = deGoober('key', results[i], true);
+                if ((rv[i].id === "") && (req.query.hasOwnProperty('id'))) {
+                    rv[i].id = req.query.id;
+                }
 
                 rv[i].phones = amassPhones(results[i]);
 
@@ -107,5 +110,3 @@ exports.search = function(req, res) {
         res.send({error: e.message});
     });
 };
-
-//TODO: Uh, make it robust so it doesn't go down. supervisor and all that.
