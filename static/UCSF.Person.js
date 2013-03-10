@@ -63,4 +63,3 @@ var UCSF = {
 };
 
 //TODO: use grunt to run through jshint and minify with uglify
-//TODO: photoUrl and profilesUrl
