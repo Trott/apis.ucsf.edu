@@ -1,7 +1,7 @@
 {
   "name": "api.ucsf.edu",
   "description": "Data APIs for UCSF",
-  "version": "0.0.1-68",
+  "version": "0.0.1-72",
   "private": true,
   "dependencies": {
     "express": "3.x",
@@ -13,5 +13,10 @@
   "engines": {
     "node": "0.8.x"
   },
-  "subdomain": "apis.ucsf.edu.trott"
+  "subdomain": "apis.ucsf.edu.trott",
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-uglify": "~0.1.1"
+  }
 }
