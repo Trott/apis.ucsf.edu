@@ -2,7 +2,6 @@ var http = require('http'),
     xml2js = require('xml2js');
 
 exports.search = function(req, res) {
-//TODO: searching for an nonexistent id shouldn't result in a CORS error
     "use strict";
     var directoryOptions = {
       host: "directory.ucsf.edu",
@@ -58,7 +57,10 @@ exports.search = function(req, res) {
             }
 
             // <facepalm>
-            var results = result.results.result;
+            var results = [];
+            if (result.hasOwnProperty('results') && result.results.hasOwnProperty('result')) {
+                results = result.results.result;
+            }
             // </facepalm>
 
             // *Sigh*. As much as I'd love to just send everything as is,
