@@ -90,9 +90,9 @@ var UCSF = (function () {
     if (! me.createCORSRequest('GET', 'http://www.example.com/')) {
         // remove the entry created by the test from the queue
         _ie7q = [];
-        var flensed={base_path:"http://apis.ucsf.edu.trott.jit.su/static/flensed"};
+        window.flensed={base_path:"http://apis.ucsf.edu.trott.jit.su/static/flensed/"};
         var polyfill = document.createElement('script');
-        polyfill.src = 'http://apis.ucsf.edu.trott.jit.su/static/ie7_polyfills.js';
+        polyfill.src = 'http://apis.ucsf.edu.trott.jit.su/static/ie7_polyfill.js';
         polyfill.onreadystatechange = function () {
             if ((polyfill.readyState !== "complete") && (polyfill.readyState !== "loaded")) {
                 return;
