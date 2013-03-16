@@ -17,7 +17,6 @@ var UCSF = (function () {
             return str.join("&");
         },
 
-        //TODO: failure and success are different parameter formats. Yuck. Fix.
         //TODO: really, resending options, success, and failure? Let's fix that.
         createCORSRequest: function (method, url, options, success, failure) {
             var xhr = new XMLHttpRequest();
