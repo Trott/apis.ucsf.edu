@@ -4,10 +4,11 @@ var express = require('express'),
 
 var app = express();
 
+
 //TODO: this allows all hosts. We should specify based on API key.
 //TODO: Same as above but for crossdomain.xml too.
 //TODO: Make robust with supervisor and also domains to catch errors.
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     "use strict";
     var oneof = false;
     if(req.headers.origin) {
@@ -35,20 +36,12 @@ app.use(function(req, res, next) {
     }
 });
 
-// TODO: DRY this up.
-app.get('/static/:file', function(req,res) {
+app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
     "use strict";
-    if (fs.existsSync(__dirname + '/static/' + req.params.file)) {
-        res.sendfile( __dirname + '/static/' + req.params.file);
-        return;
-    }
-    res.send(404);
-});
-
-app.get('/static/flensed/:file', function(req,res) {
-    "use strict";
-    if (fs.existsSync(__dirname + '/static/flensed/' + req.params.file)) {
-        res.sendfile( __dirname + '/static/flensed/' + req.params.file);
+    console.log('hit');
+    console.log(req.params[0]);
+    if (fs.existsSync(__dirname + '/static/' + req.params[0])) {
+        res.sendfile( __dirname + '/static/' + req.params[0]);
         return;
     }
     res.send(404);
