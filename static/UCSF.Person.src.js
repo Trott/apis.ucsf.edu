@@ -30,7 +30,6 @@ var UCSF = (function () {
                 xhr.open(method, url);
             } else if ((typeof flensed !== "undefined") && "flXHR" in flensed) {
                 // flensed.flXHR polyfill for IE7
-                //TODO: uh, fix up the properties in the constructor parameter
                 xhr = new flensed.flXHR({
                     xmlResponseText:false,
                     onreadystatechange:
