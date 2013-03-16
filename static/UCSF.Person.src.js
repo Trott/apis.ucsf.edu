@@ -90,32 +90,16 @@ var UCSF = (function () {
     if (! me.createCORSRequest('GET', 'http://www.example.com/')) {
         // remove the entry created by the test from the queue
         _ie7q = [];
+        var flensed={base_path:"http://apis.ucsf.edu.trott.jit.su/static/flensed"};
         var polyfill = document.createElement('script');
-        polyfill.src = 'http://apis.ucsf.edu.trott.jit.su/static/flensed/flXHR.js';
+        polyfill.src = 'http://apis.ucsf.edu.trott.jit.su/static/ie7_polyfills.js';
         polyfill.onreadystatechange = function () {
             if ((polyfill.readyState !== "complete") && (polyfill.readyState !== "loaded")) {
                 return;
             }
-            //TODO: Oh, come on, clean this up. Make it DRY at least.
-            //TODO: Actually, probably the easiest thing to do is to put flXHR and JSON2 into one file that we serve.
-            if (typeof JSON === "undefined") {
-                var jsonPolyfill = document.createElement('script');
-                jsonPolyfill.src = '//cdnjs.cloudflare.com/ajax/libs/json2/20121008/json2.js';
-                jsonPolyfill.onreadystatechange = function () {
-                    if ((jsonPolyfill.readyState !== "complete") && (jsonPolyfill.readyState !== "loaded")) {
-                        return;
-                    }
-                    var length = _ie7q.length;
-                    for (var i=0; i<length; i++) {
-                        UCSF.Person.search(_ie7q[i].options, _ie7q[i].success, _ie7q[i].failure);
-                    }
-                };
-                document.body.appendChild(jsonPolyfill);
-            } else {
-                var length = _ie7q.length;
-                for (var i=0; i<length; i++) {
-                    UCSF.Person.search(_ie7q[i].options, _ie7q[i].success, _ie7q[i].failure);
-                }
+            var length = _ie7q.length;
+            for (var i=0; i<length; i++) {
+                UCSF.Person.search(_ie7q[i].options, _ie7q[i].success, _ie7q[i].failure);
             }
         };
         document.body.appendChild(polyfill);

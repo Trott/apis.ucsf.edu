@@ -23,7 +23,8 @@ module.exports = function(grunt) {
     uglify: {
       static: {
         files: {
-          'static/UCSF.Person.js': ['static/UCSF.Person.src.js']
+          'static/UCSF.Person.js': ['static/UCSF.Person.src.js'],
+          'static/ie7_polyfill.js': ['static/json2/json2.js','static/flensed/flXHR.js']
         }
       }
     }
