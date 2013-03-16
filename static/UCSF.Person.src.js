@@ -60,7 +60,9 @@ var UCSF = (function () {
 
             var xhr = UCSF.createCORSRequest('GET', urlWithOptions, options, success, failure);
             if (!xhr) {
-                //CORS not supported. TODO: at least return an error code.
+                if (failure) {
+                    failure("CORS not supported");
+                }
                 return;
             }
 
