@@ -8,6 +8,7 @@ var app = express();
 //TODO: this allows all hosts. We should specify based on API key.
 //TODO: Same as above but for crossdomain.xml too.
 //TODO: Make robust with supervisor and also domains to catch errors.
+//TODO: HTTP compression a la mod_deflate
 app.use(function (req, res, next) {
     "use strict";
     var oneof = false;
