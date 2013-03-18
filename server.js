@@ -4,7 +4,7 @@ var express = require('express'),
 
 var app = express();
 
-
+//TODO: Do not run as root.
 //TODO: this allows all hosts. We should specify based on API key.
 //TODO: Same as above but for crossdomain.xml too.
 //TODO: Use domains to catch errors.
