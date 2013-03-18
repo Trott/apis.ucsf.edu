@@ -76,7 +76,7 @@ var UCSF = (function () {
             search: function (options, success, failure ) {
                 failure = failure || function (msg) {window.alert(msg);};
                 UCSF.makeCORSRequest(
-                    'http://apis.ucsf.edu.trott.jit.su/person/search',
+                    'http://apis.ucsf.edu/person/search',
                     options,
                     success,
                     failure
@@ -90,9 +90,9 @@ var UCSF = (function () {
     if (! me.createCORSRequest('GET', 'http://www.example.com/')) {
         // remove the entry created by the test from the queue
         _ie7q = [];
-        window.flensed={base_path:"http://apis.ucsf.edu.trott.jit.su/static/flensed/"};
+        window.flensed={base_path:"http://apis.ucsf.edu/static/flensed/"};
         var polyfill = document.createElement('script');
-        polyfill.src = 'http://apis.ucsf.edu.trott.jit.su/static/ie7_polyfill.js';
+        polyfill.src = 'http://apis.ucsf.edu/static/ie7_polyfill.js';
         polyfill.onreadystatechange = function () {
             if ((polyfill.readyState !== "complete") && (polyfill.readyState !== "loaded")) {
                 return;
