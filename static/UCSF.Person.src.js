@@ -17,8 +17,7 @@ var UCSF = (function () {
             return str.join("&");
         },
 
-        //TODO: really, resending options, success, and failure? Let's fix that.
-        createCORSRequest: function (method, url, options, success, failure) {
+        createCORSRequest: function (method, url, success, failure) {
             var xhr = new XMLHttpRequest();
             if ("withCredentials" in xhr) {
                 // XHR for Chrome/Firefox/Opera/Safari.
@@ -46,41 +45,30 @@ var UCSF = (function () {
                 });
                 xhr.open(method, url, true);
             } else {
-                _ie7q.push({options:options, success:success, failure:failure});
                 xhr = null;
             }
             return xhr;
         },
 
-        makeCORSRequest: function (url, options, success, failure) {
+        createRequestString: function(url, options) {
             var separator = url.indexOf('?')===-1 ? '?' : '&';
-            var urlWithOptions =  url + separator + this.serialize(options);
-
-            var xhr = UCSF.createCORSRequest('GET', urlWithOptions, options, success, failure);
-            if (!xhr) {
-                if (failure) {
-                    failure("CORS not supported");
-                }
-                return;
-            }
-
-            // Response handlers.
-            xhr.onload = function () {
-                success(JSON.parse(xhr.responseText));
-            };
-            xhr.onerror = failure;
-            xhr.send();
+            return url + separator + this.serialize(options);
         },
 
         Person: {
             search: function (options, success, failure ) {
                 failure = failure || function (msg) {window.alert(msg);};
-                UCSF.makeCORSRequest(
-                    'http://apis.ucsf.edu/person/search',
-                    options,
-                    success,
-                    failure
-                );
+                var reqString = UCSF.createRequestString('http://apis.ucsf.edu/person/search', options);
+                var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
+                if (! xhr) {
+                    _ie7q.push({options:options, success:success, failure:failure});
+                } else {
+                    xhr.onload = function () {
+                        success(JSON.parse(xhr.responseText));
+                    };
+                    xhr.onerror = failure;
+                    xhr.send();
+                }
             }
         }
     };
@@ -88,8 +76,6 @@ var UCSF = (function () {
     // Determine if CORS is supported. If not, load flXHR polyfill.
     // Needed for IE7 support. :-(
     if (! me.createCORSRequest('GET', 'http://www.example.com/')) {
-        // remove the entry created by the test from the queue
-        _ie7q = [];
         window.flensed={base_path:"http://apis.ucsf.edu/static/flensed/"};
         var polyfill = document.createElement('script');
         polyfill.src = 'http://apis.ucsf.edu/static/ie7_polyfill.js';
