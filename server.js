@@ -9,7 +9,6 @@ var app = express();
 //TODO: Logging of requests.
 //TODO: this allows all hosts. We should specify based on API key.
 //TODO: Same as above but for crossdomain.xml too.
-//TODO: Use domains to catch errors.
 //TODO: HTTP compression a la mod_deflate
 app.use(function (req, res, next) {
     "use strict";
