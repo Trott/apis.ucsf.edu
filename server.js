@@ -1,13 +1,12 @@
 var express = require('express'),
     fs = require('fs'),
-    connect = require('connect'),
     person = require('./routes/person'),
     nodeUserGid = "node",
     nodeUserUid = "node";
 
 var app = express();
 
-app.use(connect.compress());
+app.use(express.compress());
 
 //TODO: Logging of requests.
 //TODO: this allows all hosts. We should specify based on API key.
