@@ -11,6 +11,7 @@ app.use(express.compress());
 //TODO: Logging of requests.
 //TODO: this allows all hosts. We should specify based on API key.
 //TODO: Same as above but for crossdomain.xml too.
+//TODO: log rotation
 app.use(function (req, res, next) {
     "use strict";
     var oneof = false;
@@ -41,8 +42,6 @@ app.use(function (req, res, next) {
 
 app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
     "use strict";
-    console.log('hit');
-    console.log(req.params[0]);
     if (fs.existsSync(__dirname + '/static/' + req.params[0])) {
         res.sendfile( __dirname + '/static/' + req.params[0]);
         return;
