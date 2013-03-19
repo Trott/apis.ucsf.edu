@@ -1,10 +1,11 @@
 var express = require('express'),
     fs = require('fs'),
-    person = require('./routes/person');
+    person = require('./routes/person'),
+    nodeUserGid = "node",
+    nodeUserUid = "node";
 
 var app = express();
 
-//TODO: Do not run as root.
 //TODO: Logging of requests.
 //TODO: this allows all hosts. We should specify based on API key.
 //TODO: Same as above but for crossdomain.xml too.
@@ -64,5 +65,9 @@ app.get('/crossdomain.xml', function(req,res) {
     );
 });
 
-app.listen(80);
+app.listen(80, function() {
+  process.setgid(nodeUserGid);
+  process.setuid(nodeUserUid);
+});
+
 console.log('Listening on port 80...');
