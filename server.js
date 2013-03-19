@@ -1,15 +1,17 @@
 var express = require('express'),
     fs = require('fs'),
+    connect = require('connect'),
     person = require('./routes/person'),
     nodeUserGid = "node",
     nodeUserUid = "node";
 
 var app = express();
 
+app.use(connect.compress());
+
 //TODO: Logging of requests.
 //TODO: this allows all hosts. We should specify based on API key.
 //TODO: Same as above but for crossdomain.xml too.
-//TODO: HTTP compression a la mod_deflate
 app.use(function (req, res, next) {
     "use strict";
     var oneof = false;

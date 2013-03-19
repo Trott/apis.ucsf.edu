@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "3.x",
-    "xml2js": "~0.2.6"
+    "xml2js": "~0.2.6",
+    "connect": "~2.7.3"
   },
   "scripts": {
     "start": "server.js"
