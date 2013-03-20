@@ -2,40 +2,35 @@ var express = require('express'),
     fs = require('fs'),
     person = require('./routes/person'),
     nodeUserGid = "node",
-    nodeUserUid = "node";
+    nodeUserUid = "node",
+    apikeyMatches = false;
 
 var app = express();
 
 app.use(express.compress());
 
 //TODO: Logging of requests.
-//TODO: this allows all hosts. We should specify based on API key.
-//TODO: Same as above but for crossdomain.xml too.
+//TODO: CORS restrictions should apply to crossdomain.xml too.
 //TODO: log rotation
 app.use(function (req, res, next) {
     "use strict";
-    var oneof = false;
-    if(req.headers.origin) {
+
+    var apikeyMatches = false;
+    if(req.headers.origin && req.query.apikey) {
+        //TODO: look up host in couchdb and only send the A-OK if it matches the origin header
         res.header('Access-Control-Allow-Origin', req.headers.origin);
-        oneof = true;
-    }
-    if(req.headers['access-control-request-method']) {
-        res.header('Access-Control-Allow-Methods', req.headers['access-control-request-method']);
-        oneof = true;
-    }
-    if(req.headers['access-control-request-headers']) {
-        res.header('Access-Control-Allow-Headers', req.headers['access-control-request-headers']);
-        oneof = true;
-    }
-    if(oneof) {
+        apikeyMatches = true;
+
+        if(req.headers['access-control-request-method']) {
+            res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
+        }
+
         res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
     }
 
-    // intercept OPTIONS method
-    if (oneof && req.method === 'OPTIONS') {
+    if (req.method === 'OPTIONS') {
         res.send(200);
-    }
-    else {
+    } else  {
         next();
     }
 });
