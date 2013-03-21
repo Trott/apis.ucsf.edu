@@ -45,11 +45,14 @@ app.use(function (req, res, next) {
 
 app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
     "use strict";
-    if (fs.existsSync(__dirname + '/static/' + req.params[0])) {
-        res.sendfile( __dirname + '/static/' + req.params[0]);
-        return;
-    }
-    res.send(404);
+    fs.exists(__dirname + '/static/' + req.params[0], function(exists) {
+        if (exists) {
+            res.sendfile( __dirname + '/static/' + req.params[0]);
+            return;
+        } else {
+            res.send(404);
+        }
+    });
 });
 
 app.get('/person/search', person.search);
