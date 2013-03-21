@@ -1,11 +1,13 @@
 var express = require('express'),
     fs = require('fs'),
+    cradle = require('cradle'),
     person = require('./routes/person'),
     nodeUserGid = "node",
     nodeUserUid = "node",
     apikeyMatches = false;
 
 var app = express();
+var db = new(cradle.Connection)().database('api_users');
 
 app.use(express.compress());
 
@@ -18,19 +20,25 @@ app.use(function (req, res, next) {
     var apikeyMatches = false;
     if(req.headers.origin && req.query.apikey) {
         //TODO: look up host in couchdb and only send the A-OK if it matches the origin header
-        res.header('Access-Control-Allow-Origin', req.headers.origin);
-        apikeyMatches = true;
+        db.get(req.query.apikey, function (err, doc) {
+            if (doc.host === req.headers.origin) {
+                res.header('Access-Control-Allow-Origin', req.headers.origin);
+                apikeyMatches = true;
 
-        if(req.headers['access-control-request-method']) {
-            res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
-        }
+                if(req.headers['access-control-request-method']) {
+                    res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
+                }
 
-        res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
-    }
+                res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
+            }
 
-    if (req.method === 'OPTIONS') {
-        res.send(200);
-    } else  {
+            if (req.method === 'OPTIONS') {
+                res.send(200);
+            } else  {
+                next();
+            }
+        });
+    } else {
         next();
     }
 });
