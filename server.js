@@ -22,10 +22,7 @@ app.use(function (req, res, next) {
     if(req.headers.origin && req.query.apikey) {
         db.get(req.query.apikey, function (err, doc) {
             if (err) return next(err);
-            console.log(doc.host);
-            console.log(req.headers.origin);
             if (doc.host === req.headers.origin) {
-                console.log('allowed');
                 res.header('Access-Control-Allow-Origin', req.headers.origin);
                 apikeyMatches = true;
 
