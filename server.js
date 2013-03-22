@@ -10,9 +10,9 @@ var db = new(cradle.Connection)().database('api_users');
 
 app.use(express.compress());
 
-//TODO NOW: Logging of requests.
-//TODO NOW: CORS restrictions should apply to crossdomain.xml too.
-//TODO NOW: log rotation
+//TODO: Logging of requests.
+//TODO: log rotation
+//TODO: Better log file than, uh, server.js.log?
 //TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 app.use(function (req, res, next) {
     "use strict";
@@ -72,6 +72,7 @@ app.get('/person/search', person.search);
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function(req,res) {
     "use strict";
+    //TODO NOW: if (res.locals.apikeyMatches)
     res.send(
         '<?xml version="1.0"?>\n' +
         '<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">\n' +
