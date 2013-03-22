@@ -3,6 +3,7 @@ var http = require('http'),
 
 exports.search = function(req, res) {
     "use strict";
+
     var directoryOptions = {
       host: "directory.ucsf.edu",
       port: 80

@@ -1,47 +1,68 @@
 var express = require('express'),
     fs = require('fs'),
+    cradle = require('cradle'),
     person = require('./routes/person'),
     nodeUserGid = "node",
-    nodeUserUid = "node",
-    apikeyMatches = false;
+    nodeUserUid = "node";
 
 var app = express();
+var db = new(cradle.Connection)().database('api_users');
 
 app.use(express.compress());
 
+//TODO NOW: welcome page (maybe a redirect to directory.ucsf.edu, eh?)
 //TODO: Logging of requests.
-//TODO: CORS restrictions should apply to crossdomain.xml too.
 //TODO: log rotation
+//TODO: Better log file than, uh, server.js.log?
+//TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 app.use(function (req, res, next) {
     "use strict";
 
-    var apikeyMatches = false;
-    if(req.headers.origin && req.query.apikey) {
-        //TODO: look up host in couchdb and only send the A-OK if it matches the origin header
-        res.header('Access-Control-Allow-Origin', req.headers.origin);
-        apikeyMatches = true;
+    if(req.query.apikey) {
+        db.get(req.query.apikey, function (err, doc) {
+            if (err) {
+                if (err.error === "not_found") {
+                    console.log("API key not found: " + req.query.apikey);
+                    return res.send(200);
+                }
+                return next(err);
+            }
+            if (req.headers.origin && doc.host === req.headers.origin) {
+                res.header('Access-Control-Allow-Origin', req.headers.origin);
 
-        if(req.headers['access-control-request-method']) {
-            res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
-        }
+                if(req.headers['access-control-request-method']) {
+                    res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
+                }
 
-        res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
-    }
+                res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
+            }
 
-    if (req.method === 'OPTIONS') {
-        res.send(200);
-    } else  {
+            if (req.method === 'OPTIONS') {
+                res.send(200);
+            } else  {
+                next();
+            }
+        });
+    } else {
         next();
     }
 });
 
+app.use(function(err, req, res, next){
+  console.dir(err);
+  res.send(500, 'Server error');
+});
+
 app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
     "use strict";
-    if (fs.existsSync(__dirname + '/static/' + req.params[0])) {
-        res.sendfile( __dirname + '/static/' + req.params[0]);
-        return;
-    }
-    res.send(404);
+    fs.exists(__dirname + '/static/' + req.params[0], function(exists) {
+        if (exists) {
+            res.sendfile( __dirname + '/static/' + req.params[0]);
+            return;
+        } else {
+            res.send(404);
+        }
+    });
 });
 
 app.get('/person/search', person.search);
@@ -49,6 +70,7 @@ app.get('/person/search', person.search);
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function(req,res) {
     "use strict";
+    // Yup, IE7 polyfill will allow any origin.
     res.send(
         '<?xml version="1.0"?>\n' +
         '<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">\n' +
