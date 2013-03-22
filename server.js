@@ -10,14 +10,13 @@ var db = new(cradle.Connection)().database('api_users');
 
 app.use(express.compress());
 
+//TODO NOW: welcome page (maybe a redirect to directory.ucsf.edu, eh?)
 //TODO: Logging of requests.
 //TODO: log rotation
 //TODO: Better log file than, uh, server.js.log?
 //TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 app.use(function (req, res, next) {
     "use strict";
-
-    res.locals.apikeyMatches = false;
 
     if(req.query.apikey) {
         db.get(req.query.apikey, function (err, doc) {
@@ -30,7 +29,6 @@ app.use(function (req, res, next) {
             }
             if (req.headers.origin && doc.host === req.headers.origin) {
                 res.header('Access-Control-Allow-Origin', req.headers.origin);
-                res.locals.apikeyMatches = true;
 
                 if(req.headers['access-control-request-method']) {
                     res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
@@ -72,7 +70,7 @@ app.get('/person/search', person.search);
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function(req,res) {
     "use strict";
-    //TODO NOW: if (res.locals.apikeyMatches)
+    // Yup, IE7 polyfill will allow any origin.
     res.send(
         '<?xml version="1.0"?>\n' +
         '<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">\n' +
