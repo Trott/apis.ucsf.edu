@@ -81,6 +81,11 @@ app.get('/crossdomain.xml', function(req,res) {
     );
 });
 
+app.get('/', function(req,res) {
+    "use strict";
+    res.sendfile( __dirname + '/static/index.html');
+});
+
 app.listen(80, function() {
   process.setgid(nodeUserGid);
   process.setuid(nodeUserUid);
