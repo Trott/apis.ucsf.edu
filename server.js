@@ -10,7 +10,6 @@ var db = new(cradle.Connection)().database('api_users');
 
 app.use(express.compress());
 
-//TODO NOW: welcome page (maybe a redirect to directory.ucsf.edu, eh?)
 //TODO: Logging of requests.
 //TODO: log rotation
 //TODO: Better log file than, uh, server.js.log?
