@@ -3,28 +3,34 @@ var express = require('express'),
     cradle = require('cradle'),
     person = require('./routes/person'),
     nodeUserGid = "node",
-    nodeUserUid = "node",
-    apikeyMatches = false;
+    nodeUserUid = "node";
 
 var app = express();
 var db = new(cradle.Connection)().database('api_users');
 
 app.use(express.compress());
 
-//TODO: Logging of requests.
-//TODO: CORS restrictions should apply to crossdomain.xml too.
-//TODO: log rotation
+//TODO NOW: Logging of requests.
+//TODO NOW: CORS restrictions should apply to crossdomain.xml too.
+//TODO NOW: log rotation
+//TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 app.use(function (req, res, next) {
     "use strict";
 
-    var apikeyMatches = false;
+    res.locals.apikeyMatches = false;
 
-    if(req.headers.origin && req.query.apikey) {
+    if(req.query.apikey) {
         db.get(req.query.apikey, function (err, doc) {
-            if (err) return next(err);
-            if (doc.host === req.headers.origin) {
+            if (err) {
+                if (err.error === "not_found") {
+                    console.log("API key not found: " + req.query.apikey);
+                    return res.send(200);
+                }
+                return next(err);
+            }
+            if (req.headers.origin && doc.host === req.headers.origin) {
                 res.header('Access-Control-Allow-Origin', req.headers.origin);
-                apikeyMatches = true;
+                res.locals.apikeyMatches = true;
 
                 if(req.headers['access-control-request-method']) {
                     res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
@@ -42,6 +48,11 @@ app.use(function (req, res, next) {
     } else {
         next();
     }
+});
+
+app.use(function(err, req, res, next){
+  console.dir(err);
+  res.send(500, 'Server error');
 });
 
 app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
