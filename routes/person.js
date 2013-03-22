@@ -4,11 +4,6 @@ var http = require('http'),
 exports.search = function(req, res) {
     "use strict";
 
-    // If no CORS header indicating API key matched origin, return nothing..
-    if (! res.locals.apikeyMatches) {
-        return res.send(200);
-    }
-
     var directoryOptions = {
       host: "directory.ucsf.edu",
       port: 80
