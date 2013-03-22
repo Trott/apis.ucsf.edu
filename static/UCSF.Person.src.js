@@ -36,7 +36,7 @@ var UCSF = (function () {
                                 if (XHRobj.status === 200 && success) {
                                     success(JSON.parse(XHRobj.responseText));
                                 } else {
-                                    failure(XHRobj.statusText);
+                                    failure(XHRobj);
                                 }
                             }
                         },
@@ -57,7 +57,7 @@ var UCSF = (function () {
 
         Person: {
             search: function (options, success, failure ) {
-                failure = failure || function (msg) {window.alert(msg);};
+                failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
                 var reqString = UCSF.createRequestString('http://apis.ucsf.edu/person/search', options);
                 var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
                 if (! xhr) {

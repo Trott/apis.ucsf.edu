@@ -18,10 +18,14 @@ app.use(function (req, res, next) {
     "use strict";
 
     var apikeyMatches = false;
+
     if(req.headers.origin && req.query.apikey) {
-        //TODO: look up host in couchdb and only send the A-OK if it matches the origin header
         db.get(req.query.apikey, function (err, doc) {
+            if (err) return next(err);
+            console.log(doc.host);
+            console.log(req.headers.origin);
             if (doc.host === req.headers.origin) {
+                console.log('allowed');
                 res.header('Access-Control-Allow-Origin', req.headers.origin);
                 apikeyMatches = true;
 
