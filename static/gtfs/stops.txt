@@ -1,0 +1,5 @@
+stop_id,stop_name,stop_desc,stop_lat,stop_lon
+mb4ses,Mission Bay,4th St. (east side),37.768117976872716,-122.39082746207714
+mzmc1600d,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428
+pl4p,Parnassus,LPPI (401 Parnassus),37.7638174033811,-122.45648592710495
+sfgh,SFGH,San Francisco General Hospital (2557 23rd Street),37.7548539352877,-122.40492649376392
