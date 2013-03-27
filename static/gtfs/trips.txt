@@ -1,8 +1,8 @@
 route_id,service_id,trip_id
-blue,WD,blue1
-blue,WD,blue2
-blue,WD,blue3
-blue,WD,blue4
+blue,WD,Ablue
+blue,WD,Bblue
+blue,WD,Cblue
+blue,WD,Dblue
 gold,WD,gold1
 gold,WD,gold2
 gold,WD,gold3
