@@ -3,10 +3,10 @@ blue,WD,Ablue
 blue,WD,Bblue
 blue,WD,Cblue
 blue,WD,Dblue
-gold,WD,gold1
-gold,WD,gold2
-gold,WD,gold3
-gold,WD,gold4
+gold,WD,Agold
+gold,WD,Bgold
+gold,WD,Cgold
+gold,WD,Dgold
 grey,WD,grey1
 grey,WD,grey2
 grey,WD,grey3
