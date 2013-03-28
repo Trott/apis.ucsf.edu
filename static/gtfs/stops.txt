@@ -2,4 +2,6 @@ stop_id,stop_name,stop_desc,stop_lat,stop_lon
 MB,Mission Bay,4th St.,37.768117976872716,-122.39082746207714
 MT. ZION,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428
 Parnassus,Parnassus,LPPI (401 Parnassus),37.7638174033811,-122.45648592710495
-SFGH,SFGH,San Francisco General Hospital (2557 23rd Street),37.7548539352877,-122.40492649376392
+SFGH,SFGH,San Francisco General Hospital (2557 23rd St.),37.7548539352877,-122.40492649376392
+55 Laguna,55 Laguna,55 Laguna,37.771806,-122.425915
+MCB,Mission Center Building,Mission Center Building (1855 Folsom),37.767326,-122.414519
