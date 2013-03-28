@@ -10,9 +10,9 @@ gold,WD,goldD
 lime,WD,limeA
 lime,WD,limeB
 lime,WD,limeC
-grey,WD,grey1
-grey,WD,grey2
-grey,WD,grey3
+grey,WD,greyA
+grey,WD,greyB
+grey,WD,greyC
 tan,WD,tan1
 tan,WD,tan2
 black,WD,black1
