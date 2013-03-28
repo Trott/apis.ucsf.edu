@@ -13,6 +13,8 @@ lime,WD,limeC
 grey,WD,greyA
 grey,WD,greyB
 grey,WD,greyC
+red,WD,redA
+red,WD,redB
 tan,WD,tan1
 tan,WD,tan2
 black,WD,black1
@@ -25,7 +27,5 @@ bronze,WD,bronze1
 bronze,WD,bronze2
 yellow,WD,yellow1
 yellow,WD,yellow2
-red,WD,red1
-red,WD,red2
 green,WD,green1
 green,WD,green2

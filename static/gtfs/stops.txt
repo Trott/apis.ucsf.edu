@@ -5,3 +5,4 @@ Parnassus,Parnassus,LPPI (401 Parnassus),37.7638174033811,-122.45648592710495
 SFGH,SFGH,San Francisco General Hospital (2557 23rd St.),37.7548539352877,-122.40492649376392
 55 Laguna,55 Laguna,55 Laguna,37.771806,-122.425915
 MCB,Mission Center Building,Mission Center Building (1855 Folsom),37.767326,-122.414519
+BART,16th St. BART,16th St. BART Station,37.765128,-122.419402
