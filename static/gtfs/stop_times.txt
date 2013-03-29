@@ -1,356 +1,356 @@
 trip_id,arrival_time,departure_time,stop_id,stop_sequence
 blueA,5:35:00,5:35:00,MB,1
-blueA,5:57:00,5:57:00,MT. ZION,2
+blueA,5:57:00,5:57:00,Mt. Zion,2
 blueA,6:12:00,6:12:00,Parnassus,3
 blueA,6:35:00,6:35:00,SFGH,4
 blueA,6:55:00,6:55:00,MB,5
-blueA,7:17:00,7:17:00,MT. ZION,6
+blueA,7:17:00,7:17:00,Mt. Zion,6
 blueA,7:32:00,7:32:00,Parnassus,7
 blueA,7:55:00,7:55:00,SFGH,8
 blueA,8:15:00,8:15:00,MB,9
-blueA,8:37:00,8:37:00,MT. ZION,10
+blueA,8:37:00,8:37:00,Mt. Zion,10
 blueA,8:52:00,8:52:00,Parnassus,11
 blueA,9:15:00,9:15:00,SFGH,12
 blueA,9:35:00,9:35:00,MB,13
-blueA,9:57:00,9:57:00,MT. ZION,14
+blueA,9:57:00,9:57:00,Mt. Zion,14
 blueA,10:12:00,10:12:00,Parnassus,15
 blueA,10:35:00,10:35:00,SFGH,16
 blueA,10:55:00,10:55:00,MB,17
-blueA,11:17:00,11:17:00,MT. ZION,18
+blueA,11:17:00,11:17:00,Mt. Zion,18
 blueA,11:32:00,11:32:00,Parnassus,19
 blueA,11:55:00,11:55:00,SFGH,20
 blueA,12:15:00,12:15:00,MB,21
-blueA,12:37:00,12:37:00,MT. ZION,22
+blueA,12:37:00,12:37:00,Mt. Zion,22
 blueA,12:52:00,12:52:00,Parnassus,23
 blueA,13:15:00,13:15:00,SFGH,24
 blueA,13:35:00,13:35:00,MB,25
-blueA,13:57:00,13:57:00,MT. ZION,26
+blueA,13:57:00,13:57:00,Mt. Zion,26
 blueA,14:12:00,14:12:00,Parnassus,27
 blueA,14:35:00,14:35:00,SFGH,28
 blueA,14:55:00,14:55:00,MB,29
-blueA,15:17:00,15:17:00,MT. ZION,30
+blueA,15:17:00,15:17:00,Mt. Zion,30
 blueA,15:32:00,15:32:00,Parnassus,31
 blueA,15:55:00,15:55:00,SFGH,32
 blueA,16:15:00,16:15:00,MB,33
-blueA,16:37:00,16:37:00,MT. ZION,34
+blueA,16:37:00,16:37:00,Mt. Zion,34
 blueA,16:52:00,16:52:00,Parnassus,35
 blueA,17:15:00,17:15:00,SFGH,36
 blueA,17:35:00,17:35:00,MB,37
-blueA,17:57:00,17:57:00,MT. ZION,38
+blueA,17:57:00,17:57:00,Mt. Zion,38
 blueA,18:12:00,18:12:00,Parnassus,39
 blueA,18:35:00,18:35:00,SFGH,40
 blueA,18:55:00,18:55:00,MB,41
-blueA,19:17:00,19:17:00,MT. ZION,42
+blueA,19:17:00,19:17:00,Mt. Zion,42
 blueA,19:32:00,19:32:00,Parnassus,43
 blueA,19:55:00,19:55:00,SFGH,44
 blueA,20:10:00,20:10:00,MB,45
-blueA,20:32:00,20:32:00,MT. ZION,46
+blueA,20:32:00,20:32:00,Mt. Zion,46
 blueA,20:47:00,20:47:00,Parnassus,47
 blueA,21:10:00,21:10:00,SFGH,48
 blueB,5:55:00,5:55:00,MB,1
-blueB,6:17:00,6:17:00,MT. ZION,2
+blueB,6:17:00,6:17:00,Mt. Zion,2
 blueB,6:32:00,6:32:00,Parnassus,3
 blueB,6:55:00,6:55:00,SFGH,4
 blueB,7:15:00,7:15:00,MB,5
-blueB,7:37:00,7:37:00,MT. ZION,6
+blueB,7:37:00,7:37:00,Mt. Zion,6
 blueB,7:52:00,7:52:00,Parnassus,7
 blueB,8:15:00,8:15:00,SFGH,8
 blueB,8:35:00,8:35:00,MB,9
-blueB,8:57:00,8:57:00,MT. ZION,10
+blueB,8:57:00,8:57:00,Mt. Zion,10
 blueB,9:12:00,9:12:00,Parnassus,11
 blueB,9:35:00,9:35:00,SFGH,12
 blueB,9:55:00,9:55:00,MB,13
-blueB,10:17:00,10:17:00,MT. ZION,14
+blueB,10:17:00,10:17:00,Mt. Zion,14
 blueB,10:32:00,10:32:00,Parnassus,15
 blueB,10:55:00,10:55:00,SFGH,16
 blueB,11:15:00,11:15:00,MB,17
-blueB,11:37:00,11:37:00,MT. ZION,18
+blueB,11:37:00,11:37:00,Mt. Zion,18
 blueB,11:52:00,11:52:00,Parnassus,19
 blueB,12:15:00,12:15:00,SFGH,20
 blueB,12:35:00,12:35:00,MB,21
-blueB,12:57:00,12:57:00,MT. ZION,22
+blueB,12:57:00,12:57:00,Mt. Zion,22
 blueB,13:12:00,13:12:00,Parnassus,23
 blueB,13:35:00,13:35:00,SFGH,24
 blueB,13:55:00,13:55:00,MB,25
-blueB,14:17:00,14:17:00,MT. ZION,26
+blueB,14:17:00,14:17:00,Mt. Zion,26
 blueB,14:32:00,14:32:00,Parnassus,27
 blueB,14:55:00,14:55:00,SFGH,28
 blueB,15:15:00,15:15:00,MB,29
-blueB,15:37:00,15:37:00,MT. ZION,30
+blueB,15:37:00,15:37:00,Mt. Zion,30
 blueB,15:52:00,15:52:00,Parnassus,31
 blueB,16:15:00,16:15:00,SFGH,32
 blueB,16:35:00,16:35:00,MB,33
-blueB,16:57:00,16:57:00,MT. ZION,34
+blueB,16:57:00,16:57:00,Mt. Zion,34
 blueB,17:12:00,17:12:00,Parnassus,35
 blueB,17:35:00,17:35:00,SFGH,36
 blueB,17:55:00,17:55:00,MB,37
-blueB,18:17:00,18:17:00,MT. ZION,38
+blueB,18:17:00,18:17:00,Mt. Zion,38
 blueB,18:32:00,18:32:00,Parnassus,39
 blueB,18:55:00,18:55:00,SFGH,40
 blueB,19:15:00,19:15:00,MB,41
-blueB,19:37:00,19:37:00,MT. ZION,42
+blueB,19:37:00,19:37:00,Mt. Zion,42
 blueB,19:52:00,19:52:00,Parnassus,43
 blueB,20:15:00,20:15:00,SFGH,44
 blueC,6:15:00,6:15:00,MB,1
-blueC,6:37:00,6:37:00,MT. ZION,2
+blueC,6:37:00,6:37:00,Mt. Zion,2
 blueC,6:52:00,6:52:00,Parnassus,3
 blueC,7:15:00,7:15:00,SFGH,4
 blueC,7:35:00,7:35:00,MB,5
-blueC,7:57:00,7:57:00,MT. ZION,6
+blueC,7:57:00,7:57:00,Mt. Zion,6
 blueC,8:12:00,8:12:00,Parnassus,7
 blueC,8:35:00,8:35:00,SFGH,8
 blueC,8:55:00,8:55:00,MB,9
-blueC,9:17:00,9:17:00,MT. ZION,10
+blueC,9:17:00,9:17:00,Mt. Zion,10
 blueC,9:32:00,9:32:00,Parnassus,11
 blueC,9:55:00,9:55:00,SFGH,12
 blueC,10:15:00,10:15:00,MB,13
-blueC,10:37:00,10:37:00,MT. ZION,14
+blueC,10:37:00,10:37:00,Mt. Zion,14
 blueC,10:52:00,10:52:00,Parnassus,15
 blueC,11:15:00,11:15:00,SFGH,16
 blueC,11:35:00,11:35:00,MB,17
-blueC,11:57:00,11:57:00,MT. ZION,18
+blueC,11:57:00,11:57:00,Mt. Zion,18
 blueC,12:12:00,12:12:00,Parnassus,19
 blueC,12:35:00,12:35:00,SFGH,20
 blueC,12:55:00,12:55:00,MB,21
-blueC,13:17:00,13:17:00,MT. ZION,22
+blueC,13:17:00,13:17:00,Mt. Zion,22
 blueC,13:32:00,13:32:00,Parnassus,23
 blueC,13:55:00,13:55:00,SFGH,24
 blueC,14:15:00,14:15:00,MB,25
-blueC,14:37:00,14:37:00,MT. ZION,26
+blueC,14:37:00,14:37:00,Mt. Zion,26
 blueC,14:52:00,14:52:00,Parnassus,27
 blueC,15:15:00,15:15:00,SFGH,28
 blueC,15:35:00,15:35:00,MB,29
-blueC,15:57:00,15:57:00,MT. ZION,30
+blueC,15:57:00,15:57:00,Mt. Zion,30
 blueC,16:12:00,16:12:00,Parnassus,31
 blueC,16:35:00,16:35:00,SFGH,32
 blueC,16:55:00,16:55:00,MB,33
-blueC,17:17:00,17:17:00,MT. ZION,34
+blueC,17:17:00,17:17:00,Mt. Zion,34
 blueC,17:32:00,17:32:00,Parnassus,35
 blueC,17:55:00,17:55:00,SFGH,36
 blueC,18:15:00,18:15:00,MB,37
-blueC,18:37:00,18:37:00,MT. ZION,38
+blueC,18:37:00,18:37:00,Mt. Zion,38
 blueC,18:52:00,18:52:00,Parnassus,39
 blueC,19:15:00,19:15:00,SFGH,40
 blueC,19:35:00,19:35:00,MB,41
-blueC,19:57:00,19:57:00,MT. ZION,42
+blueC,19:57:00,19:57:00,Mt. Zion,42
 blueC,20:12:00,20:12:00,Parnassus,43
 blueC,20:35:00,20:35:00,SFGH,44
 blueD,6:35:00,6:35:00,MB,1
-blueD,6:57:00,6:57:00,MT. ZION,2
+blueD,6:57:00,6:57:00,Mt. Zion,2
 blueD,7:12:00,7:12:00,Parnassus,3
 blueD,7:35:00,7:35:00,SFGH,4
 blueD,7:55:00,7:55:00,MB,5
-blueD,8:17:00,8:17:00,MT. ZION,6
+blueD,8:17:00,8:17:00,Mt. Zion,6
 blueD,8:32:00,8:32:00,Parnassus,7
 blueD,8:55:00,8:55:00,SFGH,8
 blueD,9:15:00,9:15:00,MB,9
-blueD,9:37:00,9:37:00,MT. ZION,10
+blueD,9:37:00,9:37:00,Mt. Zion,10
 blueD,9:52:00,9:52:00,Parnassus,11
 blueD,10:15:00,10:15:00,SFGH,12
 blueD,10:35:00,10:35:00,MB,13
-blueD,10:57:00,10:57:00,MT. ZION,14
+blueD,10:57:00,10:57:00,Mt. Zion,14
 blueD,11:12:00,11:12:00,Parnassus,15
 blueD,11:35:00,11:35:00,SFGH,16
 blueD,11:55:00,11:55:00,MB,17
-blueD,12:17:00,12:17:00,MT. ZION,18
+blueD,12:17:00,12:17:00,Mt. Zion,18
 blueD,12:32:00,12:32:00,Parnassus,19
 blueD,12:55:00,12:55:00,SFGH,20
 blueD,13:15:00,13:15:00,MB,21
-blueD,13:37:00,13:37:00,MT. ZION,22
+blueD,13:37:00,13:37:00,Mt. Zion,22
 blueD,13:52:00,13:52:00,Parnassus,23
 blueD,14:15:00,14:15:00,SFGH,24
 blueD,14:35:00,14:35:00,MB,25
-blueD,14:57:00,14:57:00,MT. ZION,26
+blueD,14:57:00,14:57:00,Mt. Zion,26
 blueD,15:12:00,15:12:00,Parnassus,27
 blueD,15:35:00,15:35:00,SFGH,28
 blueD,15:55:00,15:55:00,MB,29
-blueD,16:17:00,16:17:00,MT. ZION,30
+blueD,16:17:00,16:17:00,Mt. Zion,30
 blueD,16:32:00,16:32:00,Parnassus,31
 blueD,16:55:00,16:55:00,SFGH,32
 blueD,17:15:00,17:15:00,MB,33
-blueD,17:37:00,17:37:00,MT. ZION,34
+blueD,17:37:00,17:37:00,Mt. Zion,34
 blueD,17:52:00,17:52:00,Parnassus,35
 blueD,18:15:00,18:15:00,SFGH,36
 blueD,18:35:00,18:35:00,MB,37
-blueD,18:57:00,18:57:00,MT. ZION,38
+blueD,18:57:00,18:57:00,Mt. Zion,38
 blueD,19:12:00,19:12:00,Parnassus,39
 blueD,19:35:00,19:35:00,SFGH,40
 goldA,5:45:00,5:45:00,MB,1
 goldA,6:00:00,6:00:00,SFGH,2
 goldA,6:22:00,6:22:00,Parnassus,3
-goldA,6:38:00,6:38:00,MT. ZION,4
+goldA,6:38:00,6:38:00,Mt. Zion,4
 goldA,7:05:00,7:05:00,MB,5
 goldA,7:20:00,7:20:00,SFGH,6
 goldA,7:42:00,7:42:00,Parnassus,7
-goldA,7:58:00,7:58:00,MT. ZION,8
+goldA,7:58:00,7:58:00,Mt. Zion,8
 goldA,8:25:00,8:25:00,MB,9
 goldA,8:40:00,8:40:00,SFGH,10
 goldA,9:02:00,9:02:00,Parnassus,11
-goldA,9:18:00,9:18:00,MT. ZION,12
+goldA,9:18:00,9:18:00,Mt. Zion,12
 goldA,9:45:00,9:45:00,MB,13
 goldA,10:00:00,10:00:00,SFGH,14
 goldA,10:22:00,10:22:00,Parnassus,15
-goldA,10:38:00,10:38:00,MT. ZION,16
+goldA,10:38:00,10:38:00,Mt. Zion,16
 goldA,11:05:00,11:05:00,MB,17
 goldA,11:20:00,11:20:00,SFGH,18
 goldA,11:42:00,11:42:00,Parnassus,19
-goldA,11:58:00,11:58:00,MT. ZION,20
+goldA,11:58:00,11:58:00,Mt. Zion,20
 goldA,12:25:00,12:25:00,MB,21
 goldA,12:40:00,12:40:00,SFGH,22
 goldA,13:02:00,13:02:00,Parnassus,23
-goldA,13:18:00,13:18:00,MT. ZION,24
+goldA,13:18:00,13:18:00,Mt. Zion,24
 goldA,13:45:00,13:45:00,MB,25
 goldA,14:00:00,14:00:00,SFGH,26
 goldA,14:22:00,14:22:00,Parnassus,27
-goldA,14:38:00,14:38:00,MT. ZION,28
+goldA,14:38:00,14:38:00,Mt. Zion,28
 goldA,15:05:00,15:05:00,MB,29
 goldA,15:20:00,15:20:00,SFGH,30
 goldA,15:42:00,15:42:00,Parnassus,31
-goldA,15:58:00,15:58:00,MT. ZION,32
+goldA,15:58:00,15:58:00,Mt. Zion,32
 goldA,16:25:00,16:25:00,MB,33
 goldA,16:40:00,16:40:00,SFGH,34
 goldA,17:02:00,17:02:00,Parnassus,35
-goldA,17:18:00,17:18:00,MT. ZION,36
+goldA,17:18:00,17:18:00,Mt. Zion,36
 goldA,17:45:00,17:45:00,MB,37
 goldA,18:00:00,18:00:00,SFGH,38
 goldA,18:22:00,18:22:00,Parnassus,39
-goldA,18:38:00,18:38:00,MT. ZION,40
+goldA,18:38:00,18:38:00,Mt. Zion,40
 goldA,19:05:00,19:05:00,MB,41
 goldA,19:20:00,19:20:00,SFGH,42
 goldA,19:42:00,19:42:00,Parnassus,43
-goldA,19:58:00,19:58:00,MT. ZION,44
+goldA,19:58:00,19:58:00,Mt. Zion,44
 goldB,6:05:00,6:05:00,MB,1
 goldB,6:20:00,6:20:00,SFGH,2
 goldB,6:42:00,6:42:00,Parnassus,3
-goldB,6:58:00,6:58:00,MT. ZION,4
+goldB,6:58:00,6:58:00,Mt. Zion,4
 goldB,7:25:00,7:25:00,MB,5
 goldB,7:40:00,7:40:00,SFGH,6
 goldB,8:02:00,8:02:00,Parnassus,7
-goldB,8:18:00,8:18:00,MT. ZION,8
+goldB,8:18:00,8:18:00,Mt. Zion,8
 goldB,8:45:00,8:45:00,MB,9
 goldB,9:00:00,9:00:00,SFGH,10
 goldB,9:22:00,9:22:00,Parnassus,11
-goldB,9:38:00,9:38:00,MT. ZION,12
+goldB,9:38:00,9:38:00,Mt. Zion,12
 goldB,10:05:00,10:05:00,MB,13
 goldB,10:20:00,10:20:00,SFGH,14
 goldB,10:42:00,10:42:00,Parnassus,15
-goldB,10:58:00,10:58:00,MT. ZION,16
+goldB,10:58:00,10:58:00,Mt. Zion,16
 goldB,11:25:00,11:25:00,MB,17
 goldB,11:40:00,11:40:00,SFGH,18
 goldB,12:02:00,12:02:00,Parnassus,19
-goldB,12:18:00,12:18:00,MT. ZION,20
+goldB,12:18:00,12:18:00,Mt. Zion,20
 goldB,12:45:00,12:45:00,MB,21
 goldB,13:00:00,13:00:00,SFGH,22
 goldB,13:22:00,13:22:00,Parnassus,23
-goldB,13:38:00,13:38:00,MT. ZION,24
+goldB,13:38:00,13:38:00,Mt. Zion,24
 goldB,14:05:00,14:05:00,MB,25
 goldB,14:20:00,14:20:00,SFGH,26
 goldB,14:42:00,14:42:00,Parnassus,27
-goldB,14:58:00,14:58:00,MT. ZION,28
+goldB,14:58:00,14:58:00,Mt. Zion,28
 goldB,15:25:00,15:25:00,MB,29
 goldB,15:40:00,15:40:00,SFGH,30
 goldB,16:02:00,16:02:00,Parnassus,31
-goldB,16:18:00,16:18:00,MT. ZION,32
+goldB,16:18:00,16:18:00,Mt. Zion,32
 goldB,16:45:00,16:45:00,MB,33
 goldB,17:00:00,17:00:00,SFGH,34
 goldB,17:22:00,17:22:00,Parnassus,35
-goldB,17:38:00,17:38:00,MT. ZION,36
+goldB,17:38:00,17:38:00,Mt. Zion,36
 goldB,18:05:00,18:05:00,MB,37
 goldB,18:20:00,18:20:00,SFGH,38
 goldB,18:42:00,18:42:00,Parnassus,39
-goldB,18:58:00,18:58:00,MT. ZION,40
+goldB,18:58:00,18:58:00,Mt. Zion,40
 goldB,19:25:00,19:25:00,MB,41
 goldB,19:40:00,19:40:00,SFGH,42
 goldB,20:02:00,20:02:00,Parnassus,43
-goldB,20:18:00,20:18:00,MT. ZION,44
+goldB,20:18:00,20:18:00,Mt. Zion,44
 goldB,20:45:00,20:45:00,MB,45
 goldB,21:00:00,21:00:00,SFGH,46
 goldB,21:22:00,21:22:00,Parnassus,47
-goldB,21:38:00,21:38:00,MT. ZION,48
+goldB,21:38:00,21:38:00,Mt. Zion,48
 goldC,6:25:00,6:25:00,MB,1
 goldC,6:40:00,6:40:00,SFGH,2
 goldC,7:02:00,7:02:00,Parnassus,3
-goldC,7:18:00,7:18:00,MT. ZION,4
+goldC,7:18:00,7:18:00,Mt. Zion,4
 goldC,7:45:00,7:45:00,MB,5
 goldC,8:00:00,8:00:00,SFGH,6
 goldC,8:22:00,8:22:00,Parnassus,7
-goldC,8:38:00,8:38:00,MT. ZION,8
+goldC,8:38:00,8:38:00,Mt. Zion,8
 goldC,9:05:00,9:05:00,MB,9
 goldC,9:20:00,9:20:00,SFGH,10
 goldC,9:42:00,9:42:00,Parnassus,11
-goldC,9:58:00,9:58:00,MT. ZION,12
+goldC,9:58:00,9:58:00,Mt. Zion,12
 goldC,10:25:00,10:25:00,MB,13
 goldC,10:40:00,10:40:00,SFGH,14
 goldC,11:02:00,11:02:00,Parnassus,15
-goldC,11:18:00,11:18:00,MT. ZION,16
+goldC,11:18:00,11:18:00,Mt. Zion,16
 goldC,11:45:00,11:45:00,MB,17
 goldC,12:00:00,12:00:00,SFGH,18
 goldC,12:22:00,12:22:00,Parnassus,19
-goldC,12:38:00,12:38:00,MT. ZION,20
+goldC,12:38:00,12:38:00,Mt. Zion,20
 goldC,13:05:00,13:05:00,MB,21
 goldC,13:20:00,13:20:00,SFGH,22
 goldC,13:42:00,13:42:00,Parnassus,23
-goldC,13:58:00,13:58:00,MT. ZION,24
+goldC,13:58:00,13:58:00,Mt. Zion,24
 goldC,14:25:00,14:25:00,MB,25
 goldC,14:40:00,14:40:00,SFGH,26
 goldC,15:02:00,15:02:00,Parnassus,27
-goldC,15:18:00,15:18:00,MT. ZION,28
+goldC,15:18:00,15:18:00,Mt. Zion,28
 goldC,15:45:00,15:45:00,MB,29
 goldC,16:00:00,16:00:00,SFGH,30
 goldC,16:22:00,16:22:00,Parnassus,31
-goldC,16:38:00,16:38:00,MT. ZION,32
+goldC,16:38:00,16:38:00,Mt. Zion,32
 goldC,17:05:00,17:05:00,MB,33
 goldC,17:20:00,17:20:00,SFGH,34
 goldC,17:42:00,17:42:00,Parnassus,35
-goldC,17:58:00,17:58:00,MT. ZION,36
+goldC,17:58:00,17:58:00,Mt. Zion,36
 goldC,18:25:00,18:25:00,MB,37
 goldC,18:40:00,18:40:00,SFGH,38
 goldC,19:02:00,19:02:00,Parnassus,39
-goldC,19:18:00,19:18:00,MT. ZION,40
+goldC,19:18:00,19:18:00,Mt. Zion,40
 goldD,6:45:00,6:45:00,MB,1
 goldD,7:00:00,7:00:00,SFGH,2
 goldD,7:22:00,7:22:00,Parnassus,3
-goldD,7:38:00,7:38:00,MT. ZION,4
+goldD,7:38:00,7:38:00,Mt. Zion,4
 goldD,8:05:00,8:05:00,MB,5
 goldD,8:20:00,8:20:00,SFGH,6
 goldD,8:42:00,8:42:00,Parnassus,7
-goldD,8:58:00,8:58:00,MT. ZION,8
+goldD,8:58:00,8:58:00,Mt. Zion,8
 goldD,9:25:00,9:25:00,MB,9
 goldD,9:40:00,9:40:00,SFGH,10
 goldD,10:02:00,10:02:00,Parnassus,11
-goldD,10:18:00,10:18:00,MT. ZION,12
+goldD,10:18:00,10:18:00,Mt. Zion,12
 goldD,10:45:00,10:45:00,MB,13
 goldD,11:00:00,11:00:00,SFGH,14
 goldD,11:22:00,11:22:00,Parnassus,15
-goldD,11:38:00,11:38:00,MT. ZION,16
+goldD,11:38:00,11:38:00,Mt. Zion,16
 goldD,12:05:00,12:05:00,MB,17
 goldD,12:20:00,12:20:00,SFGH,18
 goldD,12:42:00,12:42:00,Parnassus,19
-goldD,12:58:00,12:58:00,MT. ZION,20
+goldD,12:58:00,12:58:00,Mt. Zion,20
 goldD,13:25:00,13:25:00,MB,21
 goldD,13:40:00,13:40:00,SFGH,22
 goldD,14:02:00,14:02:00,Parnassus,23
-goldD,14:18:00,14:18:00,MT. ZION,24
+goldD,14:18:00,14:18:00,Mt. Zion,24
 goldD,14:45:00,14:45:00,MB,25
 goldD,15:00:00,15:00:00,SFGH,26
 goldD,15:22:00,15:22:00,Parnassus,27
-goldD,15:38:00,15:38:00,MT. ZION,28
+goldD,15:38:00,15:38:00,Mt. Zion,28
 goldD,16:05:00,16:05:00,MB,29
 goldD,16:20:00,16:20:00,SFGH,30
 goldD,16:42:00,16:42:00,Parnassus,31
-goldD,16:58:00,16:58:00,MT. ZION,32
+goldD,16:58:00,16:58:00,Mt. Zion,32
 goldD,17:25:00,17:25:00,MB,33
 goldD,17:40:00,17:40:00,SFGH,34
 goldD,18:02:00,18:02:00,Parnassus,35
-goldD,18:18:00,18:18:00,MT. ZION,36
+goldD,18:18:00,18:18:00,Mt. Zion,36
 goldD,18:45:00,18:45:00,MB,37
 goldD,19:00:00,19:00:00,SFGH,38
 goldD,19:22:00,19:22:00,Parnassus,39
-goldD,19:38:00,19:38:00,MT. ZION,40
+goldD,19:38:00,19:38:00,Mt. Zion,40
 goldD,20:05:00,20:05:00,MB,41
 goldD,20:20:00,20:20:00,SFGH,42
 goldD,20:42:00,20:42:00,Parnassus,43
-goldD,20:58:00,20:58:00,MT. ZION,44
+goldD,20:58:00,20:58:00,Mt. Zion,44
 limeA,6:00:00,6:00:00,MCB,1
 limeA,6:05:00,6:05:00,55 Laguna,2
 limeA,6:20:00,6:20:00,Parnassus,3
@@ -851,3 +851,120 @@ redB,19:25:00,19:25:00,MCB,102
 redB,19:30:00,19:30:00,BART,103
 redB,19:35:00,19:35:00,MCB,104
 redB,19:45:00,19:45:00,MB,105
+tanA,6:50:00,6:50:00,Parnassus Library,1
+tanA,7:05:00,7:05:00,Laurel Heights,2
+tanA,7:10:00,7:10:00,Mt. Zion,3
+tanA,7:30:00,7:30:00,Parnassus Library,4
+tanA,7:45:00,7:45:00,Laurel Heights,5
+tanA,7:50:00,7:50:00,Mt. Zion,6
+tanA,8:10:00,8:10:00,Parnassus Library,7
+tanA,8:25:00,8:25:00,Laurel Heights,8
+tanA,8:30:00,8:30:00,Mt. Zion,9
+tanA,8:50:00,8:50:00,Parnassus Library,10
+tanA,9:05:00,9:05:00,Laurel Heights,11
+tanA,9:10:00,9:10:00,Mt. Zion,12
+tanA,9:30:00,9:30:00,Parnassus Library,13
+tanA,9:45:00,9:45:00,Laurel Heights,14
+tanA,9:50:00,9:50:00,Mt. Zion,15
+tanA,10:10:00,10:10:00,Parnassus Library,16
+tanA,10:25:00,10:25:00,Laurel Heights,17
+tanA,10:30:00,10:30:00,Mt. Zion,18
+tanA,10:50:00,10:50:00,Parnassus Library,19
+tanA,11:05:00,11:05:00,Laurel Heights,20
+tanA,11:10:00,11:10:00,Mt. Zion,21
+tanA,11:30:00,11:30:00,Parnassus Library,22
+tanA,11:45:00,11:45:00,Laurel Heights,23
+tanA,11:50:00,11:50:00,Mt. Zion,24
+tanA,12:10:00,12:10:00,Parnassus Library,25
+tanA,12:25:00,12:25:00,Laurel Heights,26
+tanA,12:30:00,12:30:00,Mt. Zion,27
+tanA,12:50:00,12:50:00,Parnassus Library,28
+tanA,13:05:00,13:05:00,Laurel Heights,29
+tanA,13:10:00,13:10:00,Mt. Zion,30
+tanA,13:30:00,13:30:00,Parnassus Library,31
+tanA,13:45:00,13:45:00,Laurel Heights,32
+tanA,13:50:00,13:50:00,Mt. Zion,33
+tanA,14:10:00,14:10:00,Parnassus Library,34
+tanA,14:25:00,14:25:00,Laurel Heights,35
+tanA,14:30:00,14:30:00,Mt. Zion,36
+tanA,14:50:00,14:50:00,Parnassus Library,37
+tanA,15:05:00,15:05:00,Laurel Heights,38
+tanA,15:10:00,15:10:00,Mt. Zion,39
+tanA,15:30:00,15:30:00,Parnassus Library,40
+tanA,15:45:00,15:45:00,Laurel Heights,41
+tanA,15:50:00,15:50:00,Mt. Zion,42
+tanA,16:10:00,16:10:00,Parnassus Library,43
+tanA,16:25:00,16:25:00,Laurel Heights,44
+tanA,16:30:00,16:30:00,Mt. Zion,45
+tanA,16:50:00,16:50:00,Parnassus Library,46
+tanA,17:05:00,17:05:00,Laurel Heights,47
+tanA,17:10:00,17:10:00,Mt. Zion,48
+tanA,17:30:00,17:30:00,Parnassus Library,49
+tanA,17:45:00,17:45:00,Laurel Heights,50
+tanA,17:50:00,17:50:00,Mt. Zion,51
+tanA,18:10:00,18:10:00,Parnassus Library,52
+tanA,18:25:00,18:25:00,Laurel Heights,53
+tanA,18:30:00,18:30:00,Mt. Zion,54
+tanA,18:50:00,18:50:00,Parnassus Library,55
+tanA,19:05:00,19:05:00,Laurel Heights,56
+tanA,19:10:00,19:10:00,Mt. Zion,57
+tanA,19:30:00,19:30:00,Parnassus Library,58
+tanA,19:45:00,19:45:00,Laurel Heights,59
+tanA,19:50:00,19:50:00,Mt. Zion,60
+tanB,7:10:00,7:10:00,Parnassus Library,1
+tanB,7:25:00,7:25:00,Laurel Heights,2
+tanB,7:30:00,7:30:00,Mt. Zion,3
+tanB,7:50:00,7:50:00,Parnassus Library,4
+tanB,8:05:00,8:05:00,Laurel Heights,5
+tanB,8:10:00,8:10:00,Mt. Zion,6
+tanB,8:30:00,8:30:00,Parnassus Library,7
+tanB,8:45:00,8:45:00,Laurel Heights,8
+tanB,8:50:00,8:50:00,Mt. Zion,9
+tanB,9:10:00,9:10:00,Parnassus Library,10
+tanB,9:25:00,9:25:00,Laurel Heights,11
+tanB,9:30:00,9:30:00,Mt. Zion,12
+tanB,9:50:00,9:50:00,Parnassus Library,13
+tanB,10:05:00,10:05:00,Laurel Heights,14
+tanB,10:10:00,10:10:00,Mt. Zion,15
+tanB,10:30:00,10:30:00,Parnassus Library,16
+tanB,10:45:00,10:45:00,Laurel Heights,17
+tanB,10:50:00,10:50:00,Mt. Zion,18
+tanB,11:10:00,11:10:00,Parnassus Library,19
+tanB,11:25:00,11:25:00,Laurel Heights,20
+tanB,11:30:00,11:30:00,Mt. Zion,21
+tanB,11:50:00,11:50:00,Parnassus Library,22
+tanB,12:05:00,12:05:00,Laurel Heights,23
+tanB,12:10:00,12:10:00,Mt. Zion,24
+tanB,12:30:00,12:30:00,Parnassus Library,25
+tanB,12:45:00,12:45:00,Laurel Heights,26
+tanB,12:50:00,12:50:00,Mt. Zion,27
+tanB,13:10:00,13:10:00,Parnassus Library,28
+tanB,13:25:00,13:25:00,Laurel Heights,29
+tanB,13:30:00,13:30:00,Mt. Zion,30
+tanB,13:50:00,13:50:00,Parnassus Library,31
+tanB,14:05:00,14:05:00,Laurel Heights,32
+tanB,14:10:00,14:10:00,Mt. Zion,33
+tanB,14:30:00,14:30:00,Parnassus Library,34
+tanB,14:45:00,14:45:00,Laurel Heights,35
+tanB,14:50:00,14:50:00,Mt. Zion,36
+tanB,15:10:00,15:10:00,Parnassus Library,37
+tanB,15:25:00,15:25:00,Laurel Heights,38
+tanB,15:30:00,15:30:00,Mt. Zion,39
+tanB,15:50:00,15:50:00,Parnassus Library,40
+tanB,16:05:00,16:05:00,Laurel Heights,41
+tanB,16:10:00,16:10:00,Mt. Zion,42
+tanB,16:30:00,16:30:00,Parnassus Library,43
+tanB,16:45:00,16:45:00,Laurel Heights,44
+tanB,16:50:00,16:50:00,Mt. Zion,45
+tanB,17:10:00,17:10:00,Parnassus Library,46
+tanB,17:25:00,17:25:00,Laurel Heights,47
+tanB,17:30:00,17:30:00,Mt. Zion,48
+tanB,17:50:00,17:50:00,Parnassus Library,49
+tanB,18:05:00,18:05:00,Laurel Heights,50
+tanB,18:10:00,18:10:00,Mt. Zion,51
+tanB,18:30:00,18:30:00,Parnassus Library,52
+tanB,18:45:00,18:45:00,Laurel Heights,53
+tanB,18:50:00,18:50:00,Mt. Zion,54
+tanB,19:10:00,19:10:00,Parnassus Library,55
+tanB,19:25:00,19:25:00,Laurel Heights,56
+tanB,19:30:00,19:30:00,Mt. Zion,57

@@ -1,8 +1,10 @@
 stop_id,stop_name,stop_desc,stop_lat,stop_lon
 MB,Mission Bay,4th St.,37.768117976872716,-122.39082746207714
-MT. ZION,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428
+Mt. Zion,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428
 Parnassus,Parnassus,LPPI (401 Parnassus),37.7638174033811,-122.45648592710495
 SFGH,SFGH,San Francisco General Hospital (2557 23rd St.),37.7548539352877,-122.40492649376392
 55 Laguna,55 Laguna,55 Laguna,37.771806,-122.425915
 MCB,Mission Center Building,Mission Center Building (1855 Folsom),37.767326,-122.414519
 BART,16th St. BART,16th St. BART Station,37.765128,-122.419402
+Parnassus Library,Parnassus Library,Parnassus Library (530 Parnassus),37.763174,-122.459176
+Laurel Heights,Laurel Heights,Laurel Heights Building (3333 California),37.786592,-122.448552

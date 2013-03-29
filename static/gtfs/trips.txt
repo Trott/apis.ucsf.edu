@@ -15,8 +15,8 @@ grey,WD,greyB
 grey,WD,greyC
 red,WD,redA
 red,WD,redB
-tan,WD,tan1
-tan,WD,tan2
+tan,WD,tanA
+tan,WD,tanB
 black,WD,black1
 black,WD,black2
 purple,WD,purple1
