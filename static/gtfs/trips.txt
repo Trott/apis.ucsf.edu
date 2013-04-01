@@ -21,11 +21,11 @@ black,WD,blackA
 black,WD,blackB
 purple,WD,purpleA
 pink,WD,pinkA
+green,WD,greenA
+green,WD,greenB
 va,WD,va1
 va,WD,va2
 bronze,WD,bronze1
 bronze,WD,bronze2
 yellow,WD,yellow1
 yellow,WD,yellow2
-green,WD,green1
-green,WD,green2
