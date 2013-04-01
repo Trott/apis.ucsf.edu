@@ -23,9 +23,10 @@ purple,WD,purpleA
 pink,WD,pinkA
 green,WD,greenA
 green,WD,greenB
+bronze,WD,bronzeA
+bronze,WD,bronzeB
+bronze,WD,bronzeC
 va,WD,va1
 va,WD,va2
-bronze,WD,bronze1
-bronze,WD,bronze2
 yellow,WD,yellow1
 yellow,WD,yellow2
