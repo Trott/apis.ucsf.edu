@@ -1594,4 +1594,267 @@ bronzeC,17:15:00,17:15:00,Parnassus,26
 bronzeC,17:20:00,17:20:00,Aldea Housing,27
 bronzeC,17:24:00,17:24:00,Surge/Woods,28
 bronzeC,17:25:00,17:25:00,Parnassus ACC,29
-bronzeC,17:34:00,17:34:00,Parnassus Library,30
+bronzeC,17:34:00,17:34:00,Parnassus Library,30,
+yellowA,6:05:00,6:05:00,BART,1
+yellowA,6:12:00,6:12:00,MCB,2
+yellowA,6:15:00,6:15:00,2300 Harrison S,3
+yellowA,6:22:00,6:22:00,SFGH,4
+yellowA,6:29:00,6:29:00,2300 Harrison N,5
+yellowA,6:32:00,6:32:00,R. Lot,6
+yellowA,6:35:00,6:35:00,BART,7
+yellowA,6:42:00,6:42:00,MCB,8
+yellowA,6:45:00,6:45:00,2300 Harrison S,9
+yellowA,6:52:00,6:52:00,SFGH,10
+yellowA,6:59:00,6:59:00,2300 Harrison N,11
+yellowA,7:02:00,7:02:00,R. Lot,12
+yellowA,7:05:00,7:05:00,BART,13
+yellowA,7:12:00,7:12:00,MCB,14
+yellowA,7:15:00,7:15:00,2300 Harrison S,15
+yellowA,7:22:00,7:22:00,SFGH,16
+yellowA,7:29:00,7:29:00,2300 Harrison N,17
+yellowA,7:32:00,7:32:00,R. Lot,18
+yellowA,7:35:00,7:35:00,BART,19
+yellowA,7:42:00,7:42:00,MCB,20
+yellowA,7:45:00,7:45:00,2300 Harrison S,21
+yellowA,7:52:00,7:52:00,SFGH,22
+yellowA,7:59:00,7:59:00,2300 Harrison N,23
+yellowA,8:02:00,8:02:00,R. Lot,24
+yellowA,8:05:00,8:05:00,BART,25
+yellowA,8:12:00,8:12:00,MCB,26
+yellowA,8:15:00,8:15:00,2300 Harrison S,27
+yellowA,8:22:00,8:22:00,SFGH,28
+yellowA,8:29:00,8:29:00,2300 Harrison N,29
+yellowA,8:32:00,8:32:00,R. Lot,30
+yellowA,8:35:00,8:35:00,BART,31
+yellowA,8:42:00,8:42:00,MCB,32
+yellowA,8:45:00,8:45:00,2300 Harrison S,33
+yellowA,8:52:00,8:52:00,SFGH,34
+yellowA,8:59:00,8:59:00,2300 Harrison N,35
+yellowA,9:02:00,9:02:00,R. Lot,36
+yellowA,9:05:00,9:05:00,BART,37
+yellowA,9:12:00,9:12:00,MCB,38
+yellowA,9:15:00,9:15:00,2300 Harrison S,39
+yellowA,9:22:00,9:22:00,SFGH,40
+yellowA,9:29:00,9:29:00,2300 Harrison N,41
+yellowA,9:32:00,9:32:00,R. Lot,42
+yellowA,9:35:00,9:35:00,MCB,43
+yellowA,9:38:00,9:38:00,2300 Harrison S,44
+yellowA,9:45:00,9:45:00,SFGH,45
+yellowA,9:52:00,9:52:00,2300 Harrison N,46
+yellowA,9:55:00,9:55:00,MCB,47
+yellowA,9:58:00,9:58:00,2300 Harrison S,48
+yellowA,10:05:00,10:05:00,SFGH,49
+yellowA,10:12:00,10:12:00,2300 Harrison N,50
+yellowA,10:15:00,10:15:00,MCB,51
+yellowA,10:18:00,10:18:00,2300 Harrison S,52
+yellowA,10:25:00,10:25:00,SFGH,53
+yellowA,10:32:00,10:32:00,2300 Harrison N,54
+yellowA,10:35:00,10:35:00,MCB,55
+yellowA,10:38:00,10:38:00,2300 Harrison S,56
+yellowA,10:45:00,10:45:00,SFGH,57
+yellowA,10:52:00,10:52:00,2300 Harrison N,58
+yellowA,10:55:00,10:55:00,MCB,59
+yellowA,10:58:00,10:58:00,2300 Harrison S,60
+yellowA,11:05:00,11:05:00,SFGH,61
+yellowA,11:12:00,11:12:00,2300 Harrison N,62
+yellowA,11:15:00,11:15:00,MCB,63
+yellowA,11:18:00,11:18:00,2300 Harrison S,64
+yellowA,11:25:00,11:25:00,SFGH,65
+yellowA,11:32:00,11:32:00,2300 Harrison N,66
+yellowA,11:35:00,11:35:00,MCB,67
+yellowA,11:38:00,11:38:00,2300 Harrison S,68
+yellowA,11:45:00,11:45:00,SFGH,69
+yellowA,11:52:00,11:52:00,2300 Harrison N,70
+yellowA,11:55:00,11:55:00,MCB,71
+yellowA,11:58:00,11:58:00,2300 Harrison S,72
+yellowA,12:05:00,12:05:00,SFGH,73
+yellowA,12:12:00,12:12:00,2300 Harrison N,74
+yellowA,12:15:00,12:15:00,MCB,75
+yellowA,12:18:00,12:18:00,2300 Harrison S,76
+yellowA,12:25:00,12:25:00,SFGH,77
+yellowA,12:32:00,12:32:00,2300 Harrison N,78
+yellowA,12:35:00,12:35:00,MCB,79
+yellowA,12:38:00,12:38:00,2300 Harrison S,80
+yellowA,12:45:00,12:45:00,SFGH,81
+yellowA,12:52:00,12:52:00,2300 Harrison N,82
+yellowA,12:55:00,12:55:00,MCB,83
+yellowA,12:58:00,12:58:00,2300 Harrison S,84
+yellowA,13:05:00,13:05:00,SFGH,85
+yellowA,13:12:00,13:12:00,2300 Harrison N,86
+yellowA,13:15:00,13:15:00,MCB,87
+yellowA,13:18:00,13:18:00,2300 Harrison S,88
+yellowA,13:25:00,13:25:00,SFGH,89
+yellowA,13:32:00,13:32:00,2300 Harrison N,90
+yellowA,13:32:00,13:32:00,2300 Harrison N,91
+yellowA,13:35:00,13:35:00,MCB,92
+yellowA,13:38:00,13:38:00,2300 Harrison S,93
+yellowA,13:45:00,13:45:00,SFGH,94
+yellowA,13:52:00,13:52:00,2300 Harrison N,95
+yellowA,13:55:00,13:55:00,MCB,96
+yellowA,13:58:00,13:58:00,2300 Harrison S,97
+yellowA,14:05:00,14:05:00,SFGH,98
+yellowA,14:12:00,14:12:00,2300 Harrison N,99
+yellowA,14:15:00,14:15:00,MCB,100
+yellowA,14:18:00,14:18:00,2300 Harrison S,101
+yellowA,14:25:00,14:25:00,SFGH,102
+yellowA,14:32:00,14:32:00,2300 Harrison N,103
+yellowA,14:35:00,14:35:00,MCB,104
+yellowA,14:38:00,14:38:00,2300 Harrison S,105
+yellowA,14:45:00,14:45:00,SFGH,106
+yellowA,14:52:00,14:52:00,2300 Harrison N,107
+yellowA,14:55:00,14:55:00,MCB,108
+yellowA,14:58:00,14:58:00,2300 Harrison S,109
+yellowA,15:05:00,15:05:00,SFGH,110
+yellowA,15:12:00,15:12:00,2300 Harrison N,111
+yellowA,15:15:00,15:15:00,MCB,112
+yellowA,15:18:00,15:18:00,2300 Harrison S,113
+yellowA,15:25:00,15:25:00,SFGH,114
+yellowA,15:32:00,15:32:00,2300 Harrison N,115
+yellowA,15:35:00,15:35:00,MCB,116
+yellowA,15:42:00,15:42:00,BART,117
+yellowA,15:45:00,15:45:00,R. Lot,118
+yellowA,15:48:00,15:48:00,2300 Harrison S,119
+yellowA,15:55:00,15:55:00,SFGH,120
+yellowA,16:02:00,16:02:00,2300 Harrison N,121
+yellowA,16:05:00,16:05:00,MCB,122
+yellowA,16:12:00,16:12:00,BART,123
+yellowA,16:15:00,16:15:00,R. Lot,124
+yellowA,16:18:00,16:18:00,2300 Harrison S,125
+yellowA,16:25:00,16:25:00,SFGH,126
+yellowA,16:32:00,16:32:00,2300 Harrison N,127
+yellowA,16:35:00,16:35:00,MCB,128
+yellowA,16:42:00,16:42:00,BART,129
+yellowA,16:45:00,16:45:00,R. Lot,130
+yellowA,16:48:00,16:48:00,2300 Harrison S,131
+yellowA,16:55:00,16:55:00,SFGH,132
+yellowA,17:02:00,17:02:00,2300 Harrison N,133
+yellowA,17:05:00,17:05:00,MCB,134
+yellowA,17:12:00,17:12:00,BART,135
+yellowA,17:15:00,17:15:00,R. Lot,136
+yellowA,17:18:00,17:18:00,2300 Harrison S,137
+yellowA,17:25:00,17:25:00,SFGH,138
+yellowA,17:32:00,17:32:00,2300 Harrison N,139
+yellowA,17:35:00,17:35:00,MCB,140
+yellowA,17:42:00,17:42:00,BART,141
+yellowA,17:45:00,17:45:00,R. Lot,142
+yellowA,17:48:00,17:48:00,2300 Harrison S,143
+yellowA,17:55:00,17:55:00,SFGH,144
+yellowA,18:02:00,18:02:00,2300 Harrison N,145
+yellowA,18:05:00,18:05:00,MCB,146
+yellowA,18:12:00,18:12:00,BART,147
+yellowA,18:15:00,18:15:00,R. Lot,148
+yellowA,18:18:00,18:18:00,2300 Harrison S,149
+yellowA,18:25:00,18:25:00,SFGH,150
+yellowA,18:32:00,18:32:00,2300 Harrison N,151
+yellowA,18:35:00,18:35:00,MCB,152
+yellowA,18:42:00,18:42:00,BART,153
+yellowA,18:45:00,18:45:00,R. Lot,154
+yellowA,18:48:00,18:48:00,2300 Harrison S,155
+yellowA,18:55:00,18:55:00,SFGH,156
+yellowA,19:02:00,19:02:00,2300 Harrison N,157
+yellowA,19:05:00,19:05:00,MCB,158
+yellowA,19:12:00,19:12:00,BART,159
+yellowA,19:15:00,19:15:00,R. Lot,160
+yellowA,19:18:00,19:18:00,2300 Harrison S,161
+yellowA,19:25:00,19:25:00,SFGH,162
+yellowA,19:32:00,19:32:00,2300 Harrison N,163
+yellowA,19:35:00,19:35:00,MCB,164
+yellowA,19:42:00,19:42:00,BART,165
+yellowA,19:45:00,19:45:00,R. Lot,166
+yellowA,19:48:00,19:48:00,2300 Harrison S,167
+yellowA,19:55:00,19:55:00,SFGH,168
+yellowA,20:02:00,20:02:00,2300 Harrison N,169
+yellowA,20:05:00,20:05:00,MCB,170
+yellowA,20:12:00,20:12:00,BART,171
+yellowB,6:20:00,6:20:00,BART,1
+yellowB,6:27:00,6:27:00,MCB,2
+yellowB,6:30:00,6:30:00,2300 Harrison S,3
+yellowB,6:37:00,6:37:00,SFGH,4
+yellowB,6:44:00,6:44:00,2300 Harrison N,5
+yellowB,6:47:00,6:47:00,R. Lot,6
+yellowB,6:50:00,6:50:00,BART,7
+yellowB,6:57:00,6:57:00,MCB,8
+yellowB,7:00:00,7:00:00,2300 Harrison S,9
+yellowB,7:07:00,7:07:00,SFGH,10
+yellowB,7:14:00,7:14:00,2300 Harrison N,11
+yellowB,7:17:00,7:17:00,R. Lot,12
+yellowB,7:20:00,7:20:00,BART,13
+yellowB,7:27:00,7:27:00,MCB,14
+yellowB,7:30:00,7:30:00,2300 Harrison S,15
+yellowB,7:37:00,7:37:00,SFGH,16
+yellowB,7:44:00,7:44:00,2300 Harrison N,17
+yellowB,7:47:00,7:47:00,R. Lot,18
+yellowB,7:50:00,7:50:00,BART,19
+yellowB,7:57:00,7:57:00,MCB,20
+yellowB,8:00:00,8:00:00,2300 Harrison S,21
+yellowB,8:07:00,8:07:00,SFGH,22
+yellowB,8:14:00,8:14:00,2300 Harrison N,23
+yellowB,8:17:00,8:17:00,R. Lot,24
+yellowB,8:20:00,8:20:00,BART,25
+yellowB,8:27:00,8:27:00,MCB,26
+yellowB,8:30:00,8:30:00,2300 Harrison S,27
+yellowB,8:37:00,8:37:00,SFGH,28
+yellowB,8:44:00,8:44:00,2300 Harrison N,29
+yellowB,8:47:00,8:47:00,R. Lot,30
+yellowB,8:50:00,8:50:00,BART,31
+yellowB,8:57:00,8:57:00,MCB,32
+yellowB,9:00:00,9:00:00,2300 Harrison S,33
+yellowB,9:07:00,9:07:00,SFGH,34
+yellowB,9:14:00,9:14:00,2300 Harrison N,35
+yellowB,9:17:00,9:17:00,R. Lot,36
+yellowC,15:50:00,15:50:00,MCB,1
+yellowC,15:57:00,15:57:00,BART,2
+yellowC,16:00:00,16:00:00,R. Lot,3
+yellowC,16:03:00,16:03:00,2300 Harrison S,4
+yellowC,16:10:00,16:10:00,SFGH,5
+yellowC,16:17:00,16:17:00,2300 Harrison N,6
+yellowC,16:20:00,16:20:00,MCB,7
+yellowC,16:27:00,16:27:00,BART,8
+yellowC,16:30:00,16:30:00,R. Lot,9
+yellowC,16:33:00,16:33:00,2300 Harrison S,10
+yellowC,16:40:00,16:40:00,SFGH,11
+yellowC,16:47:00,16:47:00,2300 Harrison N,12
+yellowC,16:50:00,16:50:00,MCB,13
+yellowC,16:57:00,16:57:00,BART,14
+yellowC,17:00:00,17:00:00,R. Lot,15
+yellowC,17:03:00,17:03:00,2300 Harrison S,16
+yellowC,17:10:00,17:10:00,SFGH,17
+yellowC,17:17:00,17:17:00,2300 Harrison N,18
+yellowC,17:20:00,17:20:00,MCB,19
+yellowC,17:27:00,17:27:00,BART,20
+yellowC,17:30:00,17:30:00,R. Lot,21
+yellowC,17:33:00,17:33:00,2300 Harrison S,22
+yellowC,17:40:00,17:40:00,SFGH,23
+yellowC,17:47:00,17:47:00,2300 Harrison N,24
+yellowC,17:50:00,17:50:00,MCB,25
+yellowC,17:57:00,17:57:00,BART,26
+yellowC,18:00:00,18:00:00,R. Lot,27
+yellowC,18:03:00,18:03:00,2300 Harrison S,28
+yellowC,18:10:00,18:10:00,SFGH,29
+yellowC,18:17:00,18:17:00,2300 Harrison N,30
+yellowC,18:20:00,18:20:00,MCB,31
+yellowC,18:27:00,18:27:00,BART,32
+yellowC,18:30:00,18:30:00,R. Lot,33
+yellowC,18:33:00,18:33:00,2300 Harrison S,34
+yellowC,18:40:00,18:40:00,SFGH,35
+yellowC,18:47:00,18:47:00,2300 Harrison N,36
+yellowC,18:50:00,18:50:00,MCB,37
+yellowC,18:57:00,18:57:00,BART,38
+yellowC,19:00:00,19:00:00,R. Lot,39
+yellowC,19:03:00,19:03:00,2300 Harrison S,40
+yellowC,19:10:00,19:10:00,SFGH,41
+yellowC,19:17:00,19:17:00,2300 Harrison N,42
+yellowC,19:20:00,19:20:00,MCB,43
+yellowC,19:27:00,19:27:00,BART,44
+yellowC,19:30:00,19:30:00,R. Lot,45
+yellowC,19:33:00,19:33:00,2300 Harrison S,46
+yellowC,19:40:00,19:40:00,SFGH,47
+yellowC,19:47:00,19:47:00,2300 Harrison N,48
+yellowC,19:50:00,19:50:00,MCB,49
+yellowC,19:57:00,19:57:00,BART,50
+yellowC,20:00:00,20:00:00,R. Lot,51
+yellowC,20:03:00,20:03:00,2300 Harrison S,52
+yellowC,20:10:00,20:10:00,SFGH,53
+yellowC,20:17:00,20:17:00,2300 Harrison N,54
+yellowC,20:20:00,20:20:00,MCB,55
+yellowC,20:27:00,20:27:00,BART,56

@@ -26,7 +26,8 @@ green,WD,greenB
 bronze,WD,bronzeA
 bronze,WD,bronzeB
 bronze,WD,bronzeC
+yellow,WD,yellowA
+yellow,WD,yellowB
+yellow,WD,yellowC
 va,WD,va1
 va,WD,va2
-yellow,WD,yellow1
-yellow,WD,yellow2

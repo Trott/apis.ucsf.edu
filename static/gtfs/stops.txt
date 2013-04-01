@@ -17,3 +17,6 @@ China Basin,China Basin,China Basin,37.776594,-122.392230
 Aldea Housing,Aldea Housing,75 Behr,37.758793,-122.454181
 Surge/Woods,Surge/Woods,Surge/Woods,37.760757,-122.456163
 Parnassus ACC,Ambulatory Care,400 Parnassus,37.763846,-122.456903
+2300 Harrison N,2300 Harrison,2300 Harrison & 19th St.,37.760619,-122.413418
+2300 Harrison S,2300 Harrison,2300 Harrison & 19th St.,37.760576,-122.413380
+R. Lot,Remote Lot,17th/Shotwell,37.764078,-122.416091
