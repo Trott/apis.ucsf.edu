@@ -17,8 +17,8 @@ red,WD,redA
 red,WD,redB
 tan,WD,tanA
 tan,WD,tanB
-black,WD,black1
-black,WD,black2
+black,WD,blackA
+black,WD,blackB
 purple,WD,purple1
 pink,WD,pink1
 va,WD,va1
