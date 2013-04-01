@@ -20,7 +20,7 @@ tan,WD,tanB
 black,WD,blackA
 black,WD,blackB
 purple,WD,purpleA
-pink,WD,pink1
+pink,WD,pinkA
 va,WD,va1
 va,WD,va2
 bronze,WD,bronze1

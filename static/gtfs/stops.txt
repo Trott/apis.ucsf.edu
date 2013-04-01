@@ -9,3 +9,5 @@ BART,16th St. BART,16th St. BART Station,37.765128,-122.419402
 Parnassus Library,Parnassus Library,Parnassus Library (530 Parnassus),37.763174,-122.459176
 Laurel Heights,Laurel Heights,Laurel Heights Building (3333 California),37.786592,-122.448552
 3360 Geary,3360 Geary,3360 Geary,37.78161,-122.455075
+Kezar,Kezar Lot,801 Stanyan,37.767188,-122.453403
+E/R,Parnassus E/R,505 Parnassus,37.763257,-122.457404
