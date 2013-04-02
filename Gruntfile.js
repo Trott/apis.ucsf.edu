@@ -27,11 +27,22 @@ module.exports = function(grunt) {
           'static/ie7_polyfill.js': ['static/json2/json2.js','static/flensed/flXHR.js']
         }
       }
+    },
+    compress: {
+      gtfs: {
+        cwd: 'static/gtfs',
+        expand: true,
+        options: {
+          archive: 'static/gtfs/latest.zip'
+        },
+        src: ['ucsf-gtfs/*.txt']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-compress');
 
-  grunt.registerTask('default', ['jshint:static', 'uglify:static']);
+  grunt.registerTask('default', ['jshint:static', 'uglify:static', 'compress:gtfs']);
 };
