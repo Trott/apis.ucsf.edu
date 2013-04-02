@@ -20,3 +20,4 @@ Parnassus ACC,Ambulatory Care,400 Parnassus,37.763846,-122.456903
 2300 Harrison N,2300 Harrison,2300 Harrison & 19th St.,37.760619,-122.413418
 2300 Harrison S,2300 Harrison,2300 Harrison & 19th St.,37.760576,-122.413380
 R. Lot,Remote Lot,17th/Shotwell,37.764078,-122.416091
+VAMC,VA Medical Center,4150 Clement,37.782019,-122.504996

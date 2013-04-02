@@ -29,5 +29,6 @@ bronze,WD,bronzeC
 yellow,WD,yellowA
 yellow,WD,yellowB
 yellow,WD,yellowC
-va,WD,va1
-va,WD,va2
+va,WD,vaA
+va,WD,vaB
+va,WD,vaC
