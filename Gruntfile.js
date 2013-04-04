@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         options: {
           archive: 'static/gtfs/latest.zip'
         },
-        src: ['ucsf-gtfs/*.txt']
+        src: ['*.txt']
       }
     }
   });
