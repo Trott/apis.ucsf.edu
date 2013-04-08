@@ -1435,136 +1435,136 @@ bronzeA,10:38:00,10:38:00,Aldea Housing,44
 bronzeA,10:42:00,10:42:00,Surge/Woods,45
 bronzeA,10:43:00,10:43:00,Parnassus ACC,46
 bronzeA,10:52:00,10:52:00,Parnassus Library,47
-bronzeB,15:18:00,15:18:00,Parnassus,1
-bronzeB,15:23:00,15:23:00,Aldea Housing,2
-bronzeB,15:27:00,15:27:00,Surge/Woods,3
-bronzeB,15:28:00,15:28:00,Parnassus ACC,4
-bronzeB,15:37:00,15:37:00,Parnassus Library,5
-bronzeB,15:45:00,15:45:00,Parnassus,6
-bronzeB,15:50:00,15:50:00,Aldea Housing,7
-bronzeB,15:54:00,15:54:00,Surge/Woods,8
-bronzeB,15:55:00,15:55:00,Parnassus ACC,9
-bronzeB,16:04:00,16:04:00,Parnassus Library,10
-bronzeB,16:12:00,16:12:00,Parnassus,11
-bronzeB,16:17:00,16:17:00,Aldea Housing,12
-bronzeB,16:21:00,16:21:00,Surge/Woods,13
-bronzeB,16:22:00,16:22:00,Parnassus ACC,14
-bronzeB,16:31:00,16:31:00,Parnassus Library,15
-bronzeB,16:39:00,16:39:00,Parnassus,16
-bronzeB,16:44:00,16:44:00,Aldea Housing,17
-bronzeB,16:48:00,16:48:00,Surge/Woods,18
-bronzeB,16:49:00,16:49:00,Parnassus ACC,19
-bronzeB,16:58:00,16:58:00,Parnassus Library,20
-bronzeB,17:06:00,17:06:00,Parnassus,21
-bronzeB,17:11:00,17:11:00,Aldea Housing,22
-bronzeB,17:15:00,17:15:00,Surge/Woods,23
-bronzeB,17:16:00,17:16:00,Parnassus ACC,24
-bronzeB,17:25:00,17:25:00,Parnassus Library,25
-bronzeB,17:33:00,17:33:00,Parnassus,26
-bronzeB,17:38:00,17:38:00,Aldea Housing,27
-bronzeB,17:42:00,17:42:00,Surge/Woods,28
-bronzeB,17:43:00,17:43:00,Parnassus ACC,29
-bronzeB,17:55:00,17:55:00,Parnassus,30
-bronzeB,18:00:00,18:00:00,Aldea Housing,31
-bronzeB,18:04:00,18:04:00,Surge/Woods,32
-bronzeB,18:05:00,18:05:00,Parnassus ACC,33
-bronzeB,18:17:00,18:17:00,Parnassus,34
-bronzeB,18:22:00,18:22:00,Aldea Housing,35
-bronzeB,18:26:00,18:26:00,Surge/Woods,36
-bronzeB,18:27:00,18:27:00,Parnassus ACC,37
-bronzeB,18:36:00,18:36:00,Parnassus Library,38
-bronzeB,7:00:00,7:00:00,Parnassus,39
-bronzeB,7:05:00,7:05:00,Aldea Housing,40
-bronzeB,7:09:00,7:09:00,Surge/Woods,41
-bronzeB,7:10:00,7:10:00,Parnassus ACC,42
-bronzeB,7:22:00,7:22:00,Parnassus,43
-bronzeB,7:27:00,7:27:00,Aldea Housing,44
-bronzeB,7:31:00,7:31:00,Surge/Woods,45
-bronzeB,7:32:00,7:32:00,Parnassus ACC,46
-bronzeB,7:44:00,7:44:00,Parnassus,47
-bronzeB,7:49:00,7:49:00,Aldea Housing,48
-bronzeB,7:53:00,7:53:00,Surge/Woods,49
-bronzeB,7:54:00,7:54:00,Parnassus ACC,50
-bronzeB,8:03:00,8:03:00,Parnassus Library,51
-bronzeB,8:11:00,8:11:00,Parnassus,52
-bronzeB,8:16:00,8:16:00,Aldea Housing,53
-bronzeB,8:20:00,8:20:00,Surge/Woods,54
-bronzeB,8:21:00,8:21:00,Parnassus ACC,55
-bronzeB,8:30:00,8:30:00,Parnassus Library,56
-bronzeB,8:38:00,8:38:00,Parnassus,57
-bronzeB,8:43:00,8:43:00,Aldea Housing,58
-bronzeB,8:47:00,8:47:00,Surge/Woods,59
-bronzeB,8:48:00,8:48:00,Parnassus ACC,60
-bronzeB,8:57:00,8:57:00,Parnassus Library,61
-bronzeB,9:05:00,9:05:00,Parnassus,62
-bronzeB,9:10:00,9:10:00,Aldea Housing,63
-bronzeB,9:14:00,9:14:00,Surge/Woods,64
-bronzeB,9:15:00,9:15:00,Parnassus ACC,65
-bronzeB,9:27:00,9:27:00,Parnassus,66
-bronzeB,9:32:00,9:32:00,Aldea Housing,67
-bronzeB,9:36:00,9:36:00,Surge/Woods,68
-bronzeB,9:37:00,9:37:00,Parnassus ACC,69
-bronzeB,9:46:00,9:46:00,Parnassus Library,70
-bronzeB,9:54:00,9:54:00,Parnassus,71
-bronzeB,9:59:00,9:59:00,Aldea Housing,72
-bronzeB,10:03:00,10:03:00,Surge/Woods,73
-bronzeB,10:04:00,10:04:00,Parnassus ACC,74
-bronzeB,10:13:00,10:13:00,Parnassus Library,75
-bronzeB,10:21:00,10:21:00,Parnassus,76
-bronzeB,10:26:00,10:26:00,Aldea Housing,77
-bronzeB,10:30:00,10:30:00,Surge/Woods,78
-bronzeB,10:31:00,10:31:00,Parnassus ACC,79
-bronzeB,10:40:00,10:40:00,Parnassus Library,80
-bronzeB,10:48:00,10:48:00,Parnassus,81
-bronzeB,10:53:00,10:53:00,Aldea Housing,82
-bronzeB,10:57:00,10:57:00,Surge/Woods,83
-bronzeB,10:58:00,10:58:00,Parnassus ACC,84
-bronzeB,11:07:00,11:07:00,Parnassus Library,85
-bronzeB,11:15:00,11:15:00,Parnassus,86
-bronzeB,11:20:00,11:20:00,Aldea Housing,87
-bronzeB,11:24:00,11:24:00,Surge/Woods,88
-bronzeB,11:25:00,11:25:00,Parnassus ACC,89
-bronzeB,11:34:00,11:34:00,Parnassus Library,90
-bronzeB,11:42:00,11:42:00,Parnassus,91
-bronzeB,11:47:00,11:47:00,Aldea Housing,92
-bronzeB,11:51:00,11:51:00,Surge/Woods,93
-bronzeB,11:52:00,11:52:00,Parnassus ACC,94
-bronzeB,12:01:00,12:01:00,Parnassus Library,95
-bronzeB,12:09:00,12:09:00,Parnassus,96
-bronzeB,12:14:00,12:14:00,Aldea Housing,97
-bronzeB,12:18:00,12:18:00,Surge/Woods,98
-bronzeB,12:19:00,12:19:00,Parnassus ACC,99
-bronzeB,12:28:00,12:28:00,Parnassus Library,100
-bronzeB,12:36:00,12:36:00,Parnassus,101
-bronzeB,12:41:00,12:41:00,Aldea Housing,102
-bronzeB,12:45:00,12:45:00,Surge/Woods,103
-bronzeB,12:46:00,12:46:00,Parnassus ACC,104
-bronzeB,12:55:00,12:55:00,Parnassus Library,105
-bronzeB,13:03:00,13:03:00,Parnassus,106
-bronzeB,13:08:00,13:08:00,Aldea Housing,107
-bronzeB,13:12:00,13:12:00,Surge/Woods,108
-bronzeB,13:13:00,13:13:00,Parnassus ACC,109
-bronzeB,13:22:00,13:22:00,Parnassus Library,110
-bronzeB,13:30:00,13:30:00,Parnassus,111
-bronzeB,13:35:00,13:35:00,Aldea Housing,112
-bronzeB,13:39:00,13:39:00,Surge/Woods,113
-bronzeB,13:40:00,13:40:00,Parnassus ACC,114
-bronzeB,13:49:00,13:49:00,Parnassus Library,115
-bronzeB,13:57:00,13:57:00,Parnassus,116
-bronzeB,14:02:00,14:02:00,Aldea Housing,117
-bronzeB,14:06:00,14:06:00,Surge/Woods,118
-bronzeB,14:07:00,14:07:00,Parnassus ACC,119
-bronzeB,14:16:00,14:16:00,Parnassus Library,120
-bronzeB,14:24:00,14:24:00,Parnassus,121
-bronzeB,14:29:00,14:29:00,Aldea Housing,122
-bronzeB,14:33:00,14:33:00,Surge/Woods,123
-bronzeB,14:34:00,14:34:00,Parnassus ACC,124
-bronzeB,14:43:00,14:43:00,Parnassus Library,125
-bronzeB,14:51:00,14:51:00,Parnassus,126
-bronzeB,14:56:00,14:56:00,Aldea Housing,127
-bronzeB,15:00:00,15:00:00,Surge/Woods,128
-bronzeB,15:01:00,15:01:00,Parnassus ACC,129
-bronzeB,15:10:00,15:10:00,Parnassus Library,130
+bronzeB,7:00:00,7:00:00,Parnassus,1
+bronzeB,7:05:00,7:05:00,Aldea Housing,2
+bronzeB,7:09:00,7:09:00,Surge/Woods,3
+bronzeB,7:10:00,7:10:00,Parnassus ACC,4
+bronzeB,7:22:00,7:22:00,Parnassus,5
+bronzeB,7:27:00,7:27:00,Aldea Housing,6
+bronzeB,7:31:00,7:31:00,Surge/Woods,7
+bronzeB,7:32:00,7:32:00,Parnassus ACC,8
+bronzeB,7:44:00,7:44:00,Parnassus,9
+bronzeB,7:49:00,7:49:00,Aldea Housing,10
+bronzeB,7:53:00,7:53:00,Surge/Woods,11
+bronzeB,7:54:00,7:54:00,Parnassus ACC,12
+bronzeB,8:03:00,8:03:00,Parnassus Library,13
+bronzeB,8:11:00,8:11:00,Parnassus,14
+bronzeB,8:16:00,8:16:00,Aldea Housing,15
+bronzeB,8:20:00,8:20:00,Surge/Woods,16
+bronzeB,8:21:00,8:21:00,Parnassus ACC,17
+bronzeB,8:30:00,8:30:00,Parnassus Library,18
+bronzeB,8:38:00,8:38:00,Parnassus,19
+bronzeB,8:43:00,8:43:00,Aldea Housing,20
+bronzeB,8:47:00,8:47:00,Surge/Woods,21
+bronzeB,8:48:00,8:48:00,Parnassus ACC,22
+bronzeB,8:57:00,8:57:00,Parnassus Library,23
+bronzeB,9:05:00,9:05:00,Parnassus,24
+bronzeB,9:10:00,9:10:00,Aldea Housing,25
+bronzeB,9:14:00,9:14:00,Surge/Woods,26
+bronzeB,9:15:00,9:15:00,Parnassus ACC,27
+bronzeB,9:27:00,9:27:00,Parnassus,28
+bronzeB,9:32:00,9:32:00,Aldea Housing,29
+bronzeB,9:36:00,9:36:00,Surge/Woods,30
+bronzeB,9:37:00,9:37:00,Parnassus ACC,31
+bronzeB,9:46:00,9:46:00,Parnassus Library,32
+bronzeB,9:54:00,9:54:00,Parnassus,33
+bronzeB,9:59:00,9:59:00,Aldea Housing,34
+bronzeB,10:03:00,10:03:00,Surge/Woods,35
+bronzeB,10:04:00,10:04:00,Parnassus ACC,36
+bronzeB,10:13:00,10:13:00,Parnassus Library,37
+bronzeB,10:21:00,10:21:00,Parnassus,38
+bronzeB,10:26:00,10:26:00,Aldea Housing,39
+bronzeB,10:30:00,10:30:00,Surge/Woods,40
+bronzeB,10:31:00,10:31:00,Parnassus ACC,41
+bronzeB,10:40:00,10:40:00,Parnassus Library,42
+bronzeB,10:48:00,10:48:00,Parnassus,43
+bronzeB,10:53:00,10:53:00,Aldea Housing,44
+bronzeB,10:57:00,10:57:00,Surge/Woods,45
+bronzeB,10:58:00,10:58:00,Parnassus ACC,46
+bronzeB,11:07:00,11:07:00,Parnassus Library,47
+bronzeB,11:15:00,11:15:00,Parnassus,48
+bronzeB,11:20:00,11:20:00,Aldea Housing,49
+bronzeB,11:24:00,11:24:00,Surge/Woods,50
+bronzeB,11:25:00,11:25:00,Parnassus ACC,51
+bronzeB,11:34:00,11:34:00,Parnassus Library,52
+bronzeB,11:42:00,11:42:00,Parnassus,53
+bronzeB,11:47:00,11:47:00,Aldea Housing,54
+bronzeB,11:51:00,11:51:00,Surge/Woods,55
+bronzeB,11:52:00,11:52:00,Parnassus ACC,56
+bronzeB,12:01:00,12:01:00,Parnassus Library,57
+bronzeB,12:09:00,12:09:00,Parnassus,58
+bronzeB,12:14:00,12:14:00,Aldea Housing,59
+bronzeB,12:18:00,12:18:00,Surge/Woods,60
+bronzeB,12:19:00,12:19:00,Parnassus ACC,61
+bronzeB,12:28:00,12:28:00,Parnassus Library,62
+bronzeB,12:36:00,12:36:00,Parnassus,63
+bronzeB,12:41:00,12:41:00,Aldea Housing,64
+bronzeB,12:45:00,12:45:00,Surge/Woods,65
+bronzeB,12:46:00,12:46:00,Parnassus ACC,66
+bronzeB,12:55:00,12:55:00,Parnassus Library,67
+bronzeB,13:03:00,13:03:00,Parnassus,68
+bronzeB,13:08:00,13:08:00,Aldea Housing,69
+bronzeB,13:12:00,13:12:00,Surge/Woods,70
+bronzeB,13:13:00,13:13:00,Parnassus ACC,71
+bronzeB,13:22:00,13:22:00,Parnassus Library,72
+bronzeB,13:30:00,13:30:00,Parnassus,73
+bronzeB,13:35:00,13:35:00,Aldea Housing,74
+bronzeB,13:39:00,13:39:00,Surge/Woods,75
+bronzeB,13:40:00,13:40:00,Parnassus ACC,76
+bronzeB,13:49:00,13:49:00,Parnassus Library,77
+bronzeB,13:57:00,13:57:00,Parnassus,78
+bronzeB,14:02:00,14:02:00,Aldea Housing,79
+bronzeB,14:06:00,14:06:00,Surge/Woods,80
+bronzeB,14:07:00,14:07:00,Parnassus ACC,81
+bronzeB,14:16:00,14:16:00,Parnassus Library,82
+bronzeB,14:24:00,14:24:00,Parnassus,83
+bronzeB,14:29:00,14:29:00,Aldea Housing,84
+bronzeB,14:33:00,14:33:00,Surge/Woods,85
+bronzeB,14:34:00,14:34:00,Parnassus ACC,86
+bronzeB,14:43:00,14:43:00,Parnassus Library,87
+bronzeB,14:51:00,14:51:00,Parnassus,88
+bronzeB,14:56:00,14:56:00,Aldea Housing,89
+bronzeB,15:00:00,15:00:00,Surge/Woods,90
+bronzeB,15:01:00,15:01:00,Parnassus ACC,91
+bronzeB,15:10:00,15:10:00,Parnassus Library,92
+bronzeB,15:18:00,15:18:00,Parnassus,93
+bronzeB,15:23:00,15:23:00,Aldea Housing,94
+bronzeB,15:27:00,15:27:00,Surge/Woods,95
+bronzeB,15:28:00,15:28:00,Parnassus ACC,96
+bronzeB,15:37:00,15:37:00,Parnassus Library,97
+bronzeB,15:45:00,15:45:00,Parnassus,98
+bronzeB,15:50:00,15:50:00,Aldea Housing,99
+bronzeB,15:54:00,15:54:00,Surge/Woods,100
+bronzeB,15:55:00,15:55:00,Parnassus ACC,101
+bronzeB,16:04:00,16:04:00,Parnassus Library,102
+bronzeB,16:12:00,16:12:00,Parnassus,103
+bronzeB,16:17:00,16:17:00,Aldea Housing,104
+bronzeB,16:21:00,16:21:00,Surge/Woods,105
+bronzeB,16:22:00,16:22:00,Parnassus ACC,106
+bronzeB,16:31:00,16:31:00,Parnassus Library,107
+bronzeB,16:39:00,16:39:00,Parnassus,108
+bronzeB,16:44:00,16:44:00,Aldea Housing,109
+bronzeB,16:48:00,16:48:00,Surge/Woods,110
+bronzeB,16:49:00,16:49:00,Parnassus ACC,111
+bronzeB,16:58:00,16:58:00,Parnassus Library,112
+bronzeB,17:06:00,17:06:00,Parnassus,113
+bronzeB,17:11:00,17:11:00,Aldea Housing,114
+bronzeB,17:15:00,17:15:00,Surge/Woods,115
+bronzeB,17:16:00,17:16:00,Parnassus ACC,116
+bronzeB,17:25:00,17:25:00,Parnassus Library,117
+bronzeB,17:33:00,17:33:00,Parnassus,118
+bronzeB,17:38:00,17:38:00,Aldea Housing,119
+bronzeB,17:42:00,17:42:00,Surge/Woods,120
+bronzeB,17:43:00,17:43:00,Parnassus ACC,121
+bronzeB,17:55:00,17:55:00,Parnassus,122
+bronzeB,18:00:00,18:00:00,Aldea Housing,123
+bronzeB,18:04:00,18:04:00,Surge/Woods,124
+bronzeB,18:05:00,18:05:00,Parnassus ACC,125
+bronzeB,18:17:00,18:17:00,Parnassus,126
+bronzeB,18:22:00,18:22:00,Aldea Housing,127
+bronzeB,18:26:00,18:26:00,Surge/Woods,128
+bronzeB,18:27:00,18:27:00,Parnassus ACC,129
+bronzeB,18:36:00,18:36:00,Parnassus Library,130
 bronzeC,15:00:00,15:00:00,Parnassus,1
 bronzeC,15:05:00,15:05:00,Aldea Housing,2
 bronzeC,15:09:00,15:09:00,Surge/Woods,3
