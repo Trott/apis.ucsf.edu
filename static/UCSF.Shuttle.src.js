@@ -1,9 +1,15 @@
+//TODO: put UCSF boilerplate into its own file and insert into various specific files
+// via grunt
+
+//TODO: Way to not have to download the boilerplate twice when using Shuttle and Person. 
+// Perhaps some kind of AMD/CommonJS/RequireJS thing or emulating Google's jsapi, or 
+// a custom build a la Modernizr.
+
 var UCSF = UCSF || (function () {
     "use strict";
 
     var me = {
     // work queue for IE7 polyfill
-
         _ie7q: [],
 
         serialize: function (obj, prefix) {
@@ -78,13 +84,13 @@ var UCSF = UCSF || (function () {
     return me;
 }());
 
-UCSF.Person = {
-    search: function (options, success, failure ) {
+UCSF.Shuttle = {
+    stops: function (options, success, failure ) {
         failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
-        var reqString = UCSF.createRequestString('http://apis.ucsf.edu/person/search', options);
+        var reqString = 'http://apis.ucsf.edu/shuttle/stops';
         var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
         if (! xhr) {
-            UCSF._ie7q.push({callee:UCSF.Person.search, options:options, success:success, failure:failure});
+            _ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
         } else {
             xhr.onload = function () {
                 success(JSON.parse(xhr.responseText));

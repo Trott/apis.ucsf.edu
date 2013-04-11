@@ -24,6 +24,7 @@ module.exports = function(grunt) {
       static: {
         files: {
           'static/UCSF.Person.js': ['static/UCSF.Person.src.js'],
+          'static/UCSF.Shuttle.js': ['static/UCSF.Shuttle.src.js'],
           'static/ie7_polyfill.js': ['static/json2/json2.js','static/flensed/flXHR.js']
         }
       }
