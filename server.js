@@ -2,6 +2,7 @@ var express = require('express'),
     fs = require('fs'),
     cradle = require('cradle'),
     person = require('./routes/person'),
+    shuttle = require('./routes/shuttle'),
     nodeUserGid = "node",
     nodeUserUid = "node";
 
@@ -14,6 +15,7 @@ app.use(express.compress());
 //TODO: log rotation
 //TODO: Better log file than, uh, server.js.log?
 //TODO: Easy install? (Sets up couchdb server with dummy content or something?)
+//TODO: Dependency: OpenTripPlanner
 app.use(function (req, res, next) {
     "use strict";
 
@@ -65,6 +67,8 @@ app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
 });
 
 app.get('/person/search', person.search);
+
+app.get('/shuttle/stops', shuttle.stops);
 
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function(req,res) {
