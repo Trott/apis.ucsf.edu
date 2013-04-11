@@ -61,7 +61,7 @@ var UCSF = (function () {
                 var reqString = UCSF.createRequestString('http://apis.ucsf.edu/person/search', options);
                 var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
                 if (! xhr) {
-                    _ie7q.push({options:options, success:success, failure:failure});
+                    _ie7q.push({callee:UCSF.Person.search, options:options, success:success, failure:failure});
                 } else {
                     xhr.onload = function () {
                         success(JSON.parse(xhr.responseText));
@@ -85,10 +85,10 @@ var UCSF = (function () {
             }
             var length = _ie7q.length;
             for (var i=0; i<length; i++) {
-                UCSF.Person.search(_ie7q[i].options, _ie7q[i].success, _ie7q[i].failure);
+                _ie7q[i].callee(_ie7q[i].options, _ie7q[i].success, _ie7q[i].failure);
             }
         };
-        document.body.appendChild(polyfill);
+        document.getElementsByTagName('head')[0].appendChild(polyfill);
     }
 
     // End code specifically for IE7 support.
