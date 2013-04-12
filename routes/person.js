@@ -1,4 +1,5 @@
 var http = require('http'),
+    querystring = require('querystring'),
     xml2js = require('xml2js');
 
 exports.search = function(req, res) {
@@ -12,7 +13,7 @@ exports.search = function(req, res) {
     var detail;
 
     if ('id' in req.query) {
-        directoryOptions.path = "/mobile_people_detail.jsp?FNO=" + req.query.id;
+        directoryOptions.path = "/mobile_people_detail.jsp?" + querystring.stringify({'FNO': req.query.id});
         detail = true;
     } else {
         var queryString = req.originalUrl.substr(req.path.length);

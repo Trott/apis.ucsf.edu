@@ -5,7 +5,8 @@
   "dependencies": {
     "express": "3.x",
     "xml2js": "~0.2.6",
-    "cradle": "~0.6.4"
+    "cradle": "~0.6.4",
+    "querystring": "~0.2.0"
   },
   "scripts": {
     "start": "server.js"
