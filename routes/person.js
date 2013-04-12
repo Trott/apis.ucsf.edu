@@ -16,7 +16,7 @@ exports.search = function(req, res) {
         directoryOptions.path = "/mobile_people_detail.jsp?" + querystring.stringify({'FNO': req.query.id});
         detail = true;
     } else {
-        directoryOptions.path = "/mobile_people_result_set.jsp?" + queryString.stringify(req.query);
+        directoryOptions.path = "/mobile_people_result_set.jsp?" + querystring.stringify(req.query);
         detail = false;
     }
 
