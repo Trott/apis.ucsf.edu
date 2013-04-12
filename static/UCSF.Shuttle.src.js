@@ -106,7 +106,7 @@ UCSF.Shuttle = {
         // See shuttle.js for some useful options and link to other possible options.
         // TODO: JSDoc options etc. Automate documentation.
         failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
-        if (! options.hasOwnProperty('fromPlace') || ! options.hasOwnProperty('toPlace')) {
+        if (! options || ! options.hasOwnProperty('fromPlace') || ! options.hasOwnProperty('toPlace')) {
             failure({statusText: 'Required options fromPlace and toPlace were not specified'});
             return;
         }
