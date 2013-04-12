@@ -5,6 +5,8 @@
 // Perhaps some kind of AMD/CommonJS/RequireJS thing or emulating Google's jsapi, or 
 // a custom build a la Modernizr.
 
+//TODO: wow, there's a lot of duplicate code in here and between here and UCSF.Person.src.js
+
 var UCSF = UCSF || (function () {
     "use strict";
 
@@ -85,12 +87,33 @@ var UCSF = UCSF || (function () {
 }());
 
 UCSF.Shuttle = {
-    stops: function (options, success, failure ) {
+    stops: function (options, success, failure) {
         failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
         var reqString = UCSF.createRequestString('http://apis.ucsf.edu/shuttle/stops', options);
         var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
         if (! xhr) {
             UCSF._ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
+        } else {
+            xhr.onload = function () {
+                success(JSON.parse(xhr.responseText));
+            };
+            xhr.onerror = failure;
+            xhr.send();
+        }
+    },
+
+    plan: function (options, success, failure) {
+        // See shuttle.js for some useful options and link to other possible options.
+        // TODO: JSDoc options etc. Automate documentation.
+        failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
+        if (! options.hasOwnProperty('fromPlace') || ! options.hasOwnProperty('toPlace')) {
+            failure({statusText: 'Required options fromPlace and toPlace were not specified'});
+            return;
+        }
+        var reqString = UCSF.createRequestString('http://apis.ucsf.edu/shuttle/plan', options);
+        var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
+        if (! xhr) {
+            UCSF._ie7q.push({callee:UCSF.Shuttle.plan, options:options, success:success, failure:failure});
         } else {
             xhr.onload = function () {
                 success(JSON.parse(xhr.responseText));
