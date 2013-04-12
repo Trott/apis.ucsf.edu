@@ -90,7 +90,7 @@ UCSF.Shuttle = {
         var reqString = UCSF.createRequestString('http://apis.ucsf.edu/shuttle/stops', options);
         var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
         if (! xhr) {
-            _ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
+            UCSF._ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
         } else {
             xhr.onload = function () {
                 success(JSON.parse(xhr.responseText));
