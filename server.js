@@ -70,6 +70,8 @@ app.get('/person/search', person.search);
 
 app.get('/shuttle/stops', shuttle.stops);
 
+app.get('/shuttle/plan', shuttle.plan);
+
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function(req,res) {
     "use strict";
