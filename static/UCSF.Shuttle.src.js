@@ -87,7 +87,7 @@ var UCSF = UCSF || (function () {
 UCSF.Shuttle = {
     stops: function (options, success, failure ) {
         failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
-        var reqString = 'http://apis.ucsf.edu/shuttle/stops';
+        var reqString = UCSF.createRequestString('http://apis.ucsf.edu/shuttle/stops', options);
         var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
         if (! xhr) {
             _ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
