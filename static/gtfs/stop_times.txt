@@ -1,641 +1,641 @@
 trip_id,arrival_time,departure_time,stop_id,stop_sequence
 blueA,5:35:00,5:35:00,MB,1
 blueA,5:57:00,5:57:00,Mt. Zion,2
-blueA,6:12:00,6:12:00,Parnassus,3
+blueA,6:12:00,6:12:00,LPPI,3
 blueA,6:35:00,6:35:00,SFGH,4
 blueA,6:55:00,6:55:00,MB,5
 blueA,7:17:00,7:17:00,Mt. Zion,6
-blueA,7:32:00,7:32:00,Parnassus,7
+blueA,7:32:00,7:32:00,LPPI,7
 blueA,7:55:00,7:55:00,SFGH,8
 blueA,8:15:00,8:15:00,MB,9
 blueA,8:37:00,8:37:00,Mt. Zion,10
-blueA,8:52:00,8:52:00,Parnassus,11
+blueA,8:52:00,8:52:00,LPPI,11
 blueA,9:15:00,9:15:00,SFGH,12
 blueA,9:35:00,9:35:00,MB,13
 blueA,9:57:00,9:57:00,Mt. Zion,14
-blueA,10:12:00,10:12:00,Parnassus,15
+blueA,10:12:00,10:12:00,LPPI,15
 blueA,10:35:00,10:35:00,SFGH,16
 blueA,10:55:00,10:55:00,MB,17
 blueA,11:17:00,11:17:00,Mt. Zion,18
-blueA,11:32:00,11:32:00,Parnassus,19
+blueA,11:32:00,11:32:00,LPPI,19
 blueA,11:55:00,11:55:00,SFGH,20
 blueA,12:15:00,12:15:00,MB,21
 blueA,12:37:00,12:37:00,Mt. Zion,22
-blueA,12:52:00,12:52:00,Parnassus,23
+blueA,12:52:00,12:52:00,LPPI,23
 blueA,13:15:00,13:15:00,SFGH,24
 blueA,13:35:00,13:35:00,MB,25
 blueA,13:57:00,13:57:00,Mt. Zion,26
-blueA,14:12:00,14:12:00,Parnassus,27
+blueA,14:12:00,14:12:00,LPPI,27
 blueA,14:35:00,14:35:00,SFGH,28
 blueA,14:55:00,14:55:00,MB,29
 blueA,15:17:00,15:17:00,Mt. Zion,30
-blueA,15:32:00,15:32:00,Parnassus,31
+blueA,15:32:00,15:32:00,LPPI,31
 blueA,15:55:00,15:55:00,SFGH,32
 blueA,16:15:00,16:15:00,MB,33
 blueA,16:37:00,16:37:00,Mt. Zion,34
-blueA,16:52:00,16:52:00,Parnassus,35
+blueA,16:52:00,16:52:00,LPPI,35
 blueA,17:15:00,17:15:00,SFGH,36
 blueA,17:35:00,17:35:00,MB,37
 blueA,17:57:00,17:57:00,Mt. Zion,38
-blueA,18:12:00,18:12:00,Parnassus,39
+blueA,18:12:00,18:12:00,LPPI,39
 blueA,18:35:00,18:35:00,SFGH,40
 blueA,18:55:00,18:55:00,MB,41
 blueA,19:17:00,19:17:00,Mt. Zion,42
-blueA,19:32:00,19:32:00,Parnassus,43
+blueA,19:32:00,19:32:00,LPPI,43
 blueA,19:55:00,19:55:00,SFGH,44
 blueA,20:10:00,20:10:00,MB,45
 blueA,20:32:00,20:32:00,Mt. Zion,46
-blueA,20:47:00,20:47:00,Parnassus,47
+blueA,20:47:00,20:47:00,LPPI,47
 blueA,21:10:00,21:10:00,SFGH,48
 blueB,5:55:00,5:55:00,MB,1
 blueB,6:17:00,6:17:00,Mt. Zion,2
-blueB,6:32:00,6:32:00,Parnassus,3
+blueB,6:32:00,6:32:00,LPPI,3
 blueB,6:55:00,6:55:00,SFGH,4
 blueB,7:15:00,7:15:00,MB,5
 blueB,7:37:00,7:37:00,Mt. Zion,6
-blueB,7:52:00,7:52:00,Parnassus,7
+blueB,7:52:00,7:52:00,LPPI,7
 blueB,8:15:00,8:15:00,SFGH,8
 blueB,8:35:00,8:35:00,MB,9
 blueB,8:57:00,8:57:00,Mt. Zion,10
-blueB,9:12:00,9:12:00,Parnassus,11
+blueB,9:12:00,9:12:00,LPPI,11
 blueB,9:35:00,9:35:00,SFGH,12
 blueB,9:55:00,9:55:00,MB,13
 blueB,10:17:00,10:17:00,Mt. Zion,14
-blueB,10:32:00,10:32:00,Parnassus,15
+blueB,10:32:00,10:32:00,LPPI,15
 blueB,10:55:00,10:55:00,SFGH,16
 blueB,11:15:00,11:15:00,MB,17
 blueB,11:37:00,11:37:00,Mt. Zion,18
-blueB,11:52:00,11:52:00,Parnassus,19
+blueB,11:52:00,11:52:00,LPPI,19
 blueB,12:15:00,12:15:00,SFGH,20
 blueB,12:35:00,12:35:00,MB,21
 blueB,12:57:00,12:57:00,Mt. Zion,22
-blueB,13:12:00,13:12:00,Parnassus,23
+blueB,13:12:00,13:12:00,LPPI,23
 blueB,13:35:00,13:35:00,SFGH,24
 blueB,13:55:00,13:55:00,MB,25
 blueB,14:17:00,14:17:00,Mt. Zion,26
-blueB,14:32:00,14:32:00,Parnassus,27
+blueB,14:32:00,14:32:00,LPPI,27
 blueB,14:55:00,14:55:00,SFGH,28
 blueB,15:15:00,15:15:00,MB,29
 blueB,15:37:00,15:37:00,Mt. Zion,30
-blueB,15:52:00,15:52:00,Parnassus,31
+blueB,15:52:00,15:52:00,LPPI,31
 blueB,16:15:00,16:15:00,SFGH,32
 blueB,16:35:00,16:35:00,MB,33
 blueB,16:57:00,16:57:00,Mt. Zion,34
-blueB,17:12:00,17:12:00,Parnassus,35
+blueB,17:12:00,17:12:00,LPPI,35
 blueB,17:35:00,17:35:00,SFGH,36
 blueB,17:55:00,17:55:00,MB,37
 blueB,18:17:00,18:17:00,Mt. Zion,38
-blueB,18:32:00,18:32:00,Parnassus,39
+blueB,18:32:00,18:32:00,LPPI,39
 blueB,18:55:00,18:55:00,SFGH,40
 blueB,19:15:00,19:15:00,MB,41
 blueB,19:37:00,19:37:00,Mt. Zion,42
-blueB,19:52:00,19:52:00,Parnassus,43
+blueB,19:52:00,19:52:00,LPPI,43
 blueB,20:15:00,20:15:00,SFGH,44
 blueC,6:15:00,6:15:00,MB,1
 blueC,6:37:00,6:37:00,Mt. Zion,2
-blueC,6:52:00,6:52:00,Parnassus,3
+blueC,6:52:00,6:52:00,LPPI,3
 blueC,7:15:00,7:15:00,SFGH,4
 blueC,7:35:00,7:35:00,MB,5
 blueC,7:57:00,7:57:00,Mt. Zion,6
-blueC,8:12:00,8:12:00,Parnassus,7
+blueC,8:12:00,8:12:00,LPPI,7
 blueC,8:35:00,8:35:00,SFGH,8
 blueC,8:55:00,8:55:00,MB,9
 blueC,9:17:00,9:17:00,Mt. Zion,10
-blueC,9:32:00,9:32:00,Parnassus,11
+blueC,9:32:00,9:32:00,LPPI,11
 blueC,9:55:00,9:55:00,SFGH,12
 blueC,10:15:00,10:15:00,MB,13
 blueC,10:37:00,10:37:00,Mt. Zion,14
-blueC,10:52:00,10:52:00,Parnassus,15
+blueC,10:52:00,10:52:00,LPPI,15
 blueC,11:15:00,11:15:00,SFGH,16
 blueC,11:35:00,11:35:00,MB,17
 blueC,11:57:00,11:57:00,Mt. Zion,18
-blueC,12:12:00,12:12:00,Parnassus,19
+blueC,12:12:00,12:12:00,LPPI,19
 blueC,12:35:00,12:35:00,SFGH,20
 blueC,12:55:00,12:55:00,MB,21
 blueC,13:17:00,13:17:00,Mt. Zion,22
-blueC,13:32:00,13:32:00,Parnassus,23
+blueC,13:32:00,13:32:00,LPPI,23
 blueC,13:55:00,13:55:00,SFGH,24
 blueC,14:15:00,14:15:00,MB,25
 blueC,14:37:00,14:37:00,Mt. Zion,26
-blueC,14:52:00,14:52:00,Parnassus,27
+blueC,14:52:00,14:52:00,LPPI,27
 blueC,15:15:00,15:15:00,SFGH,28
 blueC,15:35:00,15:35:00,MB,29
 blueC,15:57:00,15:57:00,Mt. Zion,30
-blueC,16:12:00,16:12:00,Parnassus,31
+blueC,16:12:00,16:12:00,LPPI,31
 blueC,16:35:00,16:35:00,SFGH,32
 blueC,16:55:00,16:55:00,MB,33
 blueC,17:17:00,17:17:00,Mt. Zion,34
-blueC,17:32:00,17:32:00,Parnassus,35
+blueC,17:32:00,17:32:00,LPPI,35
 blueC,17:55:00,17:55:00,SFGH,36
 blueC,18:15:00,18:15:00,MB,37
 blueC,18:37:00,18:37:00,Mt. Zion,38
-blueC,18:52:00,18:52:00,Parnassus,39
+blueC,18:52:00,18:52:00,LPPI,39
 blueC,19:15:00,19:15:00,SFGH,40
 blueC,19:35:00,19:35:00,MB,41
 blueC,19:57:00,19:57:00,Mt. Zion,42
-blueC,20:12:00,20:12:00,Parnassus,43
+blueC,20:12:00,20:12:00,LPPI,43
 blueC,20:35:00,20:35:00,SFGH,44
 blueD,6:35:00,6:35:00,MB,1
 blueD,6:57:00,6:57:00,Mt. Zion,2
-blueD,7:12:00,7:12:00,Parnassus,3
+blueD,7:12:00,7:12:00,LPPI,3
 blueD,7:35:00,7:35:00,SFGH,4
 blueD,7:55:00,7:55:00,MB,5
 blueD,8:17:00,8:17:00,Mt. Zion,6
-blueD,8:32:00,8:32:00,Parnassus,7
+blueD,8:32:00,8:32:00,LPPI,7
 blueD,8:55:00,8:55:00,SFGH,8
 blueD,9:15:00,9:15:00,MB,9
 blueD,9:37:00,9:37:00,Mt. Zion,10
-blueD,9:52:00,9:52:00,Parnassus,11
+blueD,9:52:00,9:52:00,LPPI,11
 blueD,10:15:00,10:15:00,SFGH,12
 blueD,10:35:00,10:35:00,MB,13
 blueD,10:57:00,10:57:00,Mt. Zion,14
-blueD,11:12:00,11:12:00,Parnassus,15
+blueD,11:12:00,11:12:00,LPPI,15
 blueD,11:35:00,11:35:00,SFGH,16
 blueD,11:55:00,11:55:00,MB,17
 blueD,12:17:00,12:17:00,Mt. Zion,18
-blueD,12:32:00,12:32:00,Parnassus,19
+blueD,12:32:00,12:32:00,LPPI,19
 blueD,12:55:00,12:55:00,SFGH,20
 blueD,13:15:00,13:15:00,MB,21
 blueD,13:37:00,13:37:00,Mt. Zion,22
-blueD,13:52:00,13:52:00,Parnassus,23
+blueD,13:52:00,13:52:00,LPPI,23
 blueD,14:15:00,14:15:00,SFGH,24
 blueD,14:35:00,14:35:00,MB,25
 blueD,14:57:00,14:57:00,Mt. Zion,26
-blueD,15:12:00,15:12:00,Parnassus,27
+blueD,15:12:00,15:12:00,LPPI,27
 blueD,15:35:00,15:35:00,SFGH,28
 blueD,15:55:00,15:55:00,MB,29
 blueD,16:17:00,16:17:00,Mt. Zion,30
-blueD,16:32:00,16:32:00,Parnassus,31
+blueD,16:32:00,16:32:00,LPPI,31
 blueD,16:55:00,16:55:00,SFGH,32
 blueD,17:15:00,17:15:00,MB,33
 blueD,17:37:00,17:37:00,Mt. Zion,34
-blueD,17:52:00,17:52:00,Parnassus,35
+blueD,17:52:00,17:52:00,LPPI,35
 blueD,18:15:00,18:15:00,SFGH,36
 blueD,18:35:00,18:35:00,MB,37
 blueD,18:57:00,18:57:00,Mt. Zion,38
-blueD,19:12:00,19:12:00,Parnassus,39
+blueD,19:12:00,19:12:00,LPPI,39
 blueD,19:35:00,19:35:00,SFGH,40
 goldA,5:45:00,5:45:00,MB,1
 goldA,6:00:00,6:00:00,SFGH,2
-goldA,6:22:00,6:22:00,Parnassus,3
+goldA,6:22:00,6:22:00,LPPI,3
 goldA,6:38:00,6:38:00,Mt. Zion,4
 goldA,7:05:00,7:05:00,MB,5
 goldA,7:20:00,7:20:00,SFGH,6
-goldA,7:42:00,7:42:00,Parnassus,7
+goldA,7:42:00,7:42:00,LPPI,7
 goldA,7:58:00,7:58:00,Mt. Zion,8
 goldA,8:25:00,8:25:00,MB,9
 goldA,8:40:00,8:40:00,SFGH,10
-goldA,9:02:00,9:02:00,Parnassus,11
+goldA,9:02:00,9:02:00,LPPI,11
 goldA,9:18:00,9:18:00,Mt. Zion,12
 goldA,9:45:00,9:45:00,MB,13
 goldA,10:00:00,10:00:00,SFGH,14
-goldA,10:22:00,10:22:00,Parnassus,15
+goldA,10:22:00,10:22:00,LPPI,15
 goldA,10:38:00,10:38:00,Mt. Zion,16
 goldA,11:05:00,11:05:00,MB,17
 goldA,11:20:00,11:20:00,SFGH,18
-goldA,11:42:00,11:42:00,Parnassus,19
+goldA,11:42:00,11:42:00,LPPI,19
 goldA,11:58:00,11:58:00,Mt. Zion,20
 goldA,12:25:00,12:25:00,MB,21
 goldA,12:40:00,12:40:00,SFGH,22
-goldA,13:02:00,13:02:00,Parnassus,23
+goldA,13:02:00,13:02:00,LPPI,23
 goldA,13:18:00,13:18:00,Mt. Zion,24
 goldA,13:45:00,13:45:00,MB,25
 goldA,14:00:00,14:00:00,SFGH,26
-goldA,14:22:00,14:22:00,Parnassus,27
+goldA,14:22:00,14:22:00,LPPI,27
 goldA,14:38:00,14:38:00,Mt. Zion,28
 goldA,15:05:00,15:05:00,MB,29
 goldA,15:20:00,15:20:00,SFGH,30
-goldA,15:42:00,15:42:00,Parnassus,31
+goldA,15:42:00,15:42:00,LPPI,31
 goldA,15:58:00,15:58:00,Mt. Zion,32
 goldA,16:25:00,16:25:00,MB,33
 goldA,16:40:00,16:40:00,SFGH,34
-goldA,17:02:00,17:02:00,Parnassus,35
+goldA,17:02:00,17:02:00,LPPI,35
 goldA,17:18:00,17:18:00,Mt. Zion,36
 goldA,17:45:00,17:45:00,MB,37
 goldA,18:00:00,18:00:00,SFGH,38
-goldA,18:22:00,18:22:00,Parnassus,39
+goldA,18:22:00,18:22:00,LPPI,39
 goldA,18:38:00,18:38:00,Mt. Zion,40
 goldA,19:05:00,19:05:00,MB,41
 goldA,19:20:00,19:20:00,SFGH,42
-goldA,19:42:00,19:42:00,Parnassus,43
+goldA,19:42:00,19:42:00,LPPI,43
 goldA,19:58:00,19:58:00,Mt. Zion,44
 goldB,6:05:00,6:05:00,MB,1
 goldB,6:20:00,6:20:00,SFGH,2
-goldB,6:42:00,6:42:00,Parnassus,3
+goldB,6:42:00,6:42:00,LPPI,3
 goldB,6:58:00,6:58:00,Mt. Zion,4
 goldB,7:25:00,7:25:00,MB,5
 goldB,7:40:00,7:40:00,SFGH,6
-goldB,8:02:00,8:02:00,Parnassus,7
+goldB,8:02:00,8:02:00,LPPI,7
 goldB,8:18:00,8:18:00,Mt. Zion,8
 goldB,8:45:00,8:45:00,MB,9
 goldB,9:00:00,9:00:00,SFGH,10
-goldB,9:22:00,9:22:00,Parnassus,11
+goldB,9:22:00,9:22:00,LPPI,11
 goldB,9:38:00,9:38:00,Mt. Zion,12
 goldB,10:05:00,10:05:00,MB,13
 goldB,10:20:00,10:20:00,SFGH,14
-goldB,10:42:00,10:42:00,Parnassus,15
+goldB,10:42:00,10:42:00,LPPI,15
 goldB,10:58:00,10:58:00,Mt. Zion,16
 goldB,11:25:00,11:25:00,MB,17
 goldB,11:40:00,11:40:00,SFGH,18
-goldB,12:02:00,12:02:00,Parnassus,19
+goldB,12:02:00,12:02:00,LPPI,19
 goldB,12:18:00,12:18:00,Mt. Zion,20
 goldB,12:45:00,12:45:00,MB,21
 goldB,13:00:00,13:00:00,SFGH,22
-goldB,13:22:00,13:22:00,Parnassus,23
+goldB,13:22:00,13:22:00,LPPI,23
 goldB,13:38:00,13:38:00,Mt. Zion,24
 goldB,14:05:00,14:05:00,MB,25
 goldB,14:20:00,14:20:00,SFGH,26
-goldB,14:42:00,14:42:00,Parnassus,27
+goldB,14:42:00,14:42:00,LPPI,27
 goldB,14:58:00,14:58:00,Mt. Zion,28
 goldB,15:25:00,15:25:00,MB,29
 goldB,15:40:00,15:40:00,SFGH,30
-goldB,16:02:00,16:02:00,Parnassus,31
+goldB,16:02:00,16:02:00,LPPI,31
 goldB,16:18:00,16:18:00,Mt. Zion,32
 goldB,16:45:00,16:45:00,MB,33
 goldB,17:00:00,17:00:00,SFGH,34
-goldB,17:22:00,17:22:00,Parnassus,35
+goldB,17:22:00,17:22:00,LPPI,35
 goldB,17:38:00,17:38:00,Mt. Zion,36
 goldB,18:05:00,18:05:00,MB,37
 goldB,18:20:00,18:20:00,SFGH,38
-goldB,18:42:00,18:42:00,Parnassus,39
+goldB,18:42:00,18:42:00,LPPI,39
 goldB,18:58:00,18:58:00,Mt. Zion,40
 goldB,19:25:00,19:25:00,MB,41
 goldB,19:40:00,19:40:00,SFGH,42
-goldB,20:02:00,20:02:00,Parnassus,43
+goldB,20:02:00,20:02:00,LPPI,43
 goldB,20:18:00,20:18:00,Mt. Zion,44
 goldB,20:45:00,20:45:00,MB,45
 goldB,21:00:00,21:00:00,SFGH,46
-goldB,21:22:00,21:22:00,Parnassus,47
+goldB,21:22:00,21:22:00,LPPI,47
 goldB,21:38:00,21:38:00,Mt. Zion,48
 goldC,6:25:00,6:25:00,MB,1
 goldC,6:40:00,6:40:00,SFGH,2
-goldC,7:02:00,7:02:00,Parnassus,3
+goldC,7:02:00,7:02:00,LPPI,3
 goldC,7:18:00,7:18:00,Mt. Zion,4
 goldC,7:45:00,7:45:00,MB,5
 goldC,8:00:00,8:00:00,SFGH,6
-goldC,8:22:00,8:22:00,Parnassus,7
+goldC,8:22:00,8:22:00,LPPI,7
 goldC,8:38:00,8:38:00,Mt. Zion,8
 goldC,9:05:00,9:05:00,MB,9
 goldC,9:20:00,9:20:00,SFGH,10
-goldC,9:42:00,9:42:00,Parnassus,11
+goldC,9:42:00,9:42:00,LPPI,11
 goldC,9:58:00,9:58:00,Mt. Zion,12
 goldC,10:25:00,10:25:00,MB,13
 goldC,10:40:00,10:40:00,SFGH,14
-goldC,11:02:00,11:02:00,Parnassus,15
+goldC,11:02:00,11:02:00,LPPI,15
 goldC,11:18:00,11:18:00,Mt. Zion,16
 goldC,11:45:00,11:45:00,MB,17
 goldC,12:00:00,12:00:00,SFGH,18
-goldC,12:22:00,12:22:00,Parnassus,19
+goldC,12:22:00,12:22:00,LPPI,19
 goldC,12:38:00,12:38:00,Mt. Zion,20
 goldC,13:05:00,13:05:00,MB,21
 goldC,13:20:00,13:20:00,SFGH,22
-goldC,13:42:00,13:42:00,Parnassus,23
+goldC,13:42:00,13:42:00,LPPI,23
 goldC,13:58:00,13:58:00,Mt. Zion,24
 goldC,14:25:00,14:25:00,MB,25
 goldC,14:40:00,14:40:00,SFGH,26
-goldC,15:02:00,15:02:00,Parnassus,27
+goldC,15:02:00,15:02:00,LPPI,27
 goldC,15:18:00,15:18:00,Mt. Zion,28
 goldC,15:45:00,15:45:00,MB,29
 goldC,16:00:00,16:00:00,SFGH,30
-goldC,16:22:00,16:22:00,Parnassus,31
+goldC,16:22:00,16:22:00,LPPI,31
 goldC,16:38:00,16:38:00,Mt. Zion,32
 goldC,17:05:00,17:05:00,MB,33
 goldC,17:20:00,17:20:00,SFGH,34
-goldC,17:42:00,17:42:00,Parnassus,35
+goldC,17:42:00,17:42:00,LPPI,35
 goldC,17:58:00,17:58:00,Mt. Zion,36
 goldC,18:25:00,18:25:00,MB,37
 goldC,18:40:00,18:40:00,SFGH,38
-goldC,19:02:00,19:02:00,Parnassus,39
+goldC,19:02:00,19:02:00,LPPI,39
 goldC,19:18:00,19:18:00,Mt. Zion,40
 goldD,6:45:00,6:45:00,MB,1
 goldD,7:00:00,7:00:00,SFGH,2
-goldD,7:22:00,7:22:00,Parnassus,3
+goldD,7:22:00,7:22:00,LPPI,3
 goldD,7:38:00,7:38:00,Mt. Zion,4
 goldD,8:05:00,8:05:00,MB,5
 goldD,8:20:00,8:20:00,SFGH,6
-goldD,8:42:00,8:42:00,Parnassus,7
+goldD,8:42:00,8:42:00,LPPI,7
 goldD,8:58:00,8:58:00,Mt. Zion,8
 goldD,9:25:00,9:25:00,MB,9
 goldD,9:40:00,9:40:00,SFGH,10
-goldD,10:02:00,10:02:00,Parnassus,11
+goldD,10:02:00,10:02:00,LPPI,11
 goldD,10:18:00,10:18:00,Mt. Zion,12
 goldD,10:45:00,10:45:00,MB,13
 goldD,11:00:00,11:00:00,SFGH,14
-goldD,11:22:00,11:22:00,Parnassus,15
+goldD,11:22:00,11:22:00,LPPI,15
 goldD,11:38:00,11:38:00,Mt. Zion,16
 goldD,12:05:00,12:05:00,MB,17
 goldD,12:20:00,12:20:00,SFGH,18
-goldD,12:42:00,12:42:00,Parnassus,19
+goldD,12:42:00,12:42:00,LPPI,19
 goldD,12:58:00,12:58:00,Mt. Zion,20
 goldD,13:25:00,13:25:00,MB,21
 goldD,13:40:00,13:40:00,SFGH,22
-goldD,14:02:00,14:02:00,Parnassus,23
+goldD,14:02:00,14:02:00,LPPI,23
 goldD,14:18:00,14:18:00,Mt. Zion,24
 goldD,14:45:00,14:45:00,MB,25
 goldD,15:00:00,15:00:00,SFGH,26
-goldD,15:22:00,15:22:00,Parnassus,27
+goldD,15:22:00,15:22:00,LPPI,27
 goldD,15:38:00,15:38:00,Mt. Zion,28
 goldD,16:05:00,16:05:00,MB,29
 goldD,16:20:00,16:20:00,SFGH,30
-goldD,16:42:00,16:42:00,Parnassus,31
+goldD,16:42:00,16:42:00,LPPI,31
 goldD,16:58:00,16:58:00,Mt. Zion,32
 goldD,17:25:00,17:25:00,MB,33
 goldD,17:40:00,17:40:00,SFGH,34
-goldD,18:02:00,18:02:00,Parnassus,35
+goldD,18:02:00,18:02:00,LPPI,35
 goldD,18:18:00,18:18:00,Mt. Zion,36
 goldD,18:45:00,18:45:00,MB,37
 goldD,19:00:00,19:00:00,SFGH,38
-goldD,19:22:00,19:22:00,Parnassus,39
+goldD,19:22:00,19:22:00,LPPI,39
 goldD,19:38:00,19:38:00,Mt. Zion,40
 goldD,20:05:00,20:05:00,MB,41
 goldD,20:20:00,20:20:00,SFGH,42
-goldD,20:42:00,20:42:00,Parnassus,43
+goldD,20:42:00,20:42:00,LPPI,43
 goldD,20:58:00,20:58:00,Mt. Zion,44
 limeA,6:00:00,6:00:00,MCB,1
 limeA,6:05:00,6:05:00,55 Laguna,2
-limeA,6:20:00,6:20:00,Parnassus,3
+limeA,6:20:00,6:20:00,LPPI,3
 limeA,6:35:00,6:35:00,55 Laguna,4
 limeA,6:50:00,6:50:00,MCB,5
 limeA,6:55:00,6:55:00,55 Laguna,6
-limeA,7:15:00,7:15:00,Parnassus,7
+limeA,7:15:00,7:15:00,LPPI,7
 limeA,7:30:00,7:30:00,55 Laguna,8
 limeA,7:45:00,7:45:00,MCB,9
 limeA,7:50:00,7:50:00,55 Laguna,10
-limeA,8:10:00,8:10:00,Parnassus,11
+limeA,8:10:00,8:10:00,LPPI,11
 limeA,8:25:00,8:25:00,55 Laguna,12
 limeA,8:40:00,8:40:00,MCB,13
 limeA,8:45:00,8:45:00,55 Laguna,14
-limeA,9:05:00,9:05:00,Parnassus,15
+limeA,9:05:00,9:05:00,LPPI,15
 limeA,9:20:00,9:20:00,55 Laguna,16
 limeA,9:35:00,9:35:00,MCB,17
 limeA,9:40:00,9:40:00,55 Laguna,18
-limeA,10:00:00,10:00:00,Parnassus,19
+limeA,10:00:00,10:00:00,LPPI,19
 limeA,10:15:00,10:15:00,55 Laguna,20
 limeA,10:30:00,10:30:00,MCB,21
 limeA,10:35:00,10:35:00,55 Laguna,22
-limeA,10:55:00,10:55:00,Parnassus,23
+limeA,10:55:00,10:55:00,LPPI,23
 limeA,11:10:00,11:10:00,55 Laguna,24
 limeA,11:25:00,11:25:00,MCB,25
 limeA,11:30:00,11:30:00,55 Laguna,26
-limeA,11:50:00,11:50:00,Parnassus,27
+limeA,11:50:00,11:50:00,LPPI,27
 limeA,12:05:00,12:05:00,55 Laguna,28
 limeA,12:20:00,12:20:00,MCB,29
 limeA,12:25:00,12:25:00,55 Laguna,30
-limeA,12:40:00,12:40:00,Parnassus,31
+limeA,12:40:00,12:40:00,LPPI,31
 limeA,12:55:00,12:55:00,55 Laguna,32
 limeA,13:10:00,13:10:00,MCB,33
 limeA,13:15:00,13:15:00,55 Laguna,34
-limeA,13:30:00,13:30:00,Parnassus,35
+limeA,13:30:00,13:30:00,LPPI,35
 limeA,13:45:00,13:45:00,55 Laguna,36
 limeA,14:05:00,14:05:00,MCB,37
 limeA,14:10:00,14:10:00,55 Laguna,38
-limeA,14:25:00,14:25:00,Parnassus,39
+limeA,14:25:00,14:25:00,LPPI,39
 limeA,14:40:00,14:40:00,55 Laguna,40
 limeA,15:00:00,15:00:00,MCB,41
 limeA,15:05:00,15:05:00,55 Laguna,42
-limeA,15:20:00,15:20:00,Parnassus,43
+limeA,15:20:00,15:20:00,LPPI,43
 limeA,15:35:00,15:35:00,55 Laguna,44
 limeA,15:55:00,15:55:00,MCB,45
 limeA,16:00:00,16:00:00,55 Laguna,46
-limeA,16:15:00,16:15:00,Parnassus,47
+limeA,16:15:00,16:15:00,LPPI,47
 limeA,16:30:00,16:30:00,55 Laguna,48
 limeA,16:50:00,16:50:00,MCB,49
 limeA,16:55:00,16:55:00,55 Laguna,50
-limeA,17:10:00,17:10:00,Parnassus,51
+limeA,17:10:00,17:10:00,LPPI,51
 limeA,17:25:00,17:25:00,55 Laguna,52
 limeA,17:45:00,17:45:00,MCB,53
 limeA,17:50:00,17:50:00,55 Laguna,54
-limeA,18:05:00,18:05:00,Parnassus,55
+limeA,18:05:00,18:05:00,LPPI,55
 limeA,18:20:00,18:20:00,55 Laguna,56
 limeA,18:40:00,18:40:00,MCB,57
 limeA,18:45:00,18:45:00,55 Laguna,58
-limeA,19:00:00,19:00:00,Parnassus,59
+limeA,19:00:00,19:00:00,LPPI,59
 limeA,19:15:00,19:15:00,55 Laguna,60
 limeA,19:30:00,19:30:00,MCB,61
 limeA,19:35:00,19:35:00,55 Laguna,62
-limeA,19:50:00,19:50:00,Parnassus,63
+limeA,19:50:00,19:50:00,LPPI,63
 limeA,20:05:00,20:05:00,55 Laguna,64
 limeA,20:20:00,20:20:00,MCB,65
 limeB,6:15:00,6:15:00,MCB,1
 limeB,6:20:00,6:20:00,55 Laguna,2
-limeB,6:35:00,6:35:00,Parnassus,3
+limeB,6:35:00,6:35:00,LPPI,3
 limeB,6:50:00,6:50:00,55 Laguna,4
 limeB,7:05:00,7:05:00,MCB,5
 limeB,7:10:00,7:10:00,55 Laguna,6
-limeB,7:30:00,7:30:00,Parnassus,7
+limeB,7:30:00,7:30:00,LPPI,7
 limeB,7:45:00,7:45:00,55 Laguna,8
 limeB,8:00:00,8:00:00,MCB,9
 limeB,8:05:00,8:05:00,55 Laguna,10
-limeB,8:25:00,8:25:00,Parnassus,11
+limeB,8:25:00,8:25:00,LPPI,11
 limeB,8:40:00,8:40:00,55 Laguna,12
 limeB,8:55:00,8:55:00,MCB,13
 limeB,9:00:00,9:00:00,55 Laguna,14
-limeB,9:20:00,9:20:00,Parnassus,15
+limeB,9:20:00,9:20:00,LPPI,15
 limeB,9:35:00,9:35:00,55 Laguna,16
 limeB,9:50:00,9:50:00,MCB,17
 limeB,9:55:00,9:55:00,55 Laguna,18
-limeB,10:15:00,10:15:00,Parnassus,19
+limeB,10:15:00,10:15:00,LPPI,19
 limeB,10:30:00,10:30:00,55 Laguna,20
 limeB,10:45:00,10:45:00,MCB,21
 limeB,10:50:00,10:50:00,55 Laguna,22
-limeB,11:10:00,11:10:00,Parnassus,23
+limeB,11:10:00,11:10:00,LPPI,23
 limeB,11:25:00,11:25:00,55 Laguna,24
 limeB,11:40:00,11:40:00,MCB,25
 limeB,11:45:00,11:45:00,55 Laguna,26
-limeB,12:05:00,12:05:00,Parnassus,27
+limeB,12:05:00,12:05:00,LPPI,27
 limeB,12:20:00,12:20:00,55 Laguna,28
 limeB,12:35:00,12:35:00,MCB,29
 limeB,12:40:00,12:40:00,55 Laguna,30
-limeB,12:55:00,12:55:00,Parnassus,31
+limeB,12:55:00,12:55:00,LPPI,31
 limeB,13:10:00,13:10:00,55 Laguna,32
 limeB,13:25:00,13:25:00,MCB,33
 limeB,13:30:00,13:30:00,55 Laguna,34
-limeB,13:45:00,13:45:00,Parnassus,35
+limeB,13:45:00,13:45:00,LPPI,35
 limeB,14:00:00,14:00:00,55 Laguna,36
 limeB,14:20:00,14:20:00,MCB,37
 limeB,14:25:00,14:25:00,55 Laguna,38
-limeB,14:40:00,14:40:00,Parnassus,39
+limeB,14:40:00,14:40:00,LPPI,39
 limeB,14:55:00,14:55:00,55 Laguna,40
 limeB,15:15:00,15:15:00,MCB,41
 limeB,15:20:00,15:20:00,55 Laguna,42
-limeB,15:35:00,15:35:00,Parnassus,43
+limeB,15:35:00,15:35:00,LPPI,43
 limeB,15:50:00,15:50:00,55 Laguna,44
 limeB,16:10:00,16:10:00,MCB,45
 limeB,16:15:00,16:15:00,55 Laguna,46
-limeB,16:30:00,16:30:00,Parnassus,47
+limeB,16:30:00,16:30:00,LPPI,47
 limeB,16:45:00,16:45:00,55 Laguna,48
 limeB,17:05:00,17:05:00,MCB,49
 limeB,17:10:00,17:10:00,55 Laguna,50
-limeB,17:25:00,17:25:00,Parnassus,51
+limeB,17:25:00,17:25:00,LPPI,51
 limeB,17:40:00,17:40:00,55 Laguna,52
 limeB,18:00:00,18:00:00,MCB,53
 limeB,18:05:00,18:05:00,55 Laguna,54
-limeB,18:20:00,18:20:00,Parnassus,55
+limeB,18:20:00,18:20:00,LPPI,55
 limeB,18:35:00,18:35:00,55 Laguna,56
 limeB,18:55:00,18:55:00,MCB,57
 limeB,19:00:00,19:00:00,55 Laguna,58
-limeB,19:15:00,19:15:00,Parnassus,59
+limeB,19:15:00,19:15:00,LPPI,59
 limeB,19:30:00,19:30:00,55 Laguna,60
 limeB,19:45:00,19:45:00,MCB,61
 limeB,19:50:00,19:50:00,55 Laguna,62
-limeB,20:05:00,20:05:00,Parnassus,63
+limeB,20:05:00,20:05:00,LPPI,63
 limeB,20:20:00,20:20:00,55 Laguna,64
 limeB,20:35:00,20:35:00,MCB,65
 limeC,6:30:00,6:30:00,MCB,1
 limeC,6:35:00,6:35:00,55 Laguna,2
-limeC,6:50:00,6:50:00,Parnassus,3
+limeC,6:50:00,6:50:00,LPPI,3
 limeC,7:05:00,7:05:00,55 Laguna,4
 limeC,7:20:00,7:20:00,MCB,5
 limeC,7:25:00,7:25:00,55 Laguna,6
-limeC,7:45:00,7:45:00,Parnassus,7
+limeC,7:45:00,7:45:00,LPPI,7
 limeC,8:00:00,8:00:00,55 Laguna,8
 limeC,8:15:00,8:15:00,MCB,9
 limeC,8:20:00,8:20:00,55 Laguna,10
-limeC,8:40:00,8:40:00,Parnassus,11
+limeC,8:40:00,8:40:00,LPPI,11
 limeC,8:55:00,8:55:00,55 Laguna,12
 limeC,9:10:00,9:10:00,MCB,13
 limeC,9:15:00,9:15:00,55 Laguna,14
-limeC,9:35:00,9:35:00,Parnassus,15
+limeC,9:35:00,9:35:00,LPPI,15
 limeC,9:50:00,9:50:00,55 Laguna,16
 limeC,10:05:00,10:05:00,MCB,17
 limeC,10:10:00,10:10:00,55 Laguna,18
-limeC,10:30:00,10:30:00,Parnassus,19
+limeC,10:30:00,10:30:00,LPPI,19
 limeC,10:45:00,10:45:00,55 Laguna,20
 limeC,11:00:00,11:00:00,MCB,21
 limeC,11:05:00,11:05:00,55 Laguna,22
-limeC,11:25:00,11:25:00,Parnassus,23
+limeC,11:25:00,11:25:00,LPPI,23
 limeC,11:40:00,11:40:00,55 Laguna,24
 limeC,11:55:00,11:55:00,MCB,25
 limeC,12:00:00,12:00:00,55 Laguna,26
-limeC,12:20:00,12:20:00,Parnassus,27
+limeC,12:20:00,12:20:00,LPPI,27
 limeC,12:35:00,12:35:00,55 Laguna,28
 limeC,12:50:00,12:50:00,MCB,29
 limeC,12:55:00,12:55:00,55 Laguna,30
-limeC,13:10:00,13:10:00,Parnassus,31
+limeC,13:10:00,13:10:00,LPPI,31
 limeC,13:25:00,13:25:00,55 Laguna,32
 limeC,13:40:00,13:40:00,MCB,33
 limeC,13:45:00,13:45:00,55 Laguna,34
-limeC,14:00:00,14:00:00,Parnassus,35
+limeC,14:00:00,14:00:00,LPPI,35
 limeC,14:15:00,14:15:00,55 Laguna,36
 limeC,14:35:00,14:35:00,MCB,37
 limeC,14:40:00,14:40:00,55 Laguna,38
-limeC,14:55:00,14:55:00,Parnassus,39
+limeC,14:55:00,14:55:00,LPPI,39
 limeC,15:10:00,15:10:00,55 Laguna,40
 limeC,15:30:00,15:30:00,MCB,41
 limeC,15:35:00,15:35:00,55 Laguna,42
-limeC,15:50:00,15:50:00,Parnassus,43
+limeC,15:50:00,15:50:00,LPPI,43
 limeC,16:05:00,16:05:00,55 Laguna,44
 limeC,16:25:00,16:25:00,MCB,45
 limeC,16:30:00,16:30:00,55 Laguna,46
-limeC,16:45:00,16:45:00,Parnassus,47
+limeC,16:45:00,16:45:00,LPPI,47
 limeC,17:00:00,17:00:00,55 Laguna,48
 limeC,17:20:00,17:20:00,MCB,49
 limeC,17:25:00,17:25:00,55 Laguna,50
-limeC,17:40:00,17:40:00,Parnassus,51
+limeC,17:40:00,17:40:00,LPPI,51
 limeC,17:55:00,17:55:00,55 Laguna,52
 limeC,18:15:00,18:15:00,MCB,53
 limeC,18:20:00,18:20:00,55 Laguna,54
-limeC,18:35:00,18:35:00,Parnassus,55
+limeC,18:35:00,18:35:00,LPPI,55
 limeC,18:50:00,18:50:00,55 Laguna,56
 limeC,19:10:00,19:10:00,MCB,57
 limeC,19:15:00,19:15:00,55 Laguna,58
-limeC,19:30:00,19:30:00,Parnassus,59
+limeC,19:30:00,19:30:00,LPPI,59
 limeC,19:45:00,19:45:00,55 Laguna,60
 limeC,20:00:00,20:00:00,MCB,61
 limeC,20:05:00,20:05:00,55 Laguna,62
-limeC,20:20:00,20:20:00,Parnassus,63
+limeC,20:20:00,20:20:00,LPPI,63
 limeC,20:35:00,20:35:00,55 Laguna,64
 limeC,20:50:00,20:50:00,MCB,65
 greyA,6:30:00,6:30:00,MB,1
-greyA,7:00:00,7:00:00,Parnassus,2
+greyA,7:00:00,7:00:00,LPPI,2
 greyA,7:30:00,7:30:00,MB,3
-greyA,8:00:00,8:00:00,Parnassus,4
+greyA,8:00:00,8:00:00,LPPI,4
 greyA,8:30:00,8:30:00,MB,5
-greyA,9:00:00,9:00:00,Parnassus,6
+greyA,9:00:00,9:00:00,LPPI,6
 greyA,9:30:00,9:30:00,MB,7
-greyA,10:00:00,10:00:00,Parnassus,8
+greyA,10:00:00,10:00:00,LPPI,8
 greyA,10:30:00,10:30:00,MB,9
-greyA,11:00:00,11:00:00,Parnassus,10
+greyA,11:00:00,11:00:00,LPPI,10
 greyA,11:30:00,11:30:00,MB,11
-greyA,12:00:00,12:00:00,Parnassus,12
+greyA,12:00:00,12:00:00,LPPI,12
 greyA,12:30:00,12:30:00,MB,13
-greyA,13:00:00,13:00:00,Parnassus,14
+greyA,13:00:00,13:00:00,LPPI,14
 greyA,13:30:00,13:30:00,MB,15
-greyA,14:00:00,14:00:00,Parnassus,16
+greyA,14:00:00,14:00:00,LPPI,16
 greyA,14:30:00,14:30:00,MB,17
-greyA,15:00:00,15:00:00,Parnassus,18
+greyA,15:00:00,15:00:00,LPPI,18
 greyA,15:30:00,15:30:00,MB,19
-greyA,16:00:00,16:00:00,Parnassus,20
+greyA,16:00:00,16:00:00,LPPI,20
 greyA,16:40:00,16:40:00,MB,21
-greyA,17:10:00,17:10:00,Parnassus,22
+greyA,17:10:00,17:10:00,LPPI,22
 greyA,17:50:00,17:50:00,MB,23
-greyA,18:20:00,18:20:00,Parnassus,24
+greyA,18:20:00,18:20:00,LPPI,24
 greyA,18:50:00,18:50:00,MB,25
-greyA,19:20:00,19:20:00,Parnassus,26
+greyA,19:20:00,19:20:00,LPPI,26
 greyA,19:50:00,19:50:00,MB,27
-greyA,20:20:00,20:20:00,Parnassus,28
+greyA,20:20:00,20:20:00,LPPI,28
 greyA,20:50:00,20:50:00,MB,29
-greyA,21:20:00,21:20:00,Parnassus,30
+greyA,21:20:00,21:20:00,LPPI,30
 greyA,21:50:00,21:50:00,MB,31
 greyB,6:50:00,6:50:00,MB,1
-greyB,7:20:00,7:20:00,Parnassus,2
+greyB,7:20:00,7:20:00,LPPI,2
 greyB,7:50:00,7:50:00,MB,3
-greyB,8:20:00,8:20:00,Parnassus,4
+greyB,8:20:00,8:20:00,LPPI,4
 greyB,8:50:00,8:50:00,MB,5
-greyB,9:20:00,9:20:00,Parnassus,6
+greyB,9:20:00,9:20:00,LPPI,6
 greyB,9:50:00,9:50:00,MB,7
-greyB,10:20:00,10:20:00,Parnassus,8
+greyB,10:20:00,10:20:00,LPPI,8
 greyB,10:50:00,10:50:00,MB,9
-greyB,11:20:00,11:20:00,Parnassus,10
+greyB,11:20:00,11:20:00,LPPI,10
 greyB,11:50:00,11:50:00,MB,11
-greyB,12:20:00,12:20:00,Parnassus,12
+greyB,12:20:00,12:20:00,LPPI,12
 greyB,12:50:00,12:50:00,MB,13
-greyB,13:20:00,13:20:00,Parnassus,14
+greyB,13:20:00,13:20:00,LPPI,14
 greyB,13:50:00,13:50:00,MB,15
-greyB,14:20:00,14:20:00,Parnassus,16
+greyB,14:20:00,14:20:00,LPPI,16
 greyB,14:50:00,14:50:00,MB,17
-greyB,15:20:00,15:20:00,Parnassus,18
+greyB,15:20:00,15:20:00,LPPI,18
 greyB,15:50:00,15:50:00,MB,19
-greyB,16:20:00,16:20:00,Parnassus,20
+greyB,16:20:00,16:20:00,LPPI,20
 greyB,17:00:00,17:00:00,MB,21
-greyB,17:30:00,17:30:00,Parnassus,22
+greyB,17:30:00,17:30:00,LPPI,22
 greyB,18:10:00,18:10:00,MB,23
-greyB,18:40:00,18:40:00,Parnassus,24
+greyB,18:40:00,18:40:00,LPPI,24
 greyB,19:10:00,19:10:00,MB,25
-greyB,19:40:00,19:40:00,Parnassus,26
+greyB,19:40:00,19:40:00,LPPI,26
 greyB,20:10:00,20:10:00,MB,27
-greyB,20:40:00,20:40:00,Parnassus,28
+greyB,20:40:00,20:40:00,LPPI,28
 greyB,21:10:00,21:10:00,MB,29
-greyB,21:40:00,21:40:00,Parnassus,30
+greyB,21:40:00,21:40:00,LPPI,30
 greyB,22:10:00,22:10:00,MB,31
 greyC,7:10:00,7:10:00,MB,1
-greyC,7:40:00,7:40:00,Parnassus,2
+greyC,7:40:00,7:40:00,LPPI,2
 greyC,8:10:00,8:10:00,MB,3
-greyC,8:40:00,8:40:00,Parnassus,4
+greyC,8:40:00,8:40:00,LPPI,4
 greyC,9:10:00,9:10:00,MB,5
-greyC,9:40:00,9:40:00,Parnassus,6
+greyC,9:40:00,9:40:00,LPPI,6
 greyC,10:10:00,10:10:00,MB,7
-greyC,10:40:00,10:40:00,Parnassus,8
+greyC,10:40:00,10:40:00,LPPI,8
 greyC,11:10:00,11:10:00,MB,9
-greyC,11:40:00,11:40:00,Parnassus,10
+greyC,11:40:00,11:40:00,LPPI,10
 greyC,12:10:00,12:10:00,MB,11
-greyC,12:40:00,12:40:00,Parnassus,12
+greyC,12:40:00,12:40:00,LPPI,12
 greyC,13:10:00,13:10:00,MB,13
-greyC,13:40:00,13:40:00,Parnassus,14
+greyC,13:40:00,13:40:00,LPPI,14
 greyC,14:10:00,14:10:00,MB,15
-greyC,14:40:00,14:40:00,Parnassus,16
+greyC,14:40:00,14:40:00,LPPI,16
 greyC,15:10:00,15:10:00,MB,17
-greyC,15:40:00,15:40:00,Parnassus,18
+greyC,15:40:00,15:40:00,LPPI,18
 greyC,16:10:00,16:10:00,MB,19
-greyC,16:40:00,16:40:00,Parnassus,20
+greyC,16:40:00,16:40:00,LPPI,20
 greyC,17:20:00,17:20:00,MB,21
-greyC,17:50:00,17:50:00,Parnassus,22
+greyC,17:50:00,17:50:00,LPPI,22
 greyC,18:30:00,18:30:00,MB,23
-greyC,19:00:00,19:00:00,Parnassus,24
+greyC,19:00:00,19:00:00,LPPI,24
 greyC,19:30:00,19:30:00,MB,25
-greyC,20:00:00,20:00:00,Parnassus,26
+greyC,20:00:00,20:00:00,LPPI,26
 greyC,20:30:00,20:30:00,MB,27
-greyC,21:00:00,21:00:00,Parnassus,28
+greyC,21:00:00,21:00:00,LPPI,28
 greyC,21:30:00,21:30:00,MB,29
 redA,6:00:00,6:00:00,MB,1
 redA,6:10:00,6:10:00,MCB,2
@@ -1388,209 +1388,209 @@ greenB,18:40:00,18:40:00,MBE,97
 greenB,18:47:00,18:47:00,China Basin,98
 greenB,18:55:00,18:55:00,MB,99
 greenB,19:01:00,19:01:00,654 Minnesota,100
-bronzeA,6:45:00,6:45:00,Parnassus,1
+bronzeA,6:45:00,6:45:00,LPPI,1
 bronzeA,6:50:00,6:50:00,Aldea Housing,2
 bronzeA,6:54:00,6:54:00,Surge/Woods,3
 bronzeA,6:55:00,6:55:00,Parnassus ACC,4
-bronzeA,7:07:00,7:07:00,Parnassus,5
+bronzeA,7:07:00,7:07:00,LPPI,5
 bronzeA,7:12:00,7:12:00,Aldea Housing,6
 bronzeA,7:16:00,7:16:00,Surge/Woods,7
 bronzeA,7:17:00,7:17:00,Parnassus ACC,8
 bronzeA,7:26:00,7:26:00,Parnassus Library,9
-bronzeA,7:34:00,7:34:00,Parnassus,10
+bronzeA,7:34:00,7:34:00,LPPI,10
 bronzeA,7:39:00,7:39:00,Aldea Housing,11
 bronzeA,7:43:00,7:43:00,Surge/Woods,12
 bronzeA,7:44:00,7:44:00,Parnassus ACC,13
 bronzeA,7:53:00,7:53:00,Parnassus Library,14
-bronzeA,8:01:00,8:01:00,Parnassus,15
+bronzeA,8:01:00,8:01:00,LPPI,15
 bronzeA,8:06:00,8:06:00,Aldea Housing,16
 bronzeA,8:10:00,8:10:00,Surge/Woods,17
 bronzeA,8:11:00,8:11:00,Parnassus ACC,18
-bronzeA,8:23:00,8:23:00,Parnassus,19
+bronzeA,8:23:00,8:23:00,LPPI,19
 bronzeA,8:28:00,8:28:00,Aldea Housing,20
 bronzeA,8:32:00,8:32:00,Surge/Woods,21
 bronzeA,8:33:00,8:33:00,Parnassus ACC,22
-bronzeA,8:45:00,8:45:00,Parnassus,23
+bronzeA,8:45:00,8:45:00,LPPI,23
 bronzeA,8:50:00,8:50:00,Aldea Housing,24
 bronzeA,8:54:00,8:54:00,Surge/Woods,25
 bronzeA,8:55:00,8:55:00,Parnassus ACC,26
 bronzeA,9:04:00,9:04:00,Parnassus Library,27
-bronzeA,9:12:00,9:12:00,Parnassus,28
+bronzeA,9:12:00,9:12:00,LPPI,28
 bronzeA,9:17:00,9:17:00,Aldea Housing,29
 bronzeA,9:21:00,9:21:00,Surge/Woods,30
 bronzeA,9:22:00,9:22:00,Parnassus ACC,31
 bronzeA,9:31:00,9:31:00,Parnassus Library,32
-bronzeA,9:39:00,9:39:00,Parnassus,33
+bronzeA,9:39:00,9:39:00,LPPI,33
 bronzeA,9:44:00,9:44:00,Aldea Housing,34
 bronzeA,9:48:00,9:48:00,Surge/Woods,35
 bronzeA,9:49:00,9:49:00,Parnassus ACC,36
 bronzeA,9:58:00,9:58:00,Parnassus Library,37
-bronzeA,10:06:00,10:06:00,Parnassus,38
+bronzeA,10:06:00,10:06:00,LPPI,38
 bronzeA,10:11:00,10:11:00,Aldea Housing,39
 bronzeA,10:15:00,10:15:00,Surge/Woods,40
 bronzeA,10:16:00,10:16:00,Parnassus ACC,41
 bronzeA,10:25:00,10:25:00,Parnassus Library,42
-bronzeA,10:33:00,10:33:00,Parnassus,43
+bronzeA,10:33:00,10:33:00,LPPI,43
 bronzeA,10:38:00,10:38:00,Aldea Housing,44
 bronzeA,10:42:00,10:42:00,Surge/Woods,45
 bronzeA,10:43:00,10:43:00,Parnassus ACC,46
 bronzeA,10:52:00,10:52:00,Parnassus Library,47
-bronzeB,7:00:00,7:00:00,Parnassus,1
+bronzeB,7:00:00,7:00:00,LPPI,1
 bronzeB,7:05:00,7:05:00,Aldea Housing,2
 bronzeB,7:09:00,7:09:00,Surge/Woods,3
 bronzeB,7:10:00,7:10:00,Parnassus ACC,4
-bronzeB,7:22:00,7:22:00,Parnassus,5
+bronzeB,7:22:00,7:22:00,LPPI,5
 bronzeB,7:27:00,7:27:00,Aldea Housing,6
 bronzeB,7:31:00,7:31:00,Surge/Woods,7
 bronzeB,7:32:00,7:32:00,Parnassus ACC,8
-bronzeB,7:44:00,7:44:00,Parnassus,9
+bronzeB,7:44:00,7:44:00,LPPI,9
 bronzeB,7:49:00,7:49:00,Aldea Housing,10
 bronzeB,7:53:00,7:53:00,Surge/Woods,11
 bronzeB,7:54:00,7:54:00,Parnassus ACC,12
 bronzeB,8:03:00,8:03:00,Parnassus Library,13
-bronzeB,8:11:00,8:11:00,Parnassus,14
+bronzeB,8:11:00,8:11:00,LPPI,14
 bronzeB,8:16:00,8:16:00,Aldea Housing,15
 bronzeB,8:20:00,8:20:00,Surge/Woods,16
 bronzeB,8:21:00,8:21:00,Parnassus ACC,17
 bronzeB,8:30:00,8:30:00,Parnassus Library,18
-bronzeB,8:38:00,8:38:00,Parnassus,19
+bronzeB,8:38:00,8:38:00,LPPI,19
 bronzeB,8:43:00,8:43:00,Aldea Housing,20
 bronzeB,8:47:00,8:47:00,Surge/Woods,21
 bronzeB,8:48:00,8:48:00,Parnassus ACC,22
 bronzeB,8:57:00,8:57:00,Parnassus Library,23
-bronzeB,9:05:00,9:05:00,Parnassus,24
+bronzeB,9:05:00,9:05:00,LPPI,24
 bronzeB,9:10:00,9:10:00,Aldea Housing,25
 bronzeB,9:14:00,9:14:00,Surge/Woods,26
 bronzeB,9:15:00,9:15:00,Parnassus ACC,27
-bronzeB,9:27:00,9:27:00,Parnassus,28
+bronzeB,9:27:00,9:27:00,LPPI,28
 bronzeB,9:32:00,9:32:00,Aldea Housing,29
 bronzeB,9:36:00,9:36:00,Surge/Woods,30
 bronzeB,9:37:00,9:37:00,Parnassus ACC,31
 bronzeB,9:46:00,9:46:00,Parnassus Library,32
-bronzeB,9:54:00,9:54:00,Parnassus,33
+bronzeB,9:54:00,9:54:00,LPPI,33
 bronzeB,9:59:00,9:59:00,Aldea Housing,34
 bronzeB,10:03:00,10:03:00,Surge/Woods,35
 bronzeB,10:04:00,10:04:00,Parnassus ACC,36
 bronzeB,10:13:00,10:13:00,Parnassus Library,37
-bronzeB,10:21:00,10:21:00,Parnassus,38
+bronzeB,10:21:00,10:21:00,LPPI,38
 bronzeB,10:26:00,10:26:00,Aldea Housing,39
 bronzeB,10:30:00,10:30:00,Surge/Woods,40
 bronzeB,10:31:00,10:31:00,Parnassus ACC,41
 bronzeB,10:40:00,10:40:00,Parnassus Library,42
-bronzeB,10:48:00,10:48:00,Parnassus,43
+bronzeB,10:48:00,10:48:00,LPPI,43
 bronzeB,10:53:00,10:53:00,Aldea Housing,44
 bronzeB,10:57:00,10:57:00,Surge/Woods,45
 bronzeB,10:58:00,10:58:00,Parnassus ACC,46
 bronzeB,11:07:00,11:07:00,Parnassus Library,47
-bronzeB,11:15:00,11:15:00,Parnassus,48
+bronzeB,11:15:00,11:15:00,LPPI,48
 bronzeB,11:20:00,11:20:00,Aldea Housing,49
 bronzeB,11:24:00,11:24:00,Surge/Woods,50
 bronzeB,11:25:00,11:25:00,Parnassus ACC,51
 bronzeB,11:34:00,11:34:00,Parnassus Library,52
-bronzeB,11:42:00,11:42:00,Parnassus,53
+bronzeB,11:42:00,11:42:00,LPPI,53
 bronzeB,11:47:00,11:47:00,Aldea Housing,54
 bronzeB,11:51:00,11:51:00,Surge/Woods,55
 bronzeB,11:52:00,11:52:00,Parnassus ACC,56
 bronzeB,12:01:00,12:01:00,Parnassus Library,57
-bronzeB,12:09:00,12:09:00,Parnassus,58
+bronzeB,12:09:00,12:09:00,LPPI,58
 bronzeB,12:14:00,12:14:00,Aldea Housing,59
 bronzeB,12:18:00,12:18:00,Surge/Woods,60
 bronzeB,12:19:00,12:19:00,Parnassus ACC,61
 bronzeB,12:28:00,12:28:00,Parnassus Library,62
-bronzeB,12:36:00,12:36:00,Parnassus,63
+bronzeB,12:36:00,12:36:00,LPPI,63
 bronzeB,12:41:00,12:41:00,Aldea Housing,64
 bronzeB,12:45:00,12:45:00,Surge/Woods,65
 bronzeB,12:46:00,12:46:00,Parnassus ACC,66
 bronzeB,12:55:00,12:55:00,Parnassus Library,67
-bronzeB,13:03:00,13:03:00,Parnassus,68
+bronzeB,13:03:00,13:03:00,LPPI,68
 bronzeB,13:08:00,13:08:00,Aldea Housing,69
 bronzeB,13:12:00,13:12:00,Surge/Woods,70
 bronzeB,13:13:00,13:13:00,Parnassus ACC,71
 bronzeB,13:22:00,13:22:00,Parnassus Library,72
-bronzeB,13:30:00,13:30:00,Parnassus,73
+bronzeB,13:30:00,13:30:00,LPPI,73
 bronzeB,13:35:00,13:35:00,Aldea Housing,74
 bronzeB,13:39:00,13:39:00,Surge/Woods,75
 bronzeB,13:40:00,13:40:00,Parnassus ACC,76
 bronzeB,13:49:00,13:49:00,Parnassus Library,77
-bronzeB,13:57:00,13:57:00,Parnassus,78
+bronzeB,13:57:00,13:57:00,LPPI,78
 bronzeB,14:02:00,14:02:00,Aldea Housing,79
 bronzeB,14:06:00,14:06:00,Surge/Woods,80
 bronzeB,14:07:00,14:07:00,Parnassus ACC,81
 bronzeB,14:16:00,14:16:00,Parnassus Library,82
-bronzeB,14:24:00,14:24:00,Parnassus,83
+bronzeB,14:24:00,14:24:00,LPPI,83
 bronzeB,14:29:00,14:29:00,Aldea Housing,84
 bronzeB,14:33:00,14:33:00,Surge/Woods,85
 bronzeB,14:34:00,14:34:00,Parnassus ACC,86
 bronzeB,14:43:00,14:43:00,Parnassus Library,87
-bronzeB,14:51:00,14:51:00,Parnassus,88
+bronzeB,14:51:00,14:51:00,LPPI,88
 bronzeB,14:56:00,14:56:00,Aldea Housing,89
 bronzeB,15:00:00,15:00:00,Surge/Woods,90
 bronzeB,15:01:00,15:01:00,Parnassus ACC,91
 bronzeB,15:10:00,15:10:00,Parnassus Library,92
-bronzeB,15:18:00,15:18:00,Parnassus,93
+bronzeB,15:18:00,15:18:00,LPPI,93
 bronzeB,15:23:00,15:23:00,Aldea Housing,94
 bronzeB,15:27:00,15:27:00,Surge/Woods,95
 bronzeB,15:28:00,15:28:00,Parnassus ACC,96
 bronzeB,15:37:00,15:37:00,Parnassus Library,97
-bronzeB,15:45:00,15:45:00,Parnassus,98
+bronzeB,15:45:00,15:45:00,LPPI,98
 bronzeB,15:50:00,15:50:00,Aldea Housing,99
 bronzeB,15:54:00,15:54:00,Surge/Woods,100
 bronzeB,15:55:00,15:55:00,Parnassus ACC,101
 bronzeB,16:04:00,16:04:00,Parnassus Library,102
-bronzeB,16:12:00,16:12:00,Parnassus,103
+bronzeB,16:12:00,16:12:00,LPPI,103
 bronzeB,16:17:00,16:17:00,Aldea Housing,104
 bronzeB,16:21:00,16:21:00,Surge/Woods,105
 bronzeB,16:22:00,16:22:00,Parnassus ACC,106
 bronzeB,16:31:00,16:31:00,Parnassus Library,107
-bronzeB,16:39:00,16:39:00,Parnassus,108
+bronzeB,16:39:00,16:39:00,LPPI,108
 bronzeB,16:44:00,16:44:00,Aldea Housing,109
 bronzeB,16:48:00,16:48:00,Surge/Woods,110
 bronzeB,16:49:00,16:49:00,Parnassus ACC,111
 bronzeB,16:58:00,16:58:00,Parnassus Library,112
-bronzeB,17:06:00,17:06:00,Parnassus,113
+bronzeB,17:06:00,17:06:00,LPPI,113
 bronzeB,17:11:00,17:11:00,Aldea Housing,114
 bronzeB,17:15:00,17:15:00,Surge/Woods,115
 bronzeB,17:16:00,17:16:00,Parnassus ACC,116
 bronzeB,17:25:00,17:25:00,Parnassus Library,117
-bronzeB,17:33:00,17:33:00,Parnassus,118
+bronzeB,17:33:00,17:33:00,LPPI,118
 bronzeB,17:38:00,17:38:00,Aldea Housing,119
 bronzeB,17:42:00,17:42:00,Surge/Woods,120
 bronzeB,17:43:00,17:43:00,Parnassus ACC,121
-bronzeB,17:55:00,17:55:00,Parnassus,122
+bronzeB,17:55:00,17:55:00,LPPI,122
 bronzeB,18:00:00,18:00:00,Aldea Housing,123
 bronzeB,18:04:00,18:04:00,Surge/Woods,124
 bronzeB,18:05:00,18:05:00,Parnassus ACC,125
-bronzeB,18:17:00,18:17:00,Parnassus,126
+bronzeB,18:17:00,18:17:00,LPPI,126
 bronzeB,18:22:00,18:22:00,Aldea Housing,127
 bronzeB,18:26:00,18:26:00,Surge/Woods,128
 bronzeB,18:27:00,18:27:00,Parnassus ACC,129
 bronzeB,18:36:00,18:36:00,Parnassus Library,130
-bronzeC,15:00:00,15:00:00,Parnassus,1
+bronzeC,15:00:00,15:00:00,LPPI,1
 bronzeC,15:05:00,15:05:00,Aldea Housing,2
 bronzeC,15:09:00,15:09:00,Surge/Woods,3
 bronzeC,15:10:00,15:10:00,Parnassus ACC,4
 bronzeC,15:19:00,15:19:00,Parnassus Library,5
-bronzeC,15:27:00,15:27:00,Parnassus,6
+bronzeC,15:27:00,15:27:00,LPPI,6
 bronzeC,15:32:00,15:32:00,Aldea Housing,7
 bronzeC,15:36:00,15:36:00,Surge/Woods,8
 bronzeC,15:37:00,15:37:00,Parnassus ACC,9
 bronzeC,15:46:00,15:46:00,Parnassus Library,10
-bronzeC,15:54:00,15:54:00,Parnassus,11
+bronzeC,15:54:00,15:54:00,LPPI,11
 bronzeC,15:59:00,15:59:00,Aldea Housing,12
 bronzeC,16:03:00,16:03:00,Surge/Woods,13
 bronzeC,16:04:00,16:04:00,Parnassus ACC,14
 bronzeC,16:13:00,16:13:00,Parnassus Library,15
-bronzeC,16:21:00,16:21:00,Parnassus,16
+bronzeC,16:21:00,16:21:00,LPPI,16
 bronzeC,16:26:00,16:26:00,Aldea Housing,17
 bronzeC,16:30:00,16:30:00,Surge/Woods,18
 bronzeC,16:31:00,16:31:00,Parnassus ACC,19
 bronzeC,16:40:00,16:40:00,Parnassus Library,20
-bronzeC,16:48:00,16:48:00,Parnassus,21
+bronzeC,16:48:00,16:48:00,LPPI,21
 bronzeC,16:53:00,16:53:00,Aldea Housing,22
 bronzeC,16:57:00,16:57:00,Surge/Woods,23
 bronzeC,16:58:00,16:58:00,Parnassus ACC,24
 bronzeC,17:07:00,17:07:00,Parnassus Library,25
-bronzeC,17:15:00,17:15:00,Parnassus,26
+bronzeC,17:15:00,17:15:00,LPPI,26
 bronzeC,17:20:00,17:20:00,Aldea Housing,27
 bronzeC,17:24:00,17:24:00,Surge/Woods,28
 bronzeC,17:25:00,17:25:00,Parnassus ACC,29

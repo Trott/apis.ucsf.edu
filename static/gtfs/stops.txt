@@ -1,15 +1,15 @@
 stop_id,stop_name,stop_desc,stop_lat,stop_lon,location_type,parent_station
-Parnassus,Parnassus Campus,Parnassus Ave.,37.76381740338,-122.456485927105,1,
+Parnassus,Parnassus Campus,Parnassus Ave.,37.7638174033811,-122.45648592710495,1,
 Parnassus Library,Parnassus Library,Parnassus Library (530 Parnassus),37.763174,-122.459176,0,Parnassus
 LPPI,Parnassus,LPPI (401 Parnassus),37.7638174033811,-122.45648592710495,0,Parnassus
 Parnassus ACC,Ambulatory Care,400 Parnassus,37.763846,-122.456903,0,Parnassus
 E/R,Parnassus E/R,505 Parnassus,37.763257,-122.457404,0,Parnassus
-MB,Mission Bay Campus,4th St.,37.76793,-122.39101,1,
-MBW,Mission Bay,4th St. west side,37.767930,-122.391009,0,MB
-MBE,Mission Bay,4th St. east side,37.767962,-122.390861,0,MB
-2300 Harrison,2300 Harrison,Harrison & 19th St.,37.76062,-122.41342,1
-2300 Harrison N,2300 Harrison,north side of 19th St.,37.760619,-122.413418,0,2300 Harrison
-2300 Harrison S,2300 Harrison,south side of 19th St.,37.760576,-122.413380,0,2300 Harrison
+MB,Mission Bay Campus,4th St.,37.767930,-122.391009,1,
+MBW,Mission Bay (west side of street),4th St. west side,37.767930,-122.391009,0,MB
+MBE,Mission Bay (east side of street),4th St. east side,37.767962,-122.390861,0,MB
+2300 Harrison,2300 Harrison,Harrison & 19th St.,37.760619,-122.413418,1
+2300 Harrison N,2300 Harrison (north side of street),north side of 19th St.,37.760619,-122.413418,0,2300 Harrison
+2300 Harrison S,2300 Harrison (south side of street),south side of 19th St.,37.760576,-122.413380,0,2300 Harrison
 Mt. Zion,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428,0,
 SFGH,SFGH,San Francisco General Hospital (2557 23rd St.),37.7548539352877,-122.40492649376392,0,
 55 Laguna,55 Laguna,55 Laguna,37.771806,-122.425915,0,
