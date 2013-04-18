@@ -16,7 +16,7 @@ exports.stops = function(req, res) {
 
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
-            var errorMsg = "Shuttle error: code " + resp.statusCode;
+            var errorMsg = "shuttle/stops error: code " + resp.statusCode;
             console.log(errorMsg);
             res.send({error: errorMsg});
         }
@@ -36,6 +36,41 @@ exports.stops = function(req, res) {
                 }
                 stops.stops = filtered;
                 res.send(stops);
+            }
+        });
+    }).on("error", function(e){
+        console.log("shuttle/stops error: " + e.message);
+        res.send({error: e.message});
+    });
+};
+
+exports.routesForStop = function(req, res) {
+    "use strict";
+
+    var otpOptions = {
+        host: "apis.ucsf.edu",
+        path: "/opentripplanner-api-webapp/ws/transit/routesForStop?agency=ucsf&",
+        port: 8080,
+        headers: {'Content-Type':'application/json'}
+    };
+
+    var data = '';
+
+    // Only useful parameter: id (which is the GTFS stop id)
+    otpOptions.path += querystring.stringify(req.query);
+
+    http.get(otpOptions, function(resp) {
+        if (resp.statusCode !== 200) {
+            var errorMsg = "shuttle/routesForStop error: code " + resp.statusCode;
+            console.log(errorMsg);
+            res.send({error: errorMsg});
+        }
+        resp.on('data', function(chunk){
+            data += chunk;
+        });
+        resp.on('end', function() {
+            if (resp.statusCode === 200) {
+                res.send(data);
             }
         });
     }).on("error", function(e){
@@ -64,7 +99,7 @@ exports.plan = function(req, res) {
 
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
-            var errorMsg = "Shuttle error: code " + resp.statusCode;
+            var errorMsg = "shuttle/plan error: code " + resp.statusCode;
             console.log(errorMsg);
             res.send({error: errorMsg});
         }
