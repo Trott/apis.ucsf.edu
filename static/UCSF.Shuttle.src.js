@@ -86,10 +86,12 @@ var UCSF = UCSF || (function () {
     return me;
 }());
 
-UCSF.Shuttle = {
-    stops: function (options, success, failure) {
+UCSF.Shuttle = (function() {
+
+    // Do basic XHR and return resulting JSON
+    function wrapper(what, options, success, failure) {
         failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
-        var reqString = UCSF.createRequestString('http://apis.ucsf.edu/shuttle/stops', options);
+        var reqString = UCSF.createRequestString('http://apis.ucsf.edu/shuttle/' + what, options);
         var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
         if (! xhr) {
             UCSF._ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
@@ -100,26 +102,26 @@ UCSF.Shuttle = {
             xhr.onerror = failure;
             xhr.send();
         }
-    },
-
-    plan: function (options, success, failure) {
-        // See shuttle.js for some useful options and link to other possible options.
-        // TODO: JSDoc options etc. Automate documentation.
-        failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
-        if (! options || ! options.hasOwnProperty('fromPlace') || ! options.hasOwnProperty('toPlace')) {
-            failure({statusText: 'Required options fromPlace and toPlace were not specified'});
-            return;
-        }
-        var reqString = UCSF.createRequestString('http://apis.ucsf.edu/shuttle/plan', options);
-        var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
-        if (! xhr) {
-            UCSF._ie7q.push({callee:UCSF.Shuttle.plan, options:options, success:success, failure:failure});
-        } else {
-            xhr.onload = function () {
-                success(JSON.parse(xhr.responseText));
-            };
-            xhr.onerror = failure;
-            xhr.send();
-        }
     }
-};
+
+    return {
+        stops: function (options, success, failure) {
+            wrapper('stops', options, success, failure);
+        },
+
+        routes: function (options, success, failure) {
+            wrapper('routes', options, success, failure);
+        },
+
+        plan: function (options, success, failure) {
+            // See shuttle.js for some useful options and link to other possible options.
+            // TODO: JSDoc options etc. Automate documentation.
+            failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
+            if (! options || ! options.fromPlace || ! options.toPlace) {
+                failure({statusText: 'Required options fromPlace and toPlace were not specified'});
+                return;
+            }
+            wrapper('plan', options, success, failure);
+        }
+    };
+}());
