@@ -68,9 +68,11 @@ app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
 
 app.get('/person/search', person.search);
 
-app.get('/shuttle/stops', shuttle.stops);
 app.get('/shuttle/plan', shuttle.plan);
+app.get('/shuttle/routes', shuttle.routes);
 app.get('/shuttle/routesForStop', shuttle.routesForStop);
+app.get('/shuttle/stops', shuttle.stops);
+
 
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function(req,res) {

@@ -44,6 +44,38 @@ exports.stops = function(req, res) {
     });
 };
 
+exports.routes = function(req, res) {
+    "use strict";
+
+    var otpOptions = {
+        host: "apis.ucsf.edu",
+        path: "/opentripplanner-api-webapp/ws/transit/routes?agency=ucsf",
+        port: 8080,
+        headers: {'Content-Type':'application/json'}
+    };
+
+    var data = '';
+
+    http.get(otpOptions, function(resp) {
+        if (resp.statusCode !== 200) {
+            var errorMsg = "shuttle/routes error: code " + resp.statusCode;
+            console.log(errorMsg);
+            res.send({error: errorMsg});
+        }
+        resp.on('data', function(chunk){
+            data += chunk;
+        });
+        resp.on('end', function() {
+            if (resp.statusCode === 200) {
+                res.send(data);
+            }
+        });
+    }).on("error", function(e){
+        console.log("shuttle/routes error: " + e.message);
+        res.send({error: e.message});
+    });
+};
+
 exports.routesForStop = function(req, res) {
     "use strict";
 
@@ -74,7 +106,7 @@ exports.routesForStop = function(req, res) {
             }
         });
     }).on("error", function(e){
-        console.log("shuttle/stops error: " + e.message);
+        console.log("shuttle/routesForStop error: " + e.message);
         res.send({error: e.message});
     });
 };
