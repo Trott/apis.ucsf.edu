@@ -116,7 +116,7 @@ exports.plan = function(req, res) {
 
     var otpOptions = {
         host: "apis.ucsf.edu",
-        path: "/opentripplanner-api-webapp/ws/plan?mode=TRANSIT,WALK&min=QUICK&maxWalkDistance=240&walkSpeed=1.341&",
+        path: "/opentripplanner-api-webapp/ws/plan?mode=TRANSIT,WALK&min=QUICK&maxWalkDistance=30&walkSpeed=1.341&",
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
