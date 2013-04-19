@@ -12,7 +12,9 @@ MBE,Mission Bay (east side of street),4th St. east side,37.767962,-122.390861,0,
 2300 Harrison S,2300 Harrison (south side of street),south side of 19th St.,37.760576,-122.413380,0,2300 Harrison
 Mt. Zion,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428,0,
 SFGH,SFGH,San Francisco General Hospital (2557 23rd St.),37.7548539352877,-122.40492649376392,0,
-100 Buchanan,Buchanan Dental Center,100 Buchana,37.770766,-122.426705,0,
+100 Buchanan,Buchanan Dental Center,100 Buchanan,37.770791,-122.426684,1,
+100 Buchanan N,Buchanan Dental Center (north side of Hermann),100 Buchanan,37.770704,-122.426948,0,100 Buchanan
+100 Buchanan S,Buchanan Dental Center (south side of Hermann),100 Buchanan,37.770582,-122.426958,0,100 Buchanan
 MCB,Mission Center Building,Mission Center Building (1855 Folsom),37.767326,-122.414519,0,
 BART,16th St. BART,16th St. BART Station,37.765128,-122.419402,0,
 Laurel Heights,Laurel Heights,Laurel Heights Building (3333 California),37.786592,-122.448552,0,
