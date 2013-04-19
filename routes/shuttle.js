@@ -26,7 +26,7 @@ exports.stops = function(req, res) {
         resp.on('end', function() {
             if (resp.statusCode === 200) {
                 var filtered = [],
-                stops = JSON.parse(data);
+                    stops = JSON.parse(data);
                 if (stops.hasOwnProperty('stops') && stops.stops instanceof Array) {
                     for (var i=0; i<stops.stops.length; i++) {
                         if (stops.stops[i].hasOwnProperty('parentStation') && stops.stops[i].parentStation === null) {
@@ -112,18 +112,18 @@ exports.routesForStop = function(req, res) {
 };
 
 exports.plan = function(req, res) {
-    "user strict";
+    "use strict";
 
     var otpOptions = {
         host: "apis.ucsf.edu",
-        path: "/opentripplanner-api-webapp/ws/plan?mode=TRANSIT,WALK&min=QUICK&maxWalkDistance=60&walkSpeed=3&",
+        path: "/opentripplanner-api-webapp/ws/plan?mode=TRANSIT,WALK&",
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
 
     var data = '';
 
-    // Useful arameters the user can send:
+    // Useful parameters the user can send:
     // fromPlace & toPlace are required. 
     // date is required if time is set. default to current time and date.
     // arriveBy defaults to "false"
