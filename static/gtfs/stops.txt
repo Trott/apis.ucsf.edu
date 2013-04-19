@@ -1,5 +1,5 @@
 stop_id,stop_name,stop_desc,stop_lat,stop_lon,location_type,parent_station
-Parnassus,Parnassus Campus,Parnassus Ave.,37.7638174033811,-122.45648592710495,1,
+Parnassus,Parnassus Campus,Parnassus Ave.,37.763438,-122.457905,1,
 Parnassus Library,Parnassus Library,Parnassus Library (530 Parnassus),37.763174,-122.459176,0,Parnassus
 LPPI,Langley Porter,LPPI (401 Parnassus),37.7638174033811,-122.45648592710495,0,Parnassus
 Parnassus ACC,Ambulatory Care,400 Parnassus,37.763846,-122.456903,0,Parnassus
