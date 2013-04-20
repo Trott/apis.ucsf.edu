@@ -215,7 +215,7 @@ exports.plan = function(req, res) {
                 if (resp.statusCode === 200) {
                     var rv = JSON.parse(data);
                     if (rv.plan && rv.plan.itineraries) {
-                        metadata = rv.plan;
+                        metadata.plan = rv.plan;
                         allResults.push.apply(allResults, rv.plan.itineraries);
                     }
                     callback();
@@ -232,7 +232,7 @@ exports.plan = function(req, res) {
         if (err) {
             res.send(err);
         } else {
-            metadata.itineraries = allResults;
+            metadata.plan.itineraries = allResults;
             res.send(metadata);
         }
     });
