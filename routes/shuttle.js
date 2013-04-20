@@ -213,7 +213,10 @@ exports.plan = function(req, res) {
             });
             resp.on('end', function() {
                 if (resp.statusCode === 200) {
-                    allResults.push(data);
+                    if (data.plan && data.plan.itineraries) {
+                        allResults.push(data.plan.itineraries);
+                    }
+                    callback();
                 }
             });
         }).on("error", function(e){
