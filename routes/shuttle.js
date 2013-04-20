@@ -128,7 +128,7 @@ exports.plan = function(req, res) {
             switch (endpoint) {
                 case "ucsf_Aldea Housing":
                 case "ucsf_Surge/Woods":
-                    return ["ucsf_Parnassus ACC"];
+                    return ["ucsf_Parnassus ACC", "ucsf_LPPI"];
                 case "ucsf_Kezar":
                 case "ucsf_VAMC":
                     return ["ucsf_E/R"];
@@ -228,7 +228,10 @@ exports.plan = function(req, res) {
     };
 
     async.each(combined, plan, function(err) {
-        // TODO: Go through allResults, find the three with the shortest durations, and send those in sorted order.
+        // TODO: Go through allResults and select three results. Factors include:
+        // * duration
+        // * de-duplicating routes
+        // * chronological order
         if (err) {
             res.send(err);
         } else {
