@@ -232,7 +232,9 @@ exports.plan = function(req, res) {
         if (err) {
             res.send(err);
         } else {
-            metadata.plan.itineraries = allResults;
+            if (metadata.plan) {
+                metadata.plan.itineraries = allResults;
+            }
             res.send(metadata);
         }
     });
