@@ -213,8 +213,9 @@ exports.plan = function(req, res) {
             });
             resp.on('end', function() {
                 if (resp.statusCode === 200) {
-                    if (data.plan && data.plan.itineraries) {
-                        allResults.push(data.plan.itineraries);
+                    var rv = JSON.parse(data);
+                    if (rv.plan && rv.plan.itineraries) {
+                        allResults.push.apply(allResuts, rv.plan.itineraries);
                     }
                     callback();
                 }
