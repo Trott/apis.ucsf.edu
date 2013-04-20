@@ -12,9 +12,9 @@ exports.stops = function(req, res) {
         headers: {'Content-Type':'application/json'}
     };
 
-    var data = '';
-
     http.get(otpOptions, function(resp) {
+        var data = '';
+
         if (resp.statusCode !== 200) {
             var errorMsg = "shuttle/stops error: code " + resp.statusCode;
             console.log(errorMsg);
