@@ -7,7 +7,7 @@ E/R,Parnassus E/R,505 Parnassus,37.763257,-122.457404,0,Parnassus
 MB,Mission Bay Campus,4th St.,37.767930,-122.391009,1,
 MBW,Mission Bay (west side of street),4th St. west side,37.767930,-122.391009,0,MB
 MBE,Mission Bay (east side of street),4th St. east side,37.767962,-122.390861,0,MB
-2300 Harrison,2300 Harrison,Harrison & 19th St.,37.760619,-122.413418,1
+2300 Harrison,2300 Harrison,Harrison & 19th St.,37.760619,-122.413418,1,
 2300 Harrison N,2300 Harrison (north side of street),north side of 19th St.,37.760619,-122.413418,0,2300 Harrison
 2300 Harrison S,2300 Harrison (south side of street),south side of 19th St.,37.760576,-122.413380,0,2300 Harrison
 Mt. Zion,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428,0,
