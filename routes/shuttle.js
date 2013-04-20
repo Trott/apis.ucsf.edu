@@ -12,9 +12,9 @@ exports.stops = function(req, res) {
         headers: {'Content-Type':'application/json'}
     };
 
-    http.get(otpOptions, function(resp) {
-        var data = '';
+    var data = '';
 
+    http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = "shuttle/stops error: code " + resp.statusCode;
             console.log(errorMsg);
@@ -114,8 +114,6 @@ exports.routesForStop = function(req, res) {
 exports.plan = function(req, res) {
     "use strict";
 
-    var data = '';
-
     // ACHTUNG! TOTALLY SAD UGLY HACK!
     // OTP will not route to a destination that is a parent station.
     // See https://github.com/openplans/OpenTripPlanner/issues/1049
@@ -203,6 +201,7 @@ exports.plan = function(req, res) {
         otpOptions.path += querystring.stringify(query);
 
         http.get(otpOptions, function(resp) {
+            var data = "";
             if (resp.statusCode !== 200) {
                 var errorMsg = "shuttle/plan error: code " + resp.statusCode;
                 console.log(errorMsg);
