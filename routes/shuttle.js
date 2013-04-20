@@ -156,7 +156,7 @@ exports.plan = function(req, res) {
 
     var uglyHack = function (pointA, pointB) {
         if (typeof parentStationToChildStation[pointA] === "function") {
-             return parentStationToChildStation[fromPlace](pointB);
+             return parentStationToChildStation[pointA](pointB);
         } else {
             return [pointA];
         }
