@@ -177,6 +177,7 @@ exports.plan = function(req, res) {
     }
 
     var allResults = [];
+    var metadata = {};
     var plan = function (startAndEnd, callback) {
         var otpOptions = {
             host: "apis.ucsf.edu",
@@ -214,6 +215,7 @@ exports.plan = function(req, res) {
                 if (resp.statusCode === 200) {
                     var rv = JSON.parse(data);
                     if (rv.plan && rv.plan.itineraries) {
+                        metadata = rv.plan;
                         allResults.push.apply(allResults, rv.plan.itineraries);
                     }
                     callback();
@@ -226,6 +228,12 @@ exports.plan = function(req, res) {
     };
 
     async.each(combined, plan, function(err) {
-        res.send(err ? err : allResults);
+        // TODO: Go through allResults, find the three with the shortest durations, and send those in sorted order.
+        if (err) {
+            res.send(err);
+        } else {
+            metadata.itineraries = allResults;
+            res.send(metadata);
+        }
     });
 };
