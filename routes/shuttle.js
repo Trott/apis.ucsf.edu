@@ -233,18 +233,33 @@ exports.plan = function(req, res) {
         } else {
             if (metadata.plan) {
 
-                var fromId,
-                    itinerary;
-                // Remove any "walk to <starting point>" resulting from ugly hack
+                var toId,
+                    itinerary,
+                    firstLeg,
+                    penultimateLeg,
+                    lastLeg;
+
                 for(var l = allResults.length - 1; l>=0; --l) {
+                    // Remove any "walk to <starting point>" resulting from ugly hack
                     itinerary = allResults[l];
-                    fromId = itinerary.legs[0].to.stopId.agencyId + '_' + itinerary.legs[0].to.stopId.id;
-                    if (itinerary.legs[0].mode==="WALK" && fromPlaces.indexOf(fromId)!==-1 ) {
+                    firstLeg = itinerary.legs[0];
+                    toId = firstLeg.to.stopId.agencyId + '_' + firstLeg.to.stopId.id;
+                    if (firstLeg.mode==="WALK" && fromPlaces.indexOf(toId)!==-1) {
                         allResults.splice(l,1);
+                        continue;
+                    }
+
+                    // Remove any "walk from ending point to other ending point" resulting from ugly hack
+                    if (itinerary.legs.length > 1) {
+                        penultimateLeg = itinerary.legs[itinerary.legs.length - 2];
+                        lastLeg = itinerary.legs[itinerary.legs.length - 1];
+                        toId = penultimateLeg.to.stopId.agencyId + '_' + penultimateLeg.to.stopId.id;
+
+                        if (lastLeg.mode==="WALK" && toPlaces.indexOf(toId)!==-1) {
+                            allResults.splice(l,1);
+                        }
                     }
                 }
-
-                //TODO: Also remove last steps that are walks from a toPlace to a toPlace.
 
                 // Sort merged results from ugly hack
                 var compareOn = req.query.arriveBy==="true" ? 'endTime' : 'startTime';
