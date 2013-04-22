@@ -263,19 +263,23 @@ exports.plan = function(req, res) {
 
                 // Sort merged results from ugly hack
                 var compareOn = req.query.arriveBy==="true" ? 'endTime' : 'startTime';
+                var ascendingSort = req.query.arriveBy==="true" ? -1 : 1;
                 var compare = function (a,b) {
+                    // If one shuttle both arrives earlier and leaves later than another, 
+                    //   then it should be favored no matter what.
+                    if ((a['endTime'] <= b['endTime']) === (b['startTime'] <= a['startTime'])) {
+                        return b['startTime'] - a['startTime'];
+                    }
+
                     if (a[compareOn] < b[compareOn]) {
-                        return -1;
+                        return -ascendingSort;
                     }
                     if (a[compareOn] > b[compareOn]) {
-                        return 1;
+                        return ascendingSort;
                     }
                     return 0;
                 };
                 allResults.sort(compare);
-                if (compareOn === "endTime") {
-                    allResults.reverse();
-                }
 
                 metadata.plan.itineraries = allResults;
             }
