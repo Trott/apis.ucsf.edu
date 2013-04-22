@@ -181,7 +181,7 @@ exports.plan = function(req, res) {
     var plan = function (startAndEnd, callback) {
         var otpOptions = {
             host: "apis.ucsf.edu",
-            path: "/opentripplanner-api-webapp/ws/plan?mode=TRANSIT,WALK&",
+            path: "/opentripplanner-api-webapp/ws/plan?mode=TRANSIT,WALK&minTransferTime=60&",
             port: 8080,
             headers: {'Content-Type':'application/json'}
         };
@@ -244,7 +244,7 @@ exports.plan = function(req, res) {
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
                     toId = firstLeg.to.stopId.agencyId + '_' + firstLeg.to.stopId.id;
-                    if (firstLeg.mode==="WALK" && fromPlaces.indexOf(toId)!==-1) {
+                    if (firstLeg.mode==="WALK") {
                         allResults.splice(l,1);
                         continue;
                     }
