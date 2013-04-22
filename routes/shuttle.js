@@ -228,13 +228,22 @@ exports.plan = function(req, res) {
     };
 
     async.each(combined, plan, function(err) {
-        // TODO: Go through allResults and select three results. Factors include:
-        // * duration
-        // * de-duplicating routes
-        // * chronological order
         if (err) {
             res.send(err);
         } else {
+            var fromId,
+                itinerary;
+            // Remove any "walk to <starting point>" resulting from ugly hack
+            for(var l = allResults.length - 1; l>=0; --l) {
+                itinerary = allResults[l];
+                fromId = itinerary.legs[0].to.stopId.agencyId + '_' + itinerary.legs[0].to.stopId.id;
+                if (itinerary.legs[0].mode==="WALK" && fromPlaces.indexOf(fromId)!==-1 ) {
+                    allResults.splice(l,1);
+                }
+            }
+
+            // If more than three results, ugly hack may mean that itineraries are
+            // in an arbitrary order. Sort by arrival time.
             if (metadata.plan) {
                 metadata.plan.itineraries = allResults;
             }
