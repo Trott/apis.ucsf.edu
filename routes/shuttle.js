@@ -172,16 +172,19 @@ exports.plan = function(req, res) {
     var combined = [];
     for (var i=0; i<fromPlaces.length; i++) {
         for (var j=0; j<toPlaces.length; j++) {
-            combined.push([fromPlaces[i],toPlaces[j]]);
+            combined.push({fromPlace:fromPlaces[i], toPlace:toPlaces[j], mode:'TRANSIT,WALK'});
+            // Ugly Hack #2: Works around https://github.com/openplans/OpenTripPlanner/issues/1054
+            combined.push({fromPlace:fromPlaces[i], toPlace:toPlaces[j], mode:'TRANSIT', hack:true});
         }
     }
 
     var allResults = [];
+    var uglyHackNumberTwoResults = [];
     var metadata = {};
-    var plan = function (startAndEnd, callback) {
+    var plan = function (options, callback) {
         var otpOptions = {
             host: "apis.ucsf.edu",
-            path: "/opentripplanner-api-webapp/ws/plan?mode=TRANSIT,WALK&minTransferTime=60&",
+            path: "/opentripplanner-api-webapp/ws/plan?minTransferTime=60&",
             port: 8080,
             headers: {'Content-Type':'application/json'}
         };
@@ -192,8 +195,10 @@ exports.plan = function(req, res) {
             query[ keys[l-1] ] = req.query[ keys[l-1] ];
         }
 
-        query.fromPlace = startAndEnd[0];
-        query.toPlace = startAndEnd[1];
+        query.fromPlace = options.fromPlace;
+        query.toPlace = options.toPlace;
+        query.mode = options.mode;
+        query.hack = options.hack;
 
         // Useful parameters the user can send:
         // fromPlace & toPlace are required. 
@@ -201,7 +206,7 @@ exports.plan = function(req, res) {
         // arriveBy defaults to "false"
         otpOptions.path += querystring.stringify(query);
 
-        http.get(otpOptions, function(resp) {
+        var processResults = function(resp) {
             var data = "";
             if (resp.statusCode !== 200) {
                 var errorMsg = "shuttle/plan error: code " + resp.statusCode;
@@ -216,12 +221,20 @@ exports.plan = function(req, res) {
                     var rv = JSON.parse(data);
                     if (rv.plan && rv.plan.itineraries) {
                         metadata.plan = rv.plan;
-                        allResults.push.apply(allResults, rv.plan.itineraries);
+                        if (rv.requestParameters && rv.requestParameters.hack==="true") {
+                            uglyHackNumberTwoResults.push.apply(uglyHackNumberTwoResults, rv.plan.itineraries);
+                        } else {
+                            allResults.push.apply(allResults, rv.plan.itineraries);
+                        }
                     }
                     callback();
                 }
             });
-        }).on("error", function(e){
+        };
+
+        http.get(otpOptions,
+            processResults
+        ).on("error", function(e){
             console.log("shuttle/plan error: " + e.message);
             callback({error: e.message});
         });
@@ -238,6 +251,11 @@ exports.plan = function(req, res) {
                     firstLeg,
                     penultimateLeg,
                     lastLeg;
+
+                // If we didn't get anything from the ordinary request but got something from ugly hack #2, use it.
+                if (allResults.length === 0 && uglyHackNumberTwoResults.length > 0) {
+                    allResults = uglyHackNumberTwoResults;
+                }
 
                 for(var l = allResults.length - 1; l>=0; --l) {
                     // Remove any "walk to <starting point>" resulting from ugly hack
@@ -260,6 +278,7 @@ exports.plan = function(req, res) {
 
                             if (lastLeg.mode==="WALK" && toPlaces.indexOf(toId)!==-1) {
                                 allResults.splice(l,1);
+                                continue;
                             }
                         }
                     }
