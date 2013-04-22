@@ -231,20 +231,37 @@ exports.plan = function(req, res) {
         if (err) {
             res.send(err);
         } else {
-            var fromId,
-                itinerary;
-            // Remove any "walk to <starting point>" resulting from ugly hack
-            for(var l = allResults.length - 1; l>=0; --l) {
-                itinerary = allResults[l];
-                fromId = itinerary.legs[0].to.stopId.agencyId + '_' + itinerary.legs[0].to.stopId.id;
-                if (itinerary.legs[0].mode==="WALK" && fromPlaces.indexOf(fromId)!==-1 ) {
-                    allResults.splice(l,1);
-                }
-            }
-
-            // If more than three results, ugly hack may mean that itineraries are
-            // in an arbitrary order. Sort by arrival time.
             if (metadata.plan) {
+
+                var fromId,
+                    itinerary;
+                // Remove any "walk to <starting point>" resulting from ugly hack
+                for(var l = allResults.length - 1; l>=0; --l) {
+                    itinerary = allResults[l];
+                    fromId = itinerary.legs[0].to.stopId.agencyId + '_' + itinerary.legs[0].to.stopId.id;
+                    if (itinerary.legs[0].mode==="WALK" && fromPlaces.indexOf(fromId)!==-1 ) {
+                        allResults.splice(l,1);
+                    }
+                }
+
+                //TODO: Also remove last steps that are walks from a toPlace to a toPlace.
+
+                // Sort merged results from ugly hack
+                var compareOn = req.query.arriveBy==="true" ? 'endTime' : 'startTime';
+                var compare = function (a,b) {
+                    if (a[compareOn] < b[compareOn]) {
+                        return -1;
+                    }
+                    if (a[compareOn] > b[compareOn]) {
+                        return 1;
+                    }
+                    return 0;
+                };
+                allResults.sort(compare);
+                if (compareOn === "endTime") {
+                    allResults.reverse();
+                }
+
                 metadata.plan.itineraries = allResults;
             }
             res.send(metadata);
