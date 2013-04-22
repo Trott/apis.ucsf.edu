@@ -243,20 +243,24 @@ exports.plan = function(req, res) {
                     // Remove any "walk to <starting point>" resulting from ugly hack
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
-                    toId = firstLeg.to.stopId.agencyId + '_' + firstLeg.to.stopId.id;
-                    if (firstLeg.mode==="WALK") {
-                        allResults.splice(l,1);
-                        continue;
+                    if (firstLeg.to.stopId) {
+                        toId = firstLeg.to.stopId.agencyId + '_' + firstLeg.to.stopId.id;
+                        if (firstLeg.mode==="WALK") {
+                            allResults.splice(l,1);
+                            continue;
+                        }
                     }
 
                     // Remove any "walk from ending point to other ending point" resulting from ugly hack
                     if (itinerary.legs.length > 1) {
                         penultimateLeg = itinerary.legs[itinerary.legs.length - 2];
                         lastLeg = itinerary.legs[itinerary.legs.length - 1];
-                        toId = penultimateLeg.to.stopId.agencyId + '_' + penultimateLeg.to.stopId.id;
+                        if (penultimateLeg.to.stopId) {
+                            toId = penultimateLeg.to.stopId.agencyId + '_' + penultimateLeg.to.stopId.id;
 
-                        if (lastLeg.mode==="WALK" && toPlaces.indexOf(toId)!==-1) {
-                            allResults.splice(l,1);
+                            if (lastLeg.mode==="WALK" && toPlaces.indexOf(toId)!==-1) {
+                                allResults.splice(l,1);
+                            }
                         }
                     }
                 }
