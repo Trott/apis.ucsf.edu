@@ -60,7 +60,19 @@ exports.routes = function(req, res) {
 
     // Parameter: stopId to get just the routes that service a particular stop
     var query = {};
-    query.id = req.query.stopId;
+
+    // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
+    // If parent station, let's search for routes in all stops in the parent station.
+    var parentStationToChildStationForStupidHackNumberThree = {
+        "Parnassus": ["Parnassus Library", "LPPI", "Parnassus ACC", "E/R"],
+        "MB": ["MBE", "MBW"],
+        "2300 Harrison": ["2300 Harrison N", "2300 Harrison S"],
+        "100 Buchanan": ["100 Buchanan N", "100 Buchanan S"]
+    };
+    if (req.query.stopId) {
+        query.id = parentStationToChildStationForStupidHackNumberThree[req.query.stopId] ||
+            [req.query.stopId];
+    }
 
     otpOptions.path += querystring.stringify(query);
 
