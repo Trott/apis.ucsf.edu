@@ -49,12 +49,20 @@ exports.routes = function(req, res) {
 
     var otpOptions = {
         host: "apis.ucsf.edu",
-        path: "/opentripplanner-api-webapp/ws/transit/routes?agency=ucsf",
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
 
+    otpOptions.path = req.query.stopId ?
+        "/opentripplanner-api-webapp/ws/transit/routesForStop?agency=ucsf&" :
+        "/opentripplanner-api-webapp/ws/transit/routes?agency=ucsf&";
     var data = '';
+
+    // Parameter: stopId to get just the routes that service a particular stop
+    var query = {};
+    query.id = req.query.stopId;
+
+    otpOptions.path += querystring.stringify(query);
 
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
@@ -72,41 +80,6 @@ exports.routes = function(req, res) {
         });
     }).on("error", function(e){
         console.log("shuttle/routes error: " + e.message);
-        res.send({error: e.message});
-    });
-};
-
-exports.routesForStop = function(req, res) {
-    "use strict";
-
-    var otpOptions = {
-        host: "apis.ucsf.edu",
-        path: "/opentripplanner-api-webapp/ws/transit/routesForStop?agency=ucsf&",
-        port: 8080,
-        headers: {'Content-Type':'application/json'}
-    };
-
-    var data = '';
-
-    // Only useful parameter: id (which is the GTFS stop id)
-    otpOptions.path += querystring.stringify(req.query);
-
-    http.get(otpOptions, function(resp) {
-        if (resp.statusCode !== 200) {
-            var errorMsg = "shuttle/routesForStop error: code " + resp.statusCode;
-            console.log(errorMsg);
-            res.send({error: errorMsg});
-        }
-        resp.on('data', function(chunk){
-            data += chunk;
-        });
-        resp.on('end', function() {
-            if (resp.statusCode === 200) {
-                res.send(data);
-            }
-        });
-    }).on("error", function(e){
-        console.log("shuttle/routesForStop error: " + e.message);
         res.send({error: e.message});
     });
 };
@@ -189,21 +162,20 @@ exports.plan = function(req, res) {
             headers: {'Content-Type':'application/json'}
         };
 
-        // Clone req.query
         var query = {};
-        for(var keys = Object.keys(req.query), l = keys.length; l; --l) {
-            query[ keys[l-1] ] = req.query[ keys[l-1] ];
-        }
+        // Useful parameters the user can send:
+        // fromPlace & toPlace are required. 
+        // date is required if time is set. default to current time and date.
+        // arriveBy defaults to "false"
+        query.date = req.query.date;
+        query.time = req.query.time;
+        query.arriveBy = req.query.arriveBy;
 
         query.fromPlace = options.fromPlace;
         query.toPlace = options.toPlace;
         query.mode = options.mode;
         query.hack = options.hack;
 
-        // Useful parameters the user can send:
-        // fromPlace & toPlace are required. 
-        // date is required if time is set. default to current time and date.
-        // arriveBy defaults to "false"
         otpOptions.path += querystring.stringify(query);
 
         var processResults = function(resp) {

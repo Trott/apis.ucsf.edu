@@ -70,7 +70,6 @@ app.get('/person/search', person.search);
 
 app.get('/shuttle/plan', shuttle.plan);
 app.get('/shuttle/routes', shuttle.routes);
-app.get('/shuttle/routesForStop', shuttle.routesForStop);
 app.get('/shuttle/stops', shuttle.stops);
 
 
