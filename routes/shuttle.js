@@ -2,7 +2,8 @@ var http = require('http'),
     querystring = require('querystring'),
     async = require('async');
 
-exports.stops = function(req, res) {
+// Common function to get all stops and call callback() with results
+var stops = function(callback) {
     "use strict";
 
     var otpOptions = {
@@ -18,7 +19,7 @@ exports.stops = function(req, res) {
         if (resp.statusCode !== 200) {
             var errorMsg = "shuttle/stops error: code " + resp.statusCode;
             console.log(errorMsg);
-            res.send({error: errorMsg});
+            callback({error: errorMsg});
         }
         resp.on('data', function(chunk){
             data += chunk;
@@ -26,21 +27,28 @@ exports.stops = function(req, res) {
         resp.on('end', function() {
             if (resp.statusCode === 200) {
                 var filtered = [],
-                    stops = JSON.parse(data);
-                if (stops.hasOwnProperty('stops') && stops.stops instanceof Array) {
-                    for (var i=0; i<stops.stops.length; i++) {
-                        if (stops.stops[i].hasOwnProperty('parentStation') && stops.stops[i].parentStation === null) {
-                            filtered.push(stops.stops[i]);
+                    rv = JSON.parse(data);
+                if (rv.hasOwnProperty('stops') && rv.stops instanceof Array) {
+                    for (var i=0; i<rv.stops.length; i++) {
+                        if (rv.stops[i].hasOwnProperty('parentStation') && rv.stops[i].parentStation === null) {
+                            filtered.push(rv.stops[i]);
                         }
                     }
                 }
-                stops.stops = filtered;
-                res.send(stops);
+                rv.stops = filtered;
+                callback(rv);
             }
         });
     }).on("error", function(e){
         console.log("shuttle/stops error: " + e.message);
-        res.send({error: e.message});
+        callback({error: e.message});
+    });
+};
+
+exports.stops = function(req, res) {
+    "use strict";
+    stops(function (results) {
+        res.send(results);
     });
 };
 
@@ -116,22 +124,40 @@ exports.routes = function(req, res) {
 
     };
 
+    var myStop;
     if (req.query.stopId) {
         query.id = parentStationToChildStationForStupidHackNumberThree[req.query.stopId] ||
             [req.query.stopId];
-        async.each(query.id, routes, function(err) {
-            if (err) {
-                res.send(err);
-            } else {
-                // sort so we can deduplicate results from ugly hack number three
-                foundRoutes.sort(function(a,b) { return a.id.id > b.id.id; });
-                for(var l = foundRoutes.length - 1; l>0; --l) {
-                    if (foundRoutes[l].id.id === foundRoutes[l-1].id.id) {
-                        foundRoutes.splice(l,1);
+        async.parallel([
+            function (callback) {
+                async.each(query.id, routes, function(err) {
+                    if (err) {
+                        callback(err);
+                    } else {
+                        // sort so we can deduplicate results from ugly hack number three
+                        foundRoutes.sort(function(a,b) { return a.id.id > b.id.id; });
+                        for(var l = foundRoutes.length - 1; l>0; --l) {
+                            if (foundRoutes[l].id.id === foundRoutes[l-1].id.id) {
+                                foundRoutes.splice(l,1);
+                            }
+                        }
+                        callback();
                     }
-                }
-                res.send({routes: foundRoutes});
+                });
+            },
+            function (callback) {
+                var filteredStops;
+                stops( function( allStops ) {
+                    if (allStops.stops) {
+                        myStop = allStops.stops.filter(function ( obj ) { return obj.id.id === req.query.stopId; }).pop();
+                        callback();
+                    } else {
+                        callback({error:"error looking up stops"});
+                    }
+                });
             }
+        ], function (err) {
+            res.send({stop: myStop, routes: foundRoutes});
         });
     } else {
         routes();
