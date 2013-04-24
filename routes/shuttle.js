@@ -47,16 +47,9 @@ exports.stops = function(req, res) {
 exports.routes = function(req, res) {
     "use strict";
 
-    var otpOptions = {
-        host: "apis.ucsf.edu",
-        port: 8080,
-        headers: {'Content-Type':'application/json'}
-    };
-
-    otpOptions.path = req.query.stopId ?
-        "/opentripplanner-api-webapp/ws/transit/routesForStop?agency=ucsf&" :
-        "/opentripplanner-api-webapp/ws/transit/routes?agency=ucsf&";
-    var data = '';
+    var host = "apis.ucsf.edu",
+        port = 8080,
+        headers = {'Content-Type':'application/json'};
 
     // Parameter: stopId to get just the routes that service a particular stop
     var query = {};
@@ -69,31 +62,80 @@ exports.routes = function(req, res) {
         "2300 Harrison": ["2300 Harrison N", "2300 Harrison S"],
         "100 Buchanan": ["100 Buchanan N", "100 Buchanan S"]
     };
+
+    var foundRoutes = [];
+
+    var routes = function (stopId, callback) {
+
+        var otpOptions = {
+            host:host,
+            port:port,
+            headers:headers
+        };
+
+        otpOptions.path = stopId ?
+        "/opentripplanner-api-webapp/ws/transit/routesForStop?agency=ucsf&" + querystring.stringify({id:stopId}) :
+        "/opentripplanner-api-webapp/ws/transit/routes?agency=ucsf&";
+
+        http.get(otpOptions, function(resp) {
+            var data = "";
+            if (resp.statusCode !== 200) {
+                var errorMsg = "shuttle/routes error: code " + resp.statusCode;
+                console.log(errorMsg);
+                if (callback) {
+                    callback({error: errorMsg});
+                } else {
+                    res.send({error: errorMsg});
+                }
+            }
+            resp.on('data', function(chunk){
+                data += chunk;
+            });
+            resp.on('end', function() {
+                if (resp.statusCode === 200) {
+                    var rv = JSON.parse(data);
+                    if (rv.routes) {
+                        foundRoutes = foundRoutes.concat(rv.routes);
+                    }
+
+                    if (callback) {
+                        callback();
+                    } else {
+                        res.send(data);
+                    }
+                }
+            });
+        }).on("error", function(e){
+            console.log("shuttle/routes error: " + e.message);
+            if (callback) {
+                callback({error:e.message});
+            } else {
+                res.send({error: e.message});
+            }
+        });
+
+    };
+
     if (req.query.stopId) {
         query.id = parentStationToChildStationForStupidHackNumberThree[req.query.stopId] ||
             [req.query.stopId];
-    }
-
-    otpOptions.path += querystring.stringify(query);
-
-    http.get(otpOptions, function(resp) {
-        if (resp.statusCode !== 200) {
-            var errorMsg = "shuttle/routes error: code " + resp.statusCode;
-            console.log(errorMsg);
-            res.send({error: errorMsg});
-        }
-        resp.on('data', function(chunk){
-            data += chunk;
-        });
-        resp.on('end', function() {
-            if (resp.statusCode === 200) {
-                res.send(data);
+        async.each(query.id, routes, function(err) {
+            if (err) {
+                res.send(err);
+            } else {
+                // sort so we can deduplicate results from ugly hack number three
+                foundRoutes.sort(function(a,b) { return a.id.id > b.id.id; });
+                for(var l = foundRoutes.length - 1; l>0; --l) {
+                    if (foundRoutes[l].id.id === foundRoutes[l-1].id.id) {
+                        foundRoutes.splice(l,1);
+                    }
+                }
+                res.send({routes: foundRoutes});
             }
         });
-    }).on("error", function(e){
-        console.log("shuttle/routes error: " + e.message);
-        res.send({error: e.message});
-    });
+    } else {
+        routes();
+    }
 };
 
 exports.plan = function(req, res) {
