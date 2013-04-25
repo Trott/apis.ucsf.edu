@@ -247,9 +247,15 @@ exports.plan = function(req, res) {
         // fromPlace & toPlace are required. 
         // date is required if time is set. default to current time and date.
         // arriveBy defaults to "false"
-        query.date = req.query.date;
-        query.time = req.query.time;
-        query.arriveBy = req.query.arriveBy;
+        if (req.query.date) {
+            query.date = req.query.date;
+        }
+        if (req.query.time) {
+            query.time = req.query.time;
+        }
+        if (req.query.arriveBy) {
+            query.arriveBy = req.query.arriveBy;
+        }
 
         query.fromPlace = options.fromPlace;
         query.toPlace = options.toPlace;
