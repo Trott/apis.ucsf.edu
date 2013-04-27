@@ -368,3 +368,48 @@ exports.plan = function(req, res) {
         }
     });
 };
+
+exports.stopsForRoute = function (req, res) {
+    "use strict";
+
+    var otpOptions = {
+        host: "apis.ucsf.edu",
+        path: "/opentripplanner-api-webapp/ws/transit/routeData?agency=ucsf&references=true&extended=true&",
+        port: 8080,
+        headers: {'Content-Type':'application/json'}
+    };
+
+    // param to document for API: id
+    if (req.query.id) {
+        var reqOptions = {id: req.query.id};
+        otpOptions.path += querystring.stringify(reqOptions);
+    } else {
+        res.send( {error: 'shuttle/stopsForRoute: missing required parameter: id'});
+        return;
+    }
+    var data = '';
+
+    http.get(otpOptions, function(resp) {
+        if (resp.statusCode !== 200) {
+            var errorMsg = "shuttle/stopsForRoute error: code " + resp.statusCode;
+            console.log(errorMsg);
+            callback({error: errorMsg});
+        }
+        resp.on('data', function(chunk){
+            data += chunk;
+        });
+        resp.on('end', function() {
+            if (resp.statusCode === 200) {
+                var rv = JSON.parse(data);
+                if ((rv.routeData) && (rv.routeData[0].stops)) {
+                    res.send(rv.routeData[0].stops);
+                } else {
+                    res.send({stops:[]});
+                }
+            }
+        });
+    }).on("error", function(e){
+        console.log("shuttle/stopsForRoute error: " + e.message);
+        callback({error: e.message});
+    });
+};
