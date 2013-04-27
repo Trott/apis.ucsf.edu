@@ -401,7 +401,7 @@ exports.stopsForRoute = function (req, res) {
         resp.on('end', function() {
             if (resp.statusCode === 200) {
                 var rv = JSON.parse(data);
-                if ((rv.routeData) && (rv.routeData[0].stops)) {
+                if ((rv.routeData) && (rv.routeData[0]) && (rv.routeData[0].stops)) {
                     res.send(rv.routeData[0].stops);
                 } else {
                     res.send({stops:[]});
