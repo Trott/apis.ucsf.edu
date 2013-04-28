@@ -71,7 +71,6 @@ app.get('/person/search', person.search);
 app.get('/shuttle/plan', shuttle.plan);
 app.get('/shuttle/routes', shuttle.routes);
 app.get('/shuttle/stops', shuttle.stops);
-app.get('/shuttle/stopsForRoute', shuttle.stopsForRoute);
 
 
 // Needed for polyfill for IE7 support :-(

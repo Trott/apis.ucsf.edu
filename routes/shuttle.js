@@ -3,8 +3,12 @@ var http = require('http'),
     async = require('async');
 
 // Common function to get all stops and call callback() with results
-var stops = function(callback) {
+var stops = function(callback, options) {
     "use strict";
+
+    options = options || {};
+    options.property = options.property || "stops";
+    options.useParentStation = options.hasOwnProperty("useParentStation") ? options.useParentStation : true;
 
     var otpOptions = {
         host: "apis.ucsf.edu",
@@ -12,6 +16,10 @@ var stops = function(callback) {
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
+
+    if (options.path) {
+        otpOptions.path = options.path;
+    }
 
     var data = '';
 
@@ -27,15 +35,21 @@ var stops = function(callback) {
         resp.on('end', function() {
             if (resp.statusCode === 200) {
                 var filtered = [],
-                    rv = JSON.parse(data);
-                if (rv.hasOwnProperty('stops') && rv.stops instanceof Array) {
-                    for (var i=0; i<rv.stops.length; i++) {
-                        if (rv.stops[i].hasOwnProperty('parentStation') && rv.stops[i].parentStation === null) {
-                            filtered.push(rv.stops[i]);
+                    dataObject = JSON.parse(data),
+                    rv = {};
+                if (dataObject.hasOwnProperty(options.property) && dataObject[options.property] instanceof Array) {
+                    if (options.useParentStation) {
+                        for (var i=0; i<dataObject[options.property].length; i++) {
+                            if (dataObject[options.property][i].hasOwnProperty('parentStation') && dataObject[options.property][i].parentStation === null) {
+                                filtered.push(dataObject[options.property][i]);
+                            }
                         }
+                        rv.stops = filtered;
+                    } else {
+                        rv.routeId = dataObject[options.property][0].id || {};
+                        rv.stops = dataObject[options.property][0].stops || [];
                     }
                 }
-                rv.stops = filtered;
                 callback(rv);
             }
         });
@@ -47,9 +61,24 @@ var stops = function(callback) {
 
 exports.stops = function(req, res) {
     "use strict";
-    stops(function (results) {
-        res.send(results);
-    });
+
+    var options = {};
+    if (req.query.routeId) {
+        var routeIdOption = {id: req.query.routeId};
+        options = {
+            path: "/opentripplanner-api-webapp/ws/transit/routeData?agency=ucsf&references=true&extended=true&" +
+                querystring.stringify(routeIdOption),
+            property: "routeData",
+            useParentStation: false
+        };
+    }
+
+    stops(
+        function (results) {
+            res.send(results);
+        },
+        options
+    );
 };
 
 exports.routes = function(req, res) {
@@ -366,50 +395,5 @@ exports.plan = function(req, res) {
             }
             res.send(metadata);
         }
-    });
-};
-
-exports.stopsForRoute = function (req, res) {
-    "use strict";
-
-    var otpOptions = {
-        host: "apis.ucsf.edu",
-        path: "/opentripplanner-api-webapp/ws/transit/routeData?agency=ucsf&references=true&extended=true&",
-        port: 8080,
-        headers: {'Content-Type':'application/json'}
-    };
-
-    // param to document for API: id
-    if (req.query.id) {
-        var reqOptions = {id: req.query.id};
-        otpOptions.path += querystring.stringify(reqOptions);
-    } else {
-        res.send( {error: 'shuttle/stopsForRoute: missing required parameter: id'});
-        return;
-    }
-    var data = '';
-
-    http.get(otpOptions, function(resp) {
-        if (resp.statusCode !== 200) {
-            var errorMsg = "shuttle/stopsForRoute error: code " + resp.statusCode;
-            console.log(errorMsg);
-            callback({error: errorMsg});
-        }
-        resp.on('data', function(chunk){
-            data += chunk;
-        });
-        resp.on('end', function() {
-            if (resp.statusCode === 200) {
-                var rv = JSON.parse(data);
-                if ((rv.routeData) && (rv.routeData[0]) && (rv.routeData[0].stops)) {
-                    res.send(rv.routeData[0].stops);
-                } else {
-                    res.send({stops:[]});
-                }
-            }
-        });
-    }).on("error", function(e){
-        console.log("shuttle/stopsForRoute error: " + e.message);
-        callback({error: e.message});
     });
 };
