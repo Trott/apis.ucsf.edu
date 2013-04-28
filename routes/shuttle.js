@@ -36,7 +36,7 @@ var stops = function(callback, options) {
             if (resp.statusCode === 200) {
                 var filtered = [],
                     dataObject = JSON.parse(data),
-                    rv = {};
+                    rv = {stops: []};
                 if (dataObject.hasOwnProperty(options.property) && dataObject[options.property] instanceof Array) {
                     if (options.useParentStation) {
                         for (var i=0; i<dataObject[options.property].length; i++) {
@@ -46,8 +46,10 @@ var stops = function(callback, options) {
                         }
                         rv.stops = filtered;
                     } else {
-                        rv.routeId = dataObject[options.property][0].id || {};
-                        rv.stops = dataObject[options.property][0].stops || [];
+                        if (dataObject[options.property][0]) {
+                            rv.routeId = dataObject[options.property][0].id || {};
+                            rv.stops = dataObject[options.property][0].stops || [];
+                        }
                     }
                 }
                 callback(rv);
