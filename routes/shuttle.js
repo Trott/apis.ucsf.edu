@@ -47,7 +47,7 @@ var stops = function(callback, options) {
                         rv.stops = filtered;
                     } else {
                         if (dataObject[options.property][0]) {
-                            rv.routeId = dataObject[options.property][0].id || {};
+                            rv.route = dataObject[options.property][0].route || {};
                             rv.stops = dataObject[options.property][0].stops || [];
                         }
                     }
