@@ -122,6 +122,10 @@ UCSF.Shuttle = (function() {
                 return;
             }
             wrapper('plan', options, success, failure);
+        },
+
+        times: function (options, success, failure) {
+            wrapper('times', options, success, failure);
         }
     };
 }());
