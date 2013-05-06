@@ -195,6 +195,47 @@ exports.routes = function(req, res) {
     }
 };
 
+exports.times = function(req, res) {
+    "use strict";
+
+    var otpOptions = {
+        host: "apis.ucsf.edu",
+        path: "/opentripplanner-api-webapp/ws/transit/stopTimesForStop?agency=ucsf&extended=true&",
+        port: 8080,
+        headers: {'Content-Type':'application/json'}
+    };
+
+    var data = "";
+
+    var pathOptions = {};
+    // routeId is optional. Other parameters are required.
+    pathOptions.id = req.query.stopId;
+    pathOptions.routeId = req.query.routeId;
+    pathOptions.startTime = req.query.startTime;
+    pathOptions.endTime = req.query.endTime;
+    otpOptions.path += querystring.stringify(pathOptions);
+
+    http.get(otpOptions, function(resp) {
+        if (resp.statusCode !== 200) {
+            var errorMsg = "shuttle/times error: code " + resp.statusCode;
+            console.log(errorMsg);
+            res.send({error: errorMsg});
+        }
+        resp.on('data', function(chunk){
+            data += chunk;
+        });
+        resp.on('end', function() {
+            if (resp.statusCode === 200) {
+                var rv = JSON.parse(data);
+                res.send(rv);
+            }
+        });
+    }).on("error", function(e){
+        console.log("shuttle/times error: " + e.message);
+        res.send({error: e.message});
+    });
+};
+
 exports.plan = function(req, res) {
     "use strict";
 
