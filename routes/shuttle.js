@@ -226,7 +226,13 @@ exports.times = function(req, res) {
         });
         resp.on('end', function() {
             if (resp.statusCode === 200) {
-                var rv = JSON.parse(data);
+                var result = JSON.parse(data);
+                var rv = {};
+                if (result.stopTimes) {
+                    rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==="departure"; });
+                } else {
+                    rv = result;
+                }
                 res.send(rv);
             }
         });
