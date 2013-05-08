@@ -12,12 +12,16 @@ exports.search = function(req, res) {
 
     var detail;
 
+    //TODO: document id option at developer.ucsf.edu
     if ('id' in req.query) {
         directoryOptions.path = "/mobile_people_detail.jsp?" + querystring.stringify({'FNO': req.query.id});
         detail = true;
-    } else {
+    } else if (req.query.first_name || req.query.last_name || req.query.department) {
         directoryOptions.path = "/mobile_people_result_set.jsp?" + querystring.stringify(req.query);
         detail = false;
+    } else {
+        res.send({data:[]});
+        return;
     }
 
     http.get(directoryOptions, function(resp){
