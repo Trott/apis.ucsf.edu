@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
                 }
                 return next(err);
             }
-            if (req.headers.origin && doc.host === req.headers.origin) {
+            if (doc.host === "*" || (req.headers.origin && doc.host === req.headers.origin)) {
                 res.header('Access-Control-Allow-Origin', req.headers.origin);
 
                 if(req.headers['access-control-request-method']) {
