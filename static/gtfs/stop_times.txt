@@ -1189,204 +1189,204 @@ pinkA,8:45:00,8:45:00,Kezar,29,
 pinkA,8:51:00,8:51:00,E/R,30,
 pinkA,9:00:00,9:00:00,Kezar,31,
 pinkA,9:06:00,9:06:00,E/R,32,
-greenA,6:25:00,6:25:00,MBE,1,To China Basin
+greenA,6:25:00,6:25:00,MBE,1,to China Basin
 greenA,6:32:00,6:32:00,China Basin,2,
-greenA,6:40:00,6:40:00,MBW,3,To 654 Minnesota St.
+greenA,6:40:00,6:40:00,MBW,3,to 654 Minnesota St.
 greenA,6:46:00,6:46:00,654 Minnesota,4,
-greenA,6:55:00,6:55:00,MBE,5,To China Basin
+greenA,6:55:00,6:55:00,MBE,5,to China Basin
 greenA,7:02:00,7:02:00,China Basin,6,
-greenA,7:10:00,7:10:00,MBW,7,To 654 Minnesota St.
+greenA,7:10:00,7:10:00,MBW,7,to 654 Minnesota St.
 greenA,7:16:00,7:16:00,654 Minnesota,8,
-greenA,7:25:00,7:25:00,MBE,9,To China Basin
+greenA,7:25:00,7:25:00,MBE,9,to China Basin
 greenA,7:32:00,7:32:00,China Basin,10,
-greenA,7:40:00,7:40:00,MBW,11,To 654 Minnesota St.
+greenA,7:40:00,7:40:00,MBW,11,to 654 Minnesota St.
 greenA,7:46:00,7:46:00,654 Minnesota,12,
-greenA,7:55:00,7:55:00,MBE,13,To China Basin
+greenA,7:55:00,7:55:00,MBE,13,to China Basin
 greenA,8:02:00,8:02:00,China Basin,14,
-greenA,8:10:00,8:10:00,MBW,15,To 654 Minnesota St.
+greenA,8:10:00,8:10:00,MBW,15,to 654 Minnesota St.
 greenA,8:16:00,8:16:00,654 Minnesota,16,
-greenA,8:25:00,8:25:00,MBE,17,To China Basin
+greenA,8:25:00,8:25:00,MBE,17,to China Basin
 greenA,8:32:00,8:32:00,China Basin,18,
-greenA,8:40:00,8:40:00,MBW,19,To 654 Minnesota St.
+greenA,8:40:00,8:40:00,MBW,19,to 654 Minnesota St.
 greenA,8:46:00,8:46:00,654 Minnesota,20,
-greenA,8:55:00,8:55:00,MBE,21,To China Basin
+greenA,8:55:00,8:55:00,MBE,21,to China Basin
 greenA,9:02:00,9:02:00,China Basin,22,
-greenA,9:10:00,9:10:00,MBW,23,To 654 Minnesota St.
+greenA,9:10:00,9:10:00,MBW,23,to 654 Minnesota St.
 greenA,9:16:00,9:16:00,654 Minnesota,24,
-greenA,9:25:00,9:25:00,MBE,25,To China Basin
+greenA,9:25:00,9:25:00,MBE,25,to China Basin
 greenA,9:32:00,9:32:00,China Basin,26,
-greenA,9:40:00,9:40:00,MBW,27,To 654 Minnesota St.
+greenA,9:40:00,9:40:00,MBW,27,to 654 Minnesota St.
 greenA,9:46:00,9:46:00,654 Minnesota,28,
-greenA,9:55:00,9:55:00,MBE,29,To China Basin
+greenA,9:55:00,9:55:00,MBE,29,to China Basin
 greenA,10:02:00,10:02:00,China Basin,30,
-greenA,10:10:00,10:10:00,MBW,31,To 654 Minnesota St.
+greenA,10:10:00,10:10:00,MBW,31,to 654 Minnesota St.
 greenA,10:16:00,10:16:00,654 Minnesota,32,
-greenA,10:25:00,10:25:00,MBE,33,To China Basin
+greenA,10:25:00,10:25:00,MBE,33,to China Basin
 greenA,10:32:00,10:32:00,China Basin,34,
-greenA,10:40:00,10:40:00,MBW,35,To 654 Minnesota St.
+greenA,10:40:00,10:40:00,MBW,35,to 654 Minnesota St.
 greenA,10:46:00,10:46:00,654 Minnesota,36,
-greenA,10:55:00,10:55:00,MBE,37,To China Basin
+greenA,10:55:00,10:55:00,MBE,37,to China Basin
 greenA,11:02:00,11:02:00,China Basin,38,
-greenA,11:10:00,11:10:00,MBW,39,To 654 Minnesota St.
+greenA,11:10:00,11:10:00,MBW,39,to 654 Minnesota St.
 greenA,11:16:00,11:16:00,654 Minnesota,40,
-greenA,11:25:00,11:25:00,MBE,41,To China Basin
+greenA,11:25:00,11:25:00,MBE,41,to China Basin
 greenA,11:32:00,11:32:00,China Basin,42,
-greenA,11:40:00,11:40:00,MBW,43,To 654 Minnesota St.
+greenA,11:40:00,11:40:00,MBW,43,to 654 Minnesota St.
 greenA,11:46:00,11:46:00,654 Minnesota,44,
-greenA,11:55:00,11:55:00,MBE,45,To China Basin
+greenA,11:55:00,11:55:00,MBE,45,to China Basin
 greenA,12:02:00,12:02:00,China Basin,46,
-greenA,12:10:00,12:10:00,MBW,47,To 654 Minnesota St.
+greenA,12:10:00,12:10:00,MBW,47,to 654 Minnesota St.
 greenA,12:16:00,12:16:00,654 Minnesota,48,
-greenA,12:25:00,12:25:00,MBE,49,To China Basin
+greenA,12:25:00,12:25:00,MBE,49,to China Basin
 greenA,12:32:00,12:32:00,China Basin,50,
-greenA,12:40:00,12:40:00,MBW,51,To 654 Minnesota St.
+greenA,12:40:00,12:40:00,MBW,51,to 654 Minnesota St.
 greenA,12:46:00,12:46:00,654 Minnesota,52,
-greenA,12:55:00,12:55:00,MBE,53,To China Basin
+greenA,12:55:00,12:55:00,MBE,53,to China Basin
 greenA,13:02:00,13:02:00,China Basin,54,
-greenA,13:10:00,13:10:00,MBW,55,To 654 Minnesota St.
+greenA,13:10:00,13:10:00,MBW,55,to 654 Minnesota St.
 greenA,13:16:00,13:16:00,654 Minnesota,56,
-greenA,13:25:00,13:25:00,MBE,57,To China Basin
+greenA,13:25:00,13:25:00,MBE,57,to China Basin
 greenA,13:32:00,13:32:00,China Basin,58,
-greenA,13:40:00,13:40:00,MBW,59,To 654 Minnesota St.
+greenA,13:40:00,13:40:00,MBW,59,to 654 Minnesota St.
 greenA,13:46:00,13:46:00,654 Minnesota,60,
-greenA,13:55:00,13:55:00,MBE,61,To China Basin
+greenA,13:55:00,13:55:00,MBE,61,to China Basin
 greenA,14:02:00,14:02:00,China Basin,62,
-greenA,14:10:00,14:10:00,MBW,63,To 654 Minnesota St.
+greenA,14:10:00,14:10:00,MBW,63,to 654 Minnesota St.
 greenA,14:16:00,14:16:00,654 Minnesota,64,
-greenA,14:25:00,14:25:00,MBE,65,To China Basin
+greenA,14:25:00,14:25:00,MBE,65,to China Basin
 greenA,14:32:00,14:32:00,China Basin,66,
-greenA,14:40:00,14:40:00,MBW,67,To 654 Minnesota St.
+greenA,14:40:00,14:40:00,MBW,67,to 654 Minnesota St.
 greenA,14:46:00,14:46:00,654 Minnesota,68,
-greenA,14:55:00,14:55:00,MBE,69,To China Basin
+greenA,14:55:00,14:55:00,MBE,69,to China Basin
 greenA,15:02:00,15:02:00,China Basin,70,
-greenA,15:10:00,15:10:00,MBW,71,To 654 Minnesota St.
+greenA,15:10:00,15:10:00,MBW,71,to 654 Minnesota St.
 greenA,15:16:00,15:16:00,654 Minnesota,72,
-greenA,15:25:00,15:25:00,MBE,73,To China Basin
+greenA,15:25:00,15:25:00,MBE,73,to China Basin
 greenA,15:32:00,15:32:00,China Basin,74,
-greenA,15:40:00,15:40:00,MBW,75,To 654 Minnesota St.
+greenA,15:40:00,15:40:00,MBW,75,to 654 Minnesota St.
 greenA,15:46:00,15:46:00,654 Minnesota,76,
-greenA,15:55:00,15:55:00,MBE,77,To China Basin
+greenA,15:55:00,15:55:00,MBE,77,to China Basin
 greenA,16:02:00,16:02:00,China Basin,78,
-greenA,16:10:00,16:10:00,MBW,79,To 654 Minnesota St.
+greenA,16:10:00,16:10:00,MBW,79,to 654 Minnesota St.
 greenA,16:16:00,16:16:00,654 Minnesota,80,
-greenA,16:25:00,16:25:00,MBE,81,To China Basin
+greenA,16:25:00,16:25:00,MBE,81,to China Basin
 greenA,16:32:00,16:32:00,China Basin,82,
-greenA,16:40:00,16:40:00,MBW,83,To 654 Minnesota St.
+greenA,16:40:00,16:40:00,MBW,83,to 654 Minnesota St.
 greenA,16:46:00,16:46:00,654 Minnesota,84,
-greenA,16:55:00,16:55:00,MBE,85,To China Basin
+greenA,16:55:00,16:55:00,MBE,85,to China Basin
 greenA,17:02:00,17:02:00,China Basin,86,
-greenA,17:10:00,17:10:00,MBW,87,To 654 Minnesota St.
+greenA,17:10:00,17:10:00,MBW,87,to 654 Minnesota St.
 greenA,17:16:00,17:16:00,654 Minnesota,88,
-greenA,17:25:00,17:25:00,MBE,89,To China Basin
+greenA,17:25:00,17:25:00,MBE,89,to China Basin
 greenA,17:32:00,17:32:00,China Basin,90,
-greenA,17:40:00,17:40:00,MBW,91,To 654 Minnesota St.
+greenA,17:40:00,17:40:00,MBW,91,to 654 Minnesota St.
 greenA,17:46:00,17:46:00,654 Minnesota,92,
-greenA,17:55:00,17:55:00,MBE,93,To China Basin
+greenA,17:55:00,17:55:00,MBE,93,to China Basin
 greenA,18:02:00,18:02:00,China Basin,94,
-greenA,18:10:00,18:10:00,MBW,95,To 654 Minnesota St.
+greenA,18:10:00,18:10:00,MBW,95,to 654 Minnesota St.
 greenA,18:16:00,18:16:00,654 Minnesota,96,
-greenA,18:25:00,18:25:00,MBE,97,To China Basin
+greenA,18:25:00,18:25:00,MBE,97,to China Basin
 greenA,18:32:00,18:32:00,China Basin,98,
 greenA,18:40:00,18:40:00,MBW,99,
-greenB,6:40:00,6:40:00,MBE,1,To China Basin
+greenB,6:40:00,6:40:00,MBE,1,to China Basin
 greenB,6:47:00,6:47:00,China Basin,2,
-greenB,6:55:00,6:55:00,MBW,3,To 654 Minnesota St.
+greenB,6:55:00,6:55:00,MBW,3,to 654 Minnesota St.
 greenB,7:01:00,7:01:00,654 Minnesota,4,
-greenB,7:10:00,7:10:00,MBE,5,To China Basin
+greenB,7:10:00,7:10:00,MBE,5,to China Basin
 greenB,7:17:00,7:17:00,China Basin,6,
-greenB,7:25:00,7:25:00,MBW,7,To 654 Minnesota St.
+greenB,7:25:00,7:25:00,MBW,7,to 654 Minnesota St.
 greenB,7:31:00,7:31:00,654 Minnesota,8,
-greenB,7:40:00,7:40:00,MBE,9,To China Basin
+greenB,7:40:00,7:40:00,MBE,9,to China Basin
 greenB,7:47:00,7:47:00,China Basin,10,
-greenB,7:55:00,7:55:00,MBW,11,To 654 Minnesota St.
+greenB,7:55:00,7:55:00,MBW,11,to 654 Minnesota St.
 greenB,8:01:00,8:01:00,654 Minnesota,12,
-greenB,8:10:00,8:10:00,MBE,13,To China Basin
+greenB,8:10:00,8:10:00,MBE,13,to China Basin
 greenB,8:17:00,8:17:00,China Basin,14,
-greenB,8:25:00,8:25:00,MBW,15,To 654 Minnesota St.
+greenB,8:25:00,8:25:00,MBW,15,to 654 Minnesota St.
 greenB,8:31:00,8:31:00,654 Minnesota,16,
-greenB,8:40:00,8:40:00,MBE,17,To China Basin
+greenB,8:40:00,8:40:00,MBE,17,to China Basin
 greenB,8:47:00,8:47:00,China Basin,18,
-greenB,8:55:00,8:55:00,MBW,19,To 654 Minnesota St.
+greenB,8:55:00,8:55:00,MBW,19,to 654 Minnesota St.
 greenB,9:01:00,9:01:00,654 Minnesota,20,
-greenB,9:10:00,9:10:00,MBE,21,To China Basin
+greenB,9:10:00,9:10:00,MBE,21,to China Basin
 greenB,9:17:00,9:17:00,China Basin,22,
-greenB,9:25:00,9:25:00,MBW,23,To 654 Minnesota St.
+greenB,9:25:00,9:25:00,MBW,23,to 654 Minnesota St.
 greenB,9:31:00,9:31:00,654 Minnesota,24,
-greenB,9:40:00,9:40:00,MBE,25,To China Basin
+greenB,9:40:00,9:40:00,MBE,25,to China Basin
 greenB,9:47:00,9:47:00,China Basin,26,
-greenB,9:55:00,9:55:00,MBW,27,To 654 Minnesota St.
+greenB,9:55:00,9:55:00,MBW,27,to 654 Minnesota St.
 greenB,10:01:00,10:01:00,654 Minnesota,28,
-greenB,10:10:00,10:10:00,MBE,29,To China Basin
+greenB,10:10:00,10:10:00,MBE,29,to China Basin
 greenB,10:17:00,10:17:00,China Basin,30,
-greenB,10:25:00,10:25:00,MBW,31,To 654 Minnesota St.
+greenB,10:25:00,10:25:00,MBW,31,to 654 Minnesota St.
 greenB,10:31:00,10:31:00,654 Minnesota,32,
-greenB,10:40:00,10:40:00,MBE,33,To China Basin
+greenB,10:40:00,10:40:00,MBE,33,to China Basin
 greenB,10:47:00,10:47:00,China Basin,34,
-greenB,10:55:00,10:55:00,MBW,35,To 654 Minnesota St.
+greenB,10:55:00,10:55:00,MBW,35,to 654 Minnesota St.
 greenB,11:01:00,11:01:00,654 Minnesota,36,
-greenB,11:10:00,11:10:00,MBE,37,To China Basin
+greenB,11:10:00,11:10:00,MBE,37,to China Basin
 greenB,11:17:00,11:17:00,China Basin,38,
-greenB,11:25:00,11:25:00,MBW,39,To 654 Minnesota St.
+greenB,11:25:00,11:25:00,MBW,39,to 654 Minnesota St.
 greenB,11:31:00,11:31:00,654 Minnesota,40,
-greenB,11:40:00,11:40:00,MBE,41,To China Basin
+greenB,11:40:00,11:40:00,MBE,41,to China Basin
 greenB,11:47:00,11:47:00,China Basin,42,
-greenB,11:55:00,11:55:00,MBW,43,To 654 Minnesota St.
+greenB,11:55:00,11:55:00,MBW,43,to 654 Minnesota St.
 greenB,12:01:00,12:01:00,654 Minnesota,44,
-greenB,12:10:00,12:10:00,MBE,45,To China Basin
+greenB,12:10:00,12:10:00,MBE,45,to China Basin
 greenB,12:17:00,12:17:00,China Basin,46,
-greenB,12:25:00,12:25:00,MBW,47,To 654 Minnesota St.
+greenB,12:25:00,12:25:00,MBW,47,to 654 Minnesota St.
 greenB,12:31:00,12:31:00,654 Minnesota,48,
-greenB,12:40:00,12:40:00,MBE,49,To China Basin
+greenB,12:40:00,12:40:00,MBE,49,to China Basin
 greenB,12:47:00,12:47:00,China Basin,50,
-greenB,12:55:00,12:55:00,MBW,51,To 654 Minnesota St.
+greenB,12:55:00,12:55:00,MBW,51,to 654 Minnesota St.
 greenB,13:01:00,13:01:00,654 Minnesota,52,
-greenB,13:10:00,13:10:00,MBE,53,To China Basin
+greenB,13:10:00,13:10:00,MBE,53,to China Basin
 greenB,13:17:00,13:17:00,China Basin,54,
-greenB,13:25:00,13:25:00,MBW,55,To 654 Minnesota St.
+greenB,13:25:00,13:25:00,MBW,55,to 654 Minnesota St.
 greenB,13:31:00,13:31:00,654 Minnesota,56,
-greenB,13:40:00,13:40:00,MBE,57,To China Basin
+greenB,13:40:00,13:40:00,MBE,57,to China Basin
 greenB,13:47:00,13:47:00,China Basin,58,
-greenB,13:55:00,13:55:00,MBW,59,To 654 Minnesota St.
+greenB,13:55:00,13:55:00,MBW,59,to 654 Minnesota St.
 greenB,14:01:00,14:01:00,654 Minnesota,60,
-greenB,14:10:00,14:10:00,MBE,61,To China Basin
+greenB,14:10:00,14:10:00,MBE,61,to China Basin
 greenB,14:17:00,14:17:00,China Basin,62,
-greenB,14:25:00,14:25:00,MBW,63,To 654 Minnesota St.
+greenB,14:25:00,14:25:00,MBW,63,to 654 Minnesota St.
 greenB,14:31:00,14:31:00,654 Minnesota,64,
-greenB,14:40:00,14:40:00,MBE,65,To China Basin
+greenB,14:40:00,14:40:00,MBE,65,to China Basin
 greenB,14:47:00,14:47:00,China Basin,66,
-greenB,14:55:00,14:55:00,MBW,67,To 654 Minnesota St.
+greenB,14:55:00,14:55:00,MBW,67,to 654 Minnesota St.
 greenB,15:01:00,15:01:00,654 Minnesota,68,
-greenB,15:10:00,15:10:00,MBE,69,To China Basin
+greenB,15:10:00,15:10:00,MBE,69,to China Basin
 greenB,15:17:00,15:17:00,China Basin,70,
-greenB,15:25:00,15:25:00,MBW,71,To 654 Minnesota St.
+greenB,15:25:00,15:25:00,MBW,71,to 654 Minnesota St.
 greenB,15:31:00,15:31:00,654 Minnesota,72,
-greenB,15:40:00,15:40:00,MBE,73,To China Basin
+greenB,15:40:00,15:40:00,MBE,73,to China Basin
 greenB,15:47:00,15:47:00,China Basin,74,
-greenB,15:55:00,15:55:00,MBW,75,To 654 Minnesota St.
+greenB,15:55:00,15:55:00,MBW,75,to 654 Minnesota St.
 greenB,16:01:00,16:01:00,654 Minnesota,76,
-greenB,16:10:00,16:10:00,MBE,77,To China Basin
+greenB,16:10:00,16:10:00,MBE,77,to China Basin
 greenB,16:17:00,16:17:00,China Basin,78,
-greenB,16:25:00,16:25:00,MBW,79,To 654 Minnesota St.
+greenB,16:25:00,16:25:00,MBW,79,to 654 Minnesota St.
 greenB,16:31:00,16:31:00,654 Minnesota,80,
-greenB,16:40:00,16:40:00,MBE,81,To China Basin
+greenB,16:40:00,16:40:00,MBE,81,to China Basin
 greenB,16:47:00,16:47:00,China Basin,82,
-greenB,16:55:00,16:55:00,MBW,83,To 654 Minnesota St.
+greenB,16:55:00,16:55:00,MBW,83,to 654 Minnesota St.
 greenB,17:01:00,17:01:00,654 Minnesota,84,
-greenB,17:10:00,17:10:00,MBE,85,To China Basin
+greenB,17:10:00,17:10:00,MBE,85,to China Basin
 greenB,17:17:00,17:17:00,China Basin,86,
-greenB,17:25:00,17:25:00,MBW,87,To 654 Minnesota St.
+greenB,17:25:00,17:25:00,MBW,87,to 654 Minnesota St.
 greenB,17:31:00,17:31:00,654 Minnesota,88,
-greenB,17:40:00,17:40:00,MBE,89,To China Basin
+greenB,17:40:00,17:40:00,MBE,89,to China Basin
 greenB,17:47:00,17:47:00,China Basin,90,
-greenB,17:55:00,17:55:00,MBW,91,To 654 Minnesota St.
+greenB,17:55:00,17:55:00,MBW,91,to 654 Minnesota St.
 greenB,18:01:00,18:01:00,654 Minnesota,92,
-greenB,18:10:00,18:10:00,MBE,93,To China Basin
+greenB,18:10:00,18:10:00,MBE,93,to China Basin
 greenB,18:17:00,18:17:00,China Basin,94,
-greenB,18:25:00,18:25:00,MBW,95,To 654 Minnesota St.
+greenB,18:25:00,18:25:00,MBW,95,to 654 Minnesota St.
 greenB,18:31:00,18:31:00,654 Minnesota,96,
-greenB,18:40:00,18:40:00,MBE,97,To China Basin
+greenB,18:40:00,18:40:00,MBE,97,to China Basin
 greenB,18:47:00,18:47:00,China Basin,98,
-greenB,18:55:00,18:55:00,MBW,99,To 654 Minnesota St.
+greenB,18:55:00,18:55:00,MBW,99,to 654 Minnesota St.
 greenB,19:01:00,19:01:00,654 Minnesota,100,
 bronzeA,6:45:00,6:45:00,LPPI,1,
 bronzeA,6:50:00,6:50:00,Aldea Housing,2,
