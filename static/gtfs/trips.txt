@@ -119,7 +119,6 @@ red,WD,redB_49,to 16th St. BART
 red,WD,redB_50,to Mission Bay
 red,WD,redB_51,to 16th St. BART
 red,WD,redB_52,to Mission Bay
-red,WD,redB,
 tan,WD,tanA,
 tan,WD,tanB,
 black,WD,blackA,
