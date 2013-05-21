@@ -22,7 +22,7 @@ black,WD,blackB,
 purple,WD,purpleA,
 pink,WD,pinkA,
 green,WD,greenA,to Mission Bay
-green,WD,greenB,
+green,WD,greenB,to Mission Bay
 bronze,WD,bronzeA
 bronze,WD,bronzeB
 bronze,WD,bronzeC
