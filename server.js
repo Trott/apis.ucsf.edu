@@ -19,10 +19,15 @@ app.use(express.compress());
 
 app.use('/static', express.static(__dirname + '/static'));
 
-// If we're serving dynamic content, instruct browser to not cache.
-// Not really needed except to work around Android 2.3 bug.
+// Instruct Android 2.x browser to not cache CORS results because it will return 0/empty from cache.
+// We want to limit this damage to Android 2.x because caching requests for a short period of time
+//    is a good idea. But, uh, only if the caching implementation works. Definitely broken in Android 2.3
+var android2RegExp = / Android 2\./;
 app.use(function (req, res, next) {
-    res.header('Cache-Control', 'no-cache');
+    if (android2RegExp.test(req.headers['user-agent'])) {
+        res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
+        res.header('Expires', '0');
+    }
     next();
 });
 
