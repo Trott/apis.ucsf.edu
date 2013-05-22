@@ -19,6 +19,13 @@ app.use(express.compress());
 
 app.use('/static', express.static(__dirname + '/static'));
 
+// If we're serving dynamic content, instruct browser to not cache.
+// Not really needed except to work around Android 2.3 bug.
+app.use(function (req, res, next) {
+    res.header('Cache-Control', 'no-cache');
+    next();
+});
+
 app.use(function (req, res, next) {
     "use strict";
 
