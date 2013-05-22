@@ -13,18 +13,16 @@ module.exports = function(grunt) {
         noarg: true,
         sub: true,
         undef: true,
-        predef: ['XDomainRequest','flensed'],
+        predef: ['XDomainRequest','flensed','UCSF'],
         boss: true,
         eqnull: true,
         browser: true
       },
-      static: ['static/UCSF.Person.src.js']
+      js_fragments: ['js_fragments/*.src']
     },
     uglify: {
       static: {
         files: {
-          'static/UCSF.Person.js': ['static/UCSF.Person.src.js'],
-          'static/UCSF.Shuttle.js': ['static/UCSF.Shuttle.src.js'],
           'static/ie7_polyfill.js': ['static/json2/json2.js','static/flensed/flXHR.js'],
           'js_fragments/base': ['js_fragments/base.src'],
           'js_fragments/person': ['js_fragments/person.src'],
@@ -48,5 +46,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compress');
 
-  grunt.registerTask('default', ['jshint:static', 'uglify:static', 'compress:gtfs']);
+  grunt.registerTask('default', ['jshint:js_fragments', 'uglify:static', 'compress:gtfs']);
 };
