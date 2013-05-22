@@ -1,6 +1,7 @@
 var express = require('express'),
     fs = require('fs'),
     cradle = require('cradle'),
+    jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
     nodeUserGid = "node",
@@ -68,6 +69,8 @@ app.use(function(err, req, res, next){
   console.dir(err);
   res.send(500, 'Server error');
 });
+
+app.get('/jsapi', jsapi.load);
 
 app.get('/person/search', person.search);
 
