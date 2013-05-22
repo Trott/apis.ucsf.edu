@@ -9,13 +9,14 @@ var express = require('express'),
 var app = express();
 var db = new(cradle.Connection)().database('api_users');
 
+app.use(express.logger());
 app.use(express.compress());
 
-//TODO: Logging of requests.
 //TODO: log rotation
 //TODO: Better log file than, uh, server.js.log?
 //TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 //TODO: Dependency: OpenTripPlanner
+
 app.use(function (req, res, next) {
     "use strict";
 
