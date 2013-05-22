@@ -17,6 +17,8 @@ app.use(express.compress());
 //TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 //TODO: Dependency: OpenTripPlanner
 
+app.use('/static', express.static(__dirname + '/static'));
+
 app.use(function (req, res, next) {
     "use strict";
 
@@ -53,18 +55,6 @@ app.use(function (req, res, next) {
 app.use(function(err, req, res, next){
   console.dir(err);
   res.send(500, 'Server error');
-});
-
-app.get(/^\/static\/([\w\/\.]+)$/, function(req,res) {
-    "use strict";
-    fs.exists(__dirname + '/static/' + req.params[0], function(exists) {
-        if (exists) {
-            res.sendfile( __dirname + '/static/' + req.params[0]);
-            return;
-        } else {
-            res.send(404);
-        }
-    });
 });
 
 app.get('/person/search', person.search);
