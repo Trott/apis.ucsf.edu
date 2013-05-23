@@ -1,16 +1,5 @@
 UCSF.Person = {
     search: function (options, success, failure ) {
-        failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
-        var reqString = UCSF.createRequestString('http://apis.ucsf.edu/person/search', options);
-        var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
-        if (! xhr) {
-            UCSF._ie7q.push({callee:UCSF.Person.search, options:options, success:success, failure:failure});
-        } else {
-            xhr.onload = function () {
-                success(JSON.parse(xhr.responseText));
-            };
-            xhr.onerror = failure;
-            xhr.send();
-        }
+        UCSF.run('person/search', options, success, failure);
     }
 };

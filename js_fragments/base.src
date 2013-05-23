@@ -53,6 +53,21 @@ var UCSF = UCSF || (function () {
         createRequestString: function(url, options) {
             var separator = url.indexOf('?')===-1 ? '?' : '&';
             return url + separator + this.serialize(options);
+        },
+
+        run: function (what, options, success, failure) {
+            failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
+            var reqString = UCSF.createRequestString('http://apis.ucsf.edu/' + what, options);
+            var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
+            if (! xhr) {
+                UCSF._ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
+            } else {
+                xhr.onload = function () {
+                    success(JSON.parse(xhr.responseText));
+                };
+                xhr.onerror = failure;
+                xhr.send();
+            }
         }
     };
 
