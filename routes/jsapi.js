@@ -9,7 +9,6 @@ exports.load = function(req, res) {
 
     var files = ['base'];
     var lib;
-    console.log(req.query);
     for (lib in req.query) {
         if (validFileNameRegExp.test(lib)) {
             files.push(lib);
