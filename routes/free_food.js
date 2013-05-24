@@ -43,8 +43,11 @@ exports.events = function(req, res) {
                         thisEvent = reservationArray[i];
 
                         slimmedEvent.name = thisEvent.event && thisEvent.event.event_name && thisEvent.event.event_name._text || "";
-                        slimmedEvent.location = thisEvent.event && thisEvent.event.custom_attribute && thisEvent.event.custom_attribute.attribute_value && thisEvent.event.custom_attribute.attribute_value._text || "";
-                        slimmedEvent.description = thisEvent.event && thisEvent.event.event_text && thisEvent.event.event_text.text && thisEvent.event.event_text.text._text || "";
+                        slimmedEvent.location = thisEvent.event && thisEvent.event.custom_attribute && thisEvent.event.custom_attribute.attribute_value && thisEvent.event.custom_attribute.attribute_value._text ||
+                                                thisEvent.space_reservation && thisEvent.space_reservation.space && thisEvent.space_reservation.space.formal_name && thisEvent.space_reservation.space.formal_name._text || "";
+                        slimmedEvent.description =  thisEvent.event && thisEvent.event.event_text && thisEvent.event.event_text.text && thisEvent.event.event_text.text._text ||
+                                                    thisEvent.event && thisEvent.event.event_text && thisEvent.event.event_text[0] && thisEvent.event.event_text[0].text && thisEvent.event.event_text[0].text._text || "";
+
                         slimmedEvent.datetime = thisEvent.event_start_dt && thisEvent.event_start_dt._text || "";
                         result.events[i] = slimmedEvent;
                     }
