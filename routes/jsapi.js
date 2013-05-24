@@ -3,7 +3,7 @@ var http = require('http'),
     async = require('async'),
     fs = require('fs');
 
-var validFileNameRegExp = /^[a-z]+$/;
+var validFileNameRegExp = /^[a-z_]+$/;
 exports.load = function(req, res) {
     "use strict";
 
