@@ -26,8 +26,14 @@ exports.events = function(req, res) {
                 // HORRIBLE HACK #1: R25 web service appears to return incorreclty escaped JSON.
                 // Let's convert all instances of \\" to \"
                 var fixedData = data.replace(/\\\\"/g, '\\"');
+                var r25Result;
 
-                var r25Result = JSON.parse(fixedData) || {};
+                try {
+                    r25Result = JSON.parse(fixedData);
+                } catch (e) {
+                    r25Result = {};
+                    console.log('error parsing 25Live JSON: ' + e.message);
+                }
 
                 // HORRIBLE HACK #2: R25 web service sends ~75Kb of JSON, most of which is not used.
                 // Let's pull out just the stuff we need, which is ~3Kb.
