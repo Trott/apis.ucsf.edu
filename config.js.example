@@ -1,0 +1,7 @@
+var config = {
+	r25: {
+		auth: "username:password"
+	}
+};
+
+module.exports = config;

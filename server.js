@@ -4,6 +4,7 @@ var express = require('express'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
+    freeFood = require('./routes/free_food'),
     nodeUserGid = "node",
     nodeUserUid = "node";
 
@@ -79,6 +80,7 @@ app.get('/shuttle/routes', shuttle.routes);
 app.get('/shuttle/stops', shuttle.stops);
 app.get('/shuttle/times', shuttle.times);
 
+app.get('/free_food/events', freeFood.events);
 
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function(req,res) {
