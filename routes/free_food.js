@@ -7,7 +7,7 @@ exports.events = function(req, res) {
     var r25Options = {
         auth: config.r25.auth,
         host: "webservices.collegenet.com",
-        path: "/r25ws/wrd/ucsf/run/reservations.xml?event_query_id=42567%20&start_dt=+0&end_dt=+30&event_state=2&state=1&scope=extended&otransform=json.xsl"
+        path: "/r25ws/wrd/ucsf/run/reservations.xml?event_query_id=42567%20&start_dt=+0&end_dt=+30&event_state=2&state=1&scope=extended&otransform=json.xsl&cache=120"
     };
 
     var data = "";
