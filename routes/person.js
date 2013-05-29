@@ -73,11 +73,12 @@ exports.search = function(req, res) {
             // declare a bunch of variables, loop through, and try to clean up some of it.
 
             var rv = [];
+            var degreeFilterCallback = function(el) { return typeof el === "string";};
             for (var i = 0; i < results.length; i++) {
                 rv[i] = {};
                 rv[i].name = deGoober('displayName', results[i], true);
-                if ((results[i].hasOwnProperty('degrees')) && (results[i].degrees[0].hasOwnProperty('degree'))) {
-                    rv[i].degrees = results[i].degrees[0].degree;
+                if (Array.isArray(results[i].degrees) && results[i].degrees[0] && Array.isArray(results[i].degrees[0].degree)) {
+                    rv[i].degrees = results[i].degrees[0].degree.filter(degreeFilterCallback);
                 }
                 rv[i].department = deGoober('department', results[i], false);
                 rv[i].email = deGoober('mail', results[i], false);
