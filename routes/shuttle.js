@@ -11,7 +11,7 @@ var stops = function(callback, options) {
     options.useParentStation = options.hasOwnProperty("useParentStation") ? options.useParentStation : true;
 
     var otpOptions = {
-        host: "apis.ucsf.edu",
+        host: "localhost",
         path: "/opentripplanner-api-webapp/ws/transit/stopsInRectangle?extended=true",
         port: 8080,
         headers: {'Content-Type':'application/json'}
@@ -86,7 +86,7 @@ exports.stops = function(req, res) {
 exports.routes = function(req, res) {
     "use strict";
 
-    var host = "apis.ucsf.edu",
+    var host = "localhost",
         port = 8080,
         headers = {'Content-Type':'application/json'};
 
@@ -199,7 +199,7 @@ exports.times = function(req, res) {
     "use strict";
 
     var otpOptions = {
-        host: "apis.ucsf.edu",
+        host: "localhost",
         path: "/opentripplanner-api-webapp/ws/transit/stopTimesForStop?agency=ucsf&extended=true&",
         port: 8080,
         headers: {'Content-Type':'application/json'}
@@ -314,7 +314,7 @@ exports.plan = function(req, res) {
     var metadata = {};
     var plan = function (options, callback) {
         var otpOptions = {
-            host: "apis.ucsf.edu",
+            host: "localhost",
             path: "/opentripplanner-api-webapp/ws/plan?minTransferTime=60&",
             port: 8080,
             headers: {'Content-Type':'application/json'}
