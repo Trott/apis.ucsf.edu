@@ -48,8 +48,11 @@ app.use(function (req, res, next) {
             if (doc.host === "*" || (req.headers.origin && doc.host === req.headers.origin)) {
                 res.header('Access-Control-Allow-Origin', req.headers.origin);
 
-                if(req.headers['access-control-request-method']) {
-                    res.header('Access-Control-Allow-Methods', "GET, OPTIONS");
+                if (req.headers['access-control-request-method']) {
+                    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+                }
+                if (req.headers['access-control-request-headers']) {
+                    res.header('Access-Control-Allow-Headers', 'X-Requested-With');
                 }
 
                 res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
