@@ -96,7 +96,7 @@ exports.routes = function(req, res) {
     // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
     // If parent station, let's search for routes in all stops in the parent station.
     var parentStationToChildStationForStupidHackNumberThree = {
-        "Parnassus": ["Parnassus Library", "LPPI", "Parnassus ACC", "E/R"],
+        "Parnassus": ["Parnassus Library", "LPPI", "Parnassus ACC", "ER"],
         "MB": ["MBE", "MBW"],
         "2300 Harrison": ["2300 Harrison N", "2300 Harrison S"],
         "100 Buchanan": ["100 Buchanan N", "100 Buchanan S"]
@@ -258,11 +258,11 @@ exports.plan = function(req, res) {
         "ucsf_Parnassus": function (endpoint) {
             switch (endpoint) {
                 case "ucsf_Aldea Housing":
-                case "ucsf_Surge/Woods":
+                case "ucsf_SurgeWoods":
                     return ["ucsf_Parnassus ACC", "ucsf_LPPI"];
                 case "ucsf_Kezar":
                 case "ucsf_VAMC":
-                    return ["ucsf_E/R"];
+                    return ["ucsf_ER"];
                 case "ucsf_3360 Geary":
                 case "ucsf_Laurel Heights":
                     return ["ucsf_Parnassus Library"];
