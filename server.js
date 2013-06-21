@@ -86,7 +86,7 @@ app.get('/shuttle/routes', shuttle.routes);
 app.get('/shuttle/stops', shuttle.stops);
 app.get('/shuttle/times', shuttle.times);
 
-app.get('/map/tile/:x/:y/:zoom', map.tile);
+app.get('/map/tile/:zoom/:x/:y', map.tile);
 
 app.get('/free_food/events', freeFood.events);
 

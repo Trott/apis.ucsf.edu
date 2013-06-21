@@ -15,7 +15,7 @@ exports.tile = function(req, res) {
 
         var pathRoot = path.normalize(__dirname + '/../static/map_tiles/');
         var sendfileOptions = {root: pathRoot};
-        var tilePath =  x + '/' + y + '/' + zoom + '.png';
+        var tilePath =  zoom + '/' + x + '/' + y + '.png';
 
 
         res.sendfile(tilePath, sendfileOptions, function(err) {
