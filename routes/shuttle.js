@@ -265,6 +265,7 @@ exports.plan = function(req, res) {
                     return ["ucsf_ER"];
                 case "ucsf_3360 Geary":
                 case "ucsf_Laurel Heights":
+                case "ucsf_SFGH":
                     return ["ucsf_Parnassus Library"];
                 case "ucsf_Mt. Zion":
                     return ["ucsf_LPPI", "ucsf_Parnassus Library"];
