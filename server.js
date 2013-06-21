@@ -4,6 +4,7 @@ var express = require('express'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
+    map = require('./routes/map'),
     freeFood = require('./routes/free_food'),
     nodeUserGid = "node",
     nodeUserUid = "node";
@@ -18,6 +19,8 @@ app.use(express.compress());
 //TODO: Better log file than, uh, server.js.log?
 //TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 //TODO: Dependency: OpenTripPlanner
+//TODO: modularize stuff like OpenTripPlanner and the map tile server so they can
+//      be deployed on other servers or something
 
 app.use('/static', express.static(__dirname + '/static'));
 
@@ -82,6 +85,8 @@ app.get('/shuttle/plan', shuttle.plan);
 app.get('/shuttle/routes', shuttle.routes);
 app.get('/shuttle/stops', shuttle.stops);
 app.get('/shuttle/times', shuttle.times);
+
+app.get('/map/tile/:x/:y/:zoom', map.tile);
 
 app.get('/free_food/events', freeFood.events);
 
