@@ -1,7 +1,7 @@
 apis.ucsf.edu
 =============
 
-Node.js server for UCSF People Search API.
+Node.js server for web-friendly APIs
 
 * Author: Rich Trott
 * Copyright: Regents of the University of California
