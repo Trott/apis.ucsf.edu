@@ -1,0 +1,8 @@
+UCSF.Fitness = (function() {
+
+    return {
+        schedule: function (options, success, failure) {
+            UCSF.run('shuttle/times', options, success, failure);
+        }
+    };
+}());
