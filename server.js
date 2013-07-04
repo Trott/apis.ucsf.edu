@@ -6,8 +6,9 @@ var express = require('express'),
     shuttle = require('./routes/shuttle'),
     map = require('./routes/map'),
     freeFood = require('./routes/free_food'),
-    nodeUserGid = "node",
-    nodeUserUid = "node";
+    fitness = require('./routes/fitness'),
+    nodeUserGid = 'node',
+    nodeUserUid = 'node';
 
 var app = express();
 var db = new(cradle.Connection)().database('api_users');
@@ -29,6 +30,7 @@ app.use('/static', express.static(__dirname + '/static'));
 //    is a good idea. But, uh, only if the caching implementation works. Definitely broken in Android 2.3
 var android2RegExp = / Android 2\./;
 app.use(function (req, res, next) {
+    'use strict';
     if (android2RegExp.test(req.headers['user-agent'])) {
         res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
         res.header('Expires', '0');
@@ -37,18 +39,18 @@ app.use(function (req, res, next) {
 });
 
 app.use(function (req, res, next) {
-    "use strict";
+    'use strict';
 
-    if(req.query.apikey) {
+    if (req.query.apikey) {
         db.get(req.query.apikey, function (err, doc) {
             if (err) {
-                if (err.error === "not_found") {
-                    console.log("API key not found: " + req.query.apikey);
+                if (err.error === 'not_found') {
+                    console.log('API key not found: ' + req.query.apikey);
                     return res.send(200);
                 }
                 return next(err);
             }
-            if (doc.host === "*" || (req.headers.origin && doc.host === req.headers.origin)) {
+            if (doc.host === '*' || (req.headers.origin && doc.host === req.headers.origin)) {
                 res.header('Access-Control-Allow-Origin', req.headers.origin);
 
                 if (req.headers['access-control-request-method']) {
@@ -72,9 +74,10 @@ app.use(function (req, res, next) {
     }
 });
 
-app.use(function(err, req, res, next){
-  console.dir(err);
-  res.send(500, 'Server error');
+app.use(function (err, req, res, next) {
+    'use strict';
+    console.dir(err);
+    res.send(500, 'Server error');
 });
 
 app.get('/jsapi', jsapi.load);
@@ -90,9 +93,11 @@ app.get('/map/tile/:zoom/:x/:y', map.tile);
 
 app.get('/free_food/events', freeFood.events);
 
+app.get('/fitness/schedule', fitness.schedule);
+
 // Needed for polyfill for IE7 support :-(
-app.get('/crossdomain.xml', function(req,res) {
-    "use strict";
+app.get('/crossdomain.xml', function (req, res) {
+    'use strict';
     // Yup, IE7 polyfill will allow any origin.
     res.send(
         '<?xml version="1.0"?>\n' +
@@ -104,14 +109,15 @@ app.get('/crossdomain.xml', function(req,res) {
     );
 });
 
-app.get('/', function(req,res) {
-    "use strict";
-    res.sendfile( __dirname + '/static/index.html');
+app.get('/', function (req, res) {
+    'use strict';
+    res.sendfile(__dirname + '/static/index.html');
 });
 
-app.listen(80, function() {
-  process.setgid(nodeUserGid);
-  process.setuid(nodeUserUid);
+app.listen(80, function () {
+    'use strict';
+    process.setgid(nodeUserGid);
+    process.setuid(nodeUserUid);
 });
 
 console.log('Listening on port 80...');
