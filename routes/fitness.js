@@ -64,7 +64,6 @@ var updateScheduleAsync = function () {
             console.log('HTTP status code: ' + response.statusCode);
         }
     });
-    //TODO: convert result to JSON
 };
 
 updateScheduleAsync();
