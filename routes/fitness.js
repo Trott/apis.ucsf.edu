@@ -56,6 +56,28 @@ var updateScheduleAsync = function () {
                             newData[i-1][headers[prop]] = data[i][prop];
                         }
                     }
+                    newData.sort(function(x, y) {
+
+                        function setTime(timeString, dateObject) {
+                            var time = timeString.match(/(\d+)(?::(\d\d))?\s*(p?)/);
+                            dateObject.setHours(parseInt(time[1], 10) + (time[3] ? 12 : 0));
+                            dateObject.setMinutes(parseInt(time[2], 10) || 0);
+                            return dateObject;
+                        }
+
+                        var xDate = new Date(x.date);
+                        xDate = setTime(x.startTime, xDate);
+                        var yDate = new Date(y.date);
+                        yDate = setTime(y.startTime, yDate);
+
+                        if (xDate < yDate) {
+                            return -1;
+                        }
+                        if (xDate > yDate) {
+                            return 1;
+                        }
+                        return 0;
+                    });
                     schedule.classes = newData;
                     schedule.lastUpdated = Date.now();
                 });
