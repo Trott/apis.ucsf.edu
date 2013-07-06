@@ -1,27 +1,16 @@
-var http = require('http');
-var url = require('url');
 var config = require('../config');
 var request = require('request');
 var csv = require('csv');
+var moment = require('moment');
 
 var schedule = {};
 
-var formatDate = function (date) {
-    var pad = function (n){return n<10 ? '0'+n : n;};
-    return pad(date.getMonth()+1) +
-        pad(date.getDate()) +
-        pad(date.getFullYear());
-};
-
-var callbackHeck = function (callbackOptions) {
-
-};
-
 var updateScheduleAsync = function () {
-    var date = new Date();
-    var startDate = formatDate(date);
-    date.setDate(date.getDate() + 2);
-    var endDate = formatDate(date);
+	'use strict';
+    var date = moment();
+    var startDate = date.format('MMDDYYYY');
+    date.add('days', 2);
+    var endDate = date.format('MMDDYYYY');
 
     var url = 'http://www.xpiron.com/schedule/Access?pAction=20&pBorgID=2867&pEmailAddr=' +
             config.fitness.username +
@@ -35,8 +24,8 @@ var updateScheduleAsync = function () {
 
 
     request.get(url, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
-            var data = csv()
+        if (!error && response.statusCode === 200) {
+            csv()
                 .from(body)
                 .to.array(function (data, count) {
                     var allHeaders = data[0];
@@ -50,25 +39,16 @@ var updateScheduleAsync = function () {
                     headers[allHeaders.indexOf('Location')] = 'location';
 
                     var newData = [];
-                    for (var i=1; i<count; i++) {
-                        newData[i-1] = {};
+                    for (var i = 1; i < count; i++) {
+                        newData[i - 1] = {};
                         for (var prop in headers) {
-                            newData[i-1][headers[prop]] = data[i][prop];
+                            newData[i - 1][headers[prop]] = data[i][prop];
                         }
+                        newData[i - 1]['day'] = moment(newData[i - 1].date).format('dddd');
                     }
-                    newData.sort(function(x, y) {
-
-                        function setTime(timeString, dateObject) {
-                            var time = timeString.match(/(\d+)(?::(\d\d))?\s*(p?)/);
-                            dateObject.setHours(parseInt(time[1], 10) + (time[3] ? 12 : 0));
-                            dateObject.setMinutes(parseInt(time[2], 10) || 0);
-                            return dateObject;
-                        }
-
-                        var xDate = new Date(x.date);
-                        xDate = setTime(x.startTime, xDate);
-                        var yDate = new Date(y.date);
-                        yDate = setTime(y.startTime, yDate);
+                    newData.sort(function (x, y) {
+                        var xDate = moment(x.date + ' ' + x.startTime);
+                        var yDate = moment(y.date + ' ' + y.startTime);
 
                         if (xDate < yDate) {
                             return -1;
@@ -93,7 +73,7 @@ updateScheduleAsync();
 exports.schedule = function (req, res) {
     'use strict';
 
-    if (typeof schedule === "undefined" || ! schedule.lastUpdated) {
+    if (typeof schedule === 'undefined' || ! schedule.lastUpdated) {
         schedule = {};
         updateScheduleAsync();
     } else if (Date.now() - schedule.lastUpdated > 1000 * 60 * 60) {
