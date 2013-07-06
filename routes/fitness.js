@@ -1,23 +1,16 @@
 var config = require('../config');
 var request = require('request');
 var csv = require('csv');
+var moment = require('moment');
 
 var schedule = {};
 
-var formatDate = function (date) {
-	'use strict';
-    var pad = function (n) { return n < 10 ? '0' + n : n; };
-    return pad(date.getMonth() + 1) +
-        pad(date.getDate()) +
-        pad(date.getFullYear());
-};
-
 var updateScheduleAsync = function () {
 	'use strict';
-    var date = new Date();
-    var startDate = formatDate(date);
-    date.setDate(date.getDate() + 2);
-    var endDate = formatDate(date);
+    var date = moment();
+    var startDate = date.format('MMDDYYYY');
+    date.add('days', 2);
+    var endDate = date.format('MMDDYYYY');
 
     var url = 'http://www.xpiron.com/schedule/Access?pAction=20&pBorgID=2867&pEmailAddr=' +
             config.fitness.username +
@@ -51,20 +44,11 @@ var updateScheduleAsync = function () {
                         for (var prop in headers) {
                             newData[i - 1][headers[prop]] = data[i][prop];
                         }
+                        newData[i - 1]['day'] = moment(newData[i - 1].date).format('dddd');
                     }
                     newData.sort(function (x, y) {
-
-                        function setTime(timeString, dateObject) {
-                            var time = timeString.match(/(\d+)(?::(\d\d))?\s*(p?)/);
-                            dateObject.setHours(parseInt(time[1], 10) + (time[3] ? 12 : 0));
-                            dateObject.setMinutes(parseInt(time[2], 10) || 0);
-                            return dateObject;
-                        }
-
-                        var xDate = new Date(x.date);
-                        xDate = setTime(x.startTime, xDate);
-                        var yDate = new Date(y.date);
-                        yDate = setTime(y.startTime, yDate);
+                        var xDate = moment(x.date + ' ' + x.startTime);
+                        var yDate = moment(y.date + ' ' + y.startTime);
 
                         if (xDate < yDate) {
                             return -1;
