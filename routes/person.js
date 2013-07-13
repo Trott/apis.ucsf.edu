@@ -1,4 +1,5 @@
 var http = require('http'),
+    https = require('https'),
     querystring = require('querystring'),
     xml2js = require('xml2js');
 
@@ -10,22 +11,28 @@ exports.search = function(req, res) {
       port: 80
     };
 
-    var detail;
+    var dataNeedsCleaning = true;
+
+    var protocol = http;
 
     //TODO: document id option at developer.ucsf.edu
     if ('id' in req.query) {
         directoryOptions.path = "/mobile_people_detail.jsp?" + querystring.stringify({'FNO': req.query.id});
-        detail = true;
     } else if (req.query.first_name || req.query.last_name || req.query.dep_name) {
         directoryOptions.path = "/mobile_people_result_set.jsp?" + querystring.stringify(req.query);
-        detail = false;
-    } else {
+    } else if (req.query.q) {
+        directoryOptions.host = 'myaccess2.ucsf.edu';
+        directoryOptions.port = 443;
+        directoryOptions.path = "/directory/?json&" + querystring.stringify({q: req.query.q});
+        protocol = https;
+        dataNeedsCleaning = false;
+    }else {
         res.send({data:[]});
         return;
     }
 
-    http.get(directoryOptions, function(resp){
-        var xml = "";
+    protocol.get(directoryOptions, function(resp){
+        var rawData = "";
 
         function callback(result) {
             function deGoober(name, data, stringify) {
@@ -54,7 +61,7 @@ exports.search = function(req, res) {
                     if ((typeof thisPhone === "object") || (thisPhone === "")) {
                         rv[phones[i][1]] = [];
                     } else {
-                        // *sigh* part 2: Arrays should be able to have multiple values. 
+                        // *sigh* part 2: Arrays should be able to have multiple values.
                         rv[phones[i][1]] = [thisPhone];
                     }
                 }
@@ -103,15 +110,19 @@ exports.search = function(req, res) {
         }
 
         resp.on('data', function(chunk){
-            xml += chunk;
+            rawData += chunk;
         });
         resp.on('end', function() {
-            var parser = new xml2js.Parser();
-            parser.on('end', callback);
-            parser.on('error', function(err) {
-                console.dir(err);
-            });
-            parser.parseString(xml);
+            if (dataNeedsCleaning) {
+                var parser = new xml2js.Parser();
+                parser.on('end', callback);
+                parser.on('error', function(err) {
+                    console.dir(err);
+                });
+                parser.parseString(rawData);
+            } else {
+                res.send(JSON.parse(rawData));
+            }
         });
     }).on("error", function(e){
         console.log("Directory error: " + e.message);
