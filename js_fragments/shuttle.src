@@ -2,11 +2,11 @@ UCSF.Shuttle = (function() {
 
     return {
         stops: function (options, success, failure) {
-            UCSF.run('shuttle/stops', options, success, failure);
+            UCSF.run('shuttle/stops', options, success, failure, UCSF.Shuttle.stops);
         },
 
         routes: function (options, success, failure) {
-            UCSF.run('shuttle/routes', options, success, failure);
+            UCSF.run('shuttle/routes', options, success, failure, UCSF.Shuttle.routes);
         },
 
         plan: function (options, success, failure) {
@@ -17,11 +17,11 @@ UCSF.Shuttle = (function() {
                 failure({statusText: 'Required options fromPlace and toPlace were not specified'});
                 return;
             }
-            UCSF.run('shuttle/plan', options, success, failure);
+            UCSF.run('shuttle/plan', options, success, failure, UCSF.Shuttle.plan);
         },
 
         times: function (options, success, failure) {
-            UCSF.run('shuttle/times', options, success, failure);
+            UCSF.run('shuttle/times', options, success, failure, UCSF.Shuttle.times);
         }
     };
 }());

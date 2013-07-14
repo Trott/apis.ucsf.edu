@@ -1,5 +1,5 @@
 UCSF.FreeFood = {
     events: function (options, success, failure ) {
-        UCSF.run('free_food/events', options, success, failure);
+        UCSF.run('free_food/events', options, success, failure, UCSF.FreeFood.events);
     }
 };
