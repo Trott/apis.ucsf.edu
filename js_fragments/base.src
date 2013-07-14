@@ -55,12 +55,13 @@ var UCSF = UCSF || (function () {
             return url + separator + this.serialize(options);
         },
 
-        run: function (what, options, success, failure) {
+        // callee is optional; pass for IE7 compatibility only
+        run: function (what, options, success, failure, callee) {
             failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
             var reqString = UCSF.createRequestString('http://apis.ucsf.edu/' + what, options);
             var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
-            if (! xhr) {
-                UCSF._ie7q.push({callee:UCSF.Shuttle.stops, options:options, success:success, failure:failure});
+            if (! xhr && callee) {
+                UCSF._ie7q.push({callee:callee, options:options, success:success, failure:failure});
             } else {
                 xhr.onload = function () {
                     success(JSON.parse(xhr.responseText));
