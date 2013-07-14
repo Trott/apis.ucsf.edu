@@ -140,7 +140,7 @@ exports.search = function (req, res) {
                 }
 
                 // In an ideal world, this is all we'd need.
-                res.send(JSON.parse(rawData));
+                res.send(cookedData);
             }
         });
     }).on('error', function (e) {
