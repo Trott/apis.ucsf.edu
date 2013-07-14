@@ -1,5 +1,5 @@
 UCSF.Person = {
     search: function (options, success, failure ) {
-        UCSF.run('person/search', options, success, failure);
+        UCSF.run('person/search', options, success, failure, UCSF.Person.search);
     }
 };

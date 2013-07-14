@@ -1,1 +1,1 @@
-UCSF.FreeFood={events:function(e,t,n){UCSF.run("free_food/events",e,t,n)}};
+UCSF.FreeFood={events:function(e,t,n){UCSF.run("free_food/events",e,t,n,UCSF.FreeFood.events)}};
