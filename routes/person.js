@@ -133,7 +133,7 @@ exports.search = function (req, res) {
                 };
 
                 if (cookedData.data && cookedData.data instanceof Array) {
-                    for (var i = 0, l = cookedData.data.len; i < l; i++) {
+                    for (var i = 0, l = cookedData.data.length; i < l; i++) {
                         cookedData.data[i].displayname = convertToString(cookedData.data[i].displayname);
                         cookedData.data[i].ucsfeduprimarydepartmentname = convertToString(cookedData.data[i].ucsfeduprimarydepartmentname);
                     }
