@@ -1,0 +1,5 @@
+UCSF.Library = {
+    hours: function (options, success, failure ) {
+        UCSF.run('library/hours', options, success, failure, UCSF.Library.hours);
+    }
+};
