@@ -5,7 +5,7 @@ exports.hours = function (req, res) {
 
     var options = {
         host: 'api.libcal.com',
-        path: '/api_hours_grid.php?iid=138&format=json&weeks=1'
+        path: '/api_hours_grid.php?iid=138&format=json&weeks=2'
     };
 
     var data = '';
