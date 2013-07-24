@@ -63,7 +63,7 @@ exports.events = function(req, res) {
             }
         });
     }).on("error", function(e){
-        console.log("shuttle/times error: " + e.message);
+        console.log("free_food/events error: " + e.message);
         res.send({error: e.message});
     });
 };

@@ -1,5 +1,4 @@
 var express = require('express'),
-    fs = require('fs'),
     cradle = require('cradle'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
@@ -7,6 +6,7 @@ var express = require('express'),
     map = require('./routes/map'),
     freeFood = require('./routes/free_food'),
     fitness = require('./routes/fitness'),
+    library = require('./routes/library'),
     nodeUserGid = 'node',
     nodeUserUid = 'node';
 
@@ -74,7 +74,7 @@ app.use(function (req, res, next) {
     }
 });
 
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res, undefined) {
     'use strict';
     console.dir(err);
     res.send(500, 'Server error');
@@ -94,6 +94,8 @@ app.get('/map/tile/:zoom/:x/:y', map.tile);
 app.get('/free_food/events', freeFood.events);
 
 app.get('/fitness/schedule', fitness.schedule);
+
+app.get('/library/hours', library.hours);
 
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function (req, res) {
