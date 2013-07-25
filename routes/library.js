@@ -1,11 +1,12 @@
-var http = require('http');
+var http = require('http'),
+    moment = require('moment');
 
 exports.hours = function (req, res) {
     'use strict';
 
     var options = {
         host: 'api.libcal.com',
-        path: '/api_hours_grid.php?iid=138&format=json&weeks=1'
+        path: '/api_hours_grid.php?iid=138&format=json&weeks=2'
     };
 
     var data = '';
@@ -20,6 +21,43 @@ exports.hours = function (req, res) {
             data += chunk;
         });
         resp.on('end', function () {
+
+            function extractHours(weeks) {
+                var now = moment(),
+                    rv = [],
+                    day,
+                    myDay,
+                    date,
+                    text;
+                for (var i = 0; i < 7; i++) {
+                    day = now.format('dddd');
+                    date = now.format('YYYY-MM-DD');
+                    text = '';
+                    for (var j = 0, l = weeks.length; j < l; j++) {
+                        if (weeks[j][day] && weeks[j][day].date === date) {
+                            myDay = weeks[j][day];
+                            if (myDay.times && myDay.times.status === 'closed') {
+                                text = 'closed';
+                            } else if (myDay.times && myDay.times.hours && myDay.times.hours[0] && myDay.times.hours[0].from && myDay.times.hours[0].to) {
+                                text = myDay.times.hours[0].from + ' - ' + myDay.times.hours[0].to;
+                            }
+                            break;
+                        }
+                    }
+                    rv.push({
+                        day: day,
+                        date: date,
+                        text: text
+                    });
+                    now.add('days', 1);
+                }
+                return (rv);
+                // var rv = weeks.filter(function (item) {
+                //     return item[today].date === startDate;
+                // });
+                // return [rv[0].Sunday, rv[0].Monday];
+            }
+
             if (resp.statusCode === 200) {
                 var result;
                 try {
@@ -29,16 +67,15 @@ exports.hours = function (req, res) {
                     console.log('error parsing LibCal JSON: ' + e.message);
                 }
 
-                /* 
-                    LibCal results include a "desc" field for each location with embedded HTML with
-                    inline styling. No no no no no no no no no! Returning just the name and hours.
-                */
-                var locations = [];
+                var locations = {};
                 if (result.locations && result.locations.length) {
                     for (var i = 0, l = result.locations.length; i < l; i++) {
-                        locations[i] = {};
-                        locations[i].name = result.locations[i].name;
-                        locations[i].weeks = result.locations[i].weeks;
+                        if (result.locations[i].name === 'Parnassus Library') {
+                            locations.parnassus = extractHours(result.locations[i].weeks);
+                        }
+                        if (result.locations[i].name === 'Mission Bay Library') {
+                            locations.missionBay = extractHours(result.locations[i].weeks);
+                        }
                     }
                 }
                 res.send({locations: locations});
