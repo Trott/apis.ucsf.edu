@@ -63,7 +63,9 @@ var updateScheduleAsync = function () {
                 });
         } else {
             console.log('fitness/schedule error: ' + JSON.stringify(error));
-            console.log('HTTP status code: ' + response.statusCode);
+            if (response && response.statusCode) {
+                console.log('HTTP status code: ' + response.statusCode);
+            }
         }
     });
 };
