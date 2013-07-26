@@ -6,7 +6,7 @@ var moment = require('moment');
 var schedule = {};
 
 var updateScheduleAsync = function () {
-	'use strict';
+    'use strict';
     var date = moment();
     var startDate = date.format('MMDDYYYY');
     date.add('days', 2);

@@ -1,7 +1,9 @@
 var http = require('http'),
     moment = require('moment');
 
-exports.hours = function (req, res) {
+var schedule = {};
+
+function updateScheduleAsync() {
     'use strict';
 
     var options = {
@@ -15,7 +17,6 @@ exports.hours = function (req, res) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'library/hours error: code ' + resp.statusCode;
             console.log(errorMsg);
-            res.send({error: errorMsg});
         }
         resp.on('data', function (chunk) {
             data += chunk;
@@ -74,11 +75,27 @@ exports.hours = function (req, res) {
                         }
                     }
                 }
-                res.send({locations: locations});
+                schedule.locations = locations;
+                schedule.lastUpdated = Date.now();
             }
         });
     }).on('error', function (e) {
         console.log('library/hours error: ' + e.message);
-        res.send({error: e.message});
     });
+}
+
+updateScheduleAsync();
+
+exports.hours = function (req, res) {
+    'use strict';
+
+    if (typeof schedule === 'undefined' || ! schedule.lastUpdated) {
+        schedule = {};
+        updateScheduleAsync();
+    } else if (Date.now() - schedule.lastUpdated > 1000 * 60 * 60) {
+        // schedule is older than an hour, refresh it
+        updateScheduleAsync();
+    }
+
+    res.send(schedule);
 };
