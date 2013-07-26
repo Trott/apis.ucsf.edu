@@ -45,17 +45,13 @@ exports.hours = function (req, res) {
                         }
                     }
                     rv.push({
-                        day: day,
-                        date: date,
+                        day: now.format('ddd'),
+                        date: now.format('MMM DD'),
                         text: text
                     });
                     now.add('days', 1);
                 }
                 return (rv);
-                // var rv = weeks.filter(function (item) {
-                //     return item[today].date === startDate;
-                // });
-                // return [rv[0].Sunday, rv[0].Monday];
             }
 
             if (resp.statusCode === 200) {
