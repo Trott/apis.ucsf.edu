@@ -121,12 +121,7 @@ exports.search = function (req, res) {
                 });
                 parser.parseString(rawData);
             } else {
-                // Oh for Pete's sake, now even this interface is returning malformatted brokenness.
-                // Remove HTML comments that precede JSON results. WTH?!?!
-                // Easiest (and perhaps stupidest) way is truncate everything before first curly brace.
-                rawData = rawData.substr(rawData.indexOf('{'));
-
-                // Harumph, still needs some minor cleaning.
+                // Change a few arrays to objects. There can only be one display name or primary department.
                 var cookedData = JSON.parse(rawData);
 
                 var convertToString = function (input) {
@@ -143,7 +138,6 @@ exports.search = function (req, res) {
                     }
                 }
 
-                // In an ideal world, this is all we'd need.
                 res.send(cookedData);
             }
         });
