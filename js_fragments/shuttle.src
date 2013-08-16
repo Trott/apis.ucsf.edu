@@ -22,6 +22,10 @@ UCSF.Shuttle = (function() {
 
         times: function (options, success, failure) {
             UCSF.run('shuttle/times', options, success, failure, UCSF.Shuttle.times);
+        },
+
+        predictions: function (options, success, failure) {
+            UCSF.run('shuttle/predictions', options, success, failure, UCSF.Shuttle.predictions);
         }
     };
 }());

@@ -1,6 +1,8 @@
 var http = require('http'),
     querystring = require('querystring'),
-    async = require('async');
+    async = require('async'),
+    xml2js = require('xml2js'),
+    predictions = {};
 
 // Common function to get all stops and call callback() with results
 var stops = function(callback, options) {
@@ -60,6 +62,70 @@ var stops = function(callback, options) {
         callback({error: e.message});
     });
 };
+
+var updatePredictionsAsync = function () {
+
+    var callback = function (result) {
+        console.dir(result.body.predictions[0]['direction'][0]['prediction'][0]['$']['minutes']);
+        console.dir(result.body.predictions[1]['direction'][0]['prediction'][0]['$']['minutes']);
+        predictions.timestamp = Date.now();
+        setTimeout(updatePredictionsAsync, 10 * 1000);
+    };
+
+    var rawData = '';
+
+    // If the cache is less than 10 seconds old, don't retrieve it again.
+    // More than once every ten seconds would violate NextBus terms of service.
+    if (predictions.timestamp && Date.now() - predictions.timestamp < 10 * 1000) {
+        // Try again in ten seconds.
+        setTimeout(updatePredictionsAsync, 10 * 1000);
+    }
+
+    var options = {
+        hostname: "webservices.nextbus.com",
+        path: "/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi"
+    };
+
+    http.get(options, function (resp) {
+        resp.on('data', function (chunk) {
+            rawData += chunk;
+        });
+
+        resp.on('error', function (e) {
+            //Update time stamp but otherwise empty cache so we don't have stale data.
+            predictions = {
+                timestamp: Date.now()
+            };
+            console.dir('Predictions error: ' + e);
+            setTimeout(updatePredictionsAsync, 10 * 1000);
+        });
+
+        resp.on('end', function () {
+            var parser = new xml2js.Parser();
+            parser.on('end', callback);
+            parser.on('error', function (err) {
+                console.dir(err);
+                //Update time stamp but otherwise empty cache so we don't have stale data.
+                predictions = {
+                    timestamp: Date.now()
+                };
+                setTimeout(updatePredictionsAsync, 10 * 1000);
+            });
+            parser.parseString(rawData);
+        });
+    })
+    .on('error', function (e) {
+        console.log('NextBus XML retrieval error:');
+        console.dir(e);
+        //Update time stamp but otherwise empty cache so we don't have stale data.
+        predictions = {
+            timestamp: Date.now()
+        };
+        setTimeout(updatePredictionsAsync, 10 * 1000);
+    });
+};
+
+updatePredictionsAsync();
 
 exports.stops = function(req, res) {
     "use strict";
@@ -323,7 +389,7 @@ exports.plan = function(req, res) {
 
         var query = {};
         // Useful parameters the user can send:
-        // fromPlace & toPlace are required. 
+        // fromPlace & toPlace are required.
         // date is required if time is set. default to current time and date.
         // arriveBy defaults to "false"
         if (req.query.date) {
@@ -425,7 +491,7 @@ exports.plan = function(req, res) {
                 var compareOn = req.query.arriveBy==="true" ? 'endTime' : 'startTime';
                 var ascendingSort = req.query.arriveBy==="true" ? -1 : 1;
                 var compare = function (a,b) {
-                    // If one shuttle both arrives earlier and leaves later than another, 
+                    // If one shuttle both arrives earlier and leaves later than another,
                     //   then it should be favored no matter what.
                     if ((a['endTime'] <= b['endTime']) === (b['startTime'] <= a['startTime'])) {
                         return b['startTime'] - a['startTime'];
@@ -446,4 +512,14 @@ exports.plan = function(req, res) {
             res.send(metadata);
         }
     });
+};
+
+exports.predictions = function(req, res) {
+    "use strict";
+
+    var options = {
+        routeId: req.query.routeId,
+        stopId: req.query.stopId,
+        path: "http://webservices.nextbus.com/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi"
+    };
 };
