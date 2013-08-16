@@ -1,10 +1,12 @@
 var http = require('http'),
     querystring = require('querystring'),
-    async = require('async');
+    async = require('async'),
+    xml2js = require('xml2js'),
+    predictions = {};
 
 // Common function to get all stops and call callback() with results
 var stops = function(callback, options) {
-    "use strict";
+    'use strict';
 
     options = options || {};
     options.property = options.property || "stops";
@@ -61,8 +63,92 @@ var stops = function(callback, options) {
     });
 };
 
+var updatePredictionsAsync = function (callback) {
+
+    var updateCallback = function (result) {
+        var rv = {
+            predictions: []
+        };
+
+        if (typeof result === "object" && result.body && result.body.predictions instanceof Array) {
+            var p = result.body.predictions,
+                routeId,
+                stopId,
+                times,
+                mapCallback = function (value) { return value['$'] && value['$'].minutes; };
+            for (var i=0, l=p.length; i<l; i++) {
+                routeId = p[i]['$'].routeTag;
+                stopId = p[i]['$'].stopTag;
+                times = [];
+                if (p[i].direction && p[i].direction[0] && p[i].direction[0].prediction && p[i].direction[0].prediction instanceof Array) {
+                    times = p[i].direction[0].prediction.map(mapCallback);
+                }
+                rv.predictions.push({routeId: routeId, stopId: stopId, times: times});
+            }
+
+            rv.timestamp = Date.now();
+            predictions = rv;
+        } else {
+            predictions.timestamp = Date.now();
+        }
+        callback(predictions);
+    };
+
+    var rawData = '';
+
+    // If the cache is less than 10 seconds old, don't retrieve it again.
+    // More than once every ten seconds would violate NextBus terms of service.
+    if (predictions.timestamp && Date.now() - predictions.timestamp < 10 * 1000) {
+        callback(predictions);
+        return;
+    }
+
+    var options = {
+        hostname: "webservices.nextbus.com",
+        path: "/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi"
+    };
+
+    http.get(options, function (resp) {
+        resp.on('data', function (chunk) {
+            rawData += chunk;
+        });
+
+        resp.on('error', function (e) {
+            //Update time stamp but otherwise empty cache so we don't have stale data.
+            predictions = {
+                timestamp: Date.now()
+            };
+            console.dir('Predictions error: ' + e);
+            callback(predictions);
+        });
+
+        resp.on('end', function () {
+            var parser = new xml2js.Parser();
+            parser.on('end', updateCallback);
+            parser.on('error', function (err) {
+                console.dir(err);
+                //Update time stamp but otherwise empty cache so we don't have stale data.
+                predictions = {
+                    timestamp: Date.now()
+                };
+                callback(predictions);
+            });
+            parser.parseString(rawData);
+        });
+    })
+    .on('error', function (e) {
+        console.log('NextBus XML retrieval error:');
+        console.dir(e);
+        //Update time stamp but otherwise empty cache so we don't have stale data.
+        predictions = {
+            timestamp: Date.now()
+        };
+        callback(predictions);
+    });
+};
+
 exports.stops = function(req, res) {
-    "use strict";
+    'use strict';
 
     var options = {};
     if (req.query.routeId) {
@@ -84,7 +170,7 @@ exports.stops = function(req, res) {
 };
 
 exports.routes = function(req, res) {
-    "use strict";
+    'use strict';
 
     var host = "localhost",
         port = 8080,
@@ -196,7 +282,7 @@ exports.routes = function(req, res) {
 };
 
 exports.times = function(req, res) {
-    "use strict";
+    'use strict';
 
     var otpOptions = {
         host: "localhost",
@@ -243,7 +329,7 @@ exports.times = function(req, res) {
 };
 
 exports.plan = function(req, res) {
-    "use strict";
+    'use strict';
 
     // ACHTUNG! TOTALLY SAD UGLY HACK!
     // OTP will not route to a destination that is a parent station.
@@ -323,7 +409,7 @@ exports.plan = function(req, res) {
 
         var query = {};
         // Useful parameters the user can send:
-        // fromPlace & toPlace are required. 
+        // fromPlace & toPlace are required.
         // date is required if time is set. default to current time and date.
         // arriveBy defaults to "false"
         if (req.query.date) {
@@ -422,10 +508,10 @@ exports.plan = function(req, res) {
                 }
 
                 // Sort merged results from ugly hack
-                var compareOn = req.query.arriveBy==="true" ? 'endTime' : 'startTime';
-                var ascendingSort = req.query.arriveBy==="true" ? -1 : 1;
+                var compareOn = req.query.arriveBy==='true' ? 'endTime' : 'startTime';
+                var ascendingSort = req.query.arriveBy==='true' ? -1 : 1;
                 var compare = function (a,b) {
-                    // If one shuttle both arrives earlier and leaves later than another, 
+                    // If one shuttle both arrives earlier and leaves later than another,
                     //   then it should be favored no matter what.
                     if ((a['endTime'] <= b['endTime']) === (b['startTime'] <= a['startTime'])) {
                         return b['startTime'] - a['startTime'];
@@ -446,4 +532,26 @@ exports.plan = function(req, res) {
             res.send(metadata);
         }
     });
+};
+
+exports.predictions = function(req, res) {
+    'use strict';
+
+    var rv = {times:[]};
+
+    if (req.query.stopId && req.query.routeId) {
+        updatePredictionsAsync(function (result) {
+            if (result.predictions && result.predictions instanceof Array) {
+                var needle = result.predictions.filter(function (value) {
+                    return value.routeId===req.query.routeId && value.stopId===req.query.stopId;
+                });
+                if (needle[0]) {
+                    rv.times = needle[0].times;
+                }
+            }
+            res.send(rv);
+        });
+    } else {
+        res.send(rv);
+    }
 };
