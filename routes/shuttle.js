@@ -6,7 +6,7 @@ var http = require('http'),
 
 // Common function to get all stops and call callback() with results
 var stops = function(callback, options) {
-    "use strict";
+    'use strict';
 
     options = options || {};
     options.property = options.property || "stops";
@@ -148,7 +148,7 @@ var updatePredictionsAsync = function (callback) {
 };
 
 exports.stops = function(req, res) {
-    "use strict";
+    'use strict';
 
     var options = {};
     if (req.query.routeId) {
@@ -170,7 +170,7 @@ exports.stops = function(req, res) {
 };
 
 exports.routes = function(req, res) {
-    "use strict";
+    'use strict';
 
     var host = "localhost",
         port = 8080,
@@ -282,7 +282,7 @@ exports.routes = function(req, res) {
 };
 
 exports.times = function(req, res) {
-    "use strict";
+    'use strict';
 
     var otpOptions = {
         host: "localhost",
@@ -329,7 +329,7 @@ exports.times = function(req, res) {
 };
 
 exports.plan = function(req, res) {
-    "use strict";
+    'use strict';
 
     // ACHTUNG! TOTALLY SAD UGLY HACK!
     // OTP will not route to a destination that is a parent station.
@@ -508,8 +508,8 @@ exports.plan = function(req, res) {
                 }
 
                 // Sort merged results from ugly hack
-                var compareOn = req.query.arriveBy==="true" ? 'endTime' : 'startTime';
-                var ascendingSort = req.query.arriveBy==="true" ? -1 : 1;
+                var compareOn = req.query.arriveBy==='true' ? 'endTime' : 'startTime';
+                var ascendingSort = req.query.arriveBy==='true' ? -1 : 1;
                 var compare = function (a,b) {
                     // If one shuttle both arrives earlier and leaves later than another,
                     //   then it should be favored no matter what.
@@ -535,11 +535,23 @@ exports.plan = function(req, res) {
 };
 
 exports.predictions = function(req, res) {
-    "use strict";
+    'use strict';
 
+    var rv = {times:[]};
 
-//TODO: Only send the predictions
-    updatePredictionsAsync(function (result) {
-        res.send(result);
-    });
+    if (req.query.stopId && req.query.routeId) {
+        updatePredictionsAsync(function (result) {
+            if (result.predictions && result.predictions instanceof Array) {
+                var needle = result.predictions.filter(function (value) {
+                    return value.routeId===req.query.routeId && value.stopId===req.query.stopId;
+                });
+                if (needle[0]) {
+                    rv.times = needle[0].times;
+                }
+            }
+            res.send(rv);
+        });
+    } else {
+        res.send(rv);
+    }
 };
