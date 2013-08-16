@@ -66,9 +66,31 @@ var stops = function(callback, options) {
 var updatePredictionsAsync = function () {
 
     var callback = function (result) {
-        console.dir(result.body.predictions[0]['direction'][0]['prediction'][0]['$']['minutes']);
-        console.dir(result.body.predictions[1]['direction'][0]['prediction'][0]['$']['minutes']);
-        predictions.timestamp = Date.now();
+        var rv = {
+            predictions: []
+        };
+
+        if (typeof result === "object" && result.body && result.body.predictions instanceof Array) {
+            var p = result.body.predictions,
+                routeId,
+                stopId,
+                times,
+                mapCallback = function (value) { return value['$'] && value['$'].minutes; };
+            for (var i=0, l=p.length; i<l; i++) {
+                routeId = p[i]['$'].routeTag;
+                stopId = p[i]['$'].stopTag;
+                times = [];
+                if (p[i].direction && p[i].direction[0] && p[i].direction[0].prediction && p[i].direction[0].prediction instanceof Array) {
+                    times = p[i].direction[0].prediction.map(mapCallback);
+                }
+                rv.predictions.push({routeId: routeId, stopId: stopId, times: times});
+            }
+
+            rv.timestamp = Date.now();
+            predictions = rv;
+        } else {
+            predictions.timestamp = Date.now();
+        }
         setTimeout(updatePredictionsAsync, 10 * 1000);
     };
 
