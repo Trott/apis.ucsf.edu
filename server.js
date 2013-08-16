@@ -88,6 +88,7 @@ app.get('/shuttle/plan', shuttle.plan);
 app.get('/shuttle/routes', shuttle.routes);
 app.get('/shuttle/stops', shuttle.stops);
 app.get('/shuttle/times', shuttle.times);
+app.get('/shuttle/predictions', shuttle.predictions);
 
 app.get('/map/tile/:zoom/:x/:y', map.tile);
 

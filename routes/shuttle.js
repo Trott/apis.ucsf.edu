@@ -63,9 +63,9 @@ var stops = function(callback, options) {
     });
 };
 
-var updatePredictionsAsync = function () {
+var updatePredictionsAsync = function (callback) {
 
-    var callback = function (result) {
+    var updateCallback = function (result) {
         var rv = {
             predictions: []
         };
@@ -91,7 +91,7 @@ var updatePredictionsAsync = function () {
         } else {
             predictions.timestamp = Date.now();
         }
-        setTimeout(updatePredictionsAsync, 10 * 1000);
+        callback(predictions);
     };
 
     var rawData = '';
@@ -99,8 +99,8 @@ var updatePredictionsAsync = function () {
     // If the cache is less than 10 seconds old, don't retrieve it again.
     // More than once every ten seconds would violate NextBus terms of service.
     if (predictions.timestamp && Date.now() - predictions.timestamp < 10 * 1000) {
-        // Try again in ten seconds.
-        setTimeout(updatePredictionsAsync, 10 * 1000);
+        callback(predictions);
+        return;
     }
 
     var options = {
@@ -119,19 +119,19 @@ var updatePredictionsAsync = function () {
                 timestamp: Date.now()
             };
             console.dir('Predictions error: ' + e);
-            setTimeout(updatePredictionsAsync, 10 * 1000);
+            callback(predictions);
         });
 
         resp.on('end', function () {
             var parser = new xml2js.Parser();
-            parser.on('end', callback);
+            parser.on('end', updateCallback);
             parser.on('error', function (err) {
                 console.dir(err);
                 //Update time stamp but otherwise empty cache so we don't have stale data.
                 predictions = {
                     timestamp: Date.now()
                 };
-                setTimeout(updatePredictionsAsync, 10 * 1000);
+                callback(predictions);
             });
             parser.parseString(rawData);
         });
@@ -143,11 +143,9 @@ var updatePredictionsAsync = function () {
         predictions = {
             timestamp: Date.now()
         };
-        setTimeout(updatePredictionsAsync, 10 * 1000);
+        callback(predictions);
     });
 };
-
-updatePredictionsAsync();
 
 exports.stops = function(req, res) {
     "use strict";
@@ -539,9 +537,9 @@ exports.plan = function(req, res) {
 exports.predictions = function(req, res) {
     "use strict";
 
-    var options = {
-        routeId: req.query.routeId,
-        stopId: req.query.stopId,
-        path: "http://webservices.nextbus.com/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi"
-    };
+
+//TODO: Only send the predictions
+    updatePredictionsAsync(function (result) {
+        res.send(result);
+    });
 };
