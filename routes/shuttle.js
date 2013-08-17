@@ -182,8 +182,8 @@ exports.routes = function(req, res) {
     // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
     // If parent station, let's search for routes in all stops in the parent station.
     var parentStationToChildStationForStupidHackNumberThree = {
-        "Parnassus": ["Parnassus Library", "LPPI", "Parnassus ACC", "ER"],
-        "MB": ["MBE", "MBW"],
+        "Parnassus": ["Parnassus Library", "parlppi", "Parnassus ACC", "ER"],
+        "MB": ["MBE", "missb4we"],
         "2300 Harrison": ["2300 Harrison N", "2300 Harrison S"],
         "100 Buchanan": ["100 Buchanan N", "100 Buchanan S"]
     };
@@ -345,7 +345,7 @@ exports.plan = function(req, res) {
             switch (endpoint) {
                 case "ucsf_Aldea Housing":
                 case "ucsf_SurgeWoods":
-                    return ["ucsf_Parnassus ACC", "ucsf_LPPI"];
+                    return ["ucsf_Parnassus ACC", "ucsf_parlppi"];
                 case "ucsf_Kezar":
                 case "ucsf_VAMC":
                     return ["ucsf_ER"];
@@ -354,13 +354,13 @@ exports.plan = function(req, res) {
                 case "ucsf_SFGH":
                     return ["ucsf_Parnassus Library"];
                 case "ucsf_Mt. Zion":
-                    return ["ucsf_LPPI", "ucsf_Parnassus Library"];
+                    return ["ucsf_parlppi", "ucsf_Parnassus Library"];
                 default:
-                    return ["ucsf_LPPI"];
+                    return ["ucsf_parlppi"];
             }
         },
         "ucsf_MB": function (endpoint) {
-            return ["ucsf_MBE","ucsf_MBW"];
+            return ["ucsf_MBE","ucsf_missb4we"];
         },
         "ucsf_2300 Harrison": function (endpoint) {
             return ["ucsf_2300 Harrison N", "ucsf_2300 Harrison S"];
