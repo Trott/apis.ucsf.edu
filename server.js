@@ -51,7 +51,7 @@ app.use(function (req, res, next) {
                 return next(err);
             }
             if (doc.host === '*' || (req.headers.origin && doc.host === req.headers.origin)) {
-                res.header('Access-Control-Allow-Origin', req.headers.origin);
+                res.header('Access-Control-Allow-Origin', doc.host);
 
                 if (req.headers['access-control-request-method']) {
                     res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
