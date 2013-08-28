@@ -115,9 +115,9 @@ var updatePredictionsAsync = function (callback) {
             "&stops=gold%7Cmissb4we" +
             "&stops=gold%7Csfgh" +
             "&stops=gold%7Clibrary" +
-            "&stops=gold%7Cmtzion" +
-            "&stops="
+            "&stops=gold%7Cmtzion"
     };
+    console.dir(options);
 
     http.get(options, function (resp) {
         resp.on('data', function (chunk) {
