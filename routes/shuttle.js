@@ -115,7 +115,8 @@ var updatePredictionsAsync = function (callback) {
             "&stops=gold%7Cmissb4we" +
             "&stops=gold%7Csfgh" +
             "&stops=gold%7Clibrary" +
-            "&stops=gold%7Cmtzion"
+            "&stops=gold%7Cmtzion" +
+            "&stops="
     };
 
     http.get(options, function (resp) {
@@ -192,10 +193,10 @@ exports.routes = function(req, res) {
     // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
     // If parent station, let's search for routes in all stops in the parent station.
     var parentStationToChildStationForStupidHackNumberThree = {
-        "Parnassus": ["library", "parlppi", "Parnassus ACC", "ER"],
+        "Parnassus": ["library", "parlppi", "paracc", "ER"],
         "MB": ["missb4th", "missb4we"],
-        "2300 Harrison": ["2300 Harrison N", "2300 Harrison S"],
-        "100 Buchanan": ["100 Buchanan N", "100 Buchanan S"]
+        "2300 Harrison": ["23harrnb_ib", "23harrsb_ob"],
+        "100 Buchanan": ["buchaneb", "buchanob"]
     };
 
     var foundRoutes = [];
@@ -353,14 +354,14 @@ exports.plan = function(req, res) {
     var parentStationToChildStation = {
         "ucsf_Parnassus": function (endpoint) {
             switch (endpoint) {
-                case "ucsf_Aldea Housing":
-                case "ucsf_SurgeWoods":
-                    return ["ucsf_Parnassus ACC", "ucsf_parlppi"];
-                case "ucsf_Kezar":
-                case "ucsf_VAMC":
+                case "ucsf_75behr":
+                case "ucsf_surgedown":
+                    return ["ucsf_paracc", "ucsf_parlppi"];
+                case "ucsf_parkezar":
+                case "ucsf_veteran":
                     return ["ucsf_ER"];
                 case "ucsf_3360 Geary":
-                case "ucsf_Laurel Heights":
+                case "ucsf_lhts":
                 case "ucsf_sfgh":
                     return ["ucsf_parlppi", "ucsf_library"];
                 case "ucsf_mtzion":
@@ -373,10 +374,10 @@ exports.plan = function(req, res) {
             return ["ucsf_missb4th","ucsf_missb4we"];
         },
         "ucsf_2300 Harrison": function (endpoint) {
-            return ["ucsf_2300 Harrison N", "ucsf_2300 Harrison S"];
+            return ["ucsf_23harrnb_ib", "ucsf_23harrsb_ob"];
         },
         "ucsf_100 Buchanan": function (endpoint) {
-            return ["ucsf_100 Buchanan N", "ucsf_100 Buchanan S"];
+            return ["ucsf_buchanwb", "ucsf_buchaneb"];
         }
     };
 
