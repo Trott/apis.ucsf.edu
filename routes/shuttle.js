@@ -122,7 +122,6 @@ var updatePredictionsAsync = function (callback) {
             "&stops=bronze%7Clibrary" +
             "&stops=bronze%7Csurgedown"
     };
-    console.dir(options);
 
     http.get(options, function (resp) {
         resp.on('data', function (chunk) {
