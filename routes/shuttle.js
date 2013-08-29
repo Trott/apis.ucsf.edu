@@ -115,7 +115,8 @@ var updatePredictionsAsync = function (callback) {
             "&stops=gold%7Cmissb4we" +
             "&stops=gold%7Csfgh" +
             "&stops=gold%7Clibrary" +
-            "&stops=gold%7Cmtzion"
+            "&stops=gold%7Cmtzion" +
+            "&stops=bronze%7C75behr"
     };
     console.dir(options);
 
