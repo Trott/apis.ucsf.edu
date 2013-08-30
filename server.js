@@ -5,6 +5,7 @@ var express = require('express'),
     map = require('./routes/map'),
     fitness = require('./routes/fitness'),
     library = require('./routes/library'),
+    news = require('./routes/news'),
     nodeUserGid = 'node',
     nodeUserUid = 'node';
 
@@ -76,6 +77,8 @@ app.get('/map/tile/:zoom/:x/:y', map.tile);
 app.get('/fitness/schedule', fitness.schedule);
 
 app.get('/library/hours', library.hours);
+
+app.get('/news/articles', news.articles);
 
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function (req, res) {
