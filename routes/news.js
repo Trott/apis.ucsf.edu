@@ -1,4 +1,5 @@
 var http = require('http');
+var articles = {};
 
 exports.articles = function(req, res) {
     'use strict';
@@ -25,14 +26,17 @@ exports.articles = function(req, res) {
 
                 try {
                     result = JSON.parse(data);
+                    articles.articles = result.nodes || [];
+                    articles.timestamp = Date.now();
                 } catch (e) {
-                    result = {};
+                    articles = {};
+                    articles.timestamp = Date.now();
                     console.log('error parsing news JSON: ' + e.message);
                 }
 
                 //TODO: add timestamp and cache
                 //TODO: use Cheerio or something to parse body and restructure it to something semantic
-                res.send(result);
+                res.send(articles);
             }
         });
     }).on('error', function (e) {
