@@ -4,6 +4,12 @@ var articles = {};
 exports.articles = function(req, res) {
     'use strict';
 
+    // If the cache is less than 5 minutes old, don't retrieve it again.
+    if (articles.timestamp && Date.now() - articles.timestamp < 5 * 60 * 1000) {
+        res.send(articles);
+        return;
+    }
+
     var options = {
         host: 'www.ucsf.edu',
         path: '/news/carousel/json',
