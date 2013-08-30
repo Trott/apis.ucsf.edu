@@ -36,6 +36,7 @@ exports.articles = function(req, res) {
 
                 //TODO: add timestamp and cache
                 //TODO: use Cheerio or something to parse body and restructure it to something semantic
+                res.header("Content-Type", "application/json; charset=utf-8");
                 res.send(articles);
             }
         });
