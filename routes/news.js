@@ -32,7 +32,17 @@ exports.articles = function(req, res) {
 
                 try {
                     result = JSON.parse(data);
-                    articles.articles = result.nodes || [];
+
+                    if (result.nodes instanceof Array) {
+                        articles.articles = result.nodes.map(
+                            function (el)  {
+                                return el.node;
+                            }
+                        );
+                    } else {
+                        articles.articles = [];
+                    }
+
                     articles.timestamp = Date.now();
                 } catch (e) {
                     articles = {};
