@@ -1,4 +1,5 @@
 var http = require('http');
+var cheerio = require('cheerio');
 var articles = {};
 
 exports.articles = function(req, res) {
@@ -36,6 +37,10 @@ exports.articles = function(req, res) {
                     if (result.nodes instanceof Array) {
                         articles.articles = result.nodes.map(
                             function (el)  {
+                                var paragraphs = cheerio.load(el.node.body)('p');
+                                el.node.paragraphs = paragraphs.map(function() {
+                                    return this.text();
+                                });
                                 return el.node;
                             }
                         );
