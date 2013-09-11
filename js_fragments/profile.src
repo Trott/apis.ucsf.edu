@@ -1,0 +1,5 @@
+UCSF.Profile = {
+    get: function (options, success, failure ) {
+        UCSF.run('profile/get', options, success, failure, UCSF.Profile.get);
+    }
+};
