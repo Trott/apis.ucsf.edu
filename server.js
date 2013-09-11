@@ -81,7 +81,7 @@ app.get('/fitness/schedule', fitness.schedule);
 
 app.get('/library/hours', library.hours);
 
-app.get('/profile/get/:nodeId', profile.get);
+app.get('/profile/get', profile.get);
 
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function (req, res) {

@@ -3,8 +3,9 @@ var http = require('http');
 exports.get = function(req, res) {
     "use strict";
 
+    var nodeId = req.query.nodeId || '';
     // nodeId should be digits only
-    var nodeId = req.params.nodeId.replace(/\D/g,'');
+    nodeId = nodeId.replace(/\D/g,'');
 
     var options = {
         host: "base.ctsi.ucsf.edu",
