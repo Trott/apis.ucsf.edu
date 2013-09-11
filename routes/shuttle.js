@@ -1,10 +1,12 @@
 var http = require('http'),
     querystring = require('querystring'),
-    async = require('async');
+    async = require('async'),
+    xml2js = require('xml2js'),
+    predictions = {};
 
 // Common function to get all stops and call callback() with results
 var stops = function(callback, options) {
-    "use strict";
+    'use strict';
 
     options = options || {};
     options.property = options.property || "stops";
@@ -61,8 +63,123 @@ var stops = function(callback, options) {
     });
 };
 
+var updatePredictionsAsync = function (callback) {
+
+    var updateCallback = function (result) {
+        var rv = {
+            predictions: []
+        };
+
+        if (typeof result === "object" && result.body && result.body.predictions instanceof Array) {
+            var p = result.body.predictions,
+                routeId,
+                stopId,
+                times,
+                mapCallback = function (value) { return value['$'] && value['$'].minutes; };
+            for (var i=0, l=p.length; i<l; i++) {
+                routeId = p[i]['$'].routeTag;
+                stopId = p[i]['$'].stopTag;
+                times = [];
+                if (p[i].direction && p[i].direction[0] && p[i].direction[0].prediction && p[i].direction[0].prediction instanceof Array) {
+                    times = p[i].direction[0].prediction.map(mapCallback);
+                }
+
+                // Why oh why are the Black and Tan shuttles different from each other?
+                if (stopId === "library_a") {
+                    stopId = "library";
+                }
+
+                rv.predictions.push({routeId: routeId, stopId: stopId, times: times});
+            }
+
+            rv.timestamp = Date.now();
+            predictions = rv;
+        } else {
+            predictions.timestamp = Date.now();
+        }
+        callback(predictions);
+    };
+
+    var rawData = '';
+
+    // If the cache is less than 10 seconds old, don't retrieve it again.
+    // More than once every ten seconds would violate NextBus terms of service.
+    if (predictions.timestamp && Date.now() - predictions.timestamp < 10 * 1000) {
+        callback(predictions);
+        return;
+    }
+
+    // TODO: Instead of hard-coding the shuttles and locations, retrieve via
+    //    http://webservices.nextbus.com/service/publicXMLFeed?command=routeConfig&a=ucsf
+    // Not doing that right now because the Black/Tan shuttles (see above) and Yellow shuttle
+    //     data there defy sanity.
+    var options = {
+        hostname: "webservices.nextbus.com",
+        path: "/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf" +
+            "&stops=grey%7Cmissb4we" +
+            "&stops=grey%7Cparlppi" +
+            "&stops=blue%7Cmissb4th" +
+            "&stops=blue%7Cparlppi" +
+            "&stops=blue%7Cmtzion" +
+            "&stops=blue%7Csfgh" +
+            "&stops=gold%7Cmissb4we" +
+            "&stops=gold%7Csfgh" +
+            "&stops=gold%7Clibrary" +
+            "&stops=gold%7Cmtzion" +
+            "&stops=bronze%7C75behr" +
+            "&stops=bronze%7Cparlppi" +
+            "&stops=bronze%7Cparacc" +
+            "&stops=bronze%7Clibrary" +
+            "&stops=bronze%7Csurgedown" +
+            "&stops=black%7Clhts" +
+            "&stops=black%7Cmtzion" +
+            "&stops=black%7Clibrary_a" +
+            "&stops=tan%7Clhts" +
+            "&stops=tan%7Cmtzion" +
+            "&stops=tan%7Clibrary"
+    };
+
+    http.get(options, function (resp) {
+        resp.on('data', function (chunk) {
+            rawData += chunk;
+        });
+
+        resp.on('error', function (e) {
+            //Update time stamp but otherwise empty cache so we don't have stale data.
+            predictions = {
+                timestamp: Date.now()
+            };
+            console.dir('Predictions error: ' + e);
+            callback(predictions);
+        });
+
+        resp.on('end', function () {
+            var parser = new xml2js.Parser();
+            parser.on('end', updateCallback);
+            parser.on('error', function (err) {
+                console.dir(err);
+                //Update time stamp but otherwise empty cache so we don't have stale data.
+                predictions = {
+                    timestamp: Date.now()
+                };
+                callback(predictions);
+            });
+            parser.parseString(rawData);
+        });
+    })
+    .on('error', function (e) {
+        console.log('NextBus XML retrieval error:');
+        console.dir(e);
+        //Update time stamp but otherwise empty cache so we don't have stale data.
+        predictions = {
+            timestamp: Date.now()
+        };
+        callback(predictions);
+    });
+};
+
 exports.stops = function(req, res) {
-    "use strict";
+    'use strict';
 
     var options = {};
     if (req.query.routeId) {
@@ -84,7 +201,7 @@ exports.stops = function(req, res) {
 };
 
 exports.routes = function(req, res) {
-    "use strict";
+    'use strict';
 
     var host = "localhost",
         port = 8080,
@@ -96,10 +213,10 @@ exports.routes = function(req, res) {
     // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
     // If parent station, let's search for routes in all stops in the parent station.
     var parentStationToChildStationForStupidHackNumberThree = {
-        "Parnassus": ["Parnassus Library", "LPPI", "Parnassus ACC", "ER"],
-        "MB": ["MBE", "MBW"],
-        "2300 Harrison": ["2300 Harrison N", "2300 Harrison S"],
-        "100 Buchanan": ["100 Buchanan N", "100 Buchanan S"]
+        "Parnassus": ["library", "parlppi", "paracc", "ER"],
+        "MB": ["missb4th", "missb4we"],
+        "2300 Harrison": ["23harrnb_ib", "23harrsb_ob"],
+        "100 Buchanan": ["buchaneb", "buchanob"]
     };
 
     var foundRoutes = [];
@@ -196,7 +313,7 @@ exports.routes = function(req, res) {
 };
 
 exports.times = function(req, res) {
-    "use strict";
+    'use strict';
 
     var otpOptions = {
         host: "localhost",
@@ -243,7 +360,7 @@ exports.times = function(req, res) {
 };
 
 exports.plan = function(req, res) {
-    "use strict";
+    'use strict';
 
     // ACHTUNG! TOTALLY SAD UGLY HACK!
     // OTP will not route to a destination that is a parent station.
@@ -257,30 +374,30 @@ exports.plan = function(req, res) {
     var parentStationToChildStation = {
         "ucsf_Parnassus": function (endpoint) {
             switch (endpoint) {
-                case "ucsf_Aldea Housing":
-                case "ucsf_SurgeWoods":
-                    return ["ucsf_Parnassus ACC", "ucsf_LPPI"];
-                case "ucsf_Kezar":
-                case "ucsf_VAMC":
+                case "ucsf_75behr":
+                case "ucsf_surgedown":
+                    return ["ucsf_paracc", "ucsf_parlppi"];
+                case "ucsf_parkezar":
+                case "ucsf_veteran":
                     return ["ucsf_ER"];
                 case "ucsf_3360 Geary":
-                case "ucsf_Laurel Heights":
-                case "ucsf_SFGH":
-                    return ["ucsf_Parnassus Library"];
-                case "ucsf_Mt. Zion":
-                    return ["ucsf_LPPI", "ucsf_Parnassus Library"];
+                case "ucsf_lhts":
+                case "ucsf_sfgh":
+                    return ["ucsf_parlppi", "ucsf_library"];
+                case "ucsf_mtzion":
+                    return ["ucsf_parlppi", "ucsf_library"];
                 default:
-                    return ["ucsf_LPPI"];
+                    return ["ucsf_parlppi"];
             }
         },
         "ucsf_MB": function (endpoint) {
-            return ["ucsf_MBE","ucsf_MBW"];
+            return ["ucsf_missb4th","ucsf_missb4we"];
         },
         "ucsf_2300 Harrison": function (endpoint) {
-            return ["ucsf_2300 Harrison N", "ucsf_2300 Harrison S"];
+            return ["ucsf_23harrnb_ib", "ucsf_23harrsb_ob"];
         },
         "ucsf_100 Buchanan": function (endpoint) {
-            return ["ucsf_100 Buchanan N", "ucsf_100 Buchanan S"];
+            return ["ucsf_buchanwb", "ucsf_buchaneb"];
         }
     };
 
@@ -323,7 +440,7 @@ exports.plan = function(req, res) {
 
         var query = {};
         // Useful parameters the user can send:
-        // fromPlace & toPlace are required. 
+        // fromPlace & toPlace are required.
         // date is required if time is set. default to current time and date.
         // arriveBy defaults to "false"
         if (req.query.date) {
@@ -422,10 +539,10 @@ exports.plan = function(req, res) {
                 }
 
                 // Sort merged results from ugly hack
-                var compareOn = req.query.arriveBy==="true" ? 'endTime' : 'startTime';
-                var ascendingSort = req.query.arriveBy==="true" ? -1 : 1;
+                var compareOn = req.query.arriveBy==='true' ? 'endTime' : 'startTime';
+                var ascendingSort = req.query.arriveBy==='true' ? -1 : 1;
                 var compare = function (a,b) {
-                    // If one shuttle both arrives earlier and leaves later than another, 
+                    // If one shuttle both arrives earlier and leaves later than another,
                     //   then it should be favored no matter what.
                     if ((a['endTime'] <= b['endTime']) === (b['startTime'] <= a['startTime'])) {
                         return b['startTime'] - a['startTime'];
@@ -446,4 +563,26 @@ exports.plan = function(req, res) {
             res.send(metadata);
         }
     });
+};
+
+exports.predictions = function(req, res) {
+    'use strict';
+
+    var rv = {times:[]};
+
+    if (req.query.stopId && req.query.routeId) {
+        updatePredictionsAsync(function (result) {
+            if (result.predictions && result.predictions instanceof Array) {
+                var needle = result.predictions.filter(function (value) {
+                    return value.routeId===req.query.routeId && value.stopId===req.query.stopId;
+                });
+                if (needle[0]) {
+                    rv.times = needle[0].times;
+                }
+            }
+            res.send(rv);
+        });
+    } else {
+        res.send(rv);
+    }
 };

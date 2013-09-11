@@ -1,5 +1,4 @@
 var express = require('express'),
-    cradle = require('cradle'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
@@ -11,14 +10,12 @@ var express = require('express'),
     nodeUserUid = 'node';
 
 var app = express();
-var db = new(cradle.Connection)().database('api_users');
 
 app.use(express.logger());
 app.use(express.compress());
 
 //TODO: log rotation
 //TODO: Better log file than, uh, server.js.log?
-//TODO: Easy install? (Sets up couchdb server with dummy content or something?)
 //TODO: Dependency: OpenTripPlanner
 //TODO: modularize stuff like OpenTripPlanner and the map tile server so they can
 //      be deployed on other servers or something
@@ -41,35 +38,20 @@ app.use(function (req, res, next) {
 app.use(function (req, res, next) {
     'use strict';
 
-    if (req.query.apikey) {
-        db.get(req.query.apikey, function (err, doc) {
-            if (err) {
-                if (err.error === 'not_found') {
-                    console.log('API key not found: ' + req.query.apikey);
-                    return res.send(200);
-                }
-                return next(err);
-            }
-            if (doc.host === '*' || (req.headers.origin && doc.host === req.headers.origin)) {
-                res.header('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Origin', '*');
 
-                if (req.headers['access-control-request-method']) {
-                    res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
-                }
-                if (req.headers['access-control-request-headers']) {
-                    res.header('Access-Control-Allow-Headers', 'X-Requested-With');
-                }
+    if (req.headers['access-control-request-method']) {
+        res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+    }
+    if (req.headers['access-control-request-headers']) {
+        res.header('Access-Control-Allow-Headers', 'X-Requested-With');
+    }
 
-                res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
-            }
+    res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
 
-            if (req.method === 'OPTIONS') {
-                res.send(200);
-            } else  {
-                next();
-            }
-        });
-    } else {
+    if (req.method === 'OPTIONS') {
+        res.send(200);
+    } else  {
         next();
     }
 });
@@ -88,6 +70,7 @@ app.get('/shuttle/plan', shuttle.plan);
 app.get('/shuttle/routes', shuttle.routes);
 app.get('/shuttle/stops', shuttle.stops);
 app.get('/shuttle/times', shuttle.times);
+app.get('/shuttle/predictions', shuttle.predictions);
 
 app.get('/map/tile/:zoom/:x/:y', map.tile);
 

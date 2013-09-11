@@ -121,8 +121,7 @@ exports.search = function (req, res) {
                 });
                 parser.parseString(rawData);
             } else {
-                // Harumph, still needs some minor cleaning.
-                // Hopefully Elliot fixes this soon and I can remove it.
+                // Change a few arrays to objects. There can only be one display name or primary department.
                 var cookedData = JSON.parse(rawData);
 
                 var convertToString = function (input) {
@@ -139,7 +138,6 @@ exports.search = function (req, res) {
                     }
                 }
 
-                // In an ideal world, this is all we'd need.
                 res.send(cookedData);
             }
         });
