@@ -34,7 +34,26 @@ exports.get = function(req, res) {
                     console.log('error parsing Profile JSON: ' + e.message);
                 }
 
-                res.send(myResult);
+                // HORRIBLE HACK WE HOPE TO REMOVE ONE MILLENNIUM....
+                // Profiles API returns properties LikeThis. Convert to more conventional likeThis.
+                var recursiveLowercasePropertyName = function (obj) {
+                    for (var property in obj) {
+                        if (obj.hasOwnProperty(property)) {
+                            if (typeof obj[property] == "object") {
+                                obj[property] = recursiveLowercasePropertyName(obj[property]);
+                            }
+                            var newName = property.charAt(0).toLowerCase() + property.slice(1);
+                            if (newName !== property) {
+                                obj[newName] = obj[property];
+                                delete obj[property];
+                            }
+                        }
+                    }
+                    return obj;
+                };
+                var lowerCaseResult = recursiveLowercasePropertyName(myResult);
+
+                res.send(lowerCaseResult);
             }
         });
     }).on("error", function(e){
