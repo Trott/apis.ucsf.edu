@@ -3,7 +3,7 @@ var http = require('http');
 exports.get = function(req, res) {
     "use strict";
 
-    var nodeId = req.query.nodeId || '';
+    var nodeId = req.query.id || '';
     // nodeId should be digits only
     nodeId = nodeId.replace(/\D/g,'');
 
