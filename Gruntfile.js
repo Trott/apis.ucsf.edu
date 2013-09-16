@@ -30,7 +30,8 @@ module.exports = function (grunt) {
                     'js_fragments/shuttle': ['js_fragments/shuttle.src'],
                     'js_fragments/free_food': ['js_fragments/free_food.src'],
                     'js_fragments/fitness': ['js_fragments/fitness.src'],
-                    'js_fragments/library': ['js_fragments/library.src']
+                    'js_fragments/library': ['js_fragments/library.src'],
+                    'js_fragments/profile': ['js_fragments/profile.src']
                 }
             }
         },
