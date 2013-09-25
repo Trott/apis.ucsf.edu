@@ -3386,7 +3386,112 @@ purple_a,18:15:00,18:15:00,library,65,,0
 purple_a,18:30:00,18:30:00,3360 Geary,66,to Mt. Zion,0
 purple_a,18:38:00,18:38:00,mtzion,67,,0
 purple_a,18:45:00,18:45:00,3360 Geary,68,,1
-
-
-
-
+red_a,05:55:00,05:55:00,missb4th,1,,0
+red_a,06:05:00,06:05:00,mcb,2,to 16th St. BART,0
+red_a,06:10:00,06:10:00,16thbart,3,,0
+red_a,06:15:00,06:15:00,mcb,4,to Mission Bay,0
+red_a,06:25:00,06:25:00,missb4th,5,,0
+red_a,06:35:00,06:35:00,mcb,6,to 16th St. BART,0
+red_a,06:40:00,06:40:00,16thbart,7,,0
+red_a,06:45:00,06:45:00,mcb,8,to Mission Bay,0
+red_a,06:55:00,06:55:00,missb4th,9,,0
+red_a,07:05:00,07:05:00,mcb,10,to 16th St. BART,0
+red_a,07:10:00,07:10:00,16thbart,11,,0
+red_a,07:15:00,07:15:00,mcb,12,to Mission Bay,0
+red_a,07:25:00,07:25:00,missb4th,13,,0
+red_a,07:35:00,07:35:00,mcb,14,to 16th St. BART,0
+red_a,07:40:00,07:40:00,16thbart,15,,0
+red_a,07:45:00,07:45:00,mcb,16,to Mission Bay,0
+red_a,07:55:00,07:55:00,missb4th,17,,0
+red_a,08:05:00,08:05:00,mcb,18,to 16th St. BART,0
+red_a,08:10:00,08:10:00,16thbart,19,,0
+red_a,08:15:00,08:15:00,mcb,20,to Mission Bay,0
+red_a,08:25:00,08:25:00,missb4th,21,,0
+red_a,08:35:00,08:35:00,mcb,22,to 16th St. BART,0
+red_a,08:40:00,08:40:00,16thbart,23,,0
+red_a,08:45:00,08:45:00,mcb,24,to Mission Bay,0
+red_a,08:55:00,08:55:00,missb4th,25,,0
+red_a,09:05:00,09:05:00,mcb,26,to 16th St. BART,0
+red_a,09:10:00,09:10:00,16thbart,27,,0
+red_a,09:15:00,09:15:00,mcb,28,to Mission Bay,0
+red_a,09:25:00,09:25:00,missb4th,29,,0
+red_a,09:35:00,09:35:00,mcb,30,to 16th St. BART,0
+red_a,09:40:00,09:40:00,16thbart,31,,0
+red_a,09:45:00,09:45:00,mcb,32,to Mission Bay,0
+red_a,09:55:00,09:55:00,missb4th,33,,0
+red_a,10:05:00,10:05:00,mcb,34,to 16th St. BART,0
+red_a,10:10:00,10:10:00,16thbart,35,,0
+red_a,10:15:00,10:15:00,mcb,36,to Mission Bay,0
+red_a,10:25:00,10:25:00,missb4th,37,,0
+red_a,10:35:00,10:35:00,mcb,38,to 16th St. BART,0
+red_a,10:40:00,10:40:00,16thbart,39,,0
+red_a,10:45:00,10:45:00,mcb,40,to Mission Bay,0
+red_a,10:55:00,10:55:00,missb4th,41,,0
+red_a,11:05:00,11:05:00,mcb,42,to 16th St. BART,0
+red_a,11:10:00,11:10:00,16thbart,43,,0
+red_a,11:15:00,11:15:00,mcb,44,to Mission Bay,0
+red_a,11:25:00,11:25:00,missb4th,45,,0
+red_a,11:35:00,11:35:00,mcb,46,to 16th St. BART,0
+red_a,11:40:00,11:40:00,16thbart,47,,0
+red_a,11:45:00,11:45:00,mcb,48,to Mission Bay,0
+red_a,11:55:00,11:55:00,missb4th,49,,0
+red_a,12:05:00,12:05:00,mcb,50,to 16th St. BART,0
+red_a,12:10:00,12:10:00,16thbart,51,,0
+red_a,12:15:00,12:15:00,mcb,52,to Mission Bay,0
+red_a,12:25:00,12:25:00,missb4th,53,,0
+red_a,12:35:00,12:35:00,mcb,54,to 16th St. BART,0
+red_a,12:40:00,12:40:00,16thbart,55,,0
+red_a,12:45:00,12:45:00,mcb,56,to Mission Bay,0
+red_a,12:55:00,12:55:00,missb4th,57,,0
+red_a,13:05:00,13:05:00,mcb,58,to 16th St. BART,0
+red_a,13:10:00,13:10:00,16thbart,59,,0
+red_a,13:15:00,13:15:00,mcb,60,to Mission Bay,0
+red_a,13:25:00,13:25:00,missb4th,61,,0
+red_a,13:35:00,13:35:00,mcb,62,to 16th St. BART,0
+red_a,13:40:00,13:40:00,16thbart,63,,0
+red_a,13:45:00,13:45:00,mcb,64,to Mission Bay,0
+red_a,13:55:00,13:55:00,missb4th,65,,0
+red_a,14:05:00,14:05:00,mcb,66,to 16th St. BART,0
+red_a,14:10:00,14:10:00,16thbart,67,,0
+red_a,14:15:00,14:15:00,mcb,68,to Mission Bay,0
+red_a,14:25:00,14:25:00,missb4th,69,,0
+red_a,14:35:00,14:35:00,mcb,70,to 16th St. BART,0
+red_a,14:40:00,14:40:00,16thbart,71,,0
+red_a,14:45:00,14:45:00,mcb,72,to Mission Bay,0
+red_a,14:55:00,14:55:00,missb4th,73,,0
+red_a,15:05:00,15:05:00,mcb,74,to 16th St. BART,0
+red_a,15:10:00,15:10:00,16thbart,75,,0
+red_a,15:15:00,15:15:00,mcb,76,to Mission Bay,0
+red_a,15:30:00,15:30:00,missb4th,77,,0
+red_a,15:40:00,15:40:00,mcb,78,to 16th St. BART,0
+red_a,15:45:00,15:45:00,16thbart,79,,0
+red_a,15:50:00,15:50:00,mcb,80,to Mission Bay,0
+red_a,16:05:00,16:05:00,missb4th,81,,0
+red_a,16:15:00,16:15:00,mcb,82,to 16th St. BART,0
+red_a,16:20:00,16:20:00,16thbart,83,,0
+red_a,16:25:00,16:25:00,mcb,84,to Mission Bay,0
+red_a,16:45:00,16:45:00,missb4th,85,,0
+red_a,16:55:00,16:55:00,mcb,86,to 16th St. BART,0
+red_a,17:00:00,17:00:00,16thbart,87,,0
+red_a,17:05:00,17:05:00,mcb,88,to Mission Bay,0
+red_a,17:20:00,17:20:00,missb4th,89,,0
+red_a,17:30:00,17:30:00,mcb,90,to 16th St. BART,0
+red_a,17:35:00,17:35:00,16thbart,91,,0
+red_a,17:40:00,17:40:00,mcb,92,to Mission Bay,0
+red_a,17:55:00,17:55:00,missb4th,93,,0
+red_a,18:05:00,18:05:00,mcb,94,to 16th St. BART,0
+red_a,18:10:00,18:10:00,16thbart,95,,0
+red_a,18:15:00,18:15:00,mcb,96,to Mission Bay,0
+red_a,18:30:00,18:30:00,missb4th,97,,0
+red_a,18:40:00,18:40:00,mcb,98,to 16th St. BART,0
+red_a,18:45:00,18:45:00,16thbart,99,,0
+red_a,18:50:00,18:50:00,mcb,100,to Mission Bay,0
+red_a,19:00:00,19:00:00,missb4th,101,,0
+red_a,19:10:00,19:10:00,mcb,102,to 16th St. BART,0
+red_a,19:15:00,19:15:00,16thbart,103,,0
+red_a,19:20:00,19:20:00,mcb,104,to Mission Bay,0
+red_a,19:30:00,19:30:00,missb4th,105,,0
+red_a,19:40:00,19:40:00,mcb,106,to 16th St. BART,0
+red_a,19:45:00,19:45:00,16thbart,107,,0
+red_a,19:50:00,19:50:00,mcb,108,to Mission Bay,0
+red_a,20:00:00,20:00:00,missb4th,109,,1
