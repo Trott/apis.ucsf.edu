@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Map Tile Server (Dev@UCSF)</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="page-header">
+            <h1>Dev@UCSF</h1>
+        </div>
+        <h2>Map Tile Server</h2>
+        <p>The map tile server takes rest calls of the form <code>http://apis.ucsf.edu/map/tile/&lt;zoom>/&lt;x>/&lt;y></code>. It will return tiles from the <a href="http://pathway.ucsfmedicalcenter.org/">Pathway maps for UCSF</a>.</p> 
+        <h3>Demo (Google Maps)</h3>
+        <div id="map_canvas" style="height:320px; width:320px"></div>
+        <script>
+            function render () {
+                var mapType = new google.maps.ImageMapType({
+                    tileSize: new google.maps.Size(256,256),
+                    getTileUrl: function(coord,zoom) {
+                        return "http://apis.ucsf.edu/map/tile/"+zoom+"/"+coord.x+"/"+coord.y;
+                    }
+                });
+                var map = new google.maps.Map(document.getElementById("map_canvas"),
+                    {
+                        center: new google.maps.LatLng(37.763154, -122.457941),
+                        mapTypeId: google.maps.MapTypeId.ROADMAP,
+                        zoom: 17,
+                        mapTypeControl: false
+                    }
+                );
+                map.overlayMapTypes.insertAt(0, mapType);
+            }
+        </script>
+        <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;callback=render"></script>
+        <h4>Demo Source Code</h4>
+<pre>
+&lt;div id="map_canvas" style="height:320px; width:320px">&lt;/div>
+&lt;script>
+    function render () {
+        var mapType = new google.maps.ImageMapType({
+            tileSize: new google.maps.Size(256,256),
+            getTileUrl: function(coord,zoom) {
+                return "http://apis.ucsf.edu/map/tile/"+zoom+"/"+coord.x+"/"+coord.y;
+            }
+        });
+        var map = new google.maps.Map(document.getElementById("map_canvas"),
+            {
+                center: new google.maps.LatLng(37.763154, -122.457941),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                zoom: 17,
+                mapTypeControl: false
+            }
+        );
+        map.overlayMapTypes.insertAt(0, mapType);
+    }
+&lt;/script>
+&lt;script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;amp;callback=render">&lt;/script>
+</pre>
+
+<h3>Demo (Leaflet)</h3>
+
+    <div id="map" style="height:320px; width:320px"></div>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+    <![endif]-->
+
+    <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
+    <script>
+    // create a map in the "map" div, set the view to a given place and zoom
+    var map = L.map('map').setView([37.763154, -122.457941], 17);
+
+    // add an underlying OpenStreetMap tile layer
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    // add topmost UCSF tile
+    L.tileLayer('http://apis.ucsf.edu/map/tile/{z}/{x}/{y}', {
+        attribution: '&copy; UC Regents'
+    }).addTo(map);
+    </script>
+
+
+
+
+
+        
+    <h4>Demo Source Code</h4>
+<pre>
+&lt;div id="map" style="height:320px; width:320px">&lt;/div>
+&lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+&lt;!--[if lte IE 8]>
+    &lt;link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+&lt;![endif]-->
+
+&lt;script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js">&lt;/script>
+&lt;script>
+// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map').setView([37.763154, -122.457941], 17);
+
+// add an underlying OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&amp;copy; &lt;a href="http://osm.org/copyright">OpenStreetMap&lt;/a> contributors'
+}).addTo(map);
+// add topmost UCSF tile
+L.tileLayer('http://apis.ucsf.edu/map/tile/{z}/{x}/{y}', {
+    attribution: '&amp;copy; UC Regents'
+}).addTo(map);
+&lt;/script>
+</pre>
+
+
+
+    </div>
+</body>
+</html>

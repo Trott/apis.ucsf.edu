@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Library API (Dev@UCSF)</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="http://apis.ucsf.edu/jsapi?library"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="page-header">
+            <h1>Dev@UCSF</h1>
+        </div>
+        <h2>Library JavaScript API</h2>
+        <h3>1. Insert a &lt;script> tag in your page to load the API</h3>
+        <pre>&lt;script src="http://apis.ucsf.edu/jsapi?library">&lt;/script></pre>
+        <h3>2. Call <code>UCSF.Library.hours()</code></h3>
+        <p><code>UCSF.Library.hours()</code> takes three parameters.</p>
+        <ol>
+            <li><code>options</code> object reserved for later use; use an empty object for now</li>
+            <li><code>success</code> callback that is passed a <code>results</code> object if there were no errors</li>
+            <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
+        </ol>
+        <h3>Demo</h3>
+        <form action="javascript:search()">
+            <input type="submit" id="submit" value="Run UCSF.Library.hours()" />
+        </form>
+        <h4>Results</h4>
+        <pre id="search_results">JSON results will appear here.</pre>
+        <script>
+            function search() {
+                document.getElementById("search_results").innerHTML = "<progress>Loading...</progress>";
+
+                var options = {};
+
+                var successCallback = render;
+                var failureCallback = null; // failureCallback is optional
+
+                UCSF.Library.hours(options, successCallback, failureCallback);
+            }
+
+            function render(result) {
+                var search_results = document.getElementById("search_results");
+                var resultText = JSON.stringify(result, null, 4);
+                if ("textContent" in search_results) {
+                    search_results.textContent = resultText;
+                } else {
+                    search_results.innerText = resultText;
+                }
+            };
+        </script>
+        <h4>Demo Source Code</h4>
+        <pre>
+&lt;form action="javascript:search()">
+    &lt;input type="submit" id="submit" value="Run UCSF.Library.hours()" />
+&lt;/form>
+&lt;pre id="search_results">JSON results will appear here.&lt;/pre>
+&lt;script>
+    function search() {
+        document.getElementById("search_results").innerHTML = "&lt;progress>Loading...&lt;/progress>";
+
+        var options = {};
+
+        var successCallback = render;
+        var failureCallback = null; // failureCallback is optional
+
+        UCSF.Library.hours(options, successCallback, failureCallback);
+    }
+
+    function render(result) {
+        var search_results = document.getElementById("search_results");
+        var resultText = JSON.stringify(result, null, 4);
+        if ("textContent" in search_results) {
+            search_results.textContent = resultText;
+        } else {
+            search_results.innerText = resultText;
+        }
+    };
+&lt;/script>
+</pre>
+    </div>
+</body>
+</html>
