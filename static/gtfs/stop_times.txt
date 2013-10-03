@@ -1194,71 +1194,71 @@ blackB,19:20:00,19:20:00,library,57,,0
 blackB,19:35:00,19:35:00,mtzion,58,,0
 blackB,19:40:00,19:40:00,lhts,59,,0
 purpleA,6:15:00,6:15:00,library,1,,0
-purpleA,6:30:00,6:30:00,3360 Geary,2,,0
+purpleA,6:30:00,6:30:00,3360 Geary,2,to Mt. Zion,0
 purpleA,6:38:00,6:38:00,mtzion,3,,0
-purpleA,6:45:00,6:45:00,3360 Geary,4,,0
+purpleA,6:45:00,6:45:00,3360 Geary,4,to Parnassus,0
 purpleA,7:00:00,7:00:00,library,5,,0
-purpleA,7:15:00,7:15:00,3360 Geary,6,,0
+purpleA,7:15:00,7:15:00,3360 Geary,6,to Mt. Zion,0
 purpleA,7:23:00,7:23:00,mtzion,7,,0
-purpleA,7:30:00,7:30:00,3360 Geary,8,,0
+purpleA,7:30:00,7:30:00,3360 Geary,8,to Parnassus,0
 purpleA,7:45:00,7:45:00,library,9,,0
-purpleA,8:00:00,8:00:00,3360 Geary,10,,0
+purpleA,8:00:00,8:00:00,3360 Geary,10,to Mt. Zion,0
 purpleA,8:08:00,8:08:00,mtzion,11,,0
-purpleA,8:15:00,8:15:00,3360 Geary,12,,0
+purpleA,8:15:00,8:15:00,3360 Geary,12,to Parnassus,0
 purpleA,8:30:00,8:30:00,library,13,,0
-purpleA,8:45:00,8:45:00,3360 Geary,14,,0
+purpleA,8:45:00,8:45:00,3360 Geary,14,to Mt. Zion,0
 purpleA,8:53:00,8:53:00,mtzion,15,,0
-purpleA,9:00:00,9:00:00,3360 Geary,16,,0
+purpleA,9:00:00,9:00:00,3360 Geary,16,to Parnassus,0
 purpleA,9:15:00,9:15:00,library,17,,0
-purpleA,9:30:00,9:30:00,3360 Geary,18,,0
+purpleA,9:30:00,9:30:00,3360 Geary,18,to Mt. Zion,0
 purpleA,9:38:00,9:38:00,mtzion,19,,0
-purpleA,9:45:00,9:45:00,3360 Geary,20,,0
+purpleA,9:45:00,9:45:00,3360 Geary,20,to Parnassus,0
 purpleA,10:00:00,10:00:00,library,21,,0
-purpleA,10:15:00,10:15:00,3360 Geary,22,,0
+purpleA,10:15:00,10:15:00,3360 Geary,22,to Mt. Zion,0
 purpleA,10:23:00,10:23:00,mtzion,23,,0
-purpleA,10:30:00,10:30:00,3360 Geary,24,,0
+purpleA,10:30:00,10:30:00,3360 Geary,24,to Parnassus,0
 purpleA,10:45:00,10:45:00,library,25,,0
-purpleA,11:00:00,11:00:00,3360 Geary,26,,0
+purpleA,11:00:00,11:00:00,3360 Geary,26,to Mt. Zion,0
 purpleA,11:08:00,11:08:00,mtzion,27,,0
-purpleA,11:15:00,11:15:00,3360 Geary,28,,0
+purpleA,11:15:00,11:15:00,3360 Geary,28,to Parnassus,0
 purpleA,11:30:00,11:30:00,library,29,,0
-purpleA,11:45:00,11:45:00,3360 Geary,30,,0
+purpleA,11:45:00,11:45:00,3360 Geary,30,to Mt. Zion,0
 purpleA,11:53:00,11:53:00,mtzion,31,,0
-purpleA,12:00:00,12:00:00,3360 Geary,32,,0
+purpleA,12:00:00,12:00:00,3360 Geary,32,to Parnassus,0
 purpleA,12:15:00,12:15:00,library,33,,0
-purpleA,12:30:00,12:30:00,3360 Geary,34,,0
+purpleA,12:30:00,12:30:00,3360 Geary,34,to Mt. Zion,0
 purpleA,12:38:00,12:38:00,mtzion,35,,0
-purpleA,12:45:00,12:45:00,3360 Geary,36,,0
+purpleA,12:45:00,12:45:00,3360 Geary,36,to Parnassus,0
 purpleA,13:00:00,13:00:00,library,37,,0
-purpleA,13:15:00,13:15:00,3360 Geary,38,,0
+purpleA,13:15:00,13:15:00,3360 Geary,38,to Mt. Zion,0
 purpleA,13:23:00,13:23:00,mtzion,39,,0
-purpleA,13:30:00,13:30:00,3360 Geary,40,,0
+purpleA,13:30:00,13:30:00,3360 Geary,40,to Parnassus,0
 purpleA,13:45:00,13:45:00,library,41,,0
-purpleA,14:00:00,14:00:00,3360 Geary,42,,0
+purpleA,14:00:00,14:00:00,3360 Geary,42,to Mt. Zion,0
 purpleA,14:08:00,14:08:00,mtzion,43,,0
-purpleA,14:15:00,14:15:00,3360 Geary,44,,0
+purpleA,14:15:00,14:15:00,3360 Geary,44,to Parnassus,0
 purpleA,14:30:00,14:30:00,library,45,,0
-purpleA,14:45:00,14:45:00,3360 Geary,46,,0
+purpleA,14:45:00,14:45:00,3360 Geary,46,to Mt. Zion,0
 purpleA,14:53:00,14:53:00,mtzion,47,,0
-purpleA,15:00:00,15:00:00,3360 Geary,48,,0
+purpleA,15:00:00,15:00:00,3360 Geary,48,to Parnassus,0
 purpleA,15:15:00,15:15:00,library,49,,0
-purpleA,15:30:00,15:30:00,3360 Geary,50,,0
+purpleA,15:30:00,15:30:00,3360 Geary,50,to Mt. Zion,0
 purpleA,15:38:00,15:38:00,mtzion,51,,0
-purpleA,15:45:00,15:45:00,3360 Geary,52,,0
+purpleA,15:45:00,15:45:00,3360 Geary,52,to Parnassus,0
 purpleA,16:00:00,16:00:00,library,53,,0
-purpleA,16:15:00,16:15:00,3360 Geary,54,,0
+purpleA,16:15:00,16:15:00,3360 Geary,54,to Mt. Zion,0
 purpleA,16:23:00,16:23:00,mtzion,55,,0
-purpleA,16:30:00,16:30:00,3360 Geary,56,,0
+purpleA,16:30:00,16:30:00,3360 Geary,56,to Parnassus,0
 purpleA,16:45:00,16:45:00,library,57,,0
-purpleA,17:00:00,17:00:00,3360 Geary,58,,0
+purpleA,17:00:00,17:00:00,3360 Geary,58,to Mt. Zion,0
 purpleA,17:08:00,17:08:00,mtzion,59,,0
-purpleA,17:15:00,17:15:00,3360 Geary,60,,0
+purpleA,17:15:00,17:15:00,3360 Geary,60,to Parnassus,0
 purpleA,17:30:00,17:30:00,library,61,,0
-purpleA,17:45:00,17:45:00,3360 Geary,62,,0
+purpleA,17:45:00,17:45:00,3360 Geary,62,to Mt. Zion,0
 purpleA,17:53:00,17:53:00,mtzion,63,,0
-purpleA,18:00:00,18:00:00,3360 Geary,64,,0
+purpleA,18:00:00,18:00:00,3360 Geary,64,to Parnassus,0
 purpleA,18:15:00,18:15:00,library,65,,0
-purpleA,18:30:00,18:30:00,3360 Geary,66,,0
+purpleA,18:30:00,18:30:00,3360 Geary,66,to Mt. Zion,0
 purpleA,18:38:00,18:38:00,mtzion,67,,0
 purpleA,18:45:00,18:45:00,3360 Geary,68,,0
 pinkA,5:15:00,5:15:00,parkezar,1,,0
