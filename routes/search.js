@@ -7,11 +7,9 @@ exports.lexicomp = function (req, res) {
 
     var options = {
         host: 'online.lexi.com',
-        port: 80,
-        path: '/lco/action/search?t=name&' + querystring.stringify({q: req.query.q})
+        headers: {'user-agent': 'curl/7.22.0'},
+        path: '/lco/action/search?' + querystring.stringify({q: req.query.q, t:'name'})
     };
-
-    console.log(options.path);
 
     http.get(options, function (resp) {
         if (resp.statusCode > 400) {
@@ -23,13 +21,11 @@ exports.lexicomp = function (req, res) {
         var rawData = '';
 
         resp.on('data', function (chunk) {
-            console.log("BODY: " + chunk);
             rawData += chunk;
         });
 
         resp.on('end', function () {
-            console.log('here we go');
-            res.send(rawData);
+            res.send('success!\n\n' + rawData);
         });
     }).on('error', function (e) {
         var error = e.message || 'Unknown error';
