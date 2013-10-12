@@ -1,141 +1,36 @@
 route_id,service_id,trip_id,trip_headsign
-blue,WD,blueA,
-blue,WD,blueB,
-blue,WD,blueC,
-blue,WD,blueD,
-gold,WD,goldA,
-gold,WD,goldB,
-gold,WD,goldC,
-gold,WD,goldD,
-lime,WD,limeA,
-lime,WD,limeB,
-lime,WD,limeC,
-grey,WD,greyA,
-grey,WD,greyB,
-grey,WD,greyC,
-red,WD,redA_1,to 16th St. BART
-red,WD,redA_2,to Mission Bay
-red,WD,redA_3,to 16th St. BART
-red,WD,redA_4,to Mission Bay
-red,WD,redA_5,to 16th St. BART
-red,WD,redA_6,to Mission Bay
-red,WD,redA_7,to 16th St. BART
-red,WD,redA_8,to Mission Bay
-red,WD,redA_9,to 16th St. BART
-red,WD,redA_10,to Mission Bay
-red,WD,redA_11,to 16th St. BART
-red,WD,redA_12,to Mission Bay
-red,WD,redA_13,to 16th St. BART
-red,WD,redA_14,to Mission Bay
-red,WD,redA_15,to 16th St. BART
-red,WD,redA_16,to Mission Bay
-red,WD,redA_17,to 16th St. BART
-red,WD,redA_18,to Mission Bay
-red,WD,redA_19,to 16th St. BART
-red,WD,redA_20,to Mission Bay
-red,WD,redA_21,to 16th St. BART
-red,WD,redA_22,to Mission Bay
-red,WD,redA_23,to 16th St. BART
-red,WD,redA_24,to Mission Bay
-red,WD,redA_25,to 16th St. BART
-red,WD,redA_26,to Mission Bay
-red,WD,redA_27,to 16th St. BART
-red,WD,redA_28,to Mission Bay
-red,WD,redA_29,to 16th St. BART
-red,WD,redA_30,to Mission Bay
-red,WD,redA_31,to 16th St. BART
-red,WD,redA_32,to Mission Bay
-red,WD,redA_33,to 16th St. BART
-red,WD,redA_34,to Mission Bay
-red,WD,redA_35,to 16th St. BART
-red,WD,redA_36,to Mission Bay
-red,WD,redA_37,to 16th St. BART
-red,WD,redA_38,to Mission Bay
-red,WD,redA_39,to 16th St. BART
-red,WD,redA_40,to Mission Bay
-red,WD,redA_41,to 16th St. BART
-red,WD,redA_42,to Mission Bay
-red,WD,redA_43,to 16th St. BART
-red,WD,redA_44,to Mission Bay
-red,WD,redA_45,to 16th St. BART
-red,WD,redA_46,to Mission Bay
-red,WD,redA_47,to 16th St. BART
-red,WD,redA_48,to Mission Bay
-red,WD,redA_49,to 16th St. BART
-red,WD,redA_50,to Mission Bay
-red,WD,redA_51,to 16th St. BART
-red,WD,redA_52,to Mission Bay
-red,WD,redA_53,to 16th St. BART
-red,WD,redA_54,to Mission Bay
-red,WD,redB_1,to 16th St. BART
-red,WD,redB_2,to Mission Bay
-red,WD,redB_3,to 16th St. BART
-red,WD,redB_4,to Mission Bay
-red,WD,redB_5,to 16th St. BART
-red,WD,redB_6,to Mission Bay
-red,WD,redB_7,to 16th St. BART
-red,WD,redB_8,to Mission Bay
-red,WD,redB_9,to 16th St. BART
-red,WD,redB_10,to Mission Bay
-red,WD,redB_11,to 16th St. BART
-red,WD,redB_12,to Mission Bay
-red,WD,redB_13,to 16th St. BART
-red,WD,redB_14,to Mission Bay
-red,WD,redB_15,to 16th St. BART
-red,WD,redB_16,to Mission Bay
-red,WD,redB_17,to 16th St. BART
-red,WD,redB_18,to Mission Bay
-red,WD,redB_19,to 16th St. BART
-red,WD,redB_20,to Mission Bay
-red,WD,redB_21,to 16th St. BART
-red,WD,redB_22,to Mission Bay
-red,WD,redB_23,to 16th St. BART
-red,WD,redB_24,to Mission Bay
-red,WD,redB_25,to 16th St. BART
-red,WD,redB_26,to Mission Bay
-red,WD,redB_27,to 16th St. BART
-red,WD,redB_28,to Mission Bay
-red,WD,redB_29,to 16th St. BART
-red,WD,redB_30,to Mission Bay
-red,WD,redB_31,to 16th St. BART
-red,WD,redB_32,to Mission Bay
-red,WD,redB_33,to 16th St. BART
-red,WD,redB_34,to Mission Bay
-red,WD,redB_35,to 16th St. BART
-red,WD,redB_36,to Mission Bay
-red,WD,redB_37,to 16th St. BART
-red,WD,redB_38,to Mission Bay
-red,WD,redB_39,to 16th St. BART
-red,WD,redB_40,to Mission Bay
-red,WD,redB_41,to 16th St. BART
-red,WD,redB_42,to Mission Bay
-red,WD,redB_43,to 16th St. BART
-red,WD,redB_44,to Mission Bay
-red,WD,redB_45,to 16th St. BART
-red,WD,redB_46,to Mission Bay
-red,WD,redB_47,to 16th St. BART
-red,WD,redB_48,to Mission Bay
-red,WD,redB_49,to 16th St. BART
-red,WD,redB_50,to Mission Bay
-red,WD,redB_51,to 16th St. BART
-red,WD,redB_52,to Mission Bay
-tan,WD,tanA,
-tan,WD,tanB,
-black,WD,blackA,
-black,WD,blackB,
-purple,WD,purpleA,
-pink,WD,pinkA,
-green,WD,greenA,
-green,WD,greenB,
-bronze,WD,bronzeA,
-bronze,WD,bronzeB,
-bronze,WD,bronzeC,
 yellow,WD,yellowA,
 yellow,WD,yellowB,
 yellow,WD,yellowC,
-va,WD,vaA,
-va,WD,vaB,
-va,WD,vaC,
 black,weekday,black_a,
 black,weekday,black_b,
+blue,weekday,blue_a,
+blue,weekday,blue_b,
+blue,weekday,blue_c,
+blue,weekday,blue_d,
+blue,weekday,blue_e,
 bronze,weekday,bronze_a,
+gold,weekday,gold_a,
+gold,weekday,gold_b,
+gold,weekday,gold_c,
+gold,weekday,gold_d,
+gold,weekday,gold_e,
+green,weekday,green_a,
+green,weekday,green_b,
+grey,weekday,grey_a,
+grey,weekday,grey_b,
+grey,weekday,grey_c,
+grey,weekday,grey_d,
+lime,weekday,lime_a,
+lime,weekday,lime_b,
+lime,weekday,lime_c,
+pink,weekday,pink_a,
+purple,weekday,purple_a,
+red,weekday,red_a,
+red,weekday,red_b,
+red,weekday,red_c,
+tan,weekday,tan_a,
+tan,weekday,tan_b,
+va,weekday,va_a,
+va,weekday,va_b,
+
