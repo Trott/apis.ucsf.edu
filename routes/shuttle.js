@@ -329,7 +329,7 @@ exports.times = function(req, res) {
     pathOptions.id = req.query.stopId;
     pathOptions.routeId = req.query.routeId;
     pathOptions.startTime = req.query.startTime;
-    pathOptions.endTime = req.query.endTime;
+    pathOptions.endTime = req.query.endTime || parseInt(startTime,10) + (24 * 60 * 60 * 1000);
     otpOptions.path += querystring.stringify(pathOptions);
 
     http.get(otpOptions, function(resp) {
@@ -386,7 +386,7 @@ exports.plan = function(req, res) {
             }
         },
         "ucsf_MB": function (endpoint) {
-            return ["ucsf_missb4th","ucsf_missb4we"];
+            return ["ucsf_missb4th", "ucsf_missb4we"];
         },
         "ucsf_2300 Harrison": function (endpoint) {
             return ["ucsf_23harrnb_ib", "ucsf_23harrsb_ob"];
