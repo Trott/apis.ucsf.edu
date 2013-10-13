@@ -309,19 +309,19 @@ blue_e,10:02:00,10:02:00,mtzion,10,,0
 blue_e,10:17:00,10:17:00,parlppi,11,,0
 blue_e,10:40:00,10:40:00,sfgh,12,,0
 blue_e,11:00:00,11:00:00,missb4th,13,,1
-blue_e,14:45:00,14:45:00,missb4th,1,,0
-blue_e,15:07:00,15:07:00,mtzion,2,,0
-blue_e,15:22:00,15:22:00,parlppi,3,,0
-blue_e,15:45:00,15:45:00,sfgh,4,,0
-blue_e,16:05:00,16:05:00,missb4th,5,,0
-blue_e,16:27:00,16:27:00,mtzion,6,,0
-blue_e,16:42:00,16:42:00,parlppi,7,,0
-blue_e,17:05:00,17:05:00,sfgh,8,,0
-blue_e,17:25:00,17:25:00,missb4th,9,,0
-blue_e,17:47:00,17:47:00,mtzion,10,,0
-blue_e,18:02:00,18:02:00,parlppi,11,,0
-blue_e,18:25:00,18:25:00,sfgh,12,,0
-blue_e,18:45:00,18:45:00,missb4th,13,,1
+blue_e,14:45:00,14:45:00,missb4th,14,,0
+blue_e,15:07:00,15:07:00,mtzion,15,,0
+blue_e,15:22:00,15:22:00,parlppi,16,,0
+blue_e,15:45:00,15:45:00,sfgh,17,,0
+blue_e,16:05:00,16:05:00,missb4th,18,,0
+blue_e,16:27:00,16:27:00,mtzion,19,,0
+blue_e,16:42:00,16:42:00,parlppi,20,,0
+blue_e,17:05:00,17:05:00,sfgh,21,,0
+blue_e,17:25:00,17:25:00,missb4th,22,,0
+blue_e,17:47:00,17:47:00,mtzion,23,,0
+blue_e,18:02:00,18:02:00,parlppi,24,,0
+blue_e,18:25:00,18:25:00,sfgh,25,,0
+blue_e,18:45:00,18:45:00,missb4th,26,,1
 bronze_a,6:55:00,6:55:00,parlppi,1,,0
 bronze_a,7:00:00,7:00:00,75behr,2,,0
 bronze_a,7:04:00,7:04:00,surgedown,3,,0
@@ -668,19 +668,19 @@ gold_e,09:50:00,09:50:00,sfgh,10,,0
 gold_e,10:12:00,10:12:00,parlppi,11,,0
 gold_e,10:28:00,10:28:00,mtzion,12,,0
 gold_e,10:55:00,10:55:00,missb4we,13,,1
-gold_e,14:55:00,14:55:00,missb4we,1,,0
-gold_e,15:10:00,15:10:00,sfgh,2,,0
-gold_e,15:32:00,15:32:00,parlppi,3,,0
-gold_e,15:48:00,15:48:00,mtzion,4,,0
-gold_e,16:15:00,16:15:00,missb4we,5,,0
-gold_e,16:30:00,16:30:00,sfgh,6,,0
-gold_e,16:52:00,16:52:00,parlppi,7,,0
-gold_e,17:08:00,17:08:00,mtzion,8,,0
-gold_e,17:35:00,17:35:00,missb4we,9,,0
-gold_e,17:50:00,17:50:00,sfgh,10,,0
-gold_e,18:12:00,18:12:00,parlppi,11,,0
-gold_e,18:28:00,18:28:00,mtzion,12,,0
-gold_e,18:55:00,18:55:00,missb4we,13,,1
+gold_e,14:55:00,14:55:00,missb4we,14,,0
+gold_e,15:10:00,15:10:00,sfgh,15,,0
+gold_e,15:32:00,15:32:00,parlppi,16,,0
+gold_e,15:48:00,15:48:00,mtzion,17,,0
+gold_e,16:15:00,16:15:00,missb4we,18,,0
+gold_e,16:30:00,16:30:00,sfgh,19,,0
+gold_e,16:52:00,16:52:00,parlppi,20,,0
+gold_e,17:08:00,17:08:00,mtzion,21,,0
+gold_e,17:35:00,17:35:00,missb4we,22,,0
+gold_e,17:50:00,17:50:00,sfgh,23,,0
+gold_e,18:12:00,18:12:00,parlppi,24,,0
+gold_e,18:28:00,18:28:00,mtzion,25,,0
+gold_e,18:55:00,18:55:00,missb4we,26,,1
 green_a,06:25:00,06:25:00,missb4we,1,to China Basin,0
 green_a,06:30:00,06:30:00,mboi,2,,0
 green_a,06:38:00,06:38:00,caltrain,3,,0
@@ -1634,27 +1634,27 @@ red_c,09:40:00,09:40:00,mcb,26,to 16th St. BART,0
 red_c,09:45:00,09:45:00,16thbart,27,,0
 red_c,09:50:00,09:50:00,mcb,28,to Mission Bay,0
 red_c,10:00:00,10:00:00,missb4th,29,,1
-red_c,15:05:00,15:05:00,missb4th,1,,0
-red_c,15:15:00,15:15:00,mcb,2,to 16th St. BART,0
-red_c,15:20:00,15:20:00,16thbart,3,,0
-red_c,15:25:00,15:25:00,mcb,4,to Mission Bay,0
-red_c,15:40:00,15:40:00,missb4th,5,,0
-red_c,15:50:00,15:50:00,mcb,6,to 16th St. BART,0
-red_c,15:55:00,15:55:00,16thbart,7,,0
-red_c,16:00:00,16:00:00,mcb,8,to Mission Bay,0
-red_c,16:15:00,16:15:00,missb4th,9,,0
-red_c,16:25:00,16:25:00,mcb,10,to 16th St. BART,0
-red_c,16:30:00,16:30:00,16thbart,11,,0
-red_c,16:35:00,16:35:00,mcb,12,to Mission Bay,0
-red_c,16:50:00,16:50:00,missb4th,13,,0
-red_c,17:00:00,17:00:00,mcb,14,to 16th St. BART,0
-red_c,17:05:00,17:05:00,16thbart,15,,0
-red_c,17:10:00,17:10:00,mcb,16,to Mission Bay,0
-red_c,17:25:00,17:25:00,missb4th,17,,0
-red_c,17:35:00,17:35:00,mcb,18,to 16th St. BART,0
-red_c,17:40:00,17:40:00,16thbart,19,,0
-red_c,17:45:00,17:45:00,mcb,20,to Mission Bay,0
-red_c,18:00:00,18:00:00,missb4th,21,,1
+red_c,15:05:00,15:05:00,missb4th,30,,0
+red_c,15:15:00,15:15:00,mcb,31,to 16th St. BART,0
+red_c,15:20:00,15:20:00,16thbart,32,,0
+red_c,15:25:00,15:25:00,mcb,33,to Mission Bay,0
+red_c,15:40:00,15:40:00,missb4th,34,,0
+red_c,15:50:00,15:50:00,mcb,35,to 16th St. BART,0
+red_c,15:55:00,15:55:00,16thbart,36,,0
+red_c,16:00:00,16:00:00,mcb,37,to Mission Bay,0
+red_c,16:15:00,16:15:00,missb4th,38,,0
+red_c,16:25:00,16:25:00,mcb,39,to 16th St. BART,0
+red_c,16:30:00,16:30:00,16thbart,40,,0
+red_c,16:35:00,16:35:00,mcb,41,to Mission Bay,0
+red_c,16:50:00,16:50:00,missb4th,42,,0
+red_c,17:00:00,17:00:00,mcb,43,to 16th St. BART,0
+red_c,17:05:00,17:05:00,16thbart,44,,0
+red_c,17:10:00,17:10:00,mcb,45,to Mission Bay,0
+red_c,17:25:00,17:25:00,missb4th,46,,0
+red_c,17:35:00,17:35:00,mcb,47,to 16th St. BART,0
+red_c,17:40:00,17:40:00,16thbart,48,,0
+red_c,17:45:00,17:45:00,mcb,49,to Mission Bay,0
+red_c,18:00:00,18:00:00,missb4th,50,,1
 tan_a,06:50:00,06:50:00,library,1,,0
 tan_a,07:05:00,07:05:00,lhts,2,,0
 tan_a,07:10:00,07:10:00,mtzion,3,,0
@@ -1983,7 +1983,7 @@ yellow_b,15:59:00,15:59:00,mcb,101,,0
 yellow_b,16:06:00,16:06:00,16thbart,102,,0
 yellow_b,16:11:00,16:11:00,23harrsb_ob,103,,0
 yellow_b,16:19:00,16:19:00,sfgh,104,,0
-yellow_b,16:37:00,16:27:00,23harrnb_ib,105,,0
+yellow_b,16:27:00,16:27:00,23harrnb_ib,105,,0
 yellow_b,16:32:00,16:32:00,mcb,106,,0
 yellow_b,16:39:00,16:39:00,16thbart,107,,0
 yellow_b,16:44:00,16:44:00,23harrsb_ob,108,,0
