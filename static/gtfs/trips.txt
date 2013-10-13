@@ -1,7 +1,4 @@
 route_id,service_id,trip_id,trip_headsign
-yellow,WD,yellowA,
-yellow,WD,yellowB,
-yellow,WD,yellowC,
 black,weekday,black_a,
 black,weekday,black_b,
 blue,weekday,blue_a,
@@ -33,4 +30,5 @@ tan,weekday,tan_a,
 tan,weekday,tan_b,
 va,weekday,va_a,
 va,weekday,va_b,
-
+yellow,weekday,yellow_a,
+yellow,weekday,yellow_b,
