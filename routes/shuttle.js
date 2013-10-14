@@ -84,11 +84,6 @@ var updatePredictionsAsync = function (callback) {
                     times = p[i].direction[0].prediction.map(mapCallback);
                 }
 
-                // Why oh why are the Black and Tan shuttles different from each other?
-                if (stopId === "library_a") {
-                    stopId = "library";
-                }
-
                 rv.predictions.push({routeId: routeId, stopId: stopId, times: times});
             }
 
@@ -111,29 +106,26 @@ var updatePredictionsAsync = function (callback) {
 
     // TODO: Instead of hard-coding the shuttles and locations, retrieve via
     //    http://webservices.nextbus.com/service/publicXMLFeed?command=routeConfig&a=ucsf
-    // Not doing that right now because the Black/Tan shuttles (see above) and Yellow shuttle
-    //     data there defy sanity.
+    // Not doing that right now because the Yellow shuttle data there defy sanity.
     var options = {
         hostname: "webservices.nextbus.com",
         path: "/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf" +
             "&stops=grey%7Cmissb4we" +
             "&stops=grey%7Cparlppi" +
-            "&stops=blue%7Cmissb4th" +
+            "&stops=blue%7Cmissb4we" +
             "&stops=blue%7Cparlppi" +
             "&stops=blue%7Cmtzion" +
             "&stops=blue%7Csfgh" +
             "&stops=gold%7Cmissb4we" +
             "&stops=gold%7Csfgh" +
-            "&stops=gold%7Clibrary" +
+            "&stops=gold%7Cparlppi" +
             "&stops=gold%7Cmtzion" +
             "&stops=bronze%7C75behr" +
             "&stops=bronze%7Cparlppi" +
-            "&stops=bronze%7Cparacc" +
-            "&stops=bronze%7Clibrary" +
             "&stops=bronze%7Csurgedown" +
             "&stops=black%7Clhts" +
             "&stops=black%7Cmtzion" +
-            "&stops=black%7Clibrary_a" +
+            "&stops=black%7Clibrary" +
             "&stops=tan%7Clhts" +
             "&stops=tan%7Cmtzion" +
             "&stops=tan%7Clibrary"
