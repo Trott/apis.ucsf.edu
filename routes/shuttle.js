@@ -341,12 +341,12 @@ exports.times = function(req, res) {
                     rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==="departure"; });
                     // Deduplicate thanks to breaking Red shuttle etc. into multiple routes to bypass stop_headsign absence
                     rv.times = rv.times.filter( function(el, index, arrayObject) {
-                        if (arrayObject.length < index+1) {
+                        if (arrayObject.length === index+1) {
                             return true;
                         }
                         var next=arrayObject[index+1];
                         return el.time !== next.time ||
-                            (el.trip && el.trip.directionId) !== (next.trip && next.trip.directionId);
+                            (el.trip && el.trip.directionId) === (next.trip && next.trip.directionId);
                     });
                 } else {
                     rv = result;
