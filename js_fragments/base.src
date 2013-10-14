@@ -63,8 +63,15 @@ var UCSF = UCSF || (function () {
             if (! xhr && callee) {
                 UCSF._ie7q.push({callee:callee, options:options, success:success, failure:failure});
             } else {
-                xhr.onload = function () {
-                    success(JSON.parse(xhr.responseText));
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === 4) {
+                        xhr.onreadystatechange = function () {};
+                        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304 || (xhr.status == 0 && protocol == 'file:')) {
+                            success(JSON.parse(xhr.responseText));
+                        } else {
+                            failure(xhr.statusText);
+                        }
+                    }
                 };
                 xhr.onerror = failure;
                 xhr.send();
