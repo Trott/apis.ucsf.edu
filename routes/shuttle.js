@@ -339,9 +339,19 @@ exports.times = function(req, res) {
                 var rv = {};
                 if (result.stopTimes) {
                     rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==="departure"; });
+                    // Deduplicate thanks to breaking Red shuttle etc. into multiple routes to bypass stop_headsign absence
+                    rv.times = rv.times.filter( function(el, index, arrayObject) {
+                        if (arrayObject.length < index+1) {
+                            return true;
+                        }
+                        var next=arrayObject[index+1];
+                        return el.time !== next.time ||
+                            (el.trip && el.trip.directionId) !== (next.trip && next.trip.directionId);
+                    });
                 } else {
                     rv = result;
                 }
+
                 res.send(rv);
             }
         });
@@ -446,6 +456,7 @@ exports.plan = function(req, res) {
         query.hack = options.hack;
 
         otpOptions.path += querystring.stringify(query);
+        console.direction(otpOptions);
 
         var processResults = function(resp) {
             var data = "";
