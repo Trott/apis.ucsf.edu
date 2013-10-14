@@ -23,9 +23,14 @@ lime,weekday,lime_b,
 lime,weekday,lime_c,
 pink,weekday,pink_a,
 purple,weekday,purple_a,
-red,weekday,red_a,
-red,weekday,red_b,
-red,weekday,red_c,
+red,weekday,red_bart_to_mb_a,to Mission Bay
+red,weekday,red_bart_to_mb_b,to Mission Bay
+red,weekday,red_bart_to_mb_c1,to Mission Bay
+red,weekday,red_bart_to_mb_c2,to Mission Bay
+red,weekday,red_mb_to_bart_a,to 16th St. BART
+red,weekday,red_mb_to_bart_b,to 16th St. BART
+red,weekday,red_mb_to_bart_c1,to 16th St. BART
+red, weekday,red_mb_to_bart_c2,to 16th St. BART
 tan,weekday,tan_a,
 tan,weekday,tan_b,
 va,weekday,va_a,
