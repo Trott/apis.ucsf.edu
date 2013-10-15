@@ -12,8 +12,10 @@ gold,weekday,gold_b,,
 gold,weekday,gold_c,,
 gold,weekday,gold_d,,
 gold,weekday,gold_e,,
-green,weekday,green_a,,
-green,weekday,green_b,,
+green,weekday,green_654minn_to_chinbasn_a,to China Basin,0
+green,weekday,green_654minn_to_chinbasn_b,to China Basin,0
+green,weekday,green_chinbasn_to_654minn_a,to 654 Minnesota St.,1
+green,weekday,green_chinabasn_to_654minn_b,to 654 Minnesota St.,1
 grey,weekday,grey_a,,
 grey,weekday,grey_b,,
 grey,weekday,grey_c,,
