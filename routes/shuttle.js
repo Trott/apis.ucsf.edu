@@ -381,6 +381,8 @@ exports.plan = function(req, res) {
                     return ["ucsf_paracc"];
                 case "ucsf_veteran":
                     return ["ucsf_parlppi"];
+                case "ucsf_mboi":
+                    return ["ucsf_library"];
                 default:
                     return ["ucsf_parlppi", "ucsf_library"];
             }
