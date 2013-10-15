@@ -684,107 +684,107 @@ gold_e,18:55:00,18:55:00,missb4we,26,,1
 green_654minn_to_chinbasn_a,06:25:00,06:25:00,missb4we,1,to China Basin,0
 green_654minn_to_chinbasn_a,06:30:00,06:30:00,mboi,2,,0
 green_654minn_to_chinbasn_a,06:38:00,06:38:00,caltrain,3,,0
-green_654minn_to_chinbasn_a,06:41:00,06:41:00,chinbasn,4,,0
+green_654minn_to_chinbasn_a,06:41:00,06:41:00,chinbasn,4,,1
 green_654minn_to_chinbasn_a,06:52:00,06:52:00,654minn,5,,0
 green_654minn_to_chinbasn_a,07:00:00,07:00:00,missb4we,6,to China Basin,0
 green_654minn_to_chinbasn_a,07:05:00,07:05:00,mboi,7,,0
 green_654minn_to_chinbasn_a,07:13:00,07:13:00,caltrain,8,,0
-green_654minn_to_chinbasn_a,07:16:00,07:16:00,chinbasn,9,,0
+green_654minn_to_chinbasn_a,07:16:00,07:16:00,chinbasn,9,,1
 green_654minn_to_chinbasn_a,07:27:00,07:27:00,654minn,10,,0
 green_654minn_to_chinbasn_a,07:35:00,07:35:00,missb4we,11,to China Basin,0
 green_654minn_to_chinbasn_a,07:40:00,07:40:00,mboi,12,,0
 green_654minn_to_chinbasn_a,07:48:00,07:48:00,caltrain,13,,0
-green_654minn_to_chinbasn_a,07:51:00,07:51:00,chinbasn,14,,0
+green_654minn_to_chinbasn_a,07:51:00,07:51:00,chinbasn,14,,1
 green_654minn_to_chinbasn_a,08:02:00,08:02:00,654minn,15,,0
 green_654minn_to_chinbasn_a,08:10:00,08:10:00,missb4we,16,to China Basin,0
 green_654minn_to_chinbasn_a,08:15:00,08:15:00,mboi,17,,0
 green_654minn_to_chinbasn_a,08:23:00,08:23:00,caltrain,18,,0
-green_654minn_to_chinbasn_a,08:26:00,08:26:00,chinbasn,19,,0
+green_654minn_to_chinbasn_a,08:26:00,08:26:00,chinbasn,19,,1
 green_654minn_to_chinbasn_a,08:37:00,08:37:00,654minn,20,,0
 green_654minn_to_chinbasn_a,08:45:00,08:45:00,missb4we,21,to China Basin,0
 green_654minn_to_chinbasn_a,08:50:00,08:50:00,mboi,22,,0
 green_654minn_to_chinbasn_a,08:58:00,08:58:00,caltrain,23,,0
-green_654minn_to_chinbasn_a,09:01:00,09:01:00,chinbasn,24,,0
+green_654minn_to_chinbasn_a,09:01:00,09:01:00,chinbasn,24,,1
 green_654minn_to_chinbasn_a,09:12:00,09:12:00,654minn,25,,0
 green_654minn_to_chinbasn_a,09:20:00,09:20:00,missb4we,26,to China Basin,0
 green_654minn_to_chinbasn_a,09:25:00,09:25:00,mboi,27,,0
 green_654minn_to_chinbasn_a,09:33:00,09:33:00,caltrain,28,,0
-green_654minn_to_chinbasn_a,09:36:00,09:36:00,chinbasn,29,,0
+green_654minn_to_chinbasn_a,09:36:00,09:36:00,chinbasn,29,,1
 green_654minn_to_chinbasn_a,09:47:00,09:47:00,654minn,30,,0
 green_654minn_to_chinbasn_a,09:55:00,09:55:00,missb4we,31,to China Basin,0
 green_654minn_to_chinbasn_a,10:00:00,10:00:00,mboi,32,,0
 green_654minn_to_chinbasn_a,10:08:00,10:08:00,caltrain,33,,0
-green_654minn_to_chinbasn_a,10:11:00,10:11:00,chinbasn,34,,0
+green_654minn_to_chinbasn_a,10:11:00,10:11:00,chinbasn,34,,1
 green_654minn_to_chinbasn_a,10:22:00,10:22:00,654minn,35,,0
 green_654minn_to_chinbasn_a,10:30:00,10:30:00,missb4we,36,to China Basin,0
 green_654minn_to_chinbasn_a,10:35:00,10:35:00,mboi,37,,0
 green_654minn_to_chinbasn_a,10:43:00,10:43:00,caltrain,38,,0
-green_654minn_to_chinbasn_a,10:46:00,10:46:00,chinbasn,39,,0
+green_654minn_to_chinbasn_a,10:46:00,10:46:00,chinbasn,39,,1
 green_654minn_to_chinbasn_a,10:57:00,10:57:00,654minn,40,,0
 green_654minn_to_chinbasn_a,11:05:00,11:05:00,missb4we,41,to China Basin,0
 green_654minn_to_chinbasn_a,11:10:00,11:10:00,mboi,42,,0
 green_654minn_to_chinbasn_a,11:18:00,11:18:00,caltrain,43,,0
-green_654minn_to_chinbasn_a,11:21:00,11:21:00,chinbasn,44,,0
+green_654minn_to_chinbasn_a,11:21:00,11:21:00,chinbasn,44,,1
 green_654minn_to_chinbasn_a,11:32:00,11:32:00,654minn,45,,0
 green_654minn_to_chinbasn_a,11:40:00,11:40:00,missb4we,46,to China Basin,0
 green_654minn_to_chinbasn_a,11:45:00,11:45:00,mboi,47,,0
 green_654minn_to_chinbasn_a,11:53:00,11:53:00,caltrain,48,,0
-green_654minn_to_chinbasn_a,11:56:00,11:56:00,chinbasn,49,,0
+green_654minn_to_chinbasn_a,11:56:00,11:56:00,chinbasn,49,,1
 green_654minn_to_chinbasn_a,12:07:00,12:07:00,654minn,50,,0
 green_654minn_to_chinbasn_a,12:15:00,12:15:00,missb4we,51,to China Basin,0
 green_654minn_to_chinbasn_a,12:20:00,12:20:00,mboi,52,,0
 green_654minn_to_chinbasn_a,12:28:00,12:28:00,caltrain,53,,0
-green_654minn_to_chinbasn_a,12:31:00,12:31:00,chinbasn,54,,0
+green_654minn_to_chinbasn_a,12:31:00,12:31:00,chinbasn,54,,1
 green_654minn_to_chinbasn_a,12:42:00,12:42:00,654minn,55,,0
 green_654minn_to_chinbasn_a,12:50:00,12:50:00,missb4we,56,to China Basin,0
 green_654minn_to_chinbasn_a,12:55:00,12:55:00,mboi,57,,0
 green_654minn_to_chinbasn_a,13:03:00,13:03:00,caltrain,58,,0
-green_654minn_to_chinbasn_a,13:06:00,13:06:00,chinbasn,59,,0
+green_654minn_to_chinbasn_a,13:06:00,13:06:00,chinbasn,59,,1
 green_654minn_to_chinbasn_a,13:17:00,13:17:00,654minn,60,,0
 green_654minn_to_chinbasn_a,13:25:00,13:25:00,missb4we,61,to China Basin,0
 green_654minn_to_chinbasn_a,13:30:00,13:30:00,mboi,62,,0
 green_654minn_to_chinbasn_a,13:38:00,13:38:00,caltrain,63,,0
-green_654minn_to_chinbasn_a,13:41:00,13:41:00,chinbasn,64,,0
+green_654minn_to_chinbasn_a,13:41:00,13:41:00,chinbasn,64,,1
 green_654minn_to_chinbasn_a,13:52:00,13:52:00,654minn,65,,0
 green_654minn_to_chinbasn_a,14:00:00,14:00:00,missb4we,66,to China Basin,0
 green_654minn_to_chinbasn_a,14:05:00,14:05:00,mboi,67,,0
 green_654minn_to_chinbasn_a,14:13:00,14:13:00,caltrain,68,,0
-green_654minn_to_chinbasn_a,14:16:00,14:16:00,chinbasn,69,,0
+green_654minn_to_chinbasn_a,14:16:00,14:16:00,chinbasn,69,,1
 green_654minn_to_chinbasn_a,14:27:00,14:27:00,654minn,70,,0
 green_654minn_to_chinbasn_a,14:35:00,14:35:00,missb4we,71,to China Basin,0
 green_654minn_to_chinbasn_a,14:40:00,14:40:00,mboi,72,,0
 green_654minn_to_chinbasn_a,14:48:00,14:48:00,caltrain,73,,0
-green_654minn_to_chinbasn_a,14:51:00,14:51:00,chinbasn,74,,0
+green_654minn_to_chinbasn_a,14:51:00,14:51:00,chinbasn,74,,1
 green_654minn_to_chinbasn_a,15:02:00,15:02:00,654minn,75,,0
 green_654minn_to_chinbasn_a,15:10:00,15:10:00,missb4we,76,to China Basin,0
 green_654minn_to_chinbasn_a,15:15:00,15:15:00,mboi,77,,0
 green_654minn_to_chinbasn_a,15:23:00,15:23:00,caltrain,78,,0
-green_654minn_to_chinbasn_a,15:26:00,15:26:00,chinbasn,79,,0
+green_654minn_to_chinbasn_a,15:26:00,15:26:00,chinbasn,79,,1
 green_654minn_to_chinbasn_a,15:37:00,15:37:00,654minn,80,,0
 green_654minn_to_chinbasn_a,15:45:00,15:45:00,missb4we,81,to China Basin,0
 green_654minn_to_chinbasn_a,15:50:00,15:50:00,mboi,82,,0
 green_654minn_to_chinbasn_a,15:58:00,15:58:00,caltrain,83,,0
-green_654minn_to_chinbasn_a,16:01:00,16:01:00,chinbasn,84,,0
+green_654minn_to_chinbasn_a,16:01:00,16:01:00,chinbasn,84,,1
 green_654minn_to_chinbasn_a,16:12:00,16:12:00,654minn,85,,0
 green_654minn_to_chinbasn_a,16:20:00,16:20:00,missb4we,86,to China Basin,0
 green_654minn_to_chinbasn_a,16:25:00,16:25:00,mboi,87,,0
 green_654minn_to_chinbasn_a,16:33:00,16:33:00,caltrain,88,,0
-green_654minn_to_chinbasn_a,16:36:00,16:36:00,chinbasn,89,,0
+green_654minn_to_chinbasn_a,16:36:00,16:36:00,chinbasn,89,,1
 green_654minn_to_chinbasn_a,16:47:00,16:47:00,654minn,90,,0
 green_654minn_to_chinbasn_a,16:55:00,16:55:00,missb4we,91,to China Basin,0
 green_654minn_to_chinbasn_a,17:00:00,17:00:00,mboi,92,,0
 green_654minn_to_chinbasn_a,17:08:00,17:08:00,caltrain,93,,0
-green_654minn_to_chinbasn_a,17:11:00,17:11:00,chinbasn,94,,0
+green_654minn_to_chinbasn_a,17:11:00,17:11:00,chinbasn,94,,1
 green_654minn_to_chinbasn_a,17:22:00,17:22:00,654minn,95,,0
 green_654minn_to_chinbasn_a,17:30:00,17:30:00,missb4we,96,to China Basin,0
 green_654minn_to_chinbasn_a,17:35:00,17:35:00,mboi,97,,0
 green_654minn_to_chinbasn_a,17:43:00,17:43:00,caltrain,98,,0
-green_654minn_to_chinbasn_a,17:46:00,17:46:00,chinbasn,99,,0
+green_654minn_to_chinbasn_a,17:46:00,17:46:00,chinbasn,99,,1
 green_654minn_to_chinbasn_a,17:57:00,17:57:00,654minn,100,,0
 green_654minn_to_chinbasn_a,18:05:00,18:05:00,missb4we,101,to China Basin,0
 green_654minn_to_chinbasn_a,18:10:00,18:10:00,mboi,102,,0
 green_654minn_to_chinbasn_a,18:18:00,18:18:00,caltrain,103,,0
-green_654minn_to_chinbasn_a,18:21:00,18:21:00,chinbasn,104,,0
+green_654minn_to_chinbasn_a,18:21:00,18:21:00,chinbasn,104,,1
 green_654minn_to_chinbasn_a,18:32:00,18:32:00,654minn,105,,0
 green_654minn_to_chinbasn_a,18:40:00,18:40:00,missb4we,106,to China Basin,0
 green_654minn_to_chinbasn_a,18:45:00,18:45:00,mboi,107,,0
@@ -792,168 +792,168 @@ green_654minn_to_chinbasn_a,18:53:00,18:53:00,caltrain,108,,0
 green_654minn_to_chinbasn_a,18:56:00,18:56:00,chinbasn,109,,1
 green_chinbasn_to_654minn_a,06:41:00,06:41:00,chinbasn,1,,0
 green_chinbasn_to_654minn_a,06:47:00,06:47:00,missb4we,2,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,06:52:00,06:52:00,654minn,3,,0
+green_chinbasn_to_654minn_a,06:52:00,06:52:00,654minn,3,,1
 green_chinbasn_to_654minn_a,07:16:00,07:16:00,chinbasn,4,,0
 green_chinbasn_to_654minn_a,07:22:00,07:22:00,missb4we,5,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,07:27:00,07:27:00,654minn,6,,0
+green_chinbasn_to_654minn_a,07:27:00,07:27:00,654minn,6,,1
 green_chinbasn_to_654minn_a,07:51:00,07:51:00,chinbasn,7,,0
 green_chinbasn_to_654minn_a,07:57:00,07:57:00,missb4we,8,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,08:02:00,08:02:00,654minn,9,,0
+green_chinbasn_to_654minn_a,08:02:00,08:02:00,654minn,9,,1
 green_chinbasn_to_654minn_a,08:26:00,08:26:00,chinbasn,10,,0
 green_chinbasn_to_654minn_a,08:32:00,08:32:00,missb4we,11,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,08:37:00,08:37:00,654minn,12,,0
+green_chinbasn_to_654minn_a,08:37:00,08:37:00,654minn,12,,1
 green_chinbasn_to_654minn_a,09:01:00,09:01:00,chinbasn,13,,0
 green_chinbasn_to_654minn_a,09:07:00,09:07:00,missb4we,14,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,09:12:00,09:12:00,654minn,15,,0
+green_chinbasn_to_654minn_a,09:12:00,09:12:00,654minn,15,,1
 green_chinbasn_to_654minn_a,09:36:00,09:36:00,chinbasn,16,,0
 green_chinbasn_to_654minn_a,09:42:00,09:42:00,missb4we,17,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,09:47:00,09:47:00,654minn,18,,0
+green_chinbasn_to_654minn_a,09:47:00,09:47:00,654minn,18,,1
 green_chinbasn_to_654minn_a,10:11:00,10:11:00,chinbasn,19,,0
 green_chinbasn_to_654minn_a,10:17:00,10:17:00,missb4we,20,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,10:22:00,10:22:00,654minn,21,,0
+green_chinbasn_to_654minn_a,10:22:00,10:22:00,654minn,21,,1
 green_chinbasn_to_654minn_a,10:46:00,10:46:00,chinbasn,22,,0
 green_chinbasn_to_654minn_a,10:52:00,10:52:00,missb4we,23,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,10:57:00,10:57:00,654minn,24,,0
+green_chinbasn_to_654minn_a,10:57:00,10:57:00,654minn,24,,1
 green_chinbasn_to_654minn_a,11:21:00,11:21:00,chinbasn,25,,0
 green_chinbasn_to_654minn_a,11:27:00,11:27:00,missb4we,26,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,11:32:00,11:32:00,654minn,27,,0
+green_chinbasn_to_654minn_a,11:32:00,11:32:00,654minn,27,,1
 green_chinbasn_to_654minn_a,11:56:00,11:56:00,chinbasn,28,,0
 green_chinbasn_to_654minn_a,12:02:00,12:02:00,missb4we,29,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,12:07:00,12:07:00,654minn,30,,0
+green_chinbasn_to_654minn_a,12:07:00,12:07:00,654minn,30,,1
 green_chinbasn_to_654minn_a,12:31:00,12:31:00,chinbasn,31,,0
 green_chinbasn_to_654minn_a,12:37:00,12:37:00,missb4we,32,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,12:42:00,12:42:00,654minn,33,,0
+green_chinbasn_to_654minn_a,12:42:00,12:42:00,654minn,33,,1
 green_chinbasn_to_654minn_a,13:06:00,13:06:00,chinbasn,34,,0
 green_chinbasn_to_654minn_a,13:12:00,13:12:00,missb4we,35,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,13:17:00,13:17:00,654minn,36,,0
+green_chinbasn_to_654minn_a,13:17:00,13:17:00,654minn,36,,1
 green_chinbasn_to_654minn_a,13:41:00,13:41:00,chinbasn,37,,0
 green_chinbasn_to_654minn_a,13:47:00,13:47:00,missb4we,38,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,13:52:00,13:52:00,654minn,39,,0
+green_chinbasn_to_654minn_a,13:52:00,13:52:00,654minn,39,,1
 green_chinbasn_to_654minn_a,14:16:00,14:16:00,chinbasn,40,,0
 green_chinbasn_to_654minn_a,14:22:00,14:22:00,missb4we,41,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,14:27:00,14:27:00,654minn,42,,0
+green_chinbasn_to_654minn_a,14:27:00,14:27:00,654minn,42,,1
 green_chinbasn_to_654minn_a,14:51:00,14:51:00,chinbasn,43,,0
 green_chinbasn_to_654minn_a,14:57:00,14:57:00,missb4we,44,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,15:02:00,15:02:00,654minn,45,,0
+green_chinbasn_to_654minn_a,15:02:00,15:02:00,654minn,45,,1
 green_chinbasn_to_654minn_a,15:26:00,15:26:00,chinbasn,46,,0
 green_chinbasn_to_654minn_a,15:32:00,15:32:00,missb4we,47,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,15:37:00,15:37:00,654minn,48,,0
+green_chinbasn_to_654minn_a,15:37:00,15:37:00,654minn,48,,1
 green_chinbasn_to_654minn_a,16:01:00,16:01:00,chinbasn,49,,0
 green_chinbasn_to_654minn_a,16:07:00,16:07:00,missb4we,50,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,16:12:00,16:12:00,654minn,51,,0
+green_chinbasn_to_654minn_a,16:12:00,16:12:00,654minn,51,,1
 green_chinbasn_to_654minn_a,16:36:00,16:36:00,chinbasn,52,,0
 green_chinbasn_to_654minn_a,16:42:00,16:42:00,missb4we,53,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,16:47:00,16:47:00,654minn,54,,0
+green_chinbasn_to_654minn_a,16:47:00,16:47:00,654minn,54,,1
 green_chinbasn_to_654minn_a,17:11:00,17:11:00,chinbasn,55,,0
 green_chinbasn_to_654minn_a,17:17:00,17:17:00,missb4we,56,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,17:22:00,17:22:00,654minn,57,,0
+green_chinbasn_to_654minn_a,17:22:00,17:22:00,654minn,57,,1
 green_chinbasn_to_654minn_a,17:46:00,17:46:00,chinbasn,58,,0
 green_chinbasn_to_654minn_a,17:52:00,17:52:00,missb4we,59,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,17:57:00,17:57:00,654minn,60,,0
+green_chinbasn_to_654minn_a,17:57:00,17:57:00,654minn,60,,1
 green_chinbasn_to_654minn_a,18:21:00,18:21:00,chinbasn,61,,0
 green_chinbasn_to_654minn_a,18:27:00,18:27:00,missb4we,62,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_a,18:32:00,18:32:00,654minn,63,,0
+green_chinbasn_to_654minn_a,18:32:00,18:32:00,654minn,63,,1
 green_chinbasn_to_654minn_a,18:56:00,18:56:00,chinbasn,64,,0
 green_chinbasn_to_654minn_a,19:02:00,19:02:00,missb4we,65,,1
 green_654minn_to_chinbasn_b,06:40:00,06:40:00,missb4we,1,to China Basin,0
 green_654minn_to_chinbasn_b,06:45:00,06:45:00,mboi,2,,0
 green_654minn_to_chinbasn_b,06:53:00,06:53:00,caltrain,3,,0
-green_654minn_to_chinbasn_b,06:56:00,06:56:00,chinbasn,4,,0
+green_654minn_to_chinbasn_b,06:56:00,06:56:00,chinbasn,4,,1
 green_654minn_to_chinbasn_b,07:07:00,07:07:00,654minn,5,,0
 green_654minn_to_chinbasn_b,07:15:00,07:15:00,missb4we,6,to China Basin,0
 green_654minn_to_chinbasn_b,07:20:00,07:20:00,mboi,7,,0
 green_654minn_to_chinbasn_b,07:28:00,07:28:00,caltrain,8,,0
-green_654minn_to_chinbasn_b,07:31:00,07:31:00,chinbasn,9,,0
+green_654minn_to_chinbasn_b,07:31:00,07:31:00,chinbasn,9,,1
 green_654minn_to_chinbasn_b,07:42:00,07:42:00,654minn,10,,0
 green_654minn_to_chinbasn_b,07:50:00,07:50:00,missb4we,11,to China Basin,0
 green_654minn_to_chinbasn_b,07:55:00,07:55:00,mboi,12,,0
 green_654minn_to_chinbasn_b,08:03:00,08:03:00,caltrain,13,,0
-green_654minn_to_chinbasn_b,08:06:00,08:06:00,chinbasn,14,,0
+green_654minn_to_chinbasn_b,08:06:00,08:06:00,chinbasn,14,,1
 green_654minn_to_chinbasn_b,08:17:00,08:17:00,654minn,15,,0
 green_654minn_to_chinbasn_b,08:25:00,08:25:00,missb4we,16,to China Basin,0
 green_654minn_to_chinbasn_b,08:30:00,08:30:00,mboi,17,,0
 green_654minn_to_chinbasn_b,08:38:00,08:38:00,caltrain,18,,0
-green_654minn_to_chinbasn_b,08:41:00,08:41:00,chinbasn,19,,0
+green_654minn_to_chinbasn_b,08:41:00,08:41:00,chinbasn,19,,1
 green_654minn_to_chinbasn_b,08:52:00,08:52:00,654minn,20,,0
 green_654minn_to_chinbasn_b,09:00:00,09:00:00,missb4we,21,to China Basin,0
 green_654minn_to_chinbasn_b,09:05:00,09:05:00,mboi,22,,0
 green_654minn_to_chinbasn_b,09:13:00,09:13:00,caltrain,23,,0
-green_654minn_to_chinbasn_b,09:16:00,09:16:00,chinbasn,24,,0
+green_654minn_to_chinbasn_b,09:16:00,09:16:00,chinbasn,24,,1
 green_654minn_to_chinbasn_b,09:27:00,09:27:00,654minn,25,,0
 green_654minn_to_chinbasn_b,09:35:00,09:35:00,missb4we,26,to China Basin,0
 green_654minn_to_chinbasn_b,09:40:00,09:40:00,mboi,27,,0
 green_654minn_to_chinbasn_b,09:48:00,09:48:00,caltrain,28,,0
-green_654minn_to_chinbasn_b,09:51:00,09:51:00,chinbasn,29,,0
+green_654minn_to_chinbasn_b,09:51:00,09:51:00,chinbasn,29,,1
 green_654minn_to_chinbasn_b,10:02:00,10:02:00,654minn,30,,0
 green_654minn_to_chinbasn_b,10:10:00,10:10:00,missb4we,31,to China Basin,0
 green_654minn_to_chinbasn_b,10:15:00,10:15:00,mboi,32,,0
 green_654minn_to_chinbasn_b,10:23:00,10:23:00,caltrain,33,,0
-green_654minn_to_chinbasn_b,10:26:00,10:26:00,chinbasn,34,,0
+green_654minn_to_chinbasn_b,10:26:00,10:26:00,chinbasn,34,,1
 green_654minn_to_chinbasn_b,10:37:00,10:37:00,654minn,35,,0
 green_654minn_to_chinbasn_b,10:45:00,10:45:00,missb4we,36,to China Basin,0
 green_654minn_to_chinbasn_b,10:50:00,10:50:00,mboi,37,,0
 green_654minn_to_chinbasn_b,10:58:00,10:58:00,caltrain,38,,0
-green_654minn_to_chinbasn_b,11:01:00,11:01:00,chinbasn,39,,0
+green_654minn_to_chinbasn_b,11:01:00,11:01:00,chinbasn,39,,1
 green_654minn_to_chinbasn_b,11:12:00,11:12:00,654minn,40,,0
 green_654minn_to_chinbasn_b,11:20:00,11:20:00,missb4we,41,to China Basin,0
 green_654minn_to_chinbasn_b,11:25:00,11:25:00,mboi,42,,0
 green_654minn_to_chinbasn_b,11:33:00,11:33:00,caltrain,43,,0
-green_654minn_to_chinbasn_b,11:36:00,11:36:00,chinbasn,44,,0
+green_654minn_to_chinbasn_b,11:36:00,11:36:00,chinbasn,44,,1
 green_654minn_to_chinbasn_b,11:47:00,11:47:00,654minn,45,,0
 green_654minn_to_chinbasn_b,11:55:00,11:55:00,missb4we,46,to China Basin,0
 green_654minn_to_chinbasn_b,12:00:00,12:00:00,mboi,47,,0
 green_654minn_to_chinbasn_b,12:08:00,12:08:00,caltrain,48,,0
-green_654minn_to_chinbasn_b,12:11:00,12:11:00,chinbasn,49,,0
+green_654minn_to_chinbasn_b,12:11:00,12:11:00,chinbasn,49,,1
 green_654minn_to_chinbasn_b,12:22:00,12:22:00,654minn,50,,0
 green_654minn_to_chinbasn_b,12:30:00,12:30:00,missb4we,51,to China Basin,0
 green_654minn_to_chinbasn_b,12:35:00,12:35:00,mboi,52,,0
 green_654minn_to_chinbasn_b,12:43:00,12:43:00,caltrain,53,,0
-green_654minn_to_chinbasn_b,12:46:00,12:46:00,chinbasn,54,,0
+green_654minn_to_chinbasn_b,12:46:00,12:46:00,chinbasn,54,,1
 green_654minn_to_chinbasn_b,12:57:00,12:57:00,654minn,55,,0
 green_654minn_to_chinbasn_b,13:05:00,13:05:00,missb4we,56,to China Basin,0
 green_654minn_to_chinbasn_b,13:10:00,13:10:00,mboi,57,,0
 green_654minn_to_chinbasn_b,13:18:00,13:18:00,caltrain,58,,0
-green_654minn_to_chinbasn_b,13:21:00,13:21:00,chinbasn,59,,0
+green_654minn_to_chinbasn_b,13:21:00,13:21:00,chinbasn,59,,1
 green_654minn_to_chinbasn_b,13:32:00,13:32:00,654minn,60,,0
 green_654minn_to_chinbasn_b,13:40:00,13:40:00,missb4we,61,to China Basin,0
 green_654minn_to_chinbasn_b,13:45:00,13:45:00,mboi,62,,0
 green_654minn_to_chinbasn_b,13:53:00,13:53:00,caltrain,63,,0
-green_654minn_to_chinbasn_b,13:56:00,13:56:00,chinbasn,64,,0
+green_654minn_to_chinbasn_b,13:56:00,13:56:00,chinbasn,64,,1
 green_654minn_to_chinbasn_b,14:07:00,14:07:00,654minn,65,,0
 green_654minn_to_chinbasn_b,14:15:00,14:15:00,missb4we,66,to China Basin,0
 green_654minn_to_chinbasn_b,14:20:00,14:20:00,mboi,67,,0
 green_654minn_to_chinbasn_b,14:28:00,14:28:00,caltrain,68,,0
-green_654minn_to_chinbasn_b,14:31:00,14:31:00,chinbasn,69,,0
+green_654minn_to_chinbasn_b,14:31:00,14:31:00,chinbasn,69,,1
 green_654minn_to_chinbasn_b,14:42:00,14:42:00,654minn,70,,0
 green_654minn_to_chinbasn_b,14:50:00,14:50:00,missb4we,71,to China Basin,0
 green_654minn_to_chinbasn_b,14:55:00,14:55:00,mboi,72,,0
 green_654minn_to_chinbasn_b,15:03:00,15:03:00,caltrain,73,,0
-green_654minn_to_chinbasn_b,15:06:00,15:06:00,chinbasn,74,,0
+green_654minn_to_chinbasn_b,15:06:00,15:06:00,chinbasn,74,,1
 green_654minn_to_chinbasn_b,15:17:00,15:17:00,654minn,75,,0
 green_654minn_to_chinbasn_b,15:25:00,15:25:00,missb4we,76,to China Basin,0
 green_654minn_to_chinbasn_b,15:30:00,15:30:00,mboi,77,,0
 green_654minn_to_chinbasn_b,15:38:00,15:38:00,caltrain,78,,0
-green_654minn_to_chinbasn_b,15:41:00,15:41:00,chinbasn,79,,0
+green_654minn_to_chinbasn_b,15:41:00,15:41:00,chinbasn,79,,1
 green_654minn_to_chinbasn_b,15:52:00,15:52:00,654minn,80,,0
 green_654minn_to_chinbasn_b,16:00:00,16:00:00,missb4we,81,to China Basin,0
 green_654minn_to_chinbasn_b,16:05:00,16:05:00,mboi,82,,0
 green_654minn_to_chinbasn_b,16:13:00,16:13:00,caltrain,83,,0
-green_654minn_to_chinbasn_b,16:16:00,16:16:00,chinbasn,84,,0
+green_654minn_to_chinbasn_b,16:16:00,16:16:00,chinbasn,84,,1
 green_654minn_to_chinbasn_b,16:27:00,16:27:00,654minn,85,,0
 green_654minn_to_chinbasn_b,16:35:00,16:35:00,missb4we,86,to China Basin,0
 green_654minn_to_chinbasn_b,16:40:00,16:40:00,mboi,87,,0
 green_654minn_to_chinbasn_b,16:48:00,16:48:00,caltrain,88,,0
-green_654minn_to_chinbasn_b,16:51:00,16:51:00,chinbasn,89,,0
+green_654minn_to_chinbasn_b,16:51:00,16:51:00,chinbasn,89,,1
 green_654minn_to_chinbasn_b,17:02:00,17:02:00,654minn,90,,0
 green_654minn_to_chinbasn_b,17:10:00,17:10:00,missb4we,91,to China Basin,0
 green_654minn_to_chinbasn_b,17:15:00,17:15:00,mboi,92,,0
 green_654minn_to_chinbasn_b,17:23:00,17:23:00,caltrain,93,,0
-green_654minn_to_chinbasn_b,17:26:00,17:26:00,chinbasn,94,,0
+green_654minn_to_chinbasn_b,17:26:00,17:26:00,chinbasn,94,,1
 green_654minn_to_chinbasn_b,17:37:00,17:37:00,654minn,95,,0
 green_654minn_to_chinbasn_b,17:45:00,17:45:00,missb4we,96,to China Basin,0
 green_654minn_to_chinbasn_b,17:50:00,17:50:00,mboi,97,,0
 green_654minn_to_chinbasn_b,17:58:00,17:58:00,caltrain,98,,0
-green_654minn_to_chinbasn_b,18:01:00,18:01:00,chinbasn,99,,0
+green_654minn_to_chinbasn_b,18:01:00,18:01:00,chinbasn,99,,1
 green_654minn_to_chinbasn_b,18:12:00,18:12:00,654minn,100,,0
 green_654minn_to_chinbasn_b,18:20:00,18:20:00,missb4we,101,to China Basin,0
 green_654minn_to_chinbasn_b,18:25:00,18:25:00,mboi,102,,0
@@ -961,64 +961,64 @@ green_654minn_to_chinbasn_b,18:33:00,18:33:00,caltrain,103,,0
 green_654minn_to_chinbasn_b,18:36:00,18:36:00,chinbasn,104,,1
 green_chinbasn_to_654minn_b,06:56:00,06:56:00,chinbasn,1,,0
 green_chinbasn_to_654minn_b,07:02:00,07:02:00,missb4we,2,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,07:07:00,07:07:00,654minn,3,,0
+green_chinbasn_to_654minn_b,07:07:00,07:07:00,654minn,3,,1
 green_chinbasn_to_654minn_b,07:31:00,07:31:00,chinbasn,4,,0
 green_chinbasn_to_654minn_b,07:37:00,07:37:00,missb4we,5,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,07:42:00,07:42:00,654minn,6,,0
+green_chinbasn_to_654minn_b,07:42:00,07:42:00,654minn,6,,1
 green_chinbasn_to_654minn_b,08:06:00,08:06:00,chinbasn,7,,0
 green_chinbasn_to_654minn_b,08:12:00,08:12:00,missb4we,8,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,08:17:00,08:17:00,654minn,9,,0
+green_chinbasn_to_654minn_b,08:17:00,08:17:00,654minn,9,,1
 green_chinbasn_to_654minn_b,08:41:00,08:41:00,chinbasn,10,,0
 green_chinbasn_to_654minn_b,08:47:00,08:47:00,missb4we,11,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,08:52:00,08:52:00,654minn,12,,0
+green_chinbasn_to_654minn_b,08:52:00,08:52:00,654minn,12,,1
 green_chinbasn_to_654minn_b,09:16:00,09:16:00,chinbasn,13,,0
 green_chinbasn_to_654minn_b,09:22:00,09:22:00,missb4we,14,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,09:27:00,09:27:00,654minn,15,,0
+green_chinbasn_to_654minn_b,09:27:00,09:27:00,654minn,15,,1
 green_chinbasn_to_654minn_b,09:51:00,09:51:00,chinbasn,16,,0
 green_chinbasn_to_654minn_b,09:57:00,09:57:00,missb4we,17,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,10:02:00,10:02:00,654minn,18,,0
+green_chinbasn_to_654minn_b,10:02:00,10:02:00,654minn,18,,1
 green_chinbasn_to_654minn_b,10:26:00,10:26:00,chinbasn,19,,0
 green_chinbasn_to_654minn_b,10:32:00,10:32:00,missb4we,20,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,10:37:00,10:37:00,654minn,21,,0
+green_chinbasn_to_654minn_b,10:37:00,10:37:00,654minn,21,,1
 green_chinbasn_to_654minn_b,11:01:00,11:01:00,chinbasn,22,,0
 green_chinbasn_to_654minn_b,11:07:00,11:07:00,missb4we,23,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,11:12:00,11:12:00,654minn,24,,0
+green_chinbasn_to_654minn_b,11:12:00,11:12:00,654minn,24,,1
 green_chinbasn_to_654minn_b,11:36:00,11:36:00,chinbasn,25,,0
 green_chinbasn_to_654minn_b,11:42:00,11:42:00,missb4we,26,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,11:47:00,11:47:00,654minn,27,,0
+green_chinbasn_to_654minn_b,11:47:00,11:47:00,654minn,27,,1
 green_chinbasn_to_654minn_b,12:11:00,12:11:00,chinbasn,28,,0
 green_chinbasn_to_654minn_b,12:17:00,12:17:00,missb4we,29,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,12:22:00,12:22:00,654minn,30,,0
+green_chinbasn_to_654minn_b,12:22:00,12:22:00,654minn,30,,1
 green_chinbasn_to_654minn_b,12:46:00,12:46:00,chinbasn,31,,0
 green_chinbasn_to_654minn_b,12:52:00,12:52:00,missb4we,32,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,12:57:00,12:57:00,654minn,33,,0
+green_chinbasn_to_654minn_b,12:57:00,12:57:00,654minn,33,,1
 green_chinbasn_to_654minn_b,13:21:00,13:21:00,chinbasn,34,,0
 green_chinbasn_to_654minn_b,13:27:00,13:27:00,missb4we,35,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,13:32:00,13:32:00,654minn,36,,0
+green_chinbasn_to_654minn_b,13:32:00,13:32:00,654minn,36,,1
 green_chinbasn_to_654minn_b,13:56:00,13:56:00,chinbasn,37,,0
 green_chinbasn_to_654minn_b,14:02:00,14:02:00,missb4we,38,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,14:07:00,14:07:00,654minn,39,,0
+green_chinbasn_to_654minn_b,14:07:00,14:07:00,654minn,39,,1
 green_chinbasn_to_654minn_b,14:31:00,14:31:00,chinbasn,40,,0
 green_chinbasn_to_654minn_b,14:37:00,14:37:00,missb4we,41,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,14:42:00,14:42:00,654minn,42,,0
+green_chinbasn_to_654minn_b,14:42:00,14:42:00,654minn,42,,1
 green_chinbasn_to_654minn_b,15:06:00,15:06:00,chinbasn,43,,0
 green_chinbasn_to_654minn_b,15:12:00,15:12:00,missb4we,44,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,15:17:00,15:17:00,654minn,45,,0
+green_chinbasn_to_654minn_b,15:17:00,15:17:00,654minn,45,,1
 green_chinbasn_to_654minn_b,15:41:00,15:41:00,chinbasn,46,,0
 green_chinbasn_to_654minn_b,15:47:00,15:47:00,missb4we,47,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,15:52:00,15:52:00,654minn,48,,0
+green_chinbasn_to_654minn_b,15:52:00,15:52:00,654minn,48,,1
 green_chinbasn_to_654minn_b,16:16:00,16:16:00,chinbasn,49,,0
 green_chinbasn_to_654minn_b,16:22:00,16:22:00,missb4we,50,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,16:27:00,16:27:00,654minn,51,,0
+green_chinbasn_to_654minn_b,16:27:00,16:27:00,654minn,51,,1
 green_chinbasn_to_654minn_b,16:51:00,16:51:00,chinbasn,52,,0
 green_chinbasn_to_654minn_b,16:57:00,16:57:00,missb4we,53,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,17:02:00,17:02:00,654minn,54,,0
+green_chinbasn_to_654minn_b,17:02:00,17:02:00,654minn,54,,1
 green_chinbasn_to_654minn_b,17:26:00,17:26:00,chinbasn,55,,0
 green_chinbasn_to_654minn_b,17:32:00,17:32:00,missb4we,56,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,17:37:00,17:37:00,654minn,57,,0
+green_chinbasn_to_654minn_b,17:37:00,17:37:00,654minn,57,,1
 green_chinbasn_to_654minn_b,18:01:00,18:01:00,chinbasn,58,,0
 green_chinbasn_to_654minn_b,18:07:00,18:07:00,missb4we,59,to 654 Minnesota St.,0
-green_chinbasn_to_654minn_b,18:12:00,18:12:00,654minn,60,,0
+green_chinbasn_to_654minn_b,18:12:00,18:12:00,654minn,60,,1
 green_chinbasn_to_654minn_b,18:36:00,18:36:00,chinbasn,61,,0
 green_chinbasn_to_654minn_b,18:42:00,18:42:00,missb4we,62,,1
 grey_a,06:30:00,06:30:00,missb4we,1,,0
@@ -1409,492 +1409,492 @@ pink_a,09:00:00,09:00:00,parkezar,29,,0
 pink_a,09:06:00,09:06:00,paracc,30,,1
 purple_to_mtzion_a,06:15:00,06:15:00,library,1,,0
 purple_to_mtzion_a,06:30:00,06:30:00,3360 Geary,2,to Mt. Zion,0
-purple_to_mtzion_a,06:38:00,06:38:00,mtzion,3,,0
+purple_to_mtzion_a,06:38:00,06:38:00,mtzion,3,,1
 purple_to_mtzion_a,07:00:00,07:00:00,library,4,,0
 purple_to_mtzion_a,07:15:00,07:15:00,3360 Geary,5,to Mt. Zion,0
-purple_to_mtzion_a,07:23:00,07:23:00,mtzion,6,,0
+purple_to_mtzion_a,07:23:00,07:23:00,mtzion,6,,1
 purple_to_mtzion_a,07:45:00,07:45:00,library,7,,0
 purple_to_mtzion_a,08:00:00,08:00:00,3360 Geary,8,to Mt. Zion,0
-purple_to_mtzion_a,08:08:00,08:08:00,mtzion,9,,0
+purple_to_mtzion_a,08:08:00,08:08:00,mtzion,9,,1
 purple_to_mtzion_a,08:30:00,08:30:00,library,10,,0
 purple_to_mtzion_a,08:45:00,08:45:00,3360 Geary,11,to Mt. Zion,0
-purple_to_mtzion_a,08:53:00,08:53:00,mtzion,12,,0
+purple_to_mtzion_a,08:53:00,08:53:00,mtzion,12,,1
 purple_to_mtzion_a,09:15:00,09:15:00,library,13,,0
 purple_to_mtzion_a,09:30:00,09:30:00,3360 Geary,14,to Mt. Zion,0
-purple_to_mtzion_a,09:38:00,09:38:00,mtzion,15,,0
+purple_to_mtzion_a,09:38:00,09:38:00,mtzion,15,,1
 purple_to_mtzion_a,10:00:00,10:00:00,library,16,,0
 purple_to_mtzion_a,10:15:00,10:15:00,3360 Geary,17,to Mt. Zion,0
-purple_to_mtzion_a,10:23:00,10:23:00,mtzion,18,,0
+purple_to_mtzion_a,10:23:00,10:23:00,mtzion,18,,1
 purple_to_mtzion_a,10:45:00,10:45:00,library,19,,0
 purple_to_mtzion_a,11:00:00,11:00:00,3360 Geary,20,to Mt. Zion,0
-purple_to_mtzion_a,11:08:00,11:08:00,mtzion,21,,0
+purple_to_mtzion_a,11:08:00,11:08:00,mtzion,21,,1
 purple_to_mtzion_a,11:30:00,11:30:00,library,22,,0
 purple_to_mtzion_a,11:45:00,11:45:00,3360 Geary,23,to Mt. Zion,0
-purple_to_mtzion_a,11:53:00,11:53:00,mtzion,24,,0
+purple_to_mtzion_a,11:53:00,11:53:00,mtzion,24,,1
 purple_to_mtzion_a,12:15:00,12:15:00,library,25,,0
 purple_to_mtzion_a,12:30:00,12:30:00,3360 Geary,26,to Mt. Zion,0
-purple_to_mtzion_a,12:38:00,12:38:00,mtzion,27,,0
+purple_to_mtzion_a,12:38:00,12:38:00,mtzion,27,,1
 purple_to_mtzion_a,13:00:00,13:00:00,library,28,,0
 purple_to_mtzion_a,13:15:00,13:15:00,3360 Geary,29,to Mt. Zion,0
-purple_to_mtzion_a,13:23:00,13:23:00,mtzion,30,,0
+purple_to_mtzion_a,13:23:00,13:23:00,mtzion,30,,1
 purple_to_mtzion_a,13:45:00,13:45:00,library,31,,0
 purple_to_mtzion_a,14:00:00,14:00:00,3360 Geary,32,to Mt. Zion,0
-purple_to_mtzion_a,14:08:00,14:08:00,mtzion,33,,0
+purple_to_mtzion_a,14:08:00,14:08:00,mtzion,33,,1
 purple_to_mtzion_a,14:30:00,14:30:00,library,34,,0
 purple_to_mtzion_a,14:45:00,14:45:00,3360 Geary,35,to Mt. Zion,0
-purple_to_mtzion_a,14:53:00,14:53:00,mtzion,36,,0
+purple_to_mtzion_a,14:53:00,14:53:00,mtzion,36,,1
 purple_to_mtzion_a,15:15:00,15:15:00,library,37,,0
 purple_to_mtzion_a,15:30:00,15:30:00,3360 Geary,38,to Mt. Zion,0
-purple_to_mtzion_a,15:38:00,15:38:00,mtzion,39,,0
+purple_to_mtzion_a,15:38:00,15:38:00,mtzion,39,,1
 purple_to_mtzion_a,16:00:00,16:00:00,library,40,,0
 purple_to_mtzion_a,16:15:00,16:15:00,3360 Geary,41,to Mt. Zion,0
-purple_to_mtzion_a,16:23:00,16:23:00,mtzion,42,,0
+purple_to_mtzion_a,16:23:00,16:23:00,mtzion,42,,1
 purple_to_mtzion_a,16:45:00,16:45:00,library,43,,0
 purple_to_mtzion_a,17:00:00,17:00:00,3360 Geary,44,to Mt. Zion,0
-purple_to_mtzion_a,17:08:00,17:08:00,mtzion,45,,0
+purple_to_mtzion_a,17:08:00,17:08:00,mtzion,45,,1
 purple_to_mtzion_a,17:30:00,17:30:00,library,46,,0
 purple_to_mtzion_a,17:45:00,17:45:00,3360 Geary,47,to Mt. Zion,0
-purple_to_mtzion_a,17:53:00,17:53:00,mtzion,48,,0
+purple_to_mtzion_a,17:53:00,17:53:00,mtzion,48,,1
 purple_to_mtzion_a,18:15:00,18:15:00,library,49,,0
 purple_to_mtzion_a,18:30:00,18:30:00,3360 Geary,50,to Mt. Zion,0
 purple_to_mtzion_a,18:38:00,18:38:00,mtzion,51,,1
 purple_to_library_a,06:38:00,06:38:00,mtzion,1,,0
 purple_to_library_a,06:45:00,06:45:00,3360 Geary,2,to Parnassus,0
-purple_to_library_a,07:00:00,07:00:00,library,3,,0
+purple_to_library_a,07:00:00,07:00:00,library,3,,1
 purple_to_library_a,07:23:00,07:23:00,mtzion,4,,0
 purple_to_library_a,07:30:00,07:30:00,3360 Geary,5,to Parnassus,0
-purple_to_library_a,07:45:00,07:45:00,library,6,,0
+purple_to_library_a,07:45:00,07:45:00,library,6,,1
 purple_to_library_a,08:08:00,08:08:00,mtzion,7,,0
 purple_to_library_a,08:15:00,08:15:00,3360 Geary,8,to Parnassus,0
-purple_to_library_a,08:30:00,08:30:00,library,9,,0
+purple_to_library_a,08:30:00,08:30:00,library,9,,1
 purple_to_library_a,08:53:00,08:53:00,mtzion,10,,0
 purple_to_library_a,09:00:00,09:00:00,3360 Geary,11,to Parnassus,0
-purple_to_library_a,09:15:00,09:15:00,library,12,,0
+purple_to_library_a,09:15:00,09:15:00,library,12,,1
 purple_to_library_a,09:38:00,09:38:00,mtzion,13,,0
 purple_to_library_a,09:45:00,09:45:00,3360 Geary,14,to Parnassus,0
-purple_to_library_a,10:00:00,10:00:00,library,15,,0
+purple_to_library_a,10:00:00,10:00:00,library,15,,1
 purple_to_library_a,10:23:00,10:23:00,mtzion,16,,0
 purple_to_library_a,10:30:00,10:30:00,3360 Geary,17,to Parnassus,0
-purple_to_library_a,10:45:00,10:45:00,library,18,,0
+purple_to_library_a,10:45:00,10:45:00,library,18,,1
 purple_to_library_a,11:08:00,11:08:00,mtzion,19,,0
 purple_to_library_a,11:15:00,11:15:00,3360 Geary,20,to Parnassus,0
-purple_to_library_a,11:30:00,11:30:00,library,21,,0
+purple_to_library_a,11:30:00,11:30:00,library,21,,1
 purple_to_library_a,11:53:00,11:53:00,mtzion,22,,0
 purple_to_library_a,12:00:00,12:00:00,3360 Geary,23,to Parnassus,0
-purple_to_library_a,12:15:00,12:15:00,library,24,,0
+purple_to_library_a,12:15:00,12:15:00,library,24,,1
 purple_to_library_a,12:38:00,12:38:00,mtzion,25,,0
 purple_to_library_a,12:45:00,12:45:00,3360 Geary,26,to Parnassus,0
-purple_to_library_a,13:00:00,13:00:00,library,27,,0
+purple_to_library_a,13:00:00,13:00:00,library,27,,1
 purple_to_library_a,13:23:00,13:23:00,mtzion,28,,0
 purple_to_library_a,13:30:00,13:30:00,3360 Geary,29,to Parnassus,0
-purple_to_library_a,13:45:00,13:45:00,library,30,,0
+purple_to_library_a,13:45:00,13:45:00,library,30,,1
 purple_to_library_a,14:08:00,14:08:00,mtzion,31,,0
 purple_to_library_a,14:15:00,14:15:00,3360 Geary,32,to Parnassus,0
-purple_to_library_a,14:30:00,14:30:00,library,33,,0
+purple_to_library_a,14:30:00,14:30:00,library,33,,1
 purple_to_library_a,14:53:00,14:53:00,mtzion,34,,0
 purple_to_library_a,15:00:00,15:00:00,3360 Geary,35,to Parnassus,0
-purple_to_library_a,15:15:00,15:15:00,library,36,,0
+purple_to_library_a,15:15:00,15:15:00,library,36,,1
 purple_to_library_a,15:38:00,15:38:00,mtzion,37,,0
 purple_to_library_a,15:45:00,15:45:00,3360 Geary,38,to Parnassus,0
-purple_to_library_a,16:00:00,16:00:00,library,39,,0
+purple_to_library_a,16:00:00,16:00:00,library,39,,1
 purple_to_library_a,16:23:00,16:23:00,mtzion,40,,0
 purple_to_library_a,16:30:00,16:30:00,3360 Geary,41,to Parnassus,0
-purple_to_library_a,16:45:00,16:45:00,library,42,,0
+purple_to_library_a,16:45:00,16:45:00,library,42,,1
 purple_to_library_a,17:08:00,17:08:00,mtzion,43,,0
 purple_to_library_a,17:15:00,17:15:00,3360 Geary,44,to Parnassus,0
-purple_to_library_a,17:30:00,17:30:00,library,45,,0
+purple_to_library_a,17:30:00,17:30:00,library,45,,1
 purple_to_library_a,17:53:00,17:53:00,mtzion,46,,0
 purple_to_library_a,18:00:00,18:00:00,3360 Geary,47,to Parnassus,0
-purple_to_library_a,18:15:00,18:15:00,library,48,,0
+purple_to_library_a,18:15:00,18:15:00,library,48,,1
 purple_to_library_a,18:38:00,18:38:00,mtzion,49,,0
 purple_to_library_a,18:45:00,18:45:00,3360 Geary,50,,1
 red_bart_to_mb_a,06:10:00,06:10:00,16thbart,1,,0
 red_bart_to_mb_a,06:15:00,06:15:00,mcb,2,to Mission Bay,0
-red_bart_to_mb_a,06:25:00,06:25:00,missb4th,3,,0
+red_bart_to_mb_a,06:25:00,06:25:00,missb4th,3,,1
 red_bart_to_mb_a,06:40:00,06:40:00,16thbart,4,,0
 red_bart_to_mb_a,06:45:00,06:45:00,mcb,5,to Mission Bay,0
-red_bart_to_mb_a,06:55:00,06:55:00,missb4th,6,,0
+red_bart_to_mb_a,06:55:00,06:55:00,missb4th,6,,1
 red_bart_to_mb_a,07:10:00,07:10:00,16thbart,7,,0
 red_bart_to_mb_a,07:15:00,07:15:00,mcb,8,to Mission Bay,0
-red_bart_to_mb_a,07:25:00,07:25:00,missb4th,9,,0
+red_bart_to_mb_a,07:25:00,07:25:00,missb4th,9,,1
 red_bart_to_mb_a,07:40:00,07:40:00,16thbart,10,,0
 red_bart_to_mb_a,07:45:00,07:45:00,mcb,11,to Mission Bay,0
-red_bart_to_mb_a,07:55:00,07:55:00,missb4th,12,,0
+red_bart_to_mb_a,07:55:00,07:55:00,missb4th,12,,1
 red_bart_to_mb_a,08:10:00,08:10:00,16thbart,13,,0
 red_bart_to_mb_a,08:15:00,08:15:00,mcb,14,to Mission Bay,0
-red_bart_to_mb_a,08:25:00,08:25:00,missb4th,15,,0
+red_bart_to_mb_a,08:25:00,08:25:00,missb4th,15,,1
 red_bart_to_mb_a,08:40:00,08:40:00,16thbart,16,,0
 red_bart_to_mb_a,08:45:00,08:45:00,mcb,17,to Mission Bay,0
-red_bart_to_mb_a,08:55:00,08:55:00,missb4th,18,,0
+red_bart_to_mb_a,08:55:00,08:55:00,missb4th,18,,1
 red_bart_to_mb_a,09:10:00,09:10:00,16thbart,19,,0
 red_bart_to_mb_a,09:15:00,09:15:00,mcb,20,to Mission Bay,0
-red_bart_to_mb_a,09:25:00,09:25:00,missb4th,21,,0
+red_bart_to_mb_a,09:25:00,09:25:00,missb4th,21,,1
 red_bart_to_mb_a,09:40:00,09:40:00,16thbart,22,,0
 red_bart_to_mb_a,09:45:00,09:45:00,mcb,23,to Mission Bay,0
-red_bart_to_mb_a,09:55:00,09:55:00,missb4th,24,,0
+red_bart_to_mb_a,09:55:00,09:55:00,missb4th,24,,1
 red_bart_to_mb_a,10:10:00,10:10:00,16thbart,25,,0
 red_bart_to_mb_a,10:15:00,10:15:00,mcb,26,to Mission Bay,0
-red_bart_to_mb_a,10:25:00,10:25:00,missb4th,27,,0
+red_bart_to_mb_a,10:25:00,10:25:00,missb4th,27,,1
 red_bart_to_mb_a,10:40:00,10:40:00,16thbart,28,,0
 red_bart_to_mb_a,10:45:00,10:45:00,mcb,29,to Mission Bay,0
-red_bart_to_mb_a,10:55:00,10:55:00,missb4th,30,,0
+red_bart_to_mb_a,10:55:00,10:55:00,missb4th,30,,1
 red_bart_to_mb_a,11:10:00,11:10:00,16thbart,31,,0
 red_bart_to_mb_a,11:15:00,11:15:00,mcb,32,to Mission Bay,0
-red_bart_to_mb_a,11:25:00,11:25:00,missb4th,33,,0
+red_bart_to_mb_a,11:25:00,11:25:00,missb4th,33,,1
 red_bart_to_mb_a,11:40:00,11:40:00,16thbart,34,,0
 red_bart_to_mb_a,11:45:00,11:45:00,mcb,35,to Mission Bay,0
-red_bart_to_mb_a,11:55:00,11:55:00,missb4th,36,,0
+red_bart_to_mb_a,11:55:00,11:55:00,missb4th,36,,1
 red_bart_to_mb_a,12:10:00,12:10:00,16thbart,37,,0
 red_bart_to_mb_a,12:15:00,12:15:00,mcb,38,to Mission Bay,0
-red_bart_to_mb_a,12:25:00,12:25:00,missb4th,39,,0
+red_bart_to_mb_a,12:25:00,12:25:00,missb4th,39,,1
 red_bart_to_mb_a,12:40:00,12:40:00,16thbart,40,,0
 red_bart_to_mb_a,12:45:00,12:45:00,mcb,41,to Mission Bay,0
-red_bart_to_mb_a,12:55:00,12:55:00,missb4th,42,,0
+red_bart_to_mb_a,12:55:00,12:55:00,missb4th,42,,1
 red_bart_to_mb_a,13:10:00,13:10:00,16thbart,43,,0
 red_bart_to_mb_a,13:15:00,13:15:00,mcb,44,to Mission Bay,0
-red_bart_to_mb_a,13:25:00,13:25:00,missb4th,45,,0
+red_bart_to_mb_a,13:25:00,13:25:00,missb4th,45,,1
 red_bart_to_mb_a,13:40:00,13:40:00,16thbart,46,,0
 red_bart_to_mb_a,13:45:00,13:45:00,mcb,47,to Mission Bay,0
-red_bart_to_mb_a,13:55:00,13:55:00,missb4th,48,,0
+red_bart_to_mb_a,13:55:00,13:55:00,missb4th,48,,1
 red_bart_to_mb_a,14:10:00,14:10:00,16thbart,49,,0
 red_bart_to_mb_a,14:15:00,14:15:00,mcb,50,to Mission Bay,0
-red_bart_to_mb_a,14:25:00,14:25:00,missb4th,51,,0
+red_bart_to_mb_a,14:25:00,14:25:00,missb4th,51,,1
 red_bart_to_mb_a,14:40:00,14:40:00,16thbart,52,,0
 red_bart_to_mb_a,14:45:00,14:45:00,mcb,53,to Mission Bay,0
-red_bart_to_mb_a,14:55:00,14:55:00,missb4th,54,,0
+red_bart_to_mb_a,14:55:00,14:55:00,missb4th,54,,1
 red_bart_to_mb_a,15:10:00,15:10:00,16thbart,55,,0
 red_bart_to_mb_a,15:15:00,15:15:00,mcb,56,to Mission Bay,0
 red_bart_to_mb_a,15:30:00,15:30:00,missb4th,57,,0
 red_bart_to_mb_a,15:45:00,15:45:00,16thbart,58,,0
 red_bart_to_mb_a,15:50:00,15:50:00,mcb,59,to Mission Bay,0
-red_bart_to_mb_a,16:05:00,16:05:00,missb4th,60,,0
+red_bart_to_mb_a,16:05:00,16:05:00,missb4th,60,,1
 red_bart_to_mb_a,16:20:00,16:20:00,16thbart,61,,0
 red_bart_to_mb_a,16:25:00,16:25:00,mcb,62,to Mission Bay,0
 red_bart_to_mb_a,16:45:00,16:45:00,missb4th,63,,0
 red_bart_to_mb_a,17:00:00,17:00:00,16thbart,64,,0
 red_bart_to_mb_a,17:05:00,17:05:00,mcb,65,to Mission Bay,0
-red_bart_to_mb_a,17:20:00,17:20:00,missb4th,66,,0
+red_bart_to_mb_a,17:20:00,17:20:00,missb4th,66,,1
 red_bart_to_mb_a,17:35:00,17:35:00,16thbart,67,,0
 red_bart_to_mb_a,17:40:00,17:40:00,mcb,68,to Mission Bay,0
-red_bart_to_mb_a,17:55:00,17:55:00,missb4th,69,,0
+red_bart_to_mb_a,17:55:00,17:55:00,missb4th,69,,1
 red_bart_to_mb_a,18:10:00,18:10:00,16thbart,70,,0
 red_bart_to_mb_a,18:15:00,18:15:00,mcb,71,to Mission Bay,0
-red_bart_to_mb_a,18:30:00,18:30:00,missb4th,72,,0
+red_bart_to_mb_a,18:30:00,18:30:00,missb4th,72,,1
 red_bart_to_mb_a,18:45:00,18:45:00,16thbart,73,,0
 red_bart_to_mb_a,18:50:00,18:50:00,mcb,74,to Mission Bay,0
 red_bart_to_mb_a,19:00:00,19:00:00,missb4th,75,,0
 red_bart_to_mb_a,19:15:00,19:15:00,16thbart,76,,0
 red_bart_to_mb_a,19:20:00,19:20:00,mcb,77,to Mission Bay,0
-red_bart_to_mb_a,19:30:00,19:30:00,missb4th,78,,0
+red_bart_to_mb_a,19:30:00,19:30:00,missb4th,78,,1
 red_bart_to_mb_a,19:45:00,19:45:00,16thbart,79,,0
 red_bart_to_mb_a,19:50:00,19:50:00,mcb,80,to Mission Bay,0
 red_bart_to_mb_a,20:00:00,20:00:00,missb4th,81,,1
 red_mb_to_bart_a,05:55:00,05:55:00,missb4th,1,,0
 red_mb_to_bart_a,06:05:00,06:05:00,mcb,2,to 16th St. BART,0
-red_mb_to_bart_a,06:10:00,06:10:00,16thbart,3,,0
+red_mb_to_bart_a,06:10:00,06:10:00,16thbart,3,,1
 red_mb_to_bart_a,06:25:00,06:25:00,missb4th,4,,0
 red_mb_to_bart_a,06:35:00,06:35:00,mcb,5,to 16th St. BART,0
-red_mb_to_bart_a,06:40:00,06:40:00,16thbart,6,,0
+red_mb_to_bart_a,06:40:00,06:40:00,16thbart,6,,1
 red_mb_to_bart_a,06:55:00,06:55:00,missb4th,7,,0
 red_mb_to_bart_a,07:05:00,07:05:00,mcb,8,to 16th St. BART,0
-red_mb_to_bart_a,07:10:00,07:10:00,16thbart,9,,0
+red_mb_to_bart_a,07:10:00,07:10:00,16thbart,9,,1
 red_mb_to_bart_a,07:25:00,07:25:00,missb4th,10,,0
 red_mb_to_bart_a,07:35:00,07:35:00,mcb,11,to 16th St. BART,0
-red_mb_to_bart_a,07:40:00,07:40:00,16thbart,12,,0
+red_mb_to_bart_a,07:40:00,07:40:00,16thbart,12,,1
 red_mb_to_bart_a,07:55:00,07:55:00,missb4th,13,,0
 red_mb_to_bart_a,08:05:00,08:05:00,mcb,14,to 16th St. BART,0
-red_mb_to_bart_a,08:10:00,08:10:00,16thbart,15,,0
+red_mb_to_bart_a,08:10:00,08:10:00,16thbart,15,,1
 red_mb_to_bart_a,08:25:00,08:25:00,missb4th,16,,0
 red_mb_to_bart_a,08:35:00,08:35:00,mcb,17,to 16th St. BART,0
-red_mb_to_bart_a,08:40:00,08:40:00,16thbart,18,,0
+red_mb_to_bart_a,08:40:00,08:40:00,16thbart,18,,1
 red_mb_to_bart_a,08:55:00,08:55:00,missb4th,19,,0
 red_mb_to_bart_a,09:05:00,09:05:00,mcb,20,to 16th St. BART,0
-red_mb_to_bart_a,09:10:00,09:10:00,16thbart,21,,0
+red_mb_to_bart_a,09:10:00,09:10:00,16thbart,21,,1
 red_mb_to_bart_a,09:25:00,09:25:00,missb4th,22,,0
 red_mb_to_bart_a,09:35:00,09:35:00,mcb,23,to 16th St. BART,0
-red_mb_to_bart_a,09:40:00,09:40:00,16thbart,24,,0
+red_mb_to_bart_a,09:40:00,09:40:00,16thbart,24,,1
 red_mb_to_bart_a,09:55:00,09:55:00,missb4th,25,,0
 red_mb_to_bart_a,10:05:00,10:05:00,mcb,26,to 16th St. BART,0
-red_mb_to_bart_a,10:10:00,10:10:00,16thbart,27,,0
+red_mb_to_bart_a,10:10:00,10:10:00,16thbart,27,,1
 red_mb_to_bart_a,10:25:00,10:25:00,missb4th,28,,0
 red_mb_to_bart_a,10:35:00,10:35:00,mcb,29,to 16th St. BART,0
-red_mb_to_bart_a,10:40:00,10:40:00,16thbart,30,,0
+red_mb_to_bart_a,10:40:00,10:40:00,16thbart,30,,1
 red_mb_to_bart_a,10:55:00,10:55:00,missb4th,31,,0
 red_mb_to_bart_a,11:05:00,11:05:00,mcb,32,to 16th St. BART,0
-red_mb_to_bart_a,11:10:00,11:10:00,16thbart,33,,0
+red_mb_to_bart_a,11:10:00,11:10:00,16thbart,33,,1
 red_mb_to_bart_a,11:25:00,11:25:00,missb4th,34,,0
 red_mb_to_bart_a,11:35:00,11:35:00,mcb,35,to 16th St. BART,0
-red_mb_to_bart_a,11:40:00,11:40:00,16thbart,36,,0
+red_mb_to_bart_a,11:40:00,11:40:00,16thbart,36,,1
 red_mb_to_bart_a,11:55:00,11:55:00,missb4th,37,,0
 red_mb_to_bart_a,12:05:00,12:05:00,mcb,38,to 16th St. BART,0
-red_mb_to_bart_a,12:10:00,12:10:00,16thbart,39,,0
+red_mb_to_bart_a,12:10:00,12:10:00,16thbart,39,,1
 red_mb_to_bart_a,12:25:00,12:25:00,missb4th,40,,0
 red_mb_to_bart_a,12:35:00,12:35:00,mcb,41,to 16th St. BART,0
-red_mb_to_bart_a,12:40:00,12:40:00,16thbart,42,,0
+red_mb_to_bart_a,12:40:00,12:40:00,16thbart,42,,1
 red_mb_to_bart_a,12:55:00,12:55:00,missb4th,43,,0
 red_mb_to_bart_a,13:05:00,13:05:00,mcb,44,to 16th St. BART,0
-red_mb_to_bart_a,13:10:00,13:10:00,16thbart,45,,0
+red_mb_to_bart_a,13:10:00,13:10:00,16thbart,45,,1
 red_mb_to_bart_a,13:25:00,13:25:00,missb4th,46,,0
 red_mb_to_bart_a,13:35:00,13:35:00,mcb,47,to 16th St. BART,0
-red_mb_to_bart_a,13:40:00,13:40:00,16thbart,48,,0
+red_mb_to_bart_a,13:40:00,13:40:00,16thbart,48,,1
 red_mb_to_bart_a,13:55:00,13:55:00,missb4th,49,,0
 red_mb_to_bart_a,14:05:00,14:05:00,mcb,50,to 16th St. BART,0
-red_mb_to_bart_a,14:10:00,14:10:00,16thbart,51,,0
+red_mb_to_bart_a,14:10:00,14:10:00,16thbart,51,,1
 red_mb_to_bart_a,14:25:00,14:25:00,missb4th,52,,0
 red_mb_to_bart_a,14:35:00,14:35:00,mcb,53,to 16th St. BART,0
-red_mb_to_bart_a,14:40:00,14:40:00,16thbart,54,,0
+red_mb_to_bart_a,14:40:00,14:40:00,16thbart,54,,1
 red_mb_to_bart_a,14:55:00,14:55:00,missb4th,55,,0
 red_mb_to_bart_a,15:05:00,15:05:00,mcb,56,to 16th St. BART,0
-red_mb_to_bart_a,15:10:00,15:10:00,16thbart,57,,0
+red_mb_to_bart_a,15:10:00,15:10:00,16thbart,57,,1
 red_mb_to_bart_a,15:30:00,15:30:00,missb4th,58,,0
 red_mb_to_bart_a,15:40:00,15:40:00,mcb,59,to 16th St. BART,0
-red_mb_to_bart_a,15:45:00,15:45:00,16thbart,60,,0
+red_mb_to_bart_a,15:45:00,15:45:00,16thbart,60,,1
 red_mb_to_bart_a,16:05:00,16:05:00,missb4th,61,,0
 red_mb_to_bart_a,16:15:00,16:15:00,mcb,62,to 16th St. BART,0
-red_mb_to_bart_a,16:20:00,16:20:00,16thbart,63,,0
+red_mb_to_bart_a,16:20:00,16:20:00,16thbart,63,,1
 red_mb_to_bart_a,16:45:00,16:45:00,missb4th,64,,0
 red_mb_to_bart_a,16:55:00,16:55:00,mcb,65,to 16th St. BART,0
-red_mb_to_bart_a,17:00:00,17:00:00,16thbart,66,,0
+red_mb_to_bart_a,17:00:00,17:00:00,16thbart,66,,1
 red_mb_to_bart_a,17:20:00,17:20:00,missb4th,67,,0
 red_mb_to_bart_a,17:30:00,17:30:00,mcb,68,to 16th St. BART,0
-red_mb_to_bart_a,17:35:00,17:35:00,16thbart,69,,0
+red_mb_to_bart_a,17:35:00,17:35:00,16thbart,69,,1
 red_mb_to_bart_a,17:55:00,17:55:00,missb4th,70,,0
 red_mb_to_bart_a,18:05:00,18:05:00,mcb,71,to 16th St. BART,0
-red_mb_to_bart_a,18:10:00,18:10:00,16thbart,72,,0
+red_mb_to_bart_a,18:10:00,18:10:00,16thbart,72,,1
 red_mb_to_bart_a,18:30:00,18:30:00,missb4th,73,,0
 red_mb_to_bart_a,18:40:00,18:40:00,mcb,74,to 16th St. BART,0
-red_mb_to_bart_a,18:45:00,18:45:00,16thbart,75,,0
+red_mb_to_bart_a,18:45:00,18:45:00,16thbart,75,,1
 red_mb_to_bart_a,19:00:00,19:00:00,missb4th,76,,0
 red_mb_to_bart_a,19:10:00,19:10:00,mcb,77,to 16th St. BART,0
-red_mb_to_bart_a,19:15:00,19:15:00,16thbart,78,,0
+red_mb_to_bart_a,19:15:00,19:15:00,16thbart,78,,1
 red_mb_to_bart_a,19:30:00,19:30:00,missb4th,79,,0
 red_mb_to_bart_a,19:40:00,19:40:00,mcb,80,to 16th St. BART,0
 red_mb_to_bart_a,19:45:00,19:45:00,16thbart,81,,1
 red_bart_to_mb_b,06:25:00,06:25:00,16thbart,1,,0
 red_bart_to_mb_b,06:30:00,06:30:00,mcb,2,to Mission Bay,0
-red_bart_to_mb_b,06:40:00,06:40:00,missb4th,3,,0
+red_bart_to_mb_b,06:40:00,06:40:00,missb4th,3,,1
 red_bart_to_mb_b,06:55:00,06:55:00,16thbart,4,,0
 red_bart_to_mb_b,07:00:00,07:00:00,mcb,5,to Mission Bay,0
-red_bart_to_mb_b,07:10:00,07:10:00,missb4th,6,,0
+red_bart_to_mb_b,07:10:00,07:10:00,missb4th,6,,1
 red_bart_to_mb_b,07:25:00,07:25:00,16thbart,7,,0
 red_bart_to_mb_b,07:30:00,07:30:00,mcb,8,to Mission Bay,0
-red_bart_to_mb_b,07:40:00,07:40:00,missb4th,9,,0
+red_bart_to_mb_b,07:40:00,07:40:00,missb4th,9,,1
 red_bart_to_mb_b,07:55:00,07:55:00,16thbart,10,,0
 red_bart_to_mb_b,08:00:00,08:00:00,mcb,11,to Mission Bay,0
-red_bart_to_mb_b,08:10:00,08:10:00,missb4th,12,,0
+red_bart_to_mb_b,08:10:00,08:10:00,missb4th,12,,1
 red_bart_to_mb_b,08:25:00,08:25:00,16thbart,13,,0
 red_bart_to_mb_b,08:30:00,08:30:00,mcb,14,to Mission Bay,0
-red_bart_to_mb_b,08:40:00,08:40:00,missb4th,15,,0
+red_bart_to_mb_b,08:40:00,08:40:00,missb4th,15,,1
 red_bart_to_mb_b,08:55:00,08:55:00,16thbart,16,,0
 red_bart_to_mb_b,09:00:00,09:00:00,mcb,17,to Mission Bay,0
-red_bart_to_mb_b,09:10:00,09:10:00,missb4th,18,,0
+red_bart_to_mb_b,09:10:00,09:10:00,missb4th,18,,1
 red_bart_to_mb_b,09:25:00,09:25:00,16thbart,19,,0
 red_bart_to_mb_b,09:30:00,09:30:00,mcb,20,to Mission Bay,0
-red_bart_to_mb_b,09:40:00,09:40:00,missb4th,21,,0
+red_bart_to_mb_b,09:40:00,09:40:00,missb4th,21,,1
 red_bart_to_mb_b,09:55:00,09:55:00,16thbart,22,,0
 red_bart_to_mb_b,10:00:00,10:00:00,mcb,23,to Mission Bay,0
-red_bart_to_mb_b,10:10:00,10:10:00,missb4th,24,,0
+red_bart_to_mb_b,10:10:00,10:10:00,missb4th,24,,1
 red_bart_to_mb_b,10:25:00,10:25:00,16thbart,25,,0
 red_bart_to_mb_b,10:30:00,10:30:00,mcb,26,to Mission Bay,0
-red_bart_to_mb_b,10:40:00,10:40:00,missb4th,27,,0
+red_bart_to_mb_b,10:40:00,10:40:00,missb4th,27,,1
 red_bart_to_mb_b,10:55:00,10:55:00,16thbart,28,,0
 red_bart_to_mb_b,11:00:00,11:00:00,mcb,29,to Mission Bay,0
-red_bart_to_mb_b,11:10:00,11:10:00,missb4th,30,,0
+red_bart_to_mb_b,11:10:00,11:10:00,missb4th,30,,1
 red_bart_to_mb_b,11:25:00,11:25:00,16thbart,31,,0
 red_bart_to_mb_b,11:30:00,11:30:00,mcb,32,to Mission Bay,0
-red_bart_to_mb_b,11:40:00,11:40:00,missb4th,33,,0
+red_bart_to_mb_b,11:40:00,11:40:00,missb4th,33,,1
 red_bart_to_mb_b,11:55:00,11:55:00,16thbart,34,,0
 red_bart_to_mb_b,12:00:00,12:00:00,mcb,35,to Mission Bay,0
-red_bart_to_mb_b,12:10:00,12:10:00,missb4th,36,,0
+red_bart_to_mb_b,12:10:00,12:10:00,missb4th,36,,1
 red_bart_to_mb_b,12:25:00,12:25:00,16thbart,37,,0
 red_bart_to_mb_b,12:30:00,12:30:00,mcb,38,to Mission Bay,0
-red_bart_to_mb_b,12:40:00,12:40:00,missb4th,39,,0
+red_bart_to_mb_b,12:40:00,12:40:00,missb4th,39,,1
 red_bart_to_mb_b,12:55:00,12:55:00,16thbart,40,,0
 red_bart_to_mb_b,13:00:00,13:00:00,mcb,41,to Mission Bay,0
-red_bart_to_mb_b,13:10:00,13:10:00,missb4th,42,,0
+red_bart_to_mb_b,13:10:00,13:10:00,missb4th,42,,1
 red_bart_to_mb_b,13:25:00,13:25:00,16thbart,43,,0
 red_bart_to_mb_b,13:30:00,13:30:00,mcb,44,to Mission Bay,0
-red_bart_to_mb_b,13:40:00,13:40:00,missb4th,45,,0
+red_bart_to_mb_b,13:40:00,13:40:00,missb4th,45,,1
 red_bart_to_mb_b,13:55:00,13:55:00,16thbart,46,,0
 red_bart_to_mb_b,14:00:00,14:00:00,mcb,47,to Mission Bay,0
-red_bart_to_mb_b,14:10:00,14:10:00,missb4th,48,,0
+red_bart_to_mb_b,14:10:00,14:10:00,missb4th,48,,1
 red_bart_to_mb_b,14:25:00,14:25:00,16thbart,49,,0
 red_bart_to_mb_b,14:30:00,14:30:00,mcb,50,to Mission Bay,0
-red_bart_to_mb_b,14:40:00,14:40:00,missb4th,51,,0
+red_bart_to_mb_b,14:40:00,14:40:00,missb4th,51,,1
 red_bart_to_mb_b,14:55:00,14:55:00,16thbart,52,,0
 red_bart_to_mb_b,15:00:00,15:00:00,mcb,53,to Mission Bay,0
 red_bart_to_mb_b,15:15:00,15:15:00,missb4th,54,,0
 red_bart_to_mb_b,15:30:00,15:30:00,16thbart,55,,0
 red_bart_to_mb_b,15:35:00,15:35:00,mcb,56,to Mission Bay,0
-red_bart_to_mb_b,15:50:00,15:50:00,missb4th,57,,0
+red_bart_to_mb_b,15:50:00,15:50:00,missb4th,57,,1
 red_bart_to_mb_b,16:05:00,16:05:00,16thbart,58,,0
 red_bart_to_mb_b,16:10:00,16:10:00,mcb,59,to Mission Bay,0
 red_bart_to_mb_b,16:30:00,16:30:00,missb4th,60,,0
 red_bart_to_mb_b,16:45:00,16:45:00,16thbart,61,,0
 red_bart_to_mb_b,16:50:00,16:50:00,mcb,62,to Mission Bay,0
-red_bart_to_mb_b,17:05:00,17:05:00,missb4th,63,,0
+red_bart_to_mb_b,17:05:00,17:05:00,missb4th,63,,1
 red_bart_to_mb_b,17:20:00,17:20:00,16thbart,64,,0
 red_bart_to_mb_b,17:25:00,17:25:00,mcb,65,to Mission Bay,0
-red_bart_to_mb_b,17:40:00,17:40:00,missb4th,66,,0
+red_bart_to_mb_b,17:40:00,17:40:00,missb4th,66,,1
 red_bart_to_mb_b,17:55:00,17:55:00,16thbart,67,,0
 red_bart_to_mb_b,18:00:00,18:00:00,mcb,68,to Mission Bay,0
-red_bart_to_mb_b,18:15:00,18:15:00,missb4th,69,,0
+red_bart_to_mb_b,18:15:00,18:15:00,missb4th,69,,1
 red_bart_to_mb_b,18:30:00,18:30:00,16thbart,70,,0
 red_bart_to_mb_b,18:35:00,18:35:00,mcb,71,to Mission Bay,0
 red_bart_to_mb_b,18:45:00,18:45:00,missb4th,72,,0
 red_bart_to_mb_b,19:00:00,19:00:00,16thbart,73,,0
 red_bart_to_mb_b,19:05:00,19:05:00,mcb,74,to Mission Bay,0
-red_bart_to_mb_b,19:15:00,19:15:00,missb4th,75,,0
+red_bart_to_mb_b,19:15:00,19:15:00,missb4th,75,,1
 red_bart_to_mb_b,19:30:00,19:30:00,16thbart,76,,0
 red_bart_to_mb_b,19:35:00,19:35:00,mcb,77,to Mission Bay,0
 red_bart_to_mb_b,19:45:00,19:45:00,missb4th,78,,1
 red_mb_to_bart_b,06:10:00,06:10:00,missb4th,1,,0
 red_mb_to_bart_b,06:20:00,06:20:00,mcb,2,to 16th St. BART,0
-red_mb_to_bart_b,06:25:00,06:25:00,16thbart,3,,0
+red_mb_to_bart_b,06:25:00,06:25:00,16thbart,3,,1
 red_mb_to_bart_b,06:40:00,06:40:00,missb4th,4,,0
 red_mb_to_bart_b,06:50:00,06:50:00,mcb,5,to 16th St. BART,0
-red_mb_to_bart_b,06:55:00,06:55:00,16thbart,6,,0
+red_mb_to_bart_b,06:55:00,06:55:00,16thbart,6,,1
 red_mb_to_bart_b,07:10:00,07:10:00,missb4th,7,,0
 red_mb_to_bart_b,07:20:00,07:20:00,mcb,8,to 16th St. BART,0
-red_mb_to_bart_b,07:25:00,07:25:00,16thbart,9,,0
+red_mb_to_bart_b,07:25:00,07:25:00,16thbart,9,,1
 red_mb_to_bart_b,07:40:00,07:40:00,missb4th,10,,0
 red_mb_to_bart_b,07:50:00,07:50:00,mcb,11,to 16th St. BART,0
-red_mb_to_bart_b,07:55:00,07:55:00,16thbart,12,,0
+red_mb_to_bart_b,07:55:00,07:55:00,16thbart,12,,1
 red_mb_to_bart_b,08:10:00,08:10:00,missb4th,13,,0
 red_mb_to_bart_b,08:20:00,08:20:00,mcb,14,to 16th St. BART,0
-red_mb_to_bart_b,08:25:00,08:25:00,16thbart,15,,0
+red_mb_to_bart_b,08:25:00,08:25:00,16thbart,15,,1
 red_mb_to_bart_b,08:40:00,08:40:00,missb4th,16,,0
 red_mb_to_bart_b,08:50:00,08:50:00,mcb,17,to 16th St. BART,0
-red_mb_to_bart_b,08:55:00,08:55:00,16thbart,18,,0
+red_mb_to_bart_b,08:55:00,08:55:00,16thbart,18,,1
 red_mb_to_bart_b,09:10:00,09:10:00,missb4th,19,,0
 red_mb_to_bart_b,09:20:00,09:20:00,mcb,20,to 16th St. BART,0
-red_mb_to_bart_b,09:25:00,09:25:00,16thbart,21,,0
+red_mb_to_bart_b,09:25:00,09:25:00,16thbart,21,,1
 red_mb_to_bart_b,09:40:00,09:40:00,missb4th,22,,0
 red_mb_to_bart_b,09:50:00,09:50:00,mcb,23,to 16th St. BART,0
-red_mb_to_bart_b,09:55:00,09:55:00,16thbart,24,,0
+red_mb_to_bart_b,09:55:00,09:55:00,16thbart,24,,1
 red_mb_to_bart_b,10:10:00,10:10:00,missb4th,25,,0
 red_mb_to_bart_b,10:20:00,10:20:00,mcb,26,to 16th St. BART,0
-red_mb_to_bart_b,10:25:00,10:25:00,16thbart,27,,0
+red_mb_to_bart_b,10:25:00,10:25:00,16thbart,27,,1
 red_mb_to_bart_b,10:40:00,10:40:00,missb4th,28,,0
 red_mb_to_bart_b,10:50:00,10:50:00,mcb,29,to 16th St. BART,0
-red_mb_to_bart_b,10:55:00,10:55:00,16thbart,30,,0
+red_mb_to_bart_b,10:55:00,10:55:00,16thbart,30,,1
 red_mb_to_bart_b,11:10:00,11:10:00,missb4th,31,,0
 red_mb_to_bart_b,11:20:00,11:20:00,mcb,32,to 16th St. BART,0
-red_mb_to_bart_b,11:25:00,11:25:00,16thbart,33,,0
+red_mb_to_bart_b,11:25:00,11:25:00,16thbart,33,,1
 red_mb_to_bart_b,11:40:00,11:40:00,missb4th,34,,0
 red_mb_to_bart_b,11:50:00,11:50:00,mcb,35,to 16th St. BART,0
-red_mb_to_bart_b,11:55:00,11:55:00,16thbart,36,,0
+red_mb_to_bart_b,11:55:00,11:55:00,16thbart,36,,1
 red_mb_to_bart_b,12:10:00,12:10:00,missb4th,37,,0
 red_mb_to_bart_b,12:20:00,12:20:00,mcb,38,to 16th St. BART,0
-red_mb_to_bart_b,12:25:00,12:25:00,16thbart,39,,0
+red_mb_to_bart_b,12:25:00,12:25:00,16thbart,39,,1
 red_mb_to_bart_b,12:40:00,12:40:00,missb4th,40,,0
 red_mb_to_bart_b,12:50:00,12:50:00,mcb,41,to 16th St. BART,0
-red_mb_to_bart_b,12:55:00,12:55:00,16thbart,42,,0
+red_mb_to_bart_b,12:55:00,12:55:00,16thbart,42,,1
 red_mb_to_bart_b,13:10:00,13:10:00,missb4th,43,,0
 red_mb_to_bart_b,13:20:00,13:20:00,mcb,44,to 16th St. BART,0
-red_mb_to_bart_b,13:25:00,13:25:00,16thbart,45,,0
+red_mb_to_bart_b,13:25:00,13:25:00,16thbart,45,,1
 red_mb_to_bart_b,13:40:00,13:40:00,missb4th,46,,0
 red_mb_to_bart_b,13:50:00,13:50:00,mcb,47,to 16th St. BART,0
-red_mb_to_bart_b,13:55:00,13:55:00,16thbart,48,,0
+red_mb_to_bart_b,13:55:00,13:55:00,16thbart,48,,1
 red_mb_to_bart_b,14:10:00,14:10:00,missb4th,49,,0
 red_mb_to_bart_b,14:20:00,14:20:00,mcb,50,to 16th St. BART,0
-red_mb_to_bart_b,14:25:00,14:25:00,16thbart,51,,0
+red_mb_to_bart_b,14:25:00,14:25:00,16thbart,51,,1
 red_mb_to_bart_b,14:40:00,14:40:00,missb4th,52,,0
 red_mb_to_bart_b,14:50:00,14:50:00,mcb,53,to 16th St. BART,0
-red_mb_to_bart_b,14:55:00,14:55:00,16thbart,54,,0
+red_mb_to_bart_b,14:55:00,14:55:00,16thbart,54,,1
 red_mb_to_bart_b,15:15:00,15:15:00,missb4th,55,,0
 red_mb_to_bart_b,15:25:00,15:25:00,mcb,56,to 16th St. BART,0
-red_mb_to_bart_b,15:30:00,15:30:00,16thbart,57,,0
+red_mb_to_bart_b,15:30:00,15:30:00,16thbart,57,,1
 red_mb_to_bart_b,15:50:00,15:50:00,missb4th,58,,0
 red_mb_to_bart_b,16:00:00,16:00:00,mcb,59,to 16th St. BART,0
-red_mb_to_bart_b,16:05:00,16:05:00,16thbart,60,,0
+red_mb_to_bart_b,16:05:00,16:05:00,16thbart,60,,1
 red_mb_to_bart_b,16:30:00,16:30:00,missb4th,61,,0
 red_mb_to_bart_b,16:40:00,16:40:00,mcb,62,to 16th St. BART,0
-red_mb_to_bart_b,16:45:00,16:45:00,16thbart,63,,0
+red_mb_to_bart_b,16:45:00,16:45:00,16thbart,63,,1
 red_mb_to_bart_b,17:05:00,17:05:00,missb4th,64,,0
 red_mb_to_bart_b,17:15:00,17:15:00,mcb,65,to 16th St. BART,0
-red_mb_to_bart_b,17:20:00,17:20:00,16thbart,66,,0
+red_mb_to_bart_b,17:20:00,17:20:00,16thbart,66,,1
 red_mb_to_bart_b,17:40:00,17:40:00,missb4th,67,,0
 red_mb_to_bart_b,17:50:00,17:50:00,mcb,68,to 16th St. BART,0
-red_mb_to_bart_b,17:55:00,17:55:00,16thbart,69,,0
+red_mb_to_bart_b,17:55:00,17:55:00,16thbart,69,,1
 red_mb_to_bart_b,18:15:00,18:15:00,missb4th,70,,0
 red_mb_to_bart_b,18:25:00,18:25:00,mcb,71,to 16th St. BART,0
-red_mb_to_bart_b,18:30:00,18:30:00,16thbart,72,,0
+red_mb_to_bart_b,18:30:00,18:30:00,16thbart,72,,1
 red_mb_to_bart_b,18:45:00,18:45:00,missb4th,73,,0
 red_mb_to_bart_b,18:55:00,18:55:00,mcb,74,to 16th St. BART,0
-red_mb_to_bart_b,19:00:00,19:00:00,16thbart,75,,0
+red_mb_to_bart_b,19:00:00,19:00:00,16thbart,75,,1
 red_mb_to_bart_b,19:15:00,19:15:00,missb4th,76,,0
 red_mb_to_bart_b,19:25:00,19:25:00,mcb,77,to 16th St. BART,0
 red_mb_to_bart_b,19:30:00,19:30:00,16thbart,78,,1
 red_bart_to_mb_c1,06:45:00,06:45:00,16thbart,1,,0
 red_bart_to_mb_c1,06:50:00,06:50:00,mcb,2,to Mission Bay,0
-red_bart_to_mb_c1,07:00:00,07:00:00,missb4th,3,,0
+red_bart_to_mb_c1,07:00:00,07:00:00,missb4th,3,,1
 red_bart_to_mb_c1,07:15:00,07:15:00,16thbart,4,,0
 red_bart_to_mb_c1,07:20:00,07:20:00,mcb,5,to Mission Bay,0
-red_bart_to_mb_c1,07:30:00,07:30:00,missb4th,6,,0
+red_bart_to_mb_c1,07:30:00,07:30:00,missb4th,6,,1
 red_bart_to_mb_c1,07:45:00,07:45:00,16thbart,7,,0
 red_bart_to_mb_c1,07:50:00,07:50:00,mcb,8,to Mission Bay,0
-red_bart_to_mb_c1,08:00:00,08:00:00,missb4th,9,,0
+red_bart_to_mb_c1,08:00:00,08:00:00,missb4th,9,,1
 red_bart_to_mb_c1,08:15:00,08:15:00,16thbart,10,,0
 red_bart_to_mb_c1,08:20:00,08:20:00,mcb,11,to Mission Bay,0
-red_bart_to_mb_c1,08:30:00,08:30:00,missb4th,12,,0
+red_bart_to_mb_c1,08:30:00,08:30:00,missb4th,12,,1
 red_bart_to_mb_c1,08:45:00,08:45:00,16thbart,13,,0
 red_bart_to_mb_c1,08:50:00,08:50:00,mcb,14,to Mission Bay,0
-red_bart_to_mb_c1,09:00:00,09:00:00,missb4th,15,,0
+red_bart_to_mb_c1,09:00:00,09:00:00,missb4th,15,,1
 red_bart_to_mb_c1,09:15:00,09:15:00,16thbart,16,,0
 red_bart_to_mb_c1,09:20:00,09:20:00,mcb,17,to Mission Bay,0
-red_bart_to_mb_c1,09:30:00,09:30:00,missb4th,18,,0
+red_bart_to_mb_c1,09:30:00,09:30:00,missb4th,18,,1
 red_bart_to_mb_c1,09:45:00,09:45:00,16thbart,19,,0
 red_bart_to_mb_c1,09:50:00,09:50:00,mcb,20,to Mission Bay,0
 red_bart_to_mb_c1,10:00:00,10:00:00,missb4th,21,,1
 red_mb_to_bart_c1,06:30:00,06:30:00,missb4th,1,,0
 red_mb_to_bart_c1,06:40:00,06:40:00,mcb,2,to 16th St. BART,0
-red_mb_to_bart_c1,06:45:00,06:45:00,16thbart,3,,0
+red_mb_to_bart_c1,06:45:00,06:45:00,16thbart,3,,1
 red_mb_to_bart_c1,07:00:00,07:00:00,missb4th,4,,0
 red_mb_to_bart_c1,07:10:00,07:10:00,mcb,5,to 16th St. BART,0
-red_mb_to_bart_c1,07:15:00,07:15:00,16thbart,6,,0
+red_mb_to_bart_c1,07:15:00,07:15:00,16thbart,6,,1
 red_mb_to_bart_c1,07:30:00,07:30:00,missb4th,7,,0
 red_mb_to_bart_c1,07:40:00,07:40:00,mcb,8,to 16th St. BART,0
-red_mb_to_bart_c1,07:45:00,07:45:00,16thbart,9,,0
+red_mb_to_bart_c1,07:45:00,07:45:00,16thbart,9,,1
 red_mb_to_bart_c1,08:00:00,08:00:00,missb4th,10,,0
 red_mb_to_bart_c1,08:10:00,08:10:00,mcb,11,to 16th St. BART,0
-red_mb_to_bart_c1,08:15:00,08:15:00,16thbart,12,,0
+red_mb_to_bart_c1,08:15:00,08:15:00,16thbart,12,,1
 red_mb_to_bart_c1,08:30:00,08:30:00,missb4th,13,,0
 red_mb_to_bart_c1,08:40:00,08:40:00,mcb,14,to 16th St. BART,0
-red_mb_to_bart_c1,08:45:00,08:45:00,16thbart,15,,0
+red_mb_to_bart_c1,08:45:00,08:45:00,16thbart,15,,1
 red_mb_to_bart_c1,09:00:00,09:00:00,missb4th,16,,0
 red_mb_to_bart_c1,09:10:00,09:10:00,mcb,17,to 16th St. BART,0
-red_mb_to_bart_c1,09:15:00,09:15:00,16thbart,18,,0
+red_mb_to_bart_c1,09:15:00,09:15:00,16thbart,18,,1
 red_mb_to_bart_c1,09:30:00,09:30:00,missb4th,19,,0
 red_mb_to_bart_c1,09:40:00,09:40:00,mcb,20,to 16th St. BART,0
 red_mb_to_bart_c1,09:45:00,09:45:00,16thbart,21,,1
 red_bart_to_mb_c2,15:20:00,15:20:00,16thbart,1,,0
 red_bart_to_mb_c2,15:25:00,15:25:00,mcb,2,to Mission Bay,0
-red_bart_to_mb_c2,15:40:00,15:40:00,missb4th,3,,0
+red_bart_to_mb_c2,15:40:00,15:40:00,missb4th,3,,1
 red_bart_to_mb_c2,15:55:00,15:55:00,16thbart,4,,0
 red_bart_to_mb_c2,16:00:00,16:00:00,mcb,5,to Mission Bay,0
-red_bart_to_mb_c2,16:15:00,16:15:00,missb4th,6,,0
+red_bart_to_mb_c2,16:15:00,16:15:00,missb4th,6,,1
 red_bart_to_mb_c2,16:30:00,16:30:00,16thbart,7,,0
 red_bart_to_mb_c2,16:35:00,16:35:00,mcb,8,to Mission Bay,0
-red_bart_to_mb_c2,16:50:00,16:50:00,missb4th,9,,0
+red_bart_to_mb_c2,16:50:00,16:50:00,missb4th,9,,1
 red_bart_to_mb_c2,17:05:00,17:05:00,16thbart,10,,0
 red_bart_to_mb_c2,17:10:00,17:10:00,mcb,11,to Mission Bay,0
-red_bart_to_mb_c2,17:25:00,17:25:00,missb4th,12,,0
+red_bart_to_mb_c2,17:25:00,17:25:00,missb4th,12,,1
 red_bart_to_mb_c2,17:40:00,17:40:00,16thbart,13,,0
 red_bart_to_mb_c2,17:45:00,17:45:00,mcb,14,to Mission Bay,0
 red_bart_to_mb_c2,18:00:00,18:00:00,missb4th,15,,1
 red_mb_to_bart_c2,15:05:00,15:05:00,missb4th,1,,0
 red_mb_to_bart_c2,15:15:00,15:15:00,mcb,2,to 16th St. BART,0
-red_mb_to_bart_c2,15:20:00,15:20:00,16thbart,3,,0
+red_mb_to_bart_c2,15:20:00,15:20:00,16thbart,3,,1
 red_mb_to_bart_c2,15:40:00,15:40:00,missb4th,4,,0
 red_mb_to_bart_c2,15:50:00,15:50:00,mcb,5,to 16th St. BART,0
-red_mb_to_bart_c2,15:55:00,15:55:00,16thbart,6,,0
+red_mb_to_bart_c2,15:55:00,15:55:00,16thbart,6,,1
 red_mb_to_bart_c2,16:15:00,16:15:00,missb4th,7,,0
 red_mb_to_bart_c2,16:25:00,16:25:00,mcb,8,to 16th St. BART,0
-red_mb_to_bart_c2,16:30:00,16:30:00,16thbart,9,,0
+red_mb_to_bart_c2,16:30:00,16:30:00,16thbart,9,,1
 red_mb_to_bart_c2,16:50:00,16:50:00,missb4th,10,,0
 red_mb_to_bart_c2,17:00:00,17:00:00,mcb,11,to 16th St. BART,0
-red_mb_to_bart_c2,17:05:00,17:05:00,16thbart,12,,0
+red_mb_to_bart_c2,17:05:00,17:05:00,16thbart,12,,1
 red_mb_to_bart_c2,17:25:00,17:25:00,missb4th,13,,0
 red_mb_to_bart_c2,17:35:00,17:35:00,mcb,14,to 16th St. BART,0
 red_mb_to_bart_c2,17:40:00,17:40:00,16thbart,15,,1
