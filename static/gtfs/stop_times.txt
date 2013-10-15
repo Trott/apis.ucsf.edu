@@ -477,7 +477,7 @@ bronze_a,18:13:00,18:13:00,library,152,,1
 bronze_a,18:20:00,18:20:00,parlppi,153,,0
 bronze_a,18:25:00,18:25:00,75behr,154,,0
 bronze_a,18:29:00,18:29:00,surgedown,155,,0
-bronze_a,18:33:00,18:33:00,parcc,156,,1
+bronze_a,18:33:00,18:33:00,paracc,156,,1
 gold_a,05:45:00,05:45:00,missb4we,1,,0
 gold_a,06:00:00,06:00:00,sfgh,2,,0
 gold_a,06:22:00,06:22:00,parlppi,3,,0
