@@ -1,36 +1,36 @@
-route_id,service_id,trip_id,trip_headsign
-black,weekday,black_a,
-black,weekday,black_b,
-blue,weekday,blue_a,
-blue,weekday,blue_b,
-blue,weekday,blue_c,
-blue,weekday,blue_d,
-blue,weekday,blue_e,
-bronze,weekday,bronze_a,
-gold,weekday,gold_a,
-gold,weekday,gold_b,
-gold,weekday,gold_c,
-gold,weekday,gold_d,
-gold,weekday,gold_e,
-green,weekday,green_a,
-green,weekday,green_b,
-grey,weekday,grey_a,
-grey,weekday,grey_b,
-grey,weekday,grey_c,
-grey,weekday,grey_d,
-lime,weekday,lime_a,
-lime,weekday,lime_b,
-lime,weekday,lime_c,
-pink,weekday,pink_a,
-purple,weekday,purple_a,
-red,weekday,red_bart_to_mb_a,to Mission Bay
-red,weekday,red_bart_to_mb_b,to Mission Bay
-red,weekday,red_bart_to_mb_c1,to Mission Bay
-red,weekday,red_bart_to_mb_c2,to Mission Bay
-red,weekday,red_mb_to_bart_a,to 16th St. BART
-red,weekday,red_mb_to_bart_b,to 16th St. BART
-red,weekday,red_mb_to_bart_c1,to 16th St. BART
-red, weekday,red_mb_to_bart_c2,to 16th St. BART
+route_id,service_id,trip_id,trip_headsign,direction_id
+black,weekday,black_a,,
+black,weekday,black_b,,
+blue,weekday,blue_a,,
+blue,weekday,blue_b,,
+blue,weekday,blue_c,,
+blue,weekday,blue_d,,
+blue,weekday,blue_e,,
+bronze,weekday,bronze_a,,
+gold,weekday,gold_a,,
+gold,weekday,gold_b,,
+gold,weekday,gold_c,,
+gold,weekday,gold_d,,
+gold,weekday,gold_e,,
+green,weekday,green_a,,
+green,weekday,green_b,,
+grey,weekday,grey_a,,
+grey,weekday,grey_b,,
+grey,weekday,grey_c,,
+grey,weekday,grey_d,,
+lime,weekday,lime_a,,
+lime,weekday,lime_b,,
+lime,weekday,lime_c,,
+pink,weekday,pink_a,,
+purple,weekday,purple_a,,
+red,weekday,red_bart_to_mb_a,to Mission Bay,0
+red,weekday,red_bart_to_mb_b,to Mission Bay,0
+red,weekday,red_bart_to_mb_c1,to Mission Bay,0
+red,weekday,red_bart_to_mb_c2,to Mission Bay,0
+red,weekday,red_mb_to_bart_a,to 16th St. BART,1
+red,weekday,red_mb_to_bart_b,to 16th St. BART,1
+red,weekday,red_mb_to_bart_c1,to 16th St. BART,1
+red,weekday,red_mb_to_bart_c2,to 16th St. BART,1
 tan,weekday,tan_a,
 tan,weekday,tan_b,
 va,weekday,va_a,
