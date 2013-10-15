@@ -12,8 +12,10 @@ gold,weekday,gold_b,,
 gold,weekday,gold_c,,
 gold,weekday,gold_d,,
 gold,weekday,gold_e,,
-green,weekday,green_a,,
-green,weekday,green_b,,
+green,weekday,green_654minn_to_chinbasn_a,to China Basin,0
+green,weekday,green_654minn_to_chinbasn_b,to China Basin,0
+green,weekday,green_chinbasn_to_654minn_a,to 654 Minnesota St.,1
+green,weekday,green_chinbasn_to_654minn_b,to 654 Minnesota St.,1
 grey,weekday,grey_a,,
 grey,weekday,grey_b,,
 grey,weekday,grey_c,,
@@ -22,7 +24,8 @@ lime,weekday,lime_a,,
 lime,weekday,lime_b,,
 lime,weekday,lime_c,,
 pink,weekday,pink_a,,
-purple,weekday,purple_a,,
+purple,weekday,purple_to_mtzion_a,to Mt. Zion,0
+purple,weekday,purple_to_library_a,to Parnassus,1
 red,weekday,red_bart_to_mb_a,to Mission Bay,0
 red,weekday,red_bart_to_mb_b,to Mission Bay,0
 red,weekday,red_bart_to_mb_c1,to Mission Bay,0
@@ -31,9 +34,9 @@ red,weekday,red_mb_to_bart_a,to 16th St. BART,1
 red,weekday,red_mb_to_bart_b,to 16th St. BART,1
 red,weekday,red_mb_to_bart_c1,to 16th St. BART,1
 red,weekday,red_mb_to_bart_c2,to 16th St. BART,1
-tan,weekday,tan_a,
-tan,weekday,tan_b,
-va,weekday,va_a,
-va,weekday,va_b,
-yellow,weekday,yellow_a,
-yellow,weekday,yellow_b,
+tan,weekday,tan_a,,
+tan,weekday,tan_b,,
+va,weekday,va_a,,
+va,weekday,va_b,,
+yellow,weekday,yellow_a,,
+yellow,weekday,yellow_b,,
