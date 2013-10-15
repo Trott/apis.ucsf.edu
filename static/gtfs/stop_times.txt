@@ -1564,13 +1564,13 @@ red_bart_to_mb_a,14:45:00,14:45:00,mcb,53,to Mission Bay,0
 red_bart_to_mb_a,14:55:00,14:55:00,missb4th,54,,1
 red_bart_to_mb_a,15:10:00,15:10:00,16thbart,55,,0
 red_bart_to_mb_a,15:15:00,15:15:00,mcb,56,to Mission Bay,0
-red_bart_to_mb_a,15:30:00,15:30:00,missb4th,57,,0
+red_bart_to_mb_a,15:30:00,15:30:00,missb4th,57,,1
 red_bart_to_mb_a,15:45:00,15:45:00,16thbart,58,,0
 red_bart_to_mb_a,15:50:00,15:50:00,mcb,59,to Mission Bay,0
 red_bart_to_mb_a,16:05:00,16:05:00,missb4th,60,,1
 red_bart_to_mb_a,16:20:00,16:20:00,16thbart,61,,0
 red_bart_to_mb_a,16:25:00,16:25:00,mcb,62,to Mission Bay,0
-red_bart_to_mb_a,16:45:00,16:45:00,missb4th,63,,0
+red_bart_to_mb_a,16:45:00,16:45:00,missb4th,63,,1
 red_bart_to_mb_a,17:00:00,17:00:00,16thbart,64,,0
 red_bart_to_mb_a,17:05:00,17:05:00,mcb,65,to Mission Bay,0
 red_bart_to_mb_a,17:20:00,17:20:00,missb4th,66,,1
@@ -1582,7 +1582,7 @@ red_bart_to_mb_a,18:15:00,18:15:00,mcb,71,to Mission Bay,0
 red_bart_to_mb_a,18:30:00,18:30:00,missb4th,72,,1
 red_bart_to_mb_a,18:45:00,18:45:00,16thbart,73,,0
 red_bart_to_mb_a,18:50:00,18:50:00,mcb,74,to Mission Bay,0
-red_bart_to_mb_a,19:00:00,19:00:00,missb4th,75,,0
+red_bart_to_mb_a,19:00:00,19:00:00,missb4th,75,,1
 red_bart_to_mb_a,19:15:00,19:15:00,16thbart,76,,0
 red_bart_to_mb_a,19:20:00,19:20:00,mcb,77,to Mission Bay,0
 red_bart_to_mb_a,19:30:00,19:30:00,missb4th,78,,1
@@ -1723,13 +1723,13 @@ red_bart_to_mb_b,14:30:00,14:30:00,mcb,50,to Mission Bay,0
 red_bart_to_mb_b,14:40:00,14:40:00,missb4th,51,,1
 red_bart_to_mb_b,14:55:00,14:55:00,16thbart,52,,0
 red_bart_to_mb_b,15:00:00,15:00:00,mcb,53,to Mission Bay,0
-red_bart_to_mb_b,15:15:00,15:15:00,missb4th,54,,0
+red_bart_to_mb_b,15:15:00,15:15:00,missb4th,54,,1
 red_bart_to_mb_b,15:30:00,15:30:00,16thbart,55,,0
 red_bart_to_mb_b,15:35:00,15:35:00,mcb,56,to Mission Bay,0
 red_bart_to_mb_b,15:50:00,15:50:00,missb4th,57,,1
 red_bart_to_mb_b,16:05:00,16:05:00,16thbart,58,,0
 red_bart_to_mb_b,16:10:00,16:10:00,mcb,59,to Mission Bay,0
-red_bart_to_mb_b,16:30:00,16:30:00,missb4th,60,,0
+red_bart_to_mb_b,16:30:00,16:30:00,missb4th,60,,1
 red_bart_to_mb_b,16:45:00,16:45:00,16thbart,61,,0
 red_bart_to_mb_b,16:50:00,16:50:00,mcb,62,to Mission Bay,0
 red_bart_to_mb_b,17:05:00,17:05:00,missb4th,63,,1
@@ -1741,7 +1741,7 @@ red_bart_to_mb_b,18:00:00,18:00:00,mcb,68,to Mission Bay,0
 red_bart_to_mb_b,18:15:00,18:15:00,missb4th,69,,1
 red_bart_to_mb_b,18:30:00,18:30:00,16thbart,70,,0
 red_bart_to_mb_b,18:35:00,18:35:00,mcb,71,to Mission Bay,0
-red_bart_to_mb_b,18:45:00,18:45:00,missb4th,72,,0
+red_bart_to_mb_b,18:45:00,18:45:00,missb4th,72,,1
 red_bart_to_mb_b,19:00:00,19:00:00,16thbart,73,,0
 red_bart_to_mb_b,19:05:00,19:05:00,mcb,74,to Mission Bay,0
 red_bart_to_mb_b,19:15:00,19:15:00,missb4th,75,,1
