@@ -213,7 +213,7 @@ exports.routes = function(req, res) {
     // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
     // If parent station, let's search for routes in all stops in the parent station.
     var parentStationToChildStationForStupidHackNumberThree = {
-        "Parnassus": ["library", "parlppi", "paracc", "ER"],
+        "Parnassus": ["library", "parlppi", "paracc"],
         "MB": ["missb4th", "missb4we"],
         "2300 Harrison": ["23harrnb_ib", "23harrsb_ob"],
         "100 Buchanan": ["buchaneb", "buchanob"]
@@ -366,29 +366,14 @@ exports.plan = function(req, res) {
     // OTP will not route to a destination that is a parent station.
     // See https://github.com/openplans/OpenTripPlanner/issues/1049
     // So, for parent stations in our GTFS data, let's substitute in
-    // the appropriate child stations, sometimes based on the other endpoint.
+    // the appropriate child stations.
     // Sadly, this means that we have GTFS data here. Blech.
     // Also, we sometimes have to do multiple queries.
 
     // So, for the sad ugly hack, this maps parent stations to a child station.
     var parentStationToChildStation = {
         "ucsf_Parnassus": function (endpoint) {
-            switch (endpoint) {
-                case "ucsf_75behr":
-                case "ucsf_surgedown":
-                    return ["ucsf_paracc", "ucsf_parlppi"];
-                case "ucsf_parkezar":
-                case "ucsf_veteran":
-                    return ["ucsf_ER"];
-                case "ucsf_3360 Geary":
-                case "ucsf_lhts":
-                case "ucsf_sfgh":
-                    return ["ucsf_parlppi", "ucsf_library"];
-                case "ucsf_mtzion":
-                    return ["ucsf_parlppi", "ucsf_library"];
-                default:
-                    return ["ucsf_parlppi"];
-            }
+            return ["ucsf_parlppi", "ucsf_library", "ucsf_paracc"];
         },
         "ucsf_MB": function (endpoint) {
             return ["ucsf_missb4th","ucsf_missb4we"];
