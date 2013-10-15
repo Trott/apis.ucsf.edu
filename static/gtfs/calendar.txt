@@ -1,3 +1,2 @@
 service_id,monday,tuesday,wednesday,thursday,friday,saturday,sunday,start_date,end_date
-WD,1,1,1,1,1,0,0,20130401,20131013
 weekday,1,1,1,1,1,0,0,20131014,20181231

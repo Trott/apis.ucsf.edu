@@ -372,8 +372,18 @@ exports.plan = function(req, res) {
 
     // So, for the sad ugly hack, this maps parent stations to a child station.
     var parentStationToChildStation = {
-        "ucsf_Parnassus": function (endpoint) {
-            return ["ucsf_parlppi", "ucsf_library", "ucsf_paracc"];
+         "ucsf_Parnassus": function (endpoint) {
+            switch (endpoint) {
+                case "ucsf_75behr":
+                case "ucsf_surgedown":
+                    return ["ucsf_paracc", "ucsf_parlppi", "ucsf_library"];
+                case "ucsf_parkezar":
+                    return ["ucsf_paracc"];
+                case "ucsf_veteran":
+                    return ["ucsf_parlppi"];
+                default:
+                    return ["ucsf_parlppi", "ucsf_library"];
+            }
         },
         "ucsf_MB": function (endpoint) {
             return ["ucsf_missb4th","ucsf_missb4we"];
