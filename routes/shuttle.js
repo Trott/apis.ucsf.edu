@@ -363,14 +363,15 @@ exports.times = function(req, res) {
                     });
                     // Remove headsigns from routes that had duplicates. This is all a lot of work for that one stupid hack.
                     if (times.length != rv.times.length) {
-                        times = times.map(function (el) {
-                            if (el.trip && el.trip.headSign) {
-                                el.trip.headSign = null;
+                        rv.times = times.map(function (el) {
+                            if (el.trip && el.trip.tripHeadSign) {
+                                el.trip.tripHeadSign = null;
                             }
                             return el;
                         });
+                    } else {
+                        rv.times = times;
                     }
-                    rv.times = times;
                 } else {
                     rv = result;
                 }
