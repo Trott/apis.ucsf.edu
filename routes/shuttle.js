@@ -192,7 +192,7 @@ exports.stops = function(req, res) {
             if (results.stops && results.stops instanceof Array &&
                 results.route && results.route.id && results.route.id.id === "bronze") {
                 results.stops = results.stops.filter(function (el) {
-                    return ! (el.id && ['paracc','library'].instanceof(el.id)!==-1);
+                    return ! (el.id && ['paracc','library'].indexOf(el.id)!==-1);
                 });
             }
             res.send(results);
