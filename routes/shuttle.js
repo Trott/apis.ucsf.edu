@@ -345,8 +345,8 @@ exports.times = function(req, res) {
                             return true;
                         }
                         var next=arrayObject[index+1];
-                        return el.time !== next.time ||
-                            (el.trip && el.trip.directionId) === (next.trip && next.trip.directionId);
+                        return  el.time !== next.time ||
+                            (el.trip && el.trip.id && el.trip.id.id) !== (next.trip && next.trip.id && next.trip.id.id);
                     });
                 } else {
                     rv = result;
