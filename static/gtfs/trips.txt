@@ -24,7 +24,8 @@ lime,weekday,lime_a,,
 lime,weekday,lime_b,,
 lime,weekday,lime_c,,
 pink,weekday,pink_a,,
-purple,weekday,purple_a,,
+purple,weekday,purple_to_mtzion_a,to Mt. Zion,0
+purple,weekday,purple_to_library_1,to Parnassus,1
 red,weekday,red_bart_to_mb_a,to Mission Bay,0
 red,weekday,red_bart_to_mb_b,to Mission Bay,0
 red,weekday,red_bart_to_mb_c1,to Mission Bay,0
