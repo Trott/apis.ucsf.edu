@@ -341,12 +341,24 @@ exports.times = function(req, res) {
                     rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==="departure"; });
                     // Deduplicate thanks to breaking Red shuttle etc. into multiple routes to bypass stop_headsign absence
                     rv.times = rv.times.filter( function(el, index, arrayObject) {
+                        var getBasicTripId = function (tripId) {
+                            return tripId.substr(0,tripId.indexOf('_')) + tripId.substr(tripId.lastIndexOf('_'),tripId.length);
+                        };
+
                         if (arrayObject.length === index+1) {
                             return true;
                         }
                         var next=arrayObject[index+1];
-                        return  el.time !== next.time ||
-                            (el.trip && el.trip.id && el.trip.id.id) !== (next.trip && next.trip.id && next.trip.id.id);
+
+                        if (el.time !== next.time) {
+                            return true;
+                        }
+
+                        if (el.trip && el.trip.id && el.trip.id.id && next.trip && next.trip.id && next.trip.id.id) {
+                            return getBasicTripId(el.trip.id.id) !== getBasicTripId(next.trip.id.id);
+                        }
+
+                        return true;
                     });
                 } else {
                     rv = result;
