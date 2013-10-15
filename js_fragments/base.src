@@ -64,16 +64,22 @@ var UCSF = UCSF || (function () {
                 UCSF._ie7q.push({callee:callee, options:options, success:success, failure:failure});
             } else {
                 // Using onreadystatechange rather than onload for Android 4.2.2. + Galaxy S4 + PhoneGap
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4) {
-                        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304 || (xhr.status === 0 && window.location.protocol === 'file:')) {
-                            xhr.onreadystatechange = function () {};
-                            success(JSON.parse(xhr.responseText));
-                        } else {
-                            failure(xhr.responseText || null);
+                if ('readyState' in xhr) {
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304 || (xhr.status === 0 && window.location.protocol === 'file:')) {
+                                xhr.onreadystatechange = function () {};
+                                success(JSON.parse(xhr.responseText));
+                            } else {
+                                failure(xhr.responseText || null);
+                            }
                         }
-                    }
-                };
+                    };
+                } else {
+                    // IE 8 & 9
+                    xhr.onload = success(JSON.parse(xhr.responseText));
+                    xhr.onerror = failure(JSON.parse(xhr.responseText) || null);
+                }
                 xhr.send(null);
             }
         }
