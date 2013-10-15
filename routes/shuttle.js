@@ -355,7 +355,12 @@ exports.times = function(req, res) {
                         }
 
                         if (el.trip && el.trip.id && el.trip.id.id && next.trip && next.trip.id && next.trip.id.id) {
-                            return getBasicTripId(el.trip.id.id) !== getBasicTripId(next.trip.id.id);
+                            var different = getBasicTripId(el.trip.id.id) !== getBasicTripId(next.trip.id.id);
+                            if (! different) {
+                                el.trip.tripHeadsign = null;
+                                next.trip.tripHeadsign = null;
+                            }
+                            return different;
                         }
 
                         return true;
