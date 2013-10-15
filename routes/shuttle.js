@@ -340,7 +340,7 @@ exports.times = function(req, res) {
                 if (result.stopTimes) {
                     rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==="departure"; });
                     // Deduplicate thanks to breaking Red shuttle etc. into multiple routes to bypass stop_headsign absence
-                    rv.times = rv.times.filter( function(el, index, arrayObject) {
+                    var times = rv.times.filter( function(el, index, arrayObject) {
                         var getBasicTripId = function (tripId) {
                             return tripId.substr(0,tripId.indexOf('_')) + tripId.substr(tripId.lastIndexOf('_'),tripId.length);
                         };
@@ -356,15 +356,21 @@ exports.times = function(req, res) {
 
                         if (el.trip && el.trip.id && el.trip.id.id && next.trip && next.trip.id && next.trip.id.id) {
                             var different = getBasicTripId(el.trip.id.id) !== getBasicTripId(next.trip.id.id);
-                            if (! different) {
-                                el.trip.tripHeadsign = null;
-                                next.trip.tripHeadsign = null;
-                            }
                             return different;
                         }
 
                         return true;
                     });
+                    // Remove headsigns from routes that had duplicates. This is all a lot of work for that one stupid hack.
+                    if (times.length != rv.times.length) {
+                        times = times.map(function (el) {
+                            if (el.trip && el.trip.headSign) {
+                                el.trip.headSign = null;
+                            }
+                            return el;
+                        });
+                    }
+                    rv.times = times;
                 } else {
                     rv = result;
                 }
