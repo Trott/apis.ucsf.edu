@@ -33,9 +33,9 @@ red,weekday,red_mb_to_bart_a,to 16th St. BART,1
 red,weekday,red_mb_to_bart_b,to 16th St. BART,1
 red,weekday,red_mb_to_bart_c1,to 16th St. BART,1
 red,weekday,red_mb_to_bart_c2,to 16th St. BART,1
-tan,weekday,tan_a,
-tan,weekday,tan_b,
-va,weekday,va_a,
-va,weekday,va_b,
-yellow,weekday,yellow_a,
-yellow,weekday,yellow_b,
+tan,weekday,tan_a,,
+tan,weekday,tan_b,,
+va,weekday,va_a,,
+va,weekday,va_b,,
+yellow,weekday,yellow_a,,
+yellow,weekday,yellow_b,,
