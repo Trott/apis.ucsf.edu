@@ -71,14 +71,14 @@ var UCSF = UCSF || (function () {
                                 xhr.onreadystatechange = function () {};
                                 success(JSON.parse(xhr.responseText));
                             } else {
-                                failure(xhr.responseText || null);
+                                failure(xhr);
                             }
                         }
                     };
                 } else {
                     // IE 8 & 9
-                    xhr.onload = success(JSON.parse(xhr.responseText));
-                    xhr.onerror = failure(JSON.parse(xhr.responseText) || null);
+                    xhr.onload = function () { success(JSON.parse(xhr.responseText)); };
+                    xhr.onerror = failure;
                 }
                 xhr.send(null);
             }
