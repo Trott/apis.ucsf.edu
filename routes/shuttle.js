@@ -456,7 +456,6 @@ exports.plan = function(req, res) {
         query.hack = options.hack;
 
         otpOptions.path += querystring.stringify(query);
-        console.direction(otpOptions);
 
         var processResults = function(resp) {
             var data = "";
