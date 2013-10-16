@@ -2,7 +2,7 @@ var UCSF = UCSF || (function () {
     'use strict';
 
     // Using Zepto for Android 4.2.2. + Galaxy S4 + PhoneGap support.
-    var usingZepto = typeof Zepto !== 'undefined';
+    var usingZepto = typeof Zepto !== 'undefined' && Zepto.ajax;
 
     var me = {
         serialize: function (obj, prefix) {
