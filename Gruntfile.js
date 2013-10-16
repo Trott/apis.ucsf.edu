@@ -14,7 +14,7 @@ module.exports = function (grunt) {
                 noarg: true,
                 sub: true,
                 undef: true,
-                predef: ['XDomainRequest', 'flensed', 'UCSF'],
+                predef: ['XDomainRequest', 'flensed', 'UCSF', 'Zepto'],
                 boss: true,
                 eqnull: true,
                 browser: true
@@ -24,7 +24,6 @@ module.exports = function (grunt) {
         uglify: {
             static: {
                 files: {
-                    'static/ie7_polyfill.js': ['static/json2/json2.js', 'static/flensed/flXHR.js'],
                     'js_fragments/base': ['js_fragments/base.src'],
                     'js_fragments/person': ['js_fragments/person.src'],
                     'js_fragments/shuttle': ['js_fragments/shuttle.src'],

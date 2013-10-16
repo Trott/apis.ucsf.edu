@@ -7,7 +7,7 @@ var validFileNameRegExp = /^[a-z_]+$/;
 exports.load = function(req, res) {
     "use strict";
 
-    var files = ['base'];
+    var files = ['zepto-1.0', 'base'];
     var lib;
     for (lib in req.query) {
         if (validFileNameRegExp.test(lib)) {
