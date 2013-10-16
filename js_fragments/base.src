@@ -1,5 +1,8 @@
 var UCSF = UCSF || (function () {
-    "use strict";
+    'use strict';
+
+    // Using Zepto for Android 4.2.2. + Galaxy S4 + PhoneGap support.
+    var usingZepto = typeof Zepto !== 'undefined';
 
     var me = {
         serialize: function (obj, prefix) {
@@ -18,13 +21,16 @@ var UCSF = UCSF || (function () {
             if ("withCredentials" in xhr) {
                 // XHR for Chrome/Firefox/Opera/Safari.
                 // Using Zepto for Android 4.2.2. + Galaxy S4 + PhoneGap support.
-                Zepto.ajax({
-                    type: 'GET',
-                    url: url,
-                    success: success,
-                    error: failure
-                });
-                xhr.open(method, url);
+                if (usingZepto) {
+                    Zepto.ajax({
+                        type: 'GET',
+                        url: url,
+                        success: success,
+                        error: failure
+                    });
+                } else {
+                    xhr.open(method, url);
+                }
             } else if (typeof XDomainRequest !== "undefined") {
                 // XDomainRequest for IE8+.
                 xhr = new XDomainRequest();
@@ -45,14 +51,20 @@ var UCSF = UCSF || (function () {
             var reqString = UCSF.createRequestString('http://apis.ucsf.edu/' + what, options);
             var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
 
-            if ('readyState' in xhr) {
-                // We're cool, Zepto took care of us
+            if (xhr !== null && 'readyState' in xhr) {
+                if (! usingZepto) {
+                    xhr.onload = function () {
+                        success(JSON.parse(xhr.responseText));
+                    };
+                    xhr.onerror = failure;
+                    xhr.send(null);
+                }
             } else {
                 // We're not cool, IE 8 & 9
                 xhr.onload = function () { success(JSON.parse(xhr.responseText)); };
                 xhr.onerror = failure;
+                xhr.send(null);
             }
-            xhr.send(null);
         }
     };
 

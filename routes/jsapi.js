@@ -7,7 +7,14 @@ var validFileNameRegExp = /^[a-z_]+$/;
 exports.load = function(req, res) {
     "use strict";
 
-    var files = ['zepto-1.0', 'base'];
+    var files = [];
+    // PhoneGap + Android 4.2.2 + Galaxy S4 + our CORS implementation = crash without Zepto's XHR.
+    // TODO: Should eventually fix by eliminating our CORS implementation and letting people roll their own.
+    // They'll just use jQuery or Zepto typically anyway.
+    if (req.headers['user-agent'].search(/Android 4\.2/) !== -1) {
+        files.push('zepto-1.0');
+    }
+    files.push('base');
     var lib;
     for (lib in req.query) {
         if (validFileNameRegExp.test(lib)) {

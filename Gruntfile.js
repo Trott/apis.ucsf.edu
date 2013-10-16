@@ -14,7 +14,7 @@ module.exports = function (grunt) {
                 noarg: true,
                 sub: true,
                 undef: true,
-                predef: ['XDomainRequest', 'flensed', 'UCSF', 'Zepto'],
+                predef: ['XDomainRequest', 'UCSF', 'Zepto'],
                 boss: true,
                 eqnull: true,
                 browser: true
