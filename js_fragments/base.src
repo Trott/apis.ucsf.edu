@@ -17,26 +17,29 @@ var UCSF = UCSF || (function () {
         },
 
         createCORSRequest: function (method, url, success, failure) {
-            var xhr = new window.XMLHttpRequest();
-            if ("withCredentials" in xhr) {
-                // XHR for Chrome/Firefox/Opera/Safari.
-                // Using Zepto for Android 4.2.2. + Galaxy S4 + PhoneGap support.
-                if (usingZepto) {
-                    Zepto.ajax({
-                        type: 'GET',
-                        url: url,
-                        success: success,
-                        error: failure
-                    });
-                } else {
-                    xhr.open(method, url);
-                }
-            } else if (typeof XDomainRequest !== "undefined") {
-                // XDomainRequest for IE8+.
-                xhr = new XDomainRequest();
-                xhr.open(method, url);
-            } else {
+            var xhr;
+
+            // Using Zepto for Android 4.2.2. + Galaxy S4 + PhoneGap support.
+            if (usingZepto) {
+                Zepto.ajax({
+                    type: 'GET',
+                    url: url,
+                    success: success,
+                    error: failure
+                });
                 xhr = null;
+            } else {
+                xhr = new window.XMLHttpRequest();
+                if ("withCredentials" in xhr) {
+                    // XHR for Chrome/Firefox/Opera/Safari.
+                    xhr.open(method, url);
+                }  else if (typeof XDomainRequest !== "undefined") {
+                    // XDomainRequest for IE8+.
+                    xhr = new XDomainRequest();
+                    xhr.open(method, url);
+                } else {
+                    xhr = null;
+                }
             }
             return xhr;
         },
@@ -51,19 +54,16 @@ var UCSF = UCSF || (function () {
             var reqString = UCSF.createRequestString('http://apis.ucsf.edu/' + what, options);
             var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
 
-            if (xhr !== null && 'readyState' in xhr) {
-                if (! usingZepto) {
-                    xhr.onload = function () {
-                        success(JSON.parse(xhr.responseText));
-                    };
-                    xhr.onerror = failure;
-                    xhr.send(null);
-                }
-            } else {
-                // We're not cool, IE 8 & 9
-                xhr.onload = function () { success(JSON.parse(xhr.responseText)); };
+            if (xhr !== null) {
+                xhr.onload = function () {
+                    success(JSON.parse(xhr.responseText));
+                };
                 xhr.onerror = failure;
                 xhr.send(null);
+            } else {
+                if (! usingZepto) {
+                    failure('Cannot create CORS/XHR request');
+                }
             }
         }
     };
