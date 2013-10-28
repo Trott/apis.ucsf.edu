@@ -12,7 +12,8 @@ gold,weekday,gold_a,,
 gold,weekday,gold_b,,
 gold,weekday,gold_c,,
 gold,weekday,gold_d,,
-gold,weekday,gold_e,,
+gold,weekday,gold_e1,,
+gold,weekday,gold_e2,,
 green,weekday,green_654minn_to_chinbasn_a,to China Basin,0
 green,weekday,green_654minn_to_chinbasn_b,to China Basin,0
 green,weekday,green_chinbasn_to_654minn_a,to 654 Minnesota St.,1
