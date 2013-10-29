@@ -41,7 +41,7 @@
         <ul>
             <li><code>stopId</code> (required): Only times for the stop with this stopId will be returned</li>
             <li><code>startTime</code> (required): Only times at or after the startTime will be returned. Format is the number of milliseconds since 1 January 1970 00:00:00 UTC. Conveniently, this is the format returned by JavaScript's <code>Date.setHours</code></li>
-            <li><code>endTime</code> (required): Only times at or before the endTime will be returned. Format is the number of milliseconds since 1 January 1970 00:00:00 UTC</li>
+            <li><code>endTime</code> (optional): Only times at or before the endTime will be returned. Format is the number of milliseconds since 1 January 1970 00:00:00 UTC. Defaults to 24 hours after <code>startTime</code>.</li>
             <li><code>routeId</code> (optional): Only times for the route with this routeId will be returned</li>
         </ul>
         <h4>d. Use <code>UCSF.Shuttle.plan()</code> to plan a trip.</h4>
