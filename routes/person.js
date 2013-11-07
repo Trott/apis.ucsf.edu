@@ -21,7 +21,7 @@ exports.search = function (req, res) {
     } else if (req.query.first_name || req.query.last_name || req.query.dep_name) {
         directoryOptions.path = '/mobile_people_result_set.jsp?' + querystring.stringify(req.query);
     } else if (req.query.q) {
-        directoryOptions.host = 'myaccess2.ucsf.edu';
+        directoryOptions.host = 'directory.ucsf.edu';
         directoryOptions.port = 443;
         directoryOptions.path = '/directory/?json&' + querystring.stringify({q: req.query.q});
         protocol = https;
