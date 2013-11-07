@@ -23,7 +23,7 @@ exports.search = function (req, res) {
     } else if (req.query.q) {
         directoryOptions.host = 'directory.ucsf.edu';
         directoryOptions.port = 443;
-        directoryOptions.path = '/directory/?json&' + querystring.stringify({q: req.query.q});
+        directoryOptions.path = '/?json&' + querystring.stringify({q: req.query.q});
         protocol = https;
         dataNeedsCleaning = false;
     } else {
