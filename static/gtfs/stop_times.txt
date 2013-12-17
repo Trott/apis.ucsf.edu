@@ -1,1996 +1,2237 @@
-trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign
-blueA,5:35:00,5:35:00,missb4th,1,
-blueA,5:57:00,5:57:00,mtzion,2,
-blueA,6:12:00,6:12:00,parlppi,3,
-blueA,6:35:00,6:35:00,sfgh,4,
-blueA,6:55:00,6:55:00,missb4th,5,
-blueA,7:17:00,7:17:00,mtzion,6,
-blueA,7:32:00,7:32:00,parlppi,7,
-blueA,7:55:00,7:55:00,sfgh,8,
-blueA,8:15:00,8:15:00,missb4th,9,
-blueA,8:37:00,8:37:00,mtzion,10,
-blueA,8:52:00,8:52:00,parlppi,11,
-blueA,9:15:00,9:15:00,sfgh,12,
-blueA,9:35:00,9:35:00,missb4th,13,
-blueA,9:57:00,9:57:00,mtzion,14,
-blueA,10:12:00,10:12:00,parlppi,15,
-blueA,10:35:00,10:35:00,sfgh,16,
-blueA,10:55:00,10:55:00,missb4th,17,
-blueA,11:17:00,11:17:00,mtzion,18,
-blueA,11:32:00,11:32:00,parlppi,19,
-blueA,11:55:00,11:55:00,sfgh,20,
-blueA,12:15:00,12:15:00,missb4th,21,
-blueA,12:37:00,12:37:00,mtzion,22,
-blueA,12:52:00,12:52:00,parlppi,23,
-blueA,13:15:00,13:15:00,sfgh,24,
-blueA,13:35:00,13:35:00,missb4th,25,
-blueA,13:57:00,13:57:00,mtzion,26,
-blueA,14:12:00,14:12:00,parlppi,27,
-blueA,14:35:00,14:35:00,sfgh,28,
-blueA,14:55:00,14:55:00,missb4th,29,
-blueA,15:17:00,15:17:00,mtzion,30,
-blueA,15:32:00,15:32:00,parlppi,31,
-blueA,15:55:00,15:55:00,sfgh,32,
-blueA,16:15:00,16:15:00,missb4th,33,
-blueA,16:37:00,16:37:00,mtzion,34,
-blueA,16:52:00,16:52:00,parlppi,35,
-blueA,17:15:00,17:15:00,sfgh,36,
-blueA,17:35:00,17:35:00,missb4th,37,
-blueA,17:57:00,17:57:00,mtzion,38,
-blueA,18:12:00,18:12:00,parlppi,39,
-blueA,18:35:00,18:35:00,sfgh,40,
-blueA,18:55:00,18:55:00,missb4th,41,
-blueA,19:17:00,19:17:00,mtzion,42,
-blueA,19:32:00,19:32:00,parlppi,43,
-blueA,19:55:00,19:55:00,sfgh,44,
-blueA,20:10:00,20:10:00,missb4th,45,
-blueA,20:32:00,20:32:00,mtzion,46,
-blueA,20:47:00,20:47:00,parlppi,47,
-blueA,21:10:00,21:10:00,sfgh,48,
-blueB,5:55:00,5:55:00,missb4th,1,
-blueB,6:17:00,6:17:00,mtzion,2,
-blueB,6:32:00,6:32:00,parlppi,3,
-blueB,6:55:00,6:55:00,sfgh,4,
-blueB,7:15:00,7:15:00,missb4th,5,
-blueB,7:37:00,7:37:00,mtzion,6,
-blueB,7:52:00,7:52:00,parlppi,7,
-blueB,8:15:00,8:15:00,sfgh,8,
-blueB,8:35:00,8:35:00,missb4th,9,
-blueB,8:57:00,8:57:00,mtzion,10,
-blueB,9:12:00,9:12:00,parlppi,11,
-blueB,9:35:00,9:35:00,sfgh,12,
-blueB,9:55:00,9:55:00,missb4th,13,
-blueB,10:17:00,10:17:00,mtzion,14,
-blueB,10:32:00,10:32:00,parlppi,15,
-blueB,10:55:00,10:55:00,sfgh,16,
-blueB,11:15:00,11:15:00,missb4th,17,
-blueB,11:37:00,11:37:00,mtzion,18,
-blueB,11:52:00,11:52:00,parlppi,19,
-blueB,12:15:00,12:15:00,sfgh,20,
-blueB,12:35:00,12:35:00,missb4th,21,
-blueB,12:57:00,12:57:00,mtzion,22,
-blueB,13:12:00,13:12:00,parlppi,23,
-blueB,13:35:00,13:35:00,sfgh,24,
-blueB,13:55:00,13:55:00,missb4th,25,
-blueB,14:17:00,14:17:00,mtzion,26,
-blueB,14:32:00,14:32:00,parlppi,27,
-blueB,14:55:00,14:55:00,sfgh,28,
-blueB,15:15:00,15:15:00,missb4th,29,
-blueB,15:37:00,15:37:00,mtzion,30,
-blueB,15:52:00,15:52:00,parlppi,31,
-blueB,16:15:00,16:15:00,sfgh,32,
-blueB,16:35:00,16:35:00,missb4th,33,
-blueB,16:57:00,16:57:00,mtzion,34,
-blueB,17:12:00,17:12:00,parlppi,35,
-blueB,17:35:00,17:35:00,sfgh,36,
-blueB,17:55:00,17:55:00,missb4th,37,
-blueB,18:17:00,18:17:00,mtzion,38,
-blueB,18:32:00,18:32:00,parlppi,39,
-blueB,18:55:00,18:55:00,sfgh,40,
-blueB,19:15:00,19:15:00,missb4th,41,
-blueB,19:37:00,19:37:00,mtzion,42,
-blueB,19:52:00,19:52:00,parlppi,43,
-blueB,20:15:00,20:15:00,sfgh,44,
-blueC,6:15:00,6:15:00,missb4th,1,
-blueC,6:37:00,6:37:00,mtzion,2,
-blueC,6:52:00,6:52:00,parlppi,3,
-blueC,7:15:00,7:15:00,sfgh,4,
-blueC,7:35:00,7:35:00,missb4th,5,
-blueC,7:57:00,7:57:00,mtzion,6,
-blueC,8:12:00,8:12:00,parlppi,7,
-blueC,8:35:00,8:35:00,sfgh,8,
-blueC,8:55:00,8:55:00,missb4th,9,
-blueC,9:17:00,9:17:00,mtzion,10,
-blueC,9:32:00,9:32:00,parlppi,11,
-blueC,9:55:00,9:55:00,sfgh,12,
-blueC,10:15:00,10:15:00,missb4th,13,
-blueC,10:37:00,10:37:00,mtzion,14,
-blueC,10:52:00,10:52:00,parlppi,15,
-blueC,11:15:00,11:15:00,sfgh,16,
-blueC,11:35:00,11:35:00,missb4th,17,
-blueC,11:57:00,11:57:00,mtzion,18,
-blueC,12:12:00,12:12:00,parlppi,19,
-blueC,12:35:00,12:35:00,sfgh,20,
-blueC,12:55:00,12:55:00,missb4th,21,
-blueC,13:17:00,13:17:00,mtzion,22,
-blueC,13:32:00,13:32:00,parlppi,23,
-blueC,13:55:00,13:55:00,sfgh,24,
-blueC,14:15:00,14:15:00,missb4th,25,
-blueC,14:37:00,14:37:00,mtzion,26,
-blueC,14:52:00,14:52:00,parlppi,27,
-blueC,15:15:00,15:15:00,sfgh,28,
-blueC,15:35:00,15:35:00,missb4th,29,
-blueC,15:57:00,15:57:00,mtzion,30,
-blueC,16:12:00,16:12:00,parlppi,31,
-blueC,16:35:00,16:35:00,sfgh,32,
-blueC,16:55:00,16:55:00,missb4th,33,
-blueC,17:17:00,17:17:00,mtzion,34,
-blueC,17:32:00,17:32:00,parlppi,35,
-blueC,17:55:00,17:55:00,sfgh,36,
-blueC,18:15:00,18:15:00,missb4th,37,
-blueC,18:37:00,18:37:00,mtzion,38,
-blueC,18:52:00,18:52:00,parlppi,39,
-blueC,19:15:00,19:15:00,sfgh,40,
-blueC,19:35:00,19:35:00,missb4th,41,
-blueC,19:57:00,19:57:00,mtzion,42,
-blueC,20:12:00,20:12:00,parlppi,43,
-blueC,20:35:00,20:35:00,sfgh,44,
-blueD,6:35:00,6:35:00,missb4th,1,
-blueD,6:57:00,6:57:00,mtzion,2,
-blueD,7:12:00,7:12:00,parlppi,3,
-blueD,7:35:00,7:35:00,sfgh,4,
-blueD,7:55:00,7:55:00,missb4th,5,
-blueD,8:17:00,8:17:00,mtzion,6,
-blueD,8:32:00,8:32:00,parlppi,7,
-blueD,8:55:00,8:55:00,sfgh,8,
-blueD,9:15:00,9:15:00,missb4th,9,
-blueD,9:37:00,9:37:00,mtzion,10,
-blueD,9:52:00,9:52:00,parlppi,11,
-blueD,10:15:00,10:15:00,sfgh,12,
-blueD,10:35:00,10:35:00,missb4th,13,
-blueD,10:57:00,10:57:00,mtzion,14,
-blueD,11:12:00,11:12:00,parlppi,15,
-blueD,11:35:00,11:35:00,sfgh,16,
-blueD,11:55:00,11:55:00,missb4th,17,
-blueD,12:17:00,12:17:00,mtzion,18,
-blueD,12:32:00,12:32:00,parlppi,19,
-blueD,12:55:00,12:55:00,sfgh,20,
-blueD,13:15:00,13:15:00,missb4th,21,
-blueD,13:37:00,13:37:00,mtzion,22,
-blueD,13:52:00,13:52:00,parlppi,23,
-blueD,14:15:00,14:15:00,sfgh,24,
-blueD,14:35:00,14:35:00,missb4th,25,
-blueD,14:57:00,14:57:00,mtzion,26,
-blueD,15:12:00,15:12:00,parlppi,27,
-blueD,15:35:00,15:35:00,sfgh,28,
-blueD,15:55:00,15:55:00,missb4th,29,
-blueD,16:17:00,16:17:00,mtzion,30,
-blueD,16:32:00,16:32:00,parlppi,31,
-blueD,16:55:00,16:55:00,sfgh,32,
-blueD,17:15:00,17:15:00,missb4th,33,
-blueD,17:37:00,17:37:00,mtzion,34,
-blueD,17:52:00,17:52:00,parlppi,35,
-blueD,18:15:00,18:15:00,sfgh,36,
-blueD,18:35:00,18:35:00,missb4th,37,
-blueD,18:57:00,18:57:00,mtzion,38,
-blueD,19:12:00,19:12:00,parlppi,39,
-blueD,19:35:00,19:35:00,sfgh,40,
-goldA,5:45:00,5:45:00,missb4we,1,
-goldA,6:00:00,6:00:00,sfgh,2,
-goldA,6:22:00,6:22:00,library,3,
-goldA,6:38:00,6:38:00,mtzion,4,
-goldA,7:05:00,7:05:00,missb4we,5,
-goldA,7:20:00,7:20:00,sfgh,6,
-goldA,7:42:00,7:42:00,library,7,
-goldA,7:58:00,7:58:00,mtzion,8,
-goldA,8:25:00,8:25:00,missb4we,9,
-goldA,8:40:00,8:40:00,sfgh,10,
-goldA,9:02:00,9:02:00,library,11,
-goldA,9:18:00,9:18:00,mtzion,12,
-goldA,9:45:00,9:45:00,missb4we,13,
-goldA,10:00:00,10:00:00,sfgh,14,
-goldA,10:22:00,10:22:00,library,15,
-goldA,10:38:00,10:38:00,mtzion,16,
-goldA,11:05:00,11:05:00,missb4we,17,
-goldA,11:20:00,11:20:00,sfgh,18,
-goldA,11:42:00,11:42:00,library,19,
-goldA,11:58:00,11:58:00,mtzion,20,
-goldA,12:25:00,12:25:00,missb4we,21,
-goldA,12:40:00,12:40:00,sfgh,22,
-goldA,13:02:00,13:02:00,library,23,
-goldA,13:18:00,13:18:00,mtzion,24,
-goldA,13:45:00,13:45:00,missb4we,25,
-goldA,14:00:00,14:00:00,sfgh,26,
-goldA,14:22:00,14:22:00,library,27,
-goldA,14:38:00,14:38:00,mtzion,28,
-goldA,15:05:00,15:05:00,missb4we,29,
-goldA,15:20:00,15:20:00,sfgh,30,
-goldA,15:42:00,15:42:00,library,31,
-goldA,15:58:00,15:58:00,mtzion,32,
-goldA,16:25:00,16:25:00,missb4we,33,
-goldA,16:40:00,16:40:00,sfgh,34,
-goldA,17:02:00,17:02:00,library,35,
-goldA,17:18:00,17:18:00,mtzion,36,
-goldA,17:45:00,17:45:00,missb4we,37,
-goldA,18:00:00,18:00:00,sfgh,38,
-goldA,18:22:00,18:22:00,library,39,
-goldA,18:38:00,18:38:00,mtzion,40,
-goldA,19:05:00,19:05:00,missb4we,41,
-goldA,19:20:00,19:20:00,sfgh,42,
-goldA,19:42:00,19:42:00,library,43,
-goldA,19:58:00,19:58:00,mtzion,44,
-goldB,6:05:00,6:05:00,missb4we,1,
-goldB,6:20:00,6:20:00,sfgh,2,
-goldB,6:42:00,6:42:00,library,3,
-goldB,6:58:00,6:58:00,mtzion,4,
-goldB,7:25:00,7:25:00,missb4we,5,
-goldB,7:40:00,7:40:00,sfgh,6,
-goldB,8:02:00,8:02:00,library,7,
-goldB,8:18:00,8:18:00,mtzion,8,
-goldB,8:45:00,8:45:00,missb4we,9,
-goldB,9:00:00,9:00:00,sfgh,10,
-goldB,9:22:00,9:22:00,library,11,
-goldB,9:38:00,9:38:00,mtzion,12,
-goldB,10:05:00,10:05:00,missb4we,13,
-goldB,10:20:00,10:20:00,sfgh,14,
-goldB,10:42:00,10:42:00,library,15,
-goldB,10:58:00,10:58:00,mtzion,16,
-goldB,11:25:00,11:25:00,missb4we,17,
-goldB,11:40:00,11:40:00,sfgh,18,
-goldB,12:02:00,12:02:00,library,19,
-goldB,12:18:00,12:18:00,mtzion,20,
-goldB,12:45:00,12:45:00,missb4we,21,
-goldB,13:00:00,13:00:00,sfgh,22,
-goldB,13:22:00,13:22:00,library,23,
-goldB,13:38:00,13:38:00,mtzion,24,
-goldB,14:05:00,14:05:00,missb4we,25,
-goldB,14:20:00,14:20:00,sfgh,26,
-goldB,14:42:00,14:42:00,library,27,
-goldB,14:58:00,14:58:00,mtzion,28,
-goldB,15:25:00,15:25:00,missb4we,29,
-goldB,15:40:00,15:40:00,sfgh,30,
-goldB,16:02:00,16:02:00,library,31,
-goldB,16:18:00,16:18:00,mtzion,32,
-goldB,16:45:00,16:45:00,missb4we,33,
-goldB,17:00:00,17:00:00,sfgh,34,
-goldB,17:22:00,17:22:00,library,35,
-goldB,17:38:00,17:38:00,mtzion,36,
-goldB,18:05:00,18:05:00,missb4we,37,
-goldB,18:20:00,18:20:00,sfgh,38,
-goldB,18:42:00,18:42:00,library,39,
-goldB,18:58:00,18:58:00,mtzion,40,
-goldB,19:25:00,19:25:00,missb4we,41,
-goldB,19:40:00,19:40:00,sfgh,42,
-goldB,20:02:00,20:02:00,library,43,
-goldB,20:18:00,20:18:00,mtzion,44,
-goldB,20:45:00,20:45:00,missb4we,45,
-goldB,21:00:00,21:00:00,sfgh,46,
-goldB,21:22:00,21:22:00,library,47,
-goldB,21:38:00,21:38:00,mtzion,48,
-goldC,6:25:00,6:25:00,missb4we,1,
-goldC,6:40:00,6:40:00,sfgh,2,
-goldC,7:02:00,7:02:00,library,3,
-goldC,7:18:00,7:18:00,mtzion,4,
-goldC,7:45:00,7:45:00,missb4we,5,
-goldC,8:00:00,8:00:00,sfgh,6,
-goldC,8:22:00,8:22:00,library,7,
-goldC,8:38:00,8:38:00,mtzion,8,
-goldC,9:05:00,9:05:00,missb4we,9,
-goldC,9:20:00,9:20:00,sfgh,10,
-goldC,9:42:00,9:42:00,library,11,
-goldC,9:58:00,9:58:00,mtzion,12,
-goldC,10:25:00,10:25:00,missb4we,13,
-goldC,10:40:00,10:40:00,sfgh,14,
-goldC,11:02:00,11:02:00,library,15,
-goldC,11:18:00,11:18:00,mtzion,16,
-goldC,11:45:00,11:45:00,missb4we,17,
-goldC,12:00:00,12:00:00,sfgh,18,
-goldC,12:22:00,12:22:00,library,19,
-goldC,12:38:00,12:38:00,mtzion,20,
-goldC,13:05:00,13:05:00,missb4we,21,
-goldC,13:20:00,13:20:00,sfgh,22,
-goldC,13:42:00,13:42:00,library,23,
-goldC,13:58:00,13:58:00,mtzion,24,
-goldC,14:25:00,14:25:00,missb4we,25,
-goldC,14:40:00,14:40:00,sfgh,26,
-goldC,15:02:00,15:02:00,library,27,
-goldC,15:18:00,15:18:00,mtzion,28,
-goldC,15:45:00,15:45:00,missb4we,29,
-goldC,16:00:00,16:00:00,sfgh,30,
-goldC,16:22:00,16:22:00,library,31,
-goldC,16:38:00,16:38:00,mtzion,32,
-goldC,17:05:00,17:05:00,missb4we,33,
-goldC,17:20:00,17:20:00,sfgh,34,
-goldC,17:42:00,17:42:00,library,35,
-goldC,17:58:00,17:58:00,mtzion,36,
-goldC,18:25:00,18:25:00,missb4we,37,
-goldC,18:40:00,18:40:00,sfgh,38,
-goldC,19:02:00,19:02:00,library,39,
-goldC,19:18:00,19:18:00,mtzion,40,
-goldD,6:45:00,6:45:00,missb4we,1,
-goldD,7:00:00,7:00:00,sfgh,2,
-goldD,7:22:00,7:22:00,library,3,
-goldD,7:38:00,7:38:00,mtzion,4,
-goldD,8:05:00,8:05:00,missb4we,5,
-goldD,8:20:00,8:20:00,sfgh,6,
-goldD,8:42:00,8:42:00,library,7,
-goldD,8:58:00,8:58:00,mtzion,8,
-goldD,9:25:00,9:25:00,missb4we,9,
-goldD,9:40:00,9:40:00,sfgh,10,
-goldD,10:02:00,10:02:00,library,11,
-goldD,10:18:00,10:18:00,mtzion,12,
-goldD,10:45:00,10:45:00,missb4we,13,
-goldD,11:00:00,11:00:00,sfgh,14,
-goldD,11:22:00,11:22:00,library,15,
-goldD,11:38:00,11:38:00,mtzion,16,
-goldD,12:05:00,12:05:00,missb4we,17,
-goldD,12:20:00,12:20:00,sfgh,18,
-goldD,12:42:00,12:42:00,library,19,
-goldD,12:58:00,12:58:00,mtzion,20,
-goldD,13:25:00,13:25:00,missb4we,21,
-goldD,13:40:00,13:40:00,sfgh,22,
-goldD,14:02:00,14:02:00,library,23,
-goldD,14:18:00,14:18:00,mtzion,24,
-goldD,14:45:00,14:45:00,missb4we,25,
-goldD,15:00:00,15:00:00,sfgh,26,
-goldD,15:22:00,15:22:00,library,27,
-goldD,15:38:00,15:38:00,mtzion,28,
-goldD,16:05:00,16:05:00,missb4we,29,
-goldD,16:20:00,16:20:00,sfgh,30,
-goldD,16:42:00,16:42:00,library,31,
-goldD,16:58:00,16:58:00,mtzion,32,
-goldD,17:25:00,17:25:00,missb4we,33,
-goldD,17:40:00,17:40:00,sfgh,34,
-goldD,18:02:00,18:02:00,library,35,
-goldD,18:18:00,18:18:00,mtzion,36,
-goldD,18:45:00,18:45:00,missb4we,37,
-goldD,19:00:00,19:00:00,sfgh,38,
-goldD,19:22:00,19:22:00,library,39,
-goldD,19:38:00,19:38:00,mtzion,40,
-goldD,20:05:00,20:05:00,missb4we,41,
-goldD,20:20:00,20:20:00,sfgh,42,
-goldD,20:42:00,20:42:00,library,43,
-goldD,20:58:00,20:58:00,mtzion,44,
-limeA,6:00:00,6:00:00,mcb,1,
-limeA,6:05:00,6:05:00,buchanwb,2,
-limeA,6:20:00,6:20:00,parlppi,3,
-limeA,6:35:00,6:35:00,buchaneb,4,
-limeA,6:50:00,6:50:00,mcb,5,
-limeA,6:55:00,6:55:00,buchanwb,6,
-limeA,7:15:00,7:15:00,parlppi,7,
-limeA,7:30:00,7:30:00,buchaneb,8,
-limeA,7:45:00,7:45:00,mcb,9,
-limeA,7:50:00,7:50:00,buchanwb,10,
-limeA,8:10:00,8:10:00,parlppi,11,
-limeA,8:25:00,8:25:00,buchaneb,12,
-limeA,8:40:00,8:40:00,mcb,13,
-limeA,8:45:00,8:45:00,buchanwb,14,
-limeA,9:05:00,9:05:00,parlppi,15,
-limeA,9:20:00,9:20:00,buchaneb,16,
-limeA,9:35:00,9:35:00,mcb,17,
-limeA,9:40:00,9:40:00,buchanwb,18,
-limeA,10:00:00,10:00:00,parlppi,19,
-limeA,10:15:00,10:15:00,buchaneb,20,
-limeA,10:30:00,10:30:00,mcb,21,
-limeA,10:35:00,10:35:00,buchanwb,22,
-limeA,10:55:00,10:55:00,parlppi,23,
-limeA,11:10:00,11:10:00,buchaneb,24,
-limeA,11:25:00,11:25:00,mcb,25,
-limeA,11:30:00,11:30:00,buchanwb,26,
-limeA,11:50:00,11:50:00,parlppi,27,
-limeA,12:05:00,12:05:00,buchaneb,28,
-limeA,12:20:00,12:20:00,mcb,29,
-limeA,12:25:00,12:25:00,buchanwb,30,
-limeA,12:40:00,12:40:00,parlppi,31,
-limeA,12:55:00,12:55:00,buchaneb,32,
-limeA,13:10:00,13:10:00,mcb,33,
-limeA,13:15:00,13:15:00,buchanwb,34,
-limeA,13:30:00,13:30:00,parlppi,35,
-limeA,13:45:00,13:45:00,buchaneb,36,
-limeA,14:05:00,14:05:00,mcb,37,
-limeA,14:10:00,14:10:00,buchanwb,38,
-limeA,14:25:00,14:25:00,parlppi,39,
-limeA,14:40:00,14:40:00,buchaneb,40,
-limeA,15:00:00,15:00:00,mcb,41,
-limeA,15:05:00,15:05:00,buchanwb,42,
-limeA,15:20:00,15:20:00,parlppi,43,
-limeA,15:35:00,15:35:00,buchaneb,44,
-limeA,15:55:00,15:55:00,mcb,45,
-limeA,16:00:00,16:00:00,buchanwb,46,
-limeA,16:15:00,16:15:00,parlppi,47,
-limeA,16:30:00,16:30:00,buchaneb,48,
-limeA,16:50:00,16:50:00,mcb,49,
-limeA,16:55:00,16:55:00,buchanwb,50,
-limeA,17:10:00,17:10:00,parlppi,51,
-limeA,17:25:00,17:25:00,buchaneb,52,
-limeA,17:45:00,17:45:00,mcb,53,
-limeA,17:50:00,17:50:00,buchanwb,54,
-limeA,18:05:00,18:05:00,parlppi,55,
-limeA,18:20:00,18:20:00,buchaneb,56,
-limeA,18:40:00,18:40:00,mcb,57,
-limeA,18:45:00,18:45:00,buchanwb,58,
-limeA,19:00:00,19:00:00,parlppi,59,
-limeA,19:15:00,19:15:00,buchaneb,60,
-limeA,19:30:00,19:30:00,mcb,61,
-limeA,19:35:00,19:35:00,buchanwb,62,
-limeA,19:50:00,19:50:00,parlppi,63,
-limeA,20:05:00,20:05:00,buchaneb,64,
-limeA,20:20:00,20:20:00,mcb,65,
-limeB,6:15:00,6:15:00,mcb,1,
-limeB,6:20:00,6:20:00,buchanwb,2,
-limeB,6:35:00,6:35:00,parlppi,3,
-limeB,6:50:00,6:50:00,buchaneb,4,
-limeB,7:05:00,7:05:00,mcb,5,
-limeB,7:10:00,7:10:00,buchanwb,6,
-limeB,7:30:00,7:30:00,parlppi,7,
-limeB,7:45:00,7:45:00,buchaneb,8,
-limeB,8:00:00,8:00:00,mcb,9,
-limeB,8:05:00,8:05:00,buchanwb,10,
-limeB,8:25:00,8:25:00,parlppi,11,
-limeB,8:40:00,8:40:00,buchaneb,12,
-limeB,8:55:00,8:55:00,mcb,13,
-limeB,9:00:00,9:00:00,buchanwb,14,
-limeB,9:20:00,9:20:00,parlppi,15,
-limeB,9:35:00,9:35:00,buchaneb,16,
-limeB,9:50:00,9:50:00,mcb,17,
-limeB,9:55:00,9:55:00,buchanwb,18,
-limeB,10:15:00,10:15:00,parlppi,19,
-limeB,10:30:00,10:30:00,buchaneb,20,
-limeB,10:45:00,10:45:00,mcb,21,
-limeB,10:50:00,10:50:00,buchanwb,22,
-limeB,11:10:00,11:10:00,parlppi,23,
-limeB,11:25:00,11:25:00,buchaneb,24,
-limeB,11:40:00,11:40:00,mcb,25,
-limeB,11:45:00,11:45:00,buchanwb,26,
-limeB,12:05:00,12:05:00,parlppi,27,
-limeB,12:20:00,12:20:00,buchaneb,28,
-limeB,12:35:00,12:35:00,mcb,29,
-limeB,12:40:00,12:40:00,buchanwb,30,
-limeB,12:55:00,12:55:00,parlppi,31,
-limeB,13:10:00,13:10:00,buchaneb,32,
-limeB,13:25:00,13:25:00,mcb,33,
-limeB,13:30:00,13:30:00,buchanwb,34,
-limeB,13:45:00,13:45:00,parlppi,35,
-limeB,14:00:00,14:00:00,buchaneb,36,
-limeB,14:20:00,14:20:00,mcb,37,
-limeB,14:25:00,14:25:00,buchanwb,38,
-limeB,14:40:00,14:40:00,parlppi,39,
-limeB,14:55:00,14:55:00,buchaneb,40,
-limeB,15:15:00,15:15:00,mcb,41,
-limeB,15:20:00,15:20:00,buchanwb,42,
-limeB,15:35:00,15:35:00,parlppi,43,
-limeB,15:50:00,15:50:00,buchaneb,44,
-limeB,16:10:00,16:10:00,mcb,45,
-limeB,16:15:00,16:15:00,buchanwb,46,
-limeB,16:30:00,16:30:00,parlppi,47,
-limeB,16:45:00,16:45:00,buchaneb,48,
-limeB,17:05:00,17:05:00,mcb,49,
-limeB,17:10:00,17:10:00,buchanwb,50,
-limeB,17:25:00,17:25:00,parlppi,51,
-limeB,17:40:00,17:40:00,buchaneb,52,
-limeB,18:00:00,18:00:00,mcb,53,
-limeB,18:05:00,18:05:00,buchanwb,54,
-limeB,18:20:00,18:20:00,parlppi,55,
-limeB,18:35:00,18:35:00,buchaneb,56,
-limeB,18:55:00,18:55:00,mcb,57,
-limeB,19:00:00,19:00:00,buchanwb,58,
-limeB,19:15:00,19:15:00,parlppi,59,
-limeB,19:30:00,19:30:00,buchaneb,60,
-limeB,19:45:00,19:45:00,mcb,61,
-limeB,19:50:00,19:50:00,buchanwb,62,
-limeB,20:05:00,20:05:00,parlppi,63,
-limeB,20:20:00,20:20:00,buchaneb,64,
-limeB,20:35:00,20:35:00,mcb,65,
-limeC,6:30:00,6:30:00,mcb,1,
-limeC,6:35:00,6:35:00,buchanwb,2,
-limeC,6:50:00,6:50:00,parlppi,3,
-limeC,7:05:00,7:05:00,buchaneb,4,
-limeC,7:20:00,7:20:00,mcb,5,
-limeC,7:25:00,7:25:00,buchanwb,6,
-limeC,7:45:00,7:45:00,parlppi,7,
-limeC,8:00:00,8:00:00,buchaneb,8,
-limeC,8:15:00,8:15:00,mcb,9,
-limeC,8:20:00,8:20:00,buchanwb,10,
-limeC,8:40:00,8:40:00,parlppi,11,
-limeC,8:55:00,8:55:00,buchaneb,12,
-limeC,9:10:00,9:10:00,mcb,13,
-limeC,9:15:00,9:15:00,buchanwb,14,
-limeC,9:35:00,9:35:00,parlppi,15,
-limeC,9:50:00,9:50:00,buchaneb,16,
-limeC,10:05:00,10:05:00,mcb,17,
-limeC,10:10:00,10:10:00,buchanwb,18,
-limeC,10:30:00,10:30:00,parlppi,19,
-limeC,10:45:00,10:45:00,buchaneb,20,
-limeC,11:00:00,11:00:00,mcb,21,
-limeC,11:05:00,11:05:00,buchanwb,22,
-limeC,11:25:00,11:25:00,parlppi,23,
-limeC,11:40:00,11:40:00,buchaneb,24,
-limeC,11:55:00,11:55:00,mcb,25,
-limeC,12:00:00,12:00:00,buchanwb,26,
-limeC,12:20:00,12:20:00,parlppi,27,
-limeC,12:35:00,12:35:00,buchaneb,28,
-limeC,12:50:00,12:50:00,mcb,29,
-limeC,12:55:00,12:55:00,buchanwb,30,
-limeC,13:10:00,13:10:00,parlppi,31,
-limeC,13:25:00,13:25:00,buchaneb,32,
-limeC,13:40:00,13:40:00,mcb,33,
-limeC,13:45:00,13:45:00,buchanwb,34,
-limeC,14:00:00,14:00:00,parlppi,35,
-limeC,14:15:00,14:15:00,buchaneb,36,
-limeC,14:35:00,14:35:00,mcb,37,
-limeC,14:40:00,14:40:00,buchanwb,38,
-limeC,14:55:00,14:55:00,parlppi,39,
-limeC,15:10:00,15:10:00,buchaneb,40,
-limeC,15:30:00,15:30:00,mcb,41,
-limeC,15:35:00,15:35:00,buchanwb,42,
-limeC,15:50:00,15:50:00,parlppi,43,
-limeC,16:05:00,16:05:00,buchaneb,44,
-limeC,16:25:00,16:25:00,mcb,45,
-limeC,16:30:00,16:30:00,buchanwb,46,
-limeC,16:45:00,16:45:00,parlppi,47,
-limeC,17:00:00,17:00:00,buchaneb,48,
-limeC,17:20:00,17:20:00,mcb,49,
-limeC,17:25:00,17:25:00,buchanwb,50,
-limeC,17:40:00,17:40:00,parlppi,51,
-limeC,17:55:00,17:55:00,buchaneb,52,
-limeC,18:15:00,18:15:00,mcb,53,
-limeC,18:20:00,18:20:00,buchanwb,54,
-limeC,18:35:00,18:35:00,parlppi,55,
-limeC,18:50:00,18:50:00,buchaneb,56,
-limeC,19:10:00,19:10:00,mcb,57,
-limeC,19:15:00,19:15:00,buchanwb,58,
-limeC,19:30:00,19:30:00,parlppi,59,
-limeC,19:45:00,19:45:00,buchaneb,60,
-limeC,20:00:00,20:00:00,mcb,61,
-limeC,20:05:00,20:05:00,buchanwb,62,
-limeC,20:20:00,20:20:00,parlppi,63,
-limeC,20:35:00,20:35:00,buchaneb,64,
-limeC,20:50:00,20:50:00,mcb,65,
-greyA,6:30:00,6:30:00,missb4we,1,
-greyA,7:00:00,7:00:00,parlppi,2,
-greyA,7:30:00,7:30:00,missb4we,3,
-greyA,8:00:00,8:00:00,parlppi,4,
-greyA,8:30:00,8:30:00,missb4we,5,
-greyA,9:00:00,9:00:00,parlppi,6,
-greyA,9:30:00,9:30:00,missb4we,7,
-greyA,10:00:00,10:00:00,parlppi,8,
-greyA,10:30:00,10:30:00,missb4we,9,
-greyA,11:00:00,11:00:00,parlppi,10,
-greyA,11:30:00,11:30:00,missb4we,11,
-greyA,12:00:00,12:00:00,parlppi,12,
-greyA,12:30:00,12:30:00,missb4we,13,
-greyA,13:00:00,13:00:00,parlppi,14,
-greyA,13:30:00,13:30:00,missb4we,15,
-greyA,14:00:00,14:00:00,parlppi,16,
-greyA,14:30:00,14:30:00,missb4we,17,
-greyA,15:00:00,15:00:00,parlppi,18,
-greyA,15:30:00,15:30:00,missb4we,19,
-greyA,16:00:00,16:00:00,parlppi,20,
-greyA,16:40:00,16:40:00,missb4we,21,
-greyA,17:10:00,17:10:00,parlppi,22,
-greyA,17:50:00,17:50:00,missb4we,23,
-greyA,18:20:00,18:20:00,parlppi,24,
-greyA,18:50:00,18:50:00,missb4we,25,
-greyA,19:20:00,19:20:00,parlppi,26,
-greyA,19:50:00,19:50:00,missb4we,27,
-greyA,20:20:00,20:20:00,parlppi,28,
-greyA,20:50:00,20:50:00,missb4we,29,
-greyA,21:20:00,21:20:00,parlppi,30,
-greyA,21:50:00,21:50:00,missb4we,31,
-greyB,6:50:00,6:50:00,missb4we,1,
-greyB,7:20:00,7:20:00,parlppi,2,
-greyB,7:50:00,7:50:00,missb4we,3,
-greyB,8:20:00,8:20:00,parlppi,4,
-greyB,8:50:00,8:50:00,missb4we,5,
-greyB,9:20:00,9:20:00,parlppi,6,
-greyB,9:50:00,9:50:00,missb4we,7,
-greyB,10:20:00,10:20:00,parlppi,8,
-greyB,10:50:00,10:50:00,missb4we,9,
-greyB,11:20:00,11:20:00,parlppi,10,
-greyB,11:50:00,11:50:00,missb4we,11,
-greyB,12:20:00,12:20:00,parlppi,12,
-greyB,12:50:00,12:50:00,missb4we,13,
-greyB,13:20:00,13:20:00,parlppi,14,
-greyB,13:50:00,13:50:00,missb4we,15,
-greyB,14:20:00,14:20:00,parlppi,16,
-greyB,14:50:00,14:50:00,missb4we,17,
-greyB,15:20:00,15:20:00,parlppi,18,
-greyB,15:50:00,15:50:00,missb4we,19,
-greyB,16:20:00,16:20:00,parlppi,20,
-greyB,17:00:00,17:00:00,missb4we,21,
-greyB,17:30:00,17:30:00,parlppi,22,
-greyB,18:10:00,18:10:00,missb4we,23,
-greyB,18:40:00,18:40:00,parlppi,24,
-greyB,19:10:00,19:10:00,missb4we,25,
-greyB,19:40:00,19:40:00,parlppi,26,
-greyB,20:10:00,20:10:00,missb4we,27,
-greyB,20:40:00,20:40:00,parlppi,28,
-greyB,21:10:00,21:10:00,missb4we,29,
-greyB,21:40:00,21:40:00,parlppi,30,
-greyB,22:10:00,22:10:00,missb4we,31,
-greyC,7:10:00,7:10:00,missb4we,1,
-greyC,7:40:00,7:40:00,parlppi,2,
-greyC,8:10:00,8:10:00,missb4we,3,
-greyC,8:40:00,8:40:00,parlppi,4,
-greyC,9:10:00,9:10:00,missb4we,5,
-greyC,9:40:00,9:40:00,parlppi,6,
-greyC,10:10:00,10:10:00,missb4we,7,
-greyC,10:40:00,10:40:00,parlppi,8,
-greyC,11:10:00,11:10:00,missb4we,9,
-greyC,11:40:00,11:40:00,parlppi,10,
-greyC,12:10:00,12:10:00,missb4we,11,
-greyC,12:40:00,12:40:00,parlppi,12,
-greyC,13:10:00,13:10:00,missb4we,13,
-greyC,13:40:00,13:40:00,parlppi,14,
-greyC,14:10:00,14:10:00,missb4we,15,
-greyC,14:40:00,14:40:00,parlppi,16,
-greyC,15:10:00,15:10:00,missb4we,17,
-greyC,15:40:00,15:40:00,parlppi,18,
-greyC,16:10:00,16:10:00,missb4we,19,
-greyC,16:40:00,16:40:00,parlppi,20,
-greyC,17:20:00,17:20:00,missb4we,21,
-greyC,17:50:00,17:50:00,parlppi,22,
-greyC,18:30:00,18:30:00,missb4we,23,
-greyC,19:00:00,19:00:00,parlppi,24,
-greyC,19:30:00,19:30:00,missb4we,25,
-greyC,20:00:00,20:00:00,parlppi,26,
-greyC,20:30:00,20:30:00,missb4we,27,
-greyC,21:00:00,21:00:00,parlppi,28,
-greyC,21:30:00,21:30:00,missb4we,29,
-redA_1,6:00:00,6:00:00,missb4th,1,
-redA_1,6:10:00,6:10:00,mcb,2,
-redA_1,6:15:00,6:15:00,16thbart,3,
-redA_2,6:15:00,6:15:00,16thbart,3,
-redA_2,6:20:00,6:20:00,mcb,4,
-redA_2,6:30:00,6:30:00,missb4th,5,
-redA_3,6:30:00,6:30:00,missb4th,5,
-redA_3,6:40:00,6:40:00,mcb,6,
-redA_3,6:45:00,6:45:00,16thbart,7,
-redA_4,6:45:00,6:45:00,16thbart,7,
-redA_4,6:50:00,6:50:00,mcb,8,
-redA_4,7:00:00,7:00:00,missb4th,9,
-redA_5,7:00:00,7:00:00,missb4th,9,
-redA_5,7:10:00,7:10:00,mcb,10,
-redA_5,7:15:00,7:15:00,16thbart,11,
-redA_6,7:15:00,7:15:00,16thbart,11,
-redA_6,7:20:00,7:20:00,mcb,12,
-redA_6,7:30:00,7:30:00,missb4th,13,
-redA_7,7:30:00,7:30:00,missb4th,13,
-redA_7,7:40:00,7:40:00,mcb,14,
-redA_7,7:45:00,7:45:00,16thbart,15,
-redA_8,7:45:00,7:45:00,16thbart,15,
-redA_8,7:50:00,7:50:00,mcb,16,
-redA_8,8:00:00,8:00:00,missb4th,17,
-redA_9,8:00:00,8:00:00,missb4th,17,
-redA_9,8:10:00,8:10:00,mcb,18,
-redA_9,8:15:00,8:15:00,16thbart,19,
-redA_10,8:15:00,8:15:00,16thbart,19,
-redA_10,8:20:00,8:20:00,mcb,20,
-redA_10,8:30:00,8:30:00,missb4th,21,
-redA_11,8:30:00,8:30:00,missb4th,21,
-redA_11,8:40:00,8:40:00,mcb,22,
-redA_11,8:45:00,8:45:00,16thbart,23,
-redA_12,8:45:00,8:45:00,16thbart,23,
-redA_12,8:50:00,8:50:00,mcb,24,
-redA_12,9:00:00,9:00:00,missb4th,25,
-redA_13,9:00:00,9:00:00,missb4th,25,
-redA_13,9:10:00,9:10:00,mcb,26,
-redA_13,9:15:00,9:15:00,16thbart,27,
-redA_14,9:15:00,9:15:00,16thbart,27,
-redA_14,9:20:00,9:20:00,mcb,28,
-redA_14,9:30:00,9:30:00,missb4th,29,
-redA_15,9:30:00,9:30:00,missb4th,29,
-redA_15,9:40:00,9:40:00,mcb,30,
-redA_15,9:45:00,9:45:00,16thbart,31,
-redA_16,9:45:00,9:45:00,16thbart,31,
-redA_16,9:50:00,9:50:00,mcb,32,
-redA_16,10:00:00,10:00:00,missb4th,33,
-redA_17,10:00:00,10:00:00,missb4th,33,
-redA_17,10:10:00,10:10:00,mcb,34,
-redA_17,10:15:00,10:15:00,16thbart,35,
-redA_18,10:15:00,10:15:00,16thbart,35,
-redA_18,10:20:00,10:20:00,mcb,36,
-redA_18,10:30:00,10:30:00,missb4th,37,
-redA_19,10:30:00,10:30:00,missb4th,37,
-redA_19,10:40:00,10:40:00,mcb,38,
-redA_19,10:45:00,10:45:00,16thbart,39,
-redA_20,10:45:00,10:45:00,16thbart,39,
-redA_20,10:50:00,10:50:00,mcb,40,
-redA_20,11:00:00,11:00:00,missb4th,41,
-redA_21,11:00:00,11:00:00,missb4th,41,
-redA_21,11:10:00,11:10:00,mcb,42,
-redA_21,11:15:00,11:15:00,16thbart,43,
-redA_22,11:15:00,11:15:00,16thbart,43,
-redA_22,11:20:00,11:20:00,mcb,44,
-redA_22,11:30:00,11:30:00,missb4th,45,
-redA_23,11:30:00,11:30:00,missb4th,45,
-redA_23,11:40:00,11:40:00,mcb,46,
-redA_23,11:45:00,11:45:00,16thbart,47,
-redA_24,11:45:00,11:45:00,16thbart,47,
-redA_24,11:50:00,11:50:00,mcb,48,
-redA_24,12:00:00,12:00:00,missb4th,49,
-redA_25,12:00:00,12:00:00,missb4th,49,
-redA_25,12:10:00,12:10:00,mcb,50,
-redA_25,12:15:00,12:15:00,16thbart,51,
-redA_26,12:15:00,12:15:00,16thbart,51,
-redA_26,12:20:00,12:20:00,mcb,52,
-redA_26,12:30:00,12:30:00,missb4th,53,
-redA_27,12:30:00,12:30:00,missb4th,53,
-redA_27,12:40:00,12:40:00,mcb,54,
-redA_27,12:45:00,12:45:00,16thbart,55,
-redA_28,12:45:00,12:45:00,16thbart,55,
-redA_28,12:50:00,12:50:00,mcb,56,
-redA_28,13:00:00,13:00:00,missb4th,57,
-redA_29,13:00:00,13:00:00,missb4th,57,
-redA_29,13:10:00,13:10:00,mcb,58,
-redA_29,13:15:00,13:15:00,16thbart,59,
-redA_30,13:15:00,13:15:00,16thbart,59,
-redA_30,13:20:00,13:20:00,mcb,60,
-redA_30,13:30:00,13:30:00,missb4th,61,
-redA_31,13:30:00,13:30:00,missb4th,61,
-redA_31,13:40:00,13:40:00,mcb,62,
-redA_31,13:45:00,13:45:00,16thbart,63,
-redA_32,13:45:00,13:45:00,16thbart,63,
-redA_32,13:50:00,13:50:00,mcb,64,
-redA_32,14:00:00,14:00:00,missb4th,65,
-redA_33,14:00:00,14:00:00,missb4th,65,
-redA_33,14:10:00,14:10:00,mcb,66,
-redA_33,14:15:00,14:15:00,16thbart,67,
-redA_34,14:15:00,14:15:00,16thbart,67,
-redA_34,14:20:00,14:20:00,mcb,68,
-redA_34,14:30:00,14:30:00,missb4th,69,
-redA_35,14:30:00,14:30:00,missb4th,69,
-redA_35,14:40:00,14:40:00,mcb,70,
-redA_35,14:45:00,14:45:00,16thbart,71,
-redA_36,14:45:00,14:45:00,16thbart,71,
-redA_36,14:50:00,14:50:00,mcb,72,
-redA_36,15:00:00,15:00:00,missb4th,73,
-redA_37,15:00:00,15:00:00,missb4th,73,
-redA_37,15:10:00,15:10:00,mcb,74,
-redA_37,15:15:00,15:15:00,16thbart,75,
-redA_38,15:15:00,15:15:00,16thbart,75,
-redA_38,15:20:00,15:20:00,mcb,76,
-redA_38,15:35:00,15:35:00,missb4th,77,
-redA_39,15:35:00,15:35:00,missb4th,77,
-redA_39,15:45:00,15:45:00,mcb,78,
-redA_39,15:50:00,15:50:00,16thbart,79,
-redA_40,15:50:00,15:50:00,16thbart,79,
-redA_40,15:55:00,15:55:00,mcb,80,
-redA_40,16:10:00,16:10:00,missb4th,81,
-redA_41,16:10:00,16:10:00,missb4th,81,
-redA_41,16:20:00,16:20:00,mcb,82,
-redA_41,16:25:00,16:25:00,16thbart,83,
-redA_42,16:25:00,16:25:00,16thbart,83,
-redA_42,16:30:00,16:30:00,mcb,84,
-redA_42,16:45:00,16:45:00,missb4th,85,
-redA_43,16:45:00,16:45:00,missb4th,85,
-redA_43,16:55:00,16:55:00,mcb,86,
-redA_43,17:00:00,17:00:00,16thbart,87,
-redA_44,17:00:00,17:00:00,16thbart,87,
-redA_44,17:05:00,17:05:00,mcb,88,
-redA_44,17:20:00,17:20:00,missb4th,89,
-redA_45,17:20:00,17:20:00,missb4th,89,
-redA_45,17:30:00,17:30:00,mcb,90,
-redA_45,17:35:00,17:35:00,16thbart,91,
-redA_46,17:35:00,17:35:00,16thbart,91,
-redA_46,17:40:00,17:40:00,mcb,92,
-redA_46,17:55:00,17:55:00,missb4th,93,
-redA_47,17:55:00,17:55:00,missb4th,93,
-redA_47,18:05:00,18:05:00,mcb,94,
-redA_47,18:10:00,18:10:00,16thbart,95,
-redA_48,18:10:00,18:10:00,16thbart,95,
-redA_48,18:15:00,18:15:00,mcb,96,
-redA_48,18:30:00,18:30:00,missb4th,97,
-redA_49,18:30:00,18:30:00,missb4th,97,
-redA_49,18:40:00,18:40:00,mcb,98,
-redA_49,18:45:00,18:45:00,16thbart,99,
-redA_50,18:45:00,18:45:00,16thbart,99,
-redA_50,18:50:00,18:50:00,mcb,100,
-redA_50,19:00:00,19:00:00,missb4th,101,
-redA_51,19:00:00,19:00:00,missb4th,101,
-redA_51,19:10:00,19:10:00,mcb,102,
-redA_51,19:15:00,19:15:00,16thbart,103,
-redA_52,19:15:00,19:15:00,16thbart,103,
-redA_52,19:20:00,19:20:00,mcb,104,
-redA_52,19:30:00,19:30:00,missb4th,105,
-redA_53,19:30:00,19:30:00,missb4th,105,
-redA_53,19:40:00,19:40:00,mcb,106,
-redA_53,19:45:00,19:45:00,16thbart,107,
-redA_54,19:45:00,19:45:00,16thbart,107,
-redA_54,19:50:00,19:50:00,mcb,108,
-redA_54,20:00:00,20:00:00,missb4th,109,
-redB_1,6:15:00,6:15:00,missb4th,1,
-redB_1,6:25:00,6:25:00,mcb,2,
-redB_1,6:30:00,6:30:00,16thbart,3,
-redB_2,6:30:00,6:30:00,16thbart,3,
-redB_2,6:35:00,6:35:00,mcb,4,
-redB_2,6:45:00,6:45:00,missb4th,5,
-redB_3,6:45:00,6:45:00,missb4th,5,
-redB_3,6:55:00,6:55:00,mcb,6,
-redB_3,7:00:00,7:00:00,16thbart,7,
-redB_4,7:00:00,7:00:00,16thbart,7,
-redB_4,7:05:00,7:05:00,mcb,8,
-redB_4,7:15:00,7:15:00,missb4th,9,
-redB_5,7:15:00,7:15:00,missb4th,9,
-redB_5,7:25:00,7:25:00,mcb,10,
-redB_5,7:30:00,7:30:00,16thbart,11,
-redB_6,7:30:00,7:30:00,16thbart,11,
-redB_6,7:35:00,7:35:00,mcb,12,
-redB_6,7:45:00,7:45:00,missb4th,13,
-redB_7,7:45:00,7:45:00,missb4th,13,
-redB_7,7:55:00,7:55:00,mcb,14,
-redB_7,8:00:00,8:00:00,16thbart,15,
-redB_8,8:00:00,8:00:00,16thbart,15,
-redB_8,8:05:00,8:05:00,mcb,16,
-redB_8,8:15:00,8:15:00,missb4th,17,
-redB_9,8:15:00,8:15:00,missb4th,17,
-redB_9,8:25:00,8:25:00,mcb,18,
-redB_9,8:30:00,8:30:00,16thbart,19,
-redB_10,8:30:00,8:30:00,16thbart,19,
-redB_10,8:35:00,8:35:00,mcb,20,
-redB_10,8:45:00,8:45:00,missb4th,21,
-redB_11,8:45:00,8:45:00,missb4th,21,
-redB_11,8:55:00,8:55:00,mcb,22,
-redB_11,9:00:00,9:00:00,16thbart,23,
-redB_12,9:00:00,9:00:00,16thbart,23,
-redB_12,9:05:00,9:05:00,mcb,24,
-redB_12,9:15:00,9:15:00,missb4th,25,
-redB_13,9:15:00,9:15:00,missb4th,25,
-redB_13,9:25:00,9:25:00,mcb,26,
-redB_13,9:30:00,9:30:00,16thbart,27,
-redB_14,9:30:00,9:30:00,16thbart,27,
-redB_14,9:35:00,9:35:00,mcb,28,
-redB_14,9:45:00,9:45:00,missb4th,29,
-redB_15,9:45:00,9:45:00,missb4th,29,
-redB_15,9:55:00,9:55:00,mcb,30,
-redB_15,10:00:00,10:00:00,16thbart,31,
-redB_16,10:00:00,10:00:00,16thbart,31,
-redB_16,10:05:00,10:05:00,mcb,32,
-redB_16,10:15:00,10:15:00,missb4th,33,
-redB_17,10:15:00,10:15:00,missb4th,33,
-redB_17,10:25:00,10:25:00,mcb,34,
-redB_17,10:30:00,10:30:00,16thbart,35,
-redB_18,10:30:00,10:30:00,16thbart,35,
-redB_18,10:35:00,10:35:00,mcb,36,
-redB_18,10:45:00,10:45:00,missb4th,37,
-redB_19,10:45:00,10:45:00,missb4th,37,
-redB_19,10:55:00,10:55:00,mcb,38,
-redB_19,11:00:00,11:00:00,16thbart,39,
-redB_20,11:00:00,11:00:00,16thbart,39,
-redB_20,11:05:00,11:05:00,mcb,40,
-redB_20,11:15:00,11:15:00,missb4th,41,
-redB_21,11:15:00,11:15:00,missb4th,41,
-redB_21,11:25:00,11:25:00,mcb,42,
-redB_21,11:30:00,11:30:00,16thbart,43,
-redB_22,11:30:00,11:30:00,16thbart,43,
-redB_22,11:35:00,11:35:00,mcb,44,
-redB_22,11:45:00,11:45:00,missb4th,45,
-redB_23,11:45:00,11:45:00,missb4th,45,
-redB_23,11:55:00,11:55:00,mcb,46,
-redB_23,12:00:00,12:00:00,16thbart,47,
-redB_24,12:00:00,12:00:00,16thbart,47,
-redB_24,12:05:00,12:05:00,mcb,48,
-redB_24,12:15:00,12:15:00,missb4th,49,
-redB_25,12:15:00,12:15:00,missb4th,49,
-redB_25,12:25:00,12:25:00,mcb,50,
-redB_25,12:30:00,12:30:00,16thbart,51,
-redB_26,12:30:00,12:30:00,16thbart,51,
-redB_26,12:35:00,12:35:00,mcb,52,
-redB_26,12:45:00,12:45:00,missb4th,53,
-redB_27,12:45:00,12:45:00,missb4th,53,
-redB_27,12:55:00,12:55:00,mcb,54,
-redB_27,13:00:00,13:00:00,16thbart,55,
-redB_28,13:00:00,13:00:00,16thbart,55,
-redB_28,13:05:00,13:05:00,mcb,56,
-redB_28,13:15:00,13:15:00,missb4th,57,
-redB_29,13:15:00,13:15:00,missb4th,57,
-redB_29,13:25:00,13:25:00,mcb,58,
-redB_29,13:30:00,13:30:00,16thbart,59,
-redB_30,13:30:00,13:30:00,16thbart,59,
-redB_30,13:35:00,13:35:00,mcb,60,
-redB_30,13:45:00,13:45:00,missb4th,61,
-redB_31,13:45:00,13:45:00,missb4th,61,
-redB_31,13:55:00,13:55:00,mcb,62,
-redB_31,14:00:00,14:00:00,16thbart,63,
-redB_32,14:00:00,14:00:00,16thbart,63,
-redB_32,14:05:00,14:05:00,mcb,64,
-redB_32,14:15:00,14:15:00,missb4th,65,
-redB_33,14:15:00,14:15:00,missb4th,65,
-redB_33,14:25:00,14:25:00,mcb,66,
-redB_33,14:30:00,14:30:00,16thbart,67,
-redB_34,14:30:00,14:30:00,16thbart,67,
-redB_34,14:35:00,14:35:00,mcb,68,
-redB_34,14:45:00,14:45:00,missb4th,69,
-redB_35,14:45:00,14:45:00,missb4th,69,
-redB_35,14:55:00,14:55:00,mcb,70,
-redB_35,15:00:00,15:00:00,16thbart,71,
-redB_36,15:00:00,15:00:00,16thbart,71,
-redB_36,15:05:00,15:05:00,mcb,72,
-redB_36,15:20:00,15:20:00,missb4th,73,
-redB_37,15:20:00,15:20:00,missb4th,73,
-redB_37,15:30:00,15:30:00,mcb,74,
-redB_37,15:35:00,15:35:00,16thbart,75,
-redB_38,15:35:00,15:35:00,16thbart,75,
-redB_38,15:40:00,15:40:00,mcb,76,
-redB_38,15:55:00,15:55:00,missb4th,77,
-redB_39,15:55:00,15:55:00,missb4th,77,
-redB_39,16:05:00,16:05:00,mcb,78,
-redB_39,16:10:00,16:10:00,16thbart,79,
-redB_40,16:10:00,16:10:00,16thbart,79,
-redB_40,16:15:00,16:15:00,mcb,80,
-redB_40,16:30:00,16:30:00,missb4th,81,
-redB_41,16:30:00,16:30:00,missb4th,81,
-redB_41,16:40:00,16:40:00,mcb,82,
-redB_41,16:45:00,16:45:00,16thbart,83,
-redB_42,16:45:00,16:45:00,16thbart,83,
-redB_42,16:50:00,16:50:00,mcb,84,
-redB_42,17:05:00,17:05:00,missb4th,85,
-redB_43,17:05:00,17:05:00,missb4th,85,
-redB_43,17:15:00,17:15:00,mcb,86,
-redB_43,17:20:00,17:20:00,16thbart,87,
-redB_44,17:20:00,17:20:00,16thbart,87,
-redB_44,17:25:00,17:25:00,mcb,88,
-redB_44,17:40:00,17:40:00,missb4th,89,
-redB_45,17:40:00,17:40:00,missb4th,89,
-redB_45,17:50:00,17:50:00,mcb,90,
-redB_45,17:55:00,17:55:00,16thbart,91,
-redB_46,17:55:00,17:55:00,16thbart,91,
-redB_46,18:00:00,18:00:00,mcb,92,
-redB_46,18:15:00,18:15:00,missb4th,93,
-redB_47,18:15:00,18:15:00,missb4th,93,
-redB_47,18:25:00,18:25:00,mcb,94,
-redB_47,18:30:00,18:30:00,16thbart,95,
-redB_48,18:30:00,18:30:00,16thbart,95,
-redB_48,18:35:00,18:35:00,mcb,96,
-redB_48,18:45:00,18:45:00,missb4th,97,
-redB_49,18:45:00,18:45:00,missb4th,97,
-redB_49,18:55:00,18:55:00,mcb,98,
-redB_49,19:00:00,19:00:00,16thbart,99,
-redB_50,19:00:00,19:00:00,16thbart,99,
-redB_50,19:05:00,19:05:00,mcb,100,
-redB_50,19:15:00,19:15:00,missb4th,101,
-redB_51,19:15:00,19:15:00,missb4th,101,
-redB_51,19:25:00,19:25:00,mcb,102,
-redB_51,19:30:00,19:30:00,16thbart,103,
-redB_52,19:30:00,19:30:00,16thbart,103,
-redB_52,19:35:00,19:35:00,mcb,104,
-redB_52,19:45:00,19:45:00,missb4th,105,
-tanA,6:50:00,6:50:00,library,1,
-tanA,7:05:00,7:05:00,lhts,2,
-tanA,7:10:00,7:10:00,mtzion,3,
-tanA,7:30:00,7:30:00,library,4,
-tanA,7:45:00,7:45:00,lhts,5,
-tanA,7:50:00,7:50:00,mtzion,6,
-tanA,8:10:00,8:10:00,library,7,
-tanA,8:25:00,8:25:00,lhts,8,
-tanA,8:30:00,8:30:00,mtzion,9,
-tanA,8:50:00,8:50:00,library,10,
-tanA,9:05:00,9:05:00,lhts,11,
-tanA,9:10:00,9:10:00,mtzion,12,
-tanA,9:30:00,9:30:00,library,13,
-tanA,9:45:00,9:45:00,lhts,14,
-tanA,9:50:00,9:50:00,mtzion,15,
-tanA,10:10:00,10:10:00,library,16,
-tanA,10:25:00,10:25:00,lhts,17,
-tanA,10:30:00,10:30:00,mtzion,18,
-tanA,10:50:00,10:50:00,library,19,
-tanA,11:05:00,11:05:00,lhts,20,
-tanA,11:10:00,11:10:00,mtzion,21,
-tanA,11:30:00,11:30:00,library,22,
-tanA,11:45:00,11:45:00,lhts,23,
-tanA,11:50:00,11:50:00,mtzion,24,
-tanA,12:10:00,12:10:00,library,25,
-tanA,12:25:00,12:25:00,lhts,26,
-tanA,12:30:00,12:30:00,mtzion,27,
-tanA,12:50:00,12:50:00,library,28,
-tanA,13:05:00,13:05:00,lhts,29,
-tanA,13:10:00,13:10:00,mtzion,30,
-tanA,13:30:00,13:30:00,library,31,
-tanA,13:45:00,13:45:00,lhts,32,
-tanA,13:50:00,13:50:00,mtzion,33,
-tanA,14:10:00,14:10:00,library,34,
-tanA,14:25:00,14:25:00,lhts,35,
-tanA,14:30:00,14:30:00,mtzion,36,
-tanA,14:50:00,14:50:00,library,37,
-tanA,15:05:00,15:05:00,lhts,38,
-tanA,15:10:00,15:10:00,mtzion,39,
-tanA,15:30:00,15:30:00,library,40,
-tanA,15:45:00,15:45:00,lhts,41,
-tanA,15:50:00,15:50:00,mtzion,42,
-tanA,16:10:00,16:10:00,library,43,
-tanA,16:25:00,16:25:00,lhts,44,
-tanA,16:30:00,16:30:00,mtzion,45,
-tanA,16:50:00,16:50:00,library,46,
-tanA,17:05:00,17:05:00,lhts,47,
-tanA,17:10:00,17:10:00,mtzion,48,
-tanA,17:30:00,17:30:00,library,49,
-tanA,17:45:00,17:45:00,lhts,50,
-tanA,17:50:00,17:50:00,mtzion,51,
-tanA,18:10:00,18:10:00,library,52,
-tanA,18:25:00,18:25:00,lhts,53,
-tanA,18:30:00,18:30:00,mtzion,54,
-tanA,18:50:00,18:50:00,library,55,
-tanA,19:05:00,19:05:00,lhts,56,
-tanA,19:10:00,19:10:00,mtzion,57,
-tanA,19:30:00,19:30:00,library,58,
-tanA,19:45:00,19:45:00,lhts,59,
-tanA,19:50:00,19:50:00,mtzion,60,
-tanB,7:10:00,7:10:00,library,1,
-tanB,7:25:00,7:25:00,lhts,2,
-tanB,7:30:00,7:30:00,mtzion,3,
-tanB,7:50:00,7:50:00,library,4,
-tanB,8:05:00,8:05:00,lhts,5,
-tanB,8:10:00,8:10:00,mtzion,6,
-tanB,8:30:00,8:30:00,library,7,
-tanB,8:45:00,8:45:00,lhts,8,
-tanB,8:50:00,8:50:00,mtzion,9,
-tanB,9:10:00,9:10:00,library,10,
-tanB,9:25:00,9:25:00,lhts,11,
-tanB,9:30:00,9:30:00,mtzion,12,
-tanB,9:50:00,9:50:00,library,13,
-tanB,10:05:00,10:05:00,lhts,14,
-tanB,10:10:00,10:10:00,mtzion,15,
-tanB,10:30:00,10:30:00,library,16,
-tanB,10:45:00,10:45:00,lhts,17,
-tanB,10:50:00,10:50:00,mtzion,18,
-tanB,11:10:00,11:10:00,library,19,
-tanB,11:25:00,11:25:00,lhts,20,
-tanB,11:30:00,11:30:00,mtzion,21,
-tanB,11:50:00,11:50:00,library,22,
-tanB,12:05:00,12:05:00,lhts,23,
-tanB,12:10:00,12:10:00,mtzion,24,
-tanB,12:30:00,12:30:00,library,25,
-tanB,12:45:00,12:45:00,lhts,26,
-tanB,12:50:00,12:50:00,mtzion,27,
-tanB,13:10:00,13:10:00,library,28,
-tanB,13:25:00,13:25:00,lhts,29,
-tanB,13:30:00,13:30:00,mtzion,30,
-tanB,13:50:00,13:50:00,library,31,
-tanB,14:05:00,14:05:00,lhts,32,
-tanB,14:10:00,14:10:00,mtzion,33,
-tanB,14:30:00,14:30:00,library,34,
-tanB,14:45:00,14:45:00,lhts,35,
-tanB,14:50:00,14:50:00,mtzion,36,
-tanB,15:10:00,15:10:00,library,37,
-tanB,15:25:00,15:25:00,lhts,38,
-tanB,15:30:00,15:30:00,mtzion,39,
-tanB,15:50:00,15:50:00,library,40,
-tanB,16:05:00,16:05:00,lhts,41,
-tanB,16:10:00,16:10:00,mtzion,42,
-tanB,16:30:00,16:30:00,library,43,
-tanB,16:45:00,16:45:00,lhts,44,
-tanB,16:50:00,16:50:00,mtzion,45,
-tanB,17:10:00,17:10:00,library,46,
-tanB,17:25:00,17:25:00,lhts,47,
-tanB,17:30:00,17:30:00,mtzion,48,
-tanB,17:50:00,17:50:00,library,49,
-tanB,18:05:00,18:05:00,lhts,50,
-tanB,18:10:00,18:10:00,mtzion,51,
-tanB,18:30:00,18:30:00,library,52,
-tanB,18:45:00,18:45:00,lhts,53,
-tanB,18:50:00,18:50:00,mtzion,54,
-tanB,19:10:00,19:10:00,library,55,
-tanB,19:25:00,19:25:00,lhts,56,
-tanB,19:30:00,19:30:00,mtzion,57,
-blackA,6:40:00,6:40:00,mtzion,1,
-blackA,6:45:00,6:45:00,lhts,2,
-blackA,7:05:00,7:05:00,library,3,
-blackA,7:20:00,7:20:00,mtzion,4,
-blackA,7:25:00,7:25:00,lhts,5,
-blackA,7:45:00,7:45:00,library,6,
-blackA,8:00:00,8:00:00,mtzion,7,
-blackA,8:05:00,8:05:00,lhts,8,
-blackA,8:25:00,8:25:00,library,9,
-blackA,8:40:00,8:40:00,mtzion,10,
-blackA,8:45:00,8:45:00,lhts,11,
-blackA,9:05:00,9:05:00,library,12,
-blackA,9:20:00,9:20:00,mtzion,13,
-blackA,9:25:00,9:25:00,lhts,14,
-blackA,9:45:00,9:45:00,library,15,
-blackA,10:00:00,10:00:00,mtzion,16,
-blackA,10:05:00,10:05:00,lhts,17,
-blackA,10:25:00,10:25:00,library,18,
-blackA,10:40:00,10:40:00,mtzion,19,
-blackA,10:45:00,10:45:00,lhts,20,
-blackA,11:05:00,11:05:00,library,21,
-blackA,11:20:00,11:20:00,mtzion,22,
-blackA,11:25:00,11:25:00,lhts,23,
-blackA,11:45:00,11:45:00,library,24,
-blackA,12:00:00,12:00:00,mtzion,25,
-blackA,12:05:00,12:05:00,lhts,26,
-blackA,12:25:00,12:25:00,library,27,
-blackA,12:40:00,12:40:00,mtzion,28,
-blackA,12:45:00,12:45:00,lhts,29,
-blackA,13:05:00,13:05:00,library,30,
-blackA,13:20:00,13:20:00,mtzion,31,
-blackA,13:25:00,13:25:00,lhts,32,
-blackA,13:45:00,13:45:00,library,33,
-blackA,14:00:00,14:00:00,mtzion,34,
-blackA,14:05:00,14:05:00,lhts,35,
-blackA,14:25:00,14:25:00,library,36,
-blackA,14:40:00,14:40:00,mtzion,37,
-blackA,14:45:00,14:45:00,lhts,38,
-blackA,15:05:00,15:05:00,library,39,
-blackA,15:20:00,15:20:00,mtzion,40,
-blackA,15:25:00,15:25:00,lhts,41,
-blackA,15:45:00,15:45:00,library,42,
-blackA,16:00:00,16:00:00,mtzion,43,
-blackA,16:05:00,16:05:00,lhts,44,
-blackA,16:25:00,16:25:00,library,45,
-blackA,16:40:00,16:40:00,mtzion,46,
-blackA,16:45:00,16:45:00,lhts,47,
-blackA,17:05:00,17:05:00,library,48,
-blackA,17:20:00,17:20:00,mtzion,49,
-blackA,17:25:00,17:25:00,lhts,50,
-blackA,17:45:00,17:45:00,library,51,
-blackA,18:00:00,18:00:00,mtzion,52,
-blackA,18:05:00,18:05:00,lhts,53,
-blackA,18:25:00,18:25:00,library,54,
-blackA,18:40:00,18:40:00,mtzion,55,
-blackA,18:45:00,18:45:00,lhts,56,
-blackA,19:05:00,19:05:00,library,57,
-blackA,19:20:00,19:20:00,mtzion,58,
-blackA,19:25:00,19:25:00,lhts,59,
-blackA,19:45:00,19:45:00,library,60,
-blackA,20:00:00,20:00:00,mtzion,61,
-blackA,20:05:00,20:05:00,lhts,62,
-blackB,6:55:00,6:55:00,mtzion,1,
-blackB,7:00:00,7:00:00,lhts,2,
-blackB,7:20:00,7:20:00,library,3,
-blackB,7:35:00,7:35:00,mtzion,4,
-blackB,7:40:00,7:40:00,lhts,5,
-blackB,8:00:00,8:00:00,library,6,
-blackB,8:15:00,8:15:00,mtzion,7,
-blackB,8:20:00,8:20:00,lhts,8,
-blackB,8:40:00,8:40:00,library,9,
-blackB,8:55:00,8:55:00,mtzion,10,
-blackB,9:00:00,9:00:00,lhts,11,
-blackB,9:20:00,9:20:00,library,12,
-blackB,9:35:00,9:35:00,mtzion,13,
-blackB,9:40:00,9:40:00,lhts,14,
-blackB,10:00:00,10:00:00,library,15,
-blackB,10:15:00,10:15:00,mtzion,16,
-blackB,10:20:00,10:20:00,lhts,17,
-blackB,10:40:00,10:40:00,library,18,
-blackB,10:55:00,10:55:00,mtzion,19,
-blackB,11:00:00,11:00:00,lhts,20,
-blackB,11:20:00,11:20:00,library,21,
-blackB,11:35:00,11:35:00,mtzion,22,
-blackB,11:40:00,11:40:00,lhts,23,
-blackB,12:00:00,12:00:00,library,24,
-blackB,12:15:00,12:15:00,mtzion,25,
-blackB,12:20:00,12:20:00,lhts,26,
-blackB,12:40:00,12:40:00,library,27,
-blackB,12:55:00,12:55:00,mtzion,28,
-blackB,13:00:00,13:00:00,lhts,29,
-blackB,13:20:00,13:20:00,library,30,
-blackB,13:35:00,13:35:00,mtzion,31,
-blackB,13:40:00,13:40:00,lhts,32,
-blackB,14:00:00,14:00:00,library,33,
-blackB,14:15:00,14:15:00,mtzion,34,
-blackB,14:20:00,14:20:00,lhts,35,
-blackB,14:40:00,14:40:00,library,36,
-blackB,14:55:00,14:55:00,mtzion,37,
-blackB,15:00:00,15:00:00,lhts,38,
-blackB,15:20:00,15:20:00,library,39,
-blackB,15:35:00,15:35:00,mtzion,40,
-blackB,15:40:00,15:40:00,lhts,41,
-blackB,16:00:00,16:00:00,library,42,
-blackB,16:15:00,16:15:00,mtzion,43,
-blackB,16:20:00,16:20:00,lhts,44,
-blackB,16:40:00,16:40:00,library,45,
-blackB,16:55:00,16:55:00,mtzion,46,
-blackB,17:00:00,17:00:00,lhts,47,
-blackB,17:20:00,17:20:00,library,48,
-blackB,17:35:00,17:35:00,mtzion,49,
-blackB,17:40:00,17:40:00,lhts,50,
-blackB,18:00:00,18:00:00,library,51,
-blackB,18:15:00,18:15:00,mtzion,52,
-blackB,18:20:00,18:20:00,lhts,53,
-blackB,18:40:00,18:40:00,library,54,
-blackB,18:55:00,18:55:00,mtzion,55,
-blackB,19:00:00,19:00:00,lhts,56,
-blackB,19:20:00,19:20:00,library,57,
-blackB,19:35:00,19:35:00,mtzion,58,
-blackB,19:40:00,19:40:00,lhts,59,
-purpleA,6:15:00,6:15:00,library,1,
-purpleA,6:30:00,6:30:00,3360 Geary,2,
-purpleA,6:38:00,6:38:00,mtzion,3,
-purpleA,6:45:00,6:45:00,3360 Geary,4,
-purpleA,7:00:00,7:00:00,library,5,
-purpleA,7:15:00,7:15:00,3360 Geary,6,
-purpleA,7:23:00,7:23:00,mtzion,7,
-purpleA,7:30:00,7:30:00,3360 Geary,8,
-purpleA,7:45:00,7:45:00,library,9,
-purpleA,8:00:00,8:00:00,3360 Geary,10,
-purpleA,8:08:00,8:08:00,mtzion,11,
-purpleA,8:15:00,8:15:00,3360 Geary,12,
-purpleA,8:30:00,8:30:00,library,13,
-purpleA,8:45:00,8:45:00,3360 Geary,14,
-purpleA,8:53:00,8:53:00,mtzion,15,
-purpleA,9:00:00,9:00:00,3360 Geary,16,
-purpleA,9:15:00,9:15:00,library,17,
-purpleA,9:30:00,9:30:00,3360 Geary,18,
-purpleA,9:38:00,9:38:00,mtzion,19,
-purpleA,9:45:00,9:45:00,3360 Geary,20,
-purpleA,10:00:00,10:00:00,library,21,
-purpleA,10:15:00,10:15:00,3360 Geary,22,
-purpleA,10:23:00,10:23:00,mtzion,23,
-purpleA,10:30:00,10:30:00,3360 Geary,24,
-purpleA,10:45:00,10:45:00,library,25,
-purpleA,11:00:00,11:00:00,3360 Geary,26,
-purpleA,11:08:00,11:08:00,mtzion,27,
-purpleA,11:15:00,11:15:00,3360 Geary,28,
-purpleA,11:30:00,11:30:00,library,29,
-purpleA,11:45:00,11:45:00,3360 Geary,30,
-purpleA,11:53:00,11:53:00,mtzion,31,
-purpleA,12:00:00,12:00:00,3360 Geary,32,
-purpleA,12:15:00,12:15:00,library,33,
-purpleA,12:30:00,12:30:00,3360 Geary,34,
-purpleA,12:38:00,12:38:00,mtzion,35,
-purpleA,12:45:00,12:45:00,3360 Geary,36,
-purpleA,13:00:00,13:00:00,library,37,
-purpleA,13:15:00,13:15:00,3360 Geary,38,
-purpleA,13:23:00,13:23:00,mtzion,39,
-purpleA,13:30:00,13:30:00,3360 Geary,40,
-purpleA,13:45:00,13:45:00,library,41,
-purpleA,14:00:00,14:00:00,3360 Geary,42,
-purpleA,14:08:00,14:08:00,mtzion,43,
-purpleA,14:15:00,14:15:00,3360 Geary,44,
-purpleA,14:30:00,14:30:00,library,45,
-purpleA,14:45:00,14:45:00,3360 Geary,46,
-purpleA,14:53:00,14:53:00,mtzion,47,
-purpleA,15:00:00,15:00:00,3360 Geary,48,
-purpleA,15:15:00,15:15:00,library,49,
-purpleA,15:30:00,15:30:00,3360 Geary,50,
-purpleA,15:38:00,15:38:00,mtzion,51,
-purpleA,15:45:00,15:45:00,3360 Geary,52,
-purpleA,16:00:00,16:00:00,library,53,
-purpleA,16:15:00,16:15:00,3360 Geary,54,
-purpleA,16:23:00,16:23:00,mtzion,55,
-purpleA,16:30:00,16:30:00,3360 Geary,56,
-purpleA,16:45:00,16:45:00,library,57,
-purpleA,17:00:00,17:00:00,3360 Geary,58,
-purpleA,17:08:00,17:08:00,mtzion,59,
-purpleA,17:15:00,17:15:00,3360 Geary,60,
-purpleA,17:30:00,17:30:00,library,61,
-purpleA,17:45:00,17:45:00,3360 Geary,62,
-purpleA,17:53:00,17:53:00,mtzion,63,
-purpleA,18:00:00,18:00:00,3360 Geary,64,
-purpleA,18:15:00,18:15:00,library,65,
-purpleA,18:30:00,18:30:00,3360 Geary,66,
-purpleA,18:38:00,18:38:00,mtzion,67,
-purpleA,18:45:00,18:45:00,3360 Geary,68,
-pinkA,5:15:00,5:15:00,parkezar,1,
-pinkA,5:21:00,5:21:00,ER,2,
-pinkA,5:30:00,5:30:00,parkezar,3,
-pinkA,5:36:00,5:36:00,ER,4,
-pinkA,5:45:00,5:45:00,parkezar,5,
-pinkA,5:51:00,5:51:00,ER,6,
-pinkA,6:00:00,6:00:00,parkezar,7,
-pinkA,6:06:00,6:06:00,ER,8,
-pinkA,6:15:00,6:15:00,parkezar,9,
-pinkA,6:21:00,6:21:00,ER,10,
-pinkA,6:30:00,6:30:00,parkezar,11,
-pinkA,6:36:00,6:36:00,ER,12,
-pinkA,6:45:00,6:45:00,parkezar,13,
-pinkA,6:51:00,6:51:00,ER,14,
-pinkA,7:00:00,7:00:00,parkezar,15,
-pinkA,7:06:00,7:06:00,ER,16,
-pinkA,7:15:00,7:15:00,parkezar,17,
-pinkA,7:21:00,7:21:00,ER,18,
-pinkA,7:30:00,7:30:00,parkezar,19,
-pinkA,7:36:00,7:36:00,ER,20,
-pinkA,7:45:00,7:45:00,parkezar,21,
-pinkA,7:51:00,7:51:00,ER,22,
-pinkA,8:00:00,8:00:00,parkezar,23,
-pinkA,8:06:00,8:06:00,ER,24,
-pinkA,8:15:00,8:15:00,parkezar,25,
-pinkA,8:21:00,8:21:00,ER,26,
-pinkA,8:30:00,8:30:00,parkezar,27,
-pinkA,8:36:00,8:36:00,ER,28,
-pinkA,8:45:00,8:45:00,parkezar,29,
-pinkA,8:51:00,8:51:00,ER,30,
-pinkA,9:00:00,9:00:00,parkezar,31,
-pinkA,9:06:00,9:06:00,ER,32,
-greenA,6:25:00,6:25:00,missb4th,1,to China Basin
-greenA,6:32:00,6:32:00,chinbasn,2,to 654 Minnesota St.
-greenA,6:40:00,6:40:00,missb4we,3,to 654 Minnesota St.
-greenA,6:46:00,6:46:00,654minn,4,to China Basin
-greenA,6:55:00,6:55:00,missb4th,5,to China Basin
-greenA,7:02:00,7:02:00,chinbasn,6,to 654 Minnesota St.
-greenA,7:10:00,7:10:00,missb4we,7,to 654 Minnesota St.
-greenA,7:16:00,7:16:00,654minn,8,to China Basin
-greenA,7:25:00,7:25:00,missb4th,9,to China Basin
-greenA,7:32:00,7:32:00,chinbasn,10,to 654 Minnesota St.
-greenA,7:40:00,7:40:00,missb4we,11,to 654 Minnesota St.
-greenA,7:46:00,7:46:00,654minn,12,to China Basin
-greenA,7:55:00,7:55:00,missb4th,13,to China Basin
-greenA,8:02:00,8:02:00,chinbasn,14,to 654 Minnesota St.
-greenA,8:10:00,8:10:00,missb4we,15,to 654 Minnesota St.
-greenA,8:16:00,8:16:00,654minn,16,to China Basin
-greenA,8:25:00,8:25:00,missb4th,17,to China Basin
-greenA,8:32:00,8:32:00,chinbasn,18,to 654 Minnesota St.
-greenA,8:40:00,8:40:00,missb4we,19,to 654 Minnesota St.
-greenA,8:46:00,8:46:00,654minn,20,to China Basin
-greenA,8:55:00,8:55:00,missb4th,21,to China Basin
-greenA,9:02:00,9:02:00,chinbasn,22,to 654 Minnesota St.
-greenA,9:10:00,9:10:00,missb4we,23,to 654 Minnesota St.
-greenA,9:16:00,9:16:00,654minn,24,to China Basin
-greenA,9:25:00,9:25:00,missb4th,25,to China Basin
-greenA,9:32:00,9:32:00,chinbasn,26,to 654 Minnesota St.
-greenA,9:40:00,9:40:00,missb4we,27,to 654 Minnesota St.
-greenA,9:46:00,9:46:00,654minn,28,to China Basin
-greenA,9:55:00,9:55:00,missb4th,29,to China Basin
-greenA,10:02:00,10:02:00,chinbasn,30,to 654 Minnesota St.
-greenA,10:10:00,10:10:00,missb4we,31,to 654 Minnesota St.
-greenA,10:16:00,10:16:00,654minn,32,to China Basin
-greenA,10:25:00,10:25:00,missb4th,33,to China Basin
-greenA,10:32:00,10:32:00,chinbasn,34,to 654 Minnesota St.
-greenA,10:40:00,10:40:00,missb4we,35,to 654 Minnesota St.
-greenA,10:46:00,10:46:00,654minn,36,to China Basin
-greenA,10:55:00,10:55:00,missb4th,37,to China Basin
-greenA,11:02:00,11:02:00,chinbasn,38,to 654 Minnesota St.
-greenA,11:10:00,11:10:00,missb4we,39,to 654 Minnesota St.
-greenA,11:16:00,11:16:00,654minn,40,to China Basin
-greenA,11:25:00,11:25:00,missb4th,41,to China Basin
-greenA,11:32:00,11:32:00,chinbasn,42,to 654 Minnesota St.
-greenA,11:40:00,11:40:00,missb4we,43,to 654 Minnesota St.
-greenA,11:46:00,11:46:00,654minn,44,to China Basin
-greenA,11:55:00,11:55:00,missb4th,45,to China Basin
-greenA,12:02:00,12:02:00,chinbasn,46,to 654 Minnesota St.
-greenA,12:10:00,12:10:00,missb4we,47,to 654 Minnesota St.
-greenA,12:16:00,12:16:00,654minn,48,to China Basin
-greenA,12:25:00,12:25:00,missb4th,49,to China Basin
-greenA,12:32:00,12:32:00,chinbasn,50,to 654 Minnesota St.
-greenA,12:40:00,12:40:00,missb4we,51,to 654 Minnesota St.
-greenA,12:46:00,12:46:00,654minn,52,to China Basin
-greenA,12:55:00,12:55:00,missb4th,53,to China Basin
-greenA,13:02:00,13:02:00,chinbasn,54,to 654 Minnesota St.
-greenA,13:10:00,13:10:00,missb4we,55,to 654 Minnesota St.
-greenA,13:16:00,13:16:00,654minn,56,to China Basin
-greenA,13:25:00,13:25:00,missb4th,57,to China Basin
-greenA,13:32:00,13:32:00,chinbasn,58,to 654 Minnesota St.
-greenA,13:40:00,13:40:00,missb4we,59,to 654 Minnesota St.
-greenA,13:46:00,13:46:00,654minn,60,to China Basin
-greenA,13:55:00,13:55:00,missb4th,61,to China Basin
-greenA,14:02:00,14:02:00,chinbasn,62,to 654 Minnesota St.
-greenA,14:10:00,14:10:00,missb4we,63,to 654 Minnesota St.
-greenA,14:16:00,14:16:00,654minn,64,to China Basin
-greenA,14:25:00,14:25:00,missb4th,65,to China Basin
-greenA,14:32:00,14:32:00,chinbasn,66,to 654 Minnesota St.
-greenA,14:40:00,14:40:00,missb4we,67,to 654 Minnesota St.
-greenA,14:46:00,14:46:00,654minn,68,to China Basin
-greenA,14:55:00,14:55:00,missb4th,69,to China Basin
-greenA,15:02:00,15:02:00,chinbasn,70,to 654 Minnesota St.
-greenA,15:10:00,15:10:00,missb4we,71,to 654 Minnesota St.
-greenA,15:16:00,15:16:00,654minn,72,to China Basin
-greenA,15:25:00,15:25:00,missb4th,73,to China Basin
-greenA,15:32:00,15:32:00,chinbasn,74,to 654 Minnesota St.
-greenA,15:40:00,15:40:00,missb4we,75,to 654 Minnesota St.
-greenA,15:46:00,15:46:00,654minn,76,to China Basin
-greenA,15:55:00,15:55:00,missb4th,77,to China Basin
-greenA,16:02:00,16:02:00,chinbasn,78,to 654 Minnesota St.
-greenA,16:10:00,16:10:00,missb4we,79,to 654 Minnesota St.
-greenA,16:16:00,16:16:00,654minn,80,to China Basin
-greenA,16:25:00,16:25:00,missb4th,81,to China Basin
-greenA,16:32:00,16:32:00,chinbasn,82,to 654 Minnesota St.
-greenA,16:40:00,16:40:00,missb4we,83,to 654 Minnesota St.
-greenA,16:46:00,16:46:00,654minn,84,to China Basin
-greenA,16:55:00,16:55:00,missb4th,85,to China Basin
-greenA,17:02:00,17:02:00,chinbasn,86,to 654 Minnesota St.
-greenA,17:10:00,17:10:00,missb4we,87,to 654 Minnesota St.
-greenA,17:16:00,17:16:00,654minn,88,to China Basin
-greenA,17:25:00,17:25:00,missb4th,89,to China Basin
-greenA,17:32:00,17:32:00,chinbasn,90,to 654 Minnesota St.
-greenA,17:40:00,17:40:00,missb4we,91,to 654 Minnesota St.
-greenA,17:46:00,17:46:00,654minn,92,to China Basin
-greenA,17:55:00,17:55:00,missb4th,93,to China Basin
-greenA,18:02:00,18:02:00,chinbasn,94,to 654 Minnesota St.
-greenA,18:10:00,18:10:00,missb4we,95,to 654 Minnesota St.
-greenA,18:16:00,18:16:00,654minn,96,to China Basin
-greenA,18:25:00,18:25:00,missb4th,97,to China Basin
-greenA,18:32:00,18:32:00,chinbasn,98,to Mission Bay
-greenA,18:40:00,18:40:00,missb4we,99,to Mission Bay
-greenB,6:40:00,6:40:00,missb4th,1,to China Basin
-greenB,6:47:00,6:47:00,chinbasn,2,
-greenB,6:55:00,6:55:00,missb4we,3,to 654 Minnesota St.
-greenB,7:01:00,7:01:00,654minn,4,
-greenB,7:10:00,7:10:00,missb4th,5,to China Basin
-greenB,7:17:00,7:17:00,chinbasn,6,
-greenB,7:25:00,7:25:00,missb4we,7,to 654 Minnesota St.
-greenB,7:31:00,7:31:00,654minn,8,
-greenB,7:40:00,7:40:00,missb4th,9,to China Basin
-greenB,7:47:00,7:47:00,chinbasn,10,
-greenB,7:55:00,7:55:00,missb4we,11,to 654 Minnesota St.
-greenB,8:01:00,8:01:00,654minn,12,
-greenB,8:10:00,8:10:00,missb4th,13,to China Basin
-greenB,8:17:00,8:17:00,chinbasn,14,
-greenB,8:25:00,8:25:00,missb4we,15,to 654 Minnesota St.
-greenB,8:31:00,8:31:00,654minn,16,
-greenB,8:40:00,8:40:00,missb4th,17,to China Basin
-greenB,8:47:00,8:47:00,chinbasn,18,
-greenB,8:55:00,8:55:00,missb4we,19,to 654 Minnesota St.
-greenB,9:01:00,9:01:00,654minn,20,
-greenB,9:10:00,9:10:00,missb4th,21,to China Basin
-greenB,9:17:00,9:17:00,chinbasn,22,
-greenB,9:25:00,9:25:00,missb4we,23,to 654 Minnesota St.
-greenB,9:31:00,9:31:00,654minn,24,
-greenB,9:40:00,9:40:00,missb4th,25,to China Basin
-greenB,9:47:00,9:47:00,chinbasn,26,
-greenB,9:55:00,9:55:00,missb4we,27,to 654 Minnesota St.
-greenB,10:01:00,10:01:00,654minn,28,
-greenB,10:10:00,10:10:00,missb4th,29,to China Basin
-greenB,10:17:00,10:17:00,chinbasn,30,
-greenB,10:25:00,10:25:00,missb4we,31,to 654 Minnesota St.
-greenB,10:31:00,10:31:00,654minn,32,
-greenB,10:40:00,10:40:00,missb4th,33,to China Basin
-greenB,10:47:00,10:47:00,chinbasn,34,
-greenB,10:55:00,10:55:00,missb4we,35,to 654 Minnesota St.
-greenB,11:01:00,11:01:00,654minn,36,
-greenB,11:10:00,11:10:00,missb4th,37,to China Basin
-greenB,11:17:00,11:17:00,chinbasn,38,
-greenB,11:25:00,11:25:00,missb4we,39,to 654 Minnesota St.
-greenB,11:31:00,11:31:00,654minn,40,
-greenB,11:40:00,11:40:00,missb4th,41,to China Basin
-greenB,11:47:00,11:47:00,chinbasn,42,
-greenB,11:55:00,11:55:00,missb4we,43,to 654 Minnesota St.
-greenB,12:01:00,12:01:00,654minn,44,
-greenB,12:10:00,12:10:00,missb4th,45,to China Basin
-greenB,12:17:00,12:17:00,chinbasn,46,
-greenB,12:25:00,12:25:00,missb4we,47,to 654 Minnesota St.
-greenB,12:31:00,12:31:00,654minn,48,
-greenB,12:40:00,12:40:00,missb4th,49,to China Basin
-greenB,12:47:00,12:47:00,chinbasn,50,
-greenB,12:55:00,12:55:00,missb4we,51,to 654 Minnesota St.
-greenB,13:01:00,13:01:00,654minn,52,
-greenB,13:10:00,13:10:00,missb4th,53,to China Basin
-greenB,13:17:00,13:17:00,chinbasn,54,
-greenB,13:25:00,13:25:00,missb4we,55,to 654 Minnesota St.
-greenB,13:31:00,13:31:00,654minn,56,
-greenB,13:40:00,13:40:00,missb4th,57,to China Basin
-greenB,13:47:00,13:47:00,chinbasn,58,
-greenB,13:55:00,13:55:00,missb4we,59,to 654 Minnesota St.
-greenB,14:01:00,14:01:00,654minn,60,
-greenB,14:10:00,14:10:00,missb4th,61,to China Basin
-greenB,14:17:00,14:17:00,chinbasn,62,
-greenB,14:25:00,14:25:00,missb4we,63,to 654 Minnesota St.
-greenB,14:31:00,14:31:00,654minn,64,
-greenB,14:40:00,14:40:00,missb4th,65,to China Basin
-greenB,14:47:00,14:47:00,chinbasn,66,
-greenB,14:55:00,14:55:00,missb4we,67,to 654 Minnesota St.
-greenB,15:01:00,15:01:00,654minn,68,
-greenB,15:10:00,15:10:00,missb4th,69,to China Basin
-greenB,15:17:00,15:17:00,chinbasn,70,
-greenB,15:25:00,15:25:00,missb4we,71,to 654 Minnesota St.
-greenB,15:31:00,15:31:00,654minn,72,
-greenB,15:40:00,15:40:00,missb4th,73,to China Basin
-greenB,15:47:00,15:47:00,chinbasn,74,
-greenB,15:55:00,15:55:00,missb4we,75,to 654 Minnesota St.
-greenB,16:01:00,16:01:00,654minn,76,
-greenB,16:10:00,16:10:00,missb4th,77,to China Basin
-greenB,16:17:00,16:17:00,chinbasn,78,
-greenB,16:25:00,16:25:00,missb4we,79,to 654 Minnesota St.
-greenB,16:31:00,16:31:00,654minn,80,
-greenB,16:40:00,16:40:00,missb4th,81,to China Basin
-greenB,16:47:00,16:47:00,chinbasn,82,
-greenB,16:55:00,16:55:00,missb4we,83,to 654 Minnesota St.
-greenB,17:01:00,17:01:00,654minn,84,
-greenB,17:10:00,17:10:00,missb4th,85,to China Basin
-greenB,17:17:00,17:17:00,chinbasn,86,
-greenB,17:25:00,17:25:00,missb4we,87,to 654 Minnesota St.
-greenB,17:31:00,17:31:00,654minn,88,
-greenB,17:40:00,17:40:00,missb4th,89,to China Basin
-greenB,17:47:00,17:47:00,chinbasn,90,
-greenB,17:55:00,17:55:00,missb4we,91,to 654 Minnesota St.
-greenB,18:01:00,18:01:00,654minn,92,
-greenB,18:10:00,18:10:00,missb4th,93,to China Basin
-greenB,18:17:00,18:17:00,chinbasn,94,
-greenB,18:25:00,18:25:00,missb4we,95,to 654 Minnesota St.
-greenB,18:31:00,18:31:00,654minn,96,
-greenB,18:40:00,18:40:00,missb4th,97,to China Basin
-greenB,18:47:00,18:47:00,chinbasn,98,
-greenB,18:55:00,18:55:00,missb4we,99,to 654 Minnesota St.
-greenB,19:01:00,19:01:00,654minn,100,
-bronzeA,6:45:00,6:45:00,parlppi,1,
-bronzeA,6:50:00,6:50:00,75behr,2,
-bronzeA,6:54:00,6:54:00,surgedown,3,
-bronzeA,6:55:00,6:55:00,paracc,4,
-bronzeA,7:07:00,7:07:00,parlppi,5,
-bronzeA,7:12:00,7:12:00,75behr,6,
-bronzeA,7:16:00,7:16:00,surgedown,7,
-bronzeA,7:17:00,7:17:00,paracc,8,
-bronzeA,7:26:00,7:26:00,library,9,
-bronzeA,7:34:00,7:34:00,parlppi,10,
-bronzeA,7:39:00,7:39:00,75behr,11,
-bronzeA,7:43:00,7:43:00,surgedown,12,
-bronzeA,7:44:00,7:44:00,paracc,13,
-bronzeA,7:53:00,7:53:00,library,14,
-bronzeA,8:01:00,8:01:00,parlppi,15,
-bronzeA,8:06:00,8:06:00,75behr,16,
-bronzeA,8:10:00,8:10:00,surgedown,17,
-bronzeA,8:11:00,8:11:00,paracc,18,
-bronzeA,8:23:00,8:23:00,parlppi,19,
-bronzeA,8:28:00,8:28:00,75behr,20,
-bronzeA,8:32:00,8:32:00,surgedown,21,
-bronzeA,8:33:00,8:33:00,paracc,22,
-bronzeA,8:45:00,8:45:00,parlppi,23,
-bronzeA,8:50:00,8:50:00,75behr,24,
-bronzeA,8:54:00,8:54:00,surgedown,25,
-bronzeA,8:55:00,8:55:00,paracc,26,
-bronzeA,9:04:00,9:04:00,library,27,
-bronzeA,9:12:00,9:12:00,parlppi,28,
-bronzeA,9:17:00,9:17:00,75behr,29,
-bronzeA,9:21:00,9:21:00,surgedown,30,
-bronzeA,9:22:00,9:22:00,paracc,31,
-bronzeA,9:31:00,9:31:00,library,32,
-bronzeA,9:39:00,9:39:00,parlppi,33,
-bronzeA,9:44:00,9:44:00,75behr,34,
-bronzeA,9:48:00,9:48:00,surgedown,35,
-bronzeA,9:49:00,9:49:00,paracc,36,
-bronzeA,9:58:00,9:58:00,library,37,
-bronzeA,10:06:00,10:06:00,parlppi,38,
-bronzeA,10:11:00,10:11:00,75behr,39,
-bronzeA,10:15:00,10:15:00,surgedown,40,
-bronzeA,10:16:00,10:16:00,paracc,41,
-bronzeA,10:25:00,10:25:00,library,42,
-bronzeA,10:33:00,10:33:00,parlppi,43,
-bronzeA,10:38:00,10:38:00,75behr,44,
-bronzeA,10:42:00,10:42:00,surgedown,45,
-bronzeA,10:43:00,10:43:00,paracc,46,
-bronzeA,10:52:00,10:52:00,library,47,
-bronzeB,7:00:00,7:00:00,parlppi,1,
-bronzeB,7:05:00,7:05:00,75behr,2,
-bronzeB,7:09:00,7:09:00,surgedown,3,
-bronzeB,7:10:00,7:10:00,paracc,4,
-bronzeB,7:22:00,7:22:00,parlppi,5,
-bronzeB,7:27:00,7:27:00,75behr,6,
-bronzeB,7:31:00,7:31:00,surgedown,7,
-bronzeB,7:32:00,7:32:00,paracc,8,
-bronzeB,7:44:00,7:44:00,parlppi,9,
-bronzeB,7:49:00,7:49:00,75behr,10,
-bronzeB,7:53:00,7:53:00,surgedown,11,
-bronzeB,7:54:00,7:54:00,paracc,12,
-bronzeB,8:03:00,8:03:00,library,13,
-bronzeB,8:11:00,8:11:00,parlppi,14,
-bronzeB,8:16:00,8:16:00,75behr,15,
-bronzeB,8:20:00,8:20:00,surgedown,16,
-bronzeB,8:21:00,8:21:00,paracc,17,
-bronzeB,8:30:00,8:30:00,library,18,
-bronzeB,8:38:00,8:38:00,parlppi,19,
-bronzeB,8:43:00,8:43:00,75behr,20,
-bronzeB,8:47:00,8:47:00,surgedown,21,
-bronzeB,8:48:00,8:48:00,paracc,22,
-bronzeB,8:57:00,8:57:00,library,23,
-bronzeB,9:05:00,9:05:00,parlppi,24,
-bronzeB,9:10:00,9:10:00,75behr,25,
-bronzeB,9:14:00,9:14:00,surgedown,26,
-bronzeB,9:15:00,9:15:00,paracc,27,
-bronzeB,9:27:00,9:27:00,parlppi,28,
-bronzeB,9:32:00,9:32:00,75behr,29,
-bronzeB,9:36:00,9:36:00,surgedown,30,
-bronzeB,9:37:00,9:37:00,paracc,31,
-bronzeB,9:46:00,9:46:00,library,32,
-bronzeB,9:54:00,9:54:00,parlppi,33,
-bronzeB,9:59:00,9:59:00,75behr,34,
-bronzeB,10:03:00,10:03:00,surgedown,35,
-bronzeB,10:04:00,10:04:00,paracc,36,
-bronzeB,10:13:00,10:13:00,library,37,
-bronzeB,10:21:00,10:21:00,parlppi,38,
-bronzeB,10:26:00,10:26:00,75behr,39,
-bronzeB,10:30:00,10:30:00,surgedown,40,
-bronzeB,10:31:00,10:31:00,paracc,41,
-bronzeB,10:40:00,10:40:00,library,42,
-bronzeB,10:48:00,10:48:00,parlppi,43,
-bronzeB,10:53:00,10:53:00,75behr,44,
-bronzeB,10:57:00,10:57:00,surgedown,45,
-bronzeB,10:58:00,10:58:00,paracc,46,
-bronzeB,11:07:00,11:07:00,library,47,
-bronzeB,11:15:00,11:15:00,parlppi,48,
-bronzeB,11:20:00,11:20:00,75behr,49,
-bronzeB,11:24:00,11:24:00,surgedown,50,
-bronzeB,11:25:00,11:25:00,paracc,51,
-bronzeB,11:34:00,11:34:00,library,52,
-bronzeB,11:42:00,11:42:00,parlppi,53,
-bronzeB,11:47:00,11:47:00,75behr,54,
-bronzeB,11:51:00,11:51:00,surgedown,55,
-bronzeB,11:52:00,11:52:00,paracc,56,
-bronzeB,12:01:00,12:01:00,library,57,
-bronzeB,12:09:00,12:09:00,parlppi,58,
-bronzeB,12:14:00,12:14:00,75behr,59,
-bronzeB,12:18:00,12:18:00,surgedown,60,
-bronzeB,12:19:00,12:19:00,paracc,61,
-bronzeB,12:28:00,12:28:00,library,62,
-bronzeB,12:36:00,12:36:00,parlppi,63,
-bronzeB,12:41:00,12:41:00,75behr,64,
-bronzeB,12:45:00,12:45:00,surgedown,65,
-bronzeB,12:46:00,12:46:00,paracc,66,
-bronzeB,12:55:00,12:55:00,library,67,
-bronzeB,13:03:00,13:03:00,parlppi,68,
-bronzeB,13:08:00,13:08:00,75behr,69,
-bronzeB,13:12:00,13:12:00,surgedown,70,
-bronzeB,13:13:00,13:13:00,paracc,71,
-bronzeB,13:22:00,13:22:00,library,72,
-bronzeB,13:30:00,13:30:00,parlppi,73,
-bronzeB,13:35:00,13:35:00,75behr,74,
-bronzeB,13:39:00,13:39:00,surgedown,75,
-bronzeB,13:40:00,13:40:00,paracc,76,
-bronzeB,13:49:00,13:49:00,library,77,
-bronzeB,13:57:00,13:57:00,parlppi,78,
-bronzeB,14:02:00,14:02:00,75behr,79,
-bronzeB,14:06:00,14:06:00,surgedown,80,
-bronzeB,14:07:00,14:07:00,paracc,81,
-bronzeB,14:16:00,14:16:00,library,82,
-bronzeB,14:24:00,14:24:00,parlppi,83,
-bronzeB,14:29:00,14:29:00,75behr,84,
-bronzeB,14:33:00,14:33:00,surgedown,85,
-bronzeB,14:34:00,14:34:00,paracc,86,
-bronzeB,14:43:00,14:43:00,library,87,
-bronzeB,14:51:00,14:51:00,parlppi,88,
-bronzeB,14:56:00,14:56:00,75behr,89,
-bronzeB,15:00:00,15:00:00,surgedown,90,
-bronzeB,15:01:00,15:01:00,paracc,91,
-bronzeB,15:10:00,15:10:00,library,92,
-bronzeB,15:18:00,15:18:00,parlppi,93,
-bronzeB,15:23:00,15:23:00,75behr,94,
-bronzeB,15:27:00,15:27:00,surgedown,95,
-bronzeB,15:28:00,15:28:00,paracc,96,
-bronzeB,15:37:00,15:37:00,library,97,
-bronzeB,15:45:00,15:45:00,parlppi,98,
-bronzeB,15:50:00,15:50:00,75behr,99,
-bronzeB,15:54:00,15:54:00,surgedown,100,
-bronzeB,15:55:00,15:55:00,paracc,101,
-bronzeB,16:04:00,16:04:00,library,102,
-bronzeB,16:12:00,16:12:00,parlppi,103,
-bronzeB,16:17:00,16:17:00,75behr,104,
-bronzeB,16:21:00,16:21:00,surgedown,105,
-bronzeB,16:22:00,16:22:00,paracc,106,
-bronzeB,16:31:00,16:31:00,library,107,
-bronzeB,16:39:00,16:39:00,parlppi,108,
-bronzeB,16:44:00,16:44:00,75behr,109,
-bronzeB,16:48:00,16:48:00,surgedown,110,
-bronzeB,16:49:00,16:49:00,paracc,111,
-bronzeB,16:58:00,16:58:00,library,112,
-bronzeB,17:06:00,17:06:00,parlppi,113,
-bronzeB,17:11:00,17:11:00,75behr,114,
-bronzeB,17:15:00,17:15:00,surgedown,115,
-bronzeB,17:16:00,17:16:00,paracc,116,
-bronzeB,17:25:00,17:25:00,library,117,
-bronzeB,17:33:00,17:33:00,parlppi,118,
-bronzeB,17:38:00,17:38:00,75behr,119,
-bronzeB,17:42:00,17:42:00,surgedown,120,
-bronzeB,17:43:00,17:43:00,paracc,121,
-bronzeB,17:55:00,17:55:00,parlppi,122,
-bronzeB,18:00:00,18:00:00,75behr,123,
-bronzeB,18:04:00,18:04:00,surgedown,124,
-bronzeB,18:05:00,18:05:00,paracc,125,
-bronzeB,18:17:00,18:17:00,parlppi,126,
-bronzeB,18:22:00,18:22:00,75behr,127,
-bronzeB,18:26:00,18:26:00,surgedown,128,
-bronzeB,18:27:00,18:27:00,paracc,129,
-bronzeB,18:36:00,18:36:00,library,130,
-bronzeC,15:00:00,15:00:00,parlppi,1,
-bronzeC,15:05:00,15:05:00,75behr,2,
-bronzeC,15:09:00,15:09:00,surgedown,3,
-bronzeC,15:10:00,15:10:00,paracc,4,
-bronzeC,15:19:00,15:19:00,library,5,
-bronzeC,15:27:00,15:27:00,parlppi,6,
-bronzeC,15:32:00,15:32:00,75behr,7,
-bronzeC,15:36:00,15:36:00,surgedown,8,
-bronzeC,15:37:00,15:37:00,paracc,9,
-bronzeC,15:46:00,15:46:00,library,10,
-bronzeC,15:54:00,15:54:00,parlppi,11,
-bronzeC,15:59:00,15:59:00,75behr,12,
-bronzeC,16:03:00,16:03:00,surgedown,13,
-bronzeC,16:04:00,16:04:00,paracc,14,
-bronzeC,16:13:00,16:13:00,library,15,
-bronzeC,16:21:00,16:21:00,parlppi,16,
-bronzeC,16:26:00,16:26:00,75behr,17,
-bronzeC,16:30:00,16:30:00,surgedown,18,
-bronzeC,16:31:00,16:31:00,paracc,19,
-bronzeC,16:40:00,16:40:00,library,20,
-bronzeC,16:48:00,16:48:00,parlppi,21,
-bronzeC,16:53:00,16:53:00,75behr,22,
-bronzeC,16:57:00,16:57:00,surgedown,23,
-bronzeC,16:58:00,16:58:00,paracc,24,
-bronzeC,17:07:00,17:07:00,library,25,
-bronzeC,17:15:00,17:15:00,parlppi,26,
-bronzeC,17:20:00,17:20:00,75behr,27,
-bronzeC,17:24:00,17:24:00,surgedown,28,
-bronzeC,17:25:00,17:25:00,paracc,29,
-bronzeC,17:34:00,17:34:00,library,30,
-yellowA,6:05:00,6:05:00,16thbart,1,
-yellowA,6:12:00,6:12:00,mcb,2,
-yellowA,6:15:00,6:15:00,23harrsb_ob,3,
-yellowA,6:22:00,6:22:00,sfgh,4,
-yellowA,6:29:00,6:29:00,23harrnb_ib,5,
-yellowA,6:32:00,6:32:00,R. Lot,6,
-yellowA,6:35:00,6:35:00,16thbart,7,
-yellowA,6:42:00,6:42:00,mcb,8,
-yellowA,6:45:00,6:45:00,23harrsb_ob,9,
-yellowA,6:52:00,6:52:00,sfgh,10,
-yellowA,6:59:00,6:59:00,23harrnb_ib,11,
-yellowA,7:02:00,7:02:00,R. Lot,12,
-yellowA,7:05:00,7:05:00,16thbart,13,
-yellowA,7:12:00,7:12:00,mcb,14,
-yellowA,7:15:00,7:15:00,23harrsb_ob,15,
-yellowA,7:22:00,7:22:00,sfgh,16,
-yellowA,7:29:00,7:29:00,23harrnb_ib,17,
-yellowA,7:32:00,7:32:00,R. Lot,18,
-yellowA,7:35:00,7:35:00,16thbart,19,
-yellowA,7:42:00,7:42:00,mcb,20,
-yellowA,7:45:00,7:45:00,23harrsb_ob,21,
-yellowA,7:52:00,7:52:00,sfgh,22,
-yellowA,7:59:00,7:59:00,23harrnb_ib,23,
-yellowA,8:02:00,8:02:00,R. Lot,24,
-yellowA,8:05:00,8:05:00,16thbart,25,
-yellowA,8:12:00,8:12:00,mcb,26,
-yellowA,8:15:00,8:15:00,23harrsb_ob,27,
-yellowA,8:22:00,8:22:00,sfgh,28,
-yellowA,8:29:00,8:29:00,23harrnb_ib,29,
-yellowA,8:32:00,8:32:00,R. Lot,30,
-yellowA,8:35:00,8:35:00,16thbart,31,
-yellowA,8:42:00,8:42:00,mcb,32,
-yellowA,8:45:00,8:45:00,23harrsb_ob,33,
-yellowA,8:52:00,8:52:00,sfgh,34,
-yellowA,8:59:00,8:59:00,23harrnb_ib,35,
-yellowA,9:02:00,9:02:00,R. Lot,36,
-yellowA,9:05:00,9:05:00,16thbart,37,
-yellowA,9:12:00,9:12:00,mcb,38,
-yellowA,9:15:00,9:15:00,23harrsb_ob,39,
-yellowA,9:22:00,9:22:00,sfgh,40,
-yellowA,9:29:00,9:29:00,23harrnb_ib,41,
-yellowA,9:32:00,9:32:00,R. Lot,42,
-yellowA,9:35:00,9:35:00,mcb,43,
-yellowA,9:38:00,9:38:00,23harrsb_ob,44,
-yellowA,9:45:00,9:45:00,sfgh,45,
-yellowA,9:52:00,9:52:00,23harrnb_ib,46,
-yellowA,9:55:00,9:55:00,mcb,47,
-yellowA,9:58:00,9:58:00,23harrsb_ob,48,
-yellowA,10:05:00,10:05:00,sfgh,49,
-yellowA,10:12:00,10:12:00,23harrnb_ib,50,
-yellowA,10:15:00,10:15:00,mcb,51,
-yellowA,10:18:00,10:18:00,23harrsb_ob,52,
-yellowA,10:25:00,10:25:00,sfgh,53,
-yellowA,10:32:00,10:32:00,23harrnb_ib,54,
-yellowA,10:35:00,10:35:00,mcb,55,
-yellowA,10:38:00,10:38:00,23harrsb_ob,56,
-yellowA,10:45:00,10:45:00,sfgh,57,
-yellowA,10:52:00,10:52:00,23harrnb_ib,58,
-yellowA,10:55:00,10:55:00,mcb,59,
-yellowA,10:58:00,10:58:00,23harrsb_ob,60,
-yellowA,11:05:00,11:05:00,sfgh,61,
-yellowA,11:12:00,11:12:00,23harrnb_ib,62,
-yellowA,11:15:00,11:15:00,mcb,63,
-yellowA,11:18:00,11:18:00,23harrsb_ob,64,
-yellowA,11:25:00,11:25:00,sfgh,65,
-yellowA,11:32:00,11:32:00,23harrnb_ib,66,
-yellowA,11:35:00,11:35:00,mcb,67,
-yellowA,11:38:00,11:38:00,23harrsb_ob,68,
-yellowA,11:45:00,11:45:00,sfgh,69,
-yellowA,11:52:00,11:52:00,23harrnb_ib,70,
-yellowA,11:55:00,11:55:00,mcb,71,
-yellowA,11:58:00,11:58:00,23harrsb_ob,72,
-yellowA,12:05:00,12:05:00,sfgh,73,
-yellowA,12:12:00,12:12:00,23harrnb_ib,74,
-yellowA,12:15:00,12:15:00,mcb,75,
-yellowA,12:18:00,12:18:00,23harrsb_ob,76,
-yellowA,12:25:00,12:25:00,sfgh,77,
-yellowA,12:32:00,12:32:00,23harrnb_ib,78,
-yellowA,12:35:00,12:35:00,mcb,79,
-yellowA,12:38:00,12:38:00,23harrsb_ob,80,
-yellowA,12:45:00,12:45:00,sfgh,81,
-yellowA,12:52:00,12:52:00,23harrnb_ib,82,
-yellowA,12:55:00,12:55:00,mcb,83,
-yellowA,12:58:00,12:58:00,23harrsb_ob,84,
-yellowA,13:05:00,13:05:00,sfgh,85,
-yellowA,13:12:00,13:12:00,23harrnb_ib,86,
-yellowA,13:15:00,13:15:00,mcb,87,
-yellowA,13:18:00,13:18:00,23harrsb_ob,88,
-yellowA,13:25:00,13:25:00,sfgh,89,
-yellowA,13:32:00,13:32:00,23harrnb_ib,90,
-yellowA,13:32:00,13:32:00,23harrnb_ib,91,
-yellowA,13:35:00,13:35:00,mcb,92,
-yellowA,13:38:00,13:38:00,23harrsb_ob,93,
-yellowA,13:45:00,13:45:00,sfgh,94,
-yellowA,13:52:00,13:52:00,23harrnb_ib,95,
-yellowA,13:55:00,13:55:00,mcb,96,
-yellowA,13:58:00,13:58:00,23harrsb_ob,97,
-yellowA,14:05:00,14:05:00,sfgh,98,
-yellowA,14:12:00,14:12:00,23harrnb_ib,99,
-yellowA,14:15:00,14:15:00,mcb,100,
-yellowA,14:18:00,14:18:00,23harrsb_ob,101,
-yellowA,14:25:00,14:25:00,sfgh,102,
-yellowA,14:32:00,14:32:00,23harrnb_ib,103,
-yellowA,14:35:00,14:35:00,mcb,104,
-yellowA,14:38:00,14:38:00,23harrsb_ob,105,
-yellowA,14:45:00,14:45:00,sfgh,106,
-yellowA,14:52:00,14:52:00,23harrnb_ib,107,
-yellowA,14:55:00,14:55:00,mcb,108,
-yellowA,14:58:00,14:58:00,23harrsb_ob,109,
-yellowA,15:05:00,15:05:00,sfgh,110,
-yellowA,15:12:00,15:12:00,23harrnb_ib,111,
-yellowA,15:15:00,15:15:00,mcb,112,
-yellowA,15:18:00,15:18:00,23harrsb_ob,113,
-yellowA,15:25:00,15:25:00,sfgh,114,
-yellowA,15:32:00,15:32:00,23harrnb_ib,115,
-yellowA,15:35:00,15:35:00,mcb,116,
-yellowA,15:42:00,15:42:00,16thbart,117,
-yellowA,15:45:00,15:45:00,R. Lot,118,
-yellowA,15:48:00,15:48:00,23harrsb_ob,119,
-yellowA,15:55:00,15:55:00,sfgh,120,
-yellowA,16:02:00,16:02:00,23harrnb_ib,121,
-yellowA,16:05:00,16:05:00,mcb,122,
-yellowA,16:12:00,16:12:00,16thbart,123,
-yellowA,16:15:00,16:15:00,R. Lot,124,
-yellowA,16:18:00,16:18:00,23harrsb_ob,125,
-yellowA,16:25:00,16:25:00,sfgh,126,
-yellowA,16:32:00,16:32:00,23harrnb_ib,127,
-yellowA,16:35:00,16:35:00,mcb,128,
-yellowA,16:42:00,16:42:00,16thbart,129,
-yellowA,16:45:00,16:45:00,R. Lot,130,
-yellowA,16:48:00,16:48:00,23harrsb_ob,131,
-yellowA,16:55:00,16:55:00,sfgh,132,
-yellowA,17:02:00,17:02:00,23harrnb_ib,133,
-yellowA,17:05:00,17:05:00,mcb,134,
-yellowA,17:12:00,17:12:00,16thbart,135,
-yellowA,17:15:00,17:15:00,R. Lot,136,
-yellowA,17:18:00,17:18:00,23harrsb_ob,137,
-yellowA,17:25:00,17:25:00,sfgh,138,
-yellowA,17:32:00,17:32:00,23harrnb_ib,139,
-yellowA,17:35:00,17:35:00,mcb,140,
-yellowA,17:42:00,17:42:00,16thbart,141,
-yellowA,17:45:00,17:45:00,R. Lot,142,
-yellowA,17:48:00,17:48:00,23harrsb_ob,143,
-yellowA,17:55:00,17:55:00,sfgh,144,
-yellowA,18:02:00,18:02:00,23harrnb_ib,145,
-yellowA,18:05:00,18:05:00,mcb,146,
-yellowA,18:12:00,18:12:00,16thbart,147,
-yellowA,18:15:00,18:15:00,R. Lot,148,
-yellowA,18:18:00,18:18:00,23harrsb_ob,149,
-yellowA,18:25:00,18:25:00,sfgh,150,
-yellowA,18:32:00,18:32:00,23harrnb_ib,151,
-yellowA,18:35:00,18:35:00,mcb,152,
-yellowA,18:42:00,18:42:00,16thbart,153,
-yellowA,18:45:00,18:45:00,R. Lot,154,
-yellowA,18:48:00,18:48:00,23harrsb_ob,155,
-yellowA,18:55:00,18:55:00,sfgh,156,
-yellowA,19:02:00,19:02:00,23harrnb_ib,157,
-yellowA,19:05:00,19:05:00,mcb,158,
-yellowA,19:12:00,19:12:00,16thbart,159,
-yellowA,19:15:00,19:15:00,R. Lot,160,
-yellowA,19:18:00,19:18:00,23harrsb_ob,161,
-yellowA,19:25:00,19:25:00,sfgh,162,
-yellowA,19:32:00,19:32:00,23harrnb_ib,163,
-yellowA,19:35:00,19:35:00,mcb,164,
-yellowA,19:42:00,19:42:00,16thbart,165,
-yellowA,19:45:00,19:45:00,R. Lot,166,
-yellowA,19:48:00,19:48:00,23harrsb_ob,167,
-yellowA,19:55:00,19:55:00,sfgh,168,
-yellowA,20:02:00,20:02:00,23harrnb_ib,169,
-yellowA,20:05:00,20:05:00,mcb,170,
-yellowA,20:12:00,20:12:00,16thbart,171,
-yellowB,6:20:00,6:20:00,16thbart,1,
-yellowB,6:27:00,6:27:00,mcb,2,
-yellowB,6:30:00,6:30:00,23harrsb_ob,3,
-yellowB,6:37:00,6:37:00,sfgh,4,
-yellowB,6:44:00,6:44:00,23harrnb_ib,5,
-yellowB,6:47:00,6:47:00,R. Lot,6,
-yellowB,6:50:00,6:50:00,16thbart,7,
-yellowB,6:57:00,6:57:00,mcb,8,
-yellowB,7:00:00,7:00:00,23harrsb_ob,9,
-yellowB,7:07:00,7:07:00,sfgh,10,
-yellowB,7:14:00,7:14:00,23harrnb_ib,11,
-yellowB,7:17:00,7:17:00,R. Lot,12,
-yellowB,7:20:00,7:20:00,16thbart,13,
-yellowB,7:27:00,7:27:00,mcb,14,
-yellowB,7:30:00,7:30:00,23harrsb_ob,15,
-yellowB,7:37:00,7:37:00,sfgh,16,
-yellowB,7:44:00,7:44:00,23harrnb_ib,17,
-yellowB,7:47:00,7:47:00,R. Lot,18,
-yellowB,7:50:00,7:50:00,16thbart,19,
-yellowB,7:57:00,7:57:00,mcb,20,
-yellowB,8:00:00,8:00:00,23harrsb_ob,21,
-yellowB,8:07:00,8:07:00,sfgh,22,
-yellowB,8:14:00,8:14:00,23harrnb_ib,23,
-yellowB,8:17:00,8:17:00,R. Lot,24,
-yellowB,8:20:00,8:20:00,16thbart,25,
-yellowB,8:27:00,8:27:00,mcb,26,
-yellowB,8:30:00,8:30:00,23harrsb_ob,27,
-yellowB,8:37:00,8:37:00,sfgh,28,
-yellowB,8:44:00,8:44:00,23harrnb_ib,29,
-yellowB,8:47:00,8:47:00,R. Lot,30,
-yellowB,8:50:00,8:50:00,16thbart,31,
-yellowB,8:57:00,8:57:00,mcb,32,
-yellowB,9:00:00,9:00:00,23harrsb_ob,33,
-yellowB,9:07:00,9:07:00,sfgh,34,
-yellowB,9:14:00,9:14:00,23harrnb_ib,35,
-yellowB,9:17:00,9:17:00,R. Lot,36,
-yellowC,15:50:00,15:50:00,mcb,1,
-yellowC,15:57:00,15:57:00,16thbart,2,
-yellowC,16:00:00,16:00:00,R. Lot,3,
-yellowC,16:03:00,16:03:00,23harrsb_ob,4,
-yellowC,16:10:00,16:10:00,sfgh,5,
-yellowC,16:17:00,16:17:00,23harrnb_ib,6,
-yellowC,16:20:00,16:20:00,mcb,7,
-yellowC,16:27:00,16:27:00,16thbart,8,
-yellowC,16:30:00,16:30:00,R. Lot,9,
-yellowC,16:33:00,16:33:00,23harrsb_ob,10,
-yellowC,16:40:00,16:40:00,sfgh,11,
-yellowC,16:47:00,16:47:00,23harrnb_ib,12,
-yellowC,16:50:00,16:50:00,mcb,13,
-yellowC,16:57:00,16:57:00,16thbart,14,
-yellowC,17:00:00,17:00:00,R. Lot,15,
-yellowC,17:03:00,17:03:00,23harrsb_ob,16,
-yellowC,17:10:00,17:10:00,sfgh,17,
-yellowC,17:17:00,17:17:00,23harrnb_ib,18,
-yellowC,17:20:00,17:20:00,mcb,19,
-yellowC,17:27:00,17:27:00,16thbart,20,
-yellowC,17:30:00,17:30:00,R. Lot,21,
-yellowC,17:33:00,17:33:00,23harrsb_ob,22,
-yellowC,17:40:00,17:40:00,sfgh,23,
-yellowC,17:47:00,17:47:00,23harrnb_ib,24,
-yellowC,17:50:00,17:50:00,mcb,25,
-yellowC,17:57:00,17:57:00,16thbart,26,
-yellowC,18:00:00,18:00:00,R. Lot,27,
-yellowC,18:03:00,18:03:00,23harrsb_ob,28,
-yellowC,18:10:00,18:10:00,sfgh,29,
-yellowC,18:17:00,18:17:00,23harrnb_ib,30,
-yellowC,18:20:00,18:20:00,mcb,31,
-yellowC,18:27:00,18:27:00,16thbart,32,
-yellowC,18:30:00,18:30:00,R. Lot,33,
-yellowC,18:33:00,18:33:00,23harrsb_ob,34,
-yellowC,18:40:00,18:40:00,sfgh,35,
-yellowC,18:47:00,18:47:00,23harrnb_ib,36,
-yellowC,18:50:00,18:50:00,mcb,37,
-yellowC,18:57:00,18:57:00,16thbart,38,
-yellowC,19:00:00,19:00:00,R. Lot,39,
-yellowC,19:03:00,19:03:00,23harrsb_ob,40,
-yellowC,19:10:00,19:10:00,sfgh,41,
-yellowC,19:17:00,19:17:00,23harrnb_ib,42,
-yellowC,19:20:00,19:20:00,mcb,43,
-yellowC,19:27:00,19:27:00,16thbart,44,
-yellowC,19:30:00,19:30:00,R. Lot,45,
-yellowC,19:33:00,19:33:00,23harrsb_ob,46,
-yellowC,19:40:00,19:40:00,sfgh,47,
-yellowC,19:47:00,19:47:00,23harrnb_ib,48,
-yellowC,19:50:00,19:50:00,mcb,49,
-yellowC,19:57:00,19:57:00,16thbart,50,
-yellowC,20:00:00,20:00:00,R. Lot,51,
-yellowC,20:03:00,20:03:00,23harrsb_ob,52,
-yellowC,20:10:00,20:10:00,sfgh,53,
-yellowC,20:17:00,20:17:00,23harrnb_ib,54,
-yellowC,20:20:00,20:20:00,mcb,55,
-yellowC,20:27:00,20:27:00,16thbart,56,
-vaA,6:35:00,6:35:00,ER,1,
-vaA,7:10:00,7:10:00,veteran,2,
-vaA,7:35:00,7:35:00,ER,3,
-vaA,8:05:00,8:05:00,veteran,4,
-vaA,8:35:00,8:35:00,ER,5,
-vaA,9:05:00,9:05:00,veteran,6,
-vaB,7:35:00,7:35:00,veteran,1,
-vaB,8:05:00,8:05:00,ER,2,
-vaB,8:35:00,8:35:00,veteran,3,
-vaB,9:05:00,9:05:00,ER,4,
-vaB,9:35:00,9:35:00,veteran,5,
-vaB,10:05:00,10:05:00,ER,6,
-vaB,10:35:00,10:35:00,veteran,7,
-vaB,11:05:00,11:05:00,ER,8,
-vaB,11:35:00,11:35:00,veteran,9,
-vaB,12:05:00,12:05:00,ER,10,
-vaB,12:35:00,12:35:00,veteran,11,
-vaB,13:05:00,13:05:00,ER,12,
-vaB,13:35:00,13:35:00,veteran,13,
-vaB,14:05:00,14:05:00,ER,14,
-vaB,14:35:00,14:35:00,veteran,15,
-vaB,15:05:00,15:05:00,ER,16,
-vaB,15:35:00,15:35:00,veteran,17,
-vaB,16:05:00,16:05:00,ER,18,
-vaB,16:35:00,16:35:00,veteran,19,
-vaB,17:05:00,17:05:00,ER,20,
-vaC,16:35:00,16:35:00,ER,1,
-vaC,17:05:00,17:05:00,veteran,2,
-vaC,17:35:00,17:35:00,ER,3,
-vaC,18:05:00,18:05:00,veteran,4,
-vaC,18:35:00,18:35:00,ER,5,
-vaC,19:05:00,19:05:00,veteran,6,
+trip_id,arrival_time,departure_time,stop_id,stop_sequence,stop_headsign,pickup_type
+black_a,6:30:00,6:30:00,mtzion,1,,0
+black_a,6:35:00,6:35:00,lhts,2,,0
+black_a,6:55:00,6:55:00,library,3,,0
+black_a,7:10:00,7:10:00,mtzion,4,,0
+black_a,7:15:00,7:15:00,lhts,5,,0
+black_a,7:35:00,7:35:00,library,6,,0
+black_a,7:50:00,7:50:00,mtzion,7,,0
+black_a,7:55:00,7:55:00,lhts,8,,0
+black_a,8:15:00,8:15:00,library,9,,0
+black_a,8:30:00,8:30:00,mtzion,10,,0
+black_a,8:35:00,8:35:00,lhts,11,,0
+black_a,8:55:00,8:55:00,library,12,,0
+black_a,9:10:00,9:10:00,mtzion,13,,0
+black_a,9:15:00,9:15:00,lhts,14,,0
+black_a,9:35:00,9:35:00,library,15,,0
+black_a,9:50:00,9:50:00,mtzion,16,,0
+black_a,9:55:00,9:55:00,lhts,17,,0
+black_a,10:15:00,10:15:00,library,18,,0
+black_a,10:30:00,10:30:00,mtzion,19,,0
+black_a,10:35:00,10:35:00,lhts,20,,0
+black_a,10:55:00,10:55:00,library,21,,0
+black_a,11:10:00,11:10:00,mtzion,22,,0
+black_a,11:15:00,11:15:00,lhts,23,,0
+black_a,11:35:00,11:35:00,library,24,,0
+black_a,11:50:00,11:50:00,mtzion,25,,0
+black_a,11:55:00,11:55:00,lhts,26,,0
+black_a,12:15:00,12:15:00,library,27,,0
+black_a,12:30:00,12:30:00,mtzion,28,,0
+black_a,12:35:00,12:35:00,lhts,29,,0
+black_a,12:55:00,12:55:00,library,30,,0
+black_a,13:10:00,13:10:00,mtzion,31,,0
+black_a,13:15:00,13:15:00,lhts,32,,0
+black_a,13:35:00,13:35:00,library,33,,0
+black_a,13:50:00,13:50:00,mtzion,34,,0
+black_a,13:55:00,13:55:00,lhts,35,,0
+black_a,14:15:00,14:15:00,library,36,,0
+black_a,14:30:00,14:30:00,mtzion,37,,0
+black_a,14:35:00,14:35:00,lhts,38,,0
+black_a,14:55:00,14:55:00,library,39,,0
+black_a,15:10:00,15:10:00,mtzion,40,,0
+black_a,15:15:00,15:15:00,lhts,41,,0
+black_a,15:35:00,15:35:00,library,42,,0
+black_a,15:50:00,15:50:00,mtzion,43,,0
+black_a,15:55:00,15:55:00,lhts,44,,0
+black_a,16:15:00,16:15:00,library,45,,0
+black_a,16:30:00,16:30:00,mtzion,46,,0
+black_a,16:35:00,16:35:00,lhts,47,,0
+black_a,16:55:00,16:55:00,library,48,,0
+black_a,17:10:00,17:10:00,mtzion,49,,0
+black_a,17:15:00,17:15:00,lhts,50,,0
+black_a,17:35:00,17:35:00,library,51,,0
+black_a,17:50:00,17:50:00,mtzion,52,,0
+black_a,17:55:00,17:55:00,lhts,53,,0
+black_a,18:15:00,18:15:00,library,54,,0
+black_a,18:30:00,18:30:00,mtzion,55,,0
+black_a,18:35:00,18:35:00,lhts,56,,0
+black_a,18:55:00,18:55:00,library,57,,0
+black_a,19:10:00,19:10:00,mtzion,58,,0
+black_a,19:15:00,19:15:00,lhts,59,,0
+black_a,19:35:00,19:35:00,library,60,,0
+black_a,19:50:00,19:50:00,mtzion,61,,0
+black_a,19:55:00,19:55:00,lhts,62,,1
+black_b,6:40:00,6:40:00,mtzion,1,,0
+black_b,6:45:00,6:45:00,lhts,2,,0
+black_b,7:05:00,7:05:00,library,3,,0
+black_b,7:20:00,7:20:00,mtzion,4,,0
+black_b,7:25:00,7:25:00,lhts,5,,0
+black_b,7:45:00,7:45:00,library,6,,0
+black_b,8:00:00,8:00:00,mtzion,7,,0
+black_b,8:05:00,8:05:00,lhts,8,,0
+black_b,8:25:00,8:25:00,library,9,,0
+black_b,8:40:00,8:40:00,mtzion,10,,0
+black_b,8:45:00,8:45:00,lhts,11,,0
+black_b,9:05:00,9:05:00,library,12,,0
+black_b,9:20:00,9:20:00,mtzion,13,,0
+black_b,9:25:00,9:25:00,lhts,14,,0
+black_b,9:45:00,9:45:00,library,15,,0
+black_b,10:00:00,10:00:00,mtzion,16,,0
+black_b,10:05:00,10:05:00,lhts,17,,0
+black_b,10:25:00,10:25:00,library,18,,0
+black_b,10:40:00,10:40:00,mtzion,19,,0
+black_b,10:45:00,10:45:00,lhts,20,,0
+black_b,11:05:00,11:05:00,library,21,,0
+black_b,11:20:00,11:20:00,mtzion,22,,0
+black_b,11:25:00,11:25:00,lhts,23,,0
+black_b,11:45:00,11:45:00,library,24,,0
+black_b,12:00:00,12:00:00,mtzion,25,,0
+black_b,12:05:00,12:05:00,lhts,26,,0
+black_b,12:25:00,12:25:00,library,27,,0
+black_b,12:40:00,12:40:00,mtzion,28,,0
+black_b,12:45:00,12:45:00,lhts,29,,0
+black_b,13:05:00,13:05:00,library,30,,0
+black_b,13:20:00,13:20:00,mtzion,31,,0
+black_b,13:25:00,13:25:00,lhts,32,,0
+black_b,13:45:00,13:45:00,library,33,,0
+black_b,14:00:00,14:00:00,mtzion,34,,0
+black_b,14:05:00,14:05:00,lhts,35,,0
+black_b,14:25:00,14:25:00,library,36,,0
+black_b,14:40:00,14:40:00,mtzion,37,,0
+black_b,14:45:00,14:45:00,lhts,38,,0
+black_b,15:05:00,15:05:00,library,39,,0
+black_b,15:20:00,15:20:00,mtzion,40,,0
+black_b,15:25:00,15:25:00,lhts,41,,0
+black_b,15:45:00,15:45:00,library,42,,0
+black_b,16:00:00,16:00:00,mtzion,43,,0
+black_b,16:05:00,16:05:00,lhts,44,,0
+black_b,16:25:00,16:25:00,library,45,,0
+black_b,16:40:00,16:40:00,mtzion,46,,0
+black_b,16:45:00,16:45:00,lhts,47,,0
+black_b,17:05:00,17:05:00,library,48,,0
+black_b,17:20:00,17:20:00,mtzion,49,,0
+black_b,17:25:00,17:25:00,lhts,50,,0
+black_b,17:45:00,17:45:00,library,51,,0
+black_b,18:00:00,18:00:00,mtzion,52,,0
+black_b,18:05:00,18:05:00,lhts,53,,0
+black_b,18:25:00,18:25:00,library,54,,0
+black_b,18:40:00,18:40:00,mtzion,55,,0
+black_b,18:45:00,18:45:00,lhts,56,,0
+black_b,19:05:00,19:05:00,library,57,,0
+black_b,19:20:00,19:20:00,mtzion,58,,0
+black_b,19:25:00,19:25:00,lhts,59,,1
+blue_a,05:35:00,05:35:00,missb4we,1,,0
+blue_a,05:57:00,05:57:00,mtzion,2,,0
+blue_a,06:12:00,06:12:00,parlppi,3,,0
+blue_a,06:35:00,06:35:00,sfgh,4,,0
+blue_a,06:55:00,06:55:00,missb4we,5,,0
+blue_a,07:17:00,07:17:00,mtzion,6,,0
+blue_a,07:32:00,07:32:00,parlppi,7,,0
+blue_a,07:55:00,07:55:00,sfgh,8,,0
+blue_a,08:15:00,08:15:00,missb4we,9,,0
+blue_a,08:37:00,08:37:00,mtzion,10,,0
+blue_a,08:52:00,08:52:00,parlppi,11,,0
+blue_a,09:15:00,09:15:00,sfgh,12,,0
+blue_a,09:35:00,09:35:00,missb4we,13,,0
+blue_a,09:57:00,09:57:00,mtzion,14,,0
+blue_a,10:12:00,10:12:00,parlppi,15,,0
+blue_a,10:35:00,10:35:00,sfgh,16,,0
+blue_a,10:55:00,10:55:00,missb4we,17,,0
+blue_a,11:17:00,11:17:00,mtzion,18,,0
+blue_a,11:32:00,11:32:00,parlppi,19,,0
+blue_a,11:55:00,11:55:00,sfgh,20,,0
+blue_a,12:15:00,12:15:00,missb4we,21,,0
+blue_a,12:37:00,12:37:00,mtzion,22,,0
+blue_a,12:52:00,12:52:00,parlppi,23,,0
+blue_a,13:15:00,13:15:00,sfgh,24,,0
+blue_a,13:35:00,13:35:00,missb4we,25,,0
+blue_a,13:57:00,13:57:00,mtzion,26,,0
+blue_a,14:12:00,14:12:00,parlppi,27,,0
+blue_a,14:35:00,14:35:00,sfgh,28,,0
+blue_a,14:55:00,14:55:00,missb4we,29,,0
+blue_a,15:17:00,15:17:00,mtzion,30,,0
+blue_a,15:32:00,15:32:00,parlppi,31,,0
+blue_a,15:55:00,15:55:00,sfgh,32,,0
+blue_a,16:15:00,16:15:00,missb4we,33,,0
+blue_a,16:37:00,16:37:00,mtzion,34,,0
+blue_a,16:52:00,16:52:00,parlppi,35,,0
+blue_a,17:15:00,17:15:00,sfgh,36,,0
+blue_a,17:35:00,17:35:00,missb4we,37,,0
+blue_a,17:57:00,17:57:00,mtzion,38,,0
+blue_a,18:12:00,18:12:00,parlppi,39,,0
+blue_a,18:35:00,18:35:00,sfgh,40,,0
+blue_a,18:55:00,18:55:00,missb4we,41,,0
+blue_a,19:17:00,19:17:00,mtzion,42,,0
+blue_a,19:32:00,19:32:00,parlppi,43,,0
+blue_a,19:55:00,19:55:00,sfgh,44,,0
+blue_a,20:10:00,20:10:00,missb4we,45,,0
+blue_a,20:32:00,20:32:00,mtzion,46,,0
+blue_a,20:47:00,20:47:00,parlppi,47,,0
+blue_a,21:10:00,21:10:00,sfgh,48,,1
+blue_b,05:55:00,05:55:00,missb4we,1,,0
+blue_b,06:17:00,06:17:00,mtzion,2,,0
+blue_b,06:32:00,06:32:00,parlppi,3,,0
+blue_b,06:55:00,06:55:00,sfgh,4,,0
+blue_b,07:15:00,07:15:00,missb4we,5,,0
+blue_b,07:37:00,07:37:00,mtzion,6,,0
+blue_b,07:52:00,07:52:00,parlppi,7,,0
+blue_b,08:15:00,08:15:00,sfgh,8,,0
+blue_b,08:35:00,08:35:00,missb4we,9,,0
+blue_b,08:57:00,08:57:00,mtzion,10,,0
+blue_b,09:12:00,09:12:00,parlppi,11,,0
+blue_b,09:35:00,09:35:00,sfgh,12,,0
+blue_b,09:55:00,09:55:00,missb4we,13,,0
+blue_b,10:17:00,10:17:00,mtzion,14,,0
+blue_b,10:32:00,10:32:00,parlppi,15,,0
+blue_b,10:55:00,10:55:00,sfgh,16,,0
+blue_b,11:15:00,11:15:00,missb4we,17,,0
+blue_b,11:37:00,11:37:00,mtzion,18,,0
+blue_b,11:52:00,11:52:00,parlppi,19,,0
+blue_b,12:15:00,12:15:00,sfgh,20,,0
+blue_b,12:35:00,12:35:00,missb4we,21,,0
+blue_b,12:57:00,12:57:00,mtzion,22,,0
+blue_b,13:12:00,13:12:00,parlppi,23,,0
+blue_b,13:35:00,13:35:00,sfgh,24,,0
+blue_b,13:55:00,13:55:00,missb4we,25,,0
+blue_b,14:17:00,14:17:00,mtzion,26,,0
+blue_b,14:32:00,14:32:00,parlppi,27,,0
+blue_b,14:55:00,14:55:00,sfgh,28,,0
+blue_b,15:15:00,15:15:00,missb4we,29,,0
+blue_b,15:37:00,15:37:00,mtzion,30,,0
+blue_b,15:52:00,15:52:00,parlppi,31,,0
+blue_b,16:15:00,16:15:00,sfgh,32,,0
+blue_b,16:35:00,16:35:00,missb4we,33,,0
+blue_b,16:57:00,16:57:00,mtzion,34,,0
+blue_b,17:12:00,17:12:00,parlppi,35,,0
+blue_b,17:35:00,17:35:00,sfgh,36,,0
+blue_b,17:55:00,17:55:00,missb4we,37,,0
+blue_b,18:17:00,18:17:00,mtzion,38,,0
+blue_b,18:32:00,18:32:00,parlppi,39,,0
+blue_b,18:55:00,18:55:00,sfgh,40,,0
+blue_b,19:15:00,19:15:00,missb4we,41,,0
+blue_b,19:37:00,19:37:00,mtzion,42,,0
+blue_b,19:52:00,19:52:00,parlppi,43,,0
+blue_b,20:15:00,20:15:00,sfgh,44,,1
+blue_c,06:15:00,06:15:00,missb4we,1,,0
+blue_c,06:37:00,06:37:00,mtzion,2,,0
+blue_c,06:52:00,06:52:00,parlppi,3,,0
+blue_c,07:15:00,07:15:00,sfgh,4,,0
+blue_c,07:35:00,07:35:00,missb4we,5,,0
+blue_c,07:57:00,07:57:00,mtzion,6,,0
+blue_c,08:12:00,08:12:00,parlppi,7,,0
+blue_c,08:35:00,08:35:00,sfgh,8,,0
+blue_c,08:55:00,08:55:00,missb4we,9,,0
+blue_c,09:17:00,09:17:00,mtzion,10,,0
+blue_c,09:32:00,09:32:00,parlppi,11,,0
+blue_c,09:55:00,09:55:00,sfgh,12,,0
+blue_c,10:15:00,10:15:00,missb4we,13,,0
+blue_c,10:37:00,10:37:00,mtzion,14,,0
+blue_c,10:52:00,10:52:00,parlppi,15,,0
+blue_c,11:15:00,11:15:00,sfgh,16,,0
+blue_c,11:35:00,11:35:00,missb4we,17,,0
+blue_c,11:57:00,11:57:00,mtzion,18,,0
+blue_c,12:12:00,12:12:00,parlppi,19,,0
+blue_c,12:35:00,12:35:00,sfgh,20,,0
+blue_c,12:55:00,12:55:00,missb4we,21,,0
+blue_c,13:17:00,13:17:00,mtzion,22,,0
+blue_c,13:32:00,13:32:00,parlppi,23,,0
+blue_c,13:55:00,13:55:00,sfgh,24,,0
+blue_c,14:15:00,14:15:00,missb4we,25,,0
+blue_c,14:37:00,14:37:00,mtzion,26,,0
+blue_c,14:52:00,14:52:00,parlppi,27,,0
+blue_c,15:15:00,15:15:00,sfgh,28,,0
+blue_c,15:35:00,15:35:00,missb4we,29,,0
+blue_c,15:57:00,15:57:00,mtzion,30,,0
+blue_c,16:12:00,16:12:00,parlppi,31,,0
+blue_c,16:35:00,16:35:00,sfgh,32,,0
+blue_c,16:55:00,16:55:00,missb4we,33,,0
+blue_c,17:17:00,17:17:00,mtzion,34,,0
+blue_c,17:32:00,17:32:00,parlppi,35,,0
+blue_c,17:55:00,17:55:00,sfgh,36,,0
+blue_c,18:15:00,18:15:00,missb4we,37,,0
+blue_c,18:37:00,18:37:00,mtzion,38,,0
+blue_c,18:52:00,18:52:00,parlppi,39,,0
+blue_c,19:15:00,19:15:00,sfgh,40,,0
+blue_c,19:35:00,19:35:00,missb4we,41,,0
+blue_c,19:57:00,19:57:00,mtzion,42,,0
+blue_c,20:12:00,20:12:00,parlppi,43,,0
+blue_c,20:35:00,20:35:00,sfgh,44,,1
+blue_d,06:35:00,06:35:00,missb4we,1,,0
+blue_d,06:57:00,06:57:00,mtzion,2,,0
+blue_d,07:12:00,07:12:00,parlppi,3,,0
+blue_d,07:35:00,07:35:00,sfgh,4,,0
+blue_d,07:55:00,07:55:00,missb4we,5,,0
+blue_d,08:17:00,08:17:00,mtzion,6,,0
+blue_d,08:32:00,08:32:00,parlppi,7,,0
+blue_d,08:55:00,08:55:00,sfgh,8,,0
+blue_d,09:15:00,09:15:00,missb4we,9,,0
+blue_d,09:37:00,09:37:00,mtzion,10,,0
+blue_d,09:52:00,09:52:00,parlppi,11,,0
+blue_d,10:15:00,10:15:00,sfgh,12,,0
+blue_d,10:35:00,10:35:00,missb4we,13,,0
+blue_d,10:57:00,10:57:00,mtzion,14,,0
+blue_d,11:12:00,11:12:00,parlppi,15,,0
+blue_d,11:35:00,11:35:00,sfgh,16,,0
+blue_d,11:55:00,11:55:00,missb4we,17,,0
+blue_d,12:17:00,12:17:00,mtzion,18,,0
+blue_d,12:32:00,12:32:00,parlppi,19,,0
+blue_d,12:55:00,12:55:00,sfgh,20,,0
+blue_d,13:15:00,13:15:00,missb4we,21,,0
+blue_d,13:37:00,13:37:00,mtzion,22,,0
+blue_d,13:52:00,13:52:00,parlppi,23,,0
+blue_d,14:15:00,14:15:00,sfgh,24,,0
+blue_d,14:35:00,14:35:00,missb4we,25,,0
+blue_d,14:57:00,14:57:00,mtzion,26,,0
+blue_d,15:12:00,15:12:00,parlppi,27,,0
+blue_d,15:35:00,15:35:00,sfgh,28,,0
+blue_d,15:55:00,15:55:00,missb4we,29,,0
+blue_d,16:17:00,16:17:00,mtzion,30,,0
+blue_d,16:32:00,16:32:00,parlppi,31,,0
+blue_d,16:55:00,16:55:00,sfgh,32,,0
+blue_d,17:15:00,17:15:00,missb4we,33,,0
+blue_d,17:37:00,17:37:00,mtzion,34,,0
+blue_d,17:52:00,17:52:00,parlppi,35,,0
+blue_d,18:15:00,18:15:00,sfgh,36,,0
+blue_d,18:35:00,18:35:00,missb4we,37,,0
+blue_d,18:57:00,18:57:00,mtzion,38,,0
+blue_d,19:12:00,19:12:00,parlppi,39,,0
+blue_d,19:35:00,19:35:00,sfgh,40,,1
+blue_e1,07:00:00,07:00:00,missb4we,1,,0
+blue_e1,07:22:00,07:22:00,mtzion,2,,0
+blue_e1,07:37:00,07:37:00,parlppi,3,,0
+blue_e1,08:00:00,08:00:00,sfgh,4,,0
+blue_e1,08:20:00,08:20:00,missb4we,5,,0
+blue_e1,08:42:00,08:42:00,mtzion,6,,0
+blue_e1,08:57:00,08:57:00,parlppi,7,,0
+blue_e1,09:20:00,09:20:00,sfgh,8,,0
+blue_e1,09:40:00,09:40:00,missb4we,9,,0
+blue_e1,10:02:00,10:02:00,mtzion,10,,0
+blue_e1,10:17:00,10:17:00,parlppi,11,,0
+blue_e1,10:40:00,10:40:00,sfgh,12,,0
+blue_e1,11:00:00,11:00:00,missb4we,13,,1
+blue_e2,14:45:00,14:45:00,missb4we,1,,0
+blue_e2,15:07:00,15:07:00,mtzion,2,,0
+blue_e2,15:22:00,15:22:00,parlppi,3,,0
+blue_e2,15:45:00,15:45:00,sfgh,4,,0
+blue_e2,16:05:00,16:05:00,missb4we,5,,0
+blue_e2,16:27:00,16:27:00,mtzion,6,,0
+blue_e2,16:42:00,16:42:00,parlppi,7,,0
+blue_e2,17:05:00,17:05:00,sfgh,8,,0
+blue_e2,17:25:00,17:25:00,missb4we,9,,0
+blue_e2,17:47:00,17:47:00,mtzion,10,,0
+blue_e2,18:02:00,18:02:00,parlppi,11,,0
+blue_e2,18:25:00,18:25:00,sfgh,12,,0
+blue_e2,18:45:00,18:45:00,missb4we,13,,1
+bronze_a,06:45:00,06:45:00,parlppi,1,,0
+bronze_a,06:50:00,06:50:00,75behr,2,,0
+bronze_a,06:54:00,06:54:00,surgedown,3,,0
+bronze_a,06:58:00,06:58:00,paracc,4,,1
+bronze_a,07:00:00,07:00:00,parlppi,5,,0
+bronze_a,07:05:00,07:05:00,75behr,6,,0
+bronze_a,07:09:00,07:09:00,surgedown,7,,0
+bronze_a,07:13:00,07:13:00,paracc,8,,1
+bronze_a,07:15:00,07:15:00,parlppi,9,,0
+bronze_a,07:20:00,07:20:00,75behr,10,,0
+bronze_a,07:24:00,07:24:00,surgedown,11,,0
+bronze_a,07:28:00,07:28:00,paracc,12,,1
+bronze_a,07:30:00,07:30:00,parlppi,13,,0
+bronze_a,07:35:00,07:35:00,75behr,14,,0
+bronze_a,07:39:00,07:39:00,surgedown,15,,0
+bronze_a,07:43:00,07:43:00,paracc,16,,1
+bronze_a,07:45:00,07:45:00,parlppi,17,,0
+bronze_a,07:50:00,07:50:00,75behr,18,,0
+bronze_a,07:54:00,07:54:00,surgedown,19,,0
+bronze_a,07:58:00,07:58:00,paracc,20,,1
+bronze_a,08:00:00,08:00:00,parlppi,21,,0
+bronze_a,08:05:00,08:05:00,75behr,22,,0
+bronze_a,08:09:00,08:09:00,surgedown,23,,0
+bronze_a,08:13:00,08:13:00,paracc,24,,1
+bronze_a,08:15:00,08:15:00,parlppi,25,,0
+bronze_a,08:20:00,08:20:00,75behr,26,,0
+bronze_a,08:24:00,08:24:00,surgedown,27,,0
+bronze_a,08:28:00,08:28:00,paracc,28,,1
+bronze_a,08:30:00,08:30:00,parlppi,29,,0
+bronze_a,08:35:00,08:35:00,75behr,30,,0
+bronze_a,08:39:00,08:39:00,surgedown,31,,0
+bronze_a,08:43:00,08:43:00,paracc,32,,1
+bronze_a,08:45:00,08:45:00,parlppi,33,,0
+bronze_a,08:50:00,08:50:00,75behr,34,,0
+bronze_a,08:54:00,08:54:00,surgedown,35,,0
+bronze_a,08:58:00,08:58:00,paracc,36,,1
+bronze_a,09:00:00,09:00:00,parlppi,37,,0
+bronze_a,09:05:00,09:05:00,75behr,38,,0
+bronze_a,09:09:00,09:09:00,surgedown,39,,0
+bronze_a,09:13:00,09:13:00,paracc,40,,1
+bronze_a,09:15:00,09:15:00,parlppi,41,,0
+bronze_a,09:20:00,09:20:00,75behr,42,,0
+bronze_a,09:24:00,09:24:00,surgedown,43,,0
+bronze_a,09:28:00,09:28:00,paracc,44,,1
+bronze_a,09:30:00,09:30:00,parlppi,45,,0
+bronze_a,09:35:00,09:35:00,75behr,46,,0
+bronze_a,09:39:00,09:39:00,surgedown,47,,0
+bronze_a,09:43:00,09:43:00,paracc,48,,1
+bronze_a,09:45:00,09:45:00,parlppi,49,,0
+bronze_a,09:50:00,09:50:00,75behr,50,,0
+bronze_a,09:54:00,09:54:00,surgedown,51,,0
+bronze_a,09:58:00,09:58:00,paracc,52,,1
+bronze_a,10:00:00,10:00:00,parlppi,53,,0
+bronze_a,10:05:00,10:05:00,75behr,54,,0
+bronze_a,10:09:00,10:09:00,surgedown,55,,0
+bronze_a,10:13:00,10:13:00,library,56,,1
+bronze_a,10:20:00,10:20:00,parlppi,57,,0
+bronze_a,10:25:00,10:25:00,75behr,58,,0
+bronze_a,10:29:00,10:29:00,surgedown,59,,0
+bronze_a,10:33:00,10:33:00,library,60,,1
+bronze_a,10:40:00,10:40:00,parlppi,61,,0
+bronze_a,10:45:00,10:45:00,75behr,62,,0
+bronze_a,10:49:00,10:49:00,surgedown,63,,0
+bronze_a,10:53:00,10:53:00,library,64,,1
+bronze_a,11:00:00,11:00:00,parlppi,65,,0
+bronze_a,11:05:00,11:05:00,75behr,66,,0
+bronze_a,11:09:00,11:09:00,surgedown,67,,0
+bronze_a,11:13:00,11:13:00,library,68,,1
+bronze_a,11:20:00,11:20:00,parlppi,69,,0
+bronze_a,11:25:00,11:25:00,75behr,70,,0
+bronze_a,11:29:00,11:29:00,surgedown,71,,0
+bronze_a,11:33:00,11:33:00,library,72,,1
+bronze_a,11:40:00,11:40:00,parlppi,73,,0
+bronze_a,11:45:00,11:45:00,75behr,74,,0
+bronze_a,11:49:00,11:49:00,surgedown,75,,0
+bronze_a,11:53:00,11:53:00,library,76,,1
+bronze_a,12:00:00,12:00:00,parlppi,77,,0
+bronze_a,12:05:00,12:05:00,75behr,78,,0
+bronze_a,12:09:00,12:09:00,surgedown,79,,0
+bronze_a,12:13:00,12:13:00,library,80,,1
+bronze_a,12:20:00,12:20:00,parlppi,81,,0
+bronze_a,12:25:00,12:25:00,75behr,82,,0
+bronze_a,12:29:00,12:29:00,surgedown,83,,0
+bronze_a,12:33:00,12:33:00,library,84,,1
+bronze_a,12:40:00,12:40:00,parlppi,85,,0
+bronze_a,12:45:00,12:45:00,75behr,86,,0
+bronze_a,12:49:00,12:49:00,surgedown,87,,0
+bronze_a,12:53:00,12:53:00,library,88,,1
+bronze_a,13:00:00,13:00:00,parlppi,89,,0
+bronze_a,13:05:00,13:05:00,75behr,90,,0
+bronze_a,13:09:00,13:09:00,surgedown,91,,0
+bronze_a,13:13:00,13:13:00,library,92,,1
+bronze_a,13:20:00,13:20:00,parlppi,93,,0
+bronze_a,13:25:00,13:25:00,75behr,94,,0
+bronze_a,13:29:00,13:29:00,surgedown,95,,0
+bronze_a,13:33:00,13:33:00,library,96,,1
+bronze_a,13:40:00,13:40:00,parlppi,97,,0
+bronze_a,13:45:00,13:45:00,75behr,98,,0
+bronze_a,13:49:00,13:49:00,surgedown,99,,0
+bronze_a,13:53:00,13:53:00,library,100,,1
+bronze_a,14:00:00,14:00:00,parlppi,101,,0
+bronze_a,14:05:00,14:05:00,75behr,102,,0
+bronze_a,14:09:00,14:09:00,surgedown,103,,0
+bronze_a,14:13:00,14:13:00,library,104,,1
+bronze_a,14:20:00,14:20:00,parlppi,105,,0
+bronze_a,14:25:00,14:25:00,75behr,106,,0
+bronze_a,14:29:00,14:29:00,surgedown,107,,0
+bronze_a,14:33:00,14:33:00,library,108,,1
+bronze_a,14:40:00,14:40:00,parlppi,109,,0
+bronze_a,14:45:00,14:45:00,75behr,110,,0
+bronze_a,14:49:00,14:49:00,surgedown,111,,0
+bronze_a,14:53:00,14:53:00,library,112,,1
+bronze_a,15:00:00,15:00:00,parlppi,113,,0
+bronze_a,15:05:00,15:05:00,75behr,114,,0
+bronze_a,15:09:00,15:09:00,surgedown,115,,0
+bronze_a,15:13:00,15:13:00,library,116,,1
+bronze_a,15:20:00,15:20:00,parlppi,117,,0
+bronze_a,15:25:00,15:25:00,75behr,118,,0
+bronze_a,15:29:00,15:29:00,surgedown,119,,0
+bronze_a,15:33:00,15:33:00,library,120,,1
+bronze_a,15:40:00,15:40:00,parlppi,121,,0
+bronze_a,15:45:00,15:45:00,75behr,122,,0
+bronze_a,15:49:00,15:49:00,surgedown,123,,0
+bronze_a,15:53:00,15:53:00,library,124,,1
+bronze_a,16:00:00,16:00:00,parlppi,125,,0
+bronze_a,16:05:00,16:05:00,75behr,126,,0
+bronze_a,16:09:00,16:09:00,surgedown,127,,0
+bronze_a,16:13:00,16:13:00,library,128,,1
+bronze_a,16:20:00,16:20:00,parlppi,129,,0
+bronze_a,16:25:00,16:25:00,75behr,130,,0
+bronze_a,16:29:00,16:29:00,surgedown,131,,0
+bronze_a,16:33:00,16:33:00,library,132,,1
+bronze_a,16:40:00,16:40:00,parlppi,133,,0
+bronze_a,16:45:00,16:45:00,75behr,134,,0
+bronze_a,16:49:00,16:49:00,surgedown,135,,0
+bronze_a,16:53:00,16:53:00,library,136,,1
+bronze_a,17:00:00,17:00:00,parlppi,137,,0
+bronze_a,17:05:00,17:05:00,75behr,138,,0
+bronze_a,17:09:00,17:09:00,surgedown,139,,0
+bronze_a,17:13:00,17:13:00,library,140,,1
+bronze_a,17:20:00,17:20:00,parlppi,141,,0
+bronze_a,17:25:00,17:25:00,75behr,142,,0
+bronze_a,17:29:00,17:29:00,surgedown,143,,0
+bronze_a,17:33:00,17:33:00,library,144,,1
+bronze_a,17:40:00,17:40:00,parlppi,145,,0
+bronze_a,17:45:00,17:45:00,75behr,146,,0
+bronze_a,17:49:00,17:49:00,surgedown,147,,0
+bronze_a,17:53:00,17:53:00,library,148,,1
+bronze_a,18:00:00,18:00:00,parlppi,149,,0
+bronze_a,18:05:00,18:05:00,75behr,150,,0
+bronze_a,18:09:00,18:09:00,surgedown,151,,0
+bronze_a,18:13:00,18:13:00,library,152,,1
+bronze_a,18:20:00,18:20:00,parlppi,153,,0
+bronze_a,18:25:00,18:25:00,75behr,154,,0
+bronze_a,18:29:00,18:29:00,surgedown,155,,0
+bronze_a,18:33:00,18:33:00,paracc,156,,1
+gold_a,05:45:00,05:45:00,missb4we,1,,0
+gold_a,05:58:00,05:58:00,sfgh,2,,0
+gold_a,06:25:00,06:25:00,parlppi,3,,0
+gold_a,06:38:00,06:38:00,mtzion,4,,0
+gold_a,07:05:00,07:05:00,missb4we,5,,0
+gold_a,07:18:00,07:18:00,sfgh,6,,0
+gold_a,07:45:00,07:45:00,parlppi,7,,0
+gold_a,07:58:00,07:58:00,mtzion,8,,0
+gold_a,08:25:00,08:25:00,missb4we,9,,0
+gold_a,08:38:00,08:38:00,sfgh,10,,0
+gold_a,09:05:00,09:05:00,parlppi,11,,0
+gold_a,09:18:00,09:18:00,mtzion,12,,0
+gold_a,09:45:00,09:45:00,missb4we,13,,0
+gold_a,09:58:00,09:58:00,sfgh,14,,0
+gold_a,10:25:00,10:25:00,parlppi,15,,0
+gold_a,10:38:00,10:38:00,mtzion,16,,0
+gold_a,11:05:00,11:05:00,missb4we,17,,0
+gold_a,11:18:00,11:18:00,sfgh,18,,0
+gold_a,11:45:00,11:45:00,parlppi,19,,0
+gold_a,11:58:00,11:58:00,mtzion,20,,0
+gold_a,12:25:00,12:25:00,missb4we,21,,0
+gold_a,12:38:00,12:38:00,sfgh,22,,0
+gold_a,13:05:00,13:05:00,parlppi,23,,0
+gold_a,13:18:00,13:18:00,mtzion,24,,0
+gold_a,13:45:00,13:45:00,missb4we,25,,0
+gold_a,13:58:00,13:58:00,sfgh,26,,0
+gold_a,14:25:00,14:25:00,parlppi,27,,0
+gold_a,14:38:00,14:38:00,mtzion,28,,0
+gold_a,15:05:00,15:05:00,missb4we,29,,0
+gold_a,15:18:00,15:18:00,sfgh,30,,0
+gold_a,15:45:00,15:45:00,parlppi,31,,0
+gold_a,15:58:00,15:58:00,mtzion,32,,0
+gold_a,16:25:00,16:25:00,missb4we,33,,0
+gold_a,16:38:00,16:38:00,sfgh,34,,0
+gold_a,17:05:00,17:05:00,parlppi,35,,0
+gold_a,17:18:00,17:18:00,mtzion,36,,0
+gold_a,17:45:00,17:45:00,missb4we,37,,0
+gold_a,17:58:00,17:58:00,sfgh,38,,0
+gold_a,18:25:00,18:25:00,parlppi,39,,0
+gold_a,18:38:00,18:38:00,mtzion,40,,0
+gold_a,19:05:00,19:05:00,missb4we,41,,0
+gold_a,19:18:00,19:18:00,sfgh,42,,0
+gold_a,19:45:00,19:45:00,parlppi,43,,0
+gold_a,19:58:00,19:58:00,mtzion,44,,1
+gold_b,06:05:00,06:05:00,missb4we,1,,0
+gold_b,06:18:00,06:18:00,sfgh,2,,0
+gold_b,06:45:00,06:45:00,parlppi,3,,0
+gold_b,06:58:00,06:58:00,mtzion,4,,0
+gold_b,07:25:00,07:25:00,missb4we,5,,0
+gold_b,07:38:00,07:38:00,sfgh,6,,0
+gold_b,08:05:00,08:05:00,parlppi,7,,0
+gold_b,08:18:00,08:18:00,mtzion,8,,0
+gold_b,08:45:00,08:45:00,missb4we,9,,0
+gold_b,08:58:00,08:58:00,sfgh,10,,0
+gold_b,09:25:00,09:25:00,parlppi,11,,0
+gold_b,09:38:00,09:38:00,mtzion,12,,0
+gold_b,10:05:00,10:05:00,missb4we,13,,0
+gold_b,10:18:00,10:18:00,sfgh,14,,0
+gold_b,10:45:00,10:45:00,parlppi,15,,0
+gold_b,10:58:00,10:58:00,mtzion,16,,0
+gold_b,11:25:00,11:25:00,missb4we,17,,0
+gold_b,11:38:00,11:38:00,sfgh,18,,0
+gold_b,12:05:00,12:05:00,parlppi,19,,0
+gold_b,12:18:00,12:18:00,mtzion,20,,0
+gold_b,12:45:00,12:45:00,missb4we,21,,0
+gold_b,12:58:00,12:58:00,sfgh,22,,0
+gold_b,13:25:00,13:25:00,parlppi,23,,0
+gold_b,13:38:00,13:38:00,mtzion,24,,0
+gold_b,14:05:00,14:05:00,missb4we,25,,0
+gold_b,14:18:00,14:18:00,sfgh,26,,0
+gold_b,14:45:00,14:45:00,parlppi,27,,0
+gold_b,14:58:00,14:58:00,mtzion,28,,0
+gold_b,15:25:00,15:25:00,missb4we,29,,0
+gold_b,15:38:00,15:38:00,sfgh,30,,0
+gold_b,16:05:00,16:05:00,parlppi,31,,0
+gold_b,16:18:00,16:18:00,mtzion,32,,0
+gold_b,16:45:00,16:45:00,missb4we,33,,0
+gold_b,16:58:00,16:58:00,sfgh,34,,0
+gold_b,17:25:00,17:25:00,parlppi,35,,0
+gold_b,17:38:00,17:38:00,mtzion,36,,0
+gold_b,18:05:00,18:05:00,missb4we,37,,0
+gold_b,18:18:00,18:18:00,sfgh,38,,0
+gold_b,18:45:00,18:45:00,parlppi,39,,0
+gold_b,18:58:00,18:58:00,mtzion,40,,0
+gold_b,19:25:00,19:25:00,missb4we,41,,0
+gold_b,19:38:00,19:38:00,sfgh,42,,0
+gold_b,20:05:00,20:05:00,parlppi,43,,0
+gold_b,20:18:00,20:18:00,mtzion,44,,0
+gold_b,20:45:00,20:45:00,missb4we,45,,0
+gold_b,20:58:00,20:58:00,sfgh,46,,0
+gold_b,21:25:00,21:25:00,parlppi,47,,0
+gold_b,21:38:00,21:38:00,mtzion,48,,1
+gold_c,06:25:00,06:25:00,missb4we,1,,0
+gold_c,06:38:00,06:38:00,sfgh,2,,0
+gold_c,07:05:00,07:05:00,parlppi,3,,0
+gold_c,07:18:00,07:18:00,mtzion,4,,0
+gold_c,07:45:00,07:45:00,missb4we,5,,0
+gold_c,07:58:00,07:58:00,sfgh,6,,0
+gold_c,08:25:00,08:25:00,parlppi,7,,0
+gold_c,08:38:00,08:38:00,mtzion,8,,0
+gold_c,09:05:00,09:05:00,missb4we,9,,0
+gold_c,09:18:00,09:18:00,sfgh,10,,0
+gold_c,09:45:00,09:45:00,parlppi,11,,0
+gold_c,09:58:00,09:58:00,mtzion,12,,0
+gold_c,10:25:00,10:25:00,missb4we,13,,0
+gold_c,10:38:00,10:38:00,sfgh,14,,0
+gold_c,11:05:00,11:05:00,parlppi,15,,0
+gold_c,11:18:00,11:18:00,mtzion,16,,0
+gold_c,11:45:00,11:45:00,missb4we,17,,0
+gold_c,11:58:00,11:58:00,sfgh,18,,0
+gold_c,12:25:00,12:25:00,parlppi,19,,0
+gold_c,12:38:00,12:38:00,mtzion,20,,0
+gold_c,13:05:00,13:05:00,missb4we,21,,0
+gold_c,13:18:00,13:18:00,sfgh,22,,0
+gold_c,13:45:00,13:45:00,parlppi,23,,0
+gold_c,13:58:00,13:58:00,mtzion,24,,0
+gold_c,14:25:00,14:25:00,missb4we,25,,0
+gold_c,14:38:00,14:38:00,sfgh,26,,0
+gold_c,15:05:00,15:05:00,parlppi,27,,0
+gold_c,15:18:00,15:18:00,mtzion,28,,0
+gold_c,15:45:00,15:45:00,missb4we,29,,0
+gold_c,15:58:00,15:58:00,sfgh,30,,0
+gold_c,16:25:00,16:25:00,parlppi,31,,0
+gold_c,16:38:00,16:38:00,mtzion,32,,0
+gold_c,17:05:00,17:05:00,missb4we,33,,0
+gold_c,17:18:00,17:18:00,sfgh,34,,0
+gold_c,17:45:00,17:45:00,parlppi,35,,0
+gold_c,17:58:00,17:58:00,mtzion,36,,0
+gold_c,18:25:00,18:25:00,missb4we,37,,0
+gold_c,18:38:00,18:38:00,sfgh,38,,0
+gold_c,19:05:00,19:05:00,parlppi,39,,0
+gold_c,19:18:00,19:18:00,mtzion,40,,1
+gold_d,06:45:00,06:45:00,missb4we,1,,0
+gold_d,06:58:00,06:58:00,sfgh,2,,0
+gold_d,07:25:00,07:25:00,parlppi,3,,0
+gold_d,07:38:00,07:38:00,mtzion,4,,0
+gold_d,08:05:00,08:05:00,missb4we,5,,0
+gold_d,08:18:00,08:18:00,sfgh,6,,0
+gold_d,08:45:00,08:45:00,parlppi,7,,0
+gold_d,08:58:00,08:58:00,mtzion,8,,0
+gold_d,09:25:00,09:25:00,missb4we,9,,0
+gold_d,09:38:00,09:38:00,sfgh,10,,0
+gold_d,10:05:00,10:05:00,parlppi,11,,0
+gold_d,10:18:00,10:18:00,mtzion,12,,0
+gold_d,10:45:00,10:45:00,missb4we,13,,0
+gold_d,10:58:00,10:58:00,sfgh,14,,0
+gold_d,11:25:00,11:25:00,parlppi,15,,0
+gold_d,11:38:00,11:38:00,mtzion,16,,0
+gold_d,12:05:00,12:05:00,missb4we,17,,0
+gold_d,12:18:00,12:18:00,sfgh,18,,0
+gold_d,12:45:00,12:45:00,parlppi,19,,0
+gold_d,12:58:00,12:58:00,mtzion,20,,0
+gold_d,13:25:00,13:25:00,missb4we,21,,0
+gold_d,13:38:00,13:38:00,sfgh,22,,0
+gold_d,14:05:00,14:05:00,parlppi,23,,0
+gold_d,14:18:00,14:18:00,mtzion,24,,0
+gold_d,14:45:00,14:45:00,missb4we,25,,0
+gold_d,14:58:00,14:58:00,sfgh,26,,0
+gold_d,15:25:00,15:25:00,parlppi,27,,0
+gold_d,15:38:00,15:38:00,mtzion,28,,0
+gold_d,16:05:00,16:05:00,missb4we,29,,0
+gold_d,16:18:00,16:18:00,sfgh,30,,0
+gold_d,16:45:00,16:45:00,parlppi,31,,0
+gold_d,16:58:00,16:58:00,mtzion,32,,0
+gold_d,17:25:00,17:25:00,missb4we,33,,0
+gold_d,17:38:00,17:38:00,sfgh,34,,0
+gold_d,18:05:00,18:05:00,parlppi,35,,0
+gold_d,18:18:00,18:18:00,mtzion,36,,0
+gold_d,18:45:00,18:45:00,missb4we,37,,0
+gold_d,18:58:00,18:58:00,sfgh,38,,0
+gold_d,19:25:00,19:25:00,parlppi,39,,0
+gold_d,19:38:00,19:38:00,mtzion,40,,0
+gold_d,20:05:00,20:05:00,missb4we,41,,0
+gold_d,20:18:00,20:18:00,sfgh,42,,0
+gold_d,20:45:00,20:45:00,parlppi,43,,0
+gold_d,20:58:00,20:58:00,mtzion,44,,1
+gold_e1,06:55:00,06:55:00,missb4we,1,,0
+gold_e1,07:08:00,07:08:00,sfgh,2,,0
+gold_e1,07:35:00,07:35:00,parlppi,3,,0
+gold_e1,07:48:00,07:48:00,mtzion,4,,0
+gold_e1,08:15:00,08:15:00,missb4we,5,,0
+gold_e1,08:28:00,08:28:00,sfgh,6,,0
+gold_e1,08:55:00,08:55:00,parlppi,7,,0
+gold_e1,09:08:00,09:08:00,mtzion,8,,0
+gold_e1,09:35:00,09:35:00,missb4we,9,,0
+gold_e1,09:48:00,09:48:00,sfgh,10,,0
+gold_e1,10:15:00,10:15:00,parlppi,11,,0
+gold_e1,10:28:00,10:28:00,mtzion,12,,0
+gold_e1,10:55:00,10:55:00,missb4we,13,,1
+gold_e2,14:55:00,14:55:00,missb4we,1,,0
+gold_e2,15:08:00,15:08:00,sfgh,2,,0
+gold_e2,15:35:00,15:35:00,parlppi,3,,0
+gold_e2,15:48:00,15:48:00,mtzion,4,,0
+gold_e2,16:15:00,16:15:00,missb4we,5,,0
+gold_e2,16:28:00,16:28:00,sfgh,6,,0
+gold_e2,16:55:00,16:55:00,parlppi,7,,0
+gold_e2,17:08:00,17:08:00,mtzion,8,,0
+gold_e2,17:35:00,17:35:00,missb4we,9,,0
+gold_e2,17:48:00,17:48:00,sfgh,10,,0
+gold_e2,18:15:00,18:15:00,parlppi,11,,0
+gold_e2,18:28:00,18:28:00,mtzion,12,,0
+gold_e2,18:55:00,18:55:00,missb4we,13,,1
+green_654minn_to_chinbasn_a,06:25:00,06:25:00,missb4we,1,to China Basin,0
+green_654minn_to_chinbasn_a,06:30:00,06:30:00,mboi,2,,0
+green_654minn_to_chinbasn_a,06:38:00,06:38:00,caltrain,3,,0
+green_654minn_to_chinbasn_a,06:41:00,06:41:00,chinbasn,4,,1
+green_654minn_to_chinbasn_a,06:52:00,06:52:00,654minn,5,,0
+green_654minn_to_chinbasn_a,07:00:00,07:00:00,missb4we,6,to China Basin,0
+green_654minn_to_chinbasn_a,07:05:00,07:05:00,mboi,7,,0
+green_654minn_to_chinbasn_a,07:13:00,07:13:00,caltrain,8,,0
+green_654minn_to_chinbasn_a,07:16:00,07:16:00,chinbasn,9,,1
+green_654minn_to_chinbasn_a,07:27:00,07:27:00,654minn,10,,0
+green_654minn_to_chinbasn_a,07:35:00,07:35:00,missb4we,11,to China Basin,0
+green_654minn_to_chinbasn_a,07:40:00,07:40:00,mboi,12,,0
+green_654minn_to_chinbasn_a,07:48:00,07:48:00,caltrain,13,,0
+green_654minn_to_chinbasn_a,07:51:00,07:51:00,chinbasn,14,,1
+green_654minn_to_chinbasn_a,08:02:00,08:02:00,654minn,15,,0
+green_654minn_to_chinbasn_a,08:10:00,08:10:00,missb4we,16,to China Basin,0
+green_654minn_to_chinbasn_a,08:15:00,08:15:00,mboi,17,,0
+green_654minn_to_chinbasn_a,08:23:00,08:23:00,caltrain,18,,0
+green_654minn_to_chinbasn_a,08:26:00,08:26:00,chinbasn,19,,1
+green_654minn_to_chinbasn_a,08:37:00,08:37:00,654minn,20,,0
+green_654minn_to_chinbasn_a,08:45:00,08:45:00,missb4we,21,to China Basin,0
+green_654minn_to_chinbasn_a,08:50:00,08:50:00,mboi,22,,0
+green_654minn_to_chinbasn_a,08:58:00,08:58:00,caltrain,23,,0
+green_654minn_to_chinbasn_a,09:01:00,09:01:00,chinbasn,24,,1
+green_654minn_to_chinbasn_a,09:12:00,09:12:00,654minn,25,,0
+green_654minn_to_chinbasn_a,09:20:00,09:20:00,missb4we,26,to China Basin,0
+green_654minn_to_chinbasn_a,09:25:00,09:25:00,mboi,27,,0
+green_654minn_to_chinbasn_a,09:33:00,09:33:00,caltrain,28,,0
+green_654minn_to_chinbasn_a,09:36:00,09:36:00,chinbasn,29,,1
+green_654minn_to_chinbasn_a,09:47:00,09:47:00,654minn,30,,0
+green_654minn_to_chinbasn_a,09:55:00,09:55:00,missb4we,31,to China Basin,0
+green_654minn_to_chinbasn_a,10:00:00,10:00:00,mboi,32,,0
+green_654minn_to_chinbasn_a,10:08:00,10:08:00,caltrain,33,,0
+green_654minn_to_chinbasn_a,10:11:00,10:11:00,chinbasn,34,,1
+green_654minn_to_chinbasn_a,10:22:00,10:22:00,654minn,35,,0
+green_654minn_to_chinbasn_a,10:30:00,10:30:00,missb4we,36,to China Basin,0
+green_654minn_to_chinbasn_a,10:35:00,10:35:00,mboi,37,,0
+green_654minn_to_chinbasn_a,10:43:00,10:43:00,caltrain,38,,0
+green_654minn_to_chinbasn_a,10:46:00,10:46:00,chinbasn,39,,1
+green_654minn_to_chinbasn_a,10:57:00,10:57:00,654minn,40,,0
+green_654minn_to_chinbasn_a,11:05:00,11:05:00,missb4we,41,to China Basin,0
+green_654minn_to_chinbasn_a,11:10:00,11:10:00,mboi,42,,0
+green_654minn_to_chinbasn_a,11:18:00,11:18:00,caltrain,43,,0
+green_654minn_to_chinbasn_a,11:21:00,11:21:00,chinbasn,44,,1
+green_654minn_to_chinbasn_a,11:32:00,11:32:00,654minn,45,,0
+green_654minn_to_chinbasn_a,11:40:00,11:40:00,missb4we,46,to China Basin,0
+green_654minn_to_chinbasn_a,11:45:00,11:45:00,mboi,47,,0
+green_654minn_to_chinbasn_a,11:53:00,11:53:00,caltrain,48,,0
+green_654minn_to_chinbasn_a,11:56:00,11:56:00,chinbasn,49,,1
+green_654minn_to_chinbasn_a,12:07:00,12:07:00,654minn,50,,0
+green_654minn_to_chinbasn_a,12:15:00,12:15:00,missb4we,51,to China Basin,0
+green_654minn_to_chinbasn_a,12:20:00,12:20:00,mboi,52,,0
+green_654minn_to_chinbasn_a,12:28:00,12:28:00,caltrain,53,,0
+green_654minn_to_chinbasn_a,12:31:00,12:31:00,chinbasn,54,,1
+green_654minn_to_chinbasn_a,12:42:00,12:42:00,654minn,55,,0
+green_654minn_to_chinbasn_a,12:50:00,12:50:00,missb4we,56,to China Basin,0
+green_654minn_to_chinbasn_a,12:55:00,12:55:00,mboi,57,,0
+green_654minn_to_chinbasn_a,13:03:00,13:03:00,caltrain,58,,0
+green_654minn_to_chinbasn_a,13:06:00,13:06:00,chinbasn,59,,1
+green_654minn_to_chinbasn_a,13:17:00,13:17:00,654minn,60,,0
+green_654minn_to_chinbasn_a,13:25:00,13:25:00,missb4we,61,to China Basin,0
+green_654minn_to_chinbasn_a,13:30:00,13:30:00,mboi,62,,0
+green_654minn_to_chinbasn_a,13:38:00,13:38:00,caltrain,63,,0
+green_654minn_to_chinbasn_a,13:41:00,13:41:00,chinbasn,64,,1
+green_654minn_to_chinbasn_a,13:52:00,13:52:00,654minn,65,,0
+green_654minn_to_chinbasn_a,14:00:00,14:00:00,missb4we,66,to China Basin,0
+green_654minn_to_chinbasn_a,14:05:00,14:05:00,mboi,67,,0
+green_654minn_to_chinbasn_a,14:13:00,14:13:00,caltrain,68,,0
+green_654minn_to_chinbasn_a,14:16:00,14:16:00,chinbasn,69,,1
+green_654minn_to_chinbasn_a,14:27:00,14:27:00,654minn,70,,0
+green_654minn_to_chinbasn_a,14:35:00,14:35:00,missb4we,71,to China Basin,0
+green_654minn_to_chinbasn_a,14:40:00,14:40:00,mboi,72,,0
+green_654minn_to_chinbasn_a,14:48:00,14:48:00,caltrain,73,,0
+green_654minn_to_chinbasn_a,14:51:00,14:51:00,chinbasn,74,,1
+green_654minn_to_chinbasn_a,15:02:00,15:02:00,654minn,75,,0
+green_654minn_to_chinbasn_a,15:10:00,15:10:00,missb4we,76,to China Basin,0
+green_654minn_to_chinbasn_a,15:15:00,15:15:00,mboi,77,,0
+green_654minn_to_chinbasn_a,15:23:00,15:23:00,caltrain,78,,0
+green_654minn_to_chinbasn_a,15:26:00,15:26:00,chinbasn,79,,1
+green_654minn_to_chinbasn_a,15:37:00,15:37:00,654minn,80,,0
+green_654minn_to_chinbasn_a,15:45:00,15:45:00,missb4we,81,to China Basin,0
+green_654minn_to_chinbasn_a,15:50:00,15:50:00,mboi,82,,0
+green_654minn_to_chinbasn_a,15:58:00,15:58:00,caltrain,83,,0
+green_654minn_to_chinbasn_a,16:01:00,16:01:00,chinbasn,84,,1
+green_654minn_to_chinbasn_a,16:12:00,16:12:00,654minn,85,,0
+green_654minn_to_chinbasn_a,16:20:00,16:20:00,missb4we,86,to China Basin,0
+green_654minn_to_chinbasn_a,16:25:00,16:25:00,mboi,87,,0
+green_654minn_to_chinbasn_a,16:33:00,16:33:00,caltrain,88,,0
+green_654minn_to_chinbasn_a,16:36:00,16:36:00,chinbasn,89,,1
+green_654minn_to_chinbasn_a,16:47:00,16:47:00,654minn,90,,0
+green_654minn_to_chinbasn_a,16:55:00,16:55:00,missb4we,91,to China Basin,0
+green_654minn_to_chinbasn_a,17:00:00,17:00:00,mboi,92,,0
+green_654minn_to_chinbasn_a,17:08:00,17:08:00,caltrain,93,,0
+green_654minn_to_chinbasn_a,17:11:00,17:11:00,chinbasn,94,,1
+green_654minn_to_chinbasn_a,17:22:00,17:22:00,654minn,95,,0
+green_654minn_to_chinbasn_a,17:30:00,17:30:00,missb4we,96,to China Basin,0
+green_654minn_to_chinbasn_a,17:35:00,17:35:00,mboi,97,,0
+green_654minn_to_chinbasn_a,17:43:00,17:43:00,caltrain,98,,0
+green_654minn_to_chinbasn_a,17:46:00,17:46:00,chinbasn,99,,1
+green_654minn_to_chinbasn_a,17:57:00,17:57:00,654minn,100,,0
+green_654minn_to_chinbasn_a,18:05:00,18:05:00,missb4we,101,to China Basin,0
+green_654minn_to_chinbasn_a,18:10:00,18:10:00,mboi,102,,0
+green_654minn_to_chinbasn_a,18:18:00,18:18:00,caltrain,103,,0
+green_654minn_to_chinbasn_a,18:21:00,18:21:00,chinbasn,104,,1
+green_654minn_to_chinbasn_a,18:32:00,18:32:00,654minn,105,,0
+green_654minn_to_chinbasn_a,18:40:00,18:40:00,missb4we,106,to China Basin,0
+green_654minn_to_chinbasn_a,18:45:00,18:45:00,mboi,107,,0
+green_654minn_to_chinbasn_a,18:53:00,18:53:00,caltrain,108,,0
+green_654minn_to_chinbasn_a,18:56:00,18:56:00,chinbasn,109,,1
+green_chinbasn_to_654minn_a,06:41:00,06:41:00,chinbasn,1,,0
+green_chinbasn_to_654minn_a,06:47:00,06:47:00,missb4we,2,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,06:52:00,06:52:00,654minn,3,,1
+green_chinbasn_to_654minn_a,07:16:00,07:16:00,chinbasn,4,,0
+green_chinbasn_to_654minn_a,07:22:00,07:22:00,missb4we,5,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,07:27:00,07:27:00,654minn,6,,1
+green_chinbasn_to_654minn_a,07:51:00,07:51:00,chinbasn,7,,0
+green_chinbasn_to_654minn_a,07:57:00,07:57:00,missb4we,8,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,08:02:00,08:02:00,654minn,9,,1
+green_chinbasn_to_654minn_a,08:26:00,08:26:00,chinbasn,10,,0
+green_chinbasn_to_654minn_a,08:32:00,08:32:00,missb4we,11,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,08:37:00,08:37:00,654minn,12,,1
+green_chinbasn_to_654minn_a,09:01:00,09:01:00,chinbasn,13,,0
+green_chinbasn_to_654minn_a,09:07:00,09:07:00,missb4we,14,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,09:12:00,09:12:00,654minn,15,,1
+green_chinbasn_to_654minn_a,09:36:00,09:36:00,chinbasn,16,,0
+green_chinbasn_to_654minn_a,09:42:00,09:42:00,missb4we,17,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,09:47:00,09:47:00,654minn,18,,1
+green_chinbasn_to_654minn_a,10:11:00,10:11:00,chinbasn,19,,0
+green_chinbasn_to_654minn_a,10:17:00,10:17:00,missb4we,20,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,10:22:00,10:22:00,654minn,21,,1
+green_chinbasn_to_654minn_a,10:46:00,10:46:00,chinbasn,22,,0
+green_chinbasn_to_654minn_a,10:52:00,10:52:00,missb4we,23,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,10:57:00,10:57:00,654minn,24,,1
+green_chinbasn_to_654minn_a,11:21:00,11:21:00,chinbasn,25,,0
+green_chinbasn_to_654minn_a,11:27:00,11:27:00,missb4we,26,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,11:32:00,11:32:00,654minn,27,,1
+green_chinbasn_to_654minn_a,11:56:00,11:56:00,chinbasn,28,,0
+green_chinbasn_to_654minn_a,12:02:00,12:02:00,missb4we,29,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,12:07:00,12:07:00,654minn,30,,1
+green_chinbasn_to_654minn_a,12:31:00,12:31:00,chinbasn,31,,0
+green_chinbasn_to_654minn_a,12:37:00,12:37:00,missb4we,32,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,12:42:00,12:42:00,654minn,33,,1
+green_chinbasn_to_654minn_a,13:06:00,13:06:00,chinbasn,34,,0
+green_chinbasn_to_654minn_a,13:12:00,13:12:00,missb4we,35,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,13:17:00,13:17:00,654minn,36,,1
+green_chinbasn_to_654minn_a,13:41:00,13:41:00,chinbasn,37,,0
+green_chinbasn_to_654minn_a,13:47:00,13:47:00,missb4we,38,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,13:52:00,13:52:00,654minn,39,,1
+green_chinbasn_to_654minn_a,14:16:00,14:16:00,chinbasn,40,,0
+green_chinbasn_to_654minn_a,14:22:00,14:22:00,missb4we,41,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,14:27:00,14:27:00,654minn,42,,1
+green_chinbasn_to_654minn_a,14:51:00,14:51:00,chinbasn,43,,0
+green_chinbasn_to_654minn_a,14:57:00,14:57:00,missb4we,44,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,15:02:00,15:02:00,654minn,45,,1
+green_chinbasn_to_654minn_a,15:26:00,15:26:00,chinbasn,46,,0
+green_chinbasn_to_654minn_a,15:32:00,15:32:00,missb4we,47,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,15:37:00,15:37:00,654minn,48,,1
+green_chinbasn_to_654minn_a,16:01:00,16:01:00,chinbasn,49,,0
+green_chinbasn_to_654minn_a,16:07:00,16:07:00,missb4we,50,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,16:12:00,16:12:00,654minn,51,,1
+green_chinbasn_to_654minn_a,16:36:00,16:36:00,chinbasn,52,,0
+green_chinbasn_to_654minn_a,16:42:00,16:42:00,missb4we,53,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,16:47:00,16:47:00,654minn,54,,1
+green_chinbasn_to_654minn_a,17:11:00,17:11:00,chinbasn,55,,0
+green_chinbasn_to_654minn_a,17:17:00,17:17:00,missb4we,56,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,17:22:00,17:22:00,654minn,57,,1
+green_chinbasn_to_654minn_a,17:46:00,17:46:00,chinbasn,58,,0
+green_chinbasn_to_654minn_a,17:52:00,17:52:00,missb4we,59,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,17:57:00,17:57:00,654minn,60,,1
+green_chinbasn_to_654minn_a,18:21:00,18:21:00,chinbasn,61,,0
+green_chinbasn_to_654minn_a,18:27:00,18:27:00,missb4we,62,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_a,18:32:00,18:32:00,654minn,63,,1
+green_chinbasn_to_654minn_a,18:56:00,18:56:00,chinbasn,64,,0
+green_chinbasn_to_654minn_a,19:02:00,19:02:00,missb4we,65,,1
+green_654minn_to_chinbasn_b,06:40:00,06:40:00,missb4we,1,to China Basin,0
+green_654minn_to_chinbasn_b,06:45:00,06:45:00,mboi,2,,0
+green_654minn_to_chinbasn_b,06:53:00,06:53:00,caltrain,3,,0
+green_654minn_to_chinbasn_b,06:56:00,06:56:00,chinbasn,4,,1
+green_654minn_to_chinbasn_b,07:07:00,07:07:00,654minn,5,,0
+green_654minn_to_chinbasn_b,07:15:00,07:15:00,missb4we,6,to China Basin,0
+green_654minn_to_chinbasn_b,07:20:00,07:20:00,mboi,7,,0
+green_654minn_to_chinbasn_b,07:28:00,07:28:00,caltrain,8,,0
+green_654minn_to_chinbasn_b,07:31:00,07:31:00,chinbasn,9,,1
+green_654minn_to_chinbasn_b,07:42:00,07:42:00,654minn,10,,0
+green_654minn_to_chinbasn_b,07:50:00,07:50:00,missb4we,11,to China Basin,0
+green_654minn_to_chinbasn_b,07:55:00,07:55:00,mboi,12,,0
+green_654minn_to_chinbasn_b,08:03:00,08:03:00,caltrain,13,,0
+green_654minn_to_chinbasn_b,08:06:00,08:06:00,chinbasn,14,,1
+green_654minn_to_chinbasn_b,08:17:00,08:17:00,654minn,15,,0
+green_654minn_to_chinbasn_b,08:25:00,08:25:00,missb4we,16,to China Basin,0
+green_654minn_to_chinbasn_b,08:30:00,08:30:00,mboi,17,,0
+green_654minn_to_chinbasn_b,08:38:00,08:38:00,caltrain,18,,0
+green_654minn_to_chinbasn_b,08:41:00,08:41:00,chinbasn,19,,1
+green_654minn_to_chinbasn_b,08:52:00,08:52:00,654minn,20,,0
+green_654minn_to_chinbasn_b,09:00:00,09:00:00,missb4we,21,to China Basin,0
+green_654minn_to_chinbasn_b,09:05:00,09:05:00,mboi,22,,0
+green_654minn_to_chinbasn_b,09:13:00,09:13:00,caltrain,23,,0
+green_654minn_to_chinbasn_b,09:16:00,09:16:00,chinbasn,24,,1
+green_654minn_to_chinbasn_b,09:27:00,09:27:00,654minn,25,,0
+green_654minn_to_chinbasn_b,09:35:00,09:35:00,missb4we,26,to China Basin,0
+green_654minn_to_chinbasn_b,09:40:00,09:40:00,mboi,27,,0
+green_654minn_to_chinbasn_b,09:48:00,09:48:00,caltrain,28,,0
+green_654minn_to_chinbasn_b,09:51:00,09:51:00,chinbasn,29,,1
+green_654minn_to_chinbasn_b,10:02:00,10:02:00,654minn,30,,0
+green_654minn_to_chinbasn_b,10:10:00,10:10:00,missb4we,31,to China Basin,0
+green_654minn_to_chinbasn_b,10:15:00,10:15:00,mboi,32,,0
+green_654minn_to_chinbasn_b,10:23:00,10:23:00,caltrain,33,,0
+green_654minn_to_chinbasn_b,10:26:00,10:26:00,chinbasn,34,,1
+green_654minn_to_chinbasn_b,10:37:00,10:37:00,654minn,35,,0
+green_654minn_to_chinbasn_b,10:45:00,10:45:00,missb4we,36,to China Basin,0
+green_654minn_to_chinbasn_b,10:50:00,10:50:00,mboi,37,,0
+green_654minn_to_chinbasn_b,10:58:00,10:58:00,caltrain,38,,0
+green_654minn_to_chinbasn_b,11:01:00,11:01:00,chinbasn,39,,1
+green_654minn_to_chinbasn_b,11:12:00,11:12:00,654minn,40,,0
+green_654minn_to_chinbasn_b,11:20:00,11:20:00,missb4we,41,to China Basin,0
+green_654minn_to_chinbasn_b,11:25:00,11:25:00,mboi,42,,0
+green_654minn_to_chinbasn_b,11:33:00,11:33:00,caltrain,43,,0
+green_654minn_to_chinbasn_b,11:36:00,11:36:00,chinbasn,44,,1
+green_654minn_to_chinbasn_b,11:47:00,11:47:00,654minn,45,,0
+green_654minn_to_chinbasn_b,11:55:00,11:55:00,missb4we,46,to China Basin,0
+green_654minn_to_chinbasn_b,12:00:00,12:00:00,mboi,47,,0
+green_654minn_to_chinbasn_b,12:08:00,12:08:00,caltrain,48,,0
+green_654minn_to_chinbasn_b,12:11:00,12:11:00,chinbasn,49,,1
+green_654minn_to_chinbasn_b,12:22:00,12:22:00,654minn,50,,0
+green_654minn_to_chinbasn_b,12:30:00,12:30:00,missb4we,51,to China Basin,0
+green_654minn_to_chinbasn_b,12:35:00,12:35:00,mboi,52,,0
+green_654minn_to_chinbasn_b,12:43:00,12:43:00,caltrain,53,,0
+green_654minn_to_chinbasn_b,12:46:00,12:46:00,chinbasn,54,,1
+green_654minn_to_chinbasn_b,12:57:00,12:57:00,654minn,55,,0
+green_654minn_to_chinbasn_b,13:05:00,13:05:00,missb4we,56,to China Basin,0
+green_654minn_to_chinbasn_b,13:10:00,13:10:00,mboi,57,,0
+green_654minn_to_chinbasn_b,13:18:00,13:18:00,caltrain,58,,0
+green_654minn_to_chinbasn_b,13:21:00,13:21:00,chinbasn,59,,1
+green_654minn_to_chinbasn_b,13:32:00,13:32:00,654minn,60,,0
+green_654minn_to_chinbasn_b,13:40:00,13:40:00,missb4we,61,to China Basin,0
+green_654minn_to_chinbasn_b,13:45:00,13:45:00,mboi,62,,0
+green_654minn_to_chinbasn_b,13:53:00,13:53:00,caltrain,63,,0
+green_654minn_to_chinbasn_b,13:56:00,13:56:00,chinbasn,64,,1
+green_654minn_to_chinbasn_b,14:07:00,14:07:00,654minn,65,,0
+green_654minn_to_chinbasn_b,14:15:00,14:15:00,missb4we,66,to China Basin,0
+green_654minn_to_chinbasn_b,14:20:00,14:20:00,mboi,67,,0
+green_654minn_to_chinbasn_b,14:28:00,14:28:00,caltrain,68,,0
+green_654minn_to_chinbasn_b,14:31:00,14:31:00,chinbasn,69,,1
+green_654minn_to_chinbasn_b,14:42:00,14:42:00,654minn,70,,0
+green_654minn_to_chinbasn_b,14:50:00,14:50:00,missb4we,71,to China Basin,0
+green_654minn_to_chinbasn_b,14:55:00,14:55:00,mboi,72,,0
+green_654minn_to_chinbasn_b,15:03:00,15:03:00,caltrain,73,,0
+green_654minn_to_chinbasn_b,15:06:00,15:06:00,chinbasn,74,,1
+green_654minn_to_chinbasn_b,15:17:00,15:17:00,654minn,75,,0
+green_654minn_to_chinbasn_b,15:25:00,15:25:00,missb4we,76,to China Basin,0
+green_654minn_to_chinbasn_b,15:30:00,15:30:00,mboi,77,,0
+green_654minn_to_chinbasn_b,15:38:00,15:38:00,caltrain,78,,0
+green_654minn_to_chinbasn_b,15:41:00,15:41:00,chinbasn,79,,1
+green_654minn_to_chinbasn_b,15:52:00,15:52:00,654minn,80,,0
+green_654minn_to_chinbasn_b,16:00:00,16:00:00,missb4we,81,to China Basin,0
+green_654minn_to_chinbasn_b,16:05:00,16:05:00,mboi,82,,0
+green_654minn_to_chinbasn_b,16:13:00,16:13:00,caltrain,83,,0
+green_654minn_to_chinbasn_b,16:16:00,16:16:00,chinbasn,84,,1
+green_654minn_to_chinbasn_b,16:27:00,16:27:00,654minn,85,,0
+green_654minn_to_chinbasn_b,16:35:00,16:35:00,missb4we,86,to China Basin,0
+green_654minn_to_chinbasn_b,16:40:00,16:40:00,mboi,87,,0
+green_654minn_to_chinbasn_b,16:48:00,16:48:00,caltrain,88,,0
+green_654minn_to_chinbasn_b,16:51:00,16:51:00,chinbasn,89,,1
+green_654minn_to_chinbasn_b,17:02:00,17:02:00,654minn,90,,0
+green_654minn_to_chinbasn_b,17:10:00,17:10:00,missb4we,91,to China Basin,0
+green_654minn_to_chinbasn_b,17:15:00,17:15:00,mboi,92,,0
+green_654minn_to_chinbasn_b,17:23:00,17:23:00,caltrain,93,,0
+green_654minn_to_chinbasn_b,17:26:00,17:26:00,chinbasn,94,,1
+green_654minn_to_chinbasn_b,17:37:00,17:37:00,654minn,95,,0
+green_654minn_to_chinbasn_b,17:45:00,17:45:00,missb4we,96,to China Basin,0
+green_654minn_to_chinbasn_b,17:50:00,17:50:00,mboi,97,,0
+green_654minn_to_chinbasn_b,17:58:00,17:58:00,caltrain,98,,0
+green_654minn_to_chinbasn_b,18:01:00,18:01:00,chinbasn,99,,1
+green_654minn_to_chinbasn_b,18:12:00,18:12:00,654minn,100,,0
+green_654minn_to_chinbasn_b,18:20:00,18:20:00,missb4we,101,to China Basin,0
+green_654minn_to_chinbasn_b,18:25:00,18:25:00,mboi,102,,0
+green_654minn_to_chinbasn_b,18:33:00,18:33:00,caltrain,103,,0
+green_654minn_to_chinbasn_b,18:36:00,18:36:00,chinbasn,104,,1
+green_chinbasn_to_654minn_b,06:56:00,06:56:00,chinbasn,1,,0
+green_chinbasn_to_654minn_b,07:02:00,07:02:00,missb4we,2,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,07:07:00,07:07:00,654minn,3,,1
+green_chinbasn_to_654minn_b,07:31:00,07:31:00,chinbasn,4,,0
+green_chinbasn_to_654minn_b,07:37:00,07:37:00,missb4we,5,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,07:42:00,07:42:00,654minn,6,,1
+green_chinbasn_to_654minn_b,08:06:00,08:06:00,chinbasn,7,,0
+green_chinbasn_to_654minn_b,08:12:00,08:12:00,missb4we,8,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,08:17:00,08:17:00,654minn,9,,1
+green_chinbasn_to_654minn_b,08:41:00,08:41:00,chinbasn,10,,0
+green_chinbasn_to_654minn_b,08:47:00,08:47:00,missb4we,11,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,08:52:00,08:52:00,654minn,12,,1
+green_chinbasn_to_654minn_b,09:16:00,09:16:00,chinbasn,13,,0
+green_chinbasn_to_654minn_b,09:22:00,09:22:00,missb4we,14,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,09:27:00,09:27:00,654minn,15,,1
+green_chinbasn_to_654minn_b,09:51:00,09:51:00,chinbasn,16,,0
+green_chinbasn_to_654minn_b,09:57:00,09:57:00,missb4we,17,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,10:02:00,10:02:00,654minn,18,,1
+green_chinbasn_to_654minn_b,10:26:00,10:26:00,chinbasn,19,,0
+green_chinbasn_to_654minn_b,10:32:00,10:32:00,missb4we,20,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,10:37:00,10:37:00,654minn,21,,1
+green_chinbasn_to_654minn_b,11:01:00,11:01:00,chinbasn,22,,0
+green_chinbasn_to_654minn_b,11:07:00,11:07:00,missb4we,23,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,11:12:00,11:12:00,654minn,24,,1
+green_chinbasn_to_654minn_b,11:36:00,11:36:00,chinbasn,25,,0
+green_chinbasn_to_654minn_b,11:42:00,11:42:00,missb4we,26,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,11:47:00,11:47:00,654minn,27,,1
+green_chinbasn_to_654minn_b,12:11:00,12:11:00,chinbasn,28,,0
+green_chinbasn_to_654minn_b,12:17:00,12:17:00,missb4we,29,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,12:22:00,12:22:00,654minn,30,,1
+green_chinbasn_to_654minn_b,12:46:00,12:46:00,chinbasn,31,,0
+green_chinbasn_to_654minn_b,12:52:00,12:52:00,missb4we,32,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,12:57:00,12:57:00,654minn,33,,1
+green_chinbasn_to_654minn_b,13:21:00,13:21:00,chinbasn,34,,0
+green_chinbasn_to_654minn_b,13:27:00,13:27:00,missb4we,35,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,13:32:00,13:32:00,654minn,36,,1
+green_chinbasn_to_654minn_b,13:56:00,13:56:00,chinbasn,37,,0
+green_chinbasn_to_654minn_b,14:02:00,14:02:00,missb4we,38,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,14:07:00,14:07:00,654minn,39,,1
+green_chinbasn_to_654minn_b,14:31:00,14:31:00,chinbasn,40,,0
+green_chinbasn_to_654minn_b,14:37:00,14:37:00,missb4we,41,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,14:42:00,14:42:00,654minn,42,,1
+green_chinbasn_to_654minn_b,15:06:00,15:06:00,chinbasn,43,,0
+green_chinbasn_to_654minn_b,15:12:00,15:12:00,missb4we,44,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,15:17:00,15:17:00,654minn,45,,1
+green_chinbasn_to_654minn_b,15:41:00,15:41:00,chinbasn,46,,0
+green_chinbasn_to_654minn_b,15:47:00,15:47:00,missb4we,47,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,15:52:00,15:52:00,654minn,48,,1
+green_chinbasn_to_654minn_b,16:16:00,16:16:00,chinbasn,49,,0
+green_chinbasn_to_654minn_b,16:22:00,16:22:00,missb4we,50,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,16:27:00,16:27:00,654minn,51,,1
+green_chinbasn_to_654minn_b,16:51:00,16:51:00,chinbasn,52,,0
+green_chinbasn_to_654minn_b,16:57:00,16:57:00,missb4we,53,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,17:02:00,17:02:00,654minn,54,,1
+green_chinbasn_to_654minn_b,17:26:00,17:26:00,chinbasn,55,,0
+green_chinbasn_to_654minn_b,17:32:00,17:32:00,missb4we,56,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,17:37:00,17:37:00,654minn,57,,1
+green_chinbasn_to_654minn_b,18:01:00,18:01:00,chinbasn,58,,0
+green_chinbasn_to_654minn_b,18:07:00,18:07:00,missb4we,59,to 654 Minnesota St.,0
+green_chinbasn_to_654minn_b,18:12:00,18:12:00,654minn,60,,1
+green_chinbasn_to_654minn_b,18:36:00,18:36:00,chinbasn,61,,0
+green_chinbasn_to_654minn_b,18:42:00,18:42:00,missb4we,62,,1
+grey_a,06:30:00,06:30:00,missb4we,1,,0
+grey_a,07:00:00,07:00:00,parlppi,2,,0
+grey_a,07:30:00,07:30:00,missb4we,3,,0
+grey_a,08:00:00,08:00:00,parlppi,4,,0
+grey_a,08:30:00,08:30:00,missb4we,5,,0
+grey_a,09:00:00,09:00:00,parlppi,6,,0
+grey_a,09:30:00,09:30:00,missb4we,7,,0
+grey_a,10:00:00,10:00:00,parlppi,8,,0
+grey_a,10:30:00,10:30:00,missb4we,9,,0
+grey_a,11:00:00,11:00:00,parlppi,10,,0
+grey_a,11:30:00,11:30:00,missb4we,11,,0
+grey_a,12:00:00,12:00:00,parlppi,12,,0
+grey_a,12:30:00,12:30:00,missb4we,13,,0
+grey_a,13:00:00,13:00:00,parlppi,14,,0
+grey_a,13:30:00,13:30:00,missb4we,15,,0
+grey_a,14:00:00,14:00:00,parlppi,16,,0
+grey_a,14:30:00,14:30:00,missb4we,17,,0
+grey_a,15:00:00,15:00:00,parlppi,18,,0
+grey_a,15:30:00,15:30:00,missb4we,19,,0
+grey_a,16:00:00,16:00:00,parlppi,20,,0
+grey_a,16:40:00,16:40:00,missb4we,21,,0
+grey_a,17:10:00,17:10:00,parlppi,22,,0
+grey_a,17:50:00,17:50:00,missb4we,23,,0
+grey_a,18:20:00,18:20:00,parlppi,24,,0
+grey_a,18:50:00,18:50:00,missb4we,25,,0
+grey_a,19:20:00,19:20:00,parlppi,26,,0
+grey_a,19:50:00,19:50:00,missb4we,27,,0
+grey_a,20:20:00,20:20:00,parlppi,28,,0
+grey_a,20:50:00,20:50:00,missb4we,29,,0
+grey_a,21:20:00,21:20:00,parlppi,30,,0
+grey_a,21:50:00,21:50:00,missb4we,31,,1
+grey_b,06:50:00,06:50:00,missb4we,1,,0
+grey_b,07:20:00,07:20:00,parlppi,2,,0
+grey_b,07:50:00,07:50:00,missb4we,3,,0
+grey_b,08:20:00,08:20:00,parlppi,4,,0
+grey_b,08:50:00,08:50:00,missb4we,5,,0
+grey_b,09:20:00,09:20:00,parlppi,6,,0
+grey_b,09:50:00,09:50:00,missb4we,7,,0
+grey_b,10:20:00,10:20:00,parlppi,8,,0
+grey_b,10:50:00,10:50:00,missb4we,9,,0
+grey_b,11:20:00,11:20:00,parlppi,10,,0
+grey_b,11:50:00,11:50:00,missb4we,11,,0
+grey_b,12:20:00,12:20:00,parlppi,12,,0
+grey_b,12:50:00,12:50:00,missb4we,13,,0
+grey_b,13:20:00,13:20:00,parlppi,14,,0
+grey_b,13:50:00,13:50:00,missb4we,15,,0
+grey_b,14:20:00,14:20:00,parlppi,16,,0
+grey_b,14:50:00,14:50:00,missb4we,17,,0
+grey_b,15:20:00,15:20:00,parlppi,18,,0
+grey_b,15:50:00,15:50:00,missb4we,19,,0
+grey_b,16:20:00,16:20:00,parlppi,20,,0
+grey_b,17:00:00,17:00:00,missb4we,21,,0
+grey_b,17:30:00,17:30:00,parlppi,22,,0
+grey_b,18:10:00,18:10:00,missb4we,23,,0
+grey_b,18:40:00,18:40:00,parlppi,24,,0
+grey_b,19:10:00,19:10:00,missb4we,25,,0
+grey_b,19:40:00,19:40:00,parlppi,26,,0
+grey_b,20:10:00,20:10:00,missb4we,27,,0
+grey_b,20:40:00,20:40:00,parlppi,28,,0
+grey_b,21:10:00,21:10:00,missb4we,29,,0
+grey_b,21:40:00,21:40:00,parlppi,30,,0
+grey_b,22:10:00,22:10:00,missb4we,31,,1
+grey_c,07:10:00,07:10:00,missb4we,1,,0
+grey_c,07:40:00,07:40:00,parlppi,2,,0
+grey_c,08:10:00,08:10:00,missb4we,3,,0
+grey_c,08:40:00,08:40:00,parlppi,4,,0
+grey_c,09:10:00,09:10:00,missb4we,5,,0
+grey_c,09:40:00,09:40:00,parlppi,6,,0
+grey_c,10:10:00,10:10:00,missb4we,7,,0
+grey_c,10:40:00,10:40:00,parlppi,8,,0
+grey_c,11:10:00,11:10:00,missb4we,9,,0
+grey_c,11:40:00,11:40:00,parlppi,10,,0
+grey_c,12:10:00,12:10:00,missb4we,11,,0
+grey_c,12:40:00,12:40:00,parlppi,12,,0
+grey_c,13:10:00,13:10:00,missb4we,13,,0
+grey_c,13:40:00,13:40:00,parlppi,14,,0
+grey_c,14:10:00,14:10:00,missb4we,15,,0
+grey_c,14:40:00,14:40:00,parlppi,16,,0
+grey_c,15:10:00,15:10:00,missb4we,17,,0
+grey_c,15:40:00,15:40:00,parlppi,18,,0
+grey_c,16:10:00,16:10:00,missb4we,19,,0
+grey_c,16:40:00,16:40:00,parlppi,20,,0
+grey_c,17:20:00,17:20:00,missb4we,21,,0
+grey_c,17:50:00,17:50:00,parlppi,22,,0
+grey_c,18:30:00,18:30:00,missb4we,23,,0
+grey_c,19:00:00,19:00:00,parlppi,24,,0
+grey_c,19:30:00,19:30:00,missb4we,25,,0
+grey_c,20:00:00,20:00:00,parlppi,26,,0
+grey_c,20:30:00,20:30:00,missb4we,27,,0
+grey_c,21:00:00,21:00:00,parlppi,28,,0
+grey_c,21:30:00,21:30:00,missb4we,29,,0
+grey_c,22:00:00,22:00:00,parlppi,30,,0
+grey_c,22:30:00,22:30:00,missb4we,31,,1
+grey_d1,07:20:00,07:20:00,missb4we,1,,0
+grey_d1,07:50:00,07:50:00,parlppi,2,,0
+grey_d1,08:20:00,08:20:00,missb4we,3,,0
+grey_d1,08:50:00,08:50:00,parlppi,4,,0
+grey_d1,09:20:00,09:20:00,missb4we,5,,0
+grey_d1,09:50:00,09:50:00,parlppi,6,,0
+grey_d1,10:20:00,10:20:00,missb4we,7,,1
+grey_d2,16:20:00,16:20:00,missb4we,8,,0
+grey_d2,16:50:00,16:50:00,parlppi,9,,0
+grey_d2,17:30:00,17:30:00,missb4we,10,,0
+grey_d2,18:00:00,18:00:00,parlppi,11,,0
+grey_d2,18:40:00,18:40:00,missb4we,12,,1
+lime_a,06:05:00,06:05:00,mcb,1,,0
+lime_a,06:11:00,06:11:00,buchanwb,2,,0
+lime_a,06:26:00,06:26:00,library,3,,0
+lime_a,06:39:00,06:39:00,buchaneb,4,,0
+lime_a,06:48:00,06:48:00,mcb,5,,0
+lime_a,06:54:00,06:54:00,buchanwb,6,,0
+lime_a,07:09:00,07:09:00,library,7,,0
+lime_a,07:22:00,07:22:00,buchaneb,8,,0
+lime_a,07:31:00,07:31:00,mcb,9,,0
+lime_a,07:37:00,07:37:00,buchanwb,10,,0
+lime_a,07:54:00,07:54:00,library,11,,0
+lime_a,08:09:00,08:09:00,buchaneb,12,,0
+lime_a,08:21:00,08:21:00,mcb,13,,0
+lime_a,08:27:00,08:27:00,buchanwb,14,,0
+lime_a,08:44:00,08:44:00,library,15,,0
+lime_a,08:59:00,08:59:00,buchaneb,16,,0
+lime_a,09:11:00,09:11:00,mcb,17,,0
+lime_a,09:17:00,09:17:00,buchanwb,18,,0
+lime_a,09:32:00,09:32:00,library,19,,0
+lime_a,09:46:00,09:46:00,buchaneb,20,,0
+lime_a,09:56:00,09:56:00,mcb,21,,0
+lime_a,10:02:00,10:02:00,buchanwb,22,,0
+lime_a,10:17:00,10:17:00,library,23,,0
+lime_a,10:31:00,10:31:00,buchaneb,24,,0
+lime_a,10:41:00,10:41:00,mcb,25,,0
+lime_a,10:47:00,10:47:00,buchanwb,26,,0
+lime_a,11:02:00,11:02:00,library,27,,0
+lime_a,11:16:00,11:16:00,buchaneb,28,,0
+lime_a,11:26:00,11:26:00,mcb,29,,0
+lime_a,11:32:00,11:32:00,buchanwb,30,,0
+lime_a,11:47:00,11:47:00,library,31,,0
+lime_a,12:01:00,12:01:00,buchaneb,32,,0
+lime_a,12:11:00,12:11:00,mcb,33,,0
+lime_a,12:17:00,12:17:00,buchanwb,34,,0
+lime_a,12:32:00,12:32:00,library,35,,0
+lime_a,12:46:00,12:46:00,buchaneb,36,,0
+lime_a,12:56:00,12:56:00,mcb,37,,0
+lime_a,13:02:00,13:02:00,buchanwb,38,,0
+lime_a,13:17:00,13:17:00,library,39,,0
+lime_a,13:31:00,13:31:00,buchaneb,40,,0
+lime_a,13:41:00,13:41:00,mcb,41,,0
+lime_a,13:47:00,13:47:00,buchanwb,42,,0
+lime_a,14:02:00,14:02:00,library,43,,0
+lime_a,14:16:00,14:16:00,buchaneb,44,,0
+lime_a,14:26:00,14:26:00,mcb,45,,0
+lime_a,14:32:00,14:32:00,buchanwb,46,,0
+lime_a,14:47:00,14:47:00,library,47,,0
+lime_a,15:01:00,15:01:00,buchaneb,48,,0
+lime_a,15:11:00,15:11:00,mcb,49,,0
+lime_a,15:17:00,15:17:00,buchanwb,50,,0
+lime_a,15:32:00,15:32:00,library,51,,0
+lime_a,15:46:00,15:46:00,buchaneb,52,,0
+lime_a,15:56:00,15:56:00,mcb,53,,0
+lime_a,16:02:00,16:02:00,buchanwb,54,,0
+lime_a,16:20:00,16:20:00,library,55,,0
+lime_a,16:34:00,16:34:00,buchaneb,56,,0
+lime_a,16:46:00,16:46:00,mcb,57,,0
+lime_a,16:52:00,16:52:00,buchanwb,58,,0
+lime_a,17:10:00,17:10:00,library,59,,0
+lime_a,17:24:00,17:24:00,buchaneb,60,,0
+lime_a,17:36:00,17:36:00,mcb,61,,0
+lime_a,17:42:00,17:42:00,buchanwb,62,,0
+lime_a,18:00:00,18:00:00,library,63,,0
+lime_a,18:14:00,18:14:00,buchaneb,64,,0
+lime_a,18:26:00,18:26:00,mcb,65,,0
+lime_a,18:32:00,18:32:00,buchanwb,66,,0
+lime_a,18:47:00,18:47:00,library,67,,0
+lime_a,19:01:00,19:01:00,buchaneb,68,,0
+lime_a,19:11:00,19:11:00,mcb,69,,0
+lime_a,19:17:00,19:17:00,buchanwb,70,,0
+lime_a,19:32:00,19:32:00,library,71,,0
+lime_a,19:46:00,19:46:00,buchaneb,72,,0
+lime_a,19:56:00,19:56:00,mcb,73,,0
+lime_a,20:02:00,20:02:00,buchanwb,74,,0
+lime_a,20:17:00,20:17:00,library,75,,0
+lime_a,20:31:00,20:31:00,buchaneb,76,,0
+lime_a,20:41:00,20:41:00,mcb,77,,1
+lime_b,06:20:00,06:20:00,mcb,1,,0
+lime_b,06:26:00,06:26:00,buchanwb,2,,0
+lime_b,06:41:00,06:41:00,library,3,,0
+lime_b,06:54:00,06:54:00,buchaneb,4,,0
+lime_b,07:03:00,07:03:00,mcb,5,,0
+lime_b,07:09:00,07:09:00,buchanwb,6,,0
+lime_b,07:24:00,07:24:00,library,7,,0
+lime_b,07:37:00,07:37:00,buchaneb,8,,0
+lime_b,07:46:00,07:46:00,mcb,9,,0
+lime_b,07:52:00,07:52:00,buchanwb,10,,0
+lime_b,08:09:00,08:09:00,library,11,,0
+lime_b,08:24:00,08:24:00,buchaneb,12,,0
+lime_b,08:36:00,08:36:00,mcb,13,,0
+lime_b,08:42:00,08:42:00,buchanwb,14,,0
+lime_b,08:59:00,08:59:00,library,15,,0
+lime_b,09:14:00,09:14:00,buchaneb,16,,0
+lime_b,09:26:00,09:26:00,mcb,17,,0
+lime_b,09:32:00,09:32:00,buchanwb,18,,0
+lime_b,09:47:00,09:47:00,library,19,,0
+lime_b,10:01:00,10:01:00,buchaneb,20,,0
+lime_b,10:11:00,10:11:00,mcb,21,,0
+lime_b,10:17:00,10:17:00,buchanwb,22,,0
+lime_b,10:32:00,10:32:00,library,23,,0
+lime_b,10:46:00,10:46:00,buchaneb,24,,0
+lime_b,10:56:00,10:56:00,mcb,25,,0
+lime_b,11:02:00,11:02:00,buchanwb,26,,0
+lime_b,11:17:00,11:17:00,library,27,,0
+lime_b,11:31:00,11:31:00,buchaneb,28,,0
+lime_b,11:41:00,11:41:00,mcb,29,,0
+lime_b,11:47:00,11:47:00,buchanwb,30,,0
+lime_b,12:02:00,12:02:00,library,31,,0
+lime_b,12:16:00,12:16:00,buchaneb,32,,0
+lime_b,12:26:00,12:26:00,mcb,33,,0
+lime_b,12:32:00,12:32:00,buchanwb,34,,0
+lime_b,12:47:00,12:47:00,library,35,,0
+lime_b,13:01:00,13:01:00,buchaneb,36,,0
+lime_b,13:11:00,13:11:00,mcb,37,,0
+lime_b,13:17:00,13:17:00,buchanwb,38,,0
+lime_b,13:32:00,13:32:00,library,39,,0
+lime_b,13:46:00,13:46:00,buchaneb,40,,0
+lime_b,13:56:00,13:56:00,mcb,41,,0
+lime_b,14:02:00,14:02:00,buchanwb,42,,0
+lime_b,14:17:00,14:17:00,library,43,,0
+lime_b,14:31:00,14:31:00,buchaneb,44,,0
+lime_b,14:41:00,14:41:00,mcb,45,,0
+lime_b,14:47:00,14:47:00,buchanwb,46,,0
+lime_b,15:02:00,15:02:00,library,47,,0
+lime_b,15:16:00,15:16:00,buchaneb,48,,0
+lime_b,15:26:00,15:26:00,mcb,49,,0
+lime_b,15:32:00,15:32:00,buchanwb,50,,0
+lime_b,15:47:00,15:47:00,library,51,,0
+lime_b,16:01:00,16:01:00,buchaneb,52,,0
+lime_b,16:11:00,16:11:00,mcb,53,,0
+lime_b,16:17:00,16:17:00,buchanwb,54,,0
+lime_b,16:35:00,16:35:00,library,55,,0
+lime_b,16:49:00,16:49:00,buchaneb,56,,0
+lime_b,17:01:00,17:01:00,mcb,57,,0
+lime_b,17:07:00,17:07:00,buchanwb,58,,0
+lime_b,17:25:00,17:25:00,library,59,,0
+lime_b,17:39:00,17:39:00,buchaneb,60,,0
+lime_b,17:51:00,17:51:00,mcb,61,,0
+lime_b,17:57:00,17:57:00,buchanwb,62,,0
+lime_b,18:15:00,18:15:00,library,63,,0
+lime_b,18:29:00,18:29:00,buchaneb,64,,0
+lime_b,18:41:00,18:41:00,mcb,65,,0
+lime_b,18:47:00,18:47:00,buchanwb,66,,0
+lime_b,19:02:00,19:02:00,library,67,,0
+lime_b,19:16:00,19:16:00,buchaneb,68,,0
+lime_b,19:26:00,19:26:00,mcb,69,,0
+lime_b,19:32:00,19:32:00,buchanwb,70,,0
+lime_b,19:47:00,19:47:00,library,71,,0
+lime_b,20:01:00,20:01:00,buchaneb,72,,0
+lime_b,20:11:00,20:11:00,mcb,73,,1
+lime_c,06:35:00,06:35:00,mcb,1,,0
+lime_c,06:41:00,06:41:00,buchanwb,2,,0
+lime_c,06:56:00,06:56:00,library,3,,0
+lime_c,07:09:00,07:09:00,buchaneb,4,,0
+lime_c,07:18:00,07:18:00,mcb,5,,0
+lime_c,07:24:00,07:24:00,buchanwb,6,,0
+lime_c,07:39:00,07:39:00,library,7,,0
+lime_c,07:52:00,07:52:00,buchaneb,8,,0
+lime_c,08:01:00,08:01:00,mcb,9,,0
+lime_c,08:07:00,08:07:00,buchanwb,10,,0
+lime_c,08:24:00,08:24:00,library,11,,0
+lime_c,08:39:00,08:39:00,buchaneb,12,,0
+lime_c,08:51:00,08:51:00,mcb,13,,0
+lime_c,08:57:00,08:57:00,buchanwb,14,,0
+lime_c,09:14:00,09:14:00,library,15,,0
+lime_c,09:29:00,09:29:00,buchaneb,16,,0
+lime_c,09:41:00,09:41:00,mcb,17,,0
+lime_c,09:47:00,09:47:00,buchanwb,18,,0
+lime_c,10:02:00,10:02:00,library,19,,0
+lime_c,10:16:00,10:16:00,buchaneb,20,,0
+lime_c,10:26:00,10:26:00,mcb,21,,0
+lime_c,10:32:00,10:32:00,buchanwb,22,,0
+lime_c,10:47:00,10:47:00,library,23,,0
+lime_c,11:01:00,11:01:00,buchaneb,24,,0
+lime_c,11:11:00,11:11:00,mcb,25,,0
+lime_c,11:17:00,11:17:00,buchanwb,26,,0
+lime_c,11:32:00,11:32:00,library,27,,0
+lime_c,11:46:00,11:46:00,buchaneb,28,,0
+lime_c,11:56:00,11:56:00,mcb,29,,0
+lime_c,12:02:00,12:02:00,buchanwb,30,,0
+lime_c,12:17:00,12:17:00,library,31,,0
+lime_c,12:31:00,12:31:00,buchaneb,32,,0
+lime_c,12:41:00,12:41:00,mcb,33,,0
+lime_c,12:47:00,12:47:00,buchanwb,34,,0
+lime_c,13:02:00,13:02:00,library,35,,0
+lime_c,13:16:00,13:16:00,buchaneb,36,,0
+lime_c,13:26:00,13:26:00,mcb,37,,0
+lime_c,13:32:00,13:32:00,buchanwb,38,,0
+lime_c,13:47:00,13:47:00,library,39,,0
+lime_c,14:01:00,14:01:00,buchaneb,40,,0
+lime_c,14:11:00,14:11:00,mcb,41,,0
+lime_c,14:17:00,14:17:00,buchanwb,42,,0
+lime_c,14:32:00,14:32:00,library,43,,0
+lime_c,14:46:00,14:46:00,buchaneb,44,,0
+lime_c,14:56:00,14:56:00,mcb,45,,0
+lime_c,15:02:00,15:02:00,buchanwb,46,,0
+lime_c,15:17:00,15:17:00,library,47,,0
+lime_c,15:31:00,15:31:00,buchaneb,48,,0
+lime_c,15:41:00,15:41:00,mcb,49,,0
+lime_c,15:47:00,15:47:00,buchanwb,50,,0
+lime_c,16:02:00,16:02:00,library,51,,0
+lime_c,16:16:00,16:16:00,buchaneb,52,,0
+lime_c,16:26:00,16:26:00,mcb,53,,0
+lime_c,16:32:00,16:32:00,buchanwb,54,,0
+lime_c,16:50:00,16:50:00,library,55,,0
+lime_c,17:04:00,17:04:00,buchaneb,56,,0
+lime_c,17:16:00,17:16:00,mcb,57,,0
+lime_c,17:22:00,17:22:00,buchanwb,58,,0
+lime_c,17:40:00,17:40:00,library,59,,0
+lime_c,17:54:00,17:54:00,buchaneb,60,,0
+lime_c,18:06:00,18:06:00,mcb,61,,0
+lime_c,18:12:00,18:12:00,buchanwb,62,,0
+lime_c,18:30:00,18:30:00,library,63,,0
+lime_c,18:44:00,18:44:00,buchaneb,64,,0
+lime_c,18:56:00,18:56:00,mcb,65,,0
+lime_c,19:02:00,19:02:00,buchanwb,66,,0
+lime_c,19:17:00,19:17:00,library,67,,0
+lime_c,19:31:00,19:31:00,buchaneb,68,,0
+lime_c,19:41:00,19:41:00,mcb,69,,0
+lime_c,19:47:00,19:47:00,buchanwb,70,,0
+lime_c,20:02:00,20:02:00,library,71,,0
+lime_c,20:16:00,20:16:00,buchaneb,72,,0
+lime_c,20:26:00,20:26:00,mcb,73,,1
+pink_a,05:30:00,05:30:00,parkezar,1,,0
+pink_a,05:36:00,05:36:00,paracc,2,,0
+pink_a,05:45:00,05:45:00,parkezar,3,,0
+pink_a,05:51:00,05:51:00,paracc,4,,0
+pink_a,06:00:00,06:00:00,parkezar,5,,0
+pink_a,06:06:00,06:06:00,paracc,6,,0
+pink_a,06:15:00,06:15:00,parkezar,7,,0
+pink_a,06:21:00,06:21:00,paracc,8,,0
+pink_a,06:30:00,06:30:00,parkezar,9,,0
+pink_a,06:36:00,06:36:00,paracc,10,,0
+pink_a,06:45:00,06:45:00,parkezar,11,,0
+pink_a,06:51:00,06:51:00,paracc,12,,0
+pink_a,07:00:00,07:00:00,parkezar,13,,0
+pink_a,07:06:00,07:06:00,paracc,14,,0
+pink_a,07:15:00,07:15:00,parkezar,15,,0
+pink_a,07:21:00,07:21:00,paracc,16,,0
+pink_a,07:30:00,07:30:00,parkezar,17,,0
+pink_a,07:36:00,07:36:00,paracc,18,,0
+pink_a,07:45:00,07:45:00,parkezar,19,,0
+pink_a,07:51:00,07:51:00,paracc,20,,0
+pink_a,08:00:00,08:00:00,parkezar,21,,0
+pink_a,08:06:00,08:06:00,paracc,22,,0
+pink_a,08:15:00,08:15:00,parkezar,23,,0
+pink_a,08:21:00,08:21:00,paracc,24,,0
+pink_a,08:30:00,08:30:00,parkezar,25,,0
+pink_a,08:36:00,08:36:00,paracc,26,,0
+pink_a,08:45:00,08:45:00,parkezar,27,,0
+pink_a,08:51:00,08:51:00,paracc,28,,0
+pink_a,09:00:00,09:00:00,parkezar,29,,0
+pink_a,09:06:00,09:06:00,paracc,30,,1
+purple_to_mtzion_a,06:15:00,06:15:00,library,1,,0
+purple_to_mtzion_a,06:30:00,06:30:00,3360 Geary,2,to Mt. Zion,0
+purple_to_mtzion_a,06:38:00,06:38:00,mtzion,3,,1
+purple_to_mtzion_a,07:00:00,07:00:00,library,4,,0
+purple_to_mtzion_a,07:15:00,07:15:00,3360 Geary,5,to Mt. Zion,0
+purple_to_mtzion_a,07:23:00,07:23:00,mtzion,6,,1
+purple_to_mtzion_a,07:45:00,07:45:00,library,7,,0
+purple_to_mtzion_a,08:00:00,08:00:00,3360 Geary,8,to Mt. Zion,0
+purple_to_mtzion_a,08:08:00,08:08:00,mtzion,9,,1
+purple_to_mtzion_a,08:30:00,08:30:00,library,10,,0
+purple_to_mtzion_a,08:45:00,08:45:00,3360 Geary,11,to Mt. Zion,0
+purple_to_mtzion_a,08:53:00,08:53:00,mtzion,12,,1
+purple_to_mtzion_a,09:15:00,09:15:00,library,13,,0
+purple_to_mtzion_a,09:30:00,09:30:00,3360 Geary,14,to Mt. Zion,0
+purple_to_mtzion_a,09:38:00,09:38:00,mtzion,15,,1
+purple_to_mtzion_a,10:00:00,10:00:00,library,16,,0
+purple_to_mtzion_a,10:15:00,10:15:00,3360 Geary,17,to Mt. Zion,0
+purple_to_mtzion_a,10:23:00,10:23:00,mtzion,18,,1
+purple_to_mtzion_a,10:45:00,10:45:00,library,19,,0
+purple_to_mtzion_a,11:00:00,11:00:00,3360 Geary,20,to Mt. Zion,0
+purple_to_mtzion_a,11:08:00,11:08:00,mtzion,21,,1
+purple_to_mtzion_a,11:30:00,11:30:00,library,22,,0
+purple_to_mtzion_a,11:45:00,11:45:00,3360 Geary,23,to Mt. Zion,0
+purple_to_mtzion_a,11:53:00,11:53:00,mtzion,24,,1
+purple_to_mtzion_a,12:15:00,12:15:00,library,25,,0
+purple_to_mtzion_a,12:30:00,12:30:00,3360 Geary,26,to Mt. Zion,0
+purple_to_mtzion_a,12:38:00,12:38:00,mtzion,27,,1
+purple_to_mtzion_a,13:00:00,13:00:00,library,28,,0
+purple_to_mtzion_a,13:15:00,13:15:00,3360 Geary,29,to Mt. Zion,0
+purple_to_mtzion_a,13:23:00,13:23:00,mtzion,30,,1
+purple_to_mtzion_a,13:45:00,13:45:00,library,31,,0
+purple_to_mtzion_a,14:00:00,14:00:00,3360 Geary,32,to Mt. Zion,0
+purple_to_mtzion_a,14:08:00,14:08:00,mtzion,33,,1
+purple_to_mtzion_a,14:30:00,14:30:00,library,34,,0
+purple_to_mtzion_a,14:45:00,14:45:00,3360 Geary,35,to Mt. Zion,0
+purple_to_mtzion_a,14:53:00,14:53:00,mtzion,36,,1
+purple_to_mtzion_a,15:15:00,15:15:00,library,37,,0
+purple_to_mtzion_a,15:30:00,15:30:00,3360 Geary,38,to Mt. Zion,0
+purple_to_mtzion_a,15:38:00,15:38:00,mtzion,39,,1
+purple_to_mtzion_a,16:00:00,16:00:00,library,40,,0
+purple_to_mtzion_a,16:15:00,16:15:00,3360 Geary,41,to Mt. Zion,0
+purple_to_mtzion_a,16:23:00,16:23:00,mtzion,42,,1
+purple_to_mtzion_a,16:45:00,16:45:00,library,43,,0
+purple_to_mtzion_a,17:00:00,17:00:00,3360 Geary,44,to Mt. Zion,0
+purple_to_mtzion_a,17:08:00,17:08:00,mtzion,45,,1
+purple_to_mtzion_a,17:30:00,17:30:00,library,46,,0
+purple_to_mtzion_a,17:45:00,17:45:00,3360 Geary,47,to Mt. Zion,0
+purple_to_mtzion_a,17:53:00,17:53:00,mtzion,48,,1
+purple_to_mtzion_a,18:15:00,18:15:00,library,49,,0
+purple_to_mtzion_a,18:30:00,18:30:00,3360 Geary,50,to Mt. Zion,0
+purple_to_mtzion_a,18:38:00,18:38:00,mtzion,51,,1
+purple_to_library_a,06:38:00,06:38:00,mtzion,1,,0
+purple_to_library_a,06:45:00,06:45:00,3360 Geary,2,to Parnassus,0
+purple_to_library_a,07:00:00,07:00:00,library,3,,1
+purple_to_library_a,07:23:00,07:23:00,mtzion,4,,0
+purple_to_library_a,07:30:00,07:30:00,3360 Geary,5,to Parnassus,0
+purple_to_library_a,07:45:00,07:45:00,library,6,,1
+purple_to_library_a,08:08:00,08:08:00,mtzion,7,,0
+purple_to_library_a,08:15:00,08:15:00,3360 Geary,8,to Parnassus,0
+purple_to_library_a,08:30:00,08:30:00,library,9,,1
+purple_to_library_a,08:53:00,08:53:00,mtzion,10,,0
+purple_to_library_a,09:00:00,09:00:00,3360 Geary,11,to Parnassus,0
+purple_to_library_a,09:15:00,09:15:00,library,12,,1
+purple_to_library_a,09:38:00,09:38:00,mtzion,13,,0
+purple_to_library_a,09:45:00,09:45:00,3360 Geary,14,to Parnassus,0
+purple_to_library_a,10:00:00,10:00:00,library,15,,1
+purple_to_library_a,10:23:00,10:23:00,mtzion,16,,0
+purple_to_library_a,10:30:00,10:30:00,3360 Geary,17,to Parnassus,0
+purple_to_library_a,10:45:00,10:45:00,library,18,,1
+purple_to_library_a,11:08:00,11:08:00,mtzion,19,,0
+purple_to_library_a,11:15:00,11:15:00,3360 Geary,20,to Parnassus,0
+purple_to_library_a,11:30:00,11:30:00,library,21,,1
+purple_to_library_a,11:53:00,11:53:00,mtzion,22,,0
+purple_to_library_a,12:00:00,12:00:00,3360 Geary,23,to Parnassus,0
+purple_to_library_a,12:15:00,12:15:00,library,24,,1
+purple_to_library_a,12:38:00,12:38:00,mtzion,25,,0
+purple_to_library_a,12:45:00,12:45:00,3360 Geary,26,to Parnassus,0
+purple_to_library_a,13:00:00,13:00:00,library,27,,1
+purple_to_library_a,13:23:00,13:23:00,mtzion,28,,0
+purple_to_library_a,13:30:00,13:30:00,3360 Geary,29,to Parnassus,0
+purple_to_library_a,13:45:00,13:45:00,library,30,,1
+purple_to_library_a,14:08:00,14:08:00,mtzion,31,,0
+purple_to_library_a,14:15:00,14:15:00,3360 Geary,32,to Parnassus,0
+purple_to_library_a,14:30:00,14:30:00,library,33,,1
+purple_to_library_a,14:53:00,14:53:00,mtzion,34,,0
+purple_to_library_a,15:00:00,15:00:00,3360 Geary,35,to Parnassus,0
+purple_to_library_a,15:15:00,15:15:00,library,36,,1
+purple_to_library_a,15:38:00,15:38:00,mtzion,37,,0
+purple_to_library_a,15:45:00,15:45:00,3360 Geary,38,to Parnassus,0
+purple_to_library_a,16:00:00,16:00:00,library,39,,1
+purple_to_library_a,16:23:00,16:23:00,mtzion,40,,0
+purple_to_library_a,16:30:00,16:30:00,3360 Geary,41,to Parnassus,0
+purple_to_library_a,16:45:00,16:45:00,library,42,,1
+purple_to_library_a,17:08:00,17:08:00,mtzion,43,,0
+purple_to_library_a,17:15:00,17:15:00,3360 Geary,44,to Parnassus,0
+purple_to_library_a,17:30:00,17:30:00,library,45,,1
+purple_to_library_a,17:53:00,17:53:00,mtzion,46,,0
+purple_to_library_a,18:00:00,18:00:00,3360 Geary,47,to Parnassus,0
+purple_to_library_a,18:15:00,18:15:00,library,48,,1
+purple_to_library_a,18:38:00,18:38:00,mtzion,49,,0
+purple_to_library_a,18:45:00,18:45:00,3360 Geary,50,,1
+red_bart_to_mb_a,06:10:00,06:10:00,16thbart,1,,0
+red_bart_to_mb_a,06:15:00,06:15:00,mcb,2,to Mission Bay,0
+red_bart_to_mb_a,06:25:00,06:25:00,missb4th,3,,1
+red_bart_to_mb_a,06:40:00,06:40:00,16thbart,4,,0
+red_bart_to_mb_a,06:45:00,06:45:00,mcb,5,to Mission Bay,0
+red_bart_to_mb_a,06:55:00,06:55:00,missb4th,6,,1
+red_bart_to_mb_a,07:10:00,07:10:00,16thbart,7,,0
+red_bart_to_mb_a,07:15:00,07:15:00,mcb,8,to Mission Bay,0
+red_bart_to_mb_a,07:25:00,07:25:00,missb4th,9,,1
+red_bart_to_mb_a,07:40:00,07:40:00,16thbart,10,,0
+red_bart_to_mb_a,07:45:00,07:45:00,mcb,11,to Mission Bay,0
+red_bart_to_mb_a,07:55:00,07:55:00,missb4th,12,,1
+red_bart_to_mb_a,08:10:00,08:10:00,16thbart,13,,0
+red_bart_to_mb_a,08:15:00,08:15:00,mcb,14,to Mission Bay,0
+red_bart_to_mb_a,08:25:00,08:25:00,missb4th,15,,1
+red_bart_to_mb_a,08:40:00,08:40:00,16thbart,16,,0
+red_bart_to_mb_a,08:45:00,08:45:00,mcb,17,to Mission Bay,0
+red_bart_to_mb_a,08:55:00,08:55:00,missb4th,18,,1
+red_bart_to_mb_a,09:10:00,09:10:00,16thbart,19,,0
+red_bart_to_mb_a,09:15:00,09:15:00,mcb,20,to Mission Bay,0
+red_bart_to_mb_a,09:25:00,09:25:00,missb4th,21,,1
+red_bart_to_mb_a,09:40:00,09:40:00,16thbart,22,,0
+red_bart_to_mb_a,09:45:00,09:45:00,mcb,23,to Mission Bay,0
+red_bart_to_mb_a,09:55:00,09:55:00,missb4th,24,,1
+red_bart_to_mb_a,10:10:00,10:10:00,16thbart,25,,0
+red_bart_to_mb_a,10:15:00,10:15:00,mcb,26,to Mission Bay,0
+red_bart_to_mb_a,10:25:00,10:25:00,missb4th,27,,1
+red_bart_to_mb_a,10:40:00,10:40:00,16thbart,28,,0
+red_bart_to_mb_a,10:45:00,10:45:00,mcb,29,to Mission Bay,0
+red_bart_to_mb_a,10:55:00,10:55:00,missb4th,30,,1
+red_bart_to_mb_a,11:10:00,11:10:00,16thbart,31,,0
+red_bart_to_mb_a,11:15:00,11:15:00,mcb,32,to Mission Bay,0
+red_bart_to_mb_a,11:25:00,11:25:00,missb4th,33,,1
+red_bart_to_mb_a,11:40:00,11:40:00,16thbart,34,,0
+red_bart_to_mb_a,11:45:00,11:45:00,mcb,35,to Mission Bay,0
+red_bart_to_mb_a,11:55:00,11:55:00,missb4th,36,,1
+red_bart_to_mb_a,12:10:00,12:10:00,16thbart,37,,0
+red_bart_to_mb_a,12:15:00,12:15:00,mcb,38,to Mission Bay,0
+red_bart_to_mb_a,12:25:00,12:25:00,missb4th,39,,1
+red_bart_to_mb_a,12:40:00,12:40:00,16thbart,40,,0
+red_bart_to_mb_a,12:45:00,12:45:00,mcb,41,to Mission Bay,0
+red_bart_to_mb_a,12:55:00,12:55:00,missb4th,42,,1
+red_bart_to_mb_a,13:10:00,13:10:00,16thbart,43,,0
+red_bart_to_mb_a,13:15:00,13:15:00,mcb,44,to Mission Bay,0
+red_bart_to_mb_a,13:25:00,13:25:00,missb4th,45,,1
+red_bart_to_mb_a,13:40:00,13:40:00,16thbart,46,,0
+red_bart_to_mb_a,13:45:00,13:45:00,mcb,47,to Mission Bay,0
+red_bart_to_mb_a,13:55:00,13:55:00,missb4th,48,,1
+red_bart_to_mb_a,14:10:00,14:10:00,16thbart,49,,0
+red_bart_to_mb_a,14:15:00,14:15:00,mcb,50,to Mission Bay,0
+red_bart_to_mb_a,14:25:00,14:25:00,missb4th,51,,1
+red_bart_to_mb_a,14:40:00,14:40:00,16thbart,52,,0
+red_bart_to_mb_a,14:45:00,14:45:00,mcb,53,to Mission Bay,0
+red_bart_to_mb_a,14:55:00,14:55:00,missb4th,54,,1
+red_bart_to_mb_a,15:10:00,15:10:00,16thbart,55,,0
+red_bart_to_mb_a,15:15:00,15:15:00,mcb,56,to Mission Bay,0
+red_bart_to_mb_a,15:30:00,15:30:00,missb4th,57,,1
+red_bart_to_mb_a,15:45:00,15:45:00,16thbart,58,,0
+red_bart_to_mb_a,15:50:00,15:50:00,mcb,59,to Mission Bay,0
+red_bart_to_mb_a,16:05:00,16:05:00,missb4th,60,,1
+red_bart_to_mb_a,16:20:00,16:20:00,16thbart,61,,0
+red_bart_to_mb_a,16:25:00,16:25:00,mcb,62,to Mission Bay,0
+red_bart_to_mb_a,16:40:00,16:40:00,missb4th,63,,1
+red_bart_to_mb_a,16:55:00,16:55:00,16thbart,64,,0
+red_bart_to_mb_a,17:00:00,17:00:00,mcb,65,to Mission Bay,0
+red_bart_to_mb_a,17:15:00,17:15:00,missb4th,66,,1
+red_bart_to_mb_a,17:30:00,17:30:00,16thbart,67,,0
+red_bart_to_mb_a,17:35:00,17:35:00,mcb,68,to Mission Bay,0
+red_bart_to_mb_a,17:50:00,17:50:00,missb4th,69,,1
+red_bart_to_mb_a,18:05:00,18:05:00,16thbart,70,,0
+red_bart_to_mb_a,18:10:00,18:10:00,mcb,71,to Mission Bay,0
+red_bart_to_mb_a,18:25:00,18:25:00,missb4th,72,,1
+red_bart_to_mb_a,18:40:00,18:40:00,16thbart,73,,0
+red_bart_to_mb_a,18:45:00,18:45:00,mcb,74,to Mission Bay,0
+red_bart_to_mb_a,18:55:00,18:55:00,missb4th,75,,1
+red_bart_to_mb_a,19:10:00,19:10:00,16thbart,76,,0
+red_bart_to_mb_a,19:15:00,19:15:00,mcb,77,to Mission Bay,0
+red_bart_to_mb_a,19:25:00,19:25:00,missb4th,78,,1
+red_bart_to_mb_a,19:40:00,19:40:00,16thbart,79,,0
+red_bart_to_mb_a,19:45:00,19:45:00,mcb,80,to Mission Bay,0
+red_bart_to_mb_a,19:55:00,19:55:00,missb4th,81,,1
+red_mb_to_bart_a,05:55:00,05:55:00,missb4th,1,,0
+red_mb_to_bart_a,06:05:00,06:05:00,mcb,2,to 16th St. BART,0
+red_mb_to_bart_a,06:10:00,06:10:00,16thbart,3,,1
+red_mb_to_bart_a,06:25:00,06:25:00,missb4th,4,,0
+red_mb_to_bart_a,06:35:00,06:35:00,mcb,5,to 16th St. BART,0
+red_mb_to_bart_a,06:40:00,06:40:00,16thbart,6,,1
+red_mb_to_bart_a,06:55:00,06:55:00,missb4th,7,,0
+red_mb_to_bart_a,07:05:00,07:05:00,mcb,8,to 16th St. BART,0
+red_mb_to_bart_a,07:10:00,07:10:00,16thbart,9,,1
+red_mb_to_bart_a,07:25:00,07:25:00,missb4th,10,,0
+red_mb_to_bart_a,07:35:00,07:35:00,mcb,11,to 16th St. BART,0
+red_mb_to_bart_a,07:40:00,07:40:00,16thbart,12,,1
+red_mb_to_bart_a,07:55:00,07:55:00,missb4th,13,,0
+red_mb_to_bart_a,08:05:00,08:05:00,mcb,14,to 16th St. BART,0
+red_mb_to_bart_a,08:10:00,08:10:00,16thbart,15,,1
+red_mb_to_bart_a,08:25:00,08:25:00,missb4th,16,,0
+red_mb_to_bart_a,08:35:00,08:35:00,mcb,17,to 16th St. BART,0
+red_mb_to_bart_a,08:40:00,08:40:00,16thbart,18,,1
+red_mb_to_bart_a,08:55:00,08:55:00,missb4th,19,,0
+red_mb_to_bart_a,09:05:00,09:05:00,mcb,20,to 16th St. BART,0
+red_mb_to_bart_a,09:10:00,09:10:00,16thbart,21,,1
+red_mb_to_bart_a,09:25:00,09:25:00,missb4th,22,,0
+red_mb_to_bart_a,09:35:00,09:35:00,mcb,23,to 16th St. BART,0
+red_mb_to_bart_a,09:40:00,09:40:00,16thbart,24,,1
+red_mb_to_bart_a,09:55:00,09:55:00,missb4th,25,,0
+red_mb_to_bart_a,10:05:00,10:05:00,mcb,26,to 16th St. BART,0
+red_mb_to_bart_a,10:10:00,10:10:00,16thbart,27,,1
+red_mb_to_bart_a,10:25:00,10:25:00,missb4th,28,,0
+red_mb_to_bart_a,10:35:00,10:35:00,mcb,29,to 16th St. BART,0
+red_mb_to_bart_a,10:40:00,10:40:00,16thbart,30,,1
+red_mb_to_bart_a,10:55:00,10:55:00,missb4th,31,,0
+red_mb_to_bart_a,11:05:00,11:05:00,mcb,32,to 16th St. BART,0
+red_mb_to_bart_a,11:10:00,11:10:00,16thbart,33,,1
+red_mb_to_bart_a,11:25:00,11:25:00,missb4th,34,,0
+red_mb_to_bart_a,11:35:00,11:35:00,mcb,35,to 16th St. BART,0
+red_mb_to_bart_a,11:40:00,11:40:00,16thbart,36,,1
+red_mb_to_bart_a,11:55:00,11:55:00,missb4th,37,,0
+red_mb_to_bart_a,12:05:00,12:05:00,mcb,38,to 16th St. BART,0
+red_mb_to_bart_a,12:10:00,12:10:00,16thbart,39,,1
+red_mb_to_bart_a,12:25:00,12:25:00,missb4th,40,,0
+red_mb_to_bart_a,12:35:00,12:35:00,mcb,41,to 16th St. BART,0
+red_mb_to_bart_a,12:40:00,12:40:00,16thbart,42,,1
+red_mb_to_bart_a,12:55:00,12:55:00,missb4th,43,,0
+red_mb_to_bart_a,13:05:00,13:05:00,mcb,44,to 16th St. BART,0
+red_mb_to_bart_a,13:10:00,13:10:00,16thbart,45,,1
+red_mb_to_bart_a,13:25:00,13:25:00,missb4th,46,,0
+red_mb_to_bart_a,13:35:00,13:35:00,mcb,47,to 16th St. BART,0
+red_mb_to_bart_a,13:40:00,13:40:00,16thbart,48,,1
+red_mb_to_bart_a,13:55:00,13:55:00,missb4th,49,,0
+red_mb_to_bart_a,14:05:00,14:05:00,mcb,50,to 16th St. BART,0
+red_mb_to_bart_a,14:10:00,14:10:00,16thbart,51,,1
+red_mb_to_bart_a,14:25:00,14:25:00,missb4th,52,,0
+red_mb_to_bart_a,14:35:00,14:35:00,mcb,53,to 16th St. BART,0
+red_mb_to_bart_a,14:40:00,14:40:00,16thbart,54,,1
+red_mb_to_bart_a,14:55:00,14:55:00,missb4th,55,,0
+red_mb_to_bart_a,15:05:00,15:05:00,mcb,56,to 16th St. BART,0
+red_mb_to_bart_a,15:10:00,15:10:00,16thbart,57,,1
+red_mb_to_bart_a,15:30:00,15:30:00,missb4th,58,,0
+red_mb_to_bart_a,15:40:00,15:40:00,mcb,59,to 16th St. BART,0
+red_mb_to_bart_a,15:45:00,15:45:00,16thbart,60,,1
+red_mb_to_bart_a,16:05:00,16:05:00,missb4th,61,,0
+red_mb_to_bart_a,16:15:00,16:15:00,mcb,62,to 16th St. BART,0
+red_mb_to_bart_a,16:20:00,16:20:00,16thbart,63,,1
+red_mb_to_bart_a,16:40:00,16:40:00,missb4th,64,,0
+red_mb_to_bart_a,16:50:00,16:50:00,mcb,65,to 16th St. BART,0
+red_mb_to_bart_a,16:55:00,16:55:00,16thbart,66,,1
+red_mb_to_bart_a,17:15:00,17:15:00,missb4th,67,,0
+red_mb_to_bart_a,17:25:00,17:25:00,mcb,68,to 16th St. BART,0
+red_mb_to_bart_a,17:30:00,17:30:00,16thbart,69,,1
+red_mb_to_bart_a,17:50:00,17:50:00,missb4th,70,,0
+red_mb_to_bart_a,18:00:00,18:00:00,mcb,71,to 16th St. BART,0
+red_mb_to_bart_a,18:05:00,18:05:00,16thbart,72,,1
+red_mb_to_bart_a,18:25:00,18:25:00,missb4th,73,,0
+red_mb_to_bart_a,18:35:00,18:35:00,mcb,74,to 16th St. BART,0
+red_mb_to_bart_a,18:40:00,18:40:00,16thbart,75,,1
+red_mb_to_bart_a,18:55:00,18:55:00,missb4th,76,,0
+red_mb_to_bart_a,19:05:00,19:05:00,mcb,77,to 16th St. BART,0
+red_mb_to_bart_a,19:10:00,19:10:00,16thbart,78,,1
+red_mb_to_bart_a,19:25:00,19:25:00,missb4th,79,,0
+red_mb_to_bart_a,19:35:00,19:35:00,mcb,80,to 16th St. BART,0
+red_mb_to_bart_a,19:40:00,19:40:00,16thbart,81,,1
+red_bart_to_mb_b,06:25:00,06:25:00,16thbart,1,,0
+red_bart_to_mb_b,06:30:00,06:30:00,mcb,2,to Mission Bay,0
+red_bart_to_mb_b,06:40:00,06:40:00,missb4th,3,,1
+red_bart_to_mb_b,06:55:00,06:55:00,16thbart,4,,0
+red_bart_to_mb_b,07:00:00,07:00:00,mcb,5,to Mission Bay,0
+red_bart_to_mb_b,07:10:00,07:10:00,missb4th,6,,1
+red_bart_to_mb_b,07:25:00,07:25:00,16thbart,7,,0
+red_bart_to_mb_b,07:30:00,07:30:00,mcb,8,to Mission Bay,0
+red_bart_to_mb_b,07:40:00,07:40:00,missb4th,9,,1
+red_bart_to_mb_b,07:55:00,07:55:00,16thbart,10,,0
+red_bart_to_mb_b,08:00:00,08:00:00,mcb,11,to Mission Bay,0
+red_bart_to_mb_b,08:10:00,08:10:00,missb4th,12,,1
+red_bart_to_mb_b,08:25:00,08:25:00,16thbart,13,,0
+red_bart_to_mb_b,08:30:00,08:30:00,mcb,14,to Mission Bay,0
+red_bart_to_mb_b,08:40:00,08:40:00,missb4th,15,,1
+red_bart_to_mb_b,08:55:00,08:55:00,16thbart,16,,0
+red_bart_to_mb_b,09:00:00,09:00:00,mcb,17,to Mission Bay,0
+red_bart_to_mb_b,09:10:00,09:10:00,missb4th,18,,1
+red_bart_to_mb_b,09:25:00,09:25:00,16thbart,19,,0
+red_bart_to_mb_b,09:30:00,09:30:00,mcb,20,to Mission Bay,0
+red_bart_to_mb_b,09:40:00,09:40:00,missb4th,21,,1
+red_bart_to_mb_b,09:55:00,09:55:00,16thbart,22,,0
+red_bart_to_mb_b,10:00:00,10:00:00,mcb,23,to Mission Bay,0
+red_bart_to_mb_b,10:10:00,10:10:00,missb4th,24,,1
+red_bart_to_mb_b,10:25:00,10:25:00,16thbart,25,,0
+red_bart_to_mb_b,10:30:00,10:30:00,mcb,26,to Mission Bay,0
+red_bart_to_mb_b,10:40:00,10:40:00,missb4th,27,,1
+red_bart_to_mb_b,10:55:00,10:55:00,16thbart,28,,0
+red_bart_to_mb_b,11:00:00,11:00:00,mcb,29,to Mission Bay,0
+red_bart_to_mb_b,11:10:00,11:10:00,missb4th,30,,1
+red_bart_to_mb_b,11:25:00,11:25:00,16thbart,31,,0
+red_bart_to_mb_b,11:30:00,11:30:00,mcb,32,to Mission Bay,0
+red_bart_to_mb_b,11:40:00,11:40:00,missb4th,33,,1
+red_bart_to_mb_b,11:55:00,11:55:00,16thbart,34,,0
+red_bart_to_mb_b,12:00:00,12:00:00,mcb,35,to Mission Bay,0
+red_bart_to_mb_b,12:10:00,12:10:00,missb4th,36,,1
+red_bart_to_mb_b,12:25:00,12:25:00,16thbart,37,,0
+red_bart_to_mb_b,12:30:00,12:30:00,mcb,38,to Mission Bay,0
+red_bart_to_mb_b,12:40:00,12:40:00,missb4th,39,,1
+red_bart_to_mb_b,12:55:00,12:55:00,16thbart,40,,0
+red_bart_to_mb_b,13:00:00,13:00:00,mcb,41,to Mission Bay,0
+red_bart_to_mb_b,13:10:00,13:10:00,missb4th,42,,1
+red_bart_to_mb_b,13:25:00,13:25:00,16thbart,43,,0
+red_bart_to_mb_b,13:30:00,13:30:00,mcb,44,to Mission Bay,0
+red_bart_to_mb_b,13:40:00,13:40:00,missb4th,45,,1
+red_bart_to_mb_b,13:55:00,13:55:00,16thbart,46,,0
+red_bart_to_mb_b,14:00:00,14:00:00,mcb,47,to Mission Bay,0
+red_bart_to_mb_b,14:10:00,14:10:00,missb4th,48,,1
+red_bart_to_mb_b,14:25:00,14:25:00,16thbart,49,,0
+red_bart_to_mb_b,14:30:00,14:30:00,mcb,50,to Mission Bay,0
+red_bart_to_mb_b,14:40:00,14:40:00,missb4th,51,,1
+red_bart_to_mb_b,14:55:00,14:55:00,16thbart,52,,0
+red_bart_to_mb_b,15:00:00,15:00:00,mcb,53,to Mission Bay,0
+red_bart_to_mb_b,15:15:00,15:15:00,missb4th,54,,1
+red_bart_to_mb_b,15:30:00,15:30:00,16thbart,55,,0
+red_bart_to_mb_b,15:35:00,15:35:00,mcb,56,to Mission Bay,0
+red_bart_to_mb_b,15:50:00,15:50:00,missb4th,57,,1
+red_bart_to_mb_b,16:05:00,16:05:00,16thbart,58,,0
+red_bart_to_mb_b,16:10:00,16:10:00,mcb,59,to Mission Bay,0
+red_bart_to_mb_b,16:25:00,16:25:00,missb4th,60,,1
+red_bart_to_mb_b,16:40:00,16:40:00,16thbart,61,,0
+red_bart_to_mb_b,16:45:00,16:45:00,mcb,62,to Mission Bay,0
+red_bart_to_mb_b,17:00:00,17:00:00,missb4th,63,,1
+red_bart_to_mb_b,17:15:00,17:15:00,16thbart,64,,0
+red_bart_to_mb_b,17:20:00,17:20:00,mcb,65,to Mission Bay,0
+red_bart_to_mb_b,17:35:00,17:35:00,missb4th,66,,1
+red_bart_to_mb_b,17:50:00,17:50:00,16thbart,67,,0
+red_bart_to_mb_b,17:55:00,17:55:00,mcb,68,to Mission Bay,0
+red_bart_to_mb_b,18:10:00,18:10:00,missb4th,69,,1
+red_bart_to_mb_b,18:25:00,18:25:00,16thbart,70,,0
+red_bart_to_mb_b,18:30:00,18:30:00,mcb,71,to Mission Bay,0
+red_bart_to_mb_b,18:40:00,18:40:00,missb4th,72,,1
+red_bart_to_mb_b,18:55:00,18:55:00,16thbart,73,,0
+red_bart_to_mb_b,19:00:00,19:00:00,mcb,74,to Mission Bay,0
+red_bart_to_mb_b,19:10:00,19:10:00,missb4th,75,,1
+red_bart_to_mb_b,19:25:00,19:25:00,16thbart,76,,0
+red_bart_to_mb_b,19:30:00,19:30:00,mcb,77,to Mission Bay,0
+red_bart_to_mb_b,19:40:00,19:40:00,missb4th,78,,1
+red_mb_to_bart_b,06:10:00,06:10:00,missb4th,1,,0
+red_mb_to_bart_b,06:20:00,06:20:00,mcb,2,to 16th St. BART,0
+red_mb_to_bart_b,06:25:00,06:25:00,16thbart,3,,1
+red_mb_to_bart_b,06:40:00,06:40:00,missb4th,4,,0
+red_mb_to_bart_b,06:50:00,06:50:00,mcb,5,to 16th St. BART,0
+red_mb_to_bart_b,06:55:00,06:55:00,16thbart,6,,1
+red_mb_to_bart_b,07:10:00,07:10:00,missb4th,7,,0
+red_mb_to_bart_b,07:20:00,07:20:00,mcb,8,to 16th St. BART,0
+red_mb_to_bart_b,07:25:00,07:25:00,16thbart,9,,1
+red_mb_to_bart_b,07:40:00,07:40:00,missb4th,10,,0
+red_mb_to_bart_b,07:50:00,07:50:00,mcb,11,to 16th St. BART,0
+red_mb_to_bart_b,07:55:00,07:55:00,16thbart,12,,1
+red_mb_to_bart_b,08:10:00,08:10:00,missb4th,13,,0
+red_mb_to_bart_b,08:20:00,08:20:00,mcb,14,to 16th St. BART,0
+red_mb_to_bart_b,08:25:00,08:25:00,16thbart,15,,1
+red_mb_to_bart_b,08:40:00,08:40:00,missb4th,16,,0
+red_mb_to_bart_b,08:50:00,08:50:00,mcb,17,to 16th St. BART,0
+red_mb_to_bart_b,08:55:00,08:55:00,16thbart,18,,1
+red_mb_to_bart_b,09:10:00,09:10:00,missb4th,19,,0
+red_mb_to_bart_b,09:20:00,09:20:00,mcb,20,to 16th St. BART,0
+red_mb_to_bart_b,09:25:00,09:25:00,16thbart,21,,1
+red_mb_to_bart_b,09:40:00,09:40:00,missb4th,22,,0
+red_mb_to_bart_b,09:50:00,09:50:00,mcb,23,to 16th St. BART,0
+red_mb_to_bart_b,09:55:00,09:55:00,16thbart,24,,1
+red_mb_to_bart_b,10:10:00,10:10:00,missb4th,25,,0
+red_mb_to_bart_b,10:20:00,10:20:00,mcb,26,to 16th St. BART,0
+red_mb_to_bart_b,10:25:00,10:25:00,16thbart,27,,1
+red_mb_to_bart_b,10:40:00,10:40:00,missb4th,28,,0
+red_mb_to_bart_b,10:50:00,10:50:00,mcb,29,to 16th St. BART,0
+red_mb_to_bart_b,10:55:00,10:55:00,16thbart,30,,1
+red_mb_to_bart_b,11:10:00,11:10:00,missb4th,31,,0
+red_mb_to_bart_b,11:20:00,11:20:00,mcb,32,to 16th St. BART,0
+red_mb_to_bart_b,11:25:00,11:25:00,16thbart,33,,1
+red_mb_to_bart_b,11:40:00,11:40:00,missb4th,34,,0
+red_mb_to_bart_b,11:50:00,11:50:00,mcb,35,to 16th St. BART,0
+red_mb_to_bart_b,11:55:00,11:55:00,16thbart,36,,1
+red_mb_to_bart_b,12:10:00,12:10:00,missb4th,37,,0
+red_mb_to_bart_b,12:20:00,12:20:00,mcb,38,to 16th St. BART,0
+red_mb_to_bart_b,12:25:00,12:25:00,16thbart,39,,1
+red_mb_to_bart_b,12:40:00,12:40:00,missb4th,40,,0
+red_mb_to_bart_b,12:50:00,12:50:00,mcb,41,to 16th St. BART,0
+red_mb_to_bart_b,12:55:00,12:55:00,16thbart,42,,1
+red_mb_to_bart_b,13:10:00,13:10:00,missb4th,43,,0
+red_mb_to_bart_b,13:20:00,13:20:00,mcb,44,to 16th St. BART,0
+red_mb_to_bart_b,13:25:00,13:25:00,16thbart,45,,1
+red_mb_to_bart_b,13:40:00,13:40:00,missb4th,46,,0
+red_mb_to_bart_b,13:50:00,13:50:00,mcb,47,to 16th St. BART,0
+red_mb_to_bart_b,13:55:00,13:55:00,16thbart,48,,1
+red_mb_to_bart_b,14:10:00,14:10:00,missb4th,49,,0
+red_mb_to_bart_b,14:20:00,14:20:00,mcb,50,to 16th St. BART,0
+red_mb_to_bart_b,14:25:00,14:25:00,16thbart,51,,1
+red_mb_to_bart_b,14:40:00,14:40:00,missb4th,52,,0
+red_mb_to_bart_b,14:50:00,14:50:00,mcb,53,to 16th St. BART,0
+red_mb_to_bart_b,14:55:00,14:55:00,16thbart,54,,1
+red_mb_to_bart_b,15:15:00,15:15:00,missb4th,55,,0
+red_mb_to_bart_b,15:25:00,15:25:00,mcb,56,to 16th St. BART,0
+red_mb_to_bart_b,15:30:00,15:30:00,16thbart,57,,1
+red_mb_to_bart_b,15:50:00,15:50:00,missb4th,58,,0
+red_mb_to_bart_b,16:00:00,16:00:00,mcb,59,to 16th St. BART,0
+red_mb_to_bart_b,16:05:00,16:05:00,16thbart,60,,1
+red_mb_to_bart_b,16:25:00,16:25:00,missb4th,61,,0
+red_mb_to_bart_b,16:35:00,16:35:00,mcb,62,to 16th St. BART,0
+red_mb_to_bart_b,16:40:00,16:40:00,16thbart,63,,1
+red_mb_to_bart_b,17:00:00,17:00:00,missb4th,64,,0
+red_mb_to_bart_b,17:10:00,17:10:00,mcb,65,to 16th St. BART,0
+red_mb_to_bart_b,17:15:00,17:15:00,16thbart,66,,1
+red_mb_to_bart_b,17:35:00,17:35:00,missb4th,67,,0
+red_mb_to_bart_b,17:45:00,17:45:00,mcb,68,to 16th St. BART,0
+red_mb_to_bart_b,17:50:00,17:50:00,16thbart,69,,1
+red_mb_to_bart_b,18:10:00,18:10:00,missb4th,70,,0
+red_mb_to_bart_b,18:20:00,18:20:00,mcb,71,to 16th St. BART,0
+red_mb_to_bart_b,18:25:00,18:25:00,16thbart,72,,1
+red_mb_to_bart_b,18:40:00,18:40:00,missb4th,73,,0
+red_mb_to_bart_b,18:50:00,18:50:00,mcb,74,to 16th St. BART,0
+red_mb_to_bart_b,18:55:00,18:55:00,16thbart,75,,1
+red_mb_to_bart_b,19:10:00,19:10:00,missb4th,76,,0
+red_mb_to_bart_b,19:20:00,19:20:00,mcb,77,to 16th St. BART,0
+red_mb_to_bart_b,19:25:00,19:25:00,16thbart,78,,1
+red_bart_to_mb_c1,06:45:00,06:45:00,16thbart,1,,0
+red_bart_to_mb_c1,06:50:00,06:50:00,mcb,2,to Mission Bay,0
+red_bart_to_mb_c1,07:00:00,07:00:00,missb4th,3,,1
+red_bart_to_mb_c1,07:15:00,07:15:00,16thbart,4,,0
+red_bart_to_mb_c1,07:20:00,07:20:00,mcb,5,to Mission Bay,0
+red_bart_to_mb_c1,07:30:00,07:30:00,missb4th,6,,1
+red_bart_to_mb_c1,07:45:00,07:45:00,16thbart,7,,0
+red_bart_to_mb_c1,07:50:00,07:50:00,mcb,8,to Mission Bay,0
+red_bart_to_mb_c1,08:00:00,08:00:00,missb4th,9,,1
+red_bart_to_mb_c1,08:15:00,08:15:00,16thbart,10,,0
+red_bart_to_mb_c1,08:20:00,08:20:00,mcb,11,to Mission Bay,0
+red_bart_to_mb_c1,08:30:00,08:30:00,missb4th,12,,1
+red_bart_to_mb_c1,08:45:00,08:45:00,16thbart,13,,0
+red_bart_to_mb_c1,08:50:00,08:50:00,mcb,14,to Mission Bay,0
+red_bart_to_mb_c1,09:00:00,09:00:00,missb4th,15,,1
+red_bart_to_mb_c1,09:15:00,09:15:00,16thbart,16,,0
+red_bart_to_mb_c1,09:20:00,09:20:00,mcb,17,to Mission Bay,0
+red_bart_to_mb_c1,09:30:00,09:30:00,missb4th,18,,1
+red_bart_to_mb_c1,09:45:00,09:45:00,16thbart,19,,0
+red_bart_to_mb_c1,09:50:00,09:50:00,mcb,20,to Mission Bay,0
+red_bart_to_mb_c1,10:00:00,10:00:00,missb4th,21,,1
+red_mb_to_bart_c1,06:30:00,06:30:00,missb4th,1,,0
+red_mb_to_bart_c1,06:40:00,06:40:00,mcb,2,to 16th St. BART,0
+red_mb_to_bart_c1,06:45:00,06:45:00,16thbart,3,,1
+red_mb_to_bart_c1,07:00:00,07:00:00,missb4th,4,,0
+red_mb_to_bart_c1,07:10:00,07:10:00,mcb,5,to 16th St. BART,0
+red_mb_to_bart_c1,07:15:00,07:15:00,16thbart,6,,1
+red_mb_to_bart_c1,07:30:00,07:30:00,missb4th,7,,0
+red_mb_to_bart_c1,07:40:00,07:40:00,mcb,8,to 16th St. BART,0
+red_mb_to_bart_c1,07:45:00,07:45:00,16thbart,9,,1
+red_mb_to_bart_c1,08:00:00,08:00:00,missb4th,10,,0
+red_mb_to_bart_c1,08:10:00,08:10:00,mcb,11,to 16th St. BART,0
+red_mb_to_bart_c1,08:15:00,08:15:00,16thbart,12,,1
+red_mb_to_bart_c1,08:30:00,08:30:00,missb4th,13,,0
+red_mb_to_bart_c1,08:40:00,08:40:00,mcb,14,to 16th St. BART,0
+red_mb_to_bart_c1,08:45:00,08:45:00,16thbart,15,,1
+red_mb_to_bart_c1,09:00:00,09:00:00,missb4th,16,,0
+red_mb_to_bart_c1,09:10:00,09:10:00,mcb,17,to 16th St. BART,0
+red_mb_to_bart_c1,09:15:00,09:15:00,16thbart,18,,1
+red_mb_to_bart_c1,09:30:00,09:30:00,missb4th,19,,0
+red_mb_to_bart_c1,09:40:00,09:40:00,mcb,20,to 16th St. BART,0
+red_mb_to_bart_c1,09:45:00,09:45:00,16thbart,21,,1
+red_bart_to_mb_c2,15:20:00,15:20:00,16thbart,1,,0
+red_bart_to_mb_c2,15:25:00,15:25:00,mcb,2,to Mission Bay,0
+red_bart_to_mb_c2,15:40:00,15:40:00,missb4th,3,,1
+red_bart_to_mb_c2,15:55:00,15:55:00,16thbart,4,,0
+red_bart_to_mb_c2,16:00:00,16:00:00,mcb,5,to Mission Bay,0
+red_bart_to_mb_c2,16:15:00,16:15:00,missb4th,6,,1
+red_bart_to_mb_c2,16:30:00,16:30:00,16thbart,7,,0
+red_bart_to_mb_c2,16:35:00,16:35:00,mcb,8,to Mission Bay,0
+red_bart_to_mb_c2,16:50:00,16:50:00,missb4th,9,,1
+red_bart_to_mb_c2,17:05:00,17:05:00,16thbart,10,,0
+red_bart_to_mb_c2,17:10:00,17:10:00,mcb,11,to Mission Bay,0
+red_bart_to_mb_c2,17:25:00,17:25:00,missb4th,12,,1
+red_bart_to_mb_c2,17:40:00,17:40:00,16thbart,13,,0
+red_bart_to_mb_c2,17:45:00,17:45:00,mcb,14,to Mission Bay,0
+red_bart_to_mb_c2,18:00:00,18:00:00,missb4th,15,,1
+red_mb_to_bart_c2,15:05:00,15:05:00,missb4th,1,,0
+red_mb_to_bart_c2,15:15:00,15:15:00,mcb,2,to 16th St. BART,0
+red_mb_to_bart_c2,15:20:00,15:20:00,16thbart,3,,1
+red_mb_to_bart_c2,15:40:00,15:40:00,missb4th,4,,0
+red_mb_to_bart_c2,15:50:00,15:50:00,mcb,5,to 16th St. BART,0
+red_mb_to_bart_c2,15:55:00,15:55:00,16thbart,6,,1
+red_mb_to_bart_c2,16:15:00,16:15:00,missb4th,7,,0
+red_mb_to_bart_c2,16:25:00,16:25:00,mcb,8,to 16th St. BART,0
+red_mb_to_bart_c2,16:30:00,16:30:00,16thbart,9,,1
+red_mb_to_bart_c2,16:50:00,16:50:00,missb4th,10,,0
+red_mb_to_bart_c2,17:00:00,17:00:00,mcb,11,to 16th St. BART,0
+red_mb_to_bart_c2,17:05:00,17:05:00,16thbart,12,,1
+red_mb_to_bart_c2,17:25:00,17:25:00,missb4th,13,,0
+red_mb_to_bart_c2,17:35:00,17:35:00,mcb,14,to 16th St. BART,0
+red_mb_to_bart_c2,17:40:00,17:40:00,16thbart,15,,1
+tan_a,06:50:00,06:50:00,library,1,,0
+tan_a,07:05:00,07:05:00,lhts,2,,0
+tan_a,07:10:00,07:10:00,mtzion,3,,0
+tan_a,07:30:00,07:30:00,library,4,,0
+tan_a,07:45:00,07:45:00,lhts,5,,0
+tan_a,07:50:00,07:50:00,mtzion,6,,0
+tan_a,08:10:00,08:10:00,library,7,,0
+tan_a,08:25:00,08:25:00,lhts,8,,0
+tan_a,08:30:00,08:30:00,mtzion,9,,0
+tan_a,08:50:00,08:50:00,library,10,,0
+tan_a,09:05:00,09:05:00,lhts,11,,0
+tan_a,09:10:00,09:10:00,mtzion,12,,0
+tan_a,09:30:00,09:30:00,library,13,,0
+tan_a,09:45:00,09:45:00,lhts,14,,0
+tan_a,09:50:00,09:50:00,mtzion,15,,0
+tan_a,10:10:00,10:10:00,library,16,,0
+tan_a,10:25:00,10:25:00,lhts,17,,0
+tan_a,10:30:00,10:30:00,mtzion,18,,0
+tan_a,10:50:00,10:50:00,library,19,,0
+tan_a,11:05:00,11:05:00,lhts,20,,0
+tan_a,11:10:00,11:10:00,mtzion,21,,0
+tan_a,11:30:00,11:30:00,library,22,,0
+tan_a,11:45:00,11:45:00,lhts,23,,0
+tan_a,11:50:00,11:50:00,mtzion,24,,0
+tan_a,12:10:00,12:10:00,library,25,,0
+tan_a,12:25:00,12:25:00,lhts,26,,0
+tan_a,12:30:00,12:30:00,mtzion,27,,0
+tan_a,12:50:00,12:50:00,library,28,,0
+tan_a,13:05:00,13:05:00,lhts,29,,0
+tan_a,13:10:00,13:10:00,mtzion,30,,0
+tan_a,13:30:00,13:30:00,library,31,,0
+tan_a,13:45:00,13:45:00,lhts,32,,0
+tan_a,13:50:00,13:50:00,mtzion,33,,0
+tan_a,14:10:00,14:10:00,library,34,,0
+tan_a,14:25:00,14:25:00,lhts,35,,0
+tan_a,14:30:00,14:30:00,mtzion,36,,0
+tan_a,14:50:00,14:50:00,library,37,,0
+tan_a,15:05:00,15:05:00,lhts,38,,0
+tan_a,15:10:00,15:10:00,mtzion,39,,0
+tan_a,15:30:00,15:30:00,library,40,,0
+tan_a,15:45:00,15:45:00,lhts,41,,0
+tan_a,15:50:00,15:50:00,mtzion,42,,0
+tan_a,16:10:00,16:10:00,library,43,,0
+tan_a,16:25:00,16:25:00,lhts,44,,0
+tan_a,16:30:00,16:30:00,mtzion,45,,0
+tan_a,16:50:00,16:50:00,library,46,,0
+tan_a,17:05:00,17:05:00,lhts,47,,0
+tan_a,17:10:00,17:10:00,mtzion,48,,0
+tan_a,17:30:00,17:30:00,library,49,,0
+tan_a,17:45:00,17:45:00,lhts,50,,0
+tan_a,17:50:00,17:50:00,mtzion,51,,0
+tan_a,18:10:00,18:10:00,library,52,,0
+tan_a,18:25:00,18:25:00,lhts,53,,0
+tan_a,18:30:00,18:30:00,mtzion,54,,0
+tan_a,18:50:00,18:50:00,library,55,,0
+tan_a,19:05:00,19:05:00,lhts,56,,0
+tan_a,19:10:00,19:10:00,mtzion,57,,0
+tan_a,19:30:00,19:30:00,library,58,,0
+tan_a,19:45:00,19:45:00,lhts,59,,0
+tan_a,19:50:00,19:50:00,mtzion,60,,1
+tan_b,07:10:00,07:10:00,library,1,,0
+tan_b,07:25:00,07:25:00,lhts,2,,0
+tan_b,07:30:00,07:30:00,mtzion,3,,0
+tan_b,07:50:00,07:50:00,library,4,,0
+tan_b,08:05:00,08:05:00,lhts,5,,0
+tan_b,08:10:00,08:10:00,mtzion,6,,0
+tan_b,08:30:00,08:30:00,library,7,,0
+tan_b,08:45:00,08:45:00,lhts,8,,0
+tan_b,08:50:00,08:50:00,mtzion,9,,0
+tan_b,09:10:00,09:10:00,library,10,,0
+tan_b,09:25:00,09:25:00,lhts,11,,0
+tan_b,09:30:00,09:30:00,mtzion,12,,0
+tan_b,09:50:00,09:50:00,library,13,,0
+tan_b,10:05:00,10:05:00,lhts,14,,0
+tan_b,10:10:00,10:10:00,mtzion,15,,0
+tan_b,10:30:00,10:30:00,library,16,,0
+tan_b,10:45:00,10:45:00,lhts,17,,0
+tan_b,10:50:00,10:50:00,mtzion,18,,0
+tan_b,11:10:00,11:10:00,library,19,,0
+tan_b,11:25:00,11:25:00,lhts,20,,0
+tan_b,11:30:00,11:30:00,mtzion,21,,0
+tan_b,11:50:00,11:50:00,library,22,,0
+tan_b,12:05:00,12:05:00,lhts,23,,0
+tan_b,12:10:00,12:10:00,mtzion,24,,0
+tan_b,12:30:00,12:30:00,library,25,,0
+tan_b,12:45:00,12:45:00,lhts,26,,0
+tan_b,12:50:00,12:50:00,mtzion,27,,0
+tan_b,13:10:00,13:10:00,library,28,,0
+tan_b,13:25:00,13:25:00,lhts,29,,0
+tan_b,13:30:00,13:30:00,mtzion,30,,0
+tan_b,13:50:00,13:50:00,library,31,,0
+tan_b,14:05:00,14:05:00,lhts,32,,0
+tan_b,14:10:00,14:10:00,mtzion,33,,0
+tan_b,14:30:00,14:30:00,library,34,,0
+tan_b,14:45:00,14:45:00,lhts,35,,0
+tan_b,14:50:00,14:50:00,mtzion,36,,0
+tan_b,15:10:00,15:10:00,library,37,,0
+tan_b,15:25:00,15:25:00,lhts,38,,0
+tan_b,15:30:00,15:30:00,mtzion,39,,0
+tan_b,15:50:00,15:50:00,library,40,,0
+tan_b,16:05:00,16:05:00,lhts,41,,0
+tan_b,16:10:00,16:10:00,mtzion,42,,0
+tan_b,16:30:00,16:30:00,library,43,,0
+tan_b,16:45:00,16:45:00,lhts,44,,0
+tan_b,16:50:00,16:50:00,mtzion,45,,0
+tan_b,17:10:00,17:10:00,library,46,,0
+tan_b,17:25:00,17:25:00,lhts,47,,0
+tan_b,17:30:00,17:30:00,mtzion,48,,0
+tan_b,17:50:00,17:50:00,library,49,,0
+tan_b,18:05:00,18:05:00,lhts,50,,0
+tan_b,18:10:00,18:10:00,mtzion,51,,0
+tan_b,18:30:00,18:30:00,library,52,,0
+tan_b,18:45:00,18:45:00,lhts,53,,0
+tan_b,18:50:00,18:50:00,mtzion,54,,0
+tan_b,19:10:00,19:10:00,library,55,,0
+tan_b,19:25:00,19:25:00,lhts,56,,0
+tan_b,19:30:00,19:30:00,mtzion,57,,1
+va_a,6:35:00,6:35:00,parlppi,1,,0
+va_a,7:10:00,7:10:00,veteran,2,,0
+va_a,7:35:00,7:35:00,parlppi,3,,0
+va_a,8:05:00,8:05:00,veteran,4,,0
+va_a,8:35:00,8:35:00,parlppi,5,,0
+va_a,9:05:00,9:05:00,veteran,6,,1
+va_a,16:35:00,16:35:00,parlppi,7,,0
+va_a,17:05:00,17:05:00,veteran,8,,0
+va_a,17:35:00,17:35:00,parlppi,9,,0
+va_a,18:05:00,18:05:00,veteran,10,,0
+va_a,18:35:00,18:35:00,parlppi,11,,0
+va_a,19:05:00,19:05:00,veteran,12,,1
+va_b,6:35:00,6:35:00,veteran,1,,0
+va_b,7:05:00,7:05:00,parlppi,2,,0
+va_b,7:35:00,7:35:00,veteran,3,,0
+va_b,8:05:00,8:05:00,parlppi,4,,0
+va_b,8:35:00,8:35:00,veteran,5,,0
+va_b,9:05:00,9:05:00,parlppi,6,,0
+va_b,9:35:00,9:35:00,veteran,7,,0
+va_b,10:05:00,10:05:00,parlppi,8,,0
+va_b,10:35:00,10:35:00,veteran,9,,0
+va_b,11:05:00,11:05:00,parlppi,10,,0
+va_b,11:35:00,11:35:00,veteran,11,,0
+va_b,12:05:00,12:05:00,parlppi,12,,0
+va_b,12:35:00,12:35:00,veteran,13,,0
+va_b,13:05:00,13:05:00,parlppi,14,,0
+va_b,13:35:00,13:35:00,veteran,15,,0
+va_b,14:05:00,14:05:00,parlppi,16,,0
+va_b,14:35:00,14:35:00,veteran,17,,0
+va_b,15:05:00,15:05:00,parlppi,18,,0
+va_b,15:35:00,15:35:00,veteran,19,,0
+va_b,16:05:00,16:05:00,parlppi,20,,0
+va_b,16:35:00,16:35:00,veteran,21,,0
+va_b,17:05:00,17:05:00,parlppi,22,,0
+va_b,17:35:00,17:35:00,veteran,23,,1
+yellow_a,6:07:00,6:07:00,16thbart,1,,0
+yellow_a,6:16:00,6:16:00,mcb,2,,0
+yellow_a,6:19:00,6:19:00,23harrsb_ob,3,,0
+yellow_a,6:27:00,6:27:00,sfgh,4,,0
+yellow_a,6:35:00,6:35:00,23harrnb_ib,5,,0
+yellow_a,6:38:00,6:38:00,16thbart,7,,0
+yellow_a,6:47:00,6:47:00,mcb,8,,0
+yellow_a,6:50:00,6:50:00,23harrsb_ob,9,,0
+yellow_a,6:58:00,6:58:00,sfgh,10,,0
+yellow_a,7:06:00,7:06:00,23harrnb_ib,11,,0
+yellow_a,7:09:00,7:09:00,16thbart,13,,0
+yellow_a,7:18:00,7:18:00,mcb,14,,0
+yellow_a,7:21:00,7:21:00,23harrsb_ob,15,,0
+yellow_a,7:29:00,7:29:00,sfgh,16,,0
+yellow_a,7:37:00,7:37:00,23harrnb_ib,17,,0
+yellow_a,7:40:00,7:40:00,16thbart,19,,0
+yellow_a,7:49:00,7:49:00,mcb,20,,0
+yellow_a,7:52:00,7:52:00,23harrsb_ob,21,,0
+yellow_a,8:00:00,8:00:00,sfgh,22,,0
+yellow_a,8:08:00,8:08:00,23harrnb_ib,23,,0
+yellow_a,8:11:00,8:11:00,16thbart,25,,0
+yellow_a,8:20:00,8:20:00,mcb,26,,0
+yellow_a,8:23:00,8:23:00,23harrsb_ob,27,,0
+yellow_a,8:31:00,8:31:00,sfgh,28,,0
+yellow_a,8:39:00,8:39:00,23harrnb_ib,29,,0
+yellow_a,8:42:00,8:42:00,16thbart,31,,0
+yellow_a,8:51:00,8:51:00,mcb,32,,0
+yellow_a,8:54:00,8:54:00,23harrsb_ob,33,,0
+yellow_a,9:02:00,9:02:00,sfgh,34,,0
+yellow_a,9:10:00,9:10:00,23harrnb_ib,35,,0
+yellow_a,9:13:00,9:13:00,16thbart,37,,0
+yellow_a,9:22:00,9:22:00,mcb,38,,0
+yellow_a,9:25:00,9:25:00,23harrsb_ob,39,,0
+yellow_a,9:33:00,9:33:00,sfgh,40,,0
+yellow_a,9:41:00,9:41:00,23harrnb_ib,41,,1
+yellow_a,15:45:00,15:45:00,mcb,116,,0
+yellow_a,15:52:00,15:52:00,16thbart,117,,0
+yellow_a,15:57:00,15:57:00,23harrsb_ob,119,,0
+yellow_a,16:05:00,16:05:00,sfgh,120,,0
+yellow_a,16:13:00,16:13:00,23harrnb_ib,121,,0
+yellow_a,16:18:00,16:18:00,mcb,122,,0
+yellow_a,16:25:00,16:25:00,16thbart,123,,0
+yellow_a,16:30:00,16:30:00,23harrsb_ob,125,,0
+yellow_a,16:38:00,16:38:00,sfgh,126,,0
+yellow_a,16:46:00,16:46:00,23harrnb_ib,127,,0
+yellow_a,16:51:00,16:51:00,mcb,128,,0
+yellow_a,16:58:00,16:58:00,16thbart,129,,0
+yellow_a,17:03:00,17:03:00,23harrsb_ob,131,,0
+yellow_a,17:11:00,17:11:00,sfgh,132,,0
+yellow_a,17:19:00,17:19:00,23harrnb_ib,133,,0
+yellow_a,17:24:00,17:24:00,mcb,134,,0
+yellow_a,17:31:00,17:31:00,16thbart,135,,0
+yellow_a,17:36:00,17:36:00,23harrsb_ob,137,,0
+yellow_a,17:44:00,17:44:00,sfgh,138,,0
+yellow_a,17:52:00,17:52:00,23harrnb_ib,139,,0
+yellow_a,17:57:00,17:57:00,mcb,140,,0
+yellow_a,18:04:00,18:04:00,16thbart,141,,0
+yellow_a,18:09:00,18:09:00,23harrsb_ob,143,,0
+yellow_a,18:17:00,18:17:00,sfgh,144,,0
+yellow_a,18:25:00,18:25:00,23harrnb_ib,145,,0
+yellow_a,18:30:00,18:30:00,mcb,146,,0
+yellow_a,18:37:00,18:37:00,16thbart,147,,0
+yellow_a,18:42:00,18:42:00,23harrsb_ob,149,,0
+yellow_a,18:50:00,18:50:00,sfgh,150,,0
+yellow_a,18:58:00,18:58:00,23harrnb_ib,151,,0
+yellow_a,19:03:00,19:03:00,mcb,152,,0
+yellow_a,19:10:00,19:10:00,16thbart,153,,0
+yellow_a,19:15:00,19:15:00,23harrsb_ob,155,,0
+yellow_a,19:23:00,19:23:00,sfgh,156,,0
+yellow_a,19:31:00,19:31:00,23harrnb_ib,157,,0
+yellow_a,19:36:00,19:36:00,mcb,158,,0
+yellow_a,19:43:00,19:43:00,16thbart,159,,0
+yellow_a,19:48:00,19:48:00,23harrsb_ob,161,,0
+yellow_a,19:56:00,19:56:00,sfgh,162,,0
+yellow_a,20:04:00,20:04:00,23harrnb_ib,163,,0
+yellow_a,20:09:00,20:09:00,mcb,164,,0
+yellow_a,20:16:00,20:16:00,16thbart,165,,1
+yellow_b,6:18:00,6:18:00,16thbart,1,,0
+yellow_b,6:27:00,6:27:00,mcb,2,,0
+yellow_b,6:30:00,6:30:00,23harrsb_ob,3,,0
+yellow_b,6:38:00,6:38:00,sfgh,4,,0
+yellow_b,6:46:00,6:46:00,23harrnb_ib,5,,0
+yellow_b,6:49:00,6:49:00,16thbart,7,,0
+yellow_b,6:58:00,6:58:00,mcb,8,,0
+yellow_b,7:01:00,7:01:00,23harrsb_ob,9,,0
+yellow_b,7:09:00,7:09:00,sfgh,10,,0
+yellow_b,7:17:00,7:17:00,23harrnb_ib,11,,0
+yellow_b,7:20:00,7:20:00,16thbart,13,,0
+yellow_b,7:29:00,7:29:00,mcb,14,,0
+yellow_b,7:32:00,7:32:00,23harrsb_ob,15,,0
+yellow_b,7:40:00,7:40:00,sfgh,16,,0
+yellow_b,7:48:00,7:48:00,23harrnb_ib,17,,0
+yellow_b,7:51:00,7:51:00,16thbart,19,,0
+yellow_b,8:00:00,8:00:00,mcb,20,,0
+yellow_b,8:03:00,8:03:00,23harrsb_ob,21,,0
+yellow_b,8:11:00,8:11:00,sfgh,22,,0
+yellow_b,8:19:00,8:19:00,23harrnb_ib,23,,0
+yellow_b,8:22:00,8:22:00,16thbart,25,,0
+yellow_b,8:31:00,8:31:00,mcb,26,,0
+yellow_b,8:34:00,8:34:00,23harrsb_ob,27,,0
+yellow_b,8:42:00,8:42:00,sfgh,28,,0
+yellow_b,8:50:00,8:50:00,23harrnb_ib,29,,0
+yellow_b,8:53:00,8:53:00,16thbart,31,,0
+yellow_b,9:02:00,9:02:00,mcb,32,,0
+yellow_b,9:05:00,9:05:00,23harrsb_ob,33,,0
+yellow_b,9:13:00,9:13:00,sfgh,34,,0
+yellow_b,9:21:00,9:21:00,23harrnb_ib,35,,0
+yellow_b,9:26:00,9:26:00,mcb,36,,0
+yellow_b,9:29:00,9:29:00,23harrsb_ob,37,,0
+yellow_b,9:37:00,9:37:00,sfgh,38,,0
+yellow_b,9:45:00,9:45:00,23harrnb_ib,39,,0
+yellow_b,9:50:00,9:50:00,mcb,40,,0
+yellow_b,9:53:00,9:53:00,23harrsb_ob,41,,0
+yellow_b,10:01:00,10:01:00,sfgh,42,,0
+yellow_b,10:09:00,10:09:00,23harrnb_ib,43,,0
+yellow_b,10:14:00,10:14:00,mcb,44,,0
+yellow_b,10:17:00,10:17:00,23harrsb_ob,45,,0
+yellow_b,10:25:00,10:25:00,sfgh,46,,0
+yellow_b,10:33:00,10:33:00,23harrnb_ib,47,,0
+yellow_b,10:38:00,10:38:00,mcb,48,,0
+yellow_b,10:41:00,10:41:00,23harrsb_ob,49,,0
+yellow_b,10:49:00,10:49:00,sfgh,50,,0
+yellow_b,10:57:00,10:57:00,23harrnb_ib,51,,0
+yellow_b,11:02:00,11:02:00,mcb,52,,0
+yellow_b,11:05:00,11:05:00,23harrsb_ob,53,,0
+yellow_b,11:13:00,11:13:00,sfgh,54,,0
+yellow_b,11:21:00,11:21:00,23harrnb_ib,55,,0
+yellow_b,11:26:00,11:26:00,mcb,56,,0
+yellow_b,11:29:00,11:29:00,23harrsb_ob,57,,0
+yellow_b,11:37:00,11:37:00,sfgh,58,,0
+yellow_b,11:45:00,11:45:00,23harrnb_ib,59,,0
+yellow_b,11:50:00,11:50:00,mcb,60,,0
+yellow_b,11:53:00,11:53:00,23harrsb_ob,61,,0
+yellow_b,12:01:00,12:01:00,sfgh,62,,0
+yellow_b,12:09:00,12:09:00,23harrnb_ib,63,,0
+yellow_b,12:14:00,12:14:00,mcb,64,,0
+yellow_b,12:17:00,12:17:00,23harrsb_ob,65,,0
+yellow_b,12:25:00,12:25:00,sfgh,66,,0
+yellow_b,12:33:00,12:33:00,23harrnb_ib,67,,0
+yellow_b,12:38:00,12:38:00,mcb,68,,0
+yellow_b,12:41:00,12:41:00,23harrsb_ob,69,,0
+yellow_b,12:49:00,12:49:00,sfgh,70,,0
+yellow_b,12:57:00,12:57:00,23harrnb_ib,71,,0
+yellow_b,13:02:00,13:02:00,mcb,72,,0
+yellow_b,13:05:00,13:05:00,23harrsb_ob,73,,0
+yellow_b,13:13:00,13:13:00,sfgh,74,,0
+yellow_b,13:21:00,13:21:00,23harrnb_ib,75,,0
+yellow_b,13:26:00,13:26:00,mcb,76,,0
+yellow_b,13:29:00,13:29:00,23harrsb_ob,77,,0
+yellow_b,13:37:00,13:37:00,sfgh,78,,0
+yellow_b,13:45:00,13:45:00,23harrnb_ib,79,,0
+yellow_b,13:50:00,13:50:00,mcb,80,,0
+yellow_b,13:53:00,13:53:00,23harrsb_ob,81,,0
+yellow_b,14:01:00,14:01:00,sfgh,82,,0
+yellow_b,14:09:00,14:09:00,23harrnb_ib,83,,0
+yellow_b,14:14:00,14:14:00,mcb,84,,0
+yellow_b,14:17:00,14:17:00,23harrsb_ob,85,,0
+yellow_b,14:25:00,14:25:00,sfgh,86,,0
+yellow_b,14:33:00,14:33:00,23harrnb_ib,87,,0
+yellow_b,14:38:00,14:38:00,mcb,88,,0
+yellow_b,14:41:00,14:41:00,23harrsb_ob,89,,0
+yellow_b,14:49:00,14:49:00,sfgh,90,,0
+yellow_b,14:57:00,14:57:00,23harrnb_ib,91,,0
+yellow_b,15:02:00,15:02:00,mcb,92,,0
+yellow_b,15:05:00,15:05:00,23harrsb_ob,93,,0
+yellow_b,15:13:00,15:13:00,sfgh,94,,0
+yellow_b,15:21:00,15:21:00,23harrnb_ib,95,,0
+yellow_b,15:26:00,15:26:00,mcb,96,,0
+yellow_b,15:33:00,15:33:00,16thbart,97,,0
+yellow_b,15:38:00,15:38:00,23harrsb_ob,98,,0
+yellow_b,15:46:00,15:46:00,sfgh,99,,0
+yellow_b,15:54:00,15:54:00,23harrnb_ib,100,,0
+yellow_b,15:59:00,15:59:00,mcb,101,,0
+yellow_b,16:06:00,16:06:00,16thbart,102,,0
+yellow_b,16:11:00,16:11:00,23harrsb_ob,103,,0
+yellow_b,16:19:00,16:19:00,sfgh,104,,0
+yellow_b,16:27:00,16:27:00,23harrnb_ib,105,,0
+yellow_b,16:32:00,16:32:00,mcb,106,,0
+yellow_b,16:39:00,16:39:00,16thbart,107,,0
+yellow_b,16:44:00,16:44:00,23harrsb_ob,108,,0
+yellow_b,16:52:00,16:52:00,sfgh,109,,0
+yellow_b,17:00:00,17:00:00,23harrnb_ib,110,,0
+yellow_b,17:05:00,17:05:00,mcb,111,,0
+yellow_b,17:12:00,17:12:00,16thbart,112,,0
+yellow_b,17:17:00,17:17:00,23harrsb_ob,113,,0
+yellow_b,17:25:00,17:25:00,sfgh,114,,0
+yellow_b,17:33:00,17:33:00,23harrnb_ib,115,,0
+yellow_b,17:38:00,17:38:00,mcb,116,,0
+yellow_b,17:45:00,17:45:00,16thbart,117,,0
+yellow_b,17:50:00,17:50:00,23harrsb_ob,118,,0
+yellow_b,17:58:00,17:58:00,sfgh,119,,0
+yellow_b,18:06:00,18:06:00,23harrnb_ib,120,,0
+yellow_b,18:11:00,18:11:00,mcb,121,,0
+yellow_b,18:18:00,18:18:00,16thbart,122,,0
+yellow_b,18:23:00,18:23:00,23harrsb_ob,123,,0
+yellow_b,18:31:00,18:31:00,sfgh,124,,0
+yellow_b,18:39:00,18:39:00,23harrnb_ib,125,,0
+yellow_b,18:44:00,18:44:00,mcb,126,,0
+yellow_b,18:51:00,18:51:00,16thbart,127,,0
+yellow_b,18:56:00,18:56:00,23harrsb_ob,128,,0
+yellow_b,19:04:00,19:04:00,sfgh,129,,0
+yellow_b,19:12:00,19:12:00,23harrnb_ib,130,,0
+yellow_b,19:17:00,19:17:00,mcb,131,,0
+yellow_b,19:24:00,19:24:00,16thbart,132,,0
+yellow_b,19:29:00,19:29:00,23harrsb_ob,133,,0
+yellow_b,19:37:00,19:37:00,sfgh,134,,0
+yellow_b,19:45:00,19:45:00,23harrnb_ib,135,,0
+yellow_b,19:50:00,19:50:00,mcb,136,,0
+yellow_b,19:57:00,19:57:00,16thbart,137,,0
+yellow_b,20:02:00,20:02:00,23harrsb_ob,138,,0
+yellow_b,20:10:00,20:10:00,sfgh,139,,0
+yellow_b,20:18:00,20:18:00,23harrnb_ib,140,,0
+yellow_b,20:23:00,20:23:00,mcb,141,,0
+yellow_b,20:30:00,20:30:00,16thbart,142,,1

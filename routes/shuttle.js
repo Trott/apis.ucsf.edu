@@ -84,11 +84,6 @@ var updatePredictionsAsync = function (callback) {
                     times = p[i].direction[0].prediction.map(mapCallback);
                 }
 
-                // Why oh why are the Black and Tan shuttles different from each other?
-                if (stopId === "library_a") {
-                    stopId = "library";
-                }
-
                 rv.predictions.push({routeId: routeId, stopId: stopId, times: times});
             }
 
@@ -111,29 +106,26 @@ var updatePredictionsAsync = function (callback) {
 
     // TODO: Instead of hard-coding the shuttles and locations, retrieve via
     //    http://webservices.nextbus.com/service/publicXMLFeed?command=routeConfig&a=ucsf
-    // Not doing that right now because the Black/Tan shuttles (see above) and Yellow shuttle
-    //     data there defy sanity.
+    // Not doing that right now because the Yellow shuttle data there defy sanity.
     var options = {
         hostname: "webservices.nextbus.com",
         path: "/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf" +
             "&stops=grey%7Cmissb4we" +
             "&stops=grey%7Cparlppi" +
-            "&stops=blue%7Cmissb4th" +
+            "&stops=blue%7Cmissb4we" +
             "&stops=blue%7Cparlppi" +
             "&stops=blue%7Cmtzion" +
             "&stops=blue%7Csfgh" +
             "&stops=gold%7Cmissb4we" +
             "&stops=gold%7Csfgh" +
-            "&stops=gold%7Clibrary" +
+            "&stops=gold%7Cparlppi" +
             "&stops=gold%7Cmtzion" +
             "&stops=bronze%7C75behr" +
             "&stops=bronze%7Cparlppi" +
-            "&stops=bronze%7Cparacc" +
-            "&stops=bronze%7Clibrary" +
             "&stops=bronze%7Csurgedown" +
             "&stops=black%7Clhts" +
             "&stops=black%7Cmtzion" +
-            "&stops=black%7Clibrary_a" +
+            "&stops=black%7Clibrary" +
             "&stops=tan%7Clhts" +
             "&stops=tan%7Cmtzion" +
             "&stops=tan%7Clibrary"
@@ -194,6 +186,15 @@ exports.stops = function(req, res) {
 
     stops(
         function (results) {
+            // Bride Of Sad Hack #47: Remove Library and ACC from Bronze results,
+            // as those are drop-off only and won't show up in the interface.
+            // They are used by the trip planner, though, so we can't just remove them from the source data.
+            if (results.stops && results.stops instanceof Array &&
+                results.route && results.route.id && results.route.id.id === "bronze") {
+                results.stops = results.stops.filter(function (el) {
+                    return ! (el.id && ['paracc','library'].indexOf(el.id.id)!==-1);
+                });
+            }
             res.send(results);
         },
         options
@@ -213,7 +214,7 @@ exports.routes = function(req, res) {
     // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
     // If parent station, let's search for routes in all stops in the parent station.
     var parentStationToChildStationForStupidHackNumberThree = {
-        "Parnassus": ["library", "parlppi", "paracc", "ER"],
+        "Parnassus": ["library", "parlppi", "paracc"],
         "MB": ["missb4th", "missb4we"],
         "2300 Harrison": ["23harrnb_ib", "23harrsb_ob"],
         "100 Buchanan": ["buchaneb", "buchanob"]
@@ -329,7 +330,7 @@ exports.times = function(req, res) {
     pathOptions.id = req.query.stopId;
     pathOptions.routeId = req.query.routeId;
     pathOptions.startTime = req.query.startTime;
-    pathOptions.endTime = req.query.endTime;
+    pathOptions.endTime = req.query.endTime || parseInt(pathOptions.startTime,10) + (24 * 60 * 60 * 1000);
     otpOptions.path += querystring.stringify(pathOptions);
 
     http.get(otpOptions, function(resp) {
@@ -350,6 +351,7 @@ exports.times = function(req, res) {
                 } else {
                     rv = result;
                 }
+
                 res.send(rv);
             }
         });
@@ -366,32 +368,27 @@ exports.plan = function(req, res) {
     // OTP will not route to a destination that is a parent station.
     // See https://github.com/openplans/OpenTripPlanner/issues/1049
     // So, for parent stations in our GTFS data, let's substitute in
-    // the appropriate child stations, sometimes based on the other endpoint.
+    // the appropriate child stations.
     // Sadly, this means that we have GTFS data here. Blech.
     // Also, we sometimes have to do multiple queries.
 
     // So, for the sad ugly hack, this maps parent stations to a child station.
     var parentStationToChildStation = {
-        "ucsf_Parnassus": function (endpoint) {
+         "ucsf_Parnassus": function (endpoint) {
             switch (endpoint) {
                 case "ucsf_75behr":
                 case "ucsf_surgedown":
-                    return ["ucsf_paracc", "ucsf_parlppi"];
+                    return ["ucsf_paracc", "ucsf_parlppi", "ucsf_library"];
                 case "ucsf_parkezar":
+                    return ["ucsf_paracc"];
                 case "ucsf_veteran":
-                    return ["ucsf_ER"];
-                case "ucsf_3360 Geary":
-                case "ucsf_lhts":
-                case "ucsf_sfgh":
-                    return ["ucsf_parlppi", "ucsf_library"];
-                case "ucsf_mtzion":
-                    return ["ucsf_parlppi", "ucsf_library"];
-                default:
                     return ["ucsf_parlppi"];
+                default:
+                    return ["ucsf_parlppi", "ucsf_library"];
             }
         },
         "ucsf_MB": function (endpoint) {
-            return ["ucsf_missb4th","ucsf_missb4we"];
+            return ["ucsf_missb4th", "ucsf_missb4we"];
         },
         "ucsf_2300 Harrison": function (endpoint) {
             return ["ucsf_23harrnb_ib", "ucsf_23harrsb_ob"];
