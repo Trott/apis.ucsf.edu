@@ -1,4 +1,7 @@
 service_id,date,exception_type
+regular,20131226,2
+regular,20131227,2
+regular,20131230,2
 regular,20131231,2
 regular,20140101,2
 regular,20140120,2
