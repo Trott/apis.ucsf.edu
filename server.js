@@ -3,10 +3,8 @@ var express = require('express'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
     map = require('./routes/map'),
-    freeFood = require('./routes/free_food'),
     fitness = require('./routes/fitness'),
     library = require('./routes/library'),
-    search = require('./routes/search'),
     nodeUserGid = 'node',
     nodeUserUid = 'node';
 
@@ -75,13 +73,9 @@ app.get('/shuttle/predictions', shuttle.predictions);
 
 app.get('/map/tile/:zoom/:x/:y', map.tile);
 
-app.get('/free_food/events', freeFood.events);
-
 app.get('/fitness/schedule', fitness.schedule);
 
 app.get('/library/hours', library.hours);
-
-app.get('/search/lexicomp', search.lexicomp);
 
 // Needed for polyfill for IE7 support :-(
 app.get('/crossdomain.xml', function (req, res) {
