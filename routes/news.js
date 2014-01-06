@@ -1,13 +1,13 @@
 var http = require('http');
 var cheerio = require('cheerio');
-var articles = {};
+var news = {};
 
 exports.articles = function(req, res) {
     'use strict';
 
     // If the cache is less than 5 minutes old, don't retrieve it again.
-    if (articles.timestamp && Date.now() - articles.timestamp < 5 * 60 * 1000) {
-        res.send(articles);
+    if (news.timestamp && Date.now() - news.timestamp < 5 * 60 * 1000) {
+        res.send(news);
         return;
     }
 
@@ -28,36 +28,48 @@ exports.articles = function(req, res) {
             data += chunk;
         });
         resp.on('end', function() {
-            if (resp.statusCode === 200) {
-                var result;
+            var articles = [];
+            var result;
 
+            if (resp.statusCode === 200) {
                 try {
                     result = JSON.parse(data);
 
                     if (result.nodes instanceof Array) {
-                        articles.articles = result.nodes.map(
+                        // Post-Process Nonsense (PPN) for each node
+                        articles = result.nodes.map(
                             function (el)  {
+                                // PPN: Split body (blob of HTML) into paragraphs.
                                 var paragraphs = cheerio.load(el.node.body)('p');
-                                el.node.paragraphs = paragraphs.map(function() {
+
+                                // PPN: Only include text, not arbitrary HTML.
+                                paragraphs = paragraphs.map(function() {
                                     return this.text();
                                 });
+
+                                // PPN: Do not include empty paragraphs.
+                                paragraphs = paragraphs.filter(function (value) {
+                                    return value !== '';
+                                });
+
+                                el.node.paragraphs = paragraphs;
                                 delete el.node.body;
                                 return el.node;
                             }
                         );
-                    } else {
-                        articles.articles = [];
                     }
 
-                    articles.timestamp = Date.now();
+                    news.articles = articles;
+
+                    news.timestamp = Date.now();
                 } catch (e) {
-                    articles = {};
-                    articles.timestamp = Date.now();
+                    news = {};
+                    news.timestamp = Date.now();
                     console.log('error parsing news JSON: ' + e.message);
                 }
 
                 res.header("Content-Type", "application/json; charset=utf-8");
-                res.send(articles);
+                res.send(news);
             }
         });
     }).on('error', function (e) {
