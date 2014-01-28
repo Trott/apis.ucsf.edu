@@ -7,9 +7,9 @@ MB,Mission Bay Campus,4th St.,37.767930,-122.391009,1,
 missb4we,Mission Bay (west side of street),4th St. west side,37.767930,-122.391009,0,MB
 missb4th,Mission Bay (east side of street),4th St. east side,37.767962,-122.390861,0,MB
 mboi,MB Orthopaedic Institute,1500 Owens,37.769146,-122.395990,0,MB
-2300 Harrison,2300 Harrison,Harrison & 19th St.,37.760619,-122.413418,1,
-23harrnb_ib,2300 Harrison (north side of street),north side of 19th St.,37.760619,-122.413418,0,2300 Harrison
-23harrsb_ob,2300 Harrison (south side of street),south side of 19th St.,37.760576,-122.413380,0,2300 Harrison
+2300 Harrison,20th & Alabama,20th & Alabama,37.759072,-122.411562,1,
+23harrnb_ib,20th & Alabama (north side of street),20th & Alabama (north side of street),37.759072,-122.411562,0,2300 Harrison
+23harrsb_ob,20th & Alabama (south side of street),20th & Alabama (south side of street),37.759072,-122.411562,0,2300 Harrison
 mtzion,Mt. Zion,Mt. Zion Medical Center (1600 Divisadero),37.78524781704753,-122.439474016428,0,
 sfgh,SFGH,San Francisco General Hospital (2557 23rd St.),37.7548539352877,-122.40492649376392,0,
 100 Buchanan,Buchanan Dental Center,100 Buchanan,37.770791,-122.426684,1,
