@@ -128,7 +128,9 @@ var updatePredictionsAsync = function (callback) {
             "&stops=black%7Clibrary" +
             "&stops=tan%7Clhts" +
             "&stops=tan%7Cmtzion" +
-            "&stops=tan%7Clibrary"
+            "&stops=tan%7Clibrary" +
+            "&stops=lime%7Clibrary" +
+            "&stops=lime%7Cmcb"
     };
 
     http.get(options, function (resp) {
