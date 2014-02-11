@@ -14,7 +14,7 @@ var stops = function(callback, options) {
 
     var otpOptions = {
         host: "localhost",
-        path: "/opentripplanner-api-webapp/ws/transit/stopsInRectangle?extended=true",
+        path: "/otp-rest-servlet/ws/transit/stopsInRectangle?extended=true",
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
@@ -181,7 +181,7 @@ exports.stops = function(req, res) {
     if (req.query.routeId) {
         var routeIdOption = {id: req.query.routeId};
         options = {
-            path: "/opentripplanner-api-webapp/ws/transit/routeData?agency=ucsf&references=true&extended=true&" +
+            path: "/otp-rest-servlet/ws/transit/routeData?agency=ucsf&references=true&extended=true&" +
                 querystring.stringify(routeIdOption),
             property: "routeData",
             useParentStation: false
@@ -235,8 +235,8 @@ exports.routes = function(req, res) {
         };
 
         otpOptions.path = stopId ?
-        "/opentripplanner-api-webapp/ws/transit/routesForStop?agency=ucsf&" + querystring.stringify({id:stopId}) :
-        "/opentripplanner-api-webapp/ws/transit/routes?agency=ucsf&";
+        "/otp-rest-servlet/ws/transit/routesForStop?agency=ucsf&" + querystring.stringify({id:stopId}) :
+        "/otp-rest-servlet/ws/transit/routes?agency=ucsf&";
 
         http.get(otpOptions, function(resp) {
             var data = "";
@@ -322,7 +322,7 @@ exports.times = function(req, res) {
 
     var otpOptions = {
         host: "localhost",
-        path: "/opentripplanner-api-webapp/ws/transit/stopTimesForStop?agency=ucsf&extended=true&",
+        path: "/otp-rest-servlet/ws/transit/stopTimesForStop?agency=ucsf&extended=true&",
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
@@ -368,73 +368,21 @@ exports.times = function(req, res) {
 exports.plan = function(req, res) {
     'use strict';
 
-    // ACHTUNG! TOTALLY SAD UGLY HACK!
-    // OTP will not route to a destination that is a parent station.
-    // See https://github.com/openplans/OpenTripPlanner/issues/1049
-    // So, for parent stations in our GTFS data, let's substitute in
-    // the appropriate child stations.
-    // Sadly, this means that we have GTFS data here. Blech.
-    // Also, we sometimes have to do multiple queries.
-
-    // So, for the sad ugly hack, this maps parent stations to a child station.
-    var parentStationToChildStation = {
-         "ucsf_Parnassus": function (endpoint) {
-            switch (endpoint) {
-                case "ucsf_75behr":
-                case "ucsf_surgedown":
-                    return ["ucsf_paracc", "ucsf_parlppi", "ucsf_library"];
-                case "ucsf_parkezar":
-                    return ["ucsf_paracc"];
-                case "ucsf_veteran":
-                    return ["ucsf_parlppi"];
-                default:
-                    return ["ucsf_parlppi", "ucsf_library"];
-            }
-        },
-        "ucsf_MB": function (endpoint) {
-            return ["ucsf_missb4th", "ucsf_missb4we"];
-        },
-        "ucsf_2300 Harrison": function (endpoint) {
-            return ["ucsf_23harrnb_ib", "ucsf_23harrsb_ob"];
-        },
-        "ucsf_100 Buchanan": function (endpoint) {
-            return ["ucsf_buchanwb", "ucsf_buchaneb"];
-        }
-    };
-
-    var uglyHack = function (pointA, pointB) {
-        if (typeof parentStationToChildStation[pointA] === "function") {
-             return parentStationToChildStation[pointA](pointB);
-        } else {
-            return [pointA];
-        }
-    };
-
-    var fromPlaces = [null],
-        toPlaces = [null];
-    if (req.query.fromPlace && req.query.toPlace) {
-        fromPlaces = uglyHack(req.query.fromPlace, req.query.toPlace);
-        toPlaces = uglyHack(req.query.toPlace, req.query.fromPlace);
-    }
-
     // Thanks to sad ugly hack, we have to build an array of functions to
     // run to retrieve potential routes.
     var combined = [];
-    for (var i=0; i<fromPlaces.length; i++) {
-        for (var j=0; j<toPlaces.length; j++) {
-            combined.push({fromPlace:fromPlaces[i], toPlace:toPlaces[j], mode:'TRANSIT,WALK'});
-            // Ugly Hack #2: Works around https://github.com/openplans/OpenTripPlanner/issues/1054
-            combined.push({fromPlace:fromPlaces[i], toPlace:toPlaces[j], mode:'TRANSIT', hack:true});
-        }
-    }
+    combined.push({fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT,WALK'});
+    // Ugly Hack: Works around https://github.com/openplans/OpenTripPlanner/issues/1054
+    combined.push({fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT', hack:true});
+
 
     var allResults = [];
-    var uglyHackNumberTwoResults = [];
+    var uglyHackResults = [];
     var metadata = {};
     var plan = function (options, callback) {
         var otpOptions = {
             host: "localhost",
-            path: "/opentripplanner-api-webapp/ws/plan?minTransferTime=60&",
+            path: "/otp-rest-servlet/ws/plan?minTransferTime=60&",
             port: 8080,
             headers: {'Content-Type':'application/json'}
         };
@@ -477,7 +425,7 @@ exports.plan = function(req, res) {
                     if (rv.plan && rv.plan.itineraries) {
                         metadata.plan = rv.plan;
                         if (rv.requestParameters && rv.requestParameters.hack==="true") {
-                            uglyHackNumberTwoResults.push.apply(uglyHackNumberTwoResults, rv.plan.itineraries);
+                            uglyHackResults.push.apply(uglyHackResults, rv.plan.itineraries);
                         } else {
                             allResults.push.apply(allResults, rv.plan.itineraries);
                         }
@@ -507,9 +455,9 @@ exports.plan = function(req, res) {
                     penultimateLeg,
                     lastLeg;
 
-                // If we didn't get anything from the ordinary request but got something from ugly hack #2, use it.
-                if (allResults.length === 0 && uglyHackNumberTwoResults.length > 0) {
-                    allResults = uglyHackNumberTwoResults;
+                // If we didn't get anything from the ordinary request but got something from ugly hack, use it.
+                if (allResults.length === 0 && uglyHackResults.length > 0) {
+                    allResults = uglyHackResults;
                 }
 
                 for(var l = allResults.length - 1; l>=0; --l) {
