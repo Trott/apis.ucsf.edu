@@ -14,7 +14,7 @@ var stops = function(callback, options) {
 
     var otpOptions = {
         host: "localhost",
-        path: "/opentripplanner-api-webapp/ws/transit/stopsInRectangle?extended=true",
+        path: "/otp-rest-servlet/ws/transit/stopsInRectangle?extended=true",
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
@@ -181,7 +181,7 @@ exports.stops = function(req, res) {
     if (req.query.routeId) {
         var routeIdOption = {id: req.query.routeId};
         options = {
-            path: "/opentripplanner-api-webapp/ws/transit/routeData?agency=ucsf&references=true&extended=true&" +
+            path: "/otp-rest-servlet/ws/transit/routeData?agency=ucsf&references=true&extended=true&" +
                 querystring.stringify(routeIdOption),
             property: "routeData",
             useParentStation: false
@@ -235,8 +235,8 @@ exports.routes = function(req, res) {
         };
 
         otpOptions.path = stopId ?
-        "/opentripplanner-api-webapp/ws/transit/routesForStop?agency=ucsf&" + querystring.stringify({id:stopId}) :
-        "/opentripplanner-api-webapp/ws/transit/routes?agency=ucsf&";
+        "/otp-rest-servlet/ws/transit/routesForStop?agency=ucsf&" + querystring.stringify({id:stopId}) :
+        "/otp-rest-servlet/ws/transit/routes?agency=ucsf&";
 
         http.get(otpOptions, function(resp) {
             var data = "";
@@ -322,7 +322,7 @@ exports.times = function(req, res) {
 
     var otpOptions = {
         host: "localhost",
-        path: "/opentripplanner-api-webapp/ws/transit/stopTimesForStop?agency=ucsf&extended=true&",
+        path: "/otp-rest-servlet/ws/transit/stopTimesForStop?agency=ucsf&extended=true&",
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
@@ -382,7 +382,7 @@ exports.plan = function(req, res) {
     var plan = function (options, callback) {
         var otpOptions = {
             host: "localhost",
-            path: "/opentripplanner-api-webapp/ws/plan?minTransferTime=60&",
+            path: "/otp-rest-servlet/ws/plan?minTransferTime=60&",
             port: 8080,
             headers: {'Content-Type':'application/json'}
         };
