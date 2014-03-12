@@ -13,8 +13,6 @@ var app = express();
 app.use(express.logger());
 app.use(express.compress());
 
-//TODO: log rotation
-//TODO: Better log file than, uh, server.js.log?
 //TODO: Dependency: OpenTripPlanner
 //TODO: modularize stuff like OpenTripPlanner and the map tile server so they can
 //      be deployed on other servers or something
