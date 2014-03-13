@@ -75,20 +75,6 @@ app.get('/fitness/schedule', fitness.schedule);
 
 app.get('/library/hours', library.hours);
 
-// Needed for polyfill for IE7 support :-(
-app.get('/crossdomain.xml', function (req, res) {
-    'use strict';
-    // Yup, IE7 polyfill will allow any origin.
-    res.send(
-        '<?xml version="1.0"?>\n' +
-        '<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">\n' +
-        '<cross-domain-policy>\n' +
-        '  <allow-access-from domain="*" />\n' +
-        '  <allow-http-request-headers-from domain="*" headers="*" />\n' +
-        '</cross-domain-policy>\n'
-    );
-});
-
 app.get('/', function (req, res) {
     'use strict';
     res.sendfile(__dirname + '/static/index.html');
