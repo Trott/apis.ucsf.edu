@@ -13,10 +13,6 @@ var app = express();
 app.use(express.logger());
 app.use(express.compress());
 
-//TODO: Dependency: OpenTripPlanner
-//TODO: modularize stuff like OpenTripPlanner and the map tile server so they can
-//      be deployed on other servers or something
-
 app.use('/static', express.static(__dirname + '/static'));
 
 // Instruct Android 2.x browser to not cache CORS results because it will return 0/empty from cache.
