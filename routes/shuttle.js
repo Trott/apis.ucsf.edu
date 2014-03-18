@@ -107,6 +107,7 @@ var updatePredictionsAsync = function (callback) {
     // TODO: Instead of hard-coding the shuttles and locations, retrieve via
     //    http://webservices.nextbus.com/service/publicXMLFeed?command=routeConfig&a=ucsf
     // Not doing that right now because the Yellow shuttle data there defy sanity.
+    // Could omit yellow weirdness by ignoring any routes that have an underscore.
     var options = {
         hostname: "webservices.nextbus.com",
         path: "/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf" +
