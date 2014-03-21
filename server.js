@@ -1,4 +1,5 @@
 var express = require('express'),
+    fs = require('fs'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
@@ -9,8 +10,11 @@ var express = require('express'),
     nodeUserUid = 'node';
 
 var app = express();
+var logFile;
 
-app.use(express.logger());
+logFile = fs.createWriteStream(__dirname + '/logs/http.' + Date.now());
+
+app.use(express.logger({stream: logFile}));
 app.use(express.compress());
 
 app.use('/static', express.static(__dirname + '/static'));
