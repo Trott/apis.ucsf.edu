@@ -32,6 +32,15 @@ module.exports = function (grunt) {
                 }
             }
         },
+        cssmin: {
+            static: {
+                expand: true,
+                cwd: 'static/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'static/css/',
+                ext: '.min.css'
+            }
+        },
         compress: {
             gtfs: {
                 cwd: 'static/gtfs',
@@ -46,7 +55,8 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
 
-    grunt.registerTask('default', ['jshint:jsFragments', 'uglify:static', 'compress:gtfs']);
+    grunt.registerTask('default', ['jshint:jsFragments', 'uglify:static', 'cssmin:static', 'compress:gtfs']);
 };
