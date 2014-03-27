@@ -1,45 +1,45 @@
 route_id,service_id,trip_id,trip_headsign,direction_id
-black,all,black_a,,
+black,regular,black_a,,
 black,regular,black_b,,
-blue,all,blue_a,,
+blue,regular,blue_a,,
 blue,regular,blue_b,,
-blue,all,blue_c,,
+blue,regular,blue_c,,
 blue,regular,blue_d,,
 blue,regular,blue_e1,,
 blue,regular,blue_e2,,
-bronze,all,bronze_a,,
-gold,all,gold_a,,
+bronze,regular,bronze_a,,
+gold,regular,gold_a,,
 gold,regular,gold_b,,
-gold,all,gold_c,,
+gold,regular,gold_c,,
 gold,regular,gold_d,,
 gold,regular,gold_e1,,
 gold,regular,gold_e2,,
 green,regular,green_654minn_to_chinbasn_a,to China Basin,0
-green,all,green_654minn_to_chinbasn_b,to China Basin,0
+green,regular,green_654minn_to_chinbasn_b,to China Basin,0
 green,regular,green_chinbasn_to_654minn_a,to 654 Minnesota St.,1
-green,all,green_chinbasn_to_654minn_b,to 654 Minnesota St.,1
-grey,all,grey_a,,
+green,regular,green_chinbasn_to_654minn_b,to 654 Minnesota St.,1
+grey,regular,grey_a,,
 grey,regular,grey_b,,
-grey,all,grey_c,,
+grey,regular,grey_c,,
 grey,regular,grey_d1,,
 grey,regular,grey_d2,,
-lime,all,lime_a,,
+lime,regular,lime_a,,
 lime,regular,lime_b,,
 lime,regular,lime_c,,
 pink,all,pink_a,,
 purple,all,purple_to_mtzion_a,to Mt. Zion,0
 purple,all,purple_to_library_a,to Parnassus,1
-red,all,red_bart_to_mb_a,to Mission Bay,0
+red,regular,red_bart_to_mb_a,to Mission Bay,0
 red,regular,red_bart_to_mb_b,to Mission Bay,0
 red,regular,red_bart_to_mb_c1,to Mission Bay,0
 red,regular,red_bart_to_mb_c2,to Mission Bay,0
-red,all,red_mb_to_bart_a,to 16th St. BART,1
+red,regular,red_mb_to_bart_a,to 16th St. BART,1
 red,regular,red_mb_to_bart_b,to 16th St. BART,1
 red,regular,red_mb_to_bart_c1,to 16th St. BART,1
 red,regular,red_mb_to_bart_c2,to 16th St. BART,1
 tan,regular,tan_a,,
-tan,all,tan_b,,
-va,all,va_a,,
-va,all,va_b,,
+tan,regular,tan_b,,
+va,regular,va_a,,
+va,regular,va_b,,
 yellow,regular,yellow_a,,
-yellow,all,yellow_b,,
+yellow,regular,yellow_b,,
