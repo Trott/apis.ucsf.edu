@@ -1,4 +1,5 @@
 config.js
+static/gtfs/latest.zip
 
 lib-cov
 *.seed
