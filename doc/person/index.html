@@ -1,62 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Person Search JavaScript API (Dev@UCSF)</title>
-    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="http://apis.ucsf.edu/jsapi?person"></script>
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="page-header">
-            <h1>Dev@UCSF</h1>
-        </div>
-        <h2>Person Search JavaScript API</h2>
-        <h3>Quick Start</h3>
-        <h4>1. Insert a &lt;script> tag in your page to load the API</h4>
-        <pre>&lt;script src="http://apis.ucsf.edu/jsapi?person">&lt;/script></pre>
-        <h4>2. Call <code>UCSF.Person.search()</code></h4>
-        <p><code>UCSF.Person.search()</code> takes three parameters.</p>
-        <ol>
-            <li><code>options</code> object containing the your keyword query in a <code>q</code> property
-            <li><code>success</code> callback that is passed a <code>results</code> object if there were no errors. The <code>results</code> object will never contain more than 20 results.</li>
-            <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
-        </ol>
-        <h3>Demo</h3>
-        <form action="javascript:search()">
-            <label for="q">Name or department</label><input name="q" id="q" />
-            <input type="submit" id="submit" />
-        </form>
-        <h4>Results</h4>
-        <pre id="search_results">
+---
+---
+{% include start.html title="Person Search API (Dev@UCSF)" %}
+
+
+<script src="http://apis.ucsf.edu/jsapi?person"></script>
+
+<div class="page-header">
+    <h1>Dev@UCSF</h1>
+</div>
+<h2>Person Search JavaScript API</h2>
+<h3>Quick Start</h3>
+<h4>1. Insert a &lt;script> tag in your page to load the API</h4>
+<pre>&lt;script src="http://apis.ucsf.edu/jsapi?person">&lt;/script></pre>
+<h4>2. Call <code>UCSF.Person.search()</code></h4>
+<p><code>UCSF.Person.search()</code> takes three parameters.</p>
+<ol>
+    <li><code>options</code> object containing the your keyword query in a <code>q</code> property
+    <li><code>success</code> callback that is passed a <code>results</code> object if there were no errors. The <code>results</code> object will never contain more than 20 results.</li>
+    <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
+</ol>
+<h3>Demo</h3>
+<form action="javascript:search()">
+    <label for="q">Name or department</label><input name="q" id="q" />
+    <input type="submit" id="submit" />
+</form>
+<h4>Results</h4>
+<pre id="search_results">
 JSON results will appear here.
-        </pre>
-        <script>
-            function search() {
-                document.getElementById("search_results").innerHTML = "<progress>Loading...</progress>";
+</pre>
+<script>
+    function search() {
+        document.getElementById("search_results").innerHTML = "<progress>Loading...</progress>";
 
-                var options = {};
-                options.q = document.getElementById("q").value;
+        var options = {};
+        options.q = document.getElementById("q").value;
 
-                var successCallback = render;
-                var failureCallback = null; // failureCallback is optional
+        var successCallback = render;
+        var failureCallback = null; // failureCallback is optional
 
-                UCSF.Person.search(options, successCallback, failureCallback);
-            }
+        UCSF.Person.search(options, successCallback, failureCallback);
+    }
 
-            function render(result) {
-                var search_results = document.getElementById("search_results");
-                var resultText = JSON.stringify(result, null, 4);
-                if ("textContent" in search_results) {
-                    search_results.textContent = resultText;
-                } else {
-                    search_results.innerText = resultText;
-                }
-            };
-        </script>
-        <h4>Code</h4>
-        <pre>
+    function render(result) {
+        var search_results = document.getElementById("search_results");
+        var resultText = JSON.stringify(result, null, 4);
+        if ("textContent" in search_results) {
+            search_results.textContent = resultText;
+        } else {
+            search_results.innerText = resultText;
+        }
+    };
+</script>
+<h4>Code</h4>
+<pre>
 &lt;script src="http://apis.ucsf.edu/jsapi?person">&lt;/script>
 &lt;form action="javascript:search()">
     &lt;label for="q">Name or department&lt;/label>&lt;input name="q" id="q" />
@@ -88,7 +84,6 @@ JSON results will appear here.
         }
     };
 &lt;/script>
-        </pre>
-    </div>
-</body>
-</html>
+</pre>
+
+{% include end.html %}

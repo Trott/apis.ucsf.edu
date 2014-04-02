@@ -1,64 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Shuttle API (Dev@UCSF)</title>
-    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="http://apis.ucsf.edu/jsapi?shuttle"></script>
-</head>
-<body>
-    <div class="container-fluid">
-        <div class="page-header">
-            <h1>Dev@UCSF</h1>
-        </div>
-        <h2>GTFS Data</h2>
-        <p class="lead">The GTFS data for UCSF shuttles can be downloaded from <a href="http://apis.ucsf.edu/static/gtfs/latest.zip">http://apis.ucsf.edu/static/gtfs/latest.zip</a>.</p>
-        <p>Think the trip planner implemented here stinks? Grab the data and go make your own. If you want to be cool, share it with us. If not, eh, it's a free country.</p>
-        <h2>Shuttle JavaScript API</h2>
-        <p>OK, so you don't want to implement your own shortest-path routing algorithm and host it somewhere. You're in luck. We've taken care of it for you. Here we go!</p>
-        <h3>1. Insert a &lt;script> tag in your page to load the API</h3>
-        <pre>&lt;script src="http://apis.ucsf.edu/jsapi?shuttle">&lt;/script></pre>
-        <h3>2. Use the API!</h3>
-        <p>All functions in this API take three parameters.</p>
-        <ol>
-            <li><code>options</code> object containing properties documented for each function below.</li>
-            <li><code>success</code> callback that is passed a <code>results</code> object if there were no errors.</li>
-            <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
-        </ol>
-        <h4>a. Use <code>UCSF.Shuttle.stops()</code> to retrieve stops.</h4>
-        <p>Properties for <code>options</code> object:</p>
-        <ul>
-            <li><code>routeId</code> (optional): Only stops served by the route with this routeId (returned by <code>UCSF.Shuttle.routes()</code> below) will be returned</li>
-        </ul>
-        <h4>b. Use <code>UCSF.Shuttle.routes()</code> to retrieve routes.</h4>
-        <p>Properties for <code>options</code> object:</p>
-        <ul>
-            <li><code>stopId</code> (optional): Only routes that serve the stop with this stopId (returned by <code>UCSF.Shuttle.stops()</code> above) will be returned</li>
-        </ul>
-        <h4>c. Use <code>UCSF.Shuttle.times()</code> to retrieve shuttles scheduled to serve a stop.</h4>
-        <p>Properties for <code>options</code> object:</p>
-        <ul>
-            <li><code>stopId</code> (required): Only times for the stop with this stopId will be returned</li>
-            <li><code>startTime</code> (required): Only times at or after the startTime will be returned. Format is the number of milliseconds since 1 January 1970 00:00:00 UTC. Conveniently, this is the format returned by JavaScript's <code>Date.setHours</code></li>
-            <li><code>endTime</code> (optional): Only times at or before the endTime will be returned. Format is the number of milliseconds since 1 January 1970 00:00:00 UTC. Defaults to 24 hours after <code>startTime</code>.</li>
-            <li><code>routeId</code> (optional): Only times for the route with this routeId will be returned</li>
-        </ul>
-        <h4>d. Use <code>UCSF.Shuttle.plan()</code> to plan a trip.</h4>
-         <p>Properties for <code>options</code> object:</p>
-        <ul>
-            <li><code>fromPlace</code> (required): stopId of the trip starting point</li>
-            <li><code>toPlace</code> (required): stopId of the trip destination</li>
-            <li><code>date</code> (optional): Trip date in MM/DD/YY format</li>
-            <li><code>time</code> (optional): Trip time in human-readable format, e.g. <i>1:00pm</i></li>
-            <li><code>arriveBy</code> (optional): Whether the time specified is when the planner wishes to arrive or depart. Values are either <i>true</i> or <i>false</i></li>
-        </ul>
-        <h4>e. Use <code>UCSF.Shuttle.predictions()</code> to retrieve GPS-based arrival predictions from NextBus.</h4>
-         <p>Properties for <code>options</code> object:</p>
-        <ul>
-            <li><code>routeId</code> (required): routeId of the shuttle</li>
-            <li><code>stopId</code> (required): stopId of the stop</li>
-        </ul>
-    </div>
-</body>
-</html>
+---
+---
+{% include start.html title="Shuttle API (Dev@UCSF)" %}
+
+<div class="page-header">
+    <h1>Dev@UCSF</h1>
+</div>
+<h2>GTFS Data</h2>
+<p class="lead">The GTFS data for UCSF shuttles can be downloaded from <a href="http://apis.ucsf.edu/static/gtfs/latest.zip">http://apis.ucsf.edu/static/gtfs/latest.zip</a>.</p>
+<p>Think the trip planner implemented here stinks? Grab the data and go make your own. If you want to be cool, share it with us. If not, eh, it's a free country.</p>
+<h2>Shuttle JavaScript API</h2>
+<p>OK, so you don't want to implement your own shortest-path routing algorithm and host it somewhere. You're in luck. We've taken care of it for you. Here we go!</p>
+<h3>1. Insert a &lt;script> tag in your page to load the API</h3>
+<pre>&lt;script src="http://apis.ucsf.edu/jsapi?shuttle">&lt;/script></pre>
+<h3>2. Use the API!</h3>
+<p>All functions in this API take three parameters.</p>
+<ol>
+    <li><code>options</code> object containing properties documented for each function below.</li>
+    <li><code>success</code> callback that is passed a <code>results</code> object if there were no errors.</li>
+    <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
+</ol>
+<h4>a. Use <code>UCSF.Shuttle.stops()</code> to retrieve stops.</h4>
+<p>Properties for <code>options</code> object:</p>
+<ul>
+    <li><code>routeId</code> (optional): Only stops served by the route with this routeId (returned by <code>UCSF.Shuttle.routes()</code> below) will be returned</li>
+</ul>
+<h4>b. Use <code>UCSF.Shuttle.routes()</code> to retrieve routes.</h4>
+<p>Properties for <code>options</code> object:</p>
+<ul>
+    <li><code>stopId</code> (optional): Only routes that serve the stop with this stopId (returned by <code>UCSF.Shuttle.stops()</code> above) will be returned</li>
+</ul>
+<h4>c. Use <code>UCSF.Shuttle.times()</code> to retrieve shuttles scheduled to serve a stop.</h4>
+<p>Properties for <code>options</code> object:</p>
+<ul>
+    <li><code>stopId</code> (required): Only times for the stop with this stopId will be returned</li>
+    <li><code>startTime</code> (required): Only times at or after the startTime will be returned. Format is the number of milliseconds since 1 January 1970 00:00:00 UTC. Conveniently, this is the format returned by JavaScript's <code>Date.setHours</code></li>
+    <li><code>endTime</code> (optional): Only times at or before the endTime will be returned. Format is the number of milliseconds since 1 January 1970 00:00:00 UTC. Defaults to 24 hours after <code>startTime</code>.</li>
+    <li><code>routeId</code> (optional): Only times for the route with this routeId will be returned</li>
+</ul>
+<h4>d. Use <code>UCSF.Shuttle.plan()</code> to plan a trip.</h4>
+ <p>Properties for <code>options</code> object:</p>
+<ul>
+    <li><code>fromPlace</code> (required): stopId of the trip starting point</li>
+    <li><code>toPlace</code> (required): stopId of the trip destination</li>
+    <li><code>date</code> (optional): Trip date in MM/DD/YY format</li>
+    <li><code>time</code> (optional): Trip time in human-readable format, e.g. <i>1:00pm</i></li>
+    <li><code>arriveBy</code> (optional): Whether the time specified is when the planner wishes to arrive or depart. Values are either <i>true</i> or <i>false</i></li>
+</ul>
+<h4>e. Use <code>UCSF.Shuttle.predictions()</code> to retrieve GPS-based arrival predictions from NextBus.</h4>
+ <p>Properties for <code>options</code> object:</p>
+<ul>
+    <li><code>routeId</code> (required): routeId of the shuttle</li>
+    <li><code>stopId</code> (required): stopId of the stop</li>
+</ul>
+
+{% include end.html %}
