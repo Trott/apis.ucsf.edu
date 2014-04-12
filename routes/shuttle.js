@@ -75,10 +75,10 @@ var updatePredictionsAsync = function (callback) {
                 routeId,
                 stopId,
                 times,
-                mapCallback = function (value) { return value['$'] && value['$'].minutes; };
+                mapCallback = function (value) { return value.$ && value.$.minutes; };
             for (var i=0, l=p.length; i<l; i++) {
-                routeId = p[i]['$'].routeTag;
-                stopId = p[i]['$'].stopTag;
+                routeId = p[i].$.routeTag;
+                stopId = p[i].$.stopTag;
                 times = [];
                 if (p[i].direction && p[i].direction[0] && p[i].direction[0].prediction && p[i].direction[0].prediction instanceof Array) {
                     times = p[i].direction[0].prediction.map(mapCallback);
@@ -480,8 +480,8 @@ exports.plan = function(req, res) {
                 var compare = function (a,b) {
                     // If one shuttle both arrives earlier and leaves later than another,
                     //   then it should be favored no matter what.
-                    if ((a['endTime'] <= b['endTime']) === (b['startTime'] <= a['startTime'])) {
-                        return b['startTime'] - a['startTime'];
+                    if ((a.endTime <= b.endTime) === (b.startTime <= a.startTime)) {
+                        return b.startTime - a.startTime;
                     }
 
                     if (a[compareOn] < b[compareOn]) {
