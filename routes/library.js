@@ -28,7 +28,7 @@ var updateGuidesAsync = function () {
         });
         resp.on('end', function () {
             if (resp.statusCode === 200) {
-                var result;
+                var result = {};
                 try {
                     // remove br tags
                     var cleaned = data.replace(/<br ?\/?>/ig, '');
@@ -37,21 +37,19 @@ var updateGuidesAsync = function () {
                     // remove empty lines
                     featured = featured.filter(function (val) { return !!val;});
                     // Parse each line so we can return JSON values
-                    result = featured.map(function (val) {
+                    result.guides = featured.map(function (val) {
                         var $ = cheerio.load('<div>' + val + '</div>');
                         var title = $('a').text();
                         var href = $('a').attr('href');
                         var desc = $('div').text().substr(title.length).replace(/^[ \-]*/, '');
                         return {title: title, href: href, desc: desc};
                     });
-                    console.dir(result);
-
                 } catch (e) {
                     result = {};
                     console.log('error parsing LibGuides JSON: ' + e.message);
                 }
 
-                guides.data = data;
+                guides = result;
                 guides.lastUpdated = Date.now();
             }
         });
