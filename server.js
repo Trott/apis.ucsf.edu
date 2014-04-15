@@ -74,6 +74,7 @@ app.get('/map/tile/:zoom/:x/:y', map.tile);
 app.get('/fitness/schedule', fitness.schedule);
 
 app.get('/library/hours', library.hours);
+app.get('/library/guides', library.guides);
 
 app.get('/', function (req, res) {
     'use strict';
