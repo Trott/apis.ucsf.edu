@@ -3,6 +3,6 @@ UCSF.Library = {
         UCSF.run('library/hours', options, success, failure, UCSF.Library.hours);
     },
     guides: function (options, success, failure) {
-        UCSF.run('library/guides', options, success, failure, UCSF.Libary.guides);
+        UCSF.run('library/guides', options, success, failure, UCSF.Library.guides);
     }
 };
