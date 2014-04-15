@@ -13,7 +13,8 @@
     "async": "~0.2.7",
     "request": "~2.22.0",
     "csv": "~0.3.3",
-    "moment": "~2.0.0"
+    "moment": "~2.0.0",
+    "cheerio": "~0.15.0"
   },
   "scripts": {
     "start": "server.js"
