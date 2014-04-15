@@ -10,66 +10,132 @@
 <h2>Library JavaScript API</h2>
 <h3>1. Insert a &lt;script> tag in your page to load the API</h3>
 <pre>&lt;script src="http://apis.ucsf.edu/jsapi?library">&lt;/script></pre>
-<h3>2. Call <code>UCSF.Library.hours()</code></h3>
+<h3>2. Use it!</h3>
+<h4><code>UCSF.Library.hours()</code></h4>
 <p><code>UCSF.Library.hours()</code> takes three parameters.</p>
 <ol>
     <li><code>options</code> object reserved for later use; use an empty object for now</li>
     <li><code>success</code> callback that is passed a <code>results</code> object if there were no errors</li>
     <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
 </ol>
-<h3>Demo</h3>
-<form action="javascript:search()">
+<h5>Demo</h5>
+<form action="javascript:hours()">
     <input type="submit" id="submit" value="Run UCSF.Library.hours()" />
 </form>
-<h4>Results</h4>
-<pre id="search_results">JSON results will appear here.</pre>
+<h5>Results</h5>
+<pre id="hours_results">JSON results will appear here.</pre>
 <script>
-    function search() {
-        document.getElementById("search_results").innerHTML = "<progress>Loading...</progress>";
+    function hours() {
+        document.getElementById("hours_results").innerHTML = "<progress>Loading...</progress>";
 
         var options = {};
 
-        var successCallback = render;
+        var successCallback = renderHours;
         var failureCallback = null; // failureCallback is optional
 
         UCSF.Library.hours(options, successCallback, failureCallback);
     }
 
-    function render(result) {
-        var search_results = document.getElementById("search_results");
+    function renderHours(result) {
+        var hours_results = document.getElementById("hours_results");
         var resultText = JSON.stringify(result, null, 4);
-        if ("textContent" in search_results) {
-            search_results.textContent = resultText;
+        if ("textContent" in hours_results) {
+            hours_results.textContent = resultText;
         } else {
-            search_results.innerText = resultText;
+            hours_results.innerText = resultText;
         }
     };
 </script>
-<h4>Demo Source Code</h4>
+<h5>Demo Source Code</h5>
 <pre>
-&lt;form action="javascript:search()">
+&lt;form action="javascript:hours()">
     &lt;input type="submit" id="submit" value="Run UCSF.Library.hours()" />
 &lt;/form>
-&lt;pre id="search_results">JSON results will appear here.&lt;/pre>
+&lt;pre id="hours_results">JSON results will appear here.&lt;/pre>
 &lt;script>
-    function search() {
-        document.getElementById("search_results").innerHTML = "&lt;progress>Loading...&lt;/progress>";
+    function hours() {
+        document.getElementById("hours_results").innerHTML = "&lt;progress>Loading...&lt;/progress>";
 
         var options = {};
 
-        var successCallback = render;
+        var successCallback = renderHours;
         var failureCallback = null; // failureCallback is optional
 
         UCSF.Library.hours(options, successCallback, failureCallback);
     }
 
-    function render(result) {
-        var search_results = document.getElementById("search_results");
+    function renderHours(result) {
+        var hours_results = document.getElementById("hours_results");
         var resultText = JSON.stringify(result, null, 4);
-        if ("textContent" in search_results) {
-            search_results.textContent = resultText;
+        if ("textContent" in hours_results) {
+            hours_results.textContent = resultText;
         } else {
-            search_results.innerText = resultText;
+            hours_results.innerText = resultText;
+        }
+    };
+&lt;/script>
+</pre>
+
+<h4><code>UCSF.Library.guides()</code></h4>
+<p><code>UCSF.Library.guides()</code> takes three parameters.</p>
+<ol>
+    <li><code>options</code> object reserved for later use; use an empty object for now</li>
+    <li><code>success</code> callback that is passed a <code>results</code> object if there were no errors</li>
+    <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
+</ol>
+<h5>Demo</h5>
+<form action="javascript:guides()">
+    <input type="submit" id="submit" value="Run UCSF.Library.guides()" />
+</form>
+<h5>Results</h5>
+<pre id="guides_results">JSON results will appear here.</pre>
+<script>
+    function guides() {
+        document.getElementById("guides_results").innerHTML = "<progress>Loading...</progress>";
+
+        var options = {};
+
+        var successCallback = renderGuides;
+        var failureCallback = null; // failureCallback is optional
+
+        UCSF.Library.guides(options, successCallback, failureCallback);
+    }
+
+    function renderGuides(result) {
+        var guides_results = document.getElementById("guides_results");
+        var resultText = JSON.stringify(result, null, 4);
+        if ("textContent" in guides_results) {
+            guides_results.textContent = resultText;
+        } else {
+            guides_results.innerText = resultText;
+        }
+    };
+</script>
+<h5>Demo Source Code</h5>
+<pre>
+&lt;form action="javascript:guides()">
+    &lt;input type="submit" id="submit" value="Run UCSF.Library.guides()" />
+&lt;/form>
+&lt;pre id="guides_results">JSON results will appear here.&lt;/pre>
+&lt;script>
+    function guides() {
+        document.getElementById("guides_results").innerHTML = "&lt;progress>Loading...&lt;/progress>";
+
+        var options = {};
+
+        var successCallback = renderGuides;
+        var failureCallback = null; // failureCallback is optional
+
+        UCSF.Library.guides(options, successCallback, failureCallback);
+    }
+
+    function renderGuides(result) {
+        var guides_results = document.getElementById("guides_results");
+        var resultText = JSON.stringify(result, null, 4);
+        if ("textContent" in guides_results) {
+            guides_results.textContent = resultText;
+        } else {
+            guides_results.innerText = resultText;
         }
     };
 &lt;/script>
