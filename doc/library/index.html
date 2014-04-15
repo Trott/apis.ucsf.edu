@@ -18,14 +18,14 @@
     <li>optional <code>failure</code> callback for when something goes horribly wrong</li>
 </ol>
 <h3>Demo</h3>
-<form action="javascript:search()">
+<form action="javascript:hours()">
     <input type="submit" id="submit" value="Run UCSF.Library.hours()" />
 </form>
 <h4>Results</h4>
-<pre id="search_results">JSON results will appear here.</pre>
+<pre id="hours_results">JSON results will appear here.</pre>
 <script>
-    function search() {
-        document.getElementById("search_results").innerHTML = "<progress>Loading...</progress>";
+    function hours() {
+        document.getElementById("hours_results").innerHTML = "<progress>Loading...</progress>";
 
         var options = {};
 
@@ -36,24 +36,24 @@
     }
 
     function render(result) {
-        var search_results = document.getElementById("search_results");
+        var hours_results = document.getElementById("hours_results");
         var resultText = JSON.stringify(result, null, 4);
-        if ("textContent" in search_results) {
-            search_results.textContent = resultText;
+        if ("textContent" in hours_results) {
+            hours_results.textContent = resultText;
         } else {
-            search_results.innerText = resultText;
+            hours_results.innerText = resultText;
         }
     };
 </script>
 <h4>Demo Source Code</h4>
 <pre>
-&lt;form action="javascript:search()">
+&lt;form action="javascript:hours()">
     &lt;input type="submit" id="submit" value="Run UCSF.Library.hours()" />
 &lt;/form>
-&lt;pre id="search_results">JSON results will appear here.&lt;/pre>
+&lt;pre id="hours_results">JSON results will appear here.&lt;/pre>
 &lt;script>
-    function search() {
-        document.getElementById("search_results").innerHTML = "&lt;progress>Loading...&lt;/progress>";
+    function hours() {
+        document.getElementById("hours_results").innerHTML = "&lt;progress>Loading...&lt;/progress>";
 
         var options = {};
 
@@ -64,12 +64,12 @@
     }
 
     function render(result) {
-        var search_results = document.getElementById("search_results");
+        var hours_results = document.getElementById("hours_results");
         var resultText = JSON.stringify(result, null, 4);
-        if ("textContent" in search_results) {
-            search_results.textContent = resultText;
+        if ("textContent" in hours_results) {
+            hours_results.textContent = resultText;
         } else {
-            search_results.innerText = resultText;
+            hours_results.innerText = resultText;
         }
     };
 &lt;/script>
