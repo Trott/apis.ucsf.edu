@@ -24,13 +24,21 @@ module.exports = function (grunt) {
         uglify: {
             static: {
                 files: {
-                    'static/ie7_polyfill.js': ['static/json2/json2.js', 'static/flensed/flXHR.js'],
                     'js_fragments/base': ['js_fragments/base.src'],
                     'js_fragments/person': ['js_fragments/person.src'],
                     'js_fragments/shuttle': ['js_fragments/shuttle.src'],
                     'js_fragments/fitness': ['js_fragments/fitness.src'],
                     'js_fragments/library': ['js_fragments/library.src'],
                 }
+            }
+        },
+        cssmin: {
+            static: {
+                expand: true,
+                cwd: 'static/css/',
+                src: ['*.css', '!*.min.css'],
+                dest: 'static/css/',
+                ext: '.min.css'
             }
         },
         compress: {
@@ -47,7 +55,8 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-compress');
 
-    grunt.registerTask('default', ['jshint:jsFragments', 'uglify:static', 'compress:gtfs']);
+    grunt.registerTask('default', ['jshint:jsFragments', 'uglify:static', 'cssmin:static', 'compress:gtfs']);
 };

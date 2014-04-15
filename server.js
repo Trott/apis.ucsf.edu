@@ -1,4 +1,5 @@
 var express = require('express'),
+    fs = require('fs'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
@@ -10,15 +11,12 @@ var express = require('express'),
     nodeUserUid = 'node';
 
 var app = express();
+var logFile;
 
-app.use(express.logger());
+logFile = fs.createWriteStream(__dirname + '/logs/http.' + Date.now());
+
+app.use(express.logger({stream: logFile}));
 app.use(express.compress());
-
-//TODO: log rotation
-//TODO: Better log file than, uh, server.js.log?
-//TODO: Dependency: OpenTripPlanner
-//TODO: modularize stuff like OpenTripPlanner and the map tile server so they can
-//      be deployed on other servers or something
 
 app.use('/static', express.static(__dirname + '/static'));
 
@@ -77,22 +75,9 @@ app.get('/map/tile/:zoom/:x/:y', map.tile);
 app.get('/fitness/schedule', fitness.schedule);
 
 app.get('/library/hours', library.hours);
+app.get('/library/guides', library.guides);
 
 app.get('/news/articles', news.articles);
-
-// Needed for polyfill for IE7 support :-(
-app.get('/crossdomain.xml', function (req, res) {
-    'use strict';
-    // Yup, IE7 polyfill will allow any origin.
-    res.send(
-        '<?xml version="1.0"?>\n' +
-        '<!DOCTYPE cross-domain-policy SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">\n' +
-        '<cross-domain-policy>\n' +
-        '  <allow-access-from domain="*" />\n' +
-        '  <allow-http-request-headers-from domain="*" headers="*" />\n' +
-        '</cross-domain-policy>\n'
-    );
-});
 
 app.get('/', function (req, res) {
     'use strict';
