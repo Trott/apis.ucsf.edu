@@ -1,5 +1,7 @@
 var express = require('express'),
     fs = require('fs'),
+    http = require('http'),
+    https = require('https'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
@@ -7,7 +9,20 @@ var express = require('express'),
     fitness = require('./routes/fitness'),
     library = require('./routes/library'),
     nodeUserGid = 'node',
-    nodeUserUid = 'node';
+    nodeUserUid = 'node',
+    sslKey = '/etc/pki/tls/private/apis_ucsf_edu.key',
+    sslCert = '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer';
+
+var setIds = function () {
+    'use strict';
+    process.setgid(nodeUserGid);
+    process.setuid(nodeUserUid);
+};
+
+var httpsOptions = {
+    key: fs.readFileSync(sslKey),
+    cert: fs.readFileSync(sslCert)
+};
 
 var app = express();
 var logFile;
@@ -81,10 +96,11 @@ app.get('/', function (req, res) {
     res.sendfile(__dirname + '/static/index.html');
 });
 
-app.listen(80, function () {
-    'use strict';
-    process.setgid(nodeUserGid);
-    process.setuid(nodeUserUid);
-});
-
-console.log('Listening on port 80...');
+http.createServer(app).listen(80, setIds);
+console.log('Serving HTTP on port 80...');
+try {
+    https.createServer(httpsOptions, app).listen(443, setIds);
+    console.log('Serving HTTPS on port 443...');
+} catch (e) {
+    console.error('Cannot start with SSL: ' + e.message);
+}
