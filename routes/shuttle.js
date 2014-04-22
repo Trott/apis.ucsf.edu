@@ -371,64 +371,6 @@ exports.plan = function(req, res) {
 
     var allResults = [];
     var metadata = {};
-    var plan = function (options, callback) {
-        var otpOptions = {
-            host: "localhost",
-            path: "/otp-rest-servlet/ws/plan?minTransferTime=60&",
-            port: 8080,
-            headers: {'Content-Type':'application/json'}
-        };
-
-        var query = {};
-        // Useful parameters the user can send:
-        // fromPlace & toPlace are required.
-        // date is required if time is set. default to current time and date.
-        // arriveBy defaults to "false"
-        if (req.query.date) {
-            query.date = req.query.date;
-        }
-        if (req.query.time) {
-            query.time = req.query.time;
-        }
-        if (req.query.arriveBy) {
-            query.arriveBy = req.query.arriveBy;
-        }
-
-        query.fromPlace = options.fromPlace;
-        query.toPlace = options.toPlace;
-        query.mode = options.mode;
-
-        otpOptions.path += querystring.stringify(query);
-
-        var processResults = function(resp) {
-            var data = "";
-            if (resp.statusCode !== 200) {
-                var errorMsg = "shuttle/plan error: code " + resp.statusCode;
-                console.log(errorMsg);
-                callback({error: errorMsg});
-            }
-            resp.on('data', function(chunk){
-                data += chunk;
-            });
-            resp.on('end', function() {
-                if (resp.statusCode === 200) {
-                    var rv = JSON.parse(data);
-                    if (rv.plan && rv.plan.itineraries) {
-                        metadata.plan = rv.plan;
-                        allResults.push.apply(allResults, rv.plan.itineraries);
-                    }
-                    callback();
-                }
-            });
-        };
-
-        http.get(otpOptions,
-            processResults
-        ).on("error", function(e){
-            console.log("shuttle/plan error: " + e.message);
-            callback({error: e.message});
-        });
-    };
 
     var callback = function(err) {
         if (err) {
@@ -484,9 +426,65 @@ exports.plan = function(req, res) {
     var options = {
         fromPlace:req.query.fromPlace,
         toPlace:req.query.toPlace,
-        mode:'TRANSIT,WALK'};
+        mode:'TRANSIT,WALK'
+    };
 
-    plan(options, callback);
+    var otpOptions = {
+        host: "localhost",
+        path: "/otp-rest-servlet/ws/plan?minTransferTime=60&",
+        port: 8080,
+        headers: {'Content-Type':'application/json'}
+    };
+
+    var query = {};
+    // Useful parameters the user can send:
+    // fromPlace & toPlace are required.
+    // date is required if time is set. default to current time and date.
+    // arriveBy defaults to "false"
+    if (req.query.date) {
+        query.date = req.query.date;
+    }
+    if (req.query.time) {
+        query.time = req.query.time;
+    }
+    if (req.query.arriveBy) {
+        query.arriveBy = req.query.arriveBy;
+    }
+
+    query.fromPlace = options.fromPlace;
+    query.toPlace = options.toPlace;
+    query.mode = options.mode;
+
+    otpOptions.path += querystring.stringify(query);
+
+    var processResults = function(resp) {
+        var data = "";
+        if (resp.statusCode !== 200) {
+            var errorMsg = "shuttle/plan error: code " + resp.statusCode;
+            console.log(errorMsg);
+            callback({error: errorMsg});
+        }
+        resp.on('data', function(chunk){
+            data += chunk;
+        });
+        resp.on('end', function() {
+            if (resp.statusCode === 200) {
+                var rv = JSON.parse(data);
+                if (rv.plan && rv.plan.itineraries) {
+                    metadata.plan = rv.plan;
+                    allResults.push.apply(allResults, rv.plan.itineraries);
+                }
+                callback();
+            }
+        });
+    };
+
+    http.get(otpOptions,
+        processResults
+    ).on("error", function(e){
+        console.log("shuttle/plan error: " + e.message);
+        callback({error: e.message});
+    });
 };
 
 exports.predictions = function(req, res) {
