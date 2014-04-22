@@ -370,7 +370,6 @@ exports.plan = function(req, res) {
     'use strict';
 
     var allResults = [];
-    var uglyHackResults = [];
     var metadata = {};
     var plan = function (options, callback) {
         var otpOptions = {
@@ -417,11 +416,7 @@ exports.plan = function(req, res) {
                     var rv = JSON.parse(data);
                     if (rv.plan && rv.plan.itineraries) {
                         metadata.plan = rv.plan;
-                        if (rv.requestParameters && rv.requestParameters.hack==="true") {
-                            uglyHackResults.push.apply(uglyHackResults, rv.plan.itineraries);
-                        } else {
-                            allResults.push.apply(allResults, rv.plan.itineraries);
-                        }
+                        allResults.push.apply(allResults, rv.plan.itineraries);
                     }
                     callback();
                 }
@@ -447,11 +442,6 @@ exports.plan = function(req, res) {
                     firstLeg,
                     penultimateLeg,
                     lastLeg;
-
-                // If we didn't get anything from the ordinary request but got something from ugly hack, use it.
-                if (allResults.length === 0 && uglyHackResults.length > 0) {
-                    allResults = uglyHackResults;
-                }
 
                 for(var l = allResults.length - 1; l>=0; --l) {
                     // Remove any "walk to <starting point>" resulting from ugly hack
