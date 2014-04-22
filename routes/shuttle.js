@@ -369,14 +369,6 @@ exports.times = function(req, res) {
 exports.plan = function(req, res) {
     'use strict';
 
-    // Thanks to sad ugly hack, we have to build an array of functions to
-    // run to retrieve potential routes.
-    var combined = [];
-    combined.push({fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT,WALK'});
-    // Ugly Hack: Works around https://github.com/openplans/OpenTripPlanner/issues/1054
-    combined.push({fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT', hack:true});
-
-
     var allResults = [];
     var uglyHackResults = [];
     var metadata = {};
@@ -444,7 +436,7 @@ exports.plan = function(req, res) {
         });
     };
 
-    async.each(combined, plan, function(err) {
+    async.each([{fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT,WALK'}], plan, function(err) {
         if (err) {
             res.send(err);
         } else {
