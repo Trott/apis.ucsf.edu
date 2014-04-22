@@ -430,7 +430,7 @@ exports.plan = function(req, res) {
         });
     };
 
-    async.each([{fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT,WALK'}], plan, function(err) {
+    var callback = function(err) {
         if (err) {
             res.send(err);
         } else {
@@ -479,7 +479,14 @@ exports.plan = function(req, res) {
             }
             res.send(metadata);
         }
-    });
+    };
+
+    var options = {
+        fromPlace:req.query.fromPlace,
+        toPlace:req.query.toPlace,
+        mode:'TRANSIT,WALK'};
+
+    plan(options, callback);
 };
 
 exports.predictions = function(req, res) {
