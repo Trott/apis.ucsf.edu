@@ -397,7 +397,6 @@ exports.plan = function(req, res) {
         query.fromPlace = options.fromPlace;
         query.toPlace = options.toPlace;
         query.mode = options.mode;
-        query.hack = options.hack;
 
         otpOptions.path += querystring.stringify(query);
 
@@ -444,7 +443,7 @@ exports.plan = function(req, res) {
                     lastLeg;
 
                 for(var l = allResults.length - 1; l>=0; --l) {
-                    // Remove any "walk to <starting point>" resulting from ugly hack
+                    // Remove any "walk to <starting point>"
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
                     if (firstLeg.to.stopId) {
@@ -456,7 +455,7 @@ exports.plan = function(req, res) {
                     }
                 }
 
-                // Sort merged results from ugly hack
+                // Sort results
                 var compareOn = req.query.arriveBy==='true' ? 'endTime' : 'startTime';
                 var ascendingSort = req.query.arriveBy==='true' ? -1 : 1;
                 var compare = function (a,b) {
