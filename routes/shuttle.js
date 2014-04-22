@@ -369,82 +369,10 @@ exports.times = function(req, res) {
 exports.plan = function(req, res) {
     'use strict';
 
-    // Thanks to sad ugly hack, we have to build an array of functions to
-    // run to retrieve potential routes.
-    var combined = [];
-    combined.push({fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT,WALK'});
-    // Ugly Hack: Works around https://github.com/openplans/OpenTripPlanner/issues/1054
-    combined.push({fromPlace:req.query.fromPlace, toPlace:req.query.toPlace, mode:'TRANSIT', hack:true});
-
-
     var allResults = [];
-    var uglyHackResults = [];
     var metadata = {};
-    var plan = function (options, callback) {
-        var otpOptions = {
-            host: "localhost",
-            path: "/otp-rest-servlet/ws/plan?minTransferTime=60&",
-            port: 8080,
-            headers: {'Content-Type':'application/json'}
-        };
 
-        var query = {};
-        // Useful parameters the user can send:
-        // fromPlace & toPlace are required.
-        // date is required if time is set. default to current time and date.
-        // arriveBy defaults to "false"
-        if (req.query.date) {
-            query.date = req.query.date;
-        }
-        if (req.query.time) {
-            query.time = req.query.time;
-        }
-        if (req.query.arriveBy) {
-            query.arriveBy = req.query.arriveBy;
-        }
-
-        query.fromPlace = options.fromPlace;
-        query.toPlace = options.toPlace;
-        query.mode = options.mode;
-        query.hack = options.hack;
-
-        otpOptions.path += querystring.stringify(query);
-
-        var processResults = function(resp) {
-            var data = "";
-            if (resp.statusCode !== 200) {
-                var errorMsg = "shuttle/plan error: code " + resp.statusCode;
-                console.log(errorMsg);
-                callback({error: errorMsg});
-            }
-            resp.on('data', function(chunk){
-                data += chunk;
-            });
-            resp.on('end', function() {
-                if (resp.statusCode === 200) {
-                    var rv = JSON.parse(data);
-                    if (rv.plan && rv.plan.itineraries) {
-                        metadata.plan = rv.plan;
-                        if (rv.requestParameters && rv.requestParameters.hack==="true") {
-                            uglyHackResults.push.apply(uglyHackResults, rv.plan.itineraries);
-                        } else {
-                            allResults.push.apply(allResults, rv.plan.itineraries);
-                        }
-                    }
-                    callback();
-                }
-            });
-        };
-
-        http.get(otpOptions,
-            processResults
-        ).on("error", function(e){
-            console.log("shuttle/plan error: " + e.message);
-            callback({error: e.message});
-        });
-    };
-
-    async.each(combined, plan, function(err) {
+    var callback = function(err) {
         if (err) {
             res.send(err);
         } else {
@@ -456,13 +384,8 @@ exports.plan = function(req, res) {
                     penultimateLeg,
                     lastLeg;
 
-                // If we didn't get anything from the ordinary request but got something from ugly hack, use it.
-                if (allResults.length === 0 && uglyHackResults.length > 0) {
-                    allResults = uglyHackResults;
-                }
-
                 for(var l = allResults.length - 1; l>=0; --l) {
-                    // Remove any "walk to <starting point>" resulting from ugly hack
+                    // Remove any "walk to <starting point>"
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
                     if (firstLeg.to.stopId) {
@@ -474,7 +397,7 @@ exports.plan = function(req, res) {
                     }
                 }
 
-                // Sort merged results from ugly hack
+                // Sort results
                 var compareOn = req.query.arriveBy==='true' ? 'endTime' : 'startTime';
                 var ascendingSort = req.query.arriveBy==='true' ? -1 : 1;
                 var compare = function (a,b) {
@@ -498,6 +421,69 @@ exports.plan = function(req, res) {
             }
             res.send(metadata);
         }
+    };
+
+    var options = {
+        fromPlace:req.query.fromPlace,
+        toPlace:req.query.toPlace,
+        mode:'TRANSIT,WALK'
+    };
+
+    var otpOptions = {
+        host: "localhost",
+        path: "/otp-rest-servlet/ws/plan?minTransferTime=60&",
+        port: 8080,
+        headers: {'Content-Type':'application/json'}
+    };
+
+    var query = {};
+    // Useful parameters the user can send:
+    // fromPlace & toPlace are required.
+    // date is required if time is set. default to current time and date.
+    // arriveBy defaults to "false"
+    if (req.query.date) {
+        query.date = req.query.date;
+    }
+    if (req.query.time) {
+        query.time = req.query.time;
+    }
+    if (req.query.arriveBy) {
+        query.arriveBy = req.query.arriveBy;
+    }
+
+    query.fromPlace = options.fromPlace;
+    query.toPlace = options.toPlace;
+    query.mode = options.mode;
+
+    otpOptions.path += querystring.stringify(query);
+
+    var processResults = function(resp) {
+        var data = "";
+        if (resp.statusCode !== 200) {
+            var errorMsg = "shuttle/plan error: code " + resp.statusCode;
+            console.log(errorMsg);
+            callback({error: errorMsg});
+        }
+        resp.on('data', function(chunk){
+            data += chunk;
+        });
+        resp.on('end', function() {
+            if (resp.statusCode === 200) {
+                var rv = JSON.parse(data);
+                if (rv.plan && rv.plan.itineraries) {
+                    metadata.plan = rv.plan;
+                    allResults.push.apply(allResults, rv.plan.itineraries);
+                }
+                callback();
+            }
+        });
+    };
+
+    http.get(otpOptions,
+        processResults
+    ).on("error", function(e){
+        console.log("shuttle/plan error: " + e.message);
+        callback({error: e.message});
     });
 };
 
