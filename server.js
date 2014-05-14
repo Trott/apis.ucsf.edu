@@ -1,3 +1,10 @@
+/* Temporary read-only Solr proxy for LTDL3 testing */
+var SolrSecurityProxy = require('solr-security-proxy');
+SolrSecurityProxy.start(8983, {
+    validPaths: ['/solr/ltdl3test/select'],
+    backend:  {host: 'solr1.mooo.com', port: 8983},
+});
+
 var express = require('express'),
     fs = require('fs'),
     http = require('http'),
