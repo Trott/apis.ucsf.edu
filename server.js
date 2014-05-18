@@ -2,6 +2,8 @@ var express = require('express'),
     fs = require('fs'),
     http = require('http'),
     https = require('https'),
+    morgan = require('morgan'),
+    compression = require('compression'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
@@ -29,8 +31,8 @@ var logFile;
 
 logFile = fs.createWriteStream(__dirname + '/logs/http.' + Date.now());
 
-app.use(express.logger({stream: logFile}));
-app.use(express.compress());
+app.use(morgan({stream: logFile}));
+app.use(compression());
 
 app.use('/static', express.static(__dirname + '/static'));
 
