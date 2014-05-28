@@ -1,1 +1,5 @@
 _site
+config.js
+node_modules
+static
+logs
