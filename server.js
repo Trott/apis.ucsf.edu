@@ -93,19 +93,6 @@ app.get('/fitness/schedule', fitness.schedule);
 app.get('/library/hours', library.hours);
 app.get('/library/guides', library.guides);
 
-/* Temporary read-only Solr proxy for LTDL3 testing */
-var httpProxy = require('http-proxy');
-var apiProxy = httpProxy.createProxyServer();
-var SolrSecurityProxy = require('solr-security-proxy');
-SolrSecurityProxy.start(8983, {
-    validPaths: ['/solr/ltdl3test/select'],
-    backend:  {host: 'solr1.mooo.com', port: 8983},
-});
-app.get('/solr/ltdl3test/select', function(req, res, next) {
-    apiProxy.web(req, res, {target: 'http://localhost:8983'});
-});
-/* end Temporary read-only Solr proxy for LTDL3 testing */
-
 app.get('/', function (req, res) {
     'use strict';
     res.sendfile(__dirname + '/static/index.html');
