@@ -27,8 +27,8 @@ lime,regular,lime_a,,
 lime,regular,lime_b,,
 lime,regular,lime_c,,
 pink,all,pink_a,,
-purple,all,purple_to_mtzion_a,to Mt. Zion,0
-purple,all,purple_to_library_a,to Parnassus,1
+purple,regular,purple_to_mtzion_a,to Mt. Zion,0
+purple,regular,purple_to_library_a,to Parnassus,1
 red,regular,red_bart_to_mb_a,to Mission Bay,0
 red,regular,red_bart_to_mb_b,to Mission Bay,0
 red,regular,red_bart_to_mb_c1,to Mission Bay,0
