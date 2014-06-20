@@ -29,6 +29,12 @@ var httpsOptions = {
 var app = express();
 var logFile;
 
+// See:
+//   http://nodejs.org/api/http.html#http_agent_maxsockets 
+//   https://twitter.com/substack/status/277226144577761280
+http.globalAgent.maxSockets = Number.MAX_VALUE;
+https.globalAgent.maxSockets = Number.MAX_VALUE;
+
 logFile = fs.createWriteStream(__dirname + '/logs/http.' + Date.now());
 
 app.use(morgan({stream: logFile}));
