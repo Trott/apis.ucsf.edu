@@ -258,15 +258,16 @@ exports.routes = function(req, res) {
                     var rv = JSON.parse(data);
                     if (rv.routes) {
                         // Yet another sad ugly hack: remove Mt. Zion Express because WTF it only runs like twice a year
-                        foundRoutes = foundRoutes.concat(rv.routes.filter(function (e) {
+                        rv.routes = rv.routes.filter(function (e) {
                             return e.id.id !== 'mtzionexpress';
-                        }));
+                        });
+                        foundRoutes = foundRoutes.concat(rv);
                     }
 
                     if (callback) {
                         callback();
                     } else {
-                        res.send(data);
+                        res.send(rv);
                     }
                 }
             });
