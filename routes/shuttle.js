@@ -261,7 +261,7 @@ exports.routes = function(req, res) {
                         rv.routes = rv.routes.filter(function (e) {
                             return e.id.id !== 'mtzionexpress';
                         });
-                        foundRoutes = foundRoutes.concat(rv);
+                        foundRoutes = foundRoutes.concat(rv.routes);
                     }
 
                     if (callback) {
