@@ -12,3 +12,4 @@ yellow,Yellow,16th BART - MCB - 20th/Alabama - SFGH,3
 red,Red,Mission Bay - MCB - 16th St BART,3
 lime,Lime,Parnassus - 55 Laguna Parking - BDC - MCB,3
 green,Green,Mission Bay - China Basin - 654 Minnesota,3
+mtzionexpress,Mt. Zion Express,Mt. Zion Express (holidays only),3
