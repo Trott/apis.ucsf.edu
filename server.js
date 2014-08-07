@@ -25,7 +25,7 @@ var setIds = function () {
 var httpsOptions = {
     key: fs.readFileSync(sslKey),
     cert: fs.readFileSync(sslCert),
-    ca: fs.readFileSync()
+    ca: fs.readFileSync(caCert)
 };
 
 var app = express();
