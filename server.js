@@ -13,7 +13,8 @@ var express = require('express'),
     nodeUserGid = 'node',
     nodeUserUid = 'node',
     sslKey = '/etc/pki/tls/private/apis_ucsf_edu.key',
-    sslCert = '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer';
+    sslCert = '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer',
+    caCert = '/etc/pki/tls/certs/incommon.crt';
 
 var setIds = function () {
     'use strict';
@@ -23,7 +24,8 @@ var setIds = function () {
 
 var httpsOptions = {
     key: fs.readFileSync(sslKey),
-    cert: fs.readFileSync(sslCert)
+    cert: fs.readFileSync(sslCert),
+    ca: fs.readFileSync(caCert)
 };
 
 var app = express();
