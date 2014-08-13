@@ -22,11 +22,16 @@ var setIds = function () {
     process.setuid(nodeUserUid);
 };
 
-var httpsOptions = {
-    key: fs.readFileSync(sslKey),
-    cert: fs.readFileSync(sslCert),
-    ca: fs.readFileSync(caCert)
-};
+var httpOptions;
+try {
+    httpsOptions = {
+        key: fs.readFileSync(sslKey),
+        cert: fs.readFileSync(sslCert),
+        ca: fs.readFileSync(caCert)
+    };
+} catch (e) {
+    console.warn('Error setting HTTPS options: ' + e.message);
+}
 
 var app = express();
 var logFile;
