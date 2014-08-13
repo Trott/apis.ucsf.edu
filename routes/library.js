@@ -1,6 +1,5 @@
 var http = require('http'),
-    moment = require('moment'),
-    cheerio = require('cheerio');
+    moment = require('moment');
 
 // One hour expressed in milliseconds
 var oneHour = 1000 * 60 * 60;
@@ -12,8 +11,8 @@ var updateGuidesAsync = function () {
     'use strict';
 
     var options = {
-        host: 'api.libguides.com',
-        path: '/api_search.php?iid=1584&type=tags&search=featured&more=false&desc=on'
+        host: 'lgapi.libapps.com',
+        path: '/1.0/guides/100978,100985,100999,100992,100980,100974,100976,100998,100991,100979,100984,100994,13690,100988,101003,101010,100986,101021,100983,100966,100975,100967,101006,100971,101002,100996?site_id=407'
     };
 
     var data = '';
@@ -30,18 +29,11 @@ var updateGuidesAsync = function () {
             if (resp.statusCode === 200) {
                 var result = {};
                 try {
-                    // remove br tags
-                    var cleaned = data.replace(/<br ?\/?>/ig, '');
-                    // split along newline
-                    var featured = cleaned.split('\n');
-                    // remove empty lines
-                    featured = featured.filter(function (val) { return !!val;});
-                    // Parse each line so we can return JSON values
+                    var featured = JSON.parse(data);
                     result.guides = featured.map(function (val) {
-                        var $ = cheerio.load('<div>' + val + '</div>');
-                        var title = $('a').text();
-                        var href = $('a').attr('href');
-                        var desc = $('div').text().substr(title.length).replace(/^[ \-]*/, '');
+                        var title = val.name;
+                        var href = 'http://guides.ucsf.edu/c.php?g=' + parseInt(val.id,10);
+                        var desc = val.description;
                         return {title: title, href: href, desc: desc};
                     });
                 } catch (e) {
