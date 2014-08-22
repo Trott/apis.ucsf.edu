@@ -200,7 +200,7 @@ exports.stops = function(req, res) {
                     return ! (el.id && ['paracc','library'].indexOf(el.id.id)!==-1);
                 });
             }
-            res.send(results);
+            res.json(results);
         },
         options
     );
@@ -247,7 +247,7 @@ exports.routes = function(req, res) {
                 if (callback) {
                     callback({error: errorMsg});
                 } else {
-                    res.send({error: errorMsg});
+                    res.json({error: errorMsg});
                 }
             }
             resp.on('data', function(chunk){
@@ -267,7 +267,7 @@ exports.routes = function(req, res) {
                     if (callback) {
                         callback();
                     } else {
-                        res.send(rv);
+                        res.json(rv);
                     }
                 }
             });
@@ -276,7 +276,7 @@ exports.routes = function(req, res) {
             if (callback) {
                 callback({error:e.message});
             } else {
-                res.send({error: e.message});
+                res.json({error: e.message});
             }
         });
 
@@ -315,7 +315,7 @@ exports.routes = function(req, res) {
                 });
             }
         ], function (err) {
-            res.send({stop: myStop, routes: foundRoutes});
+            res.json({stop: myStop, routes: foundRoutes});
         });
     } else {
         routes();
@@ -346,7 +346,7 @@ exports.times = function(req, res) {
         if (resp.statusCode !== 200) {
             var errorMsg = "shuttle/times error: code " + resp.statusCode;
             console.log(errorMsg);
-            res.send({error: errorMsg});
+            res.json({error: errorMsg});
         }
         resp.on('data', function(chunk){
             data += chunk;
@@ -361,12 +361,12 @@ exports.times = function(req, res) {
                     rv = result;
                 }
 
-                res.send(rv);
+                res.json(rv);
             }
         });
     }).on("error", function(e){
         console.log("shuttle/times error: " + e.message);
-        res.send({error: e.message});
+        res.json({error: e.message});
     });
 };
 
@@ -378,7 +378,7 @@ exports.plan = function(req, res) {
 
     var callback = function(err) {
         if (err) {
-            res.send(err);
+            res.json(err);
         } else {
             if (metadata.plan) {
 
@@ -423,7 +423,7 @@ exports.plan = function(req, res) {
 
                 metadata.plan.itineraries = allResults;
             }
-            res.send(metadata);
+            res.json(metadata);
         }
     };
 
@@ -506,9 +506,9 @@ exports.predictions = function(req, res) {
                     rv.times = needle[0].times;
                 }
             }
-            res.send(rv);
+            res.json(rv);
         });
     } else {
-        res.send(rv);
+        res.json(rv);
     }
 };

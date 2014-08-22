@@ -39,10 +39,10 @@ exports.search = function (req, res) {
                 }
             }
 
-            res.send(cookedData);
+            res.json(cookedData);
         });
     }).on('error', function (e) {
         console.log('Directory error: ' + e.message);
-        res.send({error: e.message});
+        res.json({error: e.message});
     });
 };

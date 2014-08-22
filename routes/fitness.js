@@ -83,5 +83,5 @@ exports.schedule = function (req, res) {
         updateScheduleAsync();
     }
 
-    res.send(schedule);
+    res.json(schedule);
 };

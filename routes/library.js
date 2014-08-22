@@ -139,7 +139,7 @@ exports.hours = function (req, res) {
         updateScheduleAsync();
     }
 
-    res.send(schedule);
+    res.json(schedule);
 };
 
 updateGuidesAsync();
@@ -149,5 +149,5 @@ exports.guides = function (req, res) {
         updateGuidesAsync();
     }
 
-    res.send(guides);
+    res.json(guides);
 };
