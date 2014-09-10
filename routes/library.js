@@ -97,7 +97,7 @@ var updateScheduleAsync = function () {
                         date: now.format('MMM DD'),
                         text: text
                     });
-                    now.add('days', 1);
+                    now.add(1, 'days');
                 }
                 return (rv);
             }
