@@ -183,7 +183,7 @@ exports.search = function (req, res) {
                     'name': this.text(),
                     'url': this.attr('href')
                 });
-            })
+            });
 
             res.json({data: result});
         });
