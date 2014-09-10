@@ -44,11 +44,11 @@ var updateScheduleAsync = function () {
                         for (var prop in headers) {
                             newData[i - 1][headers[prop]] = data[i][prop];
                         }
-                        newData[i - 1].day = moment(newData[i - 1].date).format('dddd');
+                        newData[i - 1].day = moment(newData[i - 1].date, "MM/DD/YYYY").format('dddd');
                     }
                     newData.sort(function (x, y) {
-                        var xDate = moment(x.date + ' ' + x.startTime);
-                        var yDate = moment(y.date + ' ' + y.startTime);
+                        var xDate = moment(x.date + ' ' + x.startTime, "MM/DD/YYYY");
+                        var yDate = moment(y.date + ' ' + y.startTime, "MM/DD/YYYY");
 
                         if (xDate < yDate) {
                             return -1;
