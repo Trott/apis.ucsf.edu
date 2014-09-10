@@ -1,5 +1,4 @@
 var http = require('http'),
-    querystring = require('querystring'),
     async = require('async'),
     xml2js = require('xml2js'),
     predictions = {};

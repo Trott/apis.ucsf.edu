@@ -1,5 +1,6 @@
 var http = require('http'),
-    moment = require('moment');
+    moment = require('moment'),
+    cheerio = require('cheerio');
 
 // One hour expressed in milliseconds
 var oneHour = 1000 * 60 * 60;
@@ -150,4 +151,44 @@ exports.guides = function (req, res) {
     }
 
     res.json(guides);
+};
+
+exports.search = function (req, res) {
+    'use strict';
+
+    if (! req.query.q) {
+        res.json({data: []});
+        return;
+    }
+
+    var options = {
+        host: 'ucelinks.cdlib.org',
+        port: 8888,
+        path: '/sfx_ucsf/az?param_textSearchType_value=startsWith&param_pattern_value=' + 
+            querystring.stringify({q: req.query.q}),
+    };
+
+    http.get(options, function (resp) {
+        var rawData = '';
+
+        resp.on('data', function (chunk) {
+            rawData += chunk;
+        });
+
+        resp.on('end', function () {
+            var $ = cheerio.load(rawData);
+            var result = [];
+            $('a.Results').each(function () {
+                result.push({
+                    'name': this.text(),
+                    'url': this.attr('href')
+                });
+            })
+
+            res.json({data: result});
+        });
+    }).on('error', function (e) {
+        console.log('Search error: ' + e.message);
+        res.json({error: e.message});
+    });
 };

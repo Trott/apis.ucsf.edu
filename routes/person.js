@@ -1,5 +1,4 @@
-var https = require('https'),
-    querystring = require('querystring');
+var https = require('https');
 
 exports.search = function (req, res) {
     'use strict';
