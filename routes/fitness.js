@@ -9,7 +9,7 @@ var updateScheduleAsync = function () {
     'use strict';
     var date = moment();
     var startDate = date.format('MMDDYYYY');
-    date.add('days', 2);
+    date.add(2, 'days');
     var endDate = date.format('MMDDYYYY');
 
     var url = 'http://www.xpiron.com/schedule/Access?pAction=20&pBorgID=2867&pEmailAddr=' +
