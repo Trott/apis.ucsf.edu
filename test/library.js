@@ -24,7 +24,7 @@ describe('search', function () {
 			}
 		};
 
-		emitter.on('end', function (result) {
+		emitter.once('end', function (result) {
 			expect(result).to.deep.equal({data:[]});
 			done();
 		})
@@ -32,18 +32,18 @@ describe('search', function () {
 		library.search(req, res);
 	});
 
-	// it('returns results if a non-ridiculous search term is provided', function (done) {
-	// 	var req = {
-	// 		query: {
-	// 			q: 'medicine'
-	// 		}
-	// 	};
+	it('returns results if a non-ridiculous search term is provided', function (done) {
+		var req = {
+			query: {
+				q: 'medicine'
+			}
+		};
 
-	// 	emitter.on('end', function (result) {
-	// 		expect(result.data.length > 0).to.equal(true);
-	// 		done();
-	// 	})
+		emitter.once('end', function (result) {
+			expect(result.data.length > 0).to.equal(true);
+			done();
+		})
 
-	// 	library.search(req, res);
-	// });
+		library.search(req, res);
+	});
 });

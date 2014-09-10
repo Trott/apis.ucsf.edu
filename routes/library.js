@@ -165,8 +165,8 @@ exports.search = function (req, res) {
     var options = {
         host: 'ucelinks.cdlib.org',
         port: 8888,
-        path: '/sfx_ucsf/az?param_textSearchType_value=startsWith&param_pattern_value=' + 
-            querystring.stringify({q: req.query.q}),
+        path: '/sfx_ucsf/az?param_textSearchType_value=startsWith&' + 
+            querystring.stringify({param_pattern_value: req.query.q}),
     };
 
     http.get(options, function (resp) {
@@ -181,8 +181,8 @@ exports.search = function (req, res) {
             var result = [];
             $('a.Results').each(function () {
                 result.push({
-                    'name': this.text(),
-                    'url': this.attr('href')
+                    'name': $(this).text(),
+                    'url': $(this).attr('href')
                 });
             });
 
