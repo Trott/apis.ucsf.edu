@@ -1,5 +1,4 @@
 var http = require('http'),
-    querystring = require('querystring'),
     async = require('async'),
     fs = require('fs');
 

@@ -1,7 +1,7 @@
 var http = require('http'),
-    querystring = require('querystring'),
     async = require('async'),
     xml2js = require('xml2js'),
+    querystring = require('querystring'),
     predictions = {};
 
 // Common function to get all stops and call callback() with results

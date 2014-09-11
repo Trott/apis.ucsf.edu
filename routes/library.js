@@ -151,3 +151,5 @@ exports.guides = function (req, res) {
 
     res.json(guides);
 };
+
+exports.search = require('../lib/library/search.js');
