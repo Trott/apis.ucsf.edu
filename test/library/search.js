@@ -34,9 +34,17 @@ describe('search', function () {
 
 	it('returns only specified collection', function (done) {
 		searchHelper('medicine', ['sfx'], function (results) {
-			expect(results.length).to.equal(1);
-			expect(results[0].name).to.equal('sfx');
+			expect(results.sfx.data.length > 0).to.be.true;
+			expect(results.sfx.error).not.to.be.ok;
 			done();
 		});
+	});
+
+	it('returns an error if an invalid collection is specified', function (done) {
+		searchHelper('medicine', ['fhqwhgads'], function (results) {
+			expect(results.fhqwhgads.data).not.to.be.ok;
+			expect(results.fhqwhgads.error).to.be.ok;
+			done();
+		})
 	});
 });
