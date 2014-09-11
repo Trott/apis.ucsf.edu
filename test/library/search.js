@@ -19,10 +19,11 @@ var res = {
 
 describe('search', function () {
 
-	var searchHelper = function (q, callback) {
+	var searchHelper = function (q, c, callback) {
 		var req = {
 			query: {
-				q: q
+				q: q,
+				c: c
 			}
 		};
 
@@ -31,31 +32,11 @@ describe('search', function () {
 		search(req, res);
 	};
 
-	it('returns an empty result if no search term provided', function (done) {
-		searchHelper('', function (result) {
-			expect(result).to.deep.equal({data:[]});
+	it('returns only specified collection', function (done) {
+		searchHelper('medicine', ['sfx'], function (results) {
+			expect(results.length).to.equal(1);
+			expect(results[0].name).to.equal('sfx');
 			done();
 		});
 	});
-
-	it('returns results if a non-ridiculous search term is provided', function (done) {
-		searchHelper('medicine', function (result) {
-			expect(result.data).to.not.be.empty;
-			done();
-		});
-	});
-
-	it('returns an empty result if ridiculous search term is provided', function (done) {
-		searchHelper('fhqwhgads', function (result) {
-			expect(result.data).to.be.empty;
-			done();
-		})
-	});
-
-	it('returns a single result for insanely specific search', function (done) {
-		searchHelper('medicine and health, Rhode Island', function (result) {
-			expect(result.data.length).to.equal(1);
-			done();
-		})
-	})
 });
