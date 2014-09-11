@@ -47,4 +47,12 @@ describe('search', function () {
 			done();
 		})
 	});
+
+	it('returns multiple collections if specified', function (done) {
+		searchHelper('medicine', ['sfx', 'fhqwhgads'], function (results) {
+			expect(results.sfx.data).to.be.ok;
+			expect(results.fhqwhgads.error).to.be.ok;
+			done();
+		});
+	});
 });
