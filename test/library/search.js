@@ -55,4 +55,11 @@ describe('search', function () {
 			done();
 		});
 	});
+
+	it('returns all collections if no collection specified', function (done) {
+		searchHelper('medicine', null, function (results) {
+			expect(results.sfx.data).to.be.ok;
+			done();
+		});
+	});
 });
