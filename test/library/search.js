@@ -35,15 +35,15 @@ describe('search', function () {
 	it('returns only specified collection', function (done) {
 		searchHelper('medicine', ['sfx'], function (results) {
 			expect(results.sfx.data.length > 0).to.be.true;
-			expect(results.sfx.error).not.to.be.ok;
+			expect(results.sfx.error).to.be.undefined;
 			done();
 		});
 	});
 
 	it('returns an error if an invalid collection is specified', function (done) {
 		searchHelper('medicine', ['fhqwhgads'], function (results) {
-			expect(results.fhqwhgads.data).not.to.be.ok;
-			expect(results.fhqwhgads.error).to.be.ok;
+			expect(results.fhqwhgads.data).to.be.undefined;
+			expect(results.fhqwhgads.error).to.equal('Collection "fhqwhgads" does not exist');
 			done();
 		})
 	});
