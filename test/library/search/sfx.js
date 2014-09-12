@@ -1,5 +1,7 @@
 var sfx = require('../../../lib/library/search/sfx.js');
 
+var nock = require('nock');
+
 var EventEmitter = require('events').EventEmitter;
 var emitter = new EventEmitter();
 
@@ -41,13 +43,23 @@ describe('sfx', function () {
 		sfxHelper('fhqwhgads', function (result) {
 			expect(result.data).to.be.empty;
 			done();
-		})
+		});
 	});
 
 	it('returns a single result for insanely specific search', function (done) {
 		sfxHelper('medicine and health, Rhode Island', function (result) {
 			expect(result.data.length).to.equal(1);
 			done();
-		})
-	})
+		});
+	});
+
+	it('returns an error object if there was an HTTP error', function (done) {
+		nock.disableNetConnect();
+		sfxHelper('medicine', function (result) {
+			nock.enableNetConnect();
+			expect(result.data).to.be.undefined;
+			expect(result.error).to.equal('Nock: Not allow net connect for "ucelinks.cdlib.org:8888"');
+			done();
+		});
+	});
 });
