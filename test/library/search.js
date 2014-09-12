@@ -1,3 +1,5 @@
+/*jshint expr: true*/
+
 var search = require('../../lib/library/search.js');
 
 var EventEmitter = require('events').EventEmitter;
@@ -9,7 +11,6 @@ var lab = exports.lab = Lab.script();
 var expect = Lab.expect;
 var describe = lab.experiment;
 var it = lab.test;
-var before = lab.before;
 
 var res = {
 	json: function(value) {
@@ -45,7 +46,7 @@ describe('search', function () {
 			expect(results.fhqwhgads.data).to.be.undefined;
 			expect(results.fhqwhgads.error).to.equal('Collection "fhqwhgads" does not exist');
 			done();
-		})
+		});
 	});
 
 	it('returns multiple collections if specified', function (done) {

@@ -22,7 +22,7 @@ var setIds = function () {
     process.setuid(nodeUserUid);
 };
 
-var httpOptions;
+var httpsOptions;
 try {
     httpsOptions = {
         key: fs.readFileSync(sslKey),

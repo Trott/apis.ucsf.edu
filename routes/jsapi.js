@@ -1,10 +1,9 @@
-var http = require('http'),
-    async = require('async'),
+var async = require('async'),
     fs = require('fs');
 
 var validFileNameRegExp = /^[a-z_]+$/;
 exports.load = function(req, res) {
-    "use strict";
+    'use strict';
 
     var files = ['base'];
     var lib;

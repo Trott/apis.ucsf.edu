@@ -1,7 +1,7 @@
 var path = require('path');
 
 exports.tile = function(req, res) {
-    "use strict";
+    'use strict';
 
     var isInteger = function(string) {
         return isFinite(parseInt(string, 10));
