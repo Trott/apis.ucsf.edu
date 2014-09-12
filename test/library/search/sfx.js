@@ -1,9 +1,8 @@
+/*jshint expr: true*/
+
 var sfx = require('../../../lib/library/search/sfx.js');
 
 var nock = require('nock');
-
-var EventEmitter = require('events').EventEmitter;
-var emitter = new EventEmitter();
 
 var Lab = require('lab');
 var lab = exports.lab = Lab.script();
@@ -11,17 +10,10 @@ var lab = exports.lab = Lab.script();
 var expect = Lab.expect;
 var describe = lab.experiment;
 var it = lab.test;
-var before = lab.before;
-
-var callback = function(value) {
-	emitter.emit('end', value);
-};
 
 describe('sfx', function () {
 
 	var sfxHelper = function (q, callback) {
-		emitter.once('end', callback);
-
 		sfx.search(q, callback);
 	};
 

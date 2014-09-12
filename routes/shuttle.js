@@ -9,12 +9,12 @@ var stops = function(callback, options) {
     'use strict';
 
     options = options || {};
-    options.property = options.property || "stops";
-    options.useParentStation = options.hasOwnProperty("useParentStation") ? options.useParentStation : true;
+    options.property = options.property || 'stops';
+    options.useParentStation = options.hasOwnProperty('useParentStation') ? options.useParentStation : true;
 
     var otpOptions = {
-        host: "localhost",
-        path: "/otp-rest-servlet/ws/transit/stopsInRectangle?extended=true",
+        host: 'localhost',
+        path: '/otp-rest-servlet/ws/transit/stopsInRectangle?extended=true',
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
@@ -27,7 +27,7 @@ var stops = function(callback, options) {
 
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
-            var errorMsg = "shuttle/stops error: code " + resp.statusCode;
+            var errorMsg = 'shuttle/stops error: code ' + resp.statusCode;
             console.log(errorMsg);
             callback({error: errorMsg});
         }
@@ -57,8 +57,8 @@ var stops = function(callback, options) {
                 callback(rv);
             }
         });
-    }).on("error", function(e){
-        console.log("shuttle/stops error: " + e.message);
+    }).on('error', function(e){
+        console.log('shuttle/stops error: ' + e.message);
         callback({error: e.message});
     });
 };
@@ -70,7 +70,7 @@ var updatePredictionsAsync = function (callback) {
             predictions: []
         };
 
-        if (typeof result === "object" && result.body && result.body.predictions instanceof Array) {
+        if (typeof result === 'object' && result.body && result.body.predictions instanceof Array) {
             var p = result.body.predictions,
                 routeId,
                 stopId,
@@ -109,31 +109,31 @@ var updatePredictionsAsync = function (callback) {
     // Not doing that right now because the Yellow shuttle data there defy sanity.
     // Could omit yellow weirdness by ignoring any routes that have an underscore.
     var options = {
-        hostname: "webservices.nextbus.com",
-        path: "/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf" +
-            "&stops=grey%7Cmissb4we" +
-            "&stops=grey%7Cparlppi" +
-            "&stops=blue%7Cmissb4we" +
-            "&stops=blue%7Cparlppi" +
-            "&stops=blue%7Cmtzion" +
-            "&stops=blue%7Csfgh" +
-            "&stops=gold%7Cmissb4we" +
-            "&stops=gold%7Csfgh" +
-            "&stops=gold%7Cparlppi" +
-            "&stops=gold%7Cmtzion" +
-            "&stops=bronze%7C75behr" +
-            "&stops=bronze%7Cparlppi" +
-            "&stops=bronze%7Csurgedown" +
-            "&stops=black%7Clhts" +
-            "&stops=black%7Cmtzion" +
-            "&stops=black%7Clibrary" +
-            "&stops=tan%7Clhts" +
-            "&stops=tan%7Cmtzion" +
-            "&stops=tan%7Clibrary" +
-            "&stops=lime%7Clibrary" +
-            "&stops=lime%7Cmcb" +
-            "&stops=lime%7Cbuchaneb" +
-            "&stops=lime%7Cbuchanwb"
+        hostname: 'webservices.nextbus.com',
+        path: '/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf' +
+            '&stops=grey%7Cmissb4we' +
+            '&stops=grey%7Cparlppi' +
+            '&stops=blue%7Cmissb4we' +
+            '&stops=blue%7Cparlppi' +
+            '&stops=blue%7Cmtzion' +
+            '&stops=blue%7Csfgh' +
+            '&stops=gold%7Cmissb4we' +
+            '&stops=gold%7Csfgh' +
+            '&stops=gold%7Cparlppi' +
+            '&stops=gold%7Cmtzion' +
+            '&stops=bronze%7C75behr' +
+            '&stops=bronze%7Cparlppi' +
+            '&stops=bronze%7Csurgedown' +
+            '&stops=black%7Clhts' +
+            '&stops=black%7Cmtzion' +
+            '&stops=black%7Clibrary' +
+            '&stops=tan%7Clhts' +
+            '&stops=tan%7Cmtzion' +
+            '&stops=tan%7Clibrary' +
+            '&stops=lime%7Clibrary' +
+            '&stops=lime%7Cmcb' +
+            '&stops=lime%7Cbuchaneb' +
+            '&stops=lime%7Cbuchanwb'
     };
 
     http.get(options, function (resp) {
@@ -182,9 +182,9 @@ exports.stops = function(req, res) {
     if (req.query.routeId) {
         var routeIdOption = {id: req.query.routeId};
         options = {
-            path: "/otp-rest-servlet/ws/transit/routeData?agency=ucsf&references=true&extended=true&" +
+            path: '/otp-rest-servlet/ws/transit/routeData?agency=ucsf&references=true&extended=true&' +
                 querystring.stringify(routeIdOption),
-            property: "routeData",
+            property: 'routeData',
             useParentStation: false
         };
     }
@@ -195,7 +195,7 @@ exports.stops = function(req, res) {
             // as those are drop-off only and won't show up in the interface.
             // They are used by the trip planner, though, so we can't just remove them from the source data.
             if (results.stops && results.stops instanceof Array &&
-                results.route && results.route.id && results.route.id.id === "bronze") {
+                results.route && results.route.id && results.route.id.id === 'bronze') {
                 results.stops = results.stops.filter(function (el) {
                     return ! (el.id && ['paracc','library'].indexOf(el.id.id)!==-1);
                 });
@@ -209,7 +209,7 @@ exports.stops = function(req, res) {
 exports.routes = function(req, res) {
     'use strict';
 
-    var host = "localhost",
+    var host = 'localhost',
         port = 8080,
         headers = {'Content-Type':'application/json'};
 
@@ -219,10 +219,10 @@ exports.routes = function(req, res) {
     // Stupid Hack #3. See https://github.com/openplans/OpenTripPlanner/issues/1057
     // If parent station, let's search for routes in all stops in the parent station.
     var parentStationToChildStationForStupidHackNumberThree = {
-        "Parnassus": ["library", "parlppi", "paracc"],
-        "MB": ["missb4th", "missb4we"],
-        "2300 Harrison": ["23harrnb_ib", "23harrsb_ob"],
-        "100 Buchanan": ["buchaneb", "buchanob"]
+        'Parnassus': ['library', 'parlppi', 'paracc'],
+        'MB': ['missb4th', 'missb4we'],
+        '2300 Harrison': ['23harrnb_ib', '23harrsb_ob'],
+        '100 Buchanan': ['buchaneb', 'buchanob']
     };
 
     var foundRoutes = [];
@@ -236,13 +236,13 @@ exports.routes = function(req, res) {
         };
 
         otpOptions.path = stopId ?
-        "/otp-rest-servlet/ws/transit/routesForStop?agency=ucsf&" + querystring.stringify({id:stopId}) :
-        "/otp-rest-servlet/ws/transit/routes?agency=ucsf&";
+        '/otp-rest-servlet/ws/transit/routesForStop?agency=ucsf&' + querystring.stringify({id:stopId}) :
+        '/otp-rest-servlet/ws/transit/routes?agency=ucsf&';
 
         http.get(otpOptions, function(resp) {
-            var data = "";
+            var data = '';
             if (resp.statusCode !== 200) {
-                var errorMsg = "shuttle/routes error: code " + resp.statusCode;
+                var errorMsg = 'shuttle/routes error: code ' + resp.statusCode;
                 console.log(errorMsg);
                 if (callback) {
                     callback({error: errorMsg});
@@ -271,8 +271,8 @@ exports.routes = function(req, res) {
                     }
                 }
             });
-        }).on("error", function(e){
-            console.log("shuttle/routes error: " + e.message);
+        }).on('error', function(e){
+            console.log('shuttle/routes error: ' + e.message);
             if (callback) {
                 callback({error:e.message});
             } else {
@@ -304,17 +304,16 @@ exports.routes = function(req, res) {
                 });
             },
             function (callback) {
-                var filteredStops;
                 stops( function( allStops ) {
                     if (allStops.stops) {
                         myStop = allStops.stops.filter(function ( obj ) { return obj.id.id === req.query.stopId; }).pop();
                         callback();
                     } else {
-                        callback({error:"error looking up stops"});
+                        callback({error: 'error looking up stops'});
                     }
                 });
             }
-        ], function (err) {
+        ], function () {
             res.json({stop: myStop, routes: foundRoutes});
         });
     } else {
@@ -326,13 +325,13 @@ exports.times = function(req, res) {
     'use strict';
 
     var otpOptions = {
-        host: "localhost",
-        path: "/otp-rest-servlet/ws/transit/stopTimesForStop?agency=ucsf&extended=true&",
+        host: 'localhost',
+        path: '/otp-rest-servlet/ws/transit/stopTimesForStop?agency=ucsf&extended=true&',
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
 
-    var data = "";
+    var data = '';
 
     var pathOptions = {};
     // routeId is optional. Other parameters are required.
@@ -344,7 +343,7 @@ exports.times = function(req, res) {
 
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
-            var errorMsg = "shuttle/times error: code " + resp.statusCode;
+            var errorMsg = 'shuttle/times error: code ' + resp.statusCode;
             console.log(errorMsg);
             res.json({error: errorMsg});
         }
@@ -356,7 +355,7 @@ exports.times = function(req, res) {
                 var result = JSON.parse(data);
                 var rv = {};
                 if (result.stopTimes) {
-                    rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==="departure"; });
+                    rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==='departure'; });
                 } else {
                     rv = result;
                 }
@@ -364,8 +363,8 @@ exports.times = function(req, res) {
                 res.json(rv);
             }
         });
-    }).on("error", function(e){
-        console.log("shuttle/times error: " + e.message);
+    }).on('error', function(e){
+        console.log('shuttle/times error: ' + e.message);
         res.json({error: e.message});
     });
 };
@@ -384,9 +383,7 @@ exports.plan = function(req, res) {
 
                 var toId,
                     itinerary,
-                    firstLeg,
-                    penultimateLeg,
-                    lastLeg;
+                    firstLeg;
 
                 for(var l = allResults.length - 1; l>=0; --l) {
                     // Remove any "walk to <starting point>"
@@ -394,7 +391,7 @@ exports.plan = function(req, res) {
                     firstLeg = itinerary.legs[0];
                     if (firstLeg.to.stopId) {
                         toId = firstLeg.to.stopId.agencyId + '_' + firstLeg.to.stopId.id;
-                        if (firstLeg.mode==="WALK") {
+                        if (firstLeg.mode==='WALK') {
                             allResults.splice(l,1);
                             continue;
                         }
@@ -434,8 +431,8 @@ exports.plan = function(req, res) {
     };
 
     var otpOptions = {
-        host: "localhost",
-        path: "/otp-rest-servlet/ws/plan?minTransferTime=60&",
+        host: 'localhost',
+        path: '/otp-rest-servlet/ws/plan?minTransferTime=60&',
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
@@ -462,9 +459,9 @@ exports.plan = function(req, res) {
     otpOptions.path += querystring.stringify(query);
 
     var processResults = function(resp) {
-        var data = "";
+        var data = '';
         if (resp.statusCode !== 200) {
-            var errorMsg = "shuttle/plan error: code " + resp.statusCode;
+            var errorMsg = 'shuttle/plan error: code ' + resp.statusCode;
             console.log(errorMsg);
             callback({error: errorMsg});
         }
@@ -485,8 +482,8 @@ exports.plan = function(req, res) {
 
     http.get(otpOptions,
         processResults
-    ).on("error", function(e){
-        console.log("shuttle/plan error: " + e.message);
+    ).on('error', function(e){
+        console.log('shuttle/plan error: ' + e.message);
         callback({error: e.message});
     });
 };
