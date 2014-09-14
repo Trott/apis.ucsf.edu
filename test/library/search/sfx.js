@@ -11,7 +11,14 @@ var expect = Lab.expect;
 var describe = lab.experiment;
 var it = lab.test;
 
+var afterEach = lab.afterEach;
+
 describe('sfx', function () {
+
+	afterEach(function (done) {
+		nock.cleanAll();
+		done();
+	});
 
 	it('returns an empty result if no search term provided', function (done) {
 		sfx.search('', function (result) {
