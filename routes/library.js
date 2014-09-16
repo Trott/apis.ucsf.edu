@@ -1,5 +1,6 @@
 var http = require('http'),
-    moment = require('moment');
+    moment = require('moment'),
+    amalgamatic = require('amalgamatic');
 
 // One hour expressed in milliseconds
 var oneHour = 1000 * 60 * 60;
@@ -152,4 +153,4 @@ exports.guides = function (req, res) {
     res.json(guides);
 };
 
-exports.search = require('../lib/library/search.js');
+exports.search = amalgamatic.search;
