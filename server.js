@@ -44,7 +44,7 @@ https.globalAgent.maxSockets = Number.MAX_VALUE;
 
 logFile = fs.createWriteStream(__dirname + '/logs/http.' + Date.now());
 
-app.use(morgan({stream: logFile}));
+app.use(morgan('combined', {stream: logFile}));
 app.use(compression());
 
 app.use('/static', express.static(__dirname + '/static'));
@@ -109,7 +109,7 @@ app.get('/library/search', library.search);
 
 app.get('/', function (req, res) {
     'use strict';
-    res.sendfile(__dirname + '/static/index.html');
+    res.sendFile(__dirname + '/static/index.html');
 });
 
 http.createServer(app).listen(80, setIds);

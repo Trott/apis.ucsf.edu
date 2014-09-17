@@ -1,6 +1,13 @@
 var http = require('http'),
     moment = require('moment'),
-    amalgamatic = require('amalgamatic');
+    amalgamatic = require('amalgamatic'),
+    sfx = require('amalgamatic-sfx'),
+    millennium = require('amalgamatic-millennium'),
+    libguides = require('amalgamatic-libguides');
+
+amalgamatic.add('sfx', sfx);
+amalgamatic.add('millennium', millennium);
+amalgamatic.add('libguides', libguides);
 
 // One hour expressed in milliseconds
 var oneHour = 1000 * 60 * 60;
