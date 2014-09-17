@@ -27,7 +27,7 @@ exports.load = function(req, res) {
         function(err) {
             if (!err) {
                 res.contentType('js');
-                res.send(200, rv);
+                res.status(200).send(rv);
             } else {
                 console.log(err);
                 res.send(404);
