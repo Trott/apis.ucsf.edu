@@ -1,6 +1,6 @@
 var config = {
 	r25: {
-		auth: "username:password"
+		auth: 'username:password'
 	},
 	fitness: {
 		username: 'username',
