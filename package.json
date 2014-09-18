@@ -5,11 +5,12 @@
     "type": "git",
     "url": "https://github.com/Trott/apis.ucsf.edu.git"
   },
-  "version": "1.1.1",
+  "version": "1.2.0",
   "dependencies": {
     "amalgamatic": "^2.0.0",
     "amalgamatic-libguides": "^1.0.1",
     "amalgamatic-millennium": "^1.0.1",
+    "amalgamatic-pubmed": "^1.0.0",
     "amalgamatic-sfx": "^1.0.0",
     "async": "^0.2.10",
     "cheerio": "^0.17.0",
