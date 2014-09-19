@@ -4,5 +4,8 @@ UCSF.Library = {
     },
     guides: function (options, success, failure) {
         UCSF.run('library/guides', options, success, failure, UCSF.Library.guides);
+    },
+    search: function (options, success, failure) {
+        UCSF.run('library/search', options, success, failure, UCSF.Library.search);
     }
 };
