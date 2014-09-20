@@ -4,12 +4,14 @@ var http = require('http'),
     sfx = require('amalgamatic-sfx'),
     millennium = require('amalgamatic-millennium'),
     libguides = require('amalgamatic-libguides'),
-    pubmed = require('amalgamatic-pubmed');
+    pubmed = require('amalgamatic-pubmed'),
+    drupal6 = require('amalgamatic-drupal6');
 
 amalgamatic.add('sfx', sfx);
 amalgamatic.add('millennium', millennium);
 amalgamatic.add('libguides', libguides);
 amalgamatic.add('pubmed', pubmed);
+amalgamatic.add('drupal6', drupal6);
 
 // One hour expressed in milliseconds
 var oneHour = 1000 * 60 * 60;

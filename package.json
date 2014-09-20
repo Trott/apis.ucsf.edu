@@ -8,6 +8,7 @@
   "version": "1.3.0",
   "dependencies": {
     "amalgamatic": "^2.0.0",
+    "amalgamatic-drupal6": "^1.0.0",
     "amalgamatic-libguides": "^1.0.1",
     "amalgamatic-millennium": "^1.0.1",
     "amalgamatic-pubmed": "^1.0.1",
