@@ -164,4 +164,13 @@ exports.guides = function (req, res) {
     res.json(guides);
 };
 
-exports.search = amalgamatic.search;
+exports.search = function (req, res) {
+    var options = {
+        searchTerm: req.query.q
+    };
+
+    if (req.query.c && req.query.c instanceof Array) {
+        options.collections = req.query.c;
+    }
+    amalgamatic.search(options, function (value) { res.json(value); });
+};
