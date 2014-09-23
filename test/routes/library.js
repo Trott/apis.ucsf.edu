@@ -30,11 +30,11 @@ describe('exports', function () {
 		done();
 	});
 
-	describe('search', function () {
-		it('should set async results to false if async is not specified in search()', function (done) {
+	describe('search()', function () {
+		it('should not set plugin-level callback if async is not specified in search()', function (done) {
 			var amalgamaticMock = {
 				search: function (options) {
-					expect(options.async).to.be.false;
+					expect(options.pluginCallback).to.be.undefined;
 					revert();
 					done();
 				}
@@ -47,7 +47,7 @@ describe('exports', function () {
 		it('should set async results to true if async is specified in search()', function (done) {
 			var amalgamaticMock = {
 				search: function (options) {
-					expect(options.async).to.be.true;
+					expect(typeof options.pluginCallback).to.equal('function');
 					revert();
 					done();
 				}
@@ -81,6 +81,19 @@ describe('exports', function () {
 			var revert = library.__set__('amalgamatic', amalgamaticMock);
 
 			library.search({query: {q: 'medicine', 'c': ['foo', 'bar']}});
+		});
+	});
+
+	describe('guides()', function () {
+		it('should return valid object', function (done) {
+			var resMock = {
+				json: function (value) {
+					expect (value.data).to.be.defined;
+					expect(value.error).to.be.undefined;
+					done();
+				}
+			};
+			library.guides(null, resMock);
 		});
 	});
 });

@@ -157,7 +157,7 @@ exports.hours = function (req, res) {
 updateGuidesAsync();
 exports.guides = function (req, res) {
     'use strict';
-    if (! guides.featured || (Date.now() - guides.lastUpdated > oneHour)) {
+    if (! guides.guides || (Date.now() - guides.lastUpdated > oneHour)) {
         updateGuidesAsync();
     }
 
@@ -174,7 +174,11 @@ exports.search = function (req, res) {
     }
 
     // async = Server-Sent Events/EventSource
-    options.async = req.query.hasOwnProperty('async');
+    if (req.query.hasOwnProperty('async')) {
+        options.pluginCallback = function () {
+            // SSE stuff goes here
+        };
+    }
 
     amalgamatic.search(options, function (value) { res.json(value); });
 };
