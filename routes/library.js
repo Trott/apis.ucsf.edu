@@ -172,5 +172,9 @@ exports.search = function (req, res) {
     if (req.query.c && req.query.c instanceof Array) {
         options.collections = req.query.c;
     }
+
+    // async = Server-Sent Events/EventSource
+    options.async = req.query.hasOwnProperty('async');
+
     amalgamatic.search(options, function (value) { res.json(value); });
 };
