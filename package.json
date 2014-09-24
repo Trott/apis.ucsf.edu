@@ -16,18 +16,18 @@
     "async": "^0.2.10",
     "cheerio": "^0.17.0",
     "compression": "^1.0.2",
-    "csv": "~0.3.3",
+    "csv": "^0.3.3",
     "express": "^4.9.0",
     "grunt-contrib-compress": "^0.5.3",
     "grunt-contrib-jshint": "^0.1.1",
     "moment": "^2.0.0",
     "morgan": "^1.2.0",
-    "request": "^2.22.0",
+    "request": "=2.22.0",
     "xml2js": "^0.2.8"
   },
   "scripts": {
     "start": "server.js",
-    "test": "node_modules/lab/bin/lab -t 84"
+    "test": "node_modules/lab/bin/lab -t 62"
   },
   "engines": {
     "node": "0.10.x"
