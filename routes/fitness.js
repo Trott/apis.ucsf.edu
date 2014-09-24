@@ -12,55 +12,78 @@ var updateScheduleAsync = function () {
     date.add(2, 'days');
     var endDate = date.format('MMDDYYYY');
 
-    var url = 'http://www.xpiron.com/schedule/Access?pAction=20&pBorgID=2867&pEmailAddr=' +
-            config.fitness.username +
-            '&pPassword=' +
-            config.fitness.password +
-            '&pFirstPage=Reports?pAction=60&pType=20002&pStartDate=' +
-            startDate +
-            '&pEndDate=' +
-            endDate +
-            '&pServiceID=12552';
+    var authOptions = {
+        url: 'http://www.xpiron.com/schedule/Access',
+        jar: true,
+        qs: {
+            pAction: '20',
+            pBorgID: '2867',
+            pEmailAddr: config.fitness.username,
+            pPassword: config.fitness.password
+        }
+    };
 
+    var schedOptions = {
+        url: 'http://www.xpiron.com/schedule/Reports',
+        jar: true,
+        qs: {
+            pAction: '60',
+            pType: '20002',
+            pStartDate: startDate,
+            pEndDate: endDate,
+            pServiceID: '12552'
 
-    request.get(url, function (error, response, body) {
+        }
+    };
+
+    request.get(authOptions, function (error, response) {
         if (!error && response.statusCode === 200) {
-            csv()
-                .from(body)
-                .to.array(function (data, count) {
-                    var allHeaders = data[0];
-                    var headers = {};
-                    headers[allHeaders.indexOf('GroupEvent')] = 'name';
-                    headers[allHeaders.indexOf('Date')] = 'date';
-                    headers[allHeaders.indexOf('Start Time')] = 'startTime';
-                    headers[allHeaders.indexOf('End Time')] = 'endTime';
-                    headers[allHeaders.indexOf('Instructor First Name')] = 'instructorFirstName';
-                    headers[allHeaders.indexOf('Instructor Last Name')] = 'instructorLastName';
-                    headers[allHeaders.indexOf('Location')] = 'location';
+            request.get(schedOptions, function(error, response, body) {
+                if (!error && response.statusCode === 200) {
 
-                    var newData = [];
-                    for (var i = 1; i < count; i++) {
-                        newData[i - 1] = {};
-                        for (var prop in headers) {
-                            newData[i - 1][headers[prop]] = data[i][prop];
-                        }
-                        newData[i - 1].day = moment(newData[i - 1].date, 'MM/DD/YYYY').format('dddd');
-                    }
-                    newData.sort(function (x, y) {
-                        var xDate = moment(x.date + ' ' + x.startTime, 'MM/DD/YYYY');
-                        var yDate = moment(y.date + ' ' + y.startTime, 'MM/DD/YYYY');
+                    csv()
+                    .from(body)
+                    .to.array(function (data, count) {
+                        var allHeaders = data[0];
+                        var headers = {};
+                        headers[allHeaders.indexOf('GroupEvent')] = 'name';
+                        headers[allHeaders.indexOf('Date')] = 'date';
+                        headers[allHeaders.indexOf('Start Time')] = 'startTime';
+                        headers[allHeaders.indexOf('End Time')] = 'endTime';
+                        headers[allHeaders.indexOf('Instructor First Name')] = 'instructorFirstName';
+                        headers[allHeaders.indexOf('Instructor Last Name')] = 'instructorLastName';
+                        headers[allHeaders.indexOf('Location')] = 'location';
 
-                        if (xDate < yDate) {
-                            return -1;
+                        var newData = [];
+                        for (var i = 1; i < count; i++) {
+                            newData[i - 1] = {};
+                            for (var prop in headers) {
+                                newData[i - 1][headers[prop]] = data[i][prop];
+                            }
+                            newData[i - 1].day = moment(newData[i - 1].date, 'MM/DD/YYYY').format('dddd');
                         }
-                        if (xDate > yDate) {
-                            return 1;
-                        }
-                        return 0;
+                        newData.sort(function (x, y) {
+                            var xDate = moment(x.date + ' ' + x.startTime, 'MM/DD/YYYY');
+                            var yDate = moment(y.date + ' ' + y.startTime, 'MM/DD/YYYY');
+
+                            if (xDate < yDate) {
+                                return -1;
+                            }
+                            if (xDate > yDate) {
+                                return 1;
+                            }
+                            return 0;
+                        });
+                        schedule.classes = newData;
+                        schedule.lastUpdated = Date.now();
                     });
-                    schedule.classes = newData;
-                    schedule.lastUpdated = Date.now();
-                });
+                } else {
+                    console.log('fitness/schedule error: ' + JSON.stringify(error));
+                    if (response && response.statusCode) {
+                        console.log('HTTP status code: ' + response.statusCode);
+                    }
+                }
+            });
         } else {
             console.log('fitness/schedule error: ' + JSON.stringify(error));
             if (response && response.statusCode) {
