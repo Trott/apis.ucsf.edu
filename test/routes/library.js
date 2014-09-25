@@ -54,7 +54,10 @@ describe('exports', function () {
 			};
 			var revert = library.__set__('amalgamatic', amalgamaticMock);
 
-			library.search({query: {q: 'medicine', async: ''}}, {writeHead: function () {}});
+			library.search(
+				{query: {q: 'medicine', async: ''}},
+				{write: function () {}, writeHead: function () {}}
+			);
 		});
 
 		it('should not set collections if no collections are specified', function (done) {

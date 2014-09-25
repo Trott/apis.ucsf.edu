@@ -181,6 +181,7 @@ exports.search = function (req, res) {
         res.writeHead(200, {
             'Content-Type': 'text/event-stream'
         });
+        res.write('\n');
 
         var sseId = 0;
         options.pluginCallback = function (data) {
