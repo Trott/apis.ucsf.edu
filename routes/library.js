@@ -165,6 +165,8 @@ exports.guides = function (req, res) {
 };
 
 exports.search = function (req, res) {
+    var callback = null;
+
     var options = {
         searchTerm: req.query.q
     };
@@ -175,10 +177,24 @@ exports.search = function (req, res) {
 
     // async = Server-Sent Events/EventSource
     if (req.query.hasOwnProperty('async')) {
-        options.pluginCallback = function () {
-            // SSE stuff goes here
+
+        res.writeHead(200, {
+            'Content-Type': 'text/event-stream'
+        });
+
+        var sseId = 0;
+        options.pluginCallback = function (data) {
+            sseId = sseId + 1;
+
+            res.write('id: ' + sseId + '\n');
+            res.write('data: ' + JSON.stringify(data) + '\n\n');
+        };
+
+    } else {
+        callback = function (value) {
+            res.json(value);
         };
     }
 
-    amalgamatic.search(options, function (value) { res.json(value); });
+    amalgamatic.search(options, callback);
 };

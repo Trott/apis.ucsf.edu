@@ -54,7 +54,7 @@ describe('exports', function () {
 			};
 			var revert = library.__set__('amalgamatic', amalgamaticMock);
 
-			library.search({query: {q: 'medicine', async: ''}});
+			library.search({query: {q: 'medicine', async: ''}}, {writeHead: function () {}});
 		});
 
 		it('should not set collections if no collections are specified', function (done) {
@@ -81,6 +81,14 @@ describe('exports', function () {
 			var revert = library.__set__('amalgamatic', amalgamaticMock);
 
 			library.search({query: {q: 'medicine', 'c': ['foo', 'bar']}});
+		});
+
+		it('should fire main callback for non async search', function (done) {
+			nock('http://ucelinks.cdlib.org:8888')
+				.get('/sfx_ucsf/az?param_textSearchType_value=startsWith&param_pattern_value=medicine')
+				.reply('200', '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
+
+			library.search({query: {q: 'medicine', c: ['sfx']}}, {json: function () { done(); }});
 		});
 	});
 
