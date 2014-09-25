@@ -7,7 +7,7 @@
   },
   "version": "1.4.1",
   "dependencies": {
-    "amalgamatic": "^4.0.0",
+    "amalgamatic": "^4.0.1",
     "amalgamatic-drupal6": "^2.0.0",
     "amalgamatic-libguides": "^2.0.0",
     "amalgamatic-millennium": "^2.0.0",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "server.js",
-    "test": "node_modules/lab/bin/lab -t 62"
+    "test": "node_modules/lab/bin/lab -t 83"
   },
   "engines": {
     "node": "0.10.x"
