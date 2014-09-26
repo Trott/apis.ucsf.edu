@@ -184,7 +184,7 @@ exports.search = function (req, res) {
         res.write('\n');
 
         var sseId = 0;
-        options.pluginCallback = function (data) {
+        options.pluginCallback = function (err, data) {
             sseId = sseId + 1;
 
             res.write('id: ' + sseId + '\n');
@@ -192,7 +192,7 @@ exports.search = function (req, res) {
         };
 
     } else {
-        callback = function (value) {
+        callback = function (err, value) {
             res.json(value);
         };
     }

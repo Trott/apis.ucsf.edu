@@ -91,7 +91,29 @@ describe('exports', function () {
 				.get('/sfx_ucsf/az?param_textSearchType_value=startsWith&param_pattern_value=medicine')
 				.reply('200', '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
 
-			library.search({query: {q: 'medicine', c: ['sfx']}}, {json: function () { done(); }});
+			var mockJson = function (value) {
+				expect(value.sfx.data.length).to.equal(2);
+				done();
+			};
+
+			library.search({query: {q: 'medicine', c: ['sfx']}}, {json: mockJson});
+		});
+
+		it('should fire plugin callback for async search', function (done) {
+			nock('http://ucelinks.cdlib.org:8888')
+				.get('/sfx_ucsf/az?param_textSearchType_value=startsWith&param_pattern_value=medicine')
+				.reply('200', '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
+
+			var mockWriteHead = function (status, value) {
+				expect(status).to.equal(200);
+				expect(value).to.deep.equal({'Content-Type': 'text/event-stream'});
+				done();
+			};
+
+			var mockWrite = function () {
+			};
+
+			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: mockWrite});
 		});
 	});
 
