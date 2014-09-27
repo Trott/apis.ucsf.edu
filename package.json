@@ -7,12 +7,12 @@
   },
   "version": "1.4.1",
   "dependencies": {
-    "amalgamatic": "^4.0.1",
-    "amalgamatic-drupal6": "^2.0.0",
-    "amalgamatic-libguides": "^2.0.0",
-    "amalgamatic-millennium": "^2.0.0",
-    "amalgamatic-pubmed": "^2.0.0",
-    "amalgamatic-sfx": "^2.0.0",
+    "amalgamatic": "^5.0.0",
+    "amalgamatic-drupal6": "^3.0.0",
+    "amalgamatic-libguides": "^3.0.0",
+    "amalgamatic-millennium": "^3.0.0",
+    "amalgamatic-pubmed": "^3.0.0",
+    "amalgamatic-sfx": "^3.0.0",
     "async": "^0.2.10",
     "cheerio": "^0.17.0",
     "compression": "^1.0.2",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "server.js",
-    "test": "node_modules/lab/bin/lab -t 83"
+    "test": "node_modules/lab/bin/lab -t 85"
   },
   "engines": {
     "node": "0.10.x"
