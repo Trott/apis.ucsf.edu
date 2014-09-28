@@ -51,7 +51,6 @@ var updateSchedule = function (callback) {
             pStartDate: startDate,
             pEndDate: endDate,
             pServiceID: '12552'
-
         }
     };
 
