@@ -2,6 +2,9 @@
 
 var rewire = require('rewire');
 
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
+
 var nock = require('nock');
 nock.disableNetConnect();
 
@@ -56,7 +59,7 @@ describe('exports', function () {
 
 			library.search(
 				{query: {q: 'medicine', async: ''}},
-				{write: function () {}, writeHead: function () {}}
+				{write: function () {}, writeHead: function () {}, close: function () {}}
 			);
 		});
 
@@ -107,13 +110,16 @@ describe('exports', function () {
 			var mockWriteHead = function (status, value) {
 				expect(status).to.equal(200);
 				expect(value).to.deep.equal({'Content-Type': 'text/event-stream'});
-				done();
 			};
 
 			var mockWrite = function () {
 			};
 
-			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: mockWrite});
+			var mockClose = function () {
+				done();
+			};
+
+			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: mockWrite, close: mockClose});
 		});
 	});
 
@@ -121,12 +127,37 @@ describe('exports', function () {
 		it('should return valid object', function (done) {
 			var resMock = {
 				json: function (value) {
-					expect (value.data).to.be.defined;
+					expect(value.guides.length).to.equal(1);
+					expect(value.guides[0].title).to.equal('title');
+					expect(value.guides[0].href).to.equal('href');
+					expect(value.guides[0].desc).to.equal('desc');
 					expect(value.error).to.be.undefined;
+					revert();
 					done();
 				}
 			};
+
+			var revert = library.__set__('guides', {guides:[{title: 'title', href: 'href', desc: 'desc'}], lastUpdated: Date.now()});
 			library.guides(null, resMock);
+		});
+
+		it('should fetch valid object if it does not already have one', function (done) {
+			var updateGuidesAsyncMock = function () {
+				eventEmitter.emit('mainCallback');
+			};
+
+			var guidesMock = {};
+
+			var revertGuides = library.__set__('guides', guidesMock);
+			var revertUpdate = library.__set__('updateGuidesAsync', updateGuidesAsyncMock);
+
+			eventEmitter.on('mainCallback', function () {
+				revertGuides();
+				revertUpdate();
+				done();
+			});
+
+			library.guides(null, {json: function () {}});
 		});
 	});
 });
