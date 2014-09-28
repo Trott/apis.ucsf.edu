@@ -4,7 +4,14 @@
   <meta charset="utf-8" />
 </head>
 <body>
-	<h1>You poked my heart</h1>
+	<h1>Server-Sent Events Test</h1>
+
+	<p>Five words will appear below on this page once all five sources have responded to the server. The server is using EventSource/Server-Sent Events to transmit the name of each source after it responds.</p>
+	<p>I can see (by adding some logging) on the server that the messages are being sent at significantly different intervals and so they should appear here over a period of 2 or 3 seconds. Instead, it appears that the browser is buffering the responses and only reacting to the messages once the server closes the connection.</p>
+	<p>Which is the other weird thing: If I don't close the connection on the server side, the browser never does anything. It's almost like it's not using EventSource but is using XHR instead. But I know that's not what's happening. (View source, open the console, and examing the variable named `source` to confirm for yourself!)</p>
+
+	<h2>Words will appear below...</h2>
+
   <script>
     var source = new EventSource('/library/search?q=medicine&async');
     source.onmessage = function(e) {
