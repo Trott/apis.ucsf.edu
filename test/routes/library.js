@@ -115,11 +115,11 @@ describe('exports', function () {
 			var mockWrite = function () {
 			};
 
-			var mockClose = function () {
+			var mockEnd = function () {
 				done();
 			};
 
-			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: mockWrite, close: mockClose});
+			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: mockWrite, end: mockEnd});
 		});
 	});
 

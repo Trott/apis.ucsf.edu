@@ -193,7 +193,7 @@ exports.search = function (req, res) {
             res.write('id: ' + sseId + '\n');
             res.write('event: end\n');
             res.write('data: {"name": "end"}\n\n');
-            res.close();
+            res.end();
         };
 
     } else {
