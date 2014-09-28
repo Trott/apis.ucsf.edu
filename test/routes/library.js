@@ -124,7 +124,7 @@ describe('exports', function () {
 	});
 
 	describe('guides()', function () {
-		it('should return valid object', function (done) {
+		it('should return a valid object', function (done) {
 			var resMock = {
 				json: function (value) {
 					expect(value.guides.length).to.equal(1);
@@ -148,16 +148,30 @@ describe('exports', function () {
 
 			var guidesMock = {};
 
-			var revertGuides = library.__set__('guides', guidesMock);
-			var revertUpdate = library.__set__('updateGuidesAsync', updateGuidesAsyncMock);
+			var revert = library.__set__({guides: guidesMock, updateGuidesAsync: updateGuidesAsyncMock});
 
 			eventEmitter.on('mainCallback', function () {
-				revertGuides();
-				revertUpdate();
+				revert();
 				done();
 			});
 
 			library.guides(null, {json: function () {}});
+		});
+	});
+
+  describe('hours()', function () {
+		it('should return a valid object', function (done) {
+			var resMock = {
+				json: function (value) {
+					expect(value.locations.parnassus.length).to.equal(2);
+					expect(value.error).to.be.undefined;
+					revert();
+					done();
+				}
+			};
+
+			var revert = library.__set__('schedule', {lastUpdated: Date.now(), locations: {'parnassus':[{day: 'day', date:'date', text:'text'}, {day: 'day', date:'date', text:'text'}], 'missionBay': [{day: 'day', date:'date', text:'text'},{day: 'day', date:'date', text:'text'}]}});
+			library.hours(null, resMock);
 		});
 	});
 });

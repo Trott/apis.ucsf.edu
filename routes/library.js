@@ -182,15 +182,11 @@ exports.search = function (req, res) {
             'Content-Type': 'text/event-stream'
         });
 
-        var sseId = 0;
         options.pluginCallback = function (err, data) {
-            res.write('id: ' + sseId + '\n');
             res.write('data: ' + JSON.stringify(data) + '\n\n');
-            sseId = sseId + 1;
         };
 
         callback = function () {
-            res.write('id: ' + sseId + '\n');
             res.write('event: end\n');
             res.write('data: {"name": "end"}\n\n');
             res.end();
