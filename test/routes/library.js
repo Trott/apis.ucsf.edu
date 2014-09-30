@@ -112,14 +112,14 @@ describe('exports', function () {
 				expect(value).to.deep.equal({'Content-Type': 'text/event-stream'});
 			};
 
-			var mockWrite = function () {
+			var noop = function () {
 			};
 
 			var mockEnd = function () {
 				done();
 			};
 
-			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: mockWrite, end: mockEnd});
+			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: noop, flush: noop, end: mockEnd});
 		});
 	});
 

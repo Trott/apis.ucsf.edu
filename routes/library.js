@@ -182,18 +182,16 @@ exports.search = function (req, res) {
             'Content-Type': 'text/event-stream'
         });
 
-        var artificialDelay = 100;
         options.pluginCallback = function (err, data) {
-            setTimeout(function() {res.write('data: ' + JSON.stringify(data) + '\n\n');}, artificialDelay);
-            artificialDelay = artificialDelay * 2;
+            res.write('data: ' + JSON.stringify(data) + '\n\n');
+            res.flush();
         };
 
         callback = function () {
-            setTimeout(function() {
-                res.write('event: end\n');
-                res.write('data\n\n');
-                res.end();
-            }, artificialDelay * 2);
+            res.write('event: end\n');
+            res.write('data\n\n');
+            res.flush();
+            res.end();
         };
 
     } else {
