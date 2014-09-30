@@ -121,6 +121,55 @@ describe('exports', function () {
 
 			library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: noop, flush: noop, end: mockEnd});
 		});
+
+		it('should allow searching for UCSF Library databases', function (done) {
+			nock('https://www.library.ucsf.edu:443')
+				.get('/db?filter0=fhqwhagads&apage=&filter2=All')
+				.reply('200', '<html></html>');
+
+			var mockJson = function (value) {
+				expect(value.dbs.data.length).to.equal(0);
+				done();
+			};
+
+			library.search({query: {q: 'fhqwhagads', c: ['dbs']}}, {json: mockJson});
+		});
+
+		it('should log an error if there is an error', function (done) {
+			var revert = library.__set__('logger', function (value) {
+				expect(value).to.equal('library/search error: Nock: Not allow net connect for "www.library.ucsf.edu:443"');
+				eventEmitter.emit('errorLogged');
+			});
+
+			eventEmitter.on('errorLogged', function () {
+				revert();
+				done();
+			});
+
+			library.search({query: {q: 'fhqwhagads', c: ['dbs']}});
+
+		});
+
+		it('should log a default error message if one is not provided', function (done) {
+			var revert = library.__set__({
+				logger: function (value) {
+					expect(value).to.equal('library/search error: unknown error');
+					eventEmitter.emit('unknownErrorLogged');
+				},
+				amalgamatic: {
+					search: function (options, callback) {
+						callback({errorCode: 1});
+					}
+				}
+			});
+
+			eventEmitter.on('unknownErrorLogged', function () {
+				revert();
+				done();
+			});
+
+			library.search({query: {q: 'fhqwhagads', c: ['dbs']}});
+		});
 	});
 
 	describe('guides()', function () {

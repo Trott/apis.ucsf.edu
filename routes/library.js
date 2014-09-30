@@ -5,13 +5,17 @@ var http = require('http'),
     millennium = require('amalgamatic-millennium'),
     libguides = require('amalgamatic-libguides'),
     pubmed = require('amalgamatic-pubmed'),
-    drupal6 = require('amalgamatic-drupal6');
+    drupal6 = require('amalgamatic-drupal6'),
+    dbs = require('amalgamatic-ucsflibdbs');
 
 amalgamatic.add('sfx', sfx);
 amalgamatic.add('millennium', millennium);
 amalgamatic.add('libguides', libguides);
 amalgamatic.add('pubmed', pubmed);
 amalgamatic.add('drupal6', drupal6);
+amalgamatic.add('dbs', dbs);
+
+var logger = console.log;
 
 // One hour expressed in milliseconds
 var oneHour = 1000 * 60 * 60;
@@ -32,7 +36,7 @@ var updateGuidesAsync = function () {
     http.get(options, function (resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'updateGuidesAsync error: code ' + resp.statusCode;
-            console.log(errorMsg);
+            logger(errorMsg);
         }
         resp.on('data', function (chunk) {
             data += chunk;
@@ -50,7 +54,7 @@ var updateGuidesAsync = function () {
                     });
                 } catch (e) {
                     result = {};
-                    console.log('error parsing LibGuides JSON: ' + e.message);
+                    logger('error parsing LibGuides JSON: ' + e.message);
                 }
 
                 guides = result;
@@ -58,7 +62,7 @@ var updateGuidesAsync = function () {
             }
         });
     }).on('error', function (e) {
-        console.log('updateGuidesAsync error: ' + e.message);
+        logger('updateGuidesAsync error: ' + e.message);
     });
 };
 
@@ -75,7 +79,7 @@ var updateScheduleAsync = function () {
     http.get(options, function (resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'updateScheduleAsync error: code ' + resp.statusCode;
-            console.log(errorMsg);
+            logger(errorMsg);
         }
         resp.on('data', function (chunk) {
             data += chunk;
@@ -120,7 +124,7 @@ var updateScheduleAsync = function () {
                     result = JSON.parse(data);
                 } catch (e) {
                     result = {};
-                    console.log('error parsing LibCal JSON: ' + e.message);
+                    logger('error parsing LibCal JSON: ' + e.message);
                 }
 
                 var locations = {};
@@ -139,7 +143,7 @@ var updateScheduleAsync = function () {
             }
         });
     }).on('error', function (e) {
-        console.log('updateScheduleAsync error: ' + e.message);
+        logger('updateScheduleAsync error: ' + e.message);
     });
 };
 
@@ -196,7 +200,12 @@ exports.search = function (req, res) {
 
     } else {
         callback = function (err, value) {
-            res.json(value);
+            if (err) {
+                var msg = err.message || 'unknown error';
+                logger('library/search error: ' + msg);
+            } else {
+                res.json(value);
+            }
         };
     }
 
