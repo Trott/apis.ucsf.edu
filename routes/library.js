@@ -172,7 +172,8 @@ exports.search = function (req, res) {
     var callback = null;
 
     var options = {
-        searchTerm: req.query.q
+        searchTerm: req.query.q,
+        maxResults: 5
     };
 
     if (req.query.c && req.query.c instanceof Array) {
