@@ -6,16 +6,25 @@ UCSF.Library = {
         UCSF.run('library/guides', options, success, failure, UCSF.Library.guides);
     },
     search: function (options, success, failure) {
-        if (options.async && window.EventSource) {
-            var reqString = UCSF.createRequestString('https://apis.ucsf.edu/library/search', options);
-            var sse = new window.EventSource(reqString);
-            sse.onmessage = function (value) {
-                success(JSON.parse(value.data));
+        if (options.async) {
+            if (window.EventSources) {
+                var reqString = UCSF.createRequestString('https://apis.ucsf.edu/library/search', options);
+                var sse = new window.EventSource(reqString);
+                sse.onmessage = function (value) {
+                    success(JSON.parse(value.data));
+                };
+                sse.onerror = failure;
+                sse.addEventListener('end', function () { sse.close(); });
+                return;
+            }                
+            delete options.async;
+            var originalSuccess = success;
+            success = function (results) {
+                for (var i=0, l=results.length; i<l; i++) {
+                    originalSuccess(results[i]);
+                }
             };
-            sse.onerror = failure;
-            sse.addEventListener('end', function () { sse.close(); });
-        } else {
-            UCSF.run('library/search', options, success, failure, UCSF.Library.search);
         }
+        UCSF.run('library/search', options, success, failure, UCSF.Library.search);
     }
 };
