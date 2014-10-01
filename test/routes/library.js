@@ -95,7 +95,8 @@ describe('exports', function () {
 				.reply('200', '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
 
 			var mockJson = function (value) {
-				expect(value.sfx.data.length).to.equal(2);
+				expect(value[0].name).to.equal('sfx');
+				expect(value[0].data.length).to.equal(2);
 				done();
 			};
 
@@ -128,7 +129,8 @@ describe('exports', function () {
 				.reply('200', '<html></html>');
 
 			var mockJson = function (value) {
-				expect(value.dbs.data.length).to.equal(0);
+				expect(value[0].name).to.equal('dbs');
+				expect(value[0].data.length).to.equal(0);
 				done();
 			};
 

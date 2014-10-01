@@ -7,7 +7,7 @@
   },
   "version": "1.5.1",
   "dependencies": {
-    "amalgamatic": "^5.0.1",
+    "amalgamatic": "^6.0.0",
     "amalgamatic-drupal6": "^3.0.0",
     "amalgamatic-libguides": "^3.0.0",
     "amalgamatic-millennium": "^3.0.0",
