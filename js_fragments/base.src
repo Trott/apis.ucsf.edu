@@ -35,7 +35,7 @@ var UCSF = UCSF || (function () {
 
         run: function (what, options, success, failure) {
             failure = failure || function (obj) {window.alert(obj.statusText||'An error occurred. Please try again.');};
-            var reqString = UCSF.createRequestString('http://apis.ucsf.edu/' + what, options);
+            var reqString = UCSF.createRequestString('https://apis.ucsf.edu/' + what, options);
             var xhr = UCSF.createCORSRequest('GET', reqString, success, failure);
 
             // Using onreadystatechange rather than onload for Android 4.2.2. + Galaxy S4 + PhoneGap
