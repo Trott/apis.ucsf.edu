@@ -43,6 +43,7 @@ red,regular,red_mb_to_bart_c2,to 16th St. BART,1
 tan,regular,tan_a,,
 tan,regular,tan_b,,
 va,regular,va_a,,
-va,regular,va_b,,
+va,untiloct19,va_b0,,
+va,afteroct29,va_b1,,
 yellow,regular,yellow_a,,
 yellow,regular,yellow_b,,

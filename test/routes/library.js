@@ -194,14 +194,14 @@ describe('exports', function () {
 
 		it('should fetch valid object if it does not already have one', function (done) {
 			var updateGuidesAsyncMock = function () {
-				eventEmitter.emit('mainCallback');
+				eventEmitter.emit('guidesCallback');
 			};
 
 			var guidesMock = {};
 
 			var revert = library.__set__({guides: guidesMock, updateGuidesAsync: updateGuidesAsyncMock});
 
-			eventEmitter.on('mainCallback', function () {
+			eventEmitter.on('guidesCallback', function () {
 				revert();
 				done();
 			});
@@ -223,6 +223,23 @@ describe('exports', function () {
 
 			var revert = library.__set__('schedule', {lastUpdated: Date.now(), locations: {'parnassus':[{day: 'day', date:'date', text:'text'}, {day: 'day', date:'date', text:'text'}], 'missionBay': [{day: 'day', date:'date', text:'text'},{day: 'day', date:'date', text:'text'}]}});
 			library.hours(null, resMock);
+		});
+
+		it('should fetch valid object if it does not already have one', function (done) {
+			var updateScheduleAsyncMock = function () {
+				eventEmitter.emit('hoursCallback');
+			};
+
+			var scheduleMock = {};
+
+			var revert = library.__set__({schedule: scheduleMock, updateScheduleAsync: updateScheduleAsyncMock});
+
+			eventEmitter.on('hoursCallback', function () {
+				revert();
+				done();
+			});
+
+			library.hours(null, {json: function () {}});
 		});
 	});
 });
