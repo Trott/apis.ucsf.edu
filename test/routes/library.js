@@ -241,6 +241,24 @@ describe('exports', function () {
 
 			library.hours(null, {json: function () {}});
 		});
+
+		it('should log an error if there is an error', function (done) {
+			var revert = library.__set__({
+				logger: function (value) {
+					expect(value).to.equal('updateScheduleAsync error: Nock: Not allow net connect for "api.libcal.com:80"');
+					eventEmitter.emit('hoursErrorLogged');
+				},
+				schedule: {}
+			});
+
+			eventEmitter.on('hoursErrorLogged', function () {
+				revert();
+				done();
+			});
+
+			library.hours(null, {json: function () {}});
+
+		});
 	});
 });
 
