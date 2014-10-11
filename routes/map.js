@@ -18,9 +18,9 @@ exports.tile = function(req, res) {
         var tilePath =  zoom + '/' + x + '/' + y + '.png';
 
 
-        res.sendfile(tilePath, sendfileOptions, function(err) {
+        res.sendFile(tilePath, sendfileOptions, function(err) {
             if (err && err.status === 404) {
-                res.sendfile('blank.png', sendfileOptions);
+                res.sendFile('blank.png', sendfileOptions);
             }
         });
     } else {
