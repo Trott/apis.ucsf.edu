@@ -1,5 +1,5 @@
 var http = require('http'),
-    schedule = require(__dirname + '/../utils/LibrarySchedule.js');
+    schedule = require('../utils/librarySchedule.js');
 
 var amalgamatic = require('amalgamatic'),
     sfx = require('amalgamatic-sfx'),
