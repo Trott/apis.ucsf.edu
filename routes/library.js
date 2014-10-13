@@ -84,6 +84,7 @@ exports.hours = function (req, res) {
 updateGuidesAsync();
 exports.guides = function (req, res) {
     'use strict';
+    
     if (! guides.guides || (Date.now() - guides.lastUpdated > oneHour)) {
         updateGuidesAsync();
     }
@@ -91,8 +92,23 @@ exports.guides = function (req, res) {
     res.json(guides);
 };
 
+// RegExp for URLs that don't need a proxy prefix
+var proxyifyRegExp = /^https?:\/\/([a-z\.]*ucsf.edu|ucsf.idm.oclc.org|ucelinks.cdlib.org)[:\/]/i;
+var proxify = function (url) {
+    if ((typeof url === 'string') && (! proxyifyRegExp.test(url))) {
+        url = 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(url);
+    }
+    return url;
+};
+var proxifyCollection = function (values) {
+    values.url = proxify(values.url);
+    values.data.forEach(function(datum) {
+        datum.url = proxify(datum.url);
+    });
+};
+
 exports.search = function (req, res) {
-    var callback = null;
+    var callback;
 
     var options = {
         searchTerm: req.query.q,
@@ -111,6 +127,7 @@ exports.search = function (req, res) {
         });
 
         options.pluginCallback = function (err, data) {
+            proxifyCollection(data);
             res.write('data: ' + JSON.stringify(data) + '\n\n');
             res.flush();
         };
@@ -123,12 +140,15 @@ exports.search = function (req, res) {
         };
 
     } else {
-        callback = function (err, value) {
+        callback = function (err, values) {
             if (err) {
                 var msg = err.message || 'unknown error';
                 logger('library/search error: ' + msg);
             } else {
-                res.json(value);
+                values.forEach(function (value) {
+                    proxifyCollection(value);
+                });
+                res.json(values);
             }
         };
     }

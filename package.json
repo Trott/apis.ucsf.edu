@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "server.js",
-    "test": "node_modules/lab/bin/lab -t 88"
+    "test": "node_modules/lab/bin/lab -t 89"
   },
   "engines": {
     "node": "0.10.x"
