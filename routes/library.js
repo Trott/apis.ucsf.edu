@@ -9,8 +9,6 @@ var amalgamatic = require('amalgamatic'),
     drupal6 = require('amalgamatic-drupal6'),
     dbs = require('amalgamatic-ucsflibdbs');
 
-libguides.setOptions({searchUrl: 'http://guides.ucsf.edu/srch.php'});
-
 amalgamatic.add('sfx', sfx);
 amalgamatic.add('millennium', millennium);
 amalgamatic.add('libguides', libguides);
