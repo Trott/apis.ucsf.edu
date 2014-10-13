@@ -9,7 +9,7 @@
   "dependencies": {
     "amalgamatic": "^6.0.1",
     "amalgamatic-drupal6": "^4.0.0",
-    "amalgamatic-libguides": "^4.0.4",
+    "amalgamatic-libguides": "^4.0.5",
     "amalgamatic-millennium": "^3.1.0",
     "amalgamatic-pubmed": "^3.2.0",
     "amalgamatic-sfx": "^5.0.0",
@@ -21,6 +21,7 @@
     "express": "^4.9.7",
     "moment": "^2.0.0",
     "morgan": "^1.2.0",
+    "phantomjs": "^1.9.10",
     "request": "^2.44.0",
     "tough-cookie": "^0.12.1",
     "xml2js": "^0.2.8"
