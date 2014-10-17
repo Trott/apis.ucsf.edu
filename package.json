@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/Trott/apis.ucsf.edu.git"
   },
-  "version": "1.7.1",
+  "version": "1.7.2",
   "dependencies": {
     "amalgamatic": "^6.0.1",
     "amalgamatic-drupal6": "^4.0.0",
