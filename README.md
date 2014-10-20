@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Trott/apis.ucsf.edu.svg?branch=master)](https://travis-ci.org/Trott/apis.ucsf.edu)
+
 apis.ucsf.edu
 =============
 
