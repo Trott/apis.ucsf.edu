@@ -14,7 +14,7 @@ var express = require('express'),
     nodeUserUid = 'node',
     sslKey = '/etc/pki/tls/private/apis_ucsf_edu.key',
     sslCert = '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer',
-    caCert = '/etc/pki/tls/certs/incommon.crt';
+    caCerts = ['/etc/pki/tls/certs/1.crt', '/etc/pki/tls/certs/2.crt', '/etc/pki/tls/certs/3.crt'];
 
 var setIds = function () {
     'use strict';
@@ -27,7 +27,7 @@ try {
     httpsOptions = {
         key: fs.readFileSync(sslKey),
         cert: fs.readFileSync(sslCert),
-        ca: fs.readFileSync(caCert),
+        ca: caCerts.map(function(certFile) { return fs.readFileSync(certFile);}),
     };
 } catch (e) {
     console.warn('Error setting HTTPS options: ' + e.message);
