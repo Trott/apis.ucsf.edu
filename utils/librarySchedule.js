@@ -75,6 +75,9 @@ exports.update = function (options) {
                         if (result.locations[i].name === 'Mission Bay Library') {
                             locations.missionBay = extractHours(result.locations[i].weeks);
                         }
+                        if (result.locations[i].name === 'Mission Bay Hub') {
+                            locations.missionBayHub = extractHours(result.locations[i].weeks);
+                        }
                     }
                 }
                 schedule.locations = locations;
