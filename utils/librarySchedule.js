@@ -39,7 +39,9 @@ exports.update = function (options) {
                     for (var j = 0, l = weeks.length; j < l; j++) {
                         if (weeks[j][day] && weeks[j][day].date === date) {
                             myDay = weeks[j][day];
-                            if (myDay.times && myDay.times.status === 'closed') {
+                            if (myDay.times && myDay.times.status === '24hours') {
+                                text = '24 hours';
+                            } else if (myDay.times && myDay.times.status === 'closed') {
                                 text = 'closed';
                             } else if (myDay.times && myDay.times.hours && myDay.times.hours[0] && myDay.times.hours[0].from && myDay.times.hours[0].to) {
                                 text = myDay.times.hours[0].from + ' - ' + myDay.times.hours[0].to;

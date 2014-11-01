@@ -305,15 +305,11 @@ describe('exports', function () {
     });
 
     it('should fetch hours for Mission Bay Hub', function (done) {
-      nock('http://api.libcal.com:80')
-        .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
-        .replyWithFile(200, __dirname + '/../fixtures/hours.json');
       var resMock = {
         json: function (value) {
-          console.dir(value.locations);
           expect(value.locations.missionBayHub.length).to.equal(7);
+          expect(value.locations.missionBayHub[0].text).to.equal('24 hours');
           expect(value.error).to.be.undefined;
-          nock.cleanAll();
           done();
         }
       };
