@@ -268,6 +268,40 @@ describe('exports', function () {
 
       library.guides(null, {json: function () {}});
     });
+
+    it('should log an error if it receives a non-200 status code', function (done) {
+      var messageLogged = false;
+      var dataChecked = false;
+
+      nock('http://lgapi.libapps.com:80')
+        .get('/1.0/guides/100978,100985,100999,100992,100980,100974,100998,100991,100979,100984,100994,13690,100988,101010,100986,101021,100983,100966,100975,100967,101006,100971,101002,100996?site_id=407')
+        .reply(404, 'Not found');
+      
+      var guidesMock = {};
+      var mockLogger = function (logMsg) {
+        expect(logMsg).to.equal('updateGuidesAsync error: code 404');
+        messageLogged = true;
+        eventEmitter.emit('arewedoneyet');
+      };
+      var revert = library.__set__({guides: guidesMock, logger: mockLogger});
+
+      var mockRes = {
+        json: function (data) {
+          expect(data).to.deep.equal({});
+          dataChecked = true;
+          eventEmitter.emit('arewedoneyet');
+        }
+      };
+
+      eventEmitter.on('arewedoneyet', function () {
+        if (messageLogged && dataChecked) {
+          revert();
+          done();
+        }
+      });
+
+      library.guides(null, mockRes);
+    });
   });
 
   describe('hours()', function () {
