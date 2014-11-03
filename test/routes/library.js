@@ -30,6 +30,7 @@ var beforeEach = lab.beforeEach;
 describe('exports', function () {
   beforeEach(function (done) {
     eventEmitter.removeAllListeners();
+    nock.disableNetConnect();
     done();
   });
 
@@ -321,6 +322,36 @@ describe('exports', function () {
       var guidesMock = {};
       var mockLogger = function (logMsg) {
         expect(logMsg).to.equal('error parsing LibGuides JSON: Unexpected token I');
+        messageLogged = true;
+        eventEmitter.emit('arewedoneyet');
+      };
+      var revert = library.__set__({guides: guidesMock, logger: mockLogger});
+
+      var mockRes = {
+        json: function (data) {
+          expect(data).to.deep.equal({});
+          dataChecked = true;
+          eventEmitter.emit('arewedoneyet');
+        }
+      };
+
+      eventEmitter.on('arewedoneyet', function () {
+        if (messageLogged && dataChecked) {
+          revert();
+          done();
+        }
+      });
+
+      library.guides(null, mockRes);
+    });
+
+    it('should log an error if there is an HTTPS error', function (done) {
+      var messageLogged = false;
+      var dataChecked = false;
+
+      var guidesMock = {};
+      var mockLogger = function (logMsg) {
+        expect(logMsg).to.equal('updateGuidesAsync error: Nock: Not allow net connect for "lgapi.libapps.com:80"');
         messageLogged = true;
         eventEmitter.emit('arewedoneyet');
       };
