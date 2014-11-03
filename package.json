@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/Trott/apis.ucsf.edu.git"
   },
-  "version": "1.7.7",
+  "version": "1.8.1",
   "dependencies": {
     "amalgamatic": "^6.0.1",
     "amalgamatic-drupal6": "^4.0.0",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "server.js",
-    "test": "node_modules/lab/bin/lab -t 89"
+    "test": "node_modules/lab/bin/lab -t 90"
   },
   "engines": {
     "node": ">=0.10.33"

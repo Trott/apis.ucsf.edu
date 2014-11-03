@@ -303,6 +303,19 @@ describe('exports', function () {
 
       library.hours(null, {json: function () {}});
     });
+
+    it('should fetch hours for Mission Bay Hub', function (done) {
+      var resMock = {
+        json: function (value) {
+          expect(value.locations.missionBayHub.length).to.equal(7);
+          expect(value.locations.missionBayHub[0].text).to.equal('24 hours');
+          expect(value.error).to.be.undefined;
+          done();
+        }
+      };
+
+      library.hours(null, resMock);
+    });
   });
 });
 
