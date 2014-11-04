@@ -1,12 +1,21 @@
+'use strict';
+
+var util = require('util');
+var EventEmitter = require('events').EventEmitter;
 var http = require('http');
 var moment = require('moment');
 
 var schedule = {};
 
-exports.update = function (options) {
-    'use strict';
+function LibrarySchedule() {
+    EventEmitter.call(this);
+}
+util.inherits(LibrarySchedule, EventEmitter);
 
-    var logger = options.logger;
+LibrarySchedule.prototype.update = function (options) {
+    var self = this;
+    options = options || {};
+    var logger = options.logger || util.log;
 
     var httpOptions = {
         host: 'api.libcal.com',
@@ -24,7 +33,6 @@ exports.update = function (options) {
             data += chunk;
         });
         resp.on('end', function () {
-
             function extractHours(weeks) {
                 var now = moment(),
                     rv = [],
@@ -84,6 +92,7 @@ exports.update = function (options) {
                 }
                 schedule.locations = locations;
                 schedule.lastUpdated = Date.now();
+                self.emit('update');
             }
         });
     }).on('error', function (e) {
@@ -91,6 +100,8 @@ exports.update = function (options) {
     });
 };
 
-exports.get = function () {
+LibrarySchedule.prototype.get = function () {
     return {locations: schedule.locations, lastUpdated: schedule.lastUpdated};
 };
+
+module.exports = exports = new LibrarySchedule();

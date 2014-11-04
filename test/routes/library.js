@@ -6,7 +6,6 @@ var events = require('events');
 var eventEmitter = new events.EventEmitter();
 
 var nock = require('nock');
-nock.disableNetConnect();
 
 nock('http://api.libcal.com:80')
   .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
@@ -18,10 +17,11 @@ nock('http://lgapi.libapps.com:80')
 
 var library = rewire('../../routes/library.js');
 
+var Code = require('code'); 
 var Lab = require('lab');
 var lab = exports.lab = Lab.script();
 
-var expect = Lab.expect;
+var expect = Code.expect;
 var describe = lab.experiment;
 var it = lab.test;
 

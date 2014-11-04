@@ -27,19 +27,20 @@
   },
   "scripts": {
     "start": "server.js",
-    "test": "node_modules/lab/bin/lab -t 93"
+    "test": "node_modules/lab/bin/lab -t 95"
   },
   "engines": {
     "node": ">=0.10.33"
   },
   "devDependencies": {
+    "code": "^1.2.1",
     "grunt": "~0.4.1",
     "grunt-contrib-compress": "~0.5.2",
     "grunt-contrib-cssmin": "~0.9.0",
     "grunt-contrib-jshint": "~0.1.1",
     "grunt-contrib-uglify": "~0.1.1",
     "jshint": "^2.5.5",
-    "lab": "^4.4.4",
+    "lab": "^5.0.1",
     "nock": "^0.47.0",
     "precommit-hook": "^1.0.7",
     "rewire": "^2.1.2"
