@@ -16,6 +16,7 @@ LibrarySchedule.prototype.update = function (options) {
     var self = this;
     options = options || {};
     var logger = options.logger || util.log;
+    var nowDate = options.date || '';
 
     var httpOptions = {
         host: 'api.libcal.com',
@@ -34,7 +35,7 @@ LibrarySchedule.prototype.update = function (options) {
         });
         resp.on('end', function () {
             function extractHours(weeks) {
-                var now = moment(),
+                var now = moment(nowDate),
                     rv = [],
                     day,
                     myDay,
@@ -43,17 +44,17 @@ LibrarySchedule.prototype.update = function (options) {
 
                 var retrieveTextCallback = function (value) {
                     myDay = value[day];
-                    if (myDay.date === date) {
-                        if (myDay.times && myDay.times.status === '24hours') {
+                    if (myDay && myDay.date === date && myDay.times) {
+                        if (myDay.times.status === '24hours') {
                             text = '24 hours';
-                        } else if (myDay.times && myDay.times.status === 'closed') {
+                        } else if (myDay.times.status === 'closed') {
                             text = 'closed';
-                        } else if (myDay.times && myDay.times.hours && myDay.times.hours[0] && myDay.times.hours[0].from && myDay.times.hours[0].to) {
+                        } else if (myDay.times.hours && myDay.times.hours[0] && myDay.times.hours[0].from && myDay.times.hours[0].to) {
                             text = myDay.times.hours[0].from + ' - ' + myDay.times.hours[0].to;
                         }
                     }
                 };
-                
+
                 for (var i = 0; i < 7; i++) {
                     day = now.format('dddd');
                     date = now.format('YYYY-MM-DD');

@@ -67,4 +67,24 @@ describe('exports', function () {
       librarySchedule.update({logger: mockLogger});
     });
   });
+
+  describe('get()', function () {
+    it('should fetch hours for Mission Bay Hub', function (done) {
+      nock('http://api.libcal.com:80')
+        .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
+        .replyWithFile(200, __dirname + '/../fixtures/hours.json');
+
+      librarySchedule.on('update', function () {
+        var schedule = librarySchedule.get();
+        expect(schedule.locations.missionBayHub.length).to.equal(7);
+        schedule.locations.missionBayHub.forEach(function (value) {
+          expect(value.text).to.equal('24 hours');
+        });
+
+        done();
+      });
+
+      librarySchedule.update({date: '2014-09-28'});
+    });
+  });
 });
