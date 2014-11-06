@@ -40,23 +40,25 @@ LibrarySchedule.prototype.update = function (options) {
                     myDay,
                     date,
                     text;
+
+                var retrieveTextCallback = function (value) {
+                    myDay = value[day];
+                    if (myDay.date === date) {
+                        if (myDay.times && myDay.times.status === '24hours') {
+                            text = '24 hours';
+                        } else if (myDay.times && myDay.times.status === 'closed') {
+                            text = 'closed';
+                        } else if (myDay.times && myDay.times.hours && myDay.times.hours[0] && myDay.times.hours[0].from && myDay.times.hours[0].to) {
+                            text = myDay.times.hours[0].from + ' - ' + myDay.times.hours[0].to;
+                        }
+                    }
+                };
+                
                 for (var i = 0; i < 7; i++) {
                     day = now.format('dddd');
                     date = now.format('YYYY-MM-DD');
                     text = '';
-                    for (var j = 0, l = weeks.length; j < l; j++) {
-                        if (weeks[j][day] && weeks[j][day].date === date) {
-                            myDay = weeks[j][day];
-                            if (myDay.times && myDay.times.status === '24hours') {
-                                text = '24 hours';
-                            } else if (myDay.times && myDay.times.status === 'closed') {
-                                text = 'closed';
-                            } else if (myDay.times && myDay.times.hours && myDay.times.hours[0] && myDay.times.hours[0].from && myDay.times.hours[0].to) {
-                                text = myDay.times.hours[0].from + ' - ' + myDay.times.hours[0].to;
-                            }
-                            break;
-                        }
-                    }
+                    weeks.forEach(retrieveTextCallback);
                     rv.push({
                         day: now.format('ddd'),
                         date: now.format('MMM DD'),
