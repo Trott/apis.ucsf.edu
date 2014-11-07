@@ -66,6 +66,25 @@ describe('exports', function () {
 
       librarySchedule.update({logger: mockLogger});
     });
+
+    it('should ignore malformed entries', function (done) {
+      nock('http://api.libcal.com:80')
+        .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
+        .replyWithFile(200, __dirname + '/../fixtures/borkedHours.json');
+
+      librarySchedule.once('update', function () {
+        var schedule = librarySchedule.get();
+        expect(schedule.locations.parnassus[0]).to.deep.equal({
+              'day': 'Sun',
+              'date': 'Sep 21',
+              'text': '12pm - 10pm'
+            }
+        );
+        done();
+      });
+
+      librarySchedule.update({date: '2014-09-21'});
+    });
   });
 
   describe('get()', function () {

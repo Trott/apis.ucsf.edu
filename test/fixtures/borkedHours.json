@@ -1,0 +1,5 @@
+{"locations":[
+    {
+        "lid":195,"name":"Parnassus Library","category":"library","desc":"Parnassus!","lat":"","long":"","color":"#095AA6","weeks":[{"Sunday":{"times":{"status":"open","hours":[{"from":"12pm","to":"10pm"}]},"date":"2014-09-21"},"Monday":{"notTimes":{"status":"open","hours":[{"from":"7:45am","to":"10pm"}]},"date":"2014-09-22"},"Tuesday":{"times":{"status":"open","notHours":[{"from":"7:45am","to":"10pm"}]},"date":"2014-09-23"},"Wednesday":{"times":{"status":"open","hours":[]},"date":"2014-09-24"},"Thursday":{"times":{"status":"open","hours":[{"notFrom":"7:45am","to":"10pm"}]},"date":"2014-09-25"},"Friday":{"times":{"status":"open","hours":[{"from":"7:45am","notTo":"8pm"}]},"date":"2014-09-26"}}]
+    }
+]}
