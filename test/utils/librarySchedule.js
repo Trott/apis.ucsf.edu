@@ -67,7 +67,7 @@ describe('exports', function () {
       librarySchedule.update({logger: mockLogger});
     });
 
-    it('should ignore malformed entries', function (done) {
+    it('should ignore entries with missing properties', function (done) {
       nock('http://api.libcal.com:80')
         .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
         .replyWithFile(200, __dirname + '/../fixtures/borkedHours.json');
@@ -80,6 +80,7 @@ describe('exports', function () {
               'text': '12pm - 10pm'
             }
         );
+        expect(schedule.locations.parnassus[1].text).to.equal('');
         done();
       });
 
