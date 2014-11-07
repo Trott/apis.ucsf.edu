@@ -107,6 +107,15 @@ describe('exports', function () {
 
       librarySchedule.update({logger: mockLogger});
     });
+
+    it('should log an error if there is an HTTP error', function (done) {
+      var mockLogger = function (logMsg) {
+        expect(logMsg).to.equal('updateScheduleAsync error: Nock: Not allow net connect for "api.libcal.com:80"');
+        done();
+      };
+
+      librarySchedule.update({logger: mockLogger});
+    });
   });
 
   describe('get()', function () {
