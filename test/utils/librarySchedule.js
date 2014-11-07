@@ -86,6 +86,27 @@ describe('exports', function () {
 
       librarySchedule.update({date: '2014-09-21'});
     });
+
+    it('should reject invalid JSON', function (done) {
+      var logged = false;
+
+      nock('http://api.libcal.com:80')
+        .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
+        .reply(200, 'invalid JSON!');
+
+      var mockLogger = function (logMsg) {
+        expect(logMsg).to.equal('error parsing LibCal JSON: Unexpected token i');
+        logged = true;
+      };
+
+      librarySchedule.once('update', function () {
+        expect(logged).to.equal(true);
+        expect(librarySchedule.get().locations).to.deep.equal({});
+        done();
+      });
+
+      librarySchedule.update({logger: mockLogger});
+    });
   });
 
   describe('get()', function () {
