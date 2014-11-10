@@ -42,7 +42,7 @@ var stops = function(callback, options) {
                 if (dataObject.hasOwnProperty(options.property) && dataObject[options.property] instanceof Array) {
                     if (options.useParentStation) {
                         for (var i=0; i<dataObject[options.property].length; i++) {
-                            if (dataObject[options.property][i].hasOwnProperty('parentStation') && dataObject[options.property][i].parentStation === null) {
+                            if (dataObject[options.property][i].parentStation === null) {
                                 filtered.push(dataObject[options.property][i]);
                             }
                         }
