@@ -9,7 +9,6 @@ var http = require('http'),
 var stops = function(callback, options) {
     'use strict';
 
-    options = options || {};
     options.property = options.property || 'stops';
     options.useParentStation = options.hasOwnProperty('useParentStation') ? options.useParentStation : true;
 
@@ -312,7 +311,7 @@ exports.routes = function(req, res) {
                     } else {
                         callback({error: 'error looking up stops'});
                     }
-                });
+                }, {});
             }
         ], function () {
             res.json({stop: myStop, routes: foundRoutes});
