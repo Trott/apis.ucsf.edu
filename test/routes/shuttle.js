@@ -1,13 +1,14 @@
 /*jshint expr: true*/
 
-// var rewire = require('rewire');
+var rewire = require('rewire');
 
-// var events = require('events');
-// var eventEmitter = new events.EventEmitter();
+var events = require('events');
+var eventEmitter = new events.EventEmitter();
 
 var nock = require('nock');
 
-var shuttle = require('../../routes/shuttle.js');
+var shuttle = rewire('../../routes/shuttle.js');
+var revert;
 
 var Code = require('code'); 
 var Lab = require('lab');
@@ -21,8 +22,11 @@ var beforeEach = lab.beforeEach;
 
 describe('exports', function () {
   beforeEach(function (done) {
-  //   eventEmitter.removeAllListeners();
+    eventEmitter.removeAllListeners();
     nock.disableNetConnect();
+    if (typeof revert === 'function') {
+      revert();
+    }
     done();
   });
 
@@ -67,11 +71,33 @@ describe('exports', function () {
     });
 
     it('should report an error if HTTP response code is not 200', function (done) {
+      var errorLogged = false;
+      var errorSent = false;
+
+      eventEmitter.once('errorLogged', function () {
+        errorLogged = true;
+        if (errorSent) {
+          done();
+        }
+      });
+
+      eventEmitter.once('errorSent', function () {
+        errorSent = true;
+        if (errorLogged) {
+          done();
+        }
+      });
+
+      revert = shuttle.__set__('logger', function (value) {
+        expect(value).to.equal('shuttle/stops error: code 404');
+        eventEmitter.emit('errorLogged');
+      });
+
       var mockReq = {query: {}};
       var mockRes = {json: function (data) {
         var expectedResults = {error: 'shuttle/stops error: code 404'};
         expect(data).to.deep.equal(expectedResults);
-        done();
+        eventEmitter.emit('errorSent');
       }};
 
       nock('http://localhost:8080')

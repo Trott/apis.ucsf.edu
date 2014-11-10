@@ -2,7 +2,8 @@ var http = require('http'),
     async = require('async'),
     xml2js = require('xml2js'),
     querystring = require('querystring'),
-    predictions = {};
+    predictions = {},
+    logger = console.log;
 
 // Common function to get all stops and call callback() with results
 var stops = function(callback, options) {
@@ -28,7 +29,7 @@ var stops = function(callback, options) {
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'shuttle/stops error: code ' + resp.statusCode;
-            console.log(errorMsg);
+            logger(errorMsg);
             callback({error: errorMsg});
         }
         resp.on('data', function(chunk){
@@ -58,7 +59,7 @@ var stops = function(callback, options) {
             }
         });
     }).on('error', function(e){
-        console.log('shuttle/stops error: ' + e.message);
+        logger('shuttle/stops error: ' + e.message);
         callback({error: e.message});
     });
 };
@@ -165,7 +166,7 @@ var updatePredictionsAsync = function (callback) {
         });
     })
     .on('error', function (e) {
-        console.log('NextBus XML retrieval error:');
+        logger('NextBus XML retrieval error:');
         console.dir(e);
         //Update time stamp but otherwise empty cache so we don't have stale data.
         predictions = {
@@ -243,7 +244,7 @@ exports.routes = function(req, res) {
             var data = '';
             if (resp.statusCode !== 200) {
                 var errorMsg = 'shuttle/routes error: code ' + resp.statusCode;
-                console.log(errorMsg);
+                logger(errorMsg);
                 if (callback) {
                     callback({error: errorMsg});
                 } else {
@@ -272,7 +273,7 @@ exports.routes = function(req, res) {
                 }
             });
         }).on('error', function(e){
-            console.log('shuttle/routes error: ' + e.message);
+            logger('shuttle/routes error: ' + e.message);
             if (callback) {
                 callback({error:e.message});
             } else {
@@ -344,7 +345,7 @@ exports.times = function(req, res) {
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'shuttle/times error: code ' + resp.statusCode;
-            console.log(errorMsg);
+            logger(errorMsg);
             res.json({error: errorMsg});
         }
         resp.on('data', function(chunk){
@@ -364,7 +365,7 @@ exports.times = function(req, res) {
             }
         });
     }).on('error', function(e){
-        console.log('shuttle/times error: ' + e.message);
+        logger('shuttle/times error: ' + e.message);
         res.json({error: e.message});
     });
 };
@@ -462,7 +463,7 @@ exports.plan = function(req, res) {
         var data = '';
         if (resp.statusCode !== 200) {
             var errorMsg = 'shuttle/plan error: code ' + resp.statusCode;
-            console.log(errorMsg);
+            logger(errorMsg);
             callback({error: errorMsg});
         }
         resp.on('data', function(chunk){
@@ -483,7 +484,7 @@ exports.plan = function(req, res) {
     http.get(otpOptions,
         processResults
     ).on('error', function(e){
-        console.log('shuttle/plan error: ' + e.message);
+        logger('shuttle/plan error: ' + e.message);
         callback({error: e.message});
     });
 };
