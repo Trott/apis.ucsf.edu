@@ -66,7 +66,7 @@ describe('exports', function () {
       shuttle.stops(mockReq, mockRes);  
     });
 
-    it('should return an error if HTTP response code is not 200', function (done) {
+    it('should report an error if HTTP response code is not 200', function (done) {
       var mockReq = {query: {}};
       var mockRes = {json: function (data) {
         var expectedResults = {error: 'shuttle/stops error: code 404'};
@@ -79,6 +79,21 @@ describe('exports', function () {
         .reply(404, '404\'ed!');
 
       shuttle.stops(mockReq, mockRes);      
+    });
+
+    it('should return an empty array for stops if the JSON does not contain the required property', function (done) {
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {stops: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+        .get('/otp-rest-servlet/ws/transit/stopsInRectangle?extended=true')
+        .replyWithFile(200, __dirname + '/../fixtures/borkedShuttleStops.json');
+
+      shuttle.stops(mockReq, mockRes);  
     });
   });
 });
