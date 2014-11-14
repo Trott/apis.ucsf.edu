@@ -16,7 +16,7 @@ LibrarySchedule.prototype.update = function (options) {
     var self = this;
     options = options || {};
     var logger = options.logger || util.log;
-    var nowDate = options.date || '';
+    var nowDate = options.date || undefined;
 
     var httpOptions = {
         host: 'api.libcal.com',

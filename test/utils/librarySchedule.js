@@ -46,8 +46,9 @@ describe('exports', function () {
 
       librarySchedule.once('update', function () {
         var schedule = librarySchedule.get();
-        expect(schedule.locations).to.be.ok;
-        expect(schedule.lastUpdated).to.be.ok;
+        expect(schedule.locations).to.be.an.object();
+        expect(schedule.locations.parnassus[0].day).not.to.contain('Invalid');
+        expect(schedule.lastUpdated).to.be.a.number();
         done();
       });
 
