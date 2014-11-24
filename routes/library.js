@@ -9,7 +9,10 @@ var amalgamatic = require('amalgamatic'),
     drupal6 = require('amalgamatic-drupal6'),
     dbs = require('amalgamatic-ucsflibdbs');
 
-libguides.setOptions({urlParameters: {content_type: ['books','google', 'rss', 'docs', 'database', 'links']}});
+libguides.setOptions({urlParameters: {
+    content_type: ['books','google', 'rss', 'docs', 'database', 'links'],
+    guide_type: ['subject','general', 'course', 'topic']
+}});
 
 amalgamatic.add('sfx', sfx);
 amalgamatic.add('millennium', millennium);
