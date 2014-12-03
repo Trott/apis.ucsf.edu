@@ -1,7 +1,6 @@
 service_id,date,exception_type
-regular,20141111,2
-regular,20141127,2
-regular,20141128,2
-untiloct19,20141111,2
-afteroct19,20141127,2
-afteroct19,20141128,2
+regular,20141224,2
+regular,20141225,2
+regular,20141231,2
+regular,20150101,2
+regular,20150119,2
