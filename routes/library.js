@@ -10,7 +10,6 @@ var amalgamatic = require('amalgamatic'),
     dbs = require('amalgamatic-ucsflibdbs');
 
 libguides.setOptions({urlParameters: {
-    content_type: ['books','google', 'rss', 'docs', 'database', 'links'],
     guide_type: ['subject','general', 'course', 'topic']
 }});
 
