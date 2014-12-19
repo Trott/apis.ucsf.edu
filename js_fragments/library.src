@@ -26,5 +26,8 @@ UCSF.Library = {
             };
         }
         UCSF.run('library/search', options, success, failure, UCSF.Library.search);
+    },
+    news: function (options, success, failure) {
+        UCSF.run('library/news', options, success, failure, UCSF.Library.news);
     }
 };
