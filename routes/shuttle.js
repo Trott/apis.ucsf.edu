@@ -179,9 +179,11 @@ exports.stops = function(req, res) {
     'use strict';
 
     res.json({
-        id: 'holiday',
         stops: [{}],
-        routeLongName: 'Holiday Schedule: Please refer to http://tiny.ucsf.edu/ShuttleAlerts'
+        route: {
+            id: 'holiday',
+            routeLongName: 'Holiday Schedule: Please refer to http://tiny.ucsf.edu/ShuttleAlerts'
+        }
     });
 };
 
