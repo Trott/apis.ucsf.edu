@@ -179,7 +179,6 @@ exports.stops = function(req, res) {
     'use strict';
 
     res.json({
-        stops: [{}],
         route: {
             id: 'holiday',
             routeLongName: 'Holiday Schedule: Please refer to http://tiny.ucsf.edu/ShuttleAlerts'
