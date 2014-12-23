@@ -44,6 +44,7 @@ describe('exports', function () {
       var mockReq = {query: {}};
       var mockRes = {json: function (data) {
         var expectedResults = {
+          id: 'holiday',
           stops: [{}],
           routeLongName: 'Holiday Schedule: Please refer to http://tiny.ucsf.edu/ShuttleAlerts'
         };
