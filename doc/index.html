@@ -8,6 +8,6 @@
 <p class="lead">JavaScript APIs hosted at APIs.ucsf.edu reside in an object in the global namespace called <code>UCSF</code>.</p>
 <p>The base object may be loaded in a web page like so:</p> <pre>&lt;script src="http://apis.ucsf.edu/jsapi">&lt;/script></pre>
 <p>In practice, however, you would almost never load the base object like that. Instead, you would request all the other code required for your APIs at the same time. For example, you could get the base object (<code>UCSF</code>) and the Person Search API code (<code>UCSF.Person</code>) like so:</p> <pre>&lt;script src="http://apis.ucsf.edu/jsapi?person">&lt;/script></pre>
-<p>Or if you wanted to get the Shuttle API code as well (<code>UCSF.Shuttle</code>), you could get it all with one HTTP request:</p> <pre>&lt;script src="http://apis.ucsf.edu/jsapi?person&amp;amp;shuttle">&lt;/script></pre>
+<p>Or if you wanted to get the Library API code as well (<code>UCSF.Library</code>), you could get it all with one HTTP request:</p> <pre>&lt;script src="http://apis.ucsf.edu/jsapi?person&amp;amp;library">&lt;/script></pre>
 <p>There is some basic scaffolding inside the <code>UCSF</code> object for CORS/XHR support.</p>
 {% include end.html %}
