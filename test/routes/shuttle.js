@@ -43,13 +43,7 @@ describe('exports', function () {
     it('should return a static result', function (done) {
       var mockReq = {query: {}};
       var mockRes = {json: function (data) {
-        var expectedResults = {
-          route: {
-            id: 'holiday',
-            routeLongName: 'Holiday Schedule: Please refer to http://tiny.ucsf.edu/ShuttleAlerts'
-          }
-        };
-        expect(data).to.deep.equal(expectedResults);
+        expect(data.route.routeLongName).to.contain('http://tiny.ucsf.edu/shuttles');
         done();
       }};
 
