@@ -1,5 +1,4 @@
-var https = require('https'),
-    querystring = require('querystring');
+var https = require('https');
 
 exports.search = function (req, res) {
     'use strict';
@@ -11,7 +10,7 @@ exports.search = function (req, res) {
     var options = {
         host: 'directory.ucsf.edu',
         port: 443,
-        path: '/?json&' + querystring.stringify({q: req.query.q}),
+        path: '/people/search/name/' + encodeURIComponent(req.query.q) + '/json'
     };
 
     https.get(options, function (resp) {
