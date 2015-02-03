@@ -40,7 +40,7 @@ describe('exports', function () {
 
   describe('update()', function () {
     it('should return the schedule in the expected format', function (done) {
-      nock('http://api.libcal.com:80')
+      nock('https://api3.libcal.com:443')
         .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
         .replyWithFile(200, __dirname + '/../fixtures/hours.json');
 
@@ -56,7 +56,7 @@ describe('exports', function () {
     });
 
     it('should log an error message if HTTP status code is not 200', function (done) {
-      nock('http://api.libcal.com:80')
+      nock('https://api3.libcal.com:443')
         .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
         .reply(404, '404ed! Not found!');
 
@@ -69,7 +69,7 @@ describe('exports', function () {
     });
 
     it('should ignore entries with missing properties', function (done) {
-      nock('http://api.libcal.com:80')
+      nock('https://api3.libcal.com:443')
         .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
         .replyWithFile(200, __dirname + '/../fixtures/borkedHours.json');
 
@@ -91,7 +91,7 @@ describe('exports', function () {
     it('should reject invalid JSON', function (done) {
       var logged = false;
 
-      nock('http://api.libcal.com:80')
+      nock('https://api3.libcal.com:443')
         .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
         .reply(200, 'invalid JSON!');
 
@@ -111,7 +111,7 @@ describe('exports', function () {
 
     it('should log an error if there is an HTTP error', function (done) {
       var mockLogger = function (logMsg) {
-        expect(logMsg).to.equal('updateScheduleAsync error: Nock: Not allow net connect for "api.libcal.com:80"');
+        expect(logMsg).to.equal('updateScheduleAsync error: Nock: Not allow net connect for "api3.libcal.com:443"');
         done();
       };
 
@@ -121,7 +121,7 @@ describe('exports', function () {
 
   describe('get()', function () {
     it('should fetch hours for Mission Bay Hub', function (done) {
-      nock('http://api.libcal.com:80')
+      nock('https://api3.libcal.com:443')
         .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
         .replyWithFile(200, __dirname + '/../fixtures/hours.json');
 

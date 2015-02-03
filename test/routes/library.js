@@ -7,7 +7,7 @@ var eventEmitter = new events.EventEmitter();
 
 var nock = require('nock');
 
-nock('http://api.libcal.com:80')
+nock('https://api3.libcal.com:443')
   .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
   .replyWithFile(200, __dirname + '/../fixtures/hours.json');
 

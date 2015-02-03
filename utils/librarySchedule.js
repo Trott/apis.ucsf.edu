@@ -2,7 +2,7 @@
 
 var util = require('util');
 var EventEmitter = require('events').EventEmitter;
-var http = require('http');
+var https = require('https');
 var moment = require('moment');
 
 var schedule = {};
@@ -18,14 +18,14 @@ LibrarySchedule.prototype.update = function (options) {
     var logger = options.logger || util.log;
     var nowDate = options.date || undefined;
 
-    var httpOptions = {
-        host: 'api.libcal.com',
+    var httpsOptions = {
+        host: 'api3.libcal.com',
         path: '/api_hours_grid.php?iid=138&format=json&weeks=2'
     };
 
     var data = '';
 
-    http.get(httpOptions, function (resp) {
+    https.get(httpsOptions, function (resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'updateScheduleAsync error: code ' + resp.statusCode;
             logger(errorMsg);
