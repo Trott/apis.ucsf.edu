@@ -30,6 +30,9 @@ exports.search = function (req, res) {
                 cookedData = {error: 'Invalid JSON: ' + rawData.substring(0,256)};
             }
 
+            // cookedData could still be null
+            cookedData = cookedData || {error: 'Unexpected JSON: ' + rawData.substring(0,256)};
+
             var convertToString = function (input) {
                 if (input instanceof Array) {
                     return input[0];
