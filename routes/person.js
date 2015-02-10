@@ -22,7 +22,12 @@ exports.search = function (req, res) {
 
         resp.on('end', function () {
             // Change a few arrays to objects. There can only be one display name or primary department.
-            var cookedData = JSON.parse(rawData);
+            var cookedData;
+            try {
+                cookedData = JSON.parse(rawData);
+            } catch (e) {
+                cookedData = {error: 'Invalid JSON: ' + rawData.substring(0,256)};
+            }
 
             var convertToString = function (input) {
                 if (input instanceof Array) {
