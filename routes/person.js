@@ -24,6 +24,7 @@ exports.search = function (req, res) {
             // Change a few arrays to objects. There can only be one display name or primary department.
             var cookedData;
             try {
+                // This is bad. JSON.parse blocks.
                 cookedData = JSON.parse(rawData);
             } catch (e) {
                 cookedData = {error: 'Invalid JSON: ' + rawData.substring(0,256)};
