@@ -156,7 +156,8 @@ exports.search = function (req, res) {
         options.pluginCallback = function (err, data) {
             if (err) {
                 var msg = err.message || 'unknown error';
-                return logger('library/search error: ' + msg);
+                logger('library/search error: ' + msg);
+                return;
             }
             proxifyCollection(data);
             res.write('data: ' + JSON.stringify(data) + '\n\n');
