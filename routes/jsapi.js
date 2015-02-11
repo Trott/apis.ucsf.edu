@@ -30,7 +30,7 @@ exports.load = function(req, res) {
                 res.status(200).send(rv);
             } else {
                 console.log(err);
-                res.send(404);
+                res.sendStatus(404);
             }
         }
     );

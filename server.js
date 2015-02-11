@@ -77,7 +77,7 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Max-Age', 60 * 60 * 24 * 365);
 
     if (req.method === 'OPTIONS') {
-        res.send(200);
+        res.sendStatus(200);
     } else  {
         next();
     }
