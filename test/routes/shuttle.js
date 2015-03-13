@@ -122,21 +122,6 @@ describe('exports', function () {
       shuttle.stops(mockReq, mockRes);  
     });
 
-    it('should return an empty array for stops and empty object for route if required property is an empty array', function (done) {
-      var mockReq = {query: {routeId: 'blue'}};
-      var mockRes = {json: function (data) {
-        var expectedResults = {stops: [], route: {}};
-        expect(data).to.deep.equal(expectedResults);
-        done();
-      }};
-
-      nock('http://localhost:8080')
-        .get('/otp-rest-servlet/ws/transit/routeData?agency=ucsf&references=true&extended=true&id=blue')
-        .replyWithFile(200, __dirname + '/../fixtures/borkedShuttleStopsBlue.json');
-
-      shuttle.stops(mockReq, mockRes); 
-    });
-
     it('should return an empty array for stops if required property is an empty array', function (done) {
       var mockReq = {query: {routeId: 'blue'}};
       var mockRes = {json: function (data) {
