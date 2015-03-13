@@ -181,7 +181,7 @@ exports.stops = function(req, res) {
     res.json({
         route: {
             id: 'holiday',
-            routeLongName: 'Shuttle App is retired. Please use http://tiny.ucsf.edu/shuttles'
+            routeLongName: 'Holiday Schedule: Please refer to http://tiny.ucsf.edu/ShuttleAlerts'
         }
     });
 };
