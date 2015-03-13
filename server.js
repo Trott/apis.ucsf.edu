@@ -106,7 +106,6 @@ app.get('/fitness/schedule', fitness.schedule);
 app.get('/library/hours', library.hours);
 app.get('/library/guides', library.guides);
 app.get('/library/search', library.search);
-app.get('/library/news', library.news);
 
 app.get('/', function (req, res) {
     'use strict';

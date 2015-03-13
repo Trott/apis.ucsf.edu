@@ -1,6 +1,5 @@
 var http = require('http');
 var schedule = require('../utils/librarySchedule.js');
-var news = require('../utils/libraryNews.js');
 
 var amalgamatic = require('amalgamatic'),
     sfx = require('amalgamatic-sfx'),
@@ -22,30 +21,6 @@ amalgamatic.add('drupal6', drupal6);
 amalgamatic.add('dbs', dbs);
 
 var logger = console.log;
-
-
-var NodeCache = require('node-cache');
-var cache = new NodeCache({stdTTL: 3600});
-
-var fetchNews = function () {
-    news.fetch(function (err, data) {
-        if (err) {
-            logger(err.message);
-            return;
-        }
-
-        cache.set('news', data);
-    });
-};
-
-cache.on('expired', function (key, value) {
-    if (key === 'news') {
-        cache.set('news', value);
-        fetchNews();
-    }
-});
-
-fetchNews();
 
 // One hour expressed in milliseconds
 var oneHour = 1000 * 60 * 60;
@@ -186,16 +161,4 @@ exports.search = function (req, res) {
     }
 
     amalgamatic.search(options, callback);
-};
-
-exports.news = function (req, res) {
-    cache.get('news', function (err, data) {
-        if (err) {
-            logger(err);
-            res.json({error: {message: err.message}});
-            return;
-        }
-
-        res.json(data);
-    });
 };
