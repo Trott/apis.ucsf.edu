@@ -178,10 +178,32 @@ var updatePredictionsAsync = function (callback) {
 exports.stops = function(req, res) {
     'use strict';
 
-    res.json({
-        stops: [{}],
-        routeLongName: 'Holiday Schedule: Please refer to http://tiny.ucsf.edu/ShuttleAlerts'
-    });
+    var options = {};
+    if (req.query.routeId) {
+        var routeIdOption = {id: req.query.routeId};
+        options = {
+            path: '/otp-rest-servlet/ws/transit/routeData?agency=ucsf&references=true&extended=true&' +
+                querystring.stringify(routeIdOption),
+            property: 'routeData',
+            useParentStation: false
+        };
+    }
+
+    stops(
+        function (results) {
+            // Bride Of Sad Hack #47: Remove Library and ACC from Bronze results,
+            // as those are drop-off only and won't show up in the interface.
+            // They are used by the trip planner, though, so we can't just remove them from the source data.
+            if (results.stops && results.stops instanceof Array &&
+                results.route && results.route.id && results.route.id.id === 'bronze') {
+                results.stops = results.stops.filter(function (el) {
+                    return ! (el.id && ['paracc','library'].indexOf(el.id.id)!==-1);
+                });
+            }
+            res.json(results);
+        },
+        options
+    );
 };
 
 exports.routes = function(req, res) {
