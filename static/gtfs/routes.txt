@@ -1,15 +1,15 @@
-route_id,route_short_name,route_long_name,route_type
-blue,Blue,Parnassus - SFGH - Mission Bay - Mt. Zion,3
-gold,Gold,Parnassus - Mt. Zion - Mission Bay - SFGH,3
-grey,Grey,Parnassus - Mission Bay,3
-tan,Tan,Parnassus - Laurel Heights - Mt. Zion,3
-black,Black,Parnassus - Mt. Zion - Laurel Heights,3
-purple,Purple,Parnassus (Library) - 3360 Geary - Mt. Zion - 3360 Geary,3
-pink,Pink,Parnassus E/R - Kezar,3
-va,VA,VAMC - Parnassus,3
-bronze,Bronze,Aldea - ACC - Library - 6th - Dental - LPPI,3
-yellow,Yellow,16th BART - MCB - 20th/Alabama - SFGH,3
-red,Red,Mission Bay - MCB - 16th St BART,3
-lime,Lime,Parnassus - 55 Laguna Parking - BDC - MCB,3
-green,Green,Mission Bay - China Basin - 654 Minnesota,3
-mtzionexpress,Mt. Zion Express,Mt. Zion Express (holidays only),3
+"route_id","route_short_name","route_long_name",route_type
+"black","Black","Parnassus - Mt. Zion - Laurel Heights",3
+"blue","Blue","Parnassus - SFGH - Mission Bay - Mt. Zion",3
+"bronze","Bronze","Aldea - ACC - Library - 6th - Dental - LPPI",3
+"gold","Gold","Parnassus - Mt. Zion - Mission Bay - SFGH",3
+"green","Green","Mission Bay - China Basin - 654 Minnesota",3
+"grey","Grey","Parnassus - Mission Bay",3
+"lime","Lime","Parnassus - 55 Laguna Parking - BDC - MCB",3
+"mtzionexpress","Mt. Zion Express","Mt. Zion Express (holidays only)",3
+"pink","Pink","Parnassus E/R - Kezar",3
+"purple","Purple","Parnassus (Library) - 3360 Geary - Mt. Zion - 3360 Geary",3
+"red","Red","Mission Bay - MCB - 16th St BART",3
+"tan","Tan","Parnassus - Laurel Heights - Mt. Zion",3
+"va","VA","VAMC - Parnassus",3
+"yellow","Yellow","16th BART - MCB - 20th/Alabama - SFGH",3
