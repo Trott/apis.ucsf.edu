@@ -37,6 +37,9 @@ var updateGuidesAsync = function () {
 
     var data = '';
 
+    // last update set regardless of success or fail so we don't hammer the endpoint
+    guides.lastUpdated = Date.now();
+
     http.get(options, function (resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'updateGuidesAsync error: code ' + resp.statusCode;
@@ -60,7 +63,6 @@ var updateGuidesAsync = function () {
                     result = {};
                     logger('error parsing LibGuides JSON: ' + e.message);
                 }
-
                 guides = result;
                 guides.lastUpdated = Date.now();
             }
@@ -76,7 +78,7 @@ exports.hours = function (req, res) {
 
     var mySchedule = schedule.get();
 
-    if (! mySchedule.lastUpdated || (Date.now() - mySchedule.lastUpdated > oneHour)) {
+    if (mySchedule.lastUpdated && (Date.now() - mySchedule.lastUpdated > oneHour)) {
         schedule.update({logger: logger});
     }
 
@@ -87,7 +89,7 @@ updateGuidesAsync();
 exports.guides = function (req, res) {
     'use strict';
     
-    if (! guides.guides || (Date.now() - guides.lastUpdated > oneHour)) {
+    if (guides.lastUpdated && (Date.now() - guides.lastUpdated > oneHour)) {
         updateGuidesAsync();
     }
 

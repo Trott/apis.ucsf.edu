@@ -28,6 +28,8 @@ var it = lab.test;
 var beforeEach = lab.beforeEach;
 
 describe('exports', function () {
+  var moreThanAnHourAgo = Date.now() - (1000 * 60 * 60) - 1;
+
   beforeEach(function (done) {
     eventEmitter.removeAllListeners();
     nock.disableNetConnect();
@@ -243,6 +245,7 @@ describe('exports', function () {
   });
 
   describe('guides()', function () {
+
     it('should return a valid object', function (done) {
       var resMock = {
         json: function (value) {
@@ -260,12 +263,14 @@ describe('exports', function () {
       library.guides(null, resMock);
     });
 
-    it('should fetch valid object if it does not already have one', function (done) {
+    it('should fetch valid object if it current object is expired', function (done) {
       var updateGuidesAsyncMock = function () {
         eventEmitter.emit('guidesCallback');
       };
 
-      var guidesMock = {};
+      var guidesMock = {
+        lastUpdated: moreThanAnHourAgo
+      };
 
       var revert = library.__set__({guides: guidesMock, updateGuidesAsync: updateGuidesAsyncMock});
 
@@ -285,7 +290,9 @@ describe('exports', function () {
         .get('/1.0/guides/100978,100985,100999,100992,100980,100974,100998,100991,100979,100984,100994,13690,100988,101010,100986,101021,100983,100966,100975,100967,101006,100971,101002,100996?site_id=407')
         .reply(404, 'Not found');
       
-      var guidesMock = {};
+      var guidesMock = {
+        lastUpdated: moreThanAnHourAgo
+      };
       var mockLogger = function (logMsg) {
         expect(logMsg).to.equal('updateGuidesAsync error: code 404');
         messageLogged = true;
@@ -295,7 +302,7 @@ describe('exports', function () {
 
       var mockRes = {
         json: function (data) {
-          expect(data).to.deep.equal({});
+          expect(data).to.deep.equal(guidesMock);
           dataChecked = true;
           eventEmitter.emit('arewedoneyet');
         }
@@ -319,7 +326,9 @@ describe('exports', function () {
         .get('/1.0/guides/100978,100985,100999,100992,100980,100974,100998,100991,100979,100984,100994,13690,100988,101010,100986,101021,100983,100966,100975,100967,101006,100971,101002,100996?site_id=407')
         .reply(200, 'Invalid JSON');
 
-      var guidesMock = {};
+      var guidesMock = {
+        lastUpdated: moreThanAnHourAgo
+      };
       var mockLogger = function (logMsg) {
         expect(logMsg).to.equal('error parsing LibGuides JSON: Unexpected token I');
         messageLogged = true;
@@ -329,7 +338,7 @@ describe('exports', function () {
 
       var mockRes = {
         json: function (data) {
-          expect(data).to.deep.equal({});
+          expect(data).to.deep.equal(guidesMock);
           dataChecked = true;
           eventEmitter.emit('arewedoneyet');
         }
@@ -349,7 +358,9 @@ describe('exports', function () {
       var messageLogged = false;
       var dataChecked = false;
 
-      var guidesMock = {};
+      var guidesMock = {
+        lastUpdated: moreThanAnHourAgo
+      };
       var mockLogger = function (logMsg) {
         expect(logMsg).to.equal('updateGuidesAsync error: Nock: Not allow net connect for "lgapi.libapps.com:80"');
         messageLogged = true;
@@ -359,7 +370,7 @@ describe('exports', function () {
 
       var mockRes = {
         json: function (data) {
-          expect(data).to.deep.equal({});
+          expect(data).to.deep.equal(guidesMock);
           dataChecked = true;
           eventEmitter.emit('arewedoneyet');
         }
@@ -396,10 +407,12 @@ describe('exports', function () {
       library.hours(null, resMock);
     });
 
-    it('should fetch valid object if it does not already have one', function (done) {
+    it('should fetch valid object if it has an expired object', function (done) {
       var revert = library.__set__('schedule', {
         get: function () {
-          return {};
+          return {
+            lastUpdated: moreThanAnHourAgo
+          };
         },
         update: function () {
           revert();

@@ -25,6 +25,9 @@ LibrarySchedule.prototype.update = function (options) {
 
     var data = '';
 
+    // set lastUpdated so we don't hammer the endpoint
+    schedule.lastUpdated = Date.now();
+
     https.get(httpsOptions, function (resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'updateScheduleAsync error: code ' + resp.statusCode;
