@@ -113,14 +113,14 @@ var updatePredictionsAsync = function (callback) {
         path: '/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf' +
             '&stops=grey%7Cmissb4we' +
             '&stops=grey%7Cparlppi' +
-            '&stops=grey%7hospital' +
+            '&stops=grey%7Chospital' +
             '&stops=blue%7Cmissb4we' +
-            '&stops=blue%7hospital' +
+            '&stops=blue%7Chospital' +
             '&stops=blue%7Cparlppi' +
             '&stops=blue%7Cmtzion' +
             '&stops=blue%7Csfgh' +
             '&stops=gold%7Cmissb4we' +
-            '&stops=gold%7hospital' +
+            '&stops=gold%7Chospital' +
             '&stops=gold%7Csfgh' +
             '&stops=gold%7Cparlppi' +
             '&stops=gold%7Cmtzion' +
