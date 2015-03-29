@@ -43,6 +43,7 @@ var stops = function(callback, options) {
                 } catch (e) {
                    logger('shuttle/stops error: Exception thrown while parsing JSON');
                    logger(e);
+                   //TODO: Set an error message for the API consumer inside of dataObject or rv?
                 }
 
                 if (! (dataObject instanceof Array)) {
