@@ -9,7 +9,6 @@ var http = require('http'),
 var stops = function(callback, options) {
     'use strict';
 
-    options.property = options.property || 'stops';
     options.useParentStation = options.hasOwnProperty('useParentStation') ? options.useParentStation : true;
 
     var otpOptions = {
