@@ -9,12 +9,11 @@ var http = require('http'),
 var stops = function(callback, options) {
     'use strict';
 
-    options.property = options.property || 'stops';
     options.useParentStation = options.hasOwnProperty('useParentStation') ? options.useParentStation : true;
 
     var otpOptions = {
         host: 'localhost',
-        path: '/otp-rest-servlet/ws/transit/stopsInRectangle?extended=true',
+        path: '/otp/routers/default/index/stops',
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
@@ -26,40 +25,109 @@ var stops = function(callback, options) {
     var data = '';
 
     http.get(otpOptions, function(resp) {
-        if (resp.statusCode !== 200) {
+        if (resp.statusCode !== 200 && resp.statusCode !== 404) {
             var errorMsg = 'shuttle/stops error: code ' + resp.statusCode;
             logger(errorMsg);
-            callback({error: errorMsg});
+            return callback({error: errorMsg});
         }
         resp.on('data', function(chunk){
             data += chunk;
         });
         resp.on('end', function() {
+            var rv = {stops: []};
             if (resp.statusCode === 200) {
-                var filtered = [],
-                    dataObject = JSON.parse(data),
-                    rv = {stops: []};
-                if (dataObject.hasOwnProperty(options.property) && dataObject[options.property] instanceof Array) {
-                    if (options.useParentStation) {
-                        for (var i=0; i<dataObject[options.property].length; i++) {
-                            if (dataObject[options.property][i].parentStation === null) {
-                                filtered.push(dataObject[options.property][i]);
-                            }
-                        }
-                        rv.stops = filtered;
-                    } else {
-                        if (dataObject[options.property][0]) {
-                            rv.route = dataObject[options.property][0].route || {};
-                            rv.stops = dataObject[options.property][0].stops || [];
+                var dataObject;
+
+                try {
+                    dataObject = JSON.parse(data);
+                } catch (e) {
+                   logger('shuttle/stops error: Exception thrown while parsing JSON');
+                   logger(e);
+                   //TODO: Set an error message for the API consumer inside of dataObject or rv?
+                }
+
+                if (! (dataObject instanceof Array)) {
+                    dataObject = [];
+                }
+
+                rv.stops = dataObject.map(function (value) {
+                    var rv = {};
+                    if (value.id) {
+                        rv.id = {id: value.id};
+                        rv.stopName = value.name;
+                        rv.stopLat = value.lat;
+                        rv.stopLon = value.lon;
+                        if (value.cluster) {
+                            rv.parentStation = 'ucsf:' + value.cluster;
                         }
                     }
-                }
-                callback(rv);
+                    return rv;
+                });
+
+                // Remove malformed entries with no required id property.
+                rv.stops = rv.stops.filter(function (value) {
+                    return value.id;
+                });
+                
+                if (options.useParentStation) {
+                    // Sad hack: Querying for clusters/parent stations not working with our data in OTP 0.14.0
+                    // So, postprocess here. Bummer. Hardcoding names. Yuck.
+                    var parentStations = {
+                        'ucsf:Parnassus': {
+                            id: {
+                                id: 'ucsf:Parnassus'
+                            },
+                            stopName: 'Parnassus Campus',
+                            stopLat: 37.763174,
+                            stopLon: -122.459176
+                        },
+                        'ucsf:MB': {
+                            id: {
+                                id: 'ucsf:MB'
+                            },
+                            stopName: 'Mission Bay Campus',
+                            stopLat: 37.76793,
+                            stopLon: -122.391009
+                        },
+                        'ucsf:100 Buchanan': {
+                            id: {
+                                id: 'ucsf:100 Buchanan'
+                            },
+                            stopName: 'Buchanan Dental Center',
+                            stopLat: 37.770791,
+                            stopLon: -122.426684
+                        },
+                        'ucsf:2300 Harrison': {
+                            id: {
+                                id: 'ucsf:2300 Harrison'
+                            },
+                            stopName: '20th & Alabama',
+                            stopLat: 37.759072,
+                            stopLon:-122.411562
+                        }
+                    };
+                    var processedParentStations = [];
+                    rv.stops = rv.stops.reduce(function (accumulator, value) {
+                        if (parentStations[value.parentStation]) {
+                            if (processedParentStations.indexOf(value.parentStation) === -1) {
+                                processedParentStations.push(value.parentStation);
+                                accumulator.push(parentStations[value.parentStation]);
+                            }
+                        } else {
+                            accumulator.push(value);
+                        }
+
+                        return accumulator;
+                    }, []);
+                 }
+            } else {
+                rv.route = {};
             }
+            return callback(rv);
         });
     }).on('error', function(e){
         logger('shuttle/stops error: ' + e.message);
-        callback({error: e.message});
+        return callback({error: e.message});
     });
 };
 
@@ -183,11 +251,8 @@ exports.stops = function(req, res) {
 
     var options = {};
     if (req.query.routeId) {
-        var routeIdOption = {id: req.query.routeId};
         options = {
-            path: '/otp-rest-servlet/ws/transit/routeData?agency=ucsf&references=true&extended=true&' +
-                querystring.stringify(routeIdOption),
-            property: 'routeData',
+            path: '/otp/routers/default/index/routes/' + encodeURIComponent(req.query.routeId) + '/stops?detail=true&refs=true',
             useParentStation: false
         };
     }
@@ -239,8 +304,8 @@ exports.routes = function(req, res) {
         };
 
         otpOptions.path = stopId ?
-        '/otp-rest-servlet/ws/transit/routesForStop?agency=ucsf&' + querystring.stringify({id:stopId}) :
-        '/otp-rest-servlet/ws/transit/routes?agency=ucsf&';
+        '/otp/routers/default/index/stops/' + encodeURIComponent(stopId) + '/routes' :
+        '/otp/routers/default/index/stops';
 
         http.get(otpOptions, function(resp) {
             var data = '';
@@ -329,20 +394,12 @@ exports.times = function(req, res) {
 
     var otpOptions = {
         host: 'localhost',
-        path: '/otp-rest-servlet/ws/transit/stopTimesForStop?agency=ucsf&extended=true&',
+        path: '/otp/routers/default/index/stops/' + encodeURIComponent(req.query.stopId) + '/stoptimes/' + encodeURIComponent(req.query.startTime) + '?details=true&refs=true',
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
 
     var data = '';
-
-    var pathOptions = {};
-    // routeId is optional. Other parameters are required.
-    pathOptions.id = req.query.stopId;
-    pathOptions.routeId = req.query.routeId;
-    pathOptions.startTime = req.query.startTime;
-    pathOptions.endTime = req.query.endTime || parseInt(pathOptions.startTime,10) + (24 * 60 * 60 * 1000);
-    otpOptions.path += querystring.stringify(pathOptions);
 
     http.get(otpOptions, function(resp) {
         if (resp.statusCode !== 200) {
@@ -393,7 +450,7 @@ exports.plan = function(req, res) {
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
                     if (firstLeg.to.stopId) {
-                        toId = firstLeg.to.stopId.agencyId + '_' + firstLeg.to.stopId.id;
+                        toId = firstLeg.to.stopId.agencyId + ':' + firstLeg.to.stopId.id;
                         if (firstLeg.mode==='WALK') {
                             allResults.splice(l,1);
                             continue;
@@ -435,7 +492,7 @@ exports.plan = function(req, res) {
 
     var otpOptions = {
         host: 'localhost',
-        path: '/otp-rest-servlet/ws/plan?minTransferTime=60&',
+        path: '/otp/routers/default/plan?minTransferTime=60&',
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
