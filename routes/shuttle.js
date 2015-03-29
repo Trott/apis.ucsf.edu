@@ -119,14 +119,6 @@ var stops = function(callback, options) {
 
                         return accumulator;
                     }, []);
-
-                //         for (var i=0; i<dataObject[options.property].length; i++) {
-                //             if (dataObject[options.property][i].parentStation === null) {
-                //                 filtered.push(dataObject[options.property][i]);
-                //             }
-                //         }
-                //         rv.stops = filtered;
-                //     } 
                  }
             } else {
                 rv.route = {};
