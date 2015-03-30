@@ -323,7 +323,9 @@ exports.routes = function(req, res) {
             });
             resp.on('end', function() {
                 if (resp.statusCode === 200) {
-                    var rv = JSON.parse(data);
+                    var rv = {
+                        routes: JSON.parse(data)
+                    };
                     if (rv.routes) {
                         // Yet another sad ugly hack: remove Mt. Zion Express because WTF it only runs like twice a year
                         rv.routes = rv.routes.filter(function (e) {

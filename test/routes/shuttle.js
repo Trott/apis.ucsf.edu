@@ -39,6 +39,22 @@ describe('exports', function () {
     done();
   });
 
+  describe('routes()', function () {
+    it('should return JSON for an object with a routes property', function (done) {
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        expect(data.routes.length).to.equal(13);
+        done();
+      }};
+      
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/routes')
+        .replyWithFile(200, __dirname + '/../fixtures/shuttleRoutes.json');
+
+      shuttle.routes(mockReq, mockRes);
+    });
+  });
+
   describe('stops()', function () {
     it('should return all stops if no options specified', function (done) {
       var mockReq = {query: {}};
