@@ -2,6 +2,7 @@ var http = require('http'),
     async = require('async'),
     xml2js = require('xml2js'),
     querystring = require('querystring'),
+    moment = require('moment'),
     predictions = {},
     logger = console.log;
 
@@ -419,9 +420,11 @@ exports.routes = function(req, res) {
 exports.times = function(req, res) {
     'use strict';
 
+    var dateString = moment(req.query.startTime).format('YYYYMMDD');
+
     var otpOptions = {
         host: 'localhost',
-        path: '/otp/routers/default/index/stops/' + encodeURIComponent(req.query.stopId) + '/stoptimes/' + encodeURIComponent(req.query.startTime) + '?details=true&refs=true',
+        path: '/otp/routers/default/index/stops/ucsf%3A' + encodeURIComponent(req.query.stopId) + '/stoptimes/' + encodeURIComponent(dateString) + '?details=true&refs=true',
         port: 8080,
         headers: {'Content-Type':'application/json'}
     };
