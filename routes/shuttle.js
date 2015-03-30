@@ -259,6 +259,17 @@ exports.stops = function(req, res) {
 
     stops(
         function (results) {
+            var routeId = req.query.routeId || '';
+            // Sad hack to keep info from old OTP API.
+            var routeShortName = routeId.substr(0,1).toUpperCase() + routeId.substr(1);
+            if (routeShortName === 'Va') {
+                routeShortName = 'VA';
+            }
+            // Add route info.
+            if (routeId && results.stops.length > 0) {
+                results.route = {id:{id: routeId}, routeShortName: routeShortName};
+            }
+
             // Bride Of Sad Hack #47: Remove Library and ACC from Bronze results,
             // as those are drop-off only and won't show up in the interface.
             // They are used by the trip planner, though, so we can't just remove them from the source data.
@@ -268,6 +279,7 @@ exports.stops = function(req, res) {
                     return ! (el.id && ['paracc','library'].indexOf(el.id.id)!==-1);
                 });
             }
+
             res.json(results);
         },
         options

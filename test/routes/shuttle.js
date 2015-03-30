@@ -112,13 +112,18 @@ describe('exports', function () {
     it('should return just the blue stops if a routeId is specified', function (done) {
       var mockReq = {query: {routeId: 'blue'}};
       var mockRes = {json: function (data) {
-        var expectedResults = {'stops':[
-          {'id':{id:'ucsf:parlppi'}, stopName:'401 Parnassus (LPPI)', stopLat:37.7638174033811, stopLon:-122.45648592710495, parentStation:'ucsf:Parnassus'},
-          {'id':{id:'ucsf:missb4we'}, stopName:'Mission Bay (west side of street)', stopLat:37.76793, stopLon:-122.391009, parentStation:'ucsf:MB'},
-          {'id':{id:'ucsf:sfgh'}, stopName:'SFGH', stopLat:37.7548539352877, stopLon:-122.40492649376392},
-          {'id':{id:'ucsf:mtzion'}, stopName:'Mt. Zion', stopLat:37.78524781704753, stopLon:-122.439474016428},
-          {'id':{id:'ucsf:hospital'}, stopName:'Mission Bay Hospital', stopLat:37.766373, stopLon:-122.391379}
-        ]};
+        var expectedResults = {
+            stops:[
+              {'id':{id:'ucsf:parlppi'}, stopName:'401 Parnassus (LPPI)', stopLat:37.7638174033811, stopLon:-122.45648592710495, parentStation:'ucsf:Parnassus'},
+              {'id':{id:'ucsf:missb4we'}, stopName:'Mission Bay (west side of street)', stopLat:37.76793, stopLon:-122.391009, parentStation:'ucsf:MB'},
+              {'id':{id:'ucsf:sfgh'}, stopName:'SFGH', stopLat:37.7548539352877, stopLon:-122.40492649376392},
+              {'id':{id:'ucsf:mtzion'}, stopName:'Mt. Zion', stopLat:37.78524781704753, stopLon:-122.439474016428},
+              {'id':{id:'ucsf:hospital'}, stopName:'Mission Bay Hospital', stopLat:37.766373, stopLon:-122.391379}
+            ],
+          route:{
+            id:{id:'blue'},routeShortName:'Blue'
+          }
+        };
         expect(data).to.deep.equal(expectedResults);
         done();
       }};
