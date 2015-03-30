@@ -334,7 +334,7 @@ exports.routes = function(req, res) {
                     var rv = {};
                     rv.routes = results.map(function (value) {
                         return {
-                            id: {id: value.id},
+                            id: {id: value.id.substr(5)},
                             routeShortName: value.shortName,
                             routeLongName: value.longName
                         };
