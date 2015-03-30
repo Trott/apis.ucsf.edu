@@ -53,12 +53,12 @@ var stops = function(callback, options) {
                 rv.stops = dataObject.map(function (value) {
                     var rv = {};
                     if (value.id) {
-                        rv.id = {id: value.id};
+                        rv.id = {id: value.id.substr(5)};
                         rv.stopName = value.name;
                         rv.stopLat = value.lat;
                         rv.stopLon = value.lon;
                         if (value.cluster) {
-                            rv.parentStation = 'ucsf:' + value.cluster;
+                            rv.parentStation = value.cluster;
                         }
                     }
                     return rv;
@@ -73,33 +73,33 @@ var stops = function(callback, options) {
                     // Sad hack: Querying for clusters/parent stations not working with our data in OTP 0.14.0
                     // So, postprocess here. Bummer. Hardcoding names. Yuck.
                     var parentStations = {
-                        'ucsf:Parnassus': {
+                        'Parnassus': {
                             id: {
-                                id: 'ucsf:Parnassus'
+                                id: 'Parnassus'
                             },
                             stopName: 'Parnassus Campus',
                             stopLat: 37.763174,
                             stopLon: -122.459176
                         },
-                        'ucsf:MB': {
+                        'MB': {
                             id: {
-                                id: 'ucsf:MB'
+                                id: 'MB'
                             },
                             stopName: 'Mission Bay Campus',
                             stopLat: 37.76793,
                             stopLon: -122.391009
                         },
-                        'ucsf:100 Buchanan': {
+                        '100 Buchanan': {
                             id: {
-                                id: 'ucsf:100 Buchanan'
+                                id: '100 Buchanan'
                             },
                             stopName: 'Buchanan Dental Center',
                             stopLat: 37.770791,
                             stopLon: -122.426684
                         },
-                        'ucsf:2300 Harrison': {
+                        '2300 Harrison': {
                             id: {
-                                id: 'ucsf:2300 Harrison'
+                                id: '2300 Harrison'
                             },
                             stopName: '20th & Alabama',
                             stopLat: 37.759072,
