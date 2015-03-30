@@ -323,9 +323,22 @@ exports.routes = function(req, res) {
             });
             resp.on('end', function() {
                 if (resp.statusCode === 200) {
-                    var rv = {
-                        routes: JSON.parse(data)
-                    };
+                    var results;
+                    try {
+                        results = JSON.parse(data);
+                    } catch (e) {
+                        logger('shuttle/routes error: JSON parse failed');
+                        logger(e);
+                        results = [];
+                    }
+                    var rv = {};
+                    rv.routes = results.map(function (value) {
+                        return {
+                            id: {id: value.id},
+                            routeShortName: value.shortName,
+                            routeLongName: value.longName
+                        };
+                    });
                     if (rv.routes) {
                         // Yet another sad ugly hack: remove Mt. Zion Express because WTF it only runs like twice a year
                         rv.routes = rv.routes.filter(function (e) {

@@ -40,10 +40,28 @@ describe('exports', function () {
   });
 
   describe('routes()', function () {
-    it('should return JSON for an object with a routes property', function (done) {
+    it('should return JSON for routes', function (done) {
       var mockReq = {query: {}};
       var mockRes = {json: function (data) {
-        expect(data.routes.length).to.equal(13);
+        var expectedResults = {
+          routes:[
+            {id:{id:'ucsf:va'},routeShortName:'VA',routeLongName:'VAMC - Parnassus'},
+            {id:{id:'ucsf:tan'},routeShortName:'Tan',routeLongName:'Parnassus - Laurel Heights - Mt. Zion'},
+            {id:{id:'ucsf:black'},routeShortName:'Black',routeLongName:'Parnassus - Mt. Zion - Laurel Heights'},
+            {id:{id:'ucsf:yellow'},routeShortName:'Yellow',routeLongName:'16th BART - MCB - 20th/Alabama - SFGH'},
+            {id:{id:'ucsf:gold'},routeShortName:'Gold',routeLongName:'Parnassus - Mt. Zion - Mission Bay - SFGH'},
+            {id:{id:'ucsf:grey'},routeShortName:'Grey',routeLongName:'Parnassus - Mission Bay'},
+            {id:{id:'ucsf:lime'},routeShortName:'Lime',routeLongName:'Parnassus - 55 Laguna Parking - BDC - MCB'},
+            {id:{id:'ucsf:pink'},routeShortName:'Pink',routeLongName:'Parnassus E/R - Kezar'},
+            {id:{id:'ucsf:blue'},routeShortName:'Blue',routeLongName:'Parnassus - SFGH - Mission Bay - Mt. Zion'},
+            {id:{id:'ucsf:purple'},routeShortName:'Purple',routeLongName:'Parnassus (Library) - 3360 Geary - Mt. Zion - 3360 Geary'},
+            {id:{id:'ucsf:green'},routeShortName:'Green',routeLongName:'Mission Bay - China Basin - 654 Minnesota'},
+            {id:{id:'ucsf:bronze'},routeShortName:'Bronze',routeLongName:'Aldea - ACC - Library - 6th - Dental - LPPI'},
+            {id:{id:'ucsf:red'},routeShortName:'Red',routeLongName:'Mission Bay - MCB - 16th St BART'}
+          ]
+        };
+
+        expect(data).to.deep.equal(expectedResults);
         done();
       }};
       
