@@ -39,6 +39,24 @@ describe('exports', function () {
     done();
   });
 
+  describe('times()', function () {
+    it('should return times for route at stop', function (done) {
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+      var mockRes = {json: function (data) {
+        expect(data.times instanceof Array).to.be.true;
+       // expect(data.times.length).to.equal(39);
+       // expect(data.times[0]).to.deep.equal({time: 1427722200, direction: null});
+        done();
+      }};
+
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
+        .replyWithFile(200, __dirname + '/../fixtures/shuttleTimes.json');
+
+      shuttle.times(mockReq, mockRes);
+    });
+  });
+
   describe('routes()', function () {
     it('should return JSON for routes', function (done) {
       var mockReq = {query: {}};

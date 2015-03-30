@@ -445,8 +445,10 @@ exports.times = function(req, res) {
             if (resp.statusCode === 200) {
                 var result = JSON.parse(data);
                 var rv = {};
-                if (result.stopTimes) {
-                    rv.times = result.stopTimes.filter(function(el) { return el.phase && el.phase==='departure'; });
+                if (result instanceof Array) {
+                    rv.times = result.filter(function(value) { 
+                        return value.pattern && value.pattern.id && value.pattern.id.indexOf('ucsf:' + req.query.routeId + ':') === 0;
+                    });
                 } else {
                     rv = result;
                 }
