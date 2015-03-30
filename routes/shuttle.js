@@ -450,13 +450,18 @@ exports.times = function(req, res) {
                         return value.pattern && value.pattern.id && value.pattern.id.indexOf('ucsf:' + req.query.routeId + ':') === 0;
                     });
                     var processedPatterns = [];
-                    rv.times = rv.times.reduce(function(accumulator, value) {
+                    rv.times = rv.times.reduce(function (accumulator, value) {
                         if (processedPatterns.indexOf(value.pattern.id) === -1) {
                             processedPatterns.push(value.pattern.id);
                             return accumulator.concat(value.times);
                         }
                         return accumulator;
                     }, []);
+                    rv.times = rv.times.map(function (value) {
+                        return {
+                            time: value.serviceDay + value.scheduledDeparture
+                        };
+                    });
                 } else {
                     rv = result;
                 }

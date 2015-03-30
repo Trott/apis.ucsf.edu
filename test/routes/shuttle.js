@@ -45,7 +45,8 @@ describe('exports', function () {
       var mockRes = {json: function (data) {
         expect(data.times instanceof Array).to.be.true;
        // expect(data.times.length).to.equal(39);
-       // expect(data.times[0]).to.deep.equal({time: 1427722200, direction: null});
+        expect(data.times[0].time).to.equal(1427722200);
+        //expect(data.times[0].direction).to.be.null;
         done();
       }};
 
