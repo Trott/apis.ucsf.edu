@@ -420,7 +420,7 @@ exports.routes = function(req, res) {
 exports.times = function(req, res) {
     'use strict';
 
-    var dateString = moment.unix(req.query.startTime, 'x').format('YYYYMMDD');
+    var dateString = moment(req.query.startTime).format('YYYYMMDD');
 
     var otpOptions = {
         host: 'localhost',
