@@ -252,7 +252,7 @@ exports.stops = function(req, res) {
     var options = {};
     if (req.query.routeId) {
         options = {
-            path: '/otp/routers/default/index/routes/' + encodeURIComponent(req.query.routeId) + '/stops?detail=true&refs=true',
+            path: '/otp/routers/default/index/routes/ucsf%3A' + encodeURIComponent(req.query.routeId) + '/stops?detail=true&refs=true',
             useParentStation: false
         };
     }

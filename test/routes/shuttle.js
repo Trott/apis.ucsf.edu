@@ -110,7 +110,7 @@ describe('exports', function () {
     });
 
     it('should return just the blue stops if a routeId is specified', function (done) {
-      var mockReq = {query: {routeId: 'ucsf:blue'}};
+      var mockReq = {query: {routeId: 'blue'}};
       var mockRes = {json: function (data) {
         var expectedResults = {'stops':[
           {'id':{id:'ucsf:parlppi'}, stopName:'401 Parnassus (LPPI)', stopLat:37.7638174033811, stopLon:-122.45648592710495, parentStation:'ucsf:Parnassus'},
@@ -183,7 +183,7 @@ describe('exports', function () {
     });
 
     it('should return an empty array for stops if JSON is empty array', function (done) {
-      var mockReq = {query: {routeId: 'ucsf:blue'}};
+      var mockReq = {query: {routeId: 'blue'}};
       var mockRes = {json: function (data) {
         var expectedResults = {stops: []};
         expect(data).to.deep.equal(expectedResults);
@@ -198,7 +198,7 @@ describe('exports', function () {
     });
 
     it('should return an empty array for stops and empty object for route if required property is an object without route and stops properties', function (done) {
-      var mockReq = {query: {routeId: 'ucsf:magenta'}};
+      var mockReq = {query: {routeId: 'magenta'}};
       var mockRes = {json: function (data) {
         var expectedResults = {stops: [], route:{}};
         expect(data).to.deep.equal(expectedResults);
