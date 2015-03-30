@@ -449,6 +449,14 @@ exports.times = function(req, res) {
                     rv.times = result.filter(function(value) { 
                         return value.pattern && value.pattern.id && value.pattern.id.indexOf('ucsf:' + req.query.routeId + ':') === 0;
                     });
+                    var processedPatterns = [];
+                    rv.times = rv.times.reduce(function(accumulator, value) {
+                        if (processedPatterns.indexOf(value.pattern.id) === -1) {
+                            processedPatterns.push(value.pattern.id);
+                            return accumulator.concat(value.times);
+                        }
+                        return accumulator;
+                    }, []);
                 } else {
                     rv = result;
                 }
