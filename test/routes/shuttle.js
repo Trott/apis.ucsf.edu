@@ -47,6 +47,7 @@ describe('exports', function () {
        // expect(data.times.length).to.equal(39);
         expect(data.times[0].time).to.equal(1427722200);
         //expect(data.times[0].direction).to.be.null;
+        // TODO: test that results are sorted
         done();
       }};
 
