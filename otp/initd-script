@@ -1,0 +1,45 @@
+#! /bin/bash
+#
+# otp          Start/Stop OpenTripPlanner
+ 
+source /etc/init.d/functions
+ 
+RUN_AS=node
+PIDFILE=/var/run/otp.pid
+NAME=otp-0.17.0
+ 
+start() {
+    echo -n $"Starting OpenTripPlanner: "
+    daemon --user="$RUN_AS" --pidfile="/$PIDFILE" /home/node/apis.ucsf.edu/otp/OpenTripPlanner
+    pid=`ps -ef | grep $NAME | grep -v grep | awk {'print $2'}`
+    if [ -n "$pid" ]; then
+            echo $pid > $PIDFILE
+    fi
+    echo
+}
+ 
+stop() {
+    echo -n $"Stopping OpenTripPlanner: "
+    killproc -p /var/run/otp.pid
+    echo
+}
+ 
+case "$1" in
+        start)
+                start
+                ;;
+        stop)
+                stop
+                ;;
+        forcestop)
+                stop
+                ;;
+        restart)
+                stop
+                start
+                ;;
+        *)
+                echo "Usage: service otp {start|stop|forcestop|restart}"
+                exit 1
+                ;;
+esac
