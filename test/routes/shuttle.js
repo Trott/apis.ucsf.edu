@@ -40,11 +40,11 @@ describe('exports', function () {
   });
 
   describe('times()', function () {
-    it('should return times for route at stop', function (done) {
+    it('should return times for route at stop, omitting dropoff-only times', function (done) {
       var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
       var mockRes = {json: function (data) {
         expect(data.times instanceof Array).to.be.true;
-       // expect(data.times.length).to.equal(39);
+        expect(data.times.length).to.equal(39);
         expect(data.times[0].time).to.equal(1427722200);
         //expect(data.times[0].direction).to.be.null;
         // TODO: test that results are sorted

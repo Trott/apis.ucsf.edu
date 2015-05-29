@@ -3,8 +3,44 @@ var http = require('http'),
     xml2js = require('xml2js'),
     querystring = require('querystring'),
     moment = require('moment'),
+    Transit = require('transportation'),
+    path = require('path'),
+    Event = require('events'),
     predictions = {},
     logger = console.log;
+
+var gtfs = new Event();
+gtfs.noPickup = [];
+
+// Import the schedule from GTFS data.
+var transit = new Transit();
+var gtfsPath = path.resolve(__dirname, '../static/gtfs');
+
+transit.importGTFS(gtfsPath, function onEnd () {
+    var noPickup = [];
+
+    var routes = transit.agencies.ucsf.routes;
+
+    routes.ids.forEach(function (routeId) { 
+        routes[routeId].trips.ids.forEach(function (tripId) {
+            var scheduleFragment = routes[routeId].trips[tripId].stops.ids.filter(function (stopId) {
+                // Find all the times that do not have a pickup.
+                return routes[routeId].trips[tripId].stops[stopId].pickupType === 1;
+            });
+            noPickup = noPickup.concat(scheduleFragment.map(function (stopId) {
+                var myTimestamp = moment(routes[routeId].trips[tripId].stops[stopId].arrival, 'hh:mm:ss').format('X') - moment('00:00:00', 'hh:mm:ss').format('X'); 
+                return {
+                    route: routeId, 
+                    trip: tripId, 
+                    stop: routes[routeId].trips[tripId].stops[stopId]._stopId, 
+                    arrival: myTimestamp
+                };
+            }));
+        });
+    });
+    gtfs.noPickup = noPickup;
+    gtfs.emit('load');
+});
 
 // Common function to get all stops and call callback() with results
 var stops = function(callback, options) {
@@ -218,7 +254,7 @@ var updatePredictionsAsync = function (callback) {
             predictions = {
                 timestamp: Date.now()
             };
-            console.dir('Predictions error: ' + e);
+            logger('Predictions error: ' + e);
             callback(predictions);
         });
 
@@ -226,7 +262,7 @@ var updatePredictionsAsync = function (callback) {
             var parser = new xml2js.Parser();
             parser.on('end', updateCallback);
             parser.on('error', function (err) {
-                console.dir(err);
+                logger(err);
                 //Update time stamp but otherwise empty cache so we don't have stale data.
                 predictions = {
                     timestamp: Date.now()
@@ -238,7 +274,7 @@ var updatePredictionsAsync = function (callback) {
     })
     .on('error', function (e) {
         logger('NextBus XML retrieval error:');
-        console.dir(e);
+        logger(e);
         //Update time stamp but otherwise empty cache so we don't have stale data.
         predictions = {
             timestamp: Date.now()
@@ -421,7 +457,7 @@ exports.times = function(req, res) {
     'use strict';
 
     var timestamp = parseInt(req.query.startTime, 10);
-    var dateString = moment(timestamp).format('YYYYMMDD');
+    var dateString = moment(timestamp).format('YYYYMMDD');    
 
     var otpOptions = {
         host: 'localhost',
@@ -446,7 +482,7 @@ exports.times = function(req, res) {
                 var result = JSON.parse(data);
                 var rv = {};
                 if (result instanceof Array) {
-                    rv.times = result.filter(function(value) { 
+                    rv.times = result.filter(function(value) {
                         return value.pattern && value.pattern.id && value.pattern.id.indexOf('ucsf:' + req.query.routeId + ':') === 0;
                     });
                     var processedPatterns = [];
@@ -457,16 +493,41 @@ exports.times = function(req, res) {
                         }
                         return accumulator;
                     }, []);
-                    rv.times = rv.times.map(function (value) {
-                        return {
-                            time: value.serviceDay + value.scheduledDeparture
-                        };
-                    });
-                } else {
-                    rv = result;
-                }
 
-                res.json(rv);
+                    var respond = function () {
+                        var omitTimes = gtfs.noPickup.filter(function (value) {
+                            return req.query.routeId === value.route && req.query.stopId === value.stop;
+                        }).map(function (value) {
+                            return value.arrival;
+                        });
+
+                        rv.times = rv.times.filter(function (value) {
+                            return omitTimes.indexOf(value.scheduledArrival) === -1;
+                        }).map(function (value) {
+                            return {
+                                time: value.serviceDay + value.scheduledDeparture
+                            };
+                        });
+                        res.json(rv);
+                    };
+
+                    // Sad Horrible Hack #4 or something. otp-0.17.0 returns stops with pickup_type==1 which means drop-off only.
+                    // It does not provide a way to distinguish between those and other stop times.
+                    // We don't want to show shuttle stop times in the schedule if the user cannot board.
+                    // So, let's filter them out.
+                    //
+                    // TODO: Find a gtfs module that will read and parse the files on startup to generate this exception
+                    // list rather than hardcoding it.
+
+                    if (gtfs.noPickup.length === 0) {
+                        gtfs.on('load', respond);
+                    } else {
+                        respond();
+                    }
+                    
+                } else {
+                    res.json(result);
+                }
             }
         });
     }).on('error', function(e){
