@@ -5,11 +5,11 @@ var http = require('http'),
     moment = require('moment'),
     Transit = require('transportation'),
     path = require('path'),
-    Event = require('events'),
+    events = require('events'),
     predictions = {},
     logger = console.log;
 
-var gtfs = new Event();
+var gtfs = new events.EventEmitter();
 gtfs.noPickup = [];
 
 // Import the schedule from GTFS data.
