@@ -1,13 +1,14 @@
 var http = require('http');
+var url = require('url');
 var schedule = require('../utils/librarySchedule.js');
 
 var amalgamatic = require('amalgamatic'),
-    sfx = require('amalgamatic-sfx'),
-    millennium = require('amalgamatic-millennium'),
-    libguides = require('amalgamatic-libguides'),
-    pubmed = require('amalgamatic-pubmed'),
-    drupal6 = require('amalgamatic-drupal6'),
-    dbs = require('amalgamatic-ucsflibdbs');
+sfx = require('amalgamatic-sfx'),
+millennium = require('amalgamatic-millennium'),
+libguides = require('amalgamatic-libguides'),
+pubmed = require('amalgamatic-pubmed'),
+drupal6 = require('amalgamatic-drupal6'),
+dbs = require('amalgamatic-ucsflibdbs');
 
 libguides.setOptions({urlParameters: {
     guide_type: ['subject','general', 'course', 'topic']
@@ -98,17 +99,35 @@ exports.guides = function (req, res) {
 
 // RegExp for URLs that don't need a proxy prefix
 var proxyifyRegExp = /^https?:\/\/([a-z\.]*ucsf.edu|ucsf.idm.oclc.org|ucelinks.cdlib.org)[:\/]/i;
-var proxify = function (url) {
-    if ((typeof url === 'string') && (! proxyifyRegExp.test(url))) {
-        url = 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(url);
+var proxify = function (myUrl) {
+    if (! proxyifyRegExp.test(myUrl)) {
+        myUrl = 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(myUrl);
     }
-    return url;
+    return myUrl;
 };
-var proxifyCollection = function (values) {
-    values.url = proxify(values.url);
-    values.data.forEach(function(datum) {
+
+var removePortFromLibraryUrls = function (myUrl) {
+    var parsedUrl = url.parse(myUrl);
+    if (parsedUrl.port === '8080' && parsedUrl.hostname.indexOf('library.ucsf.edu') !== -1) {
+        delete parsedUrl.port;
+        delete parsedUrl.host;
+        myUrl = url.format(parsedUrl);
+    }
+    return myUrl;
+};
+
+var postProcessUrls = function (values) {
+    if (typeof values.url === 'string') {
+        values.url = proxify(values.url);
+        values.url = removePortFromLibraryUrls(values.url);
+    }
+
+    values.data = values.data.map(function(datum) {
         datum.url = proxify(datum.url);
+        datum.url = removePortFromLibraryUrls(datum.url);
+        return datum;
     });
+    return values;
 };
 
 exports.search = function (req, res) {
@@ -136,7 +155,7 @@ exports.search = function (req, res) {
                 logger('library/search error: ' + msg);
                 return;
             }
-            proxifyCollection(data);
+            data = postProcessUrls(data);
             res.write('data: ' + JSON.stringify(data) + '\n\n');
             res.flush();
         };
@@ -155,7 +174,7 @@ exports.search = function (req, res) {
                 logger('library/search error: ' + msg);
             } else {
                 values.forEach(function (value) {
-                    proxifyCollection(value);
+                    value = postProcessUrls(value);
                 });
                 res.json(values);
             }

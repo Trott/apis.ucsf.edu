@@ -232,6 +232,28 @@ describe('exports', function () {
       );
     });
 
+    it('should strip proxied port from library site results', function (done) {
+      var mockWrite = function (value) {
+        if (value.substring(0,6) === 'data: ') {
+          var data = JSON.parse(value.substring(6));
+          expect(data.data[0].url).to.equal('http://www.library.ucsf.edu/visit/missionhall');
+          done();
+        }
+      };
+
+      nock('http://www.library.ucsf.edu')
+        .get('/search/node/hub')
+        .reply(200, '<div class="content"><dl class="search-results node-results"><dt class="title"><a href="http://www.library.ucsf.edu:8080/visit/missionhall">Mission Bay Hub and Hideout</a></dt></div>');
+
+      library.search({query: {q: 'hub', 'c': ['drupal6'], async: ''}}, {
+          write: mockWrite,
+          writeHead: function () {},
+          flush: function () {},
+          end: function () {}
+        }
+      );
+    });
+
     it('should return empty results without throwing errors', function (done) {
       var mockJson = function (value) {
         expect(value.length).to.equal(1);
