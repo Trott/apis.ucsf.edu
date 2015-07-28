@@ -241,7 +241,7 @@ describe('exports', function () {
         }
       };
 
-      nock('http://www.library.ucsf.edu')
+      nock('https://www.library.ucsf.edu')
         .get('/search/node/hub')
         .reply(200, '<div class="content"><dl class="search-results node-results"><dt class="title"><a href="http://www.library.ucsf.edu:8080/visit/missionhall">Mission Bay Hub and Hideout</a></dt></div>');
 
