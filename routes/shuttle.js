@@ -90,7 +90,7 @@ var stops = function(callback, options) {
                 rv.stops = dataObject.map(function (value) {
                     var rv = {};
                     if (value.id) {
-                        rv.id = {id: value.id.substr(5)};
+                        rv.id = {id: value.id.substr(5), agencyId: 'ucsf'};
                         rv.stopName = value.name;
                         rv.stopLat = value.lat;
                         rv.stopLon = value.lon;
@@ -112,7 +112,8 @@ var stops = function(callback, options) {
                     var parentStations = {
                         'Parnassus': {
                             id: {
-                                id: 'Parnassus'
+                                id: 'Parnassus',
+                                agencyId: 'ucsf'
                             },
                             stopName: 'Parnassus Campus',
                             stopLat: 37.763174,
@@ -120,7 +121,8 @@ var stops = function(callback, options) {
                         },
                         'MB': {
                             id: {
-                                id: 'MB'
+                                id: 'MB',
+                                agencyId: 'ucsf'
                             },
                             stopName: 'Mission Bay Campus',
                             stopLat: 37.76793,
@@ -128,7 +130,8 @@ var stops = function(callback, options) {
                         },
                         '100 Buchanan': {
                             id: {
-                                id: '100 Buchanan'
+                                id: '100 Buchanan',
+                                agencyId: 'ucsf'
                             },
                             stopName: 'Buchanan Dental Center',
                             stopLat: 37.770791,
@@ -136,7 +139,8 @@ var stops = function(callback, options) {
                         },
                         '2300 Harrison': {
                             id: {
-                                id: '2300 Harrison'
+                                id: '2300 Harrison',
+                                agencyId: 'ucsf'
                             },
                             stopName: '20th & Alabama',
                             stopLat: 37.759072,
@@ -619,8 +623,8 @@ exports.plan = function(req, res) {
         query.arriveBy = req.query.arriveBy;
     }
 
-    query.fromPlace = options.fromPlace;
-    query.toPlace = options.toPlace;
+    query.fromPlace = String(options.fromPlace).replace('_', ':');
+    query.toPlace = String(options.toPlace).replace('_', ':');
     query.mode = options.mode;
 
     otpOptions.path += querystring.stringify(query);
