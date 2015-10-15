@@ -6,7 +6,7 @@ source /etc/init.d/functions
  
 RUN_AS=node
 PIDFILE=/var/run/otp.pid
-NAME=otp-0.17.0
+NAME=otp-0.18.0
  
 start() {
     echo -n $"Starting OpenTripPlanner: "
