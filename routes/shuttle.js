@@ -493,6 +493,14 @@ exports.times = function(req, res) {
                     rv.times = rv.times.reduce(function (accumulator, value) {
                         if (processedPatterns.indexOf(value.pattern.id) === -1) {
                             processedPatterns.push(value.pattern.id);
+                            value.times = value.times.map(function (entry) {
+                                var desc;
+                                if (!entry.direction && value.pattern.desc) {
+                                    desc = value.pattern.desc;
+                                    entry.direction = desc.slice(desc.indexOf(' '), desc.indexOf('(')).trim();
+                                }
+                                return entry;
+                            });
                             return accumulator.concat(value.times);
                         }
                         return accumulator;
@@ -509,7 +517,8 @@ exports.times = function(req, res) {
                             return omitTimes.indexOf(value.scheduledArrival) === -1;
                         }).map(function (value) {
                             return {
-                                time: value.serviceDay + value.scheduledDeparture
+                                time: value.serviceDay + value.scheduledDeparture,
+                                direction: value.direction
                             };
                         });
                         res.json(rv);
@@ -519,9 +528,6 @@ exports.times = function(req, res) {
                     // It does not provide a way to distinguish between those and other stop times.
                     // We don't want to show shuttle stop times in the schedule if the user cannot board.
                     // So, let's filter them out.
-                    //
-                    // TODO: Find a gtfs module that will read and parse the files on startup to generate this exception
-                    // list rather than hardcoding it.
 
                     if (gtfs.noPickup.length === 0) {
                         gtfs.on('load', respond);
