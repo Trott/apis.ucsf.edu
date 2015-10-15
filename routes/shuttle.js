@@ -493,11 +493,17 @@ exports.times = function(req, res) {
                     rv.times = rv.times.reduce(function (accumulator, value) {
                         if (processedPatterns.indexOf(value.pattern.id) === -1) {
                             processedPatterns.push(value.pattern.id);
+
                             value.times = value.times.map(function (entry) {
                                 var desc;
                                 if (!entry.direction && value.pattern.desc) {
                                     desc = value.pattern.desc;
-                                    entry.direction = desc.slice(desc.indexOf(' '), desc.indexOf('(')).trim();
+                                    // Hack: HAVE I NO SHAME?!??!
+                                    if (desc === 'Purple to 3360 Geary (ucsf:3360 Geary)') {
+                                        entry.direction = 'to Parnassus';
+                                    } else {
+                                        entry.direction = desc.slice(desc.indexOf(' '), desc.indexOf('(')).trim();
+                                    }
                                 }
                                 return entry;
                             });
