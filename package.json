@@ -24,7 +24,7 @@
     "morgan": "^1.2.0",
     "request": "^2.51.0",
     "tough-cookie": "^0.12.1",
-    "transportation": "^0.1.0",
+    "transportation": "^1.2.0",
     "xml2js": "^0.2.8"
   },
   "scripts": {
