@@ -495,15 +495,16 @@ exports.times = function(req, res) {
                             processedPatterns.push(value.pattern.id);
 
                             value.times = value.times.map(function (entry) {
-                                var desc;
-                                if (!entry.direction && value.pattern.desc) {
-                                    desc = value.pattern.desc;
-                                    // Hack: HAVE I NO SHAME?!??!
-                                    if (desc === 'Purple to 3360 Geary (ucsf:3360 Geary)') {
-                                        entry.direction = 'to Parnassus';
-                                    } else {
-                                        entry.direction = desc.slice(desc.indexOf(' '), desc.indexOf('(')).trim();
-                                    }
+
+                                if (!entry.direction && entry.serviceDay && entry.scheduledDeparture && transit.agencies.ucsf) {
+                                    var timeToMatch = moment.unix(entry.serviceDay + entry.scheduledDeparture).format('HH:mm:ss');
+                                    var tripIdToMatch = entry.tripId.substr(5);
+                                    var stopTime = transit.agencies.ucsf.routes[req.query.routeId].trips[tripIdToMatch].stops.findAll(function (stopTime) {
+                                        return stopTime._stopId === req.query.stopId;
+                                    }).find(function (stopTime) {
+                                        return stopTime.departure === timeToMatch;
+                                    });
+                                    entry.direction = stopTime.stopHeadsign;
                                 }
                                 return entry;
                             });
