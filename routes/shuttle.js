@@ -504,7 +504,7 @@ exports.times = function(req, res) {
                                     }).find(function (stopTime) {
                                         return stopTime.departure === timeToMatch;
                                     });
-                                    entry.direction = stopTime.stopHeadsign;
+                                    entry.direction = stopTime ? stopTime.stopHeadsign : undefined;
                                 }
                                 return entry;
                             });
