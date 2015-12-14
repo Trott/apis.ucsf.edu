@@ -111,7 +111,7 @@ describe('exports', function () {
 
     it('should log an error if there is an HTTP error', function (done) {
       var mockLogger = function (logMsg) {
-        expect(logMsg).to.equal('updateScheduleAsync error: Nock: Not allow net connect for "api3.libcal.com:443"');
+        expect(logMsg).to.startWith('updateScheduleAsync error: Nock: Not allow net connect for ');
         done();
       };
 

@@ -41,7 +41,7 @@
     "grunt-contrib-uglify": "~0.1.1",
     "jshint": "^2.5.5",
     "lab": "^5.9.0",
-    "nock": "^0.47.0",
+    "nock": "^3.4.0",
     "precommit-hook": "^1.0.7",
     "rewire": "^2.1.2"
   }

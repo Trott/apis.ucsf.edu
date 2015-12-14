@@ -149,7 +149,7 @@ describe('exports', function () {
 
     it('should log an error if there is an error', function (done) {
       var revert = library.__set__('logger', function (value) {
-        expect(value).to.equal('library/search error: Nock: Not allow net connect for "www.library.ucsf.edu:443"');
+        expect(value).to.startWith('library/search error: Nock: No match for');
         eventEmitter.emit('errorLogged');
       });
 
@@ -384,7 +384,7 @@ describe('exports', function () {
         lastUpdated: moreThanAnHourAgo
       };
       var mockLogger = function (logMsg) {
-        expect(logMsg).to.equal('updateGuidesAsync error: Nock: Not allow net connect for "lgapi.libapps.com:80"');
+        expect(logMsg).to.startWith('updateGuidesAsync error: Nock: No match for');
         messageLogged = true;
         eventEmitter.emit('arewedoneyet');
       };
