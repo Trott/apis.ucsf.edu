@@ -513,6 +513,10 @@ exports.times = function(req, res) {
                         return accumulator;
                     }, []);
 
+                    rv.times.sort(function (value1, value2) {
+                        return value1.scheduledDeparture - value2.scheduledDeparture;
+                    });
+
                     var respond = function () {
                         var omitTimes = gtfs.noPickup.filter(function (value) {
                             return req.query.routeId === value.route && req.query.stopId === value.stop;
