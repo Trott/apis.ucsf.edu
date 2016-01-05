@@ -1,3 +1,5 @@
 #/bin/sh
 
-exec java -jar /home/node/apis.ucsf.edu/otp/otp-0.19.0-shaded.jar --build /home/node/apis.ucsf.edu/otp --inMemory > /dev/null 2>&1 &
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+exec java -jar ${DIR}/otp-0.19.0-shaded.jar --build ${DIR} --inMemory > /dev/null 2>&1 &
