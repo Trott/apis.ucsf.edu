@@ -19,7 +19,7 @@
     "compression": "^1.0.2",
     "csv": "^0.3.7",
     "express": "^4.9.7",
-    "moment": "^2.0.0",
+    "moment": "^2.11.0",
     "morgan": "^1.2.0",
     "request": "^2.51.0",
     "transportation": "^1.2.0",

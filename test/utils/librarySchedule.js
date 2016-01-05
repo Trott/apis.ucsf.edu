@@ -77,7 +77,7 @@ describe('exports', function () {
         var schedule = librarySchedule.get();
         expect(schedule.locations.parnassus[0]).to.deep.equal({
               'day': 'Sun',
-              'date': 'Sep 21',
+              'date': 'Aug 17',
               'text': '12pm - 10pm'
             }
         );
@@ -85,7 +85,7 @@ describe('exports', function () {
         done();
       });
 
-      librarySchedule.update({date: '2014-09-21'});
+      librarySchedule.update({date: '2014-08-17'});
     });
 
     it('should reject invalid JSON', function (done) {
