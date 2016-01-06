@@ -1,5 +1,11 @@
 #/bin/sh
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-exec java -jar ${DIR}/otp-0.19.0-shaded.jar --build ${DIR} --inMemory > /dev/null 2>&1 &
+case $1 in
+	stop)
+		kill `ps -ef | grep otp-0.19 | grep -v grep | awk {'print $2'}`
+		;;
+	*)
+		DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+		exec java -jar ${DIR}/otp-0.19.0-shaded.jar --build ${DIR} --inMemory > /dev/null 2>&1 &
+		;;
+esac
