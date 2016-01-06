@@ -20,7 +20,7 @@ start() {
  
 stop() {
     echo -n $"Stopping OpenTripPlanner: "
-    killproc -p /var/run/otp.pid
+    killproc -p $PIDFILE
     echo
 }
  
