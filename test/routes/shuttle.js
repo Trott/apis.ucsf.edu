@@ -229,6 +229,23 @@ describe('exports', function () {
       shuttle.stops(mockReq, mockRes); 
     });
 
+    it('should return an empty array for stops if JSON is borked', function (done) {
+      revert = shuttle.__set__('logger', function () {});
+
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {stops: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops')
+      .reply(200, '{');
+
+      shuttle.stops(mockReq, mockRes);
+    });
+
     it('should return an empty array for stops and empty object for route if required property is an object without route and stops properties', function (done) {
       var mockReq = {query: {routeId: 'magenta'}};
       var mockRes = {json: function (data) {
