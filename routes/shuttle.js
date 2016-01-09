@@ -209,7 +209,7 @@ var updatePredictionsAsync = function (callback) {
     // If the cache is less than 10 seconds old, don't retrieve it again.
     // More than once every ten seconds would violate NextBus terms of service.
     if (predictions.timestamp && Date.now() - predictions.timestamp < 10 * 1000) {
-        callback(predictions);
+        process.nextTick(callback.bind(null, predictions));
         return;
     }
 

@@ -30,7 +30,7 @@ describe('exports', function () {
     done();
   });
 
-  it('should have properties for stops(), routes(), times(), plans(), and predictions()', function (done) {
+  it('should have properties for stops(), routes(), times(), plan(), and predictions()', function (done) {
     expect(typeof shuttle.stops).to.equal('function');
     expect(typeof shuttle.routes).to.equal('function');
     expect(typeof shuttle.times).to.equal('function');
@@ -278,6 +278,28 @@ describe('exports', function () {
       }};
 
       shuttle.stops(mockReq, mockRes);
+    });
+  });
+
+  describe('predictions()', function () {
+    it('should return predictions for specified route/stop', function (done) {
+      revert = shuttle.__set__('predictions', {
+        timestamp: Date.now(),
+        predictions: [{routeId: 'blue', stopId: 'sfgh', times: [0, 1, 2]}]
+      });
+
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: [0, 1, 2]};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      // nock('http://localhost:8080')
+      // .get('/otp/routers/default/index/stops')
+      // .replyWithFile(200, __dirname + '/../fixtures/shuttleStops.json');
+
+      shuttle.predictions(mockReq, mockRes);
     });
   });
 });
