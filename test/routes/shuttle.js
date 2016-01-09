@@ -260,6 +260,25 @@ describe('exports', function () {
 
       shuttle.stops(mockReq, mockRes); 
     });
+
+    it('should log and return an error if there is an http error event', function (done) {
+      var logged = false;
+      revert = shuttle.__set__('logger', function (message) {
+        expect(message.slice(0, 21)).to.equal('shuttle/stops error: ');
+        expect(message.length).to.be.greaterThan(20);
+        logged = true;
+      });
+
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        expect(typeof data.error).to.equal('string');
+        expect(data.error.length).to.be.greaterThan(5);
+        expect(logged).to.equal(true);
+        done();
+      }};
+
+      shuttle.stops(mockReq, mockRes);
+    });
   });
 });
 
