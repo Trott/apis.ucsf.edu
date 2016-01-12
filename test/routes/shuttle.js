@@ -301,6 +301,21 @@ describe('exports', function () {
 
       shuttle.predictions(mockReq, mockRes);
     });
+
+    it('should return predictions for specified route/stop', function (done) {
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: ['8', '15', '23', '51', '71']};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://webservices.nextbus.com:80')
+      .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
+      .replyWithFile(200, __dirname + '/../fixtures/nextbus.xml');
+
+      shuttle.predictions(mockReq, mockRes);
+    });
   });
 });
 
