@@ -389,13 +389,18 @@ describe('exports', function () {
       shuttle.predictions(mockReq, mockRes);
     });
 
-    it('should deal with absence of $ property gracefully', function (done) {
+    it('should deal with absence of $ property etc. gracefully', function (done) {
       revert = shuttle.__set__('xml2js', {
         Parser: function () {
           this.parseString = function () {};
           this.on = function (event, handler) {
             if (event === 'end') {
-              process.nextTick(handler.bind(null, {body: {predictions: [{}]}}));
+              process.nextTick(handler.bind(null, {body: {predictions: [
+                {},
+                {'$': {}},
+                {'$': {}, direction: []},
+                {'$': {}, direction: [{}]}
+              ]}}));
             }
           };
         }
@@ -416,6 +421,61 @@ describe('exports', function () {
       shuttle.predictions(mockReq, mockRes);
     });
 
+    it('should handle error getting NextBus gracefully', function (done) {
+      revert = shuttle.__set__('logger', function () {});
+
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
+
+    it('should handle http error getting NextBus gracefully', function (done) {
+      revert = shuttle.__set__('logger', function () {});
+
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://webservices.nextbus.com:80')
+      .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
+      .reply(500, 'server error');
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
+
+    it('should handle http response error getting NextBus gracefully', function (done) {
+      var resp = eventEmitter;
+      revert = shuttle.__set__({
+        http: {
+          'get': function (options, cb) { 
+            process.nextTick(function () {cb(resp);});
+            setImmediate(function() {resp.emit('error');});
+            return {on: function () {}};
+          }
+        },
+        logger: function () {}
+      });
+
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
   });
 });
 
