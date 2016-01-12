@@ -315,18 +315,21 @@ exports.stops = function(req, res) {
             if (routeShortName === 'Va') {
                 routeShortName = 'VA';
             }
+            var routeLongName = '';
+            if (transit.agencies.ucsf && transit.agencies.ucsf.routes[routeId]) {
+                routeLongName = transit.agencies.ucsf.routes[routeId].longName;
+            }
             // Add route info.
-            if (routeId && results.stops.length > 0) {
-                results.route = {id:{id: routeId}, routeShortName: routeShortName};
+            if (routeId && results.stops && results.stops.length > 0) {
+                results.route = {id:{id: routeId}, routeShortName: routeShortName, routeLongName: routeLongName};
             }
 
             // Bride Of Sad Hack #47: Remove Library and ACC from Bronze results,
             // as those are drop-off only and won't show up in the interface.
             // They are used by the trip planner, though, so we can't just remove them from the source data.
-            if (results.stops && results.stops instanceof Array &&
-                results.route && results.route.id && results.route.id.id === 'bronze') {
+            if (results.stops && results.route && results.route.id && results.route.id.id === 'bronze') {
                 results.stops = results.stops.filter(function (el) {
-                    return ! (el.id && ['paracc','library'].indexOf(el.id.id)!==-1);
+                    return  ['paracc','library'].indexOf(el.id.id)===-1;
                 });
             }
 

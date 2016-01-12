@@ -148,7 +148,7 @@ describe('exports', function () {
           {'id':{id:'hospital',agencyId:'ucsf'}, stopName:'Mission Bay Hospital', stopLat:37.766373, stopLon:-122.391379}
           ],
           route:{
-            id:{id:'blue'},routeShortName:'Blue'
+            id:{id:'blue'},routeShortName:'Blue',routeLongName:'Parnassus - SFGH - Mission Bay - Mt. Zion'
           }
         };
         expect(data).to.deep.equal(expectedResults);
@@ -269,13 +269,121 @@ describe('exports', function () {
         logged = true;
       });
 
-      var mockReq = {query: {}};
+      var mockReq = {query: {routeId: 'fhqwhgads'}};
       var mockRes = {json: function (data) {
         expect(typeof data.error).to.equal('string');
         expect(data.error.length).to.be.greaterThan(5);
         expect(logged).to.equal(true);
         done();
       }};
+
+      shuttle.stops(mockReq, mockRes);
+    });
+
+    it('should handle "va" correctly', function (done) {
+      var mockReq = {query: {routeId: 'va'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {
+          stops:[{
+            id:{id:'parlppi', agencyId:'ucsf'},
+            stopName:'401 Parnassus (LPPI)',
+            stopLat:37.7638174033811,
+            stopLon:-122.45648592710495,
+            parentStation:'Parnassus'
+          },{
+            id:{id:'veteran', agencyId:'ucsf'},
+            stopName:'VA Medical Center',
+            stopLat:37.782019,
+            stopLon:-122.504996
+          }],
+          route:{
+            id:{id:'va'},
+            routeShortName:'VA',
+            routeLongName:'VAMC - Parnassus'
+          }
+        };
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/routes/ucsf%3Ava/stops?detail=true&refs=true')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStopsVa.json');
+
+      shuttle.stops(mockReq, mockRes);
+    });
+
+    it('should return an empty routeLongName if GTFS not yet loaded', function (done) {
+      revert = shuttle.__set__('transit', {agencies: {}});
+
+      var mockReq = {query: {routeId: 'va'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {
+          stops:[{
+            id:{id:'parlppi', agencyId:'ucsf'},
+            stopName:'401 Parnassus (LPPI)',
+            stopLat:37.7638174033811,
+            stopLon:-122.45648592710495,
+            parentStation:'Parnassus'
+          },{
+            id:{id:'veteran', agencyId:'ucsf'},
+            stopName:'VA Medical Center',
+            stopLat:37.782019,
+            stopLon:-122.504996
+          }],
+          route:{
+            id:{id:'va'},
+            routeShortName:'VA',
+            routeLongName:''
+          }
+        };
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/routes/ucsf%3Ava/stops?detail=true&refs=true')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStopsVa.json');
+
+      shuttle.stops(mockReq, mockRes);      
+    });
+
+    it('should remove ACC and Library from Bronze results', function (done) {
+      var mockReq = {query: {routeId: 'bronze'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {
+          stops:[
+            {
+              id:{id:'parlppi',agencyId:'ucsf'},
+              stopName:'401 Parnassus (LPPI)',
+              stopLat:37.7638174033811,
+              stopLon:-122.45648592710495,
+              parentStation:'Parnassus'
+            },{
+              id:{id:'surgedown',agencyId:'ucsf'},
+              stopName:'Surge/Woods',
+              stopLat:37.760757,
+              stopLon:-122.456163,
+            },{
+              id:{id:'75behr',agencyId:'ucsf'},
+              stopName:'Aldea Housing',
+              stopLat:37.758793,
+              stopLon:-122.454181,
+            }
+          ],
+          route:{
+            id:{id:'bronze'},
+            routeShortName:'Bronze',
+            routeLongName:'Aldea - ACC - Library - 6th - Dental - LPPI'
+          }
+        };
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/routes/ucsf%3Abronze/stops?detail=true&refs=true')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStopsBronze.json');
 
       shuttle.stops(mockReq, mockRes);
     });
