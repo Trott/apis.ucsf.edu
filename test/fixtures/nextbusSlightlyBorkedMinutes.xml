@@ -39,8 +39,8 @@
 <predictions agencyTitle="University of California San Francisco" routeTitle="Blue" routeTag="blue" stopTitle="SFGH" stopTag="sfgh">
   <direction title="Mission Bay 4th West">
   <prediction epochTime="1452621104390" seconds="481" minutes="8" isDeparture="false" dirTag="missb4we" vehicle="2364" block="204" />
-  <prediction epochTime="1452621571333" seconds="948" minutes="15" isDeparture="false" dirTag="missb4we" vehicle="2253" block="205" />
-  <prediction epochTime="1452622026240" seconds="1403" minutes="23" isDeparture="false" dirTag="missb4we" vehicle="2254" block="201" />
+  <prediction epochTime="1452621571333" seconds="948" minutes="" isDeparture="false" dirTag="missb4we" vehicle="2253" block="205" />
+  <prediction epochTime="1452622026240" seconds="1403" isDeparture="false" dirTag="missb4we" vehicle="2254" block="201" />
   <prediction epochTime="1452623692376" seconds="3069" minutes="51" isDeparture="false" dirTag="missb4we" vehicle="2259" block="202" />
   <prediction epochTime="1452624920579" seconds="4297" minutes="71" isDeparture="false" affectedByLayover="true" dirTag="missb4we" vehicle="2255" block="203" />
   </direction>

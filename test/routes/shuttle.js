@@ -295,10 +295,6 @@ describe('exports', function () {
         done();
       }};
 
-      // nock('http://localhost:8080')
-      // .get('/otp/routers/default/index/stops')
-      // .replyWithFile(200, __dirname + '/../fixtures/shuttleStops.json');
-
       shuttle.predictions(mockReq, mockRes);
     });
 
@@ -314,8 +310,112 @@ describe('exports', function () {
       .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
       .replyWithFile(200, __dirname + '/../fixtures/nextbus.xml');
 
+      shuttle.clearPredictions();
       shuttle.predictions(mockReq, mockRes);
     });
+
+    it('should return empty results if there are no predictions in XML', function (done) {
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://webservices.nextbus.com:80')
+      .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
+      .replyWithFile(200, __dirname + '/../fixtures/nextbusNoPredictions.xml');
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
+
+    it('should return empty result if there is no body in XML', function (done) {
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://webservices.nextbus.com:80')
+      .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
+      .replyWithFile(200, __dirname + '/../fixtures/nextbusNoBody.xml');
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
+
+    it('should return empty result if XML parser returns non-object', function (done) {
+      revert = shuttle.__set__('xml2js', {
+        Parser: function () {
+          this.parseString = function () {};
+          this.on = function (event, handler) {
+            if (event === 'end') {
+              process.nextTick(handler);
+            }
+          };
+        }
+      });
+
+      var mockReq = {query: {routeId: 'lime', stopId: 'mcb'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://webservices.nextbus.com:80')
+      .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
+      .replyWithFile(200, __dirname + '/../fixtures/nextbusNoPredictions.xml');
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
+
+    it('should omit predictions if minutes property is missing', function (done) {
+      var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: ['8', '51', '71']};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://webservices.nextbus.com:80')
+      .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
+      .replyWithFile(200, __dirname + '/../fixtures/nextbusSlightlyBorkedMinutes.xml');
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
+
+    it('should deal with absence of $ property gracefully', function (done) {
+      revert = shuttle.__set__('xml2js', {
+        Parser: function () {
+          this.parseString = function () {};
+          this.on = function (event, handler) {
+            if (event === 'end') {
+              process.nextTick(handler.bind(null, {body: {predictions: [{}]}}));
+            }
+          };
+        }
+      });
+
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://webservices.nextbus.com:80')
+      .get('/service/publicXMLFeed?command=predictionsForMultiStops&a=ucsf&stops=grey%7Cmissb4we&stops=grey%7Cparlppi&stops=grey%7Chospital&stops=blue%7Cmissb4we&stops=blue%7Chospital&stops=blue%7Cparlppi&stops=blue%7Cmtzion&stops=blue%7Csfgh&stops=gold%7Cmissb4we&stops=gold%7Chospital&stops=gold%7Csfgh&stops=gold%7Cparlppi&stops=gold%7Cmtzion&stops=bronze%7C75behr&stops=bronze%7Cparlppi&stops=bronze%7Csurgedown&stops=black%7Clhts&stops=black%7Cmtzion&stops=black%7Clibrary&stops=tan%7Clhts&stops=tan%7Cmtzion&stops=tan%7Clibrary&stops=lime%7Clibrary&stops=lime%7Cmcb&stops=lime%7Cbuchaneb&stops=lime%7Cbuchanwb')
+      .replyWithFile(200, __dirname + '/../fixtures/nextbusNoPredictions.xml');
+
+      shuttle.clearPredictions();
+      shuttle.predictions(mockReq, mockRes);
+    });
+
   });
 });
 

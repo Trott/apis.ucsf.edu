@@ -42,6 +42,11 @@ transit.importGTFS(gtfsPath, function onEnd () {
     gtfs.emit('load');
 });
 
+// Useful for testing. Could be useful if predictions get waaaay out of date due to NextBus outage, for example.
+exports.clearPredictions = function() {
+    predictions = {};
+};
+
 // Common function to get all stops and call callback() with results
 var stops = function(callback, options) {
     'use strict';
@@ -184,13 +189,17 @@ var updatePredictionsAsync = function (callback) {
                 routeId,
                 stopId,
                 times,
-                mapCallback = function (value) { return value.$ && value.$.minutes; };
+                mapCallback = function (value) { return value.$.minutes; },
+                filterCallback = function (value) { return Number.isInteger(parseInt(value, 10)); };
             for (var i=0, l=p.length; i<l; i++) {
+                if (! p[i].$) {
+                    continue;
+                }
                 routeId = p[i].$.routeTag;
                 stopId = p[i].$.stopTag;
                 times = [];
                 if (p[i].direction && p[i].direction[0] && p[i].direction[0].prediction && p[i].direction[0].prediction instanceof Array) {
-                    times = p[i].direction[0].prediction.map(mapCallback);
+                    times = p[i].direction[0].prediction.map(mapCallback).filter(filterCallback);
                 }
 
                 rv.predictions.push({routeId: routeId, stopId: stopId, times: times});
