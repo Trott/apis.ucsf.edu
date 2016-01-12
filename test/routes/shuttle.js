@@ -62,39 +62,75 @@ describe('exports', function () {
   describe('routes()', function () {
     it('should return JSON for routes', function (done) {
       var mockReq = {query: {}};
-      var mockRes = {json: function (data) {
-        var expectedResults = {
-          routes: [
-            { id: { id: 'black' }, routeShortName: 'Black', routeLongName: 'Parnassus - Mt. Zion - Laurel Heights' },
-            { id: { id: 'blue' }, routeShortName: 'Blue', routeLongName: 'Parnassus - SFGH - Mission Bay - Mt. Zion' },
-            { id: { id: 'bronze' }, routeShortName: 'Bronze', routeLongName: 'Aldea - ACC - Library - 6th - Dental - LPPI' },
-            { id: { id: 'gold' }, routeShortName: 'Gold', routeLongName: 'Parnassus - Mt. Zion - Mission Bay - SFGH' },
-            { id: { id: 'green' }, routeShortName: 'Green', routeLongName: 'Mission Bay - China Basin - 654 Minnesota' },
-            { id: { id: 'grey' }, routeShortName: 'Grey', routeLongName: 'Parnassus - Mission Bay' },
-            { id: { id: 'lime' }, routeShortName: 'Lime', routeLongName: 'Parnassus - 55 Laguna Parking - BDC - MCB' },
-            { id: { id: 'pink' }, routeShortName: 'Pink', routeLongName: 'Parnassus E/R - Kezar' },
-            { id: { id: 'purple' }, routeShortName: 'Purple', routeLongName: 'Parnassus (Library) - 3360 Geary - Mt. Zion - 3360 Geary' },
-            { id: { id: 'red' }, routeShortName: 'Red', routeLongName: 'Mission Bay - MCB - 16th St BART' },
-            { id: { id: 'tan' }, routeShortName: 'Tan', routeLongName: 'Parnassus - Laurel Heights - Mt. Zion' },
-            { id: { id: 'va' }, routeShortName: 'VA', routeLongName: 'VAMC - Parnassus' },
-            { id: { id: 'yellow' }, routeShortName: 'Yellow', routeLongName: '16th BART - MCB - 20th/Alabama - SFGH' }
-          ]
-        };
+      var mockRes = {
+        json: function (data) {
+          var expectedResults = {
+            routes: [
+              { id: { id: 'black' }, routeShortName: 'Black', routeLongName: 'Parnassus - Mt. Zion - Laurel Heights' },
+              { id: { id: 'blue' }, routeShortName: 'Blue', routeLongName: 'Parnassus - SFGH - Mission Bay - Mt. Zion' },
+              { id: { id: 'bronze' }, routeShortName: 'Bronze', routeLongName: 'Aldea - ACC - Library - 6th - Dental - LPPI' },
+              { id: { id: 'gold' }, routeShortName: 'Gold', routeLongName: 'Parnassus - Mt. Zion - Mission Bay - SFGH' },
+              { id: { id: 'green' }, routeShortName: 'Green', routeLongName: 'Mission Bay - China Basin - 654 Minnesota' },
+              { id: { id: 'grey' }, routeShortName: 'Grey', routeLongName: 'Parnassus - Mission Bay' },
+              { id: { id: 'lime' }, routeShortName: 'Lime', routeLongName: 'Parnassus - 55 Laguna Parking - BDC - MCB' },
+              { id: { id: 'pink' }, routeShortName: 'Pink', routeLongName: 'Parnassus E/R - Kezar' },
+              { id: { id: 'purple' }, routeShortName: 'Purple', routeLongName: 'Parnassus (Library) - 3360 Geary - Mt. Zion - 3360 Geary' },
+              { id: { id: 'red' }, routeShortName: 'Red', routeLongName: 'Mission Bay - MCB - 16th St BART' },
+              { id: { id: 'tan' }, routeShortName: 'Tan', routeLongName: 'Parnassus - Laurel Heights - Mt. Zion' },
+              { id: { id: 'va' }, routeShortName: 'VA', routeLongName: 'VAMC - Parnassus' },
+              { id: { id: 'yellow' }, routeShortName: 'Yellow', routeLongName: '16th BART - MCB - 20th/Alabama - SFGH' }
+            ]
+          };
 
-        var comparator = function (a, b) {
-          if (a.id.id < b.id.id) {
-            return -1;
-          }
-          return 1;
-        };
+          var comparator = function (a, b) {
+            if (a.id.id < b.id.id) {
+              return -1;
+            }
+            return 1;
+          };
 
-        expect(data.routes.sort(comparator)).to.deep.equal(expectedResults.routes);
-        done();
-      }};
+          expect(data.routes.sort(comparator)).to.deep.equal(expectedResults.routes);
+          done();
+        }
+      };
       
       nock('http://localhost:8080')
       .get('/otp/routers/default/index/routes')
       .replyWithFile(200, __dirname + '/../fixtures/shuttleRoutes.json');
+
+      shuttle.routes(mockReq, mockRes);
+    });
+
+    it('should get the routes for a specified stop', function (done) {
+      var mockReq = {query: {stopId: 'mcb'}};
+      var mockRes = {
+        json: function (data) {
+          var expectedResults = {
+            stop:{
+              id:{id:'mcb',agencyId:'ucsf'},
+              stopName:'Mission Center Building',
+              stopLat:37.767326,
+              stopLon:-122.414519
+            },
+            routes:[
+              {id:{id:'lime'},routeShortName:'Lime',routeLongName:'Parnassus - 55 Laguna Parking - BDC - MCB'},
+              {id:{id:'red'},routeShortName:'Red',routeLongName:'Mission Bay - MCB - 16th St BART'},
+              {id:{id:'yellow'},routeShortName:'Yellow',routeLongName:'16th BART - MCB - 20th/Alabama - SFGH'}
+            ]
+          };
+
+          expect(data).to.deep.equal(expectedResults);
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops/ucsf:mcb/routes')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleRoutesMcb.json');
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStops.json');
 
       shuttle.routes(mockReq, mockRes);
     });

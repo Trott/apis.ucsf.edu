@@ -369,7 +369,7 @@ exports.routes = function(req, res) {
         };
 
         otpOptions.path = stopId ?
-        '/otp/routers/default/index/stops/' + encodeURIComponent(stopId) + '/routes' :
+        '/otp/routers/default/index/stops/ucsf:' + encodeURIComponent(stopId) + '/routes' :
         '/otp/routers/default/index/routes';
 
         http.get(otpOptions, function(resp) {
