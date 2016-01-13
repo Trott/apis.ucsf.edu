@@ -403,13 +403,12 @@ exports.routes = function(req, res) {
                             routeLongName: value.longName
                         };
                     });
-                    if (rv.routes) {
-                        // Yet another sad ugly hack: remove Mt. Zion Express because WTF it only runs like twice a year
-                        rv.routes = rv.routes.filter(function (e) {
-                            return e.id.id !== 'mtzionexpress';
-                        });
-                        foundRoutes = foundRoutes.concat(rv.routes);
-                    }
+
+                    // Yet another sad ugly hack: remove Mt. Zion Express because WTF it only runs like twice a year
+                    rv.routes = rv.routes.filter(function (e) {
+                        return e.id.id !== 'mtzionexpress';
+                    });
+                    foundRoutes = foundRoutes.concat(rv.routes);
 
                     if (callback) {
                         callback();
