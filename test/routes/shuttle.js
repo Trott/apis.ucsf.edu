@@ -101,6 +101,27 @@ describe('exports', function () {
       shuttle.routes(mockReq, mockRes);
     });
 
+    it('should return an empty result if JSON is borked', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {}};
+      var mockRes = {
+        json: function (data) {
+          var expectedResults = {
+            routes: []
+          };
+
+          expect(data.routes).to.deep.equal(expectedResults.routes);
+          done();
+        }
+      };
+      
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/routes')
+      .reply(200, '{');
+
+      shuttle.routes(mockReq, mockRes);
+    });
+
     it('should get the routes for a specified stop', function (done) {
       var mockReq = {query: {stopId: 'mcb'}};
       var mockRes = {
