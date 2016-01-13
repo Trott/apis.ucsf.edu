@@ -134,6 +134,52 @@ describe('exports', function () {
 
       shuttle.routes(mockReq, mockRes);
     });
+
+    it('should report an error if HTTP status is not 200 and no stopId is specified', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {}};
+      var mockRes = {
+        json: function (data) {
+          var expectedResults = {
+            error: 'shuttle/routes error: code 500'
+          };
+
+          expect(data).to.deep.equal(expectedResults);
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/routes')
+      .reply(500, 'server error');
+
+      shuttle.routes(mockReq, mockRes);      
+    });
+
+    it('should report an error if HTTP status is not 200 and a stopId is specified', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {stopId: 'mcb'}};
+      var mockRes = {
+        json: function (data) {
+          var expectedResults = {
+            error: 'shuttle/routes error: code 500'
+          };
+
+          expect(data).to.deep.equal(expectedResults);
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops/ucsf:mcb/routes')
+      .reply(500, 'server error');
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops')
+      .reply(500, 'server error');
+
+      shuttle.routes(mockReq, mockRes);      
+    });
   });
 
   describe('stops()', function () {

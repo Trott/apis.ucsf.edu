@@ -361,7 +361,6 @@ exports.routes = function(req, res) {
     var foundRoutes = [];
 
     var routes = function (stopId, callback) {
-
         var otpOptions = {
             host:host,
             port:port,
@@ -461,7 +460,10 @@ exports.routes = function(req, res) {
                     }
                 }, {});
             }
-        ], function () {
+        ], function (e) {
+            if (e) {
+                return res.json(e);
+            }
             res.json({stop: myStop, routes: foundRoutes});
         });
     } else {
