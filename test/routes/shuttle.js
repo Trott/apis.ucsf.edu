@@ -70,6 +70,23 @@ describe('exports', function () {
 
       shuttle.times(mockReq, mockRes);
     });
+
+    it('should return an error if an HTTP error code is returned', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+      var mockRes = {
+        json: function (data) {
+          expect(data.error).to.exist();
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
+        .reply(500, 'fhqwhgads');
+
+      shuttle.times(mockReq, mockRes);      
+    });
   });
 
   describe('routes()', function () {
