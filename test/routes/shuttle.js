@@ -57,6 +57,19 @@ describe('exports', function () {
 
       shuttle.times(mockReq, mockRes);
     });
+
+    it('should return an error if there is an HTTP error event', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+      var mockRes = {
+        json: function (data) {
+          expect(data.error).to.exist();
+          done();
+        }
+      };
+
+      shuttle.times(mockReq, mockRes);
+    });
   });
 
   describe('routes()', function () {
