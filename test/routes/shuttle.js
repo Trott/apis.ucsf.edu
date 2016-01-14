@@ -58,6 +58,22 @@ describe('exports', function () {
       shuttle.times(mockReq, mockRes);
     });
 
+    it('should ignore entries that do not have a .pattern a .pattern.id', function (done) {
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+      var mockRes = {json: function (data) {
+        expect(data.times instanceof Array).to.be.true;
+        expect(data.times.length).to.equal(39);
+        expect(data.times[0].time).to.equal(1427722200);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
+        .replyWithFile(200, __dirname + '/../fixtures/shuttleTimesHalfBorked.json');
+
+      shuttle.times(mockReq, mockRes);
+    });
+
     it('should return whatever OTP gave us if JSON is not parsed into an array', function (done) {
       revert = shuttle.__set__('logger', function() {});
       var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
