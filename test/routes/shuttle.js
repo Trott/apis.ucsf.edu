@@ -888,6 +888,8 @@ describe('exports', function () {
 
   describe('plan()', function () {
     it('should return an empty object if no query', function (done) {
+      revert = shuttle.__set__('logger', function () {});
+
       var mockReq = {query: {}};
       var mockRes = {json: function (data) {
         var expectedResults = {};
