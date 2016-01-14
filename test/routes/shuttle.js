@@ -58,6 +58,25 @@ describe('exports', function () {
       shuttle.times(mockReq, mockRes);
     });
 
+    it('should return undefined for direction if no stopTime found', function (done) {
+      revert = shuttle.__set__('transit', {agencies: {ucsf: {routes: {black: {trips: {
+        black_a: {stops: {findAll: function () {return {find: function() { return null; }}; }}},
+        black_b: {stops: {findAll: function () {return {find: function() { return null; }}; }}}
+      }}}}}});
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+      var mockRes = {json: function (data) {
+        expect(data.times instanceof Array).to.be.true;
+        expect(data.times[0].direction).to.equal(undefined);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
+        .replyWithFile(200, __dirname + '/../fixtures/shuttleTimes.json');
+
+      shuttle.times(mockReq, mockRes);
+    });
+
     it('should ignore entries that do not have a .pattern a .pattern.id', function (done) {
       var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
       var mockRes = {json: function (data) {
@@ -136,6 +155,24 @@ describe('exports', function () {
         .reply(500, 'fhqwhgads');
 
       shuttle.times(mockReq, mockRes);      
+    });
+
+    it('should defer response if gtfs.noPickup is not populated', function (done) {
+      revert = shuttle.__set__('gtfs', {
+        noPickup: [],
+        on: function (event, handler) {
+          expect(event).to.equal('load');
+          expect(typeof handler).to.equal('function');
+          done();
+        }
+      });
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
+        .replyWithFile(200, __dirname + '/../fixtures/shuttleTimes.json');
+
+      shuttle.times(mockReq);
     });
   });
 
