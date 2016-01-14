@@ -677,8 +677,14 @@ exports.plan = function(req, res) {
             data += chunk;
         });
         resp.on('end', function() {
+            var rv;
             if (resp.statusCode === 200) {
-                var rv = JSON.parse(data);
+                try {
+                    rv = JSON.parse(data);
+                } catch (e) {
+                    logger('shuttle/plan JSON parse error: ', e.message);
+                    rv = {};
+                }
                 if (rv.plan && rv.plan.itineraries) {
                     metadata.plan = rv.plan;
                     allResults.push.apply(allResults, rv.plan.itineraries);

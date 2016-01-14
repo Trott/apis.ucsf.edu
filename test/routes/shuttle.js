@@ -885,5 +885,22 @@ describe('exports', function () {
       shuttle.predictions(mockReq, mockRes);
     });
   });
+
+  describe('plan()', function () {
+    it('should return an empty object if no query', function (done) {
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/plan?minTransferTime=60&fromPlace=undefined&toPlace=undefined&mode=TRANSIT%2CWALK')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanEmpty.xml');
+
+      shuttle.plan(mockReq, mockRes);      
+    });
+  });
 });
 

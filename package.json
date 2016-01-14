@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "server.js",
-    "test": "lab -t 92"
+    "test": "lab -t 94"
   },
   "engines": {
     "node": ">=0.10.33"
