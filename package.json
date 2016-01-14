@@ -15,7 +15,7 @@
     "amalgamatic-pubmed": "^3.2.0",
     "amalgamatic-sfx": "^5.0.0",
     "amalgamatic-ucsflibdbs": "^1.2.1",
-    "async": "^0.2.10",
+    "async": "^1.5.2",
     "compression": "^1.0.2",
     "csv": "^0.3.7",
     "express": "^4.9.7",

@@ -420,7 +420,7 @@ exports.routes = function(req, res) {
         }).on('error', function(e){
             logger('shuttle/routes error: ' + e.message);
             if (callback) {
-                callback({error:e.message});
+                callback({error: e.message});
             } else {
                 res.json({error: e.message});
             }

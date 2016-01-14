@@ -122,6 +122,32 @@ describe('exports', function () {
       shuttle.routes(mockReq, mockRes);
     });
 
+    it('should return an error if there is an HTTP error event and no stopId is provided', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {}};
+      var mockRes = {
+        json: function (data) {
+          expect(data.error).to.exist();
+          done();
+        }
+      };
+
+      shuttle.routes(mockReq, mockRes);
+    });
+
+    it('should return an error if there is an HTTP error event and a stopId is provided', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {stopId: 'mcb'}};
+      var mockRes = {
+        json: function (data) {
+          expect(data.error).to.exist();
+          done();
+        }
+      };
+
+      shuttle.routes(mockReq, mockRes);
+    });
+
     it('should get the routes for a specified stop', function (done) {
       var mockReq = {query: {stopId: 'mcb'}};
       var mockRes = {
@@ -148,6 +174,60 @@ describe('exports', function () {
       nock('http://localhost:8080')
       .get('/otp/routers/default/index/stops/ucsf:mcb/routes')
       .replyWithFile(200, __dirname + '/../fixtures/shuttleRoutesMcb.json');
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStops.json');
+
+      shuttle.routes(mockReq, mockRes);
+    });
+
+    it('should return all the routes for a parent station', function (done) {
+      var mockReq = {query: {stopId: 'Parnassus'}};
+      var mockRes = {
+        json: function (data) {
+          var expectedResults = {
+            stop:{
+              id:{id:'Parnassus',agencyId:'ucsf'},
+              stopName:'Parnassus Campus',
+              stopLat:37.763174,
+              stopLon:-122.459176
+            },
+            routes:[
+              {id:{id:'gold'},routeShortName:'Gold',routeLongName:'Parnassus - Mt. Zion - Mission Bay - SFGH'},
+              {id:{id:'bronze'},routeShortName:'Bronze',routeLongName:'Aldea - ACC - Library - 6th - Dental - LPPI'},
+              {id:{id:'black'},routeShortName:'Black',routeLongName:'Parnassus - Mt. Zion - Laurel Heights'},
+              {id:{id:'blue'},routeShortName:'Blue',routeLongName:'Parnassus - SFGH - Mission Bay - Mt. Zion'},
+              {id:{id:'grey'},routeShortName:'Grey',routeLongName:'Parnassus - Mission Bay'},
+              {id:{id:'lime'},routeShortName:'Lime',routeLongName:'Parnassus - 55 Laguna Parking - BDC - MCB'},
+              {id:{id:'pink'},routeShortName:'Pink',routeLongName:'Parnassus E/R - Kezar'},
+              {id:{id:'purple'},routeShortName:'Purple',routeLongName:'Parnassus (Library) - 3360 Geary - Mt. Zion - 3360 Geary'},
+              {id:{id:'tan'},routeShortName:'Tan',routeLongName:'Parnassus - Laurel Heights - Mt. Zion'},
+              {id:{id:'va'},routeShortName:'VA',routeLongName:'VAMC - Parnassus'}
+            ]
+          };
+
+          expect(data).to.deep.equal(expectedResults);
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops/ucsf:library/')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStopsUcsfLibrary.json');
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops/ucsf:library/routes')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStopsRoutesUcsfLibrary.json');
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops/ucsf:parlppi/routes')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStopsRoutesParlppi.json');
+
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/index/stops/ucsf:paracc/routes')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttleStopsRoutesParacc.json');
 
       nock('http://localhost:8080')
       .get('/otp/routers/default/index/stops')
