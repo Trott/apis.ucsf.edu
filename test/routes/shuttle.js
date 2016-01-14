@@ -46,7 +46,7 @@ describe('exports', function () {
         expect(data.times instanceof Array).to.be.true;
         expect(data.times.length).to.equal(39);
         expect(data.times[0].time).to.equal(1427722200);
-        // expect(data.times[0].direction).to.be.null;
+        // expect(data.times[0].direction).to.equal(null);
         // TODO: test that results are sorted
         done();
       }};
@@ -54,6 +54,40 @@ describe('exports', function () {
       nock('http://localhost:8080')
         .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
         .replyWithFile(200, __dirname + '/../fixtures/shuttleTimes.json');
+
+      shuttle.times(mockReq, mockRes);
+    });
+
+    it('should return whatever OTP gave us if JSON is not parsed into an array', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+      var mockRes = {
+        json: function (data) {
+          expect(data).to.deep.equal({'come on': 'fhqwhgads'});
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
+        .reply(200, '{"come on": "fhqwhgads"}');
+
+      shuttle.times(mockReq, mockRes);     
+    });
+
+    it('should return an error if the JSON is borked', function (done) {
+      revert = shuttle.__set__('logger', function() {});
+      var mockReq = {query: {routeId: 'black', stopId: 'lhts', startTime: '1427698800000'}};
+      var mockRes = {
+        json: function (data) {
+          expect(data.error).to.exist();
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+        .get('/otp/routers/default/index/stops/ucsf%3Alhts/stoptimes/20150330?details=true&refs=true')
+        .reply(200, '{');
 
       shuttle.times(mockReq, mockRes);
     });

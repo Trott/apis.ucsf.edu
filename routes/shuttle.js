@@ -495,8 +495,14 @@ exports.times = function(req, res) {
             data += chunk;
         });
         resp.on('end', function() {
+            var result;
             if (resp.statusCode === 200) {
-                var result = JSON.parse(data);
+                try {
+                    result = JSON.parse(data);
+                } catch (e) {
+                    logger('shuttle/times JSON.parse error: ', e);
+                    return res.json({error: e.message});
+                }
                 var rv = {};
                 if (result instanceof Array) {
                     rv.times = result.filter(function(value) {
@@ -560,6 +566,7 @@ exports.times = function(req, res) {
                     }
                     
                 } else {
+                    logger('shuttle/times probable error:', result);
                     res.json(result);
                 }
             }
