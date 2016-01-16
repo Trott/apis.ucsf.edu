@@ -960,17 +960,13 @@ describe('exports', function () {
 
       var mockRes = {
         json: function (data) {
-          // arriveBy=false means sort on startTime unless both startTime is later
-          // and arrivalTime is earlier than another trip.
-          // This particular check might not handle equality well, but we're using
-          // a fixture so we know that won't come up.
           expect(data.plan.itineraries.every(function(current, index, array) {
             if (index === array.length - 1) {
               return true;
             }
             var next = array[index +1];
-            return (current.startTime < next.startTime) ||
-              ((current.startTime > next.startTime) && (current.endTime < next.endTime));
+            return (current.startTime <= next.startTime) ||
+              ((current.startTime >= next.startTime) && (current.endTime <= next.endTime));
           })).to.be.true();
           done();
         }
