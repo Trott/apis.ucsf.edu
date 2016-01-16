@@ -887,6 +887,66 @@ describe('exports', function () {
   });
 
   describe('plan()', function () {
+    it('should return plans for typical requests', function (done) {
+      var mockReq = {query: {
+        fromPlace: 'ucsf_mtzion',
+        toPlace: 'ucsf_sfgh',
+        arriveBy: 'false',
+        time: '8:45 AM',
+        date: '1/20/2016'
+      }};
+      var mockRes = {json: function (data) {
+        expect(data.plan.date).to.equal(1453221900000);
+        expect(data.plan.from).to.deep.equal({
+          name: 'Mt. Zion',
+          lon: -122.439474016428,
+          lat: 37.78524781704753,
+          orig: '',
+          vertexType: 'NORMAL'
+        });
+        expect(data.plan.to).to.deep.equal({
+          name: 'SFGH',
+          lon: -122.40492649376392,
+          lat: 37.7548539352877,
+          orig: '',
+          vertexType: 'NORMAL'
+        });
+        expect(data.plan.itineraries.length).to.equal(3);
+        expect(data.plan.itineraries[0]).to.deep.include({
+          duration: 2760000,
+          startTime: 1453222080000,
+          endTime: 1453224840000,  
+          transitTime: 2760
+        });
+        expect(data.plan.itineraries[0].legs.length).to.equal(1);
+        expect(data.plan.itineraries[0].legs[0]).to.deep.include({
+          startTime: 1453222080000,
+          endTime: 1453224840000,
+          mode: 'BUS',
+          route: 'Blue',
+          routeId: 'blue',
+          tripId: 'blue_c',
+          serviceDate: '20160119',
+          routeShortName: 'Blue',
+          duration: 2760000
+        });
+        expect(data.plan.itineraries[0].legs[0].from).to.deep.include({
+          name: 'Mt. Zion',
+        });
+        expect(data.plan.itineraries[0].legs[0].to).to.deep.include({
+          name: 'SFGH'
+        });
+
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/plan?minTransferTime=60&date=1%2F20%2F2016&time=8%3A45%20AM&arriveBy=false&fromPlace=ucsf%3Amtzion&toPlace=ucsf%3Asfgh&mode=TRANSIT%2CWALK')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlan.json');
+
+      shuttle.plan(mockReq, mockRes);
+    });
+
     it('should return an empty object if no query', function (done) {
       revert = shuttle.__set__('logger', function () {});
 
@@ -899,7 +959,7 @@ describe('exports', function () {
 
       nock('http://localhost:8080')
       .get('/otp/routers/default/plan?minTransferTime=60&fromPlace=undefined&toPlace=undefined&mode=TRANSIT%2CWALK')
-      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanEmpty.xml');
+      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanEmpty.json');
 
       shuttle.plan(mockReq, mockRes);      
     });

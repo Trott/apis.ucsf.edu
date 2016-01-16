@@ -626,6 +626,17 @@ exports.plan = function(req, res) {
                 };
                 allResults.sort(compare);
 
+                // Some version of OTP switched from milliseconds to seconds. Switch back.
+                allResults = allResults.map(function (itinerary) {
+                    // Duration should not be missing, but if it is, this will set it to NaN which seems OK.
+                    itinerary.duration = itinerary.duration * 1000;
+                    itinerary.legs = itinerary.legs.map(function (leg) {
+                        leg.duration = leg.duration * 1000;
+                        return leg;
+                    });
+                    return itinerary;
+                });
+
                 metadata.plan.itineraries = allResults;
             }
             res.json(metadata);
