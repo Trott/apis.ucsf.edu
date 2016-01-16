@@ -947,6 +947,42 @@ describe('exports', function () {
       shuttle.plan(mockReq, mockRes);
     });
 
+    it('should return results that are sorted', function (done) {
+      var mockReq = {
+        query: {
+          fromPlace: 'ucsf_lhts',
+          toPlace: 'ucsf_sfgh',
+          arriveBy: 'false',
+          time: '1:00 PM',
+          date: '1/19/2016'
+        }
+      };
+
+      var mockRes = {
+        json: function (data) {
+          // arriveBy=false means sort on startTime unless both startTime is later
+          // and arrivalTime is earlier than another trip.
+          // This particular check might not handle equality well, but we're using
+          // a fixture so we know that won't come up.
+          expect(data.plan.itineraries.every(function(current, index, array) {
+            if (index === array.length - 1) {
+              return true;
+            }
+            var next = array[index +1];
+            return (current.startTime < next.startTime) ||
+              ((current.startTime > next.startTime) && (current.endTime < next.endTime));
+          })).to.be.true();
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/plan?minTransferTime=60&date=1%2F19%2F2016&time=1%3A00%20PM&arriveBy=false&fromPlace=ucsf%3Alhts&toPlace=ucsf%3Asfgh&mode=TRANSIT%2CWALK')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanWithWalk.json');
+
+      shuttle.plan(mockReq, mockRes);
+    });
+
     it('should return an empty object if no query', function (done) {
       revert = shuttle.__set__('logger', function () {});
 
