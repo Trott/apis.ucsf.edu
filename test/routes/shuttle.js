@@ -903,6 +903,18 @@ describe('exports', function () {
 
       shuttle.plan(mockReq, mockRes);      
     });
+
+    it('should return an error property if there is an http error', function (done) {
+      revert = shuttle.__set__('logger', function () {});
+
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        expect(data.error).to.exist();
+        done();
+      }};
+
+      shuttle.plan(mockReq, mockRes);      
+    });
   });
 });
 
