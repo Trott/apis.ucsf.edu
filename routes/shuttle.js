@@ -589,8 +589,7 @@ exports.plan = function(req, res) {
         } else {
             if (metadata.plan) {
 
-                var toId,
-                    itinerary,
+                var itinerary,
                     firstLeg;
 
                 for(var l = allResults.length - 1; l>=0; --l) {
@@ -598,7 +597,6 @@ exports.plan = function(req, res) {
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
                     if (firstLeg.to.stopId) {
-                        toId = firstLeg.to.stopId.agencyId + ':' + firstLeg.to.stopId.id;
                         if (firstLeg.mode==='WALK') {
                             allResults.splice(l,1);
                             continue;
