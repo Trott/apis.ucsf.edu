@@ -42,6 +42,45 @@ transit.importGTFS(gtfsPath, function onEnd () {
     gtfs.emit('load');
 });
 
+var parentStations = {
+    'Parnassus': {
+        id: {
+            id: 'Parnassus',
+            agencyId: 'ucsf'
+        },
+        stopName: 'Parnassus Campus',
+        stopLat: 37.763174,
+        stopLon: -122.459176
+    },
+    'MB': {
+        id: {
+            id: 'MB',
+            agencyId: 'ucsf'
+        },
+        stopName: 'Mission Bay Campus',
+        stopLat: 37.76793,
+        stopLon: -122.391009
+    },
+    '100 Buchanan': {
+        id: {
+            id: '100 Buchanan',
+            agencyId: 'ucsf'
+        },
+        stopName: 'Buchanan Dental Center',
+        stopLat: 37.770791,
+        stopLon: -122.426684
+    },
+    '2300 Harrison': {
+        id: {
+            id: '2300 Harrison',
+            agencyId: 'ucsf'
+        },
+        stopName: '20th & Alabama',
+        stopLat: 37.759072,
+        stopLon:-122.411562
+    }
+};
+
 // Useful for testing. Could be useful if predictions get waaaay out of date due to NextBus outage, for example.
 exports.clearPredictions = function() {
     predictions = {};
@@ -114,44 +153,6 @@ var stops = function(callback, options) {
                 if (options.useParentStation) {
                     // Sad hack: Querying for clusters/parent stations not working with our data in OTP 0.14.0
                     // So, postprocess here. Bummer. Hardcoding names. Yuck.
-                    var parentStations = {
-                        'Parnassus': {
-                            id: {
-                                id: 'Parnassus',
-                                agencyId: 'ucsf'
-                            },
-                            stopName: 'Parnassus Campus',
-                            stopLat: 37.763174,
-                            stopLon: -122.459176
-                        },
-                        'MB': {
-                            id: {
-                                id: 'MB',
-                                agencyId: 'ucsf'
-                            },
-                            stopName: 'Mission Bay Campus',
-                            stopLat: 37.76793,
-                            stopLon: -122.391009
-                        },
-                        '100 Buchanan': {
-                            id: {
-                                id: '100 Buchanan',
-                                agencyId: 'ucsf'
-                            },
-                            stopName: 'Buchanan Dental Center',
-                            stopLat: 37.770791,
-                            stopLon: -122.426684
-                        },
-                        '2300 Harrison': {
-                            id: {
-                                id: '2300 Harrison',
-                                agencyId: 'ucsf'
-                            },
-                            stopName: '20th & Alabama',
-                            stopLat: 37.759072,
-                            stopLon:-122.411562
-                        }
-                    };
                     var processedParentStations = [];
                     rv.stops = rv.stops.reduce(function (accumulator, value) {
                         if (parentStations[value.parentStation]) {
@@ -596,11 +597,8 @@ exports.plan = function(req, res) {
                     // Remove any "walk to <starting point>"
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
-                    if (firstLeg.to.stopId) {
-                        if (firstLeg.mode==='WALK') {
-                            allResults.splice(l,1);
-                            continue;
-                        }
+                    if (firstLeg.mode==='WALK') {
+                        allResults.splice(l,1);
                     }
                 }
 
@@ -669,8 +667,20 @@ exports.plan = function(req, res) {
         query.arriveBy = req.query.arriveBy;
     }
 
-    query.fromPlace = String(options.fromPlace).replace('_', ':');
-    query.toPlace = String(options.toPlace).replace('_', ':');
+    var preprocessPlace = function (place) {
+        if (! place) {
+            return place;
+        }
+        place = place.substr(place.indexOf('_')+1);
+        if (parentStations[place]) {
+            return parentStations[place].stopLat + ',' + parentStations[place].stopLon;
+        } else {
+            return 'ucsf:' + place;
+        }
+    };
+
+    query.fromPlace = preprocessPlace(String(options.fromPlace));
+    query.toPlace = preprocessPlace(String(options.toPlace));
     query.mode = options.mode;
 
     otpOptions.path += querystring.stringify(query);

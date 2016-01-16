@@ -978,7 +978,33 @@ describe('exports', function () {
 
       nock('http://localhost:8080')
       .get('/otp/routers/default/plan?minTransferTime=60&date=1%2F19%2F2016&time=1%3A00%20PM&arriveBy=false&fromPlace=ucsf%3Alhts&toPlace=ucsf%3Asfgh&mode=TRANSIT%2CWALK')
-      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanWithWalk.json');
+      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanSort.json');
+
+      shuttle.plan(mockReq, mockRes);
+    });
+
+    it('should omit initial "walk to" step', function (done) {
+      var mockReq = {
+        query: {
+          fromPlace: 'ucsf_Parnassus',
+          toPlace: 'ucsf_sfgh',
+          arriveBy: 'true',
+          time: '2:15 PM',
+          date: '1/19/2016'
+        }
+      };
+      var mockRes = {
+        json: function (data) {
+          expect(data.plan.itineraries.every(function (itinerary) {
+            return itinerary.legs[0].mode === 'BUS';
+          })).to.be.true();
+          done();
+        }
+      };
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/plan?minTransferTime=60&date=1%2F19%2F2016&time=2%3A15%20PM&arriveBy=true&fromPlace=37.763174%2C-122.459176&toPlace=ucsf%3Asfgh&mode=TRANSIT%2CWALK')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanStartWithWalk.json');
 
       shuttle.plan(mockReq, mockRes);
     });
@@ -994,7 +1020,7 @@ describe('exports', function () {
       }};
 
       nock('http://localhost:8080')
-      .get('/otp/routers/default/plan?minTransferTime=60&fromPlace=undefined&toPlace=undefined&mode=TRANSIT%2CWALK')
+      .get('/otp/routers/default/plan?minTransferTime=60&fromPlace=ucsf%3Aundefined&toPlace=ucsf%3Aundefined&mode=TRANSIT%2CWALK')
       .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanEmpty.json');
 
       shuttle.plan(mockReq, mockRes);      
