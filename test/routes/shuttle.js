@@ -20,6 +20,14 @@ var it = lab.test;
 
 var beforeEach = lab.beforeEach;
 
+
+var routeIdComparator = function (a, b) {
+  if (a.id.id < b.id.id) {
+    return -1;
+  }
+  return 1;
+};
+
 describe('exports', function () {
   beforeEach(function (done) {
     eventEmitter.removeAllListeners();
@@ -199,14 +207,7 @@ describe('exports', function () {
             ]
           };
 
-          var comparator = function (a, b) {
-            if (a.id.id < b.id.id) {
-              return -1;
-            }
-            return 1;
-          };
-
-          expect(data.routes.sort(comparator)).to.deep.equal(expectedResults.routes);
+          expect(data.routes.sort(routeIdComparator)).to.deep.equal(expectedResults.routes);
           done();
         }
       };
@@ -311,10 +312,10 @@ describe('exports', function () {
               stopLon:-122.459176
             },
             routes:[
-              {id:{id:'gold'},routeShortName:'Gold',routeLongName:'Parnassus - Mt. Zion - Mission Bay - SFGH'},
-              {id:{id:'bronze'},routeShortName:'Bronze',routeLongName:'Aldea - ACC - Library - 6th - Dental - LPPI'},
               {id:{id:'black'},routeShortName:'Black',routeLongName:'Parnassus - Mt. Zion - Laurel Heights'},
               {id:{id:'blue'},routeShortName:'Blue',routeLongName:'Parnassus - SFGH - Mission Bay - Mt. Zion'},
+              {id:{id:'bronze'},routeShortName:'Bronze',routeLongName:'Aldea - ACC - Library - 6th - Dental - LPPI'},
+              {id:{id:'gold'},routeShortName:'Gold',routeLongName:'Parnassus - Mt. Zion - Mission Bay - SFGH'},
               {id:{id:'grey'},routeShortName:'Grey',routeLongName:'Parnassus - Mission Bay'},
               {id:{id:'lime'},routeShortName:'Lime',routeLongName:'Parnassus - 55 Laguna Parking - BDC - MCB'},
               {id:{id:'pink'},routeShortName:'Pink',routeLongName:'Parnassus E/R - Kezar'},
@@ -324,6 +325,7 @@ describe('exports', function () {
             ]
           };
 
+          data.routes = data.routes.sort(routeIdComparator);
           expect(data).to.deep.equal(expectedResults);
           done();
         }
