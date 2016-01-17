@@ -1024,7 +1024,7 @@ describe('exports', function () {
       shuttle.plan(mockReq, mockRes);      
     });
 
-    it('should return an error property if there is an http error', function (done) {
+    it('should return an error property if there is an http error event', function (done) {
       revert = shuttle.__set__('logger', function () {});
 
       var mockReq = {query: {}};
@@ -1034,6 +1034,22 @@ describe('exports', function () {
       }};
 
       shuttle.plan(mockReq, mockRes);      
+    });
+
+    it('should return an error if HTTP status code is not 200', function (done) {
+      revert = shuttle.__set__('logger', function () {});
+
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        expect(data.error).to.exist();
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/plan?minTransferTime=60&fromPlace=ucsf%3Aundefined&toPlace=ucsf%3Aundefined&mode=TRANSIT%2CWALK')
+      .reply(500);
+
+      shuttle.plan(mockReq, mockRes);       
     });
   });
 });
