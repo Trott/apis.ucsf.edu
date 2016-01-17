@@ -692,7 +692,7 @@ describe('exports', function () {
   });
 
   describe('predictions()', function () {
-    it('should return predictions for specified route/stop', function (done) {
+    it('should return pre-populated predictions for specified route/stop', function (done) {
       revert = shuttle.__set__('predictions', {
         timestamp: Date.now(),
         predictions: [{routeId: 'blue', stopId: 'sfgh', times: [0, 1, 2]}]
@@ -723,6 +723,38 @@ describe('exports', function () {
       shuttle.clearPredictions();
       shuttle.predictions(mockReq, mockRes);
     });
+
+    it('should return an empty result if no route specified', function (done) {
+      revert = shuttle.__set__('predictions', {
+        timestamp: Date.now(),
+        predictions: [{routeId: 'blue', stopId: 'sfgh', times: [0, 1, 2]}]
+      });
+
+      var mockReq = {query: {stopId: 'sfgh'}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      shuttle.predictions(mockReq, mockRes);
+    });
+
+    it('should return an empty result if no route or stop specified', function (done) {
+      revert = shuttle.__set__('predictions', {
+        timestamp: Date.now(),
+        predictions: [{routeId: 'blue', stopId: 'sfgh', times: [0, 1, 2]}]
+      });
+
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        var expectedResults = {times: []};
+        expect(data).to.deep.equal(expectedResults);
+        done();
+      }};
+
+      shuttle.predictions(mockReq, mockRes);
+    });    
 
     it('should return empty results if there are no predictions in XML', function (done) {
       var mockReq = {query: {routeId: 'blue', stopId: 'sfgh'}};
