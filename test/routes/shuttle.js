@@ -1051,6 +1051,22 @@ describe('exports', function () {
 
       shuttle.plan(mockReq, mockRes);       
     });
+
+    it('should return an empty plan if JSON is borked', function (done) {
+      revert = shuttle.__set__('logger', function () {});
+
+      var mockReq = {query: {}};
+      var mockRes = {json: function (data) {
+        expect(data).to.deep.equal({});
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/plan?minTransferTime=60&fromPlace=ucsf%3Aundefined&toPlace=ucsf%3Aundefined&mode=TRANSIT%2CWALK')
+      .reply(200, '{');
+
+      shuttle.plan(mockReq, mockRes);  
+    });
   });
 });
 
