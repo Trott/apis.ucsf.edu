@@ -668,9 +668,6 @@ exports.plan = function(req, res) {
     }
 
     var preprocessPlace = function (place) {
-        if (! place) {
-            return place;
-        }
         place = place.substr(place.indexOf('_')+1);
         if (parentStations[place]) {
             return parentStations[place].stopLat + ',' + parentStations[place].stopLon;
