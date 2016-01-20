@@ -397,20 +397,12 @@ exports.routes = function(req, res) {
                         results = [];
                     }
                     var rv = {};
-                    var seen = [];
                     rv.routes = results.map(function (value) {
                         return {
                             id: {id: value.id.substr(5)},
                             routeShortName: value.shortName,
                             routeLongName: value.longName
                         };
-                    }).filter(function (value) {
-                        // removes duplicates
-                        if (seen.indexOf(value.id.id) !== -1) {
-                            return false;
-                        }
-                        seen.push(value.id.id);
-                        return true;
                     });
 
                     // Yet another sad ugly hack: remove Mt. Zion Express because WTF it only runs like twice a year
@@ -447,13 +439,15 @@ exports.routes = function(req, res) {
                     if (err) {
                         callback(err);
                     } else {
-                        // sort so we can deduplicate results from ugly hack number three
-                        foundRoutes.sort(function(a,b) { return a.id.id > b.id.id; });
-                        for(var l = foundRoutes.length - 1; l>0; --l) {
-                            if (foundRoutes[l].id.id === foundRoutes[l-1].id.id) {
-                                foundRoutes.splice(l,1);
+                        // deduplicate results from ugly hack number three
+                        var seen = [];
+                        foundRoutes = foundRoutes.filter(function(e) { 
+                            if (seen.indexOf(e.id.id) !== -1) {
+                                return false;
                             }
-                        }
+                            seen.push(e.id.id);
+                            return true;
+                        });
                         callback();
                     }
                 });

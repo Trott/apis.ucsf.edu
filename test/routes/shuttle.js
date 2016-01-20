@@ -306,10 +306,10 @@ describe('exports', function () {
         json: function (data) {
           var expectedResults = {
             stop:{
-              id:{id:'Parnassus',agencyId:'ucsf'},
-              stopName:'Parnassus Campus',
-              stopLat:37.763174,
-              stopLon:-122.459176
+              id:{id:'Parnassus', agencyId:'ucsf'},
+              stopName: 'Parnassus Campus',
+              stopLat: 37.763174,
+              stopLon: -122.459176
             },
             routes:[
               {id:{id:'black'},routeShortName:'Black',routeLongName:'Parnassus - Mt. Zion - Laurel Heights'},
