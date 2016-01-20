@@ -4,6 +4,7 @@ var express = require('express'),
     https = require('https'),
     morgan = require('morgan'),
     compression = require('compression'),
+    config = require('./config'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     shuttle = require('./routes/shuttle'),
@@ -11,10 +12,7 @@ var express = require('express'),
     fitness = require('./routes/fitness'),
     library = require('./routes/library'),
     nodeUserGid = process.env.NODEUSERGID || 'node',
-    nodeUserUid = process.env.NODEUSERUID || 'node',
-    sslKey = '/etc/pki/tls/private/apis_ucsf_edu.key',
-    sslCert = '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer',
-    caCerts = ['/etc/pki/tls/certs/1.crt', '/etc/pki/tls/certs/2.crt', '/etc/pki/tls/certs/3.crt'];
+    nodeUserUid = process.env.NODEUSERUID || 'node';
 
 var setIds = function () {
     'use strict';
@@ -22,15 +20,17 @@ var setIds = function () {
     process.setuid(nodeUserUid);
 };
 
-var httpsOptions;
-try {
-    httpsOptions = {
-        key: fs.readFileSync(sslKey),
-        cert: fs.readFileSync(sslCert),
-        ca: caCerts.map(function(certFile) { return fs.readFileSync(certFile);}),
-    };
-} catch (e) {
-    console.warn('Error setting HTTPS options: ' + e.message);
+var httpsOptions = {};
+if (config.ssl) {
+    try {
+        httpsOptions = {
+            key: fs.readFileSync(config.ssl.key),
+            cert: fs.readFileSync(config.ssl.cert),
+            ca: config.ssl.caCerts.map(function(certFile) { return fs.readFileSync(certFile);})
+        };
+    } catch (e) {
+        console.warn('Error setting HTTPS options: ' + e.message);
+    }
 }
 
 var app = express();

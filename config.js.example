@@ -1,11 +1,16 @@
 var config = {
-	r25: {
-		auth: 'username:password'
-	},
-	fitness: {
-		username: 'username',
-		password: 'password'
-	}
+  r25: {
+    auth: 'username:password'
+  },
+  fitness: {
+    username: 'username',
+    password: 'password'
+  },
+  // ssl: {
+  //   key: '/etc/pki/tls/private/apis_ucsf_edu.key',
+  //   cert: '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer',
+  //   caCerts: ['/etc/pki/tls/certs/1.crt', '/etc/pki/tls/certs/2.crt', '/etc/pki/tls/certs/3.crt']
+  // }
 };
 
 module.exports = config;

@@ -397,12 +397,20 @@ exports.routes = function(req, res) {
                         results = [];
                     }
                     var rv = {};
+                    var seen = [];
                     rv.routes = results.map(function (value) {
                         return {
                             id: {id: value.id.substr(5)},
                             routeShortName: value.shortName,
                             routeLongName: value.longName
                         };
+                    }).filter(function (value) {
+                        // removes duplicates
+                        if (seen.indexOf(value.id.id) !== -1) {
+                            return false;
+                        }
+                        seen.push(value.id.id);
+                        return true;
                     });
 
                     // Yet another sad ugly hack: remove Mt. Zion Express because WTF it only runs like twice a year
