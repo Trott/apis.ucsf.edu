@@ -600,7 +600,7 @@ exports.plan = function(req, res) {
                     itinerary = allResults[l];
                     firstLeg = itinerary.legs[0];
                     if (firstLeg.mode==='WALK') {
-                        allResults.splice(l,1);
+                        itinerary.legs.shift();
                     }
                 }
 
@@ -703,6 +703,7 @@ exports.plan = function(req, res) {
                     logger('shuttle/plan JSON parse error: ', e.message);
                     rv = {};
                 }
+
                 if (rv.plan && rv.plan.itineraries) {
                     metadata.plan = rv.plan;
                     allResults.push.apply(allResults, rv.plan.itineraries);

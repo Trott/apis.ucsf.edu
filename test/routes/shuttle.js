@@ -981,6 +981,26 @@ describe('exports', function () {
       shuttle.plan(mockReq, mockRes);
     });
 
+    it('should handle plans between parent stations', function (done) {
+      var mockReq = {query: {
+        fromPlace: 'ucsf_MB',
+        toPlace: 'ucsf_100 Buchanan',
+        arriveBy: 'false',
+        time: '9:00 AM',
+        date: '1/22/2016'
+      }};
+      var mockRes = {json: function (data) {
+        expect(data.plan.itineraries.length).to.equal(3);
+        done();
+      }};
+
+      nock('http://localhost:8080')
+      .get('/otp/routers/default/plan?minTransferTime=60&date=1%2F22%2F2016&time=9%3A00%20AM&arriveBy=false&fromPlace=37.76793%2C-122.391009&toPlace=37.770791%2C-122.426684&mode=TRANSIT%2CWALK')
+      .replyWithFile(200, __dirname + '/../fixtures/shuttlePlanParentStations.json');
+
+      shuttle.plan(mockReq, mockRes);
+    });
+
     it('should return results that are sorted', function (done) {
       var mockReq = {
         query: {
