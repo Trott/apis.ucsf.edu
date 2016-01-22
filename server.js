@@ -26,8 +26,11 @@ if (config.ssl) {
         httpsOptions = {
             key: fs.readFileSync(config.ssl.key),
             cert: fs.readFileSync(config.ssl.cert),
-            ca: config.ssl.caCerts.map(function(certFile) { return fs.readFileSync(certFile);})
         };
+        if (config.ssl.caCerts) {
+            httpsOptions.caCerts = config.ssl.caCerts.map(function(certFile) { return fs.readFileSync(certFile);});
+        }
+
     } catch (e) {
         console.warn('Error setting HTTPS options: ' + e.message);
     }
