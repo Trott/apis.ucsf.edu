@@ -45,6 +45,7 @@ describe('exports', function () {
 
   describe('search()', function () {
     it('should not set plugin-level callback if async is not specified in search()', function (done) {
+      var revert;
       var amalgamaticMock = {
         search: function (options) {
           expect(options.pluginCallback).to.be.undefined;
@@ -52,12 +53,13 @@ describe('exports', function () {
           done();
         }
       };
-      var revert = library.__set__('amalgamatic', amalgamaticMock);
+      revert = library.__set__('amalgamatic', amalgamaticMock);
 
       library.search({query: {q: 'medicine'}});
     });
 
     it('should set async results to true if async is specified in search()', function (done) {
+      var revert;
       var amalgamaticMock = {
         search: function (options) {
           expect(typeof options.pluginCallback).to.equal('function');
@@ -65,7 +67,7 @@ describe('exports', function () {
           done();
         }
       };
-      var revert = library.__set__('amalgamatic', amalgamaticMock);
+      revert = library.__set__('amalgamatic', amalgamaticMock);
 
       library.search(
         {query: {q: 'medicine', async: ''}},
@@ -74,6 +76,7 @@ describe('exports', function () {
     });
 
     it('should not set collections if no collections are specified', function (done) {
+      var revert;
       var amalgamaticMock = {
         search: function (options) {
           expect(options.collections).to.be.undefined;
@@ -81,12 +84,13 @@ describe('exports', function () {
           done();
         }
       };
-      var revert = library.__set__('amalgamatic', amalgamaticMock);
+      revert = library.__set__('amalgamatic', amalgamaticMock);
 
       library.search({query: {q: 'medicine'}});
     });
 
     it('should set collections if collections are specified', function (done) {
+      var revert;
       var amalgamaticMock = {
         search: function (options) {
           expect(options.collections).to.deep.equal(['foo', 'bar']);
@@ -94,7 +98,7 @@ describe('exports', function () {
           done();
         }
       };
-      var revert = library.__set__('amalgamatic', amalgamaticMock);
+      revert = library.__set__('amalgamatic', amalgamaticMock);
 
       library.search({query: {q: 'medicine', 'c': ['foo', 'bar']}});
     });
@@ -269,6 +273,7 @@ describe('exports', function () {
   describe('guides()', function () {
 
     it('should return a valid object', function (done) {
+      var revert;
       var resMock = {
         json: function (value) {
           expect(value.guides.length).to.equal(1);
@@ -281,7 +286,7 @@ describe('exports', function () {
         }
       };
 
-      var revert = library.__set__('guides', {guides:[{title: 'title', href: 'href', desc: 'desc'}], lastUpdated: Date.now()});
+      revert = library.__set__('guides', {guides:[{title: 'title', href: 'href', desc: 'desc'}], lastUpdated: Date.now()});
       library.guides(null, resMock);
     });
 
@@ -416,6 +421,7 @@ describe('exports', function () {
     };
 
     it('should return a valid object if it already has one loaded', function (done) {
+      var revert;
       var resMock = {
         json: function (value) {
           expect(value.locations.parnassus.length).to.equal(2);
@@ -425,7 +431,7 @@ describe('exports', function () {
         }
       };
 
-      var revert = library.__set__('schedule', {get: returnScheduleJson});
+      revert = library.__set__('schedule', {get: returnScheduleJson});
       library.hours(null, resMock);
     });
 
