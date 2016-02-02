@@ -1,6 +1,7 @@
 #! /bin/bash
 #
-# otp          Start/Stop OpenTripPlanner
+# chkconfig: 345 98 98
+# description: Start/Stop OpenTripPlanner
  
 source /etc/init.d/functions
  
