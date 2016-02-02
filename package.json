@@ -10,7 +10,7 @@
   "dependencies": {
     "amalgamatic": "^6.0.5",
     "amalgamatic-drupal6": "^4.0.4",
-    "amalgamatic-libguides": "^4.1.6",
+    "amalgamatic-libguides": "^4.1.7",
     "amalgamatic-millennium": "^3.1.6",
     "amalgamatic-pubmed": "^3.2.3",
     "amalgamatic-sfx": "^5.0.4",
