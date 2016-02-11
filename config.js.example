@@ -9,7 +9,7 @@ var config = {
   // ssl: {
   //   key: '/etc/pki/tls/private/apis_ucsf_edu.key',
   //   cert: '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer',
-  //   caCerts: ['/etc/pki/tls/certs/1.crt', '/etc/pki/tls/certs/2.crt', '/etc/pki/tls/certs/3.crt']
+  //   ca: ['/etc/pki/tls/certs/1.crt', '/etc/pki/tls/certs/2.crt', '/etc/pki/tls/certs/3.crt']
   // }
 };
 

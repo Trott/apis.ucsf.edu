@@ -27,8 +27,8 @@ if (config.ssl) {
             key: fs.readFileSync(config.ssl.key),
             cert: fs.readFileSync(config.ssl.cert),
         };
-        if (config.ssl.caCerts) {
-            httpsOptions.caCerts = config.ssl.caCerts.map(function(certFile) { return fs.readFileSync(certFile);});
+        if (config.ssl.ca) {
+            httpsOptions.ca = config.ssl.ca.map(function(certFile) { return fs.readFileSync(certFile);});
         }
 
     } catch (e) {
