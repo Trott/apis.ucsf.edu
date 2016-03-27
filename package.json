@@ -30,7 +30,7 @@
     "test": "lab -t 97"
   },
   "engines": {
-    "node": ">=0.10.33"
+    "node": ">=4.0.0"
   },
   "devDependencies": {
     "code": "^1.4.0",
