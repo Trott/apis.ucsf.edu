@@ -357,7 +357,7 @@ describe('exports', function () {
         lastUpdated: moreThanAnHourAgo
       };
       var mockLogger = function (logMsg) {
-        expect(logMsg).to.equal('error parsing LibGuides JSON: Unexpected token I');
+        expect(logMsg).to.contain('error parsing LibGuides JSON: Unexpected token I');
         messageLogged = true;
         eventEmitter.emit('arewedoneyet');
       };

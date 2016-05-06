@@ -96,7 +96,7 @@ describe('exports', function () {
         .reply(200, 'invalid JSON!');
 
       var mockLogger = function (logMsg) {
-        expect(logMsg).to.equal('error parsing LibCal JSON: Unexpected token i');
+        expect(logMsg).to.contain('error parsing LibCal JSON: Unexpected token i');
         logged = true;
       };
 
