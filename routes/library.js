@@ -5,18 +5,12 @@ var schedule = require('../utils/librarySchedule.js');
 var amalgamatic = require('amalgamatic'),
 sfx = require('amalgamatic-sfx'),
 millennium = require('amalgamatic-millennium'),
-libguides = require('amalgamatic-libguides'),
 pubmed = require('amalgamatic-pubmed'),
 drupal6 = require('amalgamatic-drupal6'),
 dbs = require('amalgamatic-ucsflibdbs');
 
-libguides.setOptions({urlParameters: {
-    guide_type: ['subject','general', 'course', 'topic']
-}});
-
 amalgamatic.add('sfx', sfx);
 amalgamatic.add('millennium', millennium);
-amalgamatic.add('libguides', libguides);
 amalgamatic.add('pubmed', pubmed);
 amalgamatic.add('drupal6', drupal6);
 amalgamatic.add('dbs', dbs);
