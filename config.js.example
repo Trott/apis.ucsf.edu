@@ -1,11 +1,4 @@
 var config = {
-  r25: {
-    auth: 'username:password'
-  },
-  fitness: {
-    username: 'username',
-    password: 'password'
-  },
   // ssl: {
   //   key: '/etc/pki/tls/private/apis_ucsf_edu.key',
   //   cert: '/etc/pki/tls/certs/apis_ucsf_edu_cert.cer',

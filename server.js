@@ -8,7 +8,6 @@ var express = require('express'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     map = require('./routes/map'),
-    fitness = require('./routes/fitness'),
     library = require('./routes/library'),
     nodeUserGid = process.env.NODEUSERGID || 'node',
     nodeUserUid = process.env.NODEUSERUID || 'node';
@@ -96,8 +95,6 @@ app.get('/jsapi', jsapi.load);
 app.get('/person/search', person.search);
 
 app.get('/map/tile/:zoom/:x/:y', map.tile);
-
-app.get('/fitness/schedule', fitness.schedule);
 
 app.get('/library/hours', library.hours);
 app.get('/library/guides', library.guides);

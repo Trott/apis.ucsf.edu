@@ -1,8 +1,0 @@
-UCSF.Fitness = (function() {
-
-    return {
-        schedule: function (options, success, failure) {
-            UCSF.run('fitness/schedule', options, success, failure, UCSF.Fitness.schedule);
-        }
-    };
-}());

@@ -1,1 +1,0 @@
-UCSF.Fitness=function(){return{schedule:function(a,b,c){UCSF.run("fitness/schedule",a,b,c,UCSF.Fitness.schedule)}}}();

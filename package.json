@@ -16,7 +16,6 @@
     "amalgamatic-ucsflibdbs": "^1.2.2",
     "async": "^1.5.2",
     "compression": "^1.0.2",
-    "csv": "^0.3.7",
     "express": "^4.9.7",
     "moment": "^2.11.0",
     "morgan": "^1.2.0",
