@@ -137,20 +137,6 @@ describe('exports', function () {
       library.search({query: {q: 'medicine', c: ['sfx'], async: ''}}, {writeHead: mockWriteHead, write: noop, flush: noop, end: mockEnd});
     });
 
-    it('should allow searching for UCSF Library databases', function (done) {
-      nock('https://www.library.ucsf.edu:443')
-        .get('/db?filter0=fhqwhagads&apage=&filter2=All')
-        .reply('200', '<html></html>');
-
-      var mockJson = function (value) {
-        expect(value[0].name).to.equal('dbs');
-        expect(value[0].data.length).to.equal(0);
-        done();
-      };
-
-      library.search({query: {q: 'fhqwhagads', c: ['dbs']}}, {json: mockJson});
-    });
-
     it('should log an error if there is an error', function (done) {
       var revert = library.__set__('logger', function (value) {
         expect(value).to.startWith('library/search error: Nock: No match for');
@@ -162,7 +148,7 @@ describe('exports', function () {
         done();
       });
 
-      library.search({query: {q: 'fhqwhagads', c: ['dbs']}});
+      library.search({query: {q: 'fhqwhagads', c: ['sfx']}});
     });
 
     it('should log a default error message if one is not provided', function (done) {

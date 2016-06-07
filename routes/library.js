@@ -6,14 +6,12 @@ var amalgamatic = require('amalgamatic'),
 sfx = require('amalgamatic-sfx'),
 millennium = require('amalgamatic-millennium'),
 pubmed = require('amalgamatic-pubmed'),
-drupal6 = require('amalgamatic-drupal6'),
-dbs = require('amalgamatic-ucsflibdbs');
+drupal6 = require('amalgamatic-drupal6');
 
 amalgamatic.add('sfx', sfx);
 amalgamatic.add('millennium', millennium);
 amalgamatic.add('pubmed', pubmed);
 amalgamatic.add('drupal6', drupal6);
-amalgamatic.add('dbs', dbs);
 
 var logger = console.log;
 
