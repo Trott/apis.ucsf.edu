@@ -1,16 +1,14 @@
 var express = require('express'),
     fs = require('fs'),
     http = require('http'),
-    https = require('https'),
     morgan = require('morgan'),
     compression = require('compression'),
-    config = require('./config'),
     jsapi = require('./routes/jsapi'),
     person = require('./routes/person'),
     map = require('./routes/map'),
     library = require('./routes/library'),
-    nodeUserGid = process.env.NODEUSERGID || 'node',
-    nodeUserUid = process.env.NODEUSERUID || 'node';
+    nodeUserGid = process.env.NODEUSERGID || 'api-server',
+    nodeUserUid = process.env.NODEUSERUID || 'api-server';
 
 var setIds = function () {
     'use strict';
@@ -18,30 +16,8 @@ var setIds = function () {
     process.setuid(nodeUserUid);
 };
 
-var httpsOptions = {};
-if (config.ssl) {
-    try {
-        httpsOptions = {
-            key: fs.readFileSync(config.ssl.key),
-            cert: fs.readFileSync(config.ssl.cert),
-        };
-        if (config.ssl.ca) {
-            httpsOptions.ca = config.ssl.ca.map(function(certFile) { return fs.readFileSync(certFile);});
-        }
-
-    } catch (e) {
-        console.warn('Error setting HTTPS options: ' + e.message);
-    }
-}
-
 var app = express();
 var logFile;
-
-// See:
-//   http://nodejs.org/api/http.html#http_agent_maxsockets 
-//   https://twitter.com/substack/status/277226144577761280
-http.globalAgent.maxSockets = Number.MAX_VALUE;
-https.globalAgent.maxSockets = Number.MAX_VALUE;
 
 logFile = fs.createWriteStream(__dirname + '/logs/http.' + Date.now());
 
@@ -112,9 +88,3 @@ app.get('/', function (req, res) {
 
 http.createServer(app).listen(80, setIds);
 console.log('Serving HTTP on port 80...');
-try {
-    https.createServer(httpsOptions, app).listen(443, setIds);
-    console.log('Serving HTTPS on port 443...');
-} catch (e) {
-    console.error('Cannot start with SSL: ' + e.message);
-}
