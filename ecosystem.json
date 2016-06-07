@@ -1,0 +1,32 @@
+{
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  apps : [
+
+    // First application
+    {
+      name      : "UCSF API server",
+      script    : "server.js",
+      env_production : {
+        NODE_ENV: "production"
+      }
+    }
+  ],
+
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment/
+   */
+  deploy : {
+    production : {
+      user : "api-server",
+      host : "159.203.204.106",
+      ref  : "origin/master",
+      repo : "https://github.com/Trott/apis.ucsf.edu.git",
+      path : "/var/www/production",
+      "post-deploy" : "npm install --production && pm2 startOrRestart ecosystem.json --env production"
+    }
+  }
+}
