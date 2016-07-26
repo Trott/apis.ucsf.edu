@@ -4,8 +4,6 @@ var express = require('express'),
     morgan = require('morgan'),
     compression = require('compression'),
     jsapi = require('./routes/jsapi'),
-    person = require('./routes/person'),
-    map = require('./routes/map'),
     library = require('./routes/library'),
     nodeUserGid = process.env.NODEUSERGID || 'api-server',
     nodeUserUid = process.env.NODEUSERUID || 'api-server';
@@ -67,10 +65,6 @@ app.use(function (err, req, res, undefined) {
 });
 
 app.get('/jsapi', jsapi.load);
-
-app.get('/person/search', person.search);
-
-app.get('/map/tile/:zoom/:x/:y', map.tile);
 
 app.get('/library/hours', library.hours);
 app.get('/library/guides', library.guides);

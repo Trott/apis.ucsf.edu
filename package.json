@@ -16,11 +16,10 @@
     "async": "^1.5.2",
     "compression": "^1.0.2",
     "express": "^4.9.7",
+    "jshint": "^2.9.2",
     "moment": "^2.11.0",
     "morgan": "^1.2.0",
-    "request": "^2.51.0",
-    "transportation": "^1.2.0",
-    "xml2js": "^0.2.8"
+    "request": "^2.51.0"
   },
   "scripts": {
     "start": "sudo node server.js",
@@ -39,7 +38,6 @@
     "jshint": "^2.5.5",
     "lab": "^10.5.1",
     "nock": "^3.4.0",
-    "precommit-hook": "^1.0.7",
     "rewire": "^2.1.2"
   }
 }
