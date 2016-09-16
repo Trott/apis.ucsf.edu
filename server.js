@@ -1,8 +1,10 @@
 var express = require('express'),
     fs = require('fs'),
     http = require('http'),
+    https = require('https'),
     morgan = require('morgan'),
     compression = require('compression'),
+    config = require('./config'),
     jsapi = require('./routes/jsapi'),
     library = require('./routes/library'),
     nodeUserGid = process.env.NODEUSERGID || 'node',
@@ -13,6 +15,22 @@ var setIds = function () {
     process.setgid(nodeUserGid);
     process.setuid(nodeUserUid);
 };
+
+var httpsOptions = {};
+if (config.ssl) {
+    try {
+        httpsOptions = {
+            key: fs.readFileSync(config.ssl.key),
+            cert: fs.readFileSync(config.ssl.cert),
+        };
+        if (config.ssl.ca) {
+            httpsOptions.ca = config.ssl.ca.map(function(certFile) { return fs.readFileSync(certFile);});
+        }
+
+    } catch (e) {
+        console.warn('Error setting HTTPS options: ' + e.message);
+    }
+}
 
 var app = express();
 var logFile;
@@ -82,3 +100,10 @@ app.get('/', function (req, res) {
 
 http.createServer(app).listen(80, setIds);
 console.log('Serving HTTP on port 80...');
+
+try {
+    https.createServer(httpsOptions, app).listen(443, setIds);
+    console.log('Serving HTTPS on port 443...');
+} catch (e) {
+    console.error('Cannot start with SSL: ' + e.message);
+}
