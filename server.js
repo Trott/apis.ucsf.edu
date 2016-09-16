@@ -5,8 +5,8 @@ var express = require('express'),
     compression = require('compression'),
     jsapi = require('./routes/jsapi'),
     library = require('./routes/library'),
-    nodeUserGid = process.env.NODEUSERGID || 'nobody',
-    nodeUserUid = process.env.NODEUSERUID || 'nobody';
+    nodeUserGid = process.env.NODEUSERGID || 'node',
+    nodeUserUid = process.env.NODEUSERUID || 'node';
 
 var setIds = function () {
     'use strict';
