@@ -7,6 +7,7 @@ var express = require('express'),
     config = require('./config'),
     jsapi = require('./routes/jsapi'),
     library = require('./routes/library'),
+    person = require('./routes/person'),
     nodeUserGid = process.env.NODEUSERGID || 'node',
     nodeUserUid = process.env.NODEUSERUID || 'node';
 
@@ -87,6 +88,8 @@ app.get('/jsapi', jsapi.load);
 app.get('/library/hours', library.hours);
 app.get('/library/guides', library.guides);
 app.get('/library/search', library.search);
+
+app.get('/person/search', person.search);
 
 // Redirect shuttle request to clsm server
 app.get('/shuttle/:route', function (req, res) {
