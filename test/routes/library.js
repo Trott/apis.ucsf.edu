@@ -173,18 +173,18 @@ describe('exports', function () {
     });
 
     it('should convert PubMed links to EZproxy for synchronous callback', function (done) {
-      nock('http://eutils.ncbi.nlm.nih.gov')
+      nock('https://eutils.ncbi.nlm.nih.gov')
         .get('/entrez/eutils/esearch.fcgi?retmode=json&term=medicine')
         .reply(200, '{"esearchresult": {"count": "2","retmax": "2","retstart": "0","idlist": ["25230398","25230381"]}}');
 
-      nock('http://eutils.ncbi.nlm.nih.gov')
+      nock('https://eutils.ncbi.nlm.nih.gov')
         .get('/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=25230398%2C25230381')
         .reply(200, '{"result": {"uids": ["25230398","25230381"], "25230398": {"title": "Medicine 1"}, "25230381": {"title": "Medicine 2"}}}');
 
       var mockJson = function (value) {
-        expect(value[0].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%3Ftool%3Dcdl%26otool%3Dcdlotool%26cmd%3Dsearch%26term%3Dmedicine');
-        expect(value[0].data[0].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230398');
-        expect(value[0].data[1].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230381');
+        expect(value[0].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%3Ftool%3Dcdl%26otool%3Dcdlotool%26cmd%3Dsearch%26term%3Dmedicine');
+        expect(value[0].data[0].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230398');
+        expect(value[0].data[1].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230381');
         done();
       };
 
@@ -192,20 +192,20 @@ describe('exports', function () {
     });
     
     it('should convert PubMed links to EZproxy for asynchronous callback', function (done) {
-      nock('http://eutils.ncbi.nlm.nih.gov')
+      nock('https://eutils.ncbi.nlm.nih.gov')
         .get('/entrez/eutils/esearch.fcgi?retmode=json&term=medicine')
         .reply(200, '{"esearchresult": {"count": "2","retmax": "2","retstart": "0","idlist": ["25230398","25230381"]}}');
 
-      nock('http://eutils.ncbi.nlm.nih.gov')
+      nock('https://eutils.ncbi.nlm.nih.gov')
         .get('/entrez/eutils/esummary.fcgi?db=pubmed&retmode=json&id=25230398%2C25230381')
         .reply(200, '{"result": {"uids": ["25230398","25230381"], "25230398": {"title": "Medicine 1"}, "25230381": {"title": "Medicine 2"}}}');
 
       var mockWrite = function (value) {
         if (value.substring(0,6) === 'data: ') {
           var data = JSON.parse(value.substring(6));
-          expect(data.url).to.equal('https://ucsf.idm.oclc.org/login?qurl=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%3Ftool%3Dcdl%26otool%3Dcdlotool%26cmd%3Dsearch%26term%3Dmedicine');
-          expect(data.data[0].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230398');
-          expect(data.data[1].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=http%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230381');
+          expect(data.url).to.equal('https://ucsf.idm.oclc.org/login?qurl=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fpubmed%3Ftool%3Dcdl%26otool%3Dcdlotool%26cmd%3Dsearch%26term%3Dmedicine');
+          expect(data.data[0].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230398');
+          expect(data.data[1].url).to.equal('https://ucsf.idm.oclc.org/login?qurl=https%3A%2F%2Fwww.ncbi.nlm.nih.gov%2Fentrez%2Fquery.fcgi%3Fdb%3Dpubmed%26cmd%3DRetrieve%26dopt%3DAbstractPlus%26query_hl%3D2%26itool%3Dpubmed_docsum%26tool%3Dcdl%26otool%3Dcdlotool%26list_uids%3D25230381');
           done();
         }
       };
