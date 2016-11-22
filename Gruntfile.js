@@ -8,13 +8,13 @@ module.exports = function (grunt) {
             options: {
                 curly: true,
                 eqeqeq: true,
+                globals: {UCSF: true},
                 immed: true,
                 latedef: true,
                 newcap: true,
                 noarg: true,
                 sub: true,
                 undef: true,
-                predef: ['XDomainRequest', 'flensed', 'UCSF'],
                 boss: true,
                 eqnull: true,
                 browser: true
