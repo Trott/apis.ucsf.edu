@@ -11,7 +11,7 @@ nock('https://api3.libcal.com:443')
   .get('/api_hours_grid.php?iid=138&format=json&weeks=2')
   .replyWithFile(200, __dirname + '/../fixtures/hours.json');
 
-nock('http://lgapi.libapps.com:80')
+nock('https://lgapi.libapps.com:443')
   .get('/1.0/guides/100998,100994,101031,101035,101017,101014,101016,100993,100989,100980,100981,100974,100978,100984,100965?site_id=407')
   .replyWithFile(200, __dirname + '/../fixtures/guides.json');
 
@@ -299,7 +299,7 @@ describe('exports', function () {
       var messageLogged = false;
       var dataChecked = false;
 
-      nock('http://lgapi.libapps.com:80')
+      nock('https://lgapi.libapps.com:443')
         .get('/1.0/guides/100998,100994,101031,101035,101017,101014,101016,100993,100989,100980,100981,100974,100978,100984,100965?site_id=407')
         .reply(404, 'Not found');
       
@@ -335,7 +335,7 @@ describe('exports', function () {
       var messageLogged = false;
       var dataChecked = false;
 
-      nock('http://lgapi.libapps.com:80')
+      nock('https://lgapi.libapps.com:443')
         .get('/1.0/guides/100998,100994,101031,101035,101017,101014,101016,100993,100989,100980,100981,100974,100978,100984,100965?site_id=407')
         .reply(200, 'Invalid JSON');
 
