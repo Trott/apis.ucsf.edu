@@ -92,11 +92,6 @@ app.get('/library/search', library.search);
 
 app.get('/person/search', person.search);
 
-// Redirect shuttle request to clsm server
-app.get('/shuttle/:route', function (req, res) {
-    res.redirect('http://clsm.ucsf.edu:8000' + req.url);
-});
-
 app.get('/', function (req, res) {
     res.send('OK');
 });
