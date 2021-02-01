@@ -165,10 +165,8 @@ exports.search = function (req, res) {
                 var msg = err.message || 'unknown error';
                 logger('library/search error: ' + msg);
             } else {
-                values.forEach(function (value) {
-                    value = postProcessUrls(value);
-                });
-                res.json(values);
+                return res.json(values.map(postProcessUrls));
+
             }
         };
     }

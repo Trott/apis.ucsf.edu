@@ -110,4 +110,4 @@ LibrarySchedule.prototype.get = function () {
     return {locations: schedule.locations, lastUpdated: schedule.lastUpdated};
 };
 
-module.exports = exports = new LibrarySchedule();
+module.exports = new LibrarySchedule();
