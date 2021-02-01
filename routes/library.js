@@ -1,4 +1,4 @@
-var http = require('http');
+var https = require('https');
 var url = require('url');
 var schedule = require('../utils/librarySchedule.js');
 
@@ -33,7 +33,7 @@ var updateGuidesAsync = function () {
     // last update set regardless of success or fail so we don't hammer the endpoint
     guides.lastUpdated = Date.now();
 
-    http.get(options, function (resp) {
+    https.get(options, function (resp) {
         if (resp.statusCode !== 200) {
             var errorMsg = 'updateGuidesAsync error: code ' + resp.statusCode;
             logger(errorMsg);
