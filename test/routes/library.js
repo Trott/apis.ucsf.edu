@@ -106,7 +106,7 @@ describe('exports', function () {
     it('should fire main callback for non async search', function (done) {
       nock('http://ucelinks.cdlib.org:8888')
         .get('/sfx_ucsf/az?param_textSearchType_value=startsWith&param_pattern_value=medicine')
-        .reply('200', '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
+        .reply(200, '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
 
       var mockJson = function (value) {
         expect(value[0].name).to.equal('sfx');
@@ -120,7 +120,7 @@ describe('exports', function () {
     it('should fire plugin callback for async search', function (done) {
       nock('http://ucelinks.cdlib.org:8888')
         .get('/sfx_ucsf/az?param_textSearchType_value=startsWith&param_pattern_value=medicine')
-        .reply('200', '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
+        .reply(200, '<a class="Results" href="#">Medicine</a><a class="Results" href="#">Medicine</a>');
 
       var mockWriteHead = function (status, value) {
         expect(status).to.equal(200);
