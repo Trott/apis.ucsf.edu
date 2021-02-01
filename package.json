@@ -21,11 +21,11 @@
     "request": "^2.51.0"
   },
   "scripts": {
-    "start": "sudo node server.js",
+    "start": "node server.js",
     "test": "lab -t 97"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=6.0.0"
   },
   "devDependencies": {
     "code": "^2.3.0",

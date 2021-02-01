@@ -8,13 +8,17 @@ var express = require('express'),
     jsapi = require('./routes/jsapi'),
     library = require('./routes/library'),
     person = require('./routes/person'),
-    nodeUserGid = process.env.NODEUSERGID || 'node',
-    nodeUserUid = process.env.NODEUSERUID || 'node';
+    nodeUserGid = process.env.NODEUSERGID,
+    nodeUserUid = process.env.NODEUSERUID;
 
 var setIds = function () {
     'use strict';
-    process.setgid(nodeUserGid);
-    process.setuid(nodeUserUid);
+    if (nodeUserGid) {
+        process.setgid(nodeUserGid);
+    }
+    if (nodeUserUid) {
+        process.setuid(nodeUserUid);
+    }
 };
 
 var httpsOptions = {};
