@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express'),
     fs = require('fs'),
     http = require('http'),
@@ -12,7 +14,6 @@ var express = require('express'),
     nodeUserUid = process.env.NODEUSERUID;
 
 var setIds = function () {
-    'use strict';
     if (nodeUserGid) {
         process.setgid(nodeUserGid);
     }
@@ -52,7 +53,6 @@ app.use('/static', express.static(__dirname + '/static'));
 //    is a good idea. But, uh, only if the caching implementation works. Definitely broken in Android 2.3
 var android2RegExp = / Android 2\./;
 app.use(function (req, res, next) {
-    'use strict';
     if (android2RegExp.test(req.headers['user-agent'])) {
         res.header('Cache-Control', 'no-cache, no-store, must-revalidate');
         res.header('Expires', '0');
@@ -61,8 +61,6 @@ app.use(function (req, res, next) {
 });
 
 app.use(function (req, res, next) {
-    'use strict';
-
     res.header('Access-Control-Allow-Origin', '*');
 
     if (req.headers['access-control-request-method']) {
@@ -82,7 +80,6 @@ app.use(function (req, res, next) {
 });
 
 app.use(function (err, req, res, undefined) {
-    'use strict';
     console.dir(err);
     res.send(500, 'Server error');
 });
@@ -101,8 +98,7 @@ app.get('/shuttle/:route', function (req, res) {
 });
 
 app.get('/', function (req, res) {
-    'use strict';
-    res.sendFile(__dirname + '/static/index.html');
+    res.send('OK');
 });
 
 http.createServer(app).listen(80, setIds);
