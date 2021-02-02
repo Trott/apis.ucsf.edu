@@ -90,7 +90,7 @@ exports.guides = function (req, res) {
 };
 
 // RegExp for URLs that don't need a proxy prefix
-var proxyifyRegExp = /^https?:\/\/([a-z\.]*ucsf.edu|ucsf.idm.oclc.org|ucelinks.cdlib.org)[:\/]/i;
+var proxyifyRegExp = /^https?:\/\/([a-z\.]*ucsf\.edu|ucsf\.idm\.oclc\.org|ucelinks\.cdlib\.org)[:\/]/i;
 var proxify = function (myUrl) {
     if (! proxyifyRegExp.test(myUrl)) {
         myUrl = 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(myUrl);
@@ -100,7 +100,7 @@ var proxify = function (myUrl) {
 
 var removePortFromLibraryUrls = function (myUrl) {
     var parsedUrl = url.parse(myUrl);
-    if (parsedUrl.port === '8080' && parsedUrl.hostname.indexOf('library.ucsf.edu') !== -1) {
+    if (parsedUrl.port === '8080' && parsedUrl.hostname.endsWith('library.ucsf.edu')) {
         delete parsedUrl.port;
         delete parsedUrl.host;
         myUrl = url.format(parsedUrl);
