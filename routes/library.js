@@ -2,17 +2,6 @@ var https = require('https');
 var url = require('url');
 var schedule = require('../utils/librarySchedule.js');
 
-var amalgamatic = require('amalgamatic'),
-sfx = require('amalgamatic-sfx'),
-millennium = require('amalgamatic-millennium'),
-pubmed = require('amalgamatic-pubmed'),
-drupal6 = require('amalgamatic-drupal6');
-
-amalgamatic.add('sfx', sfx);
-amalgamatic.add('millennium', millennium);
-amalgamatic.add('pubmed', pubmed);
-amalgamatic.add('drupal6', drupal6);
-
 var logger = console.log;
 
 // One hour expressed in milliseconds
@@ -87,89 +76,4 @@ exports.guides = function (req, res) {
     }
 
     res.json(guides);
-};
-
-// RegExp for URLs that don't need a proxy prefix
-var proxyifyRegExp = /^https?:\/\/([a-z\.]*ucsf\.edu|ucsf\.idm\.oclc\.org|ucelinks\.cdlib\.org)[:\/]/i;
-var proxify = function (myUrl) {
-    if (! proxyifyRegExp.test(myUrl)) {
-        myUrl = 'https://ucsf.idm.oclc.org/login?qurl=' + encodeURIComponent(myUrl);
-    }
-    return myUrl;
-};
-
-var removePortFromLibraryUrls = function (myUrl) {
-    var parsedUrl = url.parse(myUrl);
-    if (parsedUrl.port === '8080' && parsedUrl.hostname.endsWith('library.ucsf.edu')) {
-        delete parsedUrl.port;
-        delete parsedUrl.host;
-        myUrl = url.format(parsedUrl);
-    }
-    return myUrl;
-};
-
-var postProcessUrls = function (values) {
-    if (typeof values.url === 'string') {
-        values.url = proxify(values.url);
-        values.url = removePortFromLibraryUrls(values.url);
-    }
-
-    values.data = values.data.map(function(datum) {
-        datum.url = proxify(datum.url);
-        datum.url = removePortFromLibraryUrls(datum.url);
-        return datum;
-    });
-    return values;
-};
-
-exports.search = function (req, res) {
-    var callback;
-
-    var options = {
-        searchTerm: req.query.q,
-        maxResults: 5
-    };
-
-    if (req.query.c && req.query.c instanceof Array) {
-        options.collections = req.query.c;
-    }
-
-    // async = Server-Sent Events/EventSource
-    if (req.query.hasOwnProperty('async')) {
-
-        res.writeHead(200, {
-            'Content-Type': 'text/event-stream'
-        });
-
-        options.pluginCallback = function (err, data) {
-            if (err) {
-                var msg = err.message || 'unknown error';
-                logger('library/search error: ' + msg);
-                return;
-            }
-            data = postProcessUrls(data);
-            res.write('data: ' + JSON.stringify(data) + '\n\n');
-            res.flush();
-        };
-
-        callback = function () {
-            res.write('event: end\n');
-            res.write('data\n\n');
-            res.flush();
-            res.end();
-        };
-
-    } else {
-        callback = function (err, values) {
-            if (err) {
-                var msg = err.message || 'unknown error';
-                logger('library/search error: ' + msg);
-            } else {
-                return res.json(values.map(postProcessUrls));
-
-            }
-        };
-    }
-
-    amalgamatic.search(options, callback);
 };
