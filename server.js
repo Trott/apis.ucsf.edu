@@ -7,7 +7,6 @@ var express = require('express'),
     morgan = require('morgan'),
     compression = require('compression'),
     config = require('./config'),
-    jsapi = require('./routes/jsapi'),
     library = require('./routes/library'),
     person = require('./routes/person'),
     nodeUserGid = process.env.NODEUSERGID,
@@ -83,8 +82,6 @@ app.use(function (err, req, res, undefined) {
     console.dir(err);
     res.send(500, 'Server error');
 });
-
-app.get('/jsapi', jsapi.load);
 
 app.get('/library/hours', library.hours);
 app.get('/library/guides', library.guides);

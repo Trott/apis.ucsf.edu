@@ -1,1 +1,0 @@
-UCSF.Person={search:function(a,b,c){UCSF.run("person/search",a,b,c,UCSF.Person.search)}};
