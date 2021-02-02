@@ -31,20 +31,10 @@ module.exports = function (grunt) {
                 }
             }
         },
-        cssmin: {
-            static: {
-                expand: true,
-                cwd: 'static/css/',
-                src: ['*.css', '!*.min.css'],
-                dest: 'static/css/',
-                ext: '.min.css'
-            }
-        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
 
-    grunt.registerTask('default', ['jshint:jsFragments', 'uglify:static', 'cssmin:static']);
+    grunt.registerTask('default', ['jshint:jsFragments', 'uglify:static']);
 };
