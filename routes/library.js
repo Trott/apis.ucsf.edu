@@ -1,5 +1,4 @@
 var https = require('https');
-var url = require('url');
 var schedule = require('../utils/librarySchedule.js');
 
 var logger = console.log;
